@@ -4,7 +4,7 @@
 # ============================================================
 set -e
 
-PROJECT_DIR="/home/eng/Sid/Mix_Master"
+PROJECT_DIR="/home/eng/Sid/Mix_Master/PracticeAICCD_Sid"
 cd "$PROJECT_DIR"
 
 echo ""
@@ -24,7 +24,7 @@ if [ -n "$PIDS" ]; then
   sleep 1
 fi
 
-nohup uvicorn backend.main:app --host 0.0.0.0 --port 8000 \
+nohup "$PROJECT_DIR/.venv/bin/python3" -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 \
   > /tmp/mixmaster-api.log 2>&1 &
 API_PID=$!
 echo "  後端 PID: $API_PID"
