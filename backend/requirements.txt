@@ -1,0 +1,3 @@
+# MixMaster Backend 依賴（與根目錄 requirements.txt 相同）
+# 此文件為 backend/ 子目錄單獨部署時使用
+-r ../requirements.txt

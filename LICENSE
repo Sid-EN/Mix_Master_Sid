@@ -1,0 +1,48 @@
+MIT License
+
+Copyright (c) 2026 MixMaster Project Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+THIRD-PARTY NOTICES
+===================
+
+This project uses the following open source components:
+
+FastAPI          - MIT License    - https://github.com/tiangolo/fastapi
+SQLAlchemy       - MIT License    - https://github.com/sqlalchemy/sqlalchemy
+Pydantic         - MIT License    - https://github.com/pydantic/pydantic
+NumPy            - BSD License    - https://github.com/numpy/numpy
+Next.js          - MIT License    - https://github.com/vercel/next.js
+Tailwind CSS     - MIT License    - https://github.com/tailwindlabs/tailwindcss
+Recharts         - MIT License    - https://github.com/recharts/recharts
+shadcn/ui        - MIT License    - https://github.com/shadcn-ui/ui
+Zustand          - MIT License    - https://github.com/pmndrs/zustand
+TanStack Query   - MIT License    - https://github.com/TanStack/query
+
+Flavor Wheel concept references:
+- Wine Aroma Wheel by Ann C. Noble (UC Davis) - used for educational reference only
+- IBA (International Bartenders Association) cocktail specifications - used for educational reference only
+
+Font Licenses:
+- Playfair Display - SIL Open Font License 1.1
+- Inter            - SIL Open Font License 1.1
+- Fira Code        - SIL Open Font License 1.1

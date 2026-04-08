@@ -1,0 +1,7864 @@
+[
+  {
+    "id": "tanqueray-gin",
+    "name": "Tanqueray London Dry Gin",
+    "nameZh": "添加利倫敦乾琴酒",
+    "brand": "Tanqueray",
+    "category": "base_spirit",
+    "subcategory": "london_dry_gin",
+    "abv": 47.3,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 67,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.4,
+      0.3,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "herbal",
+      "floral",
+      "spicy"
+    ],
+    "aroma": [
+      "juniper",
+      "coriander",
+      "angelica root",
+      "citrus peel"
+    ],
+    "taste": [
+      "crisp juniper",
+      "peppery spice",
+      "botanical complexity"
+    ],
+    "finish": "Clean, dry, lingering juniper",
+    "origin": "United Kingdom",
+    "productionMethod": "Column distillation with botanical maceration",
+    "rarity": "common",
+    "colorHex": "#F5F0E8",
+    "description": "Classic London Dry Gin with bold juniper character.",
+    "descriptionZh": "經典倫敦乾琴酒，具有強烈杜松子風味與複雜植物香氣。",
+    "substitutes": [
+      "beefeater-gin",
+      "gordons-gin",
+      "bombay-sapphire"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "simple-syrup": 0.8,
+      "tonic-water": 0.95,
+      "elderflower-liqueur": 0.85
+    },
+    "tags": [
+      "classic",
+      "british",
+      "dry"
+    ]
+  },
+  {
+    "id": "bacardi-rum",
+    "name": "Bacardi Superior White Rum",
+    "nameZh": "百加得白蘭姆酒",
+    "brand": "Bacardi",
+    "category": "base_spirit",
+    "subcategory": "white_rum",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.3,
+      0.5,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.3,
+      0.4,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "tropical",
+      "vanilla",
+      "caramel"
+    ],
+    "aroma": [
+      "sugarcane",
+      "light vanilla",
+      "coconut hint"
+    ],
+    "taste": [
+      "clean sweetness",
+      "light molasses",
+      "fresh finish"
+    ],
+    "finish": "Crisp, short, clean",
+    "origin": "Puerto Rico",
+    "productionMethod": "Continuous column distillation from molasses",
+    "rarity": "common",
+    "colorHex": "#FAFAFA",
+    "description": "Light white rum perfect for tropical cocktails.",
+    "descriptionZh": "清淡白蘭姆，熱帶調酒的經典首選，帶輕微香草甜韻。",
+    "substitutes": [
+      "havana-club-3yr",
+      "mount-gay-eclipse"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.95,
+      "simple-syrup": 0.9,
+      "mint": 0.85
+    },
+    "tags": [
+      "classic",
+      "caribbean",
+      "light"
+    ]
+  },
+  {
+    "id": "makers-mark-bourbon",
+    "name": "Maker's Mark Bourbon",
+    "nameZh": "美格波本威士忌",
+    "brand": "Maker's Mark",
+    "category": "base_spirit",
+    "subcategory": "bourbon",
+    "abv": 45.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 66,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.3,
+      0.1,
+      0.1,
+      0.3,
+      0.7,
+      0.8,
+      0.2,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "vanilla",
+      "caramel",
+      "oak"
+    ],
+    "aroma": [
+      "caramel",
+      "vanilla",
+      "wheat",
+      "oak",
+      "dried fruit"
+    ],
+    "taste": [
+      "sweet caramel",
+      "vanilla cream",
+      "baking spice",
+      "soft wheat"
+    ],
+    "finish": "Long, warm, spiced oak",
+    "origin": "Kentucky, USA",
+    "productionMethod": "Pot still, wheat mash bill, new charred oak barrels",
+    "aging": "6 years in new American oak",
+    "rarity": "common",
+    "colorHex": "#C27820",
+    "description": "Approachable wheated bourbon with sweet vanilla character.",
+    "descriptionZh": "小麥波本，以濃郁香草與焦糖風味聞名，入門波本首選。",
+    "substitutes": [
+      "wild-turkey-101",
+      "buffalo-trace"
+    ],
+    "pairingBonus": {
+      "angostura-bitters": 0.9,
+      "simple-syrup": 0.85,
+      "sweet-vermouth": 0.8
+    },
+    "tags": [
+      "bourbon",
+      "american",
+      "sweet"
+    ]
+  },
+  {
+    "id": "el-jimador-blanco-tequila",
+    "name": "El Jimador Blanco Tequila",
+    "nameZh": "艾爾黑馬多白色龍舌蘭",
+    "brand": "El Jimador",
+    "category": "base_spirit",
+    "subcategory": "tequila_blanco",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.3,
+      0.0,
+      0.4,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "earthy",
+      "spicy",
+      "herbal"
+    ],
+    "aroma": [
+      "agave",
+      "vegetal",
+      "white pepper",
+      "citrus zest"
+    ],
+    "taste": [
+      "fresh agave",
+      "pepper",
+      "mineral",
+      "light earthiness"
+    ],
+    "finish": "Clean, slightly peppery",
+    "origin": "Jalisco, Mexico",
+    "productionMethod": "100% Blue Agave, autoclave cooked, column distilled",
+    "rarity": "common",
+    "colorHex": "#FAFAFA",
+    "description": "Clean and versatile blanco tequila for Margaritas.",
+    "descriptionZh": "清爽多用途白色龍舌蘭，瑪格麗特首選，帶鮮明龍舌蘭植物氣息。",
+    "substitutes": [
+      "espolon-blanco",
+      "olmeca-altos-plata"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.95,
+      "triple-sec": 0.9,
+      "simple-syrup": 0.75
+    },
+    "tags": [
+      "tequila",
+      "mexican",
+      "blanco"
+    ]
+  },
+  {
+    "id": "del-maguey-vida-mezcal",
+    "name": "Del Maguey Vida Mezcal",
+    "nameZh": "達瑪蓋Vida煙燻梅斯卡爾",
+    "brand": "Del Maguey",
+    "category": "base_spirit",
+    "subcategory": "mezcal",
+    "abv": 42.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 25,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.3,
+      0.6,
+      0.9,
+      0.1,
+      0.0,
+      0.2,
+      0.3,
+      0.1,
+      0.1
+    ],
+    "flavorTags": [
+      "smoky",
+      "earthy",
+      "spicy"
+    ],
+    "aroma": [
+      "smoke",
+      "roasted agave",
+      "charcoal",
+      "dried chili",
+      "mineral"
+    ],
+    "taste": [
+      "intense smoke",
+      "roasted earthiness",
+      "agave sweetness",
+      "pepper"
+    ],
+    "finish": "Long, smoky, warming",
+    "origin": "Oaxaca, Mexico",
+    "productionMethod": "Espadín agave, pit-roasted, tahona crushed, open-air ferment",
+    "rarity": "uncommon",
+    "colorHex": "#F5F0E8",
+    "description": "Artisanal mezcal with intense smoke and earthy complexity.",
+    "descriptionZh": "精釀梅斯卡爾，強烈煙燻氣息與大地複雜度，煙燻調酒的靈魂之選。",
+    "substitutes": [
+      "banhez-mezcal",
+      "wahaka-mezcal"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.8,
+      "agave-syrup": 0.9,
+      "pineapple-juice": 0.85
+    },
+    "tags": [
+      "mezcal",
+      "smoky",
+      "artisanal",
+      "oaxaca"
+    ]
+  },
+  {
+    "id": "fresh-lime-juice",
+    "name": "Fresh Lime Juice",
+    "nameZh": "新鮮萊姆汁",
+    "category": "juice",
+    "subcategory": "citrus",
+    "abv": 0,
+    "sugarContent": 1.7,
+    "acidPH": 2.2,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 7,
+    "flavorVector": [
+      0.95,
+      0.05,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "citrus"
+    ],
+    "aroma": [
+      "bright citrus",
+      "zesty",
+      "tropical lime"
+    ],
+    "taste": [
+      "sharp acidity",
+      "citrus brightness",
+      "subtle bitterness"
+    ],
+    "finish": "Crisp, clean acid",
+    "rarity": "common",
+    "colorHex": "#E8F5A0",
+    "description": "Essential sour component. Always use fresh-squeezed.",
+    "descriptionZh": "最基礎的酸味來源，務必使用新鮮現榨。",
+    "substitutes": [
+      "fresh-lemon-juice",
+      "yuzu-juice"
+    ],
+    "tags": [
+      "citrus",
+      "sour",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fresh-lemon-juice",
+    "name": "Fresh Lemon Juice",
+    "nameZh": "新鮮檸檬汁",
+    "category": "juice",
+    "subcategory": "citrus",
+    "abv": 0,
+    "sugarContent": 2.5,
+    "acidPH": 2.4,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 8,
+    "flavorVector": [
+      0.9,
+      0.02,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.05,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "citrus"
+    ],
+    "aroma": [
+      "bright lemon",
+      "floral citrus",
+      "fresh"
+    ],
+    "taste": [
+      "tart acidity",
+      "lemon brightness",
+      "clean"
+    ],
+    "finish": "Bright, clean",
+    "rarity": "common",
+    "colorHex": "#FFF9C4",
+    "description": "Slightly less acidic than lime, with more floral notes.",
+    "descriptionZh": "比萊姆汁稍柔和，帶花香的酸味來源，適合更細緻的調酒。",
+    "substitutes": [
+      "fresh-lime-juice"
+    ],
+    "tags": [
+      "citrus",
+      "sour",
+      "fresh"
+    ]
+  },
+  {
+    "id": "pineapple-juice",
+    "name": "Pineapple Juice",
+    "nameZh": "鳳梨汁",
+    "category": "juice",
+    "subcategory": "tropical",
+    "abv": 0,
+    "sugarContent": 10,
+    "acidPH": 3.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 14,
+    "flavorVector": [
+      0.2,
+      0.9,
+      0.1,
+      0.2,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "tropical",
+      "citrus"
+    ],
+    "aroma": [
+      "tropical sweetness",
+      "fresh pineapple",
+      "light acidity"
+    ],
+    "taste": [
+      "sweet tropical",
+      "gentle acid",
+      "juicy"
+    ],
+    "finish": "Sweet, tropical, lingering",
+    "rarity": "common",
+    "colorHex": "#FFE066",
+    "description": "Tropical sweetness with gentle acidity. Great with rum and tequila.",
+    "descriptionZh": "熱帶甜香帶輕微酸度，與蘭姆、龍舌蘭搭配極佳。",
+    "substitutes": [
+      "mango-juice",
+      "passion-fruit-juice"
+    ],
+    "tags": [
+      "tropical",
+      "sweet",
+      "juice"
+    ]
+  },
+  {
+    "id": "simple-syrup",
+    "name": "Simple Syrup",
+    "nameZh": "簡易糖漿",
+    "category": "syrup",
+    "subcategory": "plain",
+    "abv": 0,
+    "sugarContent": 50,
+    "acidPH": 7.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 113,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [],
+    "aroma": [
+      "neutral",
+      "clean sweet"
+    ],
+    "taste": [
+      "pure sweetness",
+      "neutral"
+    ],
+    "finish": "Clean, neutral",
+    "rarity": "common",
+    "colorHex": "#F8F8F0",
+    "description": "1:1 sugar to water. The foundation of cocktail sweetness.",
+    "descriptionZh": "1:1 糖水比例。調酒甜度的基礎，風味中性。",
+    "substitutes": [
+      "rich-syrup",
+      "agave-syrup",
+      "honey-syrup"
+    ],
+    "tags": [
+      "sweet",
+      "neutral",
+      "basic"
+    ]
+  },
+  {
+    "id": "agave-syrup",
+    "name": "Agave Syrup",
+    "nameZh": "龍舌蘭糖漿",
+    "category": "syrup",
+    "subcategory": "agave",
+    "abv": 0,
+    "sugarContent": 70,
+    "acidPH": 5.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 90,
+    "flavorVector": [
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "earthy",
+      "caramel"
+    ],
+    "aroma": [
+      "agave floral",
+      "light caramel"
+    ],
+    "taste": [
+      "floral sweetness",
+      "mild agave character"
+    ],
+    "finish": "Clean, slightly vegetal",
+    "rarity": "common",
+    "colorHex": "#F5D78E",
+    "description": "Nectar-like sweetness. Pairs perfectly with Tequila and Mezcal.",
+    "descriptionZh": "花蜜般甜韻，與龍舌蘭和梅斯卡爾天作之合。",
+    "substitutes": [
+      "simple-syrup",
+      "honey-syrup"
+    ],
+    "tags": [
+      "sweet",
+      "tequila",
+      "agave"
+    ]
+  },
+  {
+    "id": "honey-syrup",
+    "name": "Honey Syrup",
+    "nameZh": "蜂蜜糖漿",
+    "category": "syrup",
+    "subcategory": "honey",
+    "abv": 0,
+    "sugarContent": 60,
+    "acidPH": 3.9,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 90,
+    "flavorVector": [
+      0.0,
+      0.1,
+      0.0,
+      0.2,
+      0.1,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.3,
+      0.4,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "floral",
+      "vanilla",
+      "caramel"
+    ],
+    "aroma": [
+      "floral honey",
+      "beeswax",
+      "light caramel"
+    ],
+    "taste": [
+      "rich floral sweetness",
+      "caramel notes",
+      "subtle vanilla"
+    ],
+    "finish": "Warm, floral, lingering",
+    "rarity": "common",
+    "colorHex": "#D4A017",
+    "description": "2:1 honey to water. Adds floral depth beyond simple syrup.",
+    "descriptionZh": "2:1 蜂蜜水比例，帶花香與焦糖深度，比糖漿更有層次。",
+    "substitutes": [
+      "simple-syrup",
+      "agave-syrup"
+    ],
+    "tags": [
+      "sweet",
+      "floral",
+      "complex"
+    ]
+  },
+  {
+    "id": "angostura-bitters",
+    "name": "Angostura Aromatic Bitters",
+    "nameZh": "安格斯圖拉芳香苦精",
+    "brand": "Angostura",
+    "category": "bitter",
+    "subcategory": "aromatic",
+    "abv": 44.7,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 95,
+    "caloriesPer30ml": 66,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.2,
+      0.7,
+      0.1,
+      0.6,
+      0.4,
+      0.0,
+      0.2,
+      0.4,
+      0.3,
+      0.9,
+      0.1,
+      0.3
+    ],
+    "flavorTags": [
+      "bitter",
+      "herbal",
+      "spicy"
+    ],
+    "aroma": [
+      "gentian",
+      "clove",
+      "cinnamon",
+      "dried herbs"
+    ],
+    "taste": [
+      "intense bitterness",
+      "complex spice",
+      "herbal depth"
+    ],
+    "finish": "Long, bitter, warming spice",
+    "origin": "Trinidad and Tobago",
+    "productionMethod": "Maceration of gentian and botanical blend",
+    "rarity": "common",
+    "colorHex": "#1A0800",
+    "description": "The universal bitters. Used by drops/dashes.",
+    "descriptionZh": "萬用苦精。以滴/dash 計量使用，提升調酒複雜度的神器。",
+    "substitutes": [
+      "peychauds-bitters",
+      "orange-bitters"
+    ],
+    "tags": [
+      "bitters",
+      "aromatic",
+      "classic",
+      "essential"
+    ]
+  },
+  {
+    "id": "campari",
+    "name": "Campari",
+    "nameZh": "金巴利苦酒",
+    "brand": "Campari",
+    "category": "liqueur",
+    "subcategory": "bitter_liqueur",
+    "abv": 25.0,
+    "sugarContent": 30,
+    "acidPH": 4.5,
+    "bitterUnit": 75,
+    "caloriesPer30ml": 78,
+    "flavorVector": [
+      0.3,
+      0.0,
+      0.4,
+      0.0,
+      0.4,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "bitter",
+      "berry",
+      "herbal"
+    ],
+    "aroma": [
+      "bitter orange",
+      "cherry",
+      "herbal complexity",
+      "alcohol"
+    ],
+    "taste": [
+      "intense bitterness",
+      "fruity sweetness",
+      "citrus peel",
+      "herbal"
+    ],
+    "finish": "Long, bitter, pleasantly drying",
+    "origin": "Milan, Italy",
+    "productionMethod": "Infusion of herbs and fruits in alcohol and water",
+    "rarity": "common",
+    "colorHex": "#DC143C",
+    "description": "Italy's iconic bitter liqueur. Essential for Negroni and Spritz.",
+    "descriptionZh": "義大利代表性苦味利口酒，Negroni 的靈魂，鮮紅色如同調酒界的印記。",
+    "substitutes": [
+      "aperol",
+      "gran-classico"
+    ],
+    "pairingBonus": {
+      "sweet-vermouth": 0.95,
+      "gin": 0.9,
+      "prosecco": 0.85
+    },
+    "tags": [
+      "bitter",
+      "italian",
+      "classic",
+      "negroni"
+    ]
+  },
+  {
+    "id": "sweet-vermouth",
+    "name": "Carpano Antica Formula Sweet Vermouth",
+    "nameZh": "卡巴諾古典甜香艾酒",
+    "brand": "Carpano",
+    "category": "fortified_wine",
+    "subcategory": "sweet_vermouth",
+    "abv": 16.5,
+    "sugarContent": 16,
+    "acidPH": 5.0,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 60,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.3,
+      0.4,
+      0.3,
+      0.2,
+      0.4,
+      0.2,
+      0.0,
+      0.2,
+      0.4,
+      0.5,
+      0.4,
+      0.3,
+      0.4
+    ],
+    "flavorTags": [
+      "caramel",
+      "vanilla",
+      "spicy",
+      "bitter"
+    ],
+    "aroma": [
+      "vanilla",
+      "dried fruit",
+      "spice",
+      "wine",
+      "herbs"
+    ],
+    "taste": [
+      "rich vanilla",
+      "dried fig",
+      "chocolate",
+      "baking spice"
+    ],
+    "finish": "Long, complex, bittersweet",
+    "origin": "Italy",
+    "productionMethod": "Fortified wine with botanical infusion",
+    "rarity": "uncommon",
+    "colorHex": "#6B1A1A",
+    "description": "Premium sweet vermouth with extraordinary richness and complexity.",
+    "descriptionZh": "頂級甜香艾酒，以極致豐富度和複雜香氣著稱，Manhattan 的最佳選擇。",
+    "substitutes": [
+      "martini-rosso",
+      "cocchi-torino"
+    ],
+    "pairingBonus": {
+      "makers-mark-bourbon": 0.95,
+      "campari": 0.9
+    },
+    "tags": [
+      "vermouth",
+      "sweet",
+      "italian",
+      "classic"
+    ]
+  },
+  {
+    "id": "triple-sec",
+    "name": "Cointreau Triple Sec",
+    "nameZh": "君度橙酒",
+    "brand": "Cointreau",
+    "category": "liqueur",
+    "subcategory": "orange_liqueur",
+    "abv": 40.0,
+    "sugarContent": 25,
+    "acidPH": 5.5,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 95,
+    "flavorVector": [
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.4,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "citrus",
+      "floral"
+    ],
+    "aroma": [
+      "fresh orange zest",
+      "bitter orange peel",
+      "floral"
+    ],
+    "taste": [
+      "orange sweetness",
+      "citrus brightness",
+      "subtle bitterness"
+    ],
+    "finish": "Clean, orange, slightly dry",
+    "origin": "France",
+    "productionMethod": "Maceration of sweet and bitter orange peels",
+    "rarity": "common",
+    "colorHex": "#FFB347",
+    "description": "Premium orange liqueur. Essential for Margarita and Cosmopolitan.",
+    "descriptionZh": "頂級橙皮利口酒，瑪格麗特和柯夢波丹的關鍵材料。",
+    "substitutes": [
+      "grand-marnier",
+      "curacao"
+    ],
+    "pairingBonus": {
+      "el-jimador-blanco-tequila": 0.95,
+      "fresh-lime-juice": 0.9
+    },
+    "tags": [
+      "liqueur",
+      "orange",
+      "classic"
+    ]
+  },
+  {
+    "id": "dry-vermouth",
+    "name": "Noilly Prat Dry Vermouth",
+    "nameZh": "諾亞普拉特乾香艾酒",
+    "brand": "Noilly Prat",
+    "category": "fortified_wine",
+    "subcategory": "dry_vermouth",
+    "abv": 18.0,
+    "sugarContent": 3,
+    "acidPH": 4.0,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 40,
+    "flavorVector": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.6,
+      0.5,
+      0.2,
+      0.1,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.3,
+      0.2,
+      0.2
+    ],
+    "flavorTags": [
+      "herbal",
+      "floral",
+      "bitter"
+    ],
+    "aroma": [
+      "chamomile",
+      "citrus",
+      "herbs",
+      "light wine"
+    ],
+    "taste": [
+      "dry, crisp",
+      "herbal complexity",
+      "light bitterness"
+    ],
+    "finish": "Dry, clean, herbal",
+    "origin": "France",
+    "rarity": "common",
+    "colorHex": "#F0E8C8",
+    "description": "Classic dry vermouth for Martini and light aperitifs.",
+    "descriptionZh": "經典乾香艾酒，馬丁尼的靈魂。帶草本清新，口感乾爽。",
+    "substitutes": [
+      "dolin-dry"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.95
+    },
+    "tags": [
+      "vermouth",
+      "dry",
+      "french"
+    ]
+  },
+  {
+    "id": "tonic-water",
+    "name": "Fever-Tree Premium Indian Tonic Water",
+    "nameZh": "Fever-Tree 頂級印度通寧水",
+    "brand": "Fever-Tree",
+    "category": "mixer",
+    "subcategory": "tonic",
+    "abv": 0,
+    "sugarContent": 6,
+    "acidPH": 3.0,
+    "bitterUnit": 30,
+    "caloriesPer30ml": 10,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.4,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "bitter",
+      "herbal"
+    ],
+    "aroma": [
+      "quinine",
+      "light citrus",
+      "mineral"
+    ],
+    "taste": [
+      "bitter quinine",
+      "effervescent",
+      "clean"
+    ],
+    "finish": "Crisp, clean, quinine bitter",
+    "rarity": "common",
+    "colorHex": "#F8F8FF",
+    "description": "Premium tonic with natural quinine. The G&T gold standard.",
+    "descriptionZh": "天然奎寧頂級通寧水，琴湯尼的黃金標準。",
+    "substitutes": [
+      "schweppes-tonic",
+      "q-tonic"
+    ],
+    "tags": [
+      "mixer",
+      "bitter",
+      "carbonated"
+    ]
+  },
+  {
+    "id": "soda-water",
+    "name": "Soda Water",
+    "nameZh": "蘇打水",
+    "category": "mixer",
+    "subcategory": "carbonated_water",
+    "abv": 0,
+    "sugarContent": 0,
+    "acidPH": 6.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 0,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [],
+    "aroma": [
+      "neutral",
+      "mineral"
+    ],
+    "taste": [
+      "clean",
+      "effervescent",
+      "neutral"
+    ],
+    "finish": "Clean, refreshing",
+    "rarity": "common",
+    "colorHex": "#F8F8FF",
+    "description": "Plain carbonated water. Extends highballs without adding flavor.",
+    "descriptionZh": "無糖碳酸水，High ball 的延展基底，不干擾風味。",
+    "substitutes": [
+      "sparkling-water"
+    ],
+    "tags": [
+      "mixer",
+      "neutral",
+      "carbonated"
+    ]
+  },
+  {
+    "id": "egg-white",
+    "name": "Egg White",
+    "nameZh": "蛋白",
+    "category": "egg",
+    "abv": 0,
+    "sugarContent": 0,
+    "acidPH": 7.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 16,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [],
+    "aroma": [
+      "neutral",
+      "faint egg"
+    ],
+    "taste": [
+      "neutral",
+      "silky texture",
+      "no flavor"
+    ],
+    "finish": "Creamy, smooth",
+    "rarity": "common",
+    "colorHex": "#FEFEFE",
+    "description": "Creates silky foam in Sours. Dry shake first, then wet shake.",
+    "descriptionZh": "為酸酒系調酒創造絲滑泡沫層。先乾搖（Dry Shake），再加冰濕搖。",
+    "substitutes": [
+      "aquafaba"
+    ],
+    "tags": [
+      "texture",
+      "foam",
+      "sour"
+    ]
+  },
+  {
+    "id": "fresh-mint",
+    "name": "Fresh Mint Leaves",
+    "nameZh": "新鮮薄荷葉",
+    "category": "fresh",
+    "subcategory": "herb",
+    "abv": 0,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 2,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.3,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "herbal",
+      "floral"
+    ],
+    "aroma": [
+      "fresh mint",
+      "menthol",
+      "green"
+    ],
+    "taste": [
+      "cooling menthol",
+      "green freshness"
+    ],
+    "finish": "Long, cool, refreshing",
+    "rarity": "common",
+    "colorHex": "#228B22",
+    "description": "Essential for Mojito and Julep. Gently muddled, not bruised.",
+    "descriptionZh": "莫吉托與朱利普的靈魂。輕柔攪碎釋放香氣即可，避免破壞纖維。",
+    "substitutes": [
+      "basil",
+      "shiso"
+    ],
+    "tags": [
+      "herb",
+      "fresh",
+      "cooling"
+    ]
+  },
+  {
+    "id": "vodka",
+    "name": "Absolut Vodka",
+    "nameZh": "絕對伏特加",
+    "brand": "Absolut",
+    "category": "base_spirit",
+    "subcategory": "vodka",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "clean",
+      "neutral"
+    ],
+    "aroma": [
+      "neutral grain",
+      "faint citrus",
+      "clean"
+    ],
+    "taste": [
+      "clean spirit",
+      "slight sweetness",
+      "smooth"
+    ],
+    "finish": "Clean, warming, short",
+    "origin": "Sweden",
+    "productionMethod": "Continuous distillation from winter wheat",
+    "rarity": "common",
+    "colorHex": "#FAFAFA",
+    "description": "Exceptionally clean vodka. The blank canvas of cocktails.",
+    "descriptionZh": "極度純淨的伏特加，調酒的空白畫布，讓其他風味閃耀。",
+    "substitutes": [
+      "grey-goose",
+      "ketel-one",
+      "stolichnaya"
+    ],
+    "pairingBonus": {
+      "triple-sec": 0.9,
+      "cranberry-juice": 0.95,
+      "fresh-lime-juice": 0.85
+    },
+    "tags": [
+      "classic",
+      "neutral",
+      "versatile"
+    ]
+  },
+  {
+    "id": "dark-rum",
+    "name": "Myers's Original Dark Rum",
+    "nameZh": "邁爾士黑蘭姆酒",
+    "brand": "Myers's",
+    "category": "base_spirit",
+    "subcategory": "dark_rum",
+    "abv": 40.0,
+    "sugarContent": 2,
+    "acidPH": 7.0,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 66,
+    "flavorVector": [
+      0.1,
+      0.6,
+      0.3,
+      0.3,
+      0.0,
+      0.1,
+      0.2,
+      0.1,
+      0.2,
+      0.3,
+      0.7,
+      0.8,
+      0.1,
+      0.1,
+      0.4
+    ],
+    "flavorTags": [
+      "caramel",
+      "molasses",
+      "tropical"
+    ],
+    "aroma": [
+      "dark molasses",
+      "brown sugar",
+      "dried fruit",
+      "toffee"
+    ],
+    "taste": [
+      "rich molasses",
+      "burnt caramel",
+      "tropical fruit",
+      "baking spice"
+    ],
+    "finish": "Long, warm, treacle sweetness",
+    "origin": "Jamaica",
+    "productionMethod": "Pot still distillation from molasses, aged in oak",
+    "aging": "Blend of rums aged up to 4 years",
+    "rarity": "common",
+    "colorHex": "#3B1E08",
+    "description": "Bold Jamaican dark rum packed with molasses and tropical depth.",
+    "descriptionZh": "濃烈牙買加黑蘭姆，充滿糖蜜與熱帶果味深度，Dark 'n' Stormy 的靈魂。",
+    "substitutes": [
+      "goslings-black-seal",
+      "coruba-dark"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.85,
+      "pineapple-juice": 0.9,
+      "simple-syrup": 0.8
+    },
+    "tags": [
+      "rum",
+      "dark",
+      "jamaican",
+      "tiki"
+    ]
+  },
+  {
+    "id": "scotch-whisky",
+    "name": "Johnnie Walker Black Label",
+    "nameZh": "約翰走路黑牌蘇格蘭威士忌",
+    "brand": "Johnnie Walker",
+    "category": "base_spirit",
+    "subcategory": "blended_scotch",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.1,
+      0.3,
+      0.2,
+      0.5,
+      0.2,
+      0.5,
+      0.6,
+      0.2,
+      0.2,
+      0.5
+    ],
+    "flavorTags": [
+      "smoky",
+      "malty",
+      "oak"
+    ],
+    "aroma": [
+      "peat smoke",
+      "dried fruit",
+      "dark chocolate",
+      "oak",
+      "vanilla"
+    ],
+    "taste": [
+      "smoky malt",
+      "dark fruit",
+      "cocoa",
+      "gentle peat"
+    ],
+    "finish": "Long, smoky, warm spice",
+    "origin": "Scotland",
+    "productionMethod": "Blend of malt and grain whiskies, aged 12 years minimum",
+    "aging": "12 years",
+    "rarity": "common",
+    "colorHex": "#A0600A",
+    "description": "Rich blended Scotch with smoky depth and dried fruit complexity.",
+    "descriptionZh": "豐富的調和蘇格蘭威士忌，煙燻深度與乾果複雜度兼備，Penicillin 的經典基酒。",
+    "substitutes": [
+      "famous-grouse",
+      "monkey-shoulder",
+      "chivas-12"
+    ],
+    "pairingBonus": {
+      "honey-syrup": 0.9,
+      "fresh-lemon-juice": 0.85,
+      "angostura-bitters": 0.8
+    },
+    "tags": [
+      "scotch",
+      "smoky",
+      "blended",
+      "classic"
+    ]
+  },
+  {
+    "id": "aperol",
+    "name": "Aperol",
+    "nameZh": "艾普羅苦橙酒",
+    "brand": "Aperol",
+    "category": "liqueur",
+    "subcategory": "bitter_liqueur",
+    "abv": 11.0,
+    "sugarContent": 18,
+    "acidPH": 4.5,
+    "bitterUnit": 40,
+    "caloriesPer30ml": 50,
+    "flavorVector": [
+      0.4,
+      0.1,
+      0.3,
+      0.0,
+      0.3,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "bitter",
+      "orange",
+      "herbal"
+    ],
+    "aroma": [
+      "bitter orange",
+      "rhubarb",
+      "gentian",
+      "light herbs"
+    ],
+    "taste": [
+      "bittersweet orange",
+      "rhubarb tartness",
+      "herbal undertones"
+    ],
+    "finish": "Medium, pleasantly bitter, orange peel",
+    "origin": "Padua, Italy",
+    "productionMethod": "Infusion of bitter orange, gentian, rhubarb, and botanicals",
+    "rarity": "common",
+    "colorHex": "#FF6633",
+    "description": "Italy's sunshine aperitif. Lower ABV sibling of Campari.",
+    "descriptionZh": "義大利的陽光開胃酒。Campari 的低酒精版親戚，Spritz 的靈魂。",
+    "substitutes": [
+      "cappelletti",
+      "contratto-aperitif"
+    ],
+    "pairingBonus": {
+      "prosecco": 0.95,
+      "soda-water": 0.85,
+      "fresh-lemon-juice": 0.8
+    },
+    "tags": [
+      "bitter",
+      "italian",
+      "aperitif",
+      "spritz"
+    ]
+  },
+  {
+    "id": "kahlua",
+    "name": "Kahlúa Coffee Liqueur",
+    "nameZh": "卡魯哇咖啡利口酒",
+    "brand": "Kahlúa",
+    "category": "liqueur",
+    "subcategory": "coffee_liqueur",
+    "abv": 20.0,
+    "sugarContent": 45,
+    "acidPH": 5.0,
+    "bitterUnit": 30,
+    "caloriesPer30ml": 91,
+    "flavorVector": [
+      0.0,
+      0.1,
+      0.2,
+      0.4,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.5,
+      0.6,
+      0.3,
+      0.0,
+      0.3
+    ],
+    "flavorTags": [
+      "coffee",
+      "caramel",
+      "vanilla"
+    ],
+    "aroma": [
+      "roasted coffee",
+      "dark chocolate",
+      "caramel",
+      "vanilla"
+    ],
+    "taste": [
+      "rich coffee",
+      "caramel sweetness",
+      "dark chocolate",
+      "rum undertone"
+    ],
+    "finish": "Long, coffee-sweet, warming",
+    "origin": "Veracruz, Mexico",
+    "productionMethod": "Arabica coffee, sugarcane rum, vanilla, and caramel",
+    "rarity": "common",
+    "colorHex": "#1A0A00",
+    "description": "The original coffee liqueur. Essential for Espresso Martini.",
+    "descriptionZh": "始祖咖啡利口酒，Espresso Martini 的核心材料，濃郁咖啡與焦糖甜韻。",
+    "substitutes": [
+      "mr-black-coffee-liqueur",
+      "tia-maria"
+    ],
+    "pairingBonus": {
+      "vodka": 0.95,
+      "fresh-lemon-juice": 0.5
+    },
+    "tags": [
+      "coffee",
+      "liqueur",
+      "sweet",
+      "classic"
+    ]
+  },
+  {
+    "id": "elderflower-liqueur",
+    "name": "St-Germain Elderflower Liqueur",
+    "nameZh": "聖日耳曼接骨木花利口酒",
+    "brand": "St-Germain",
+    "category": "liqueur",
+    "subcategory": "elderflower",
+    "abv": 20.0,
+    "sugarContent": 35,
+    "acidPH": 5.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 78,
+    "flavorVector": [
+      0.2,
+      0.3,
+      0.0,
+      0.0,
+      0.2,
+      0.8,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "floral",
+      "tropical",
+      "citrus"
+    ],
+    "aroma": [
+      "elderflower blossom",
+      "lychee",
+      "pear",
+      "grapefruit"
+    ],
+    "taste": [
+      "floral sweetness",
+      "tropical lychee",
+      "subtle citrus"
+    ],
+    "finish": "Delicate, floral, lingering",
+    "origin": "France",
+    "productionMethod": "Maceration of hand-picked elderflower blossoms in eau-de-vie",
+    "rarity": "common",
+    "colorHex": "#F5E6C8",
+    "description": "Exquisitely floral French liqueur. 'Bartender's ketchup' of the 2010s.",
+    "descriptionZh": "極致花香法國利口酒，被譽為2010年代「調酒師的番茄醬」，百搭提升花香層次。",
+    "substitutes": [
+      "giffard-elderflower",
+      "monin-elderflower-syrup"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.9,
+      "prosecco": 0.9,
+      "fresh-lemon-juice": 0.85
+    },
+    "tags": [
+      "floral",
+      "liqueur",
+      "french",
+      "versatile"
+    ]
+  },
+  {
+    "id": "grapefruit-juice",
+    "name": "Fresh Grapefruit Juice",
+    "nameZh": "新鮮葡萄柚汁",
+    "category": "juice",
+    "subcategory": "citrus",
+    "abv": 0,
+    "sugarContent": 7,
+    "acidPH": 3.0,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 12,
+    "flavorVector": [
+      0.7,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.4,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "citrus",
+      "bitter"
+    ],
+    "aroma": [
+      "pink grapefruit",
+      "citrus zest",
+      "floral"
+    ],
+    "taste": [
+      "tart citrus",
+      "bitter pith",
+      "juicy sweetness"
+    ],
+    "finish": "Bittersweet, refreshing",
+    "rarity": "common",
+    "colorHex": "#FFB6C1",
+    "description": "Tart and bitter citrus juice. Star of the Paloma.",
+    "descriptionZh": "酸苦兼具的柑橘果汁，Paloma 的主角，帶來層次分明的酸度。",
+    "substitutes": [
+      "pomelo-juice",
+      "fresh-orange-juice"
+    ],
+    "tags": [
+      "citrus",
+      "bitter",
+      "fresh",
+      "juice"
+    ]
+  },
+  {
+    "id": "cranberry-juice",
+    "name": "Cranberry Juice",
+    "nameZh": "蔓越莓汁",
+    "category": "juice",
+    "subcategory": "berry",
+    "abv": 0,
+    "sugarContent": 12,
+    "acidPH": 2.5,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 14,
+    "flavorVector": [
+      0.3,
+      0.2,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "tart",
+      "berry",
+      "astringent"
+    ],
+    "aroma": [
+      "tart berry",
+      "dry cranberry",
+      "subtle sweetness"
+    ],
+    "taste": [
+      "sharp tartness",
+      "berry acidity",
+      "astringent finish"
+    ],
+    "finish": "Dry, tart, clean",
+    "rarity": "common",
+    "colorHex": "#DC143C",
+    "description": "Tart berry juice. Gives Cosmopolitan its signature pink hue.",
+    "descriptionZh": "酸澀莓果汁，賦予柯夢波丹標誌性的粉紅色澤與莓果酸韻。",
+    "substitutes": [
+      "pomegranate-juice"
+    ],
+    "tags": [
+      "berry",
+      "tart",
+      "juice"
+    ]
+  },
+  {
+    "id": "orange-juice",
+    "name": "Fresh Orange Juice",
+    "nameZh": "新鮮柳橙汁",
+    "category": "juice",
+    "subcategory": "citrus",
+    "abv": 0,
+    "sugarContent": 8,
+    "acidPH": 3.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 13,
+    "flavorVector": [
+      0.6,
+      0.3,
+      0.1,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "citrus",
+      "sweet",
+      "fruity"
+    ],
+    "aroma": [
+      "fresh orange",
+      "sweet citrus",
+      "floral"
+    ],
+    "taste": [
+      "juicy orange",
+      "balanced sweetness",
+      "mild acidity"
+    ],
+    "finish": "Sweet, round, clean",
+    "rarity": "common",
+    "colorHex": "#FFA500",
+    "description": "Versatile citrus juice. Sunrise cocktails and tiki essentials.",
+    "descriptionZh": "萬用柑橘果汁，日出系調酒與Tiki的必備材料。",
+    "substitutes": [
+      "tangerine-juice",
+      "blood-orange-juice"
+    ],
+    "tags": [
+      "citrus",
+      "sweet",
+      "juice",
+      "fresh"
+    ]
+  },
+  {
+    "id": "grenadine",
+    "name": "Grenadine Syrup",
+    "nameZh": "紅石榴糖漿",
+    "category": "syrup",
+    "subcategory": "fruit",
+    "abv": 0,
+    "sugarContent": 55,
+    "acidPH": 4.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 100,
+    "flavorVector": [
+      0.1,
+      0.2,
+      0.6,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.3,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "pomegranate",
+      "sweet",
+      "fruity"
+    ],
+    "aroma": [
+      "pomegranate",
+      "red berry",
+      "rose"
+    ],
+    "taste": [
+      "tart-sweet pomegranate",
+      "berry richness",
+      "floral hint"
+    ],
+    "finish": "Sweet, fruity, round",
+    "rarity": "common",
+    "colorHex": "#B22222",
+    "description": "Pomegranate syrup. Adds ruby colour and fruity sweetness.",
+    "descriptionZh": "石榴糖漿，為調酒增添寶石般的紅色與果甜層次，經典Tiki的染色劑。",
+    "substitutes": [
+      "pomegranate-molasses"
+    ],
+    "tags": [
+      "sweet",
+      "fruity",
+      "colour",
+      "tiki"
+    ]
+  },
+  {
+    "id": "peychauds-bitters",
+    "name": "Peychaud's Bitters",
+    "nameZh": "裴喬氏苦精",
+    "brand": "Peychaud's",
+    "category": "bitter",
+    "subcategory": "aromatic",
+    "abv": 35.0,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 70,
+    "caloriesPer30ml": 52,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.2,
+      0.1,
+      0.5,
+      0.4,
+      0.3,
+      0.1,
+      0.0,
+      0.3,
+      0.2,
+      0.1,
+      0.7,
+      0.1,
+      0.2
+    ],
+    "flavorTags": [
+      "anise",
+      "floral",
+      "bitter"
+    ],
+    "aroma": [
+      "anise",
+      "cherry",
+      "clove",
+      "floral notes"
+    ],
+    "taste": [
+      "anise-forward",
+      "cherry sweetness",
+      "gentian bitterness"
+    ],
+    "finish": "Medium, anise-spice, floral",
+    "origin": "New Orleans, USA",
+    "productionMethod": "Maceration of gentian root, anise, and botanical blend",
+    "rarity": "uncommon",
+    "colorHex": "#8B0000",
+    "description": "New Orleans' signature bitters. Essential for the Sazerac.",
+    "descriptionZh": "紐奧良標誌性苦精，Sazerac 的靈魂材料，茴香花香主導。",
+    "substitutes": [
+      "angostura-bitters"
+    ],
+    "pairingBonus": {
+      "makers-mark-bourbon": 0.9,
+      "absinthe": 0.85
+    },
+    "tags": [
+      "bitters",
+      "anise",
+      "new-orleans",
+      "classic"
+    ]
+  },
+  {
+    "id": "prosecco",
+    "name": "Prosecco",
+    "nameZh": "普賽克氣泡酒",
+    "category": "wine",
+    "subcategory": "sparkling_wine",
+    "abv": 11.0,
+    "sugarContent": 8,
+    "acidPH": 3.2,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 24,
+    "flavorVector": [
+      0.2,
+      0.3,
+      0.1,
+      0.0,
+      0.1,
+      0.4,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "fruity",
+      "floral",
+      "effervescent"
+    ],
+    "aroma": [
+      "green apple",
+      "white peach",
+      "pear",
+      "light floral"
+    ],
+    "taste": [
+      "crisp apple",
+      "gentle bubbles",
+      "light stone fruit"
+    ],
+    "finish": "Clean, refreshing, dry",
+    "origin": "Veneto, Italy",
+    "productionMethod": "Charmat method, Glera grapes",
+    "rarity": "common",
+    "colorHex": "#F5F0C8",
+    "description": "Italian sparkling wine. The fizzy heart of the Spritz.",
+    "descriptionZh": "義大利氣泡酒，Spritz 的氣泡心臟，帶清爽青蘋果與白桃風味。",
+    "substitutes": [
+      "cava",
+      "champagne"
+    ],
+    "pairingBonus": {
+      "aperol": 0.95,
+      "campari": 0.85,
+      "elderflower-liqueur": 0.9
+    },
+    "tags": [
+      "sparkling",
+      "italian",
+      "wine",
+      "aperitif"
+    ]
+  },
+  {
+    "id": "rye-whiskey",
+    "name": "Rittenhouse Straight Rye Whisky",
+    "nameZh": "瑞頓豪斯純裸麥威士忌",
+    "brand": "Rittenhouse",
+    "category": "base_spirit",
+    "subcategory": "rye_whiskey",
+    "abv": 50.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 22,
+    "caloriesPer30ml": 70,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.0,
+      0.7,
+      0.1,
+      0.1,
+      0.2,
+      0.5,
+      0.6,
+      0.3,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "spicy",
+      "grain",
+      "oak"
+    ],
+    "aroma": [
+      "rye grain",
+      "black pepper",
+      "clove",
+      "caramel"
+    ],
+    "taste": [
+      "bold rye spice",
+      "baking spice",
+      "dried cherry",
+      "toasted grain"
+    ],
+    "finish": "Long, peppery, dry oak",
+    "origin": "Kentucky, USA",
+    "productionMethod": "Pot still distillation, 51% rye mash bill, aged in new charred oak",
+    "aging": "4 years in new American oak",
+    "rarity": "common",
+    "colorHex": "#B8651A",
+    "description": "Bottled-in-bond rye with bold spice. Manhattan essential.",
+    "descriptionZh": "瓶裝純裸麥威士忌，辛香料風味強烈，曼哈頓調酒的經典首選。",
+    "substitutes": [
+      "makers-mark-bourbon",
+      "wild-turkey-rye"
+    ],
+    "pairingBonus": {
+      "sweet-vermouth": 0.95,
+      "angostura-bitters": 0.9,
+      "simple-syrup": 0.8
+    },
+    "tags": [
+      "rye",
+      "american",
+      "spicy",
+      "classic"
+    ]
+  },
+  {
+    "id": "cognac",
+    "name": "Hennessy VS Cognac",
+    "nameZh": "軒尼詩VS干邑白蘭地",
+    "brand": "Hennessy",
+    "category": "base_spirit",
+    "subcategory": "cognac",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.1,
+      0.1,
+      0.2,
+      0.5,
+      0.1,
+      0.2,
+      0.2,
+      0.1,
+      0.0,
+      0.2,
+      0.7,
+      0.5,
+      0.1,
+      0.1,
+      0.5
+    ],
+    "flavorTags": [
+      "grape",
+      "vanilla",
+      "dried fruit"
+    ],
+    "aroma": [
+      "dried apricot",
+      "vanilla",
+      "oak",
+      "grape must",
+      "white flower"
+    ],
+    "taste": [
+      "grape richness",
+      "vanilla custard",
+      "dried fruit",
+      "gentle tannin"
+    ],
+    "finish": "Medium-long, warm, fruity oak",
+    "origin": "Cognac, France",
+    "productionMethod": "Double distillation in copper pot stills, aged in Limousin oak",
+    "aging": "Minimum 2 years in French oak",
+    "rarity": "common",
+    "colorHex": "#C47A2A",
+    "description": "Smooth VS Cognac with grape richness and vanilla warmth.",
+    "descriptionZh": "順滑的VS干邑白蘭地，葡萄豐韻與香草溫暖交織，Sidecar的靈魂基酒。",
+    "substitutes": [
+      "remy-martin-vsop",
+      "courvoisier-vs"
+    ],
+    "pairingBonus": {
+      "fresh-lemon-juice": 0.9,
+      "triple-sec": 0.9,
+      "simple-syrup": 0.8
+    },
+    "tags": [
+      "cognac",
+      "french",
+      "elegant",
+      "classic"
+    ]
+  },
+  {
+    "id": "irish-whiskey",
+    "name": "Jameson Irish Whiskey",
+    "nameZh": "尊美醇愛爾蘭威士忌",
+    "brand": "Jameson",
+    "category": "base_spirit",
+    "subcategory": "irish_whiskey",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.1,
+      0.1,
+      0.2,
+      0.1,
+      0.0,
+      0.2,
+      0.5,
+      0.4,
+      0.1,
+      0.1,
+      0.3
+    ],
+    "flavorTags": [
+      "smooth",
+      "honeyed",
+      "light malt"
+    ],
+    "aroma": [
+      "honey",
+      "light malt",
+      "green apple",
+      "vanilla",
+      "toasted wood"
+    ],
+    "taste": [
+      "smooth honey",
+      "light cereal",
+      "vanilla cream",
+      "gentle spice"
+    ],
+    "finish": "Medium, smooth, mild sweetness",
+    "origin": "Dublin, Ireland",
+    "productionMethod": "Triple distilled blend of pot still and grain whiskey",
+    "aging": "Minimum 4 years in seasoned oak casks",
+    "rarity": "common",
+    "colorHex": "#D4A847",
+    "description": "Triple-distilled Irish whiskey, exceptionally smooth and approachable.",
+    "descriptionZh": "三次蒸餾的愛爾蘭威士忌，口感極為滑順，蜂蜜與輕麥芽香氣，入門威士忌首選。",
+    "substitutes": [
+      "tullamore-dew",
+      "bushmills-original"
+    ],
+    "pairingBonus": {
+      "honey-syrup": 0.85,
+      "fresh-lemon-juice": 0.8,
+      "fresh-ginger": 0.85
+    },
+    "tags": [
+      "irish",
+      "smooth",
+      "triple-distilled",
+      "classic"
+    ]
+  },
+  {
+    "id": "japanese-whisky",
+    "name": "Suntory Toki Japanese Whisky",
+    "nameZh": "三得利季威士忌",
+    "brand": "Suntory",
+    "category": "base_spirit",
+    "subcategory": "japanese_whisky",
+    "abv": 43.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 66,
+    "flavorVector": [
+      0.1,
+      0.1,
+      0.0,
+      0.3,
+      0.1,
+      0.3,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.4,
+      0.3,
+      0.1,
+      0.1,
+      0.3
+    ],
+    "flavorTags": [
+      "delicate",
+      "floral",
+      "green apple"
+    ],
+    "aroma": [
+      "green apple",
+      "white flower",
+      "honey",
+      "grapefruit",
+      "peppermint"
+    ],
+    "taste": [
+      "delicate green apple",
+      "floral honey",
+      "white pepper",
+      "mild citrus"
+    ],
+    "finish": "Clean, subtly sweet, gentle spice",
+    "origin": "Japan",
+    "productionMethod": "Blend of malt and grain whiskies from Yamazaki, Hakushu, and Chita distilleries",
+    "rarity": "common",
+    "colorHex": "#E0C870",
+    "description": "Delicate blended Japanese whisky designed for Highball perfection.",
+    "descriptionZh": "精緻調和日本威士忌，花香與青蘋果交織，專為完美Highball而生。",
+    "substitutes": [
+      "nikka-days",
+      "hibiki-harmony"
+    ],
+    "pairingBonus": {
+      "soda-water": 0.95,
+      "fresh-lemon-juice": 0.8,
+      "honey-syrup": 0.8
+    },
+    "tags": [
+      "japanese",
+      "delicate",
+      "floral",
+      "highball"
+    ]
+  },
+  {
+    "id": "aged-rum",
+    "name": "Appleton Estate 12 Year Rare Casks",
+    "nameZh": "雅伯頓莊園12年珍稀桶藏蘭姆酒",
+    "brand": "Appleton Estate",
+    "category": "base_spirit",
+    "subcategory": "aged_rum",
+    "abv": 43.0,
+    "sugarContent": 1,
+    "acidPH": 7.0,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 67,
+    "flavorVector": [
+      0.1,
+      0.6,
+      0.2,
+      0.4,
+      0.1,
+      0.1,
+      0.3,
+      0.1,
+      0.1,
+      0.3,
+      0.7,
+      0.8,
+      0.1,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "tropical fruit",
+      "toffee",
+      "oak"
+    ],
+    "aroma": [
+      "orange peel",
+      "toffee",
+      "vanilla",
+      "tropical fruit",
+      "nutmeg"
+    ],
+    "taste": [
+      "rich toffee",
+      "baked banana",
+      "orange marmalade",
+      "toasted oak"
+    ],
+    "finish": "Long, warm, spiced oak with lingering toffee",
+    "origin": "Nassau Valley, Jamaica",
+    "productionMethod": "Copper pot still distillation from molasses, tropical aging",
+    "aging": "Minimum 12 years in American oak barrels",
+    "rarity": "common",
+    "colorHex": "#8B5A2B",
+    "description": "Elegant aged Jamaican rum with deep tropical fruit and toffee complexity.",
+    "descriptionZh": "優雅的陳年牙買加蘭姆酒，深邃熱帶水果與太妃糖的層次交織，極致Tiki基酒。",
+    "substitutes": [
+      "dark-rum",
+      "diplomatico-reserva"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "orgeat": 0.95,
+      "pineapple-juice": 0.9,
+      "demerara-syrup": 0.85
+    },
+    "tags": [
+      "rum",
+      "aged",
+      "jamaican",
+      "tiki",
+      "sipping"
+    ]
+  },
+  {
+    "id": "absinthe",
+    "name": "Pernod Absinthe",
+    "nameZh": "保樂力加苦艾酒",
+    "brand": "Pernod",
+    "category": "base_spirit",
+    "subcategory": "absinthe",
+    "abv": 68.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 35,
+    "caloriesPer30ml": 85,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.2,
+      0.5,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "anise",
+      "wormwood",
+      "fennel"
+    ],
+    "aroma": [
+      "anise",
+      "wormwood",
+      "fennel",
+      "melissa",
+      "mint"
+    ],
+    "taste": [
+      "intense anise",
+      "bitter wormwood",
+      "sweet fennel",
+      "herbal complexity"
+    ],
+    "finish": "Long, numbing, lingering anise and herbs",
+    "origin": "France",
+    "productionMethod": "Maceration and distillation of wormwood, anise, and fennel with botanicals",
+    "rarity": "uncommon",
+    "colorHex": "#7FBF50",
+    "description": "Traditional French absinthe with intense anise and herbal complexity. A rinse goes a long way.",
+    "descriptionZh": "傳統法國苦艾酒，濃烈茴香與草本複雜度，常作杯壁漂洗使用，少量即效果顯著。",
+    "substitutes": [
+      "pernod-anise",
+      "herbsaint"
+    ],
+    "pairingBonus": {
+      "simple-syrup": 0.8,
+      "rye-whiskey": 0.85,
+      "cognac": 0.85
+    },
+    "tags": [
+      "absinthe",
+      "french",
+      "herbal",
+      "intense"
+    ]
+  },
+  {
+    "id": "chartreuse-green",
+    "name": "Green Chartreuse",
+    "nameZh": "綠色夏特勒茲修道院利口酒",
+    "brand": "Chartreuse",
+    "category": "liqueur",
+    "subcategory": "herbal_liqueur",
+    "abv": 55.0,
+    "sugarContent": 25,
+    "acidPH": 5.5,
+    "bitterUnit": 30,
+    "caloriesPer30ml": 95,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.4,
+      0.5,
+      0.3,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.5,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "herbal",
+      "botanical",
+      "complex"
+    ],
+    "aroma": [
+      "130 herbs",
+      "eucalyptus",
+      "mint",
+      "pine",
+      "saffron"
+    ],
+    "taste": [
+      "intensely herbal",
+      "sweet and pungent",
+      "pine resin",
+      "menthol"
+    ],
+    "finish": "Extremely long, herbal warmth, evolving complexity",
+    "origin": "Voiron, France",
+    "productionMethod": "Secret recipe of 130 herbs, plants, and flowers macerated and distilled by Carthusian monks",
+    "rarity": "uncommon",
+    "colorHex": "#7BA05B",
+    "description": "Legendary herbal liqueur made by monks from 130 herbs. Last Word essential.",
+    "descriptionZh": "傳奇修道院草本利口酒，由130種草本植物秘方製成，Last Word調酒的靈魂。",
+    "substitutes": [
+      "yellow-chartreuse",
+      "strega"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "maraschino": 0.9,
+      "tanqueray-gin": 0.85
+    },
+    "tags": [
+      "herbal",
+      "french",
+      "monastic",
+      "craft"
+    ]
+  },
+  {
+    "id": "maraschino",
+    "name": "Luxardo Maraschino Liqueur",
+    "nameZh": "盧薩多黑櫻桃利口酒",
+    "brand": "Luxardo",
+    "category": "liqueur",
+    "subcategory": "cherry_liqueur",
+    "abv": 32.0,
+    "sugarContent": 30,
+    "acidPH": 5.5,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 78,
+    "flavorVector": [
+      0.0,
+      0.1,
+      0.6,
+      0.3,
+      0.1,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.4,
+      0.2,
+      0.1,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "cherry",
+      "almond",
+      "floral"
+    ],
+    "aroma": [
+      "marasca cherry",
+      "almond",
+      "rose water",
+      "marzipan"
+    ],
+    "taste": [
+      "bittersweet cherry",
+      "almond nuttiness",
+      "subtle floral",
+      "dry fruit"
+    ],
+    "finish": "Medium, dry cherry, nutty aftertaste",
+    "origin": "Padua, Italy",
+    "productionMethod": "Distillation of Marasca cherries including pits, aged in Finnish ash wood",
+    "rarity": "common",
+    "colorHex": "#F0EAD6",
+    "description": "Benchmark cherry liqueur distilled from Marasca cherries. Aviation essential.",
+    "descriptionZh": "經典黑櫻桃利口酒，由馬拉斯加櫻桃蒸餾而成，Aviation調酒的關鍵材料。",
+    "substitutes": [
+      "maraska-maraschino"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.85,
+      "chartreuse-green": 0.9,
+      "tanqueray-gin": 0.85,
+      "fresh-lemon-juice": 0.85
+    },
+    "tags": [
+      "cherry",
+      "italian",
+      "classic",
+      "craft"
+    ]
+  },
+  {
+    "id": "amaretto",
+    "name": "Disaronno Amaretto",
+    "nameZh": "迪薩羅諾杏仁利口酒",
+    "brand": "Disaronno",
+    "category": "liqueur",
+    "subcategory": "nut_liqueur",
+    "abv": 28.0,
+    "sugarContent": 40,
+    "acidPH": 5.0,
+    "bitterUnit": 8,
+    "caloriesPer30ml": 88,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.8,
+      0.6,
+      0.4,
+      0.2,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "almond",
+      "marzipan",
+      "vanilla"
+    ],
+    "aroma": [
+      "almond",
+      "marzipan",
+      "vanilla",
+      "apricot kernel",
+      "burnt sugar"
+    ],
+    "taste": [
+      "sweet almond",
+      "marzipan richness",
+      "vanilla cream",
+      "subtle cherry"
+    ],
+    "finish": "Medium-long, warm almond, bittersweet",
+    "origin": "Saronno, Italy",
+    "productionMethod": "Infusion of apricot kernel oil with herbs and fruits in alcohol",
+    "rarity": "common",
+    "colorHex": "#C48020",
+    "description": "Iconic Italian almond liqueur with rich marzipan character.",
+    "descriptionZh": "經典義大利杏仁利口酒，濃郁杏仁膏風味，Amaretto Sour的核心。",
+    "substitutes": [
+      "lazzaroni-amaretto"
+    ],
+    "pairingBonus": {
+      "fresh-lemon-juice": 0.9,
+      "makers-mark-bourbon": 0.85,
+      "egg-white": 0.85
+    },
+    "tags": [
+      "almond",
+      "italian",
+      "sweet",
+      "classic"
+    ]
+  },
+  {
+    "id": "creme-de-cacao",
+    "name": "Tempus Fugit Crème de Cacao",
+    "nameZh": "時光飛逝可可利口酒",
+    "brand": "Tempus Fugit",
+    "category": "liqueur",
+    "subcategory": "chocolate_liqueur",
+    "abv": 24.0,
+    "sugarContent": 35,
+    "acidPH": 5.5,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 82,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.4,
+      0.7,
+      0.5,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "chocolate",
+      "vanilla",
+      "sweet"
+    ],
+    "aroma": [
+      "dark chocolate",
+      "vanilla bean",
+      "roasted cacao",
+      "coffee hint"
+    ],
+    "taste": [
+      "rich dark chocolate",
+      "vanilla custard",
+      "subtle roasted bitterness"
+    ],
+    "finish": "Medium, chocolate warmth, clean",
+    "origin": "Switzerland",
+    "productionMethod": "Distillation and maceration of cacao nibs and vanilla beans",
+    "rarity": "common",
+    "colorHex": "#3B2005",
+    "description": "Premium crème de cacao with pure chocolate and vanilla character.",
+    "descriptionZh": "頂級可可利口酒，純正巧克力與香草風味，Brandy Alexander的經典元素。",
+    "substitutes": [
+      "giffard-cacao",
+      "bols-cacao-brown"
+    ],
+    "pairingBonus": {
+      "cognac": 0.85,
+      "vodka": 0.8,
+      "kahlua": 0.8
+    },
+    "tags": [
+      "chocolate",
+      "swiss",
+      "sweet",
+      "dessert"
+    ]
+  },
+  {
+    "id": "benedictine",
+    "name": "Bénédictine DOM",
+    "nameZh": "廊酒DOM本篤利口酒",
+    "brand": "Bénédictine",
+    "category": "liqueur",
+    "subcategory": "herbal_liqueur",
+    "abv": 40.0,
+    "sugarContent": 30,
+    "acidPH": 5.5,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 85,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.7,
+      0.3,
+      0.5,
+      0.2,
+      0.0,
+      0.2,
+      0.4,
+      0.3,
+      0.3,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "honey",
+      "herb",
+      "spice"
+    ],
+    "aroma": [
+      "honey",
+      "saffron",
+      "pine",
+      "nutmeg",
+      "myrrh"
+    ],
+    "taste": [
+      "sweet honey",
+      "complex herbs",
+      "warm baking spice",
+      "citrus zest"
+    ],
+    "finish": "Long, warming, herbal honey",
+    "origin": "Fécamp, France",
+    "productionMethod": "Blend of 27 herbs and spices macerated and distilled, then blended with honey",
+    "rarity": "uncommon",
+    "colorHex": "#C8A020",
+    "description": "Historic French herbal liqueur with honey and spice. B&B and Singapore Sling essential.",
+    "descriptionZh": "歷史悠久的法國草本利口酒，蜂蜜與辛香料交織，新加坡司令的關鍵成分。",
+    "substitutes": [
+      "drambuie",
+      "yellow-chartreuse"
+    ],
+    "pairingBonus": {
+      "cognac": 0.9,
+      "rye-whiskey": 0.85,
+      "fresh-lemon-juice": 0.8
+    },
+    "tags": [
+      "herbal",
+      "french",
+      "historic",
+      "honey"
+    ]
+  },
+  {
+    "id": "passion-fruit-puree",
+    "name": "Passion Fruit Purée",
+    "nameZh": "百香果果泥",
+    "category": "juice",
+    "subcategory": "tropical_puree",
+    "abv": 0,
+    "sugarContent": 10,
+    "acidPH": 3.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 25,
+    "flavorVector": [
+      0.2,
+      0.9,
+      0.1,
+      0.2,
+      0.0,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0
+    ],
+    "flavorTags": [
+      "tropical",
+      "tart",
+      "aromatic"
+    ],
+    "aroma": [
+      "intense tropical",
+      "guava",
+      "mango",
+      "floral"
+    ],
+    "taste": [
+      "tart passion fruit",
+      "tropical sweetness",
+      "aromatic citrus"
+    ],
+    "finish": "Tart, lingering tropical fragrance",
+    "rarity": "common",
+    "colorHex": "#E8A020",
+    "description": "Intensely aromatic tropical purée. Pornstar Martini essential.",
+    "descriptionZh": "濃郁芳香的熱帶果泥，Pornstar Martini的靈魂材料，酸甜平衡極佳。",
+    "substitutes": [
+      "passion-fruit-syrup"
+    ],
+    "pairingBonus": {
+      "vodka": 0.9,
+      "prosecco": 0.85,
+      "fresh-lime-juice": 0.85,
+      "vanilla-syrup": 0.8
+    },
+    "tags": [
+      "tropical",
+      "tart",
+      "aromatic",
+      "tiki"
+    ]
+  },
+  {
+    "id": "coconut-cream",
+    "name": "Coconut Cream",
+    "nameZh": "椰漿",
+    "category": "dairy",
+    "subcategory": "coconut",
+    "abv": 0,
+    "sugarContent": 8,
+    "acidPH": 6.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 60,
+    "flavorVector": [
+      0.0,
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.3,
+      0.3,
+      0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "rich",
+      "tropical",
+      "sweet"
+    ],
+    "aroma": [
+      "fresh coconut",
+      "tropical cream",
+      "subtle vanilla"
+    ],
+    "taste": [
+      "rich coconut fat",
+      "tropical sweetness",
+      "creamy body"
+    ],
+    "finish": "Smooth, coating, tropical",
+    "rarity": "common",
+    "colorHex": "#FAFAF0",
+    "description": "Rich coconut cream for Piña Colada and tropical drinks. Adds body and sweetness.",
+    "descriptionZh": "濃郁椰漿，Piña Colada的必備材料，為調酒增添飽滿口感與熱帶風情。",
+    "substitutes": [
+      "cream-of-coconut",
+      "coconut-milk"
+    ],
+    "pairingBonus": {
+      "bacardi-rum": 0.9,
+      "pineapple-juice": 0.95,
+      "dark-rum": 0.85,
+      "fresh-lime-juice": 0.8
+    },
+    "tags": [
+      "tropical",
+      "creamy",
+      "tiki",
+      "rich"
+    ]
+  },
+  {
+    "id": "fresh-ginger",
+    "name": "Fresh Ginger Root",
+    "nameZh": "新鮮薑根",
+    "category": "fresh",
+    "subcategory": "root",
+    "abv": 0,
+    "sugarContent": 1,
+    "acidPH": 6.0,
+    "bitterUnit": 8,
+    "caloriesPer30ml": 5,
+    "flavorVector": [
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.3,
+      0.0,
+      0.9,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "spicy",
+      "warm",
+      "pungent"
+    ],
+    "aroma": [
+      "fresh ginger",
+      "lemon zest",
+      "earthy warmth"
+    ],
+    "taste": [
+      "sharp ginger heat",
+      "warm pungency",
+      "citrusy zing"
+    ],
+    "finish": "Long, warming, peppery tingle",
+    "rarity": "common",
+    "colorHex": "#C9A86C",
+    "description": "Fresh ginger root for muddling or juicing. Adds pungent warmth to cocktails.",
+    "descriptionZh": "新鮮薑根，搗碎或榨汁使用，為調酒增添辛辣溫暖的層次。",
+    "substitutes": [
+      "ginger-syrup",
+      "ginger-beer"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "honey-syrup": 0.9,
+      "scotch-whisky": 0.85,
+      "irish-whiskey": 0.85
+    },
+    "tags": [
+      "fresh",
+      "spicy",
+      "warm",
+      "versatile"
+    ]
+  },
+  {
+    "id": "demerara-syrup",
+    "name": "Demerara Syrup",
+    "nameZh": "德梅拉拉糖漿",
+    "category": "syrup",
+    "subcategory": "rich_syrup",
+    "abv": 0,
+    "sugarContent": 65,
+    "acidPH": 7.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 110,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.1,
+      0.3,
+      0.7,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "rich",
+      "molasses",
+      "caramel"
+    ],
+    "aroma": [
+      "dark molasses",
+      "toffee",
+      "brown sugar",
+      "slight spice"
+    ],
+    "taste": [
+      "rich caramel",
+      "dark molasses",
+      "treacle sweetness"
+    ],
+    "finish": "Long, coating, deep sweetness",
+    "rarity": "common",
+    "colorHex": "#8B6914",
+    "description": "Rich syrup from unrefined demerara sugar. Adds depth to Old Fashioneds and tiki drinks.",
+    "descriptionZh": "未精製德梅拉拉糖製成的濃糖漿，為古典雞尾酒與Tiki調酒增添深邃甜度。",
+    "substitutes": [
+      "simple-syrup",
+      "turbinado-syrup"
+    ],
+    "pairingBonus": {
+      "rye-whiskey": 0.9,
+      "makers-mark-bourbon": 0.9,
+      "aged-rum": 0.85,
+      "angostura-bitters": 0.85
+    },
+    "tags": [
+      "sweet",
+      "rich",
+      "tiki",
+      "classic"
+    ]
+  },
+  {
+    "id": "orgeat",
+    "name": "Orgeat Syrup",
+    "nameZh": "杏仁糖漿",
+    "category": "syrup",
+    "subcategory": "nut_syrup",
+    "abv": 0,
+    "sugarContent": 55,
+    "acidPH": 5.5,
+    "bitterUnit": 2,
+    "caloriesPer30ml": 95,
+    "flavorVector": [
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.4,
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.3,
+      0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "almond",
+      "orange blossom",
+      "floral"
+    ],
+    "aroma": [
+      "sweet almond",
+      "orange blossom",
+      "marzipan",
+      "rose"
+    ],
+    "taste": [
+      "rich almond milk",
+      "orange blossom sweetness",
+      "floral nuttiness"
+    ],
+    "finish": "Medium, silky, floral almond",
+    "rarity": "common",
+    "colorHex": "#F5E6CC",
+    "description": "Almond and orange blossom syrup. Mai Tai essential and tiki cornerstone.",
+    "descriptionZh": "杏仁與橙花糖漿，Mai Tai的靈魂材料，Tiki調酒的基石。",
+    "substitutes": [
+      "amaretto",
+      "almond-syrup"
+    ],
+    "pairingBonus": {
+      "aged-rum": 0.95,
+      "fresh-lime-juice": 0.9,
+      "triple-sec": 0.85,
+      "bacardi-rum": 0.85
+    },
+    "tags": [
+      "almond",
+      "floral",
+      "tiki",
+      "classic"
+    ]
+  },
+  {
+    "id": "falernum",
+    "name": "John D. Taylor's Velvet Falernum",
+    "nameZh": "約翰泰勒絲絨法勒南糖漿",
+    "brand": "John D. Taylor",
+    "category": "syrup",
+    "subcategory": "spiced_syrup",
+    "abv": 11.0,
+    "sugarContent": 40,
+    "acidPH": 4.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 75,
+    "flavorVector": [
+      0.3,
+      0.1,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.6,
+      0.1,
+      0.0,
+      0.5,
+      0.1,
+      0.2,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "lime",
+      "almond",
+      "clove",
+      "ginger"
+    ],
+    "aroma": [
+      "lime zest",
+      "clove",
+      "almond",
+      "ginger",
+      "allspice"
+    ],
+    "taste": [
+      "spiced lime",
+      "sweet almond",
+      "warm clove",
+      "ginger zing"
+    ],
+    "finish": "Medium, spiced warmth, lime tingle",
+    "origin": "Barbados",
+    "productionMethod": "Rum-based infusion of lime, almond, clove, and ginger",
+    "rarity": "common",
+    "colorHex": "#E8D8A8",
+    "description": "Barbadian spiced syrup with lime, almond, and clove. Tiki cocktail essential.",
+    "descriptionZh": "巴貝多辛香料糖漿，融合萊姆、杏仁與丁香，Tiki調酒的關鍵調味。",
+    "substitutes": [
+      "homemade-falernum"
+    ],
+    "pairingBonus": {
+      "aged-rum": 0.9,
+      "bacardi-rum": 0.85,
+      "fresh-lime-juice": 0.9,
+      "angostura-bitters": 0.8
+    },
+    "tags": [
+      "spiced",
+      "tiki",
+      "barbadian",
+      "tropical"
+    ]
+  },
+  {
+    "id": "orange-bitters",
+    "name": "Regans' Orange Bitters No. 6",
+    "nameZh": "雷根氏六號橙皮苦精",
+    "brand": "Regans'",
+    "category": "bitter",
+    "subcategory": "citrus_bitters",
+    "abv": 45.0,
+    "sugarContent": 5,
+    "acidPH": 5.0,
+    "bitterUnit": 80,
+    "caloriesPer30ml": 14,
+    "flavorVector": [
+      0.7,
+      0.0,
+      0.0,
+      0.1,
+      0.3,
+      0.1,
+      0.4,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.8,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "orange peel",
+      "cardamom",
+      "caraway"
+    ],
+    "aroma": [
+      "bitter orange peel",
+      "cardamom",
+      "coriander",
+      "caraway"
+    ],
+    "taste": [
+      "intense bitter orange",
+      "warm cardamom",
+      "dry spice",
+      "herbal depth"
+    ],
+    "finish": "Long, bitter, citrus warmth",
+    "origin": "USA",
+    "productionMethod": "Maceration and distillation of orange peel, cardamom, caraway, and botanicals",
+    "rarity": "common",
+    "colorHex": "#C06010",
+    "description": "Classic orange bitters with cardamom and caraway. Martini and Old Fashioned enhancer.",
+    "descriptionZh": "經典橙皮苦精，帶小荳蔻與葛縷子香氣，馬丁尼與古典雞尾酒的提味利器。",
+    "substitutes": [
+      "angostura-orange",
+      "fee-brothers-orange"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.85,
+      "dry-vermouth": 0.9,
+      "rye-whiskey": 0.85,
+      "cognac": 0.85
+    },
+    "tags": [
+      "bitters",
+      "orange",
+      "classic",
+      "aromatic"
+    ]
+  },
+  {
+    "id": "ginger-beer",
+    "name": "Fever-Tree Premium Ginger Beer",
+    "nameZh": "芬味樹頂級薑汁啤酒",
+    "brand": "Fever-Tree",
+    "category": "mixer",
+    "subcategory": "ginger_beer",
+    "abv": 0,
+    "sugarContent": 9,
+    "acidPH": 3.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 15,
+    "flavorVector": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.8,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "spicy ginger",
+      "lime",
+      "carbonated"
+    ],
+    "aroma": [
+      "fresh ginger",
+      "lime zest",
+      "slight caramel"
+    ],
+    "taste": [
+      "fiery ginger heat",
+      "tart lime",
+      "effervescent bite",
+      "subtle sweetness"
+    ],
+    "finish": "Spicy, refreshing, lingering ginger warmth",
+    "rarity": "common",
+    "colorHex": "#F5E8C8",
+    "description": "Premium ginger beer with natural ginger heat. Moscow Mule and Dark 'n' Stormy essential.",
+    "descriptionZh": "頂級薑汁啤酒，天然薑辣風味，莫斯科騾子與暗風暴的必備混合材料。",
+    "substitutes": [
+      "bundaberg-ginger-beer",
+      "q-ginger-beer"
+    ],
+    "pairingBonus": {
+      "vodka": 0.95,
+      "dark-rum": 0.9,
+      "fresh-lime-juice": 0.9,
+      "makers-mark-bourbon": 0.8
+    },
+    "tags": [
+      "mixer",
+      "spicy",
+      "carbonated",
+      "classic"
+    ]
+  },
+  {
+    "id": "club-soda",
+    "name": "Club Soda",
+    "nameZh": "蘇打水（含礦物鹽）",
+    "category": "mixer",
+    "subcategory": "carbonated_water",
+    "abv": 0,
+    "sugarContent": 0,
+    "acidPH": 6.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 0,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "mineral",
+      "neutral",
+      "effervescent"
+    ],
+    "aroma": [
+      "mineral",
+      "clean"
+    ],
+    "taste": [
+      "slightly mineral",
+      "effervescent",
+      "neutral body"
+    ],
+    "finish": "Clean, mineral, refreshing",
+    "rarity": "common",
+    "colorHex": "#F0F5FF",
+    "description": "Carbonated water with added minerals. Adds fizz and slight mineral edge to highballs.",
+    "descriptionZh": "添加礦物鹽的碳酸水，為高球杯調酒增添氣泡感與淡淡礦物質口感。",
+    "substitutes": [
+      "soda-water",
+      "sparkling-water"
+    ],
+    "pairingBonus": {
+      "rye-whiskey": 0.8,
+      "irish-whiskey": 0.8,
+      "japanese-whisky": 0.85,
+      "fresh-lime-juice": 0.7
+    },
+    "tags": [
+      "mixer",
+      "neutral",
+      "carbonated",
+      "mineral"
+    ]
+  },
+  {
+    "id": "hendricks-gin",
+    "name": "Hendrick's Gin",
+    "nameZh": "亨利爵士琴酒",
+    "brand": "Hendrick's",
+    "category": "base_spirit",
+    "subcategory": "new_western_gin",
+    "abv": 41.4,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 62,
+    "flavorVector": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.6,
+      0.7,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "floral",
+      "cucumber",
+      "rose"
+    ],
+    "aroma": [
+      "cucumber",
+      "rose petal",
+      "juniper",
+      "citrus"
+    ],
+    "taste": [
+      "cool cucumber",
+      "delicate rose",
+      "soft juniper",
+      "gentle spice"
+    ],
+    "finish": "Smooth, floral, refreshing cucumber",
+    "origin": "Girvan, Scotland",
+    "productionMethod": "Carter-Head still and pot still blend with cucumber and rose infusion",
+    "rarity": "common",
+    "colorHex": "#F2EDE5",
+    "description": "Scottish gin renowned for its distinctive cucumber and rose character, a modern classic.",
+    "descriptionZh": "蘇格蘭琴酒，以獨特的小黃瓜與玫瑰風味聞名，現代經典之作。",
+    "substitutes": [
+      "tanqueray-gin",
+      "roku-gin"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.85,
+      "elderflower-liqueur": 0.9,
+      "tonic-water": 0.95
+    },
+    "tags": [
+      "scottish",
+      "floral",
+      "cucumber",
+      "modern"
+    ]
+  },
+  {
+    "id": "roku-gin",
+    "name": "Roku Japanese Gin",
+    "nameZh": "六琴酒",
+    "brand": "Suntory",
+    "category": "base_spirit",
+    "subcategory": "japanese_gin",
+    "abv": 43.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.3,
+      0.1,
+      0.0,
+      0.0,
+      0.5,
+      0.8,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0
+    ],
+    "flavorTags": [
+      "floral",
+      "citrus",
+      "tea"
+    ],
+    "aroma": [
+      "sakura blossom",
+      "yuzu",
+      "sencha tea",
+      "sansho pepper"
+    ],
+    "taste": [
+      "yuzu citrus",
+      "cherry blossom",
+      "green tea",
+      "subtle juniper"
+    ],
+    "finish": "Elegant, clean, lingering sakura and yuzu",
+    "origin": "Osaka, Japan",
+    "productionMethod": "Multiple distillation with six Japanese botanicals including sakura, yuzu, and sencha",
+    "rarity": "common",
+    "colorHex": "#F0EDE3",
+    "description": "Suntory's Japanese craft gin featuring six unique Japanese botanicals for a delicate, balanced spirit.",
+    "descriptionZh": "三得利日本琴酒，以六種日本植物素材打造，風味細膩平衡，帶櫻花與柚子芬芳。",
+    "substitutes": [
+      "hendricks-gin",
+      "tanqueray-gin"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.85,
+      "tonic-water": 0.9,
+      "elderflower-liqueur": 0.85
+    },
+    "tags": [
+      "japanese",
+      "floral",
+      "craft",
+      "delicate"
+    ]
+  },
+  {
+    "id": "plantation-3-stars-rum",
+    "name": "Plantation 3 Stars White Rum",
+    "nameZh": "蔗園三星白蘭姆酒",
+    "brand": "Plantation",
+    "category": "base_spirit",
+    "subcategory": "white_rum",
+    "abv": 41.2,
+    "sugarContent": 2,
+    "acidPH": 7.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 62,
+    "flavorVector": [
+      0.1,
+      0.3,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "tropical",
+      "vanilla",
+      "clean"
+    ],
+    "aroma": [
+      "vanilla",
+      "coconut",
+      "banana",
+      "citrus peel"
+    ],
+    "taste": [
+      "smooth vanilla",
+      "ripe banana",
+      "light tropical fruit",
+      "sugarcane"
+    ],
+    "finish": "Clean, slightly sweet, tropical warmth",
+    "origin": "Caribbean (Jamaica, Barbados, Trinidad)",
+    "productionMethod": "Blend of pot and column still rums from three Caribbean islands, briefly aged and charcoal filtered",
+    "rarity": "common",
+    "colorHex": "#FAF8F0",
+    "description": "Artful blend of Caribbean white rums with surprising depth for a white spirit. Excellent in Daiquiris.",
+    "descriptionZh": "精心調配的加勒比海白蘭姆酒，風味深度超越一般白蘭姆，是Daiquiri的絕佳選擇。",
+    "substitutes": [
+      "bacardi-rum",
+      "havana-club-7"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.95,
+      "simple-syrup": 0.9,
+      "pineapple-juice": 0.85
+    },
+    "tags": [
+      "caribbean",
+      "white rum",
+      "craft",
+      "versatile"
+    ]
+  },
+  {
+    "id": "appleton-estate-12",
+    "name": "Appleton Estate 12 Year Rare Casks Jamaican Rum",
+    "nameZh": "雅伯頓莊園12年牙買加蘭姆酒",
+    "brand": "Appleton Estate",
+    "category": "base_spirit",
+    "subcategory": "aged_rum",
+    "abv": 43.0,
+    "sugarContent": 2,
+    "acidPH": 6.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 66,
+    "flavorVector": [
+      0.1,
+      0.4,
+      0.0,
+      0.3,
+      0.1,
+      0.1,
+      0.3,
+      0.2,
+      0.1,
+      0.2,
+      0.5,
+      0.6,
+      0.1,
+      0.2,
+      0.6
+    ],
+    "flavorTags": [
+      "funky",
+      "tropical",
+      "oak",
+      "caramel"
+    ],
+    "aroma": [
+      "overripe banana",
+      "orange marmalade",
+      "brown sugar",
+      "allspice",
+      "hogo funk"
+    ],
+    "taste": [
+      "rich toffee",
+      "tropical fruit funk",
+      "orange peel",
+      "baking spice",
+      "molasses"
+    ],
+    "finish": "Long, warm, complex with lingering Jamaican funk",
+    "origin": "Nassau Valley, Jamaica",
+    "productionMethod": "Pot and column still blend, minimum 12 years aged in oak barrels",
+    "aging": "Minimum 12 years in American oak",
+    "rarity": "uncommon",
+    "colorHex": "#A0642A",
+    "description": "Premium 12-year Jamaican rum with distinctive funky character, rich toffee, and tropical depth.",
+    "descriptionZh": "優質12年牙買加蘭姆酒，獨特的牙買加風味（hogo），太妃糖與熱帶水果交織。",
+    "substitutes": [
+      "aged-rum",
+      "dark-rum"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "simple-syrup": 0.85,
+      "angostura-bitters": 0.9,
+      "orgeat": 0.85
+    },
+    "tags": [
+      "jamaican",
+      "aged",
+      "funky",
+      "premium",
+      "sipping"
+    ]
+  },
+  {
+    "id": "havana-club-7",
+    "name": "Havana Club Añejo 7 Años",
+    "nameZh": "哈瓦那俱樂部7年陳釀蘭姆酒",
+    "brand": "Havana Club",
+    "category": "base_spirit",
+    "subcategory": "aged_rum",
+    "abv": 40.0,
+    "sugarContent": 2,
+    "acidPH": 6.8,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.1,
+      0.2,
+      0.0,
+      0.2,
+      0.1,
+      0.0,
+      0.2,
+      0.1,
+      0.1,
+      0.1,
+      0.6,
+      0.7,
+      0.1,
+      0.1,
+      0.5
+    ],
+    "flavorTags": [
+      "caramel",
+      "vanilla",
+      "tobacco",
+      "oak"
+    ],
+    "aroma": [
+      "vanilla",
+      "caramel",
+      "tobacco",
+      "dried fruit",
+      "cocoa"
+    ],
+    "taste": [
+      "smooth caramel",
+      "vanilla custard",
+      "dark chocolate",
+      "toasted oak"
+    ],
+    "finish": "Medium-long, warm, smooth with tobacco and cocoa notes",
+    "origin": "Havana, Cuba",
+    "productionMethod": "Column distilled, aged minimum 7 years in tropical climate, master blended",
+    "aging": "Minimum 7 years in white oak",
+    "rarity": "uncommon",
+    "colorHex": "#8B5E2B",
+    "description": "Cuba's iconic 7-year aged rum with rich caramel, vanilla, and tobacco notes. A sipping rum that shines in cocktails.",
+    "descriptionZh": "古巴標誌性7年陳釀蘭姆酒，焦糖、香草與菸草風味豐富，純飲或調酒皆宜。",
+    "substitutes": [
+      "aged-rum",
+      "appleton-estate-12"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "simple-syrup": 0.85,
+      "angostura-bitters": 0.85
+    },
+    "tags": [
+      "cuban",
+      "aged",
+      "smooth",
+      "classic"
+    ]
+  },
+  {
+    "id": "patron-silver",
+    "name": "Patrón Silver Tequila",
+    "nameZh": "培恩銀龍舌蘭",
+    "brand": "Patrón",
+    "category": "base_spirit",
+    "subcategory": "blanco_tequila",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.3,
+      0.1,
+      0.0,
+      0.0,
+      0.4,
+      0.1,
+      0.3,
+      0.2,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "agave",
+      "citrus",
+      "peppery"
+    ],
+    "aroma": [
+      "cooked agave",
+      "citrus",
+      "light pepper",
+      "mineral"
+    ],
+    "taste": [
+      "smooth agave",
+      "white pepper",
+      "citrus zest",
+      "clean mineral"
+    ],
+    "finish": "Clean, peppery, light agave sweetness",
+    "origin": "Jalisco, Mexico",
+    "productionMethod": "Tahona and roller mill crushed, pot and column distilled from 100% Weber Blue agave",
+    "rarity": "common",
+    "colorHex": "#FAFAF5",
+    "description": "Premium blanco tequila with smooth agave character and clean citrus-pepper finish. Versatile in Margaritas.",
+    "descriptionZh": "頂級銀色龍舌蘭，順滑龍舌蘭風味，柑橘與白胡椒收尾，Margarita的優質之選。",
+    "substitutes": [
+      "el-jimador-blanco-tequila",
+      "casamigos-reposado"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.95,
+      "triple-sec": 0.9,
+      "agave-syrup": 0.9
+    },
+    "tags": [
+      "premium",
+      "blanco",
+      "mexican",
+      "versatile"
+    ]
+  },
+  {
+    "id": "casamigos-reposado",
+    "name": "Casamigos Reposado Tequila",
+    "nameZh": "卡薩米戈斯金色龍舌蘭",
+    "brand": "Casamigos",
+    "category": "base_spirit",
+    "subcategory": "reposado_tequila",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.3,
+      0.0,
+      0.3,
+      0.2,
+      0.0,
+      0.1,
+      0.4,
+      0.4,
+      0.1,
+      0.0,
+      0.3
+    ],
+    "flavorTags": [
+      "agave",
+      "caramel",
+      "vanilla",
+      "smooth"
+    ],
+    "aroma": [
+      "caramel",
+      "cooked agave",
+      "vanilla",
+      "light oak"
+    ],
+    "taste": [
+      "smooth agave",
+      "caramel sweetness",
+      "vanilla",
+      "gentle oak spice"
+    ],
+    "finish": "Smooth, warm, lingering caramel and agave",
+    "origin": "Jalisco, Mexico",
+    "productionMethod": "Slow roasted 100% Blue Weber agave, rested 7 months in American oak",
+    "aging": "7 months in American white oak",
+    "rarity": "common",
+    "colorHex": "#E8D5A0",
+    "description": "Ultra-smooth reposado tequila rested for 7 months, with caramel and vanilla oak character.",
+    "descriptionZh": "極度順滑的金色龍舌蘭，陳放七個月，焦糖與香草橡木風味優雅。",
+    "substitutes": [
+      "el-jimador-blanco-tequila",
+      "patron-silver"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.9,
+      "agave-syrup": 0.9,
+      "orange-juice": 0.8
+    },
+    "tags": [
+      "reposado",
+      "smooth",
+      "mexican",
+      "premium"
+    ]
+  },
+  {
+    "id": "wild-turkey-101",
+    "name": "Wild Turkey 101 Bourbon",
+    "nameZh": "乘風波本威士忌101",
+    "brand": "Wild Turkey",
+    "category": "base_spirit",
+    "subcategory": "bourbon",
+    "abv": 50.5,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 75,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.5,
+      0.2,
+      0.1,
+      0.2,
+      0.6,
+      0.7,
+      0.2,
+      0.1,
+      0.7
+    ],
+    "flavorTags": [
+      "bold",
+      "caramel",
+      "spicy",
+      "oak"
+    ],
+    "aroma": [
+      "caramel corn",
+      "vanilla",
+      "charred oak",
+      "rye spice",
+      "cinnamon"
+    ],
+    "taste": [
+      "bold caramel",
+      "brown sugar",
+      "rye pepper",
+      "toffee",
+      "charred oak"
+    ],
+    "finish": "Long, spicy, warming with lingering caramel and char",
+    "origin": "Lawrenceburg, Kentucky, USA",
+    "productionMethod": "High rye mashbill (75/13/12), aged 6-8 years in #4 char American oak",
+    "aging": "6-8 years in new charred American oak",
+    "rarity": "common",
+    "colorHex": "#A05A20",
+    "description": "High-proof bourbon with bold flavor that stands up in any cocktail. A bartender's go-to for Old Fashioneds.",
+    "descriptionZh": "高酒精度波本威士忌，風味大膽強勁，任何調酒都壓不住，調酒師做Old Fashioned的首選。",
+    "substitutes": [
+      "makers-mark-bourbon",
+      "woodford-reserve"
+    ],
+    "pairingBonus": {
+      "angostura-bitters": 0.95,
+      "simple-syrup": 0.9,
+      "sweet-vermouth": 0.9
+    },
+    "tags": [
+      "high-proof",
+      "bold",
+      "kentucky",
+      "classic"
+    ]
+  },
+  {
+    "id": "woodford-reserve",
+    "name": "Woodford Reserve Bourbon",
+    "nameZh": "活福典藏波本威士忌",
+    "brand": "Woodford Reserve",
+    "category": "base_spirit",
+    "subcategory": "bourbon",
+    "abv": 45.2,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 68,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.1,
+      0.1,
+      0.3,
+      0.1,
+      0.0,
+      0.3,
+      0.7,
+      0.6,
+      0.1,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "rich",
+      "vanilla",
+      "dried fruit",
+      "refined"
+    ],
+    "aroma": [
+      "vanilla",
+      "dried cherry",
+      "brown sugar",
+      "mint",
+      "toasted oak"
+    ],
+    "taste": [
+      "rich vanilla",
+      "dark chocolate",
+      "dried cherry",
+      "toasted almond",
+      "toffee"
+    ],
+    "finish": "Long, smooth, creamy vanilla and cocoa",
+    "origin": "Versailles, Kentucky, USA",
+    "productionMethod": "Triple pot distilled, proprietary yeast, aged in heavily toasted and lightly charred barrels",
+    "aging": "6-7 years in new charred American oak",
+    "rarity": "common",
+    "colorHex": "#B5652A",
+    "description": "Premium Kentucky bourbon with exceptional smoothness, rich vanilla, and dried fruit complexity.",
+    "descriptionZh": "頂級肯塔基波本威士忌，極致順滑，香草豐富與乾果複雜度兼備。",
+    "substitutes": [
+      "makers-mark-bourbon",
+      "wild-turkey-101"
+    ],
+    "pairingBonus": {
+      "angostura-bitters": 0.95,
+      "simple-syrup": 0.85,
+      "sweet-vermouth": 0.9,
+      "orange-bitters": 0.85
+    },
+    "tags": [
+      "premium",
+      "smooth",
+      "kentucky",
+      "refined"
+    ]
+  },
+  {
+    "id": "bulleit-rye",
+    "name": "Bulleit Rye Whiskey",
+    "nameZh": "布雷特裸麥威士忌",
+    "brand": "Bulleit",
+    "category": "base_spirit",
+    "subcategory": "rye_whiskey",
+    "abv": 45.0,
+    "sugarContent": 0,
+    "acidPH": 6.5,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 68,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.0,
+      0.7,
+      0.1,
+      0.0,
+      0.1,
+      0.4,
+      0.4,
+      0.2,
+      0.0,
+      0.5
+    ],
+    "flavorTags": [
+      "spicy",
+      "rye",
+      "peppery",
+      "bold"
+    ],
+    "aroma": [
+      "rye bread",
+      "black pepper",
+      "vanilla",
+      "dried cherry",
+      "oak"
+    ],
+    "taste": [
+      "bold rye spice",
+      "black pepper",
+      "dried cherry",
+      "vanilla",
+      "toffee"
+    ],
+    "finish": "Long, dry, peppery with lingering rye spice",
+    "origin": "Kentucky, USA",
+    "productionMethod": "95% rye mashbill, aged 4-7 years in new charred American oak",
+    "aging": "4-7 years in new charred American oak",
+    "rarity": "common",
+    "colorHex": "#B8702A",
+    "description": "High-rye whiskey with assertive spice and pepper. Perfect for Manhattan and Sazerac cocktails.",
+    "descriptionZh": "高裸麥威士忌，辛香與胡椒風味強勢，Manhattan和Sazerac的完美選擇。",
+    "substitutes": [
+      "rye-whiskey",
+      "wild-turkey-101"
+    ],
+    "pairingBonus": {
+      "sweet-vermouth": 0.95,
+      "angostura-bitters": 0.9,
+      "simple-syrup": 0.85
+    },
+    "tags": [
+      "rye",
+      "spicy",
+      "bold",
+      "american"
+    ]
+  },
+  {
+    "id": "jameson-irish-whiskey",
+    "name": "Jameson Irish Whiskey",
+    "nameZh": "尊美醇愛爾蘭威士忌",
+    "brand": "Jameson",
+    "category": "base_spirit",
+    "subcategory": "irish_whiskey",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 6.8,
+    "bitterUnit": 8,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.1,
+      0.2,
+      0.1,
+      0.0,
+      0.2,
+      0.5,
+      0.3,
+      0.1,
+      0.1,
+      0.3
+    ],
+    "flavorTags": [
+      "smooth",
+      "light",
+      "honey"
+    ],
+    "aroma": [
+      "light floral",
+      "honey",
+      "vanilla",
+      "toasted wood"
+    ],
+    "taste": [
+      "smooth honey",
+      "vanilla cream",
+      "toasted grain",
+      "light sherry"
+    ],
+    "finish": "Smooth, gentle, sweet fade",
+    "origin": "Dublin, Ireland",
+    "productionMethod": "Triple distilled blend of pot still and grain whiskey, aged in seasoned oak",
+    "aging": "Minimum 4 years in bourbon and sherry casks",
+    "rarity": "common",
+    "colorHex": "#C8A850",
+    "description": "Ireland's most popular whiskey, triple distilled for exceptional smoothness. Great in Irish Coffee.",
+    "descriptionZh": "愛爾蘭最受歡迎的威士忌，三次蒸餾帶來極致順滑口感，愛爾蘭咖啡的首選。",
+    "substitutes": [
+      "irish-whiskey",
+      "scotch-whisky"
+    ],
+    "pairingBonus": {
+      "fresh-lemon-juice": 0.85,
+      "honey-syrup": 0.9,
+      "ginger-beer": 0.85
+    },
+    "tags": [
+      "irish",
+      "smooth",
+      "triple-distilled",
+      "classic"
+    ]
+  },
+  {
+    "id": "nikka-coffey-grain",
+    "name": "Nikka Coffey Grain Whisky",
+    "nameZh": "余市咖啡式穀物威士忌",
+    "brand": "Nikka",
+    "category": "base_spirit",
+    "subcategory": "japanese_grain_whisky",
+    "abv": 45.0,
+    "sugarContent": 0,
+    "acidPH": 6.8,
+    "bitterUnit": 8,
+    "caloriesPer30ml": 68,
+    "flavorVector": [
+      0.1,
+      0.2,
+      0.0,
+      0.2,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.7,
+      0.5,
+      0.0,
+      0.0,
+      0.4
+    ],
+    "flavorTags": [
+      "sweet",
+      "vanilla",
+      "tropical",
+      "smooth"
+    ],
+    "aroma": [
+      "vanilla cream",
+      "bourbon-like sweetness",
+      "tropical fruit",
+      "melon"
+    ],
+    "taste": [
+      "rich vanilla custard",
+      "mango",
+      "corn sweetness",
+      "butterscotch"
+    ],
+    "finish": "Long, sweet, creamy with tropical fade",
+    "origin": "Miyagi, Japan",
+    "productionMethod": "Coffey (continuous) still distillation of corn and malted barley, aged in American oak",
+    "aging": "Aged in American oak barrels",
+    "rarity": "uncommon",
+    "colorHex": "#D4A840",
+    "description": "Uniquely sweet and creamy Japanese grain whisky from Nikka's Coffey still, with bourbon-like richness.",
+    "descriptionZh": "獨特的日本穀物威士忌，使用咖啡式蒸餾器製成，甜美滑順，帶波本般的豐富度。",
+    "substitutes": [
+      "japanese-whisky",
+      "makers-mark-bourbon"
+    ],
+    "pairingBonus": {
+      "orange-bitters": 0.85,
+      "simple-syrup": 0.8,
+      "sweet-vermouth": 0.85
+    },
+    "tags": [
+      "japanese",
+      "grain",
+      "sweet",
+      "unique"
+    ]
+  },
+  {
+    "id": "hakushu-12",
+    "name": "Hakushu 12 Year Single Malt",
+    "nameZh": "白州12年單一麥芽威士忌",
+    "brand": "Suntory",
+    "category": "base_spirit",
+    "subcategory": "japanese_single_malt",
+    "abv": 43.0,
+    "sugarContent": 0,
+    "acidPH": 6.8,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 66,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.1,
+      0.1,
+      0.5,
+      0.1,
+      0.2,
+      0.3,
+      0.3,
+      0.1,
+      0.3,
+      0.2,
+      0.1,
+      0.1,
+      0.4
+    ],
+    "flavorTags": [
+      "herbal",
+      "smoky",
+      "green",
+      "forest"
+    ],
+    "aroma": [
+      "fresh green leaves",
+      "light peat smoke",
+      "green apple",
+      "mint",
+      "forest floor"
+    ],
+    "taste": [
+      "herbaceous green",
+      "gentle smoke",
+      "green apple",
+      "ginger",
+      "fresh herbs"
+    ],
+    "finish": "Medium, crisp, minty with subtle smoke",
+    "origin": "Hakushu, Yamanashi, Japan",
+    "productionMethod": "Pot still distillation with lightly peated and unpeated malt, aged in American and Japanese oak",
+    "aging": "12 years in mixed oak casks",
+    "rarity": "rare",
+    "colorHex": "#C8B040",
+    "description": "Forest-like Japanese single malt with herbal freshness, gentle smoke, and remarkable crispness. Highly sought after.",
+    "descriptionZh": "如同森林般的日本單一麥芽威士忌，草本清新與輕柔煙燻交織，清脆非凡，稀有珍品。",
+    "substitutes": [
+      "japanese-whisky",
+      "scotch-whisky"
+    ],
+    "pairingBonus": {
+      "soda-water": 0.95,
+      "club-soda": 0.9,
+      "fresh-lemon-juice": 0.8
+    },
+    "tags": [
+      "japanese",
+      "single malt",
+      "forest",
+      "rare",
+      "premium"
+    ]
+  },
+  {
+    "id": "grey-goose",
+    "name": "Grey Goose Vodka",
+    "nameZh": "灰雁伏特加",
+    "brand": "Grey Goose",
+    "category": "base_spirit",
+    "subcategory": "vodka",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "clean",
+      "smooth",
+      "slightly sweet"
+    ],
+    "aroma": [
+      "subtle almond",
+      "faint floral",
+      "clean grain"
+    ],
+    "taste": [
+      "silky smooth",
+      "faint sweetness",
+      "clean grain",
+      "soft texture"
+    ],
+    "finish": "Smooth, clean, gentle warmth",
+    "origin": "Picardy, France",
+    "productionMethod": "Single distillation from soft winter wheat, filtered through Champagne limestone",
+    "rarity": "common",
+    "colorHex": "#FAFAFA",
+    "description": "Premium French wheat vodka known for its exceptional smoothness and subtle elegance.",
+    "descriptionZh": "頂級法國小麥伏特加，以卓越順滑度與微妙優雅著稱。",
+    "substitutes": [
+      "vodka",
+      "belvedere"
+    ],
+    "pairingBonus": {
+      "triple-sec": 0.9,
+      "cranberry-juice": 0.95,
+      "fresh-lime-juice": 0.85,
+      "fresh-lemon-juice": 0.85
+    },
+    "tags": [
+      "premium",
+      "french",
+      "smooth",
+      "clean"
+    ]
+  },
+  {
+    "id": "belvedere",
+    "name": "Belvedere Vodka",
+    "nameZh": "雪樹伏特加",
+    "brand": "Belvedere",
+    "category": "base_spirit",
+    "subcategory": "vodka",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "clean",
+      "creamy",
+      "slightly spicy"
+    ],
+    "aroma": [
+      "rye bread",
+      "subtle vanilla",
+      "white pepper"
+    ],
+    "taste": [
+      "creamy texture",
+      "rye character",
+      "white pepper",
+      "faint vanilla"
+    ],
+    "finish": "Clean, creamy, gentle spice",
+    "origin": "Żyrardów, Poland",
+    "productionMethod": "Quadruple distilled from Dankowskie Gold rye, using artesian well water",
+    "rarity": "common",
+    "colorHex": "#FAFAFA",
+    "description": "Polish rye vodka with distinctive creamy texture and subtle spice character.",
+    "descriptionZh": "波蘭裸麥伏特加，獨特的奶油質地與微妙香料風味。",
+    "substitutes": [
+      "vodka",
+      "grey-goose"
+    ],
+    "pairingBonus": {
+      "triple-sec": 0.9,
+      "fresh-lime-juice": 0.85,
+      "cranberry-juice": 0.9
+    },
+    "tags": [
+      "premium",
+      "polish",
+      "rye",
+      "creamy"
+    ]
+  },
+  {
+    "id": "remy-martin-vsop",
+    "name": "Rémy Martin VSOP Cognac",
+    "nameZh": "人頭馬VSOP干邑白蘭地",
+    "brand": "Rémy Martin",
+    "category": "base_spirit",
+    "subcategory": "cognac",
+    "abv": 40.0,
+    "sugarContent": 1,
+    "acidPH": 6.8,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.1,
+      0.1,
+      0.2,
+      0.6,
+      0.1,
+      0.3,
+      0.2,
+      0.1,
+      0.0,
+      0.3,
+      0.8,
+      0.6,
+      0.1,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "stone fruit",
+      "vanilla",
+      "floral",
+      "oak"
+    ],
+    "aroma": [
+      "ripe apricot",
+      "vanilla",
+      "jasmine",
+      "toasted almond",
+      "oak"
+    ],
+    "taste": [
+      "stone fruit richness",
+      "vanilla cream",
+      "hazelnut",
+      "candied orange",
+      "subtle oak"
+    ],
+    "finish": "Long, elegant, fruity with lingering vanilla and spice",
+    "origin": "Cognac, France",
+    "productionMethod": "Double distilled in copper pot stills, exclusively Fine Champagne blend (Grande and Petite Champagne)",
+    "aging": "4-12 years in Limousin oak",
+    "rarity": "common",
+    "colorHex": "#C47830",
+    "description": "Exclusively Fine Champagne cognac with rich stone fruit, vanilla, and elegant oak. A step above VS.",
+    "descriptionZh": "純正優質香檳區干邑，豐富核果、香草與優雅橡木，比VS更上一層的品質。",
+    "substitutes": [
+      "cognac",
+      "courvoisier-vs"
+    ],
+    "pairingBonus": {
+      "fresh-lemon-juice": 0.9,
+      "triple-sec": 0.9,
+      "simple-syrup": 0.8,
+      "orange-bitters": 0.85
+    },
+    "tags": [
+      "cognac",
+      "french",
+      "vsop",
+      "elegant",
+      "premium"
+    ]
+  },
+  {
+    "id": "pernod-absinthe",
+    "name": "Pernod Absinthe",
+    "nameZh": "保樂苦艾酒",
+    "brand": "Pernod",
+    "category": "base_spirit",
+    "subcategory": "absinthe",
+    "abv": 68.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 35,
+    "caloriesPer30ml": 85,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.2,
+      0.5,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "anise",
+      "wormwood",
+      "fennel"
+    ],
+    "aroma": [
+      "anise",
+      "wormwood",
+      "fennel",
+      "melissa",
+      "mint"
+    ],
+    "taste": [
+      "intense anise",
+      "bitter wormwood",
+      "sweet fennel",
+      "herbal complexity"
+    ],
+    "finish": "Long, numbing, lingering anise and herbs",
+    "origin": "France",
+    "productionMethod": "Maceration and distillation of wormwood, anise, and fennel with botanicals",
+    "rarity": "uncommon",
+    "colorHex": "#7FBF50",
+    "description": "Classic French absinthe with intense anise and herbal complexity. Used as a rinse in many classic cocktails.",
+    "descriptionZh": "經典法國苦艾酒，濃烈茴香與草本複雜度，常用於經典調酒的杯壁漂洗。",
+    "substitutes": [
+      "absinthe",
+      "herbsaint"
+    ],
+    "pairingBonus": {
+      "simple-syrup": 0.8,
+      "rye-whiskey": 0.85,
+      "cognac": 0.85
+    },
+    "tags": [
+      "absinthe",
+      "french",
+      "herbal",
+      "intense",
+      "classic"
+    ]
+  },
+  {
+    "id": "leblon-cachaca",
+    "name": "Leblon Cachaça",
+    "nameZh": "雷邦卡夏莎",
+    "brand": "Leblon",
+    "category": "base_spirit",
+    "subcategory": "cachaca",
+    "abv": 40.0,
+    "sugarContent": 1,
+    "acidPH": 6.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 64,
+    "flavorVector": [
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.3,
+      0.1,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "grassy",
+      "sugarcane",
+      "fresh"
+    ],
+    "aroma": [
+      "fresh sugarcane",
+      "cut grass",
+      "banana",
+      "tropical fruit"
+    ],
+    "taste": [
+      "fresh sugarcane",
+      "grassy vegetal",
+      "light banana",
+      "clean sweetness"
+    ],
+    "finish": "Clean, grassy, gentle warmth",
+    "origin": "Minas Gerais, Brazil",
+    "productionMethod": "Single distillation of fresh sugarcane juice in copper alembic stills, briefly rested in XO cognac casks",
+    "rarity": "uncommon",
+    "colorHex": "#F5F0E0",
+    "description": "Premium Brazilian cachaça with clean sugarcane character. Essential for the Caipirinha.",
+    "descriptionZh": "頂級巴西卡夏莎，純淨甘蔗風味，Caipirinha的靈魂之酒。",
+    "substitutes": [
+      "bacardi-rum",
+      "plantation-3-stars-rum"
+    ],
+    "pairingBonus": {
+      "fresh-lime-juice": 0.95,
+      "simple-syrup": 0.9
+    },
+    "tags": [
+      "brazilian",
+      "sugarcane",
+      "caipirinha",
+      "fresh"
+    ]
+  },
+  {
+    "id": "baileys",
+    "name": "Baileys Irish Cream",
+    "nameZh": "百利甜酒",
+    "brand": "Baileys",
+    "category": "liqueur",
+    "subcategory": "cream_liqueur",
+    "abv": 17.0,
+    "sugarContent": 25,
+    "acidPH": 6.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 98,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.7,
+      0.5,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "creamy",
+      "chocolate",
+      "vanilla",
+      "sweet"
+    ],
+    "aroma": [
+      "cream",
+      "chocolate",
+      "vanilla",
+      "Irish whiskey"
+    ],
+    "taste": [
+      "rich cream",
+      "milk chocolate",
+      "vanilla",
+      "caramel",
+      "whiskey warmth"
+    ],
+    "finish": "Sweet, creamy, lingering chocolate",
+    "origin": "Dublin, Ireland",
+    "productionMethod": "Blend of Irish whiskey, fresh dairy cream, cocoa, and vanilla extracts",
+    "rarity": "common",
+    "colorHex": "#C4A882",
+    "description": "The original Irish cream liqueur blending whiskey, cream, chocolate, and vanilla. A dessert in a glass.",
+    "descriptionZh": "原創愛爾蘭奶油利口酒，威士忌、鮮奶油、巧克力與香草的完美融合，杯中甜點。",
+    "substitutes": [
+      "kahlua",
+      "creme-de-cacao"
+    ],
+    "pairingBonus": {
+      "kahlua": 0.9,
+      "vodka": 0.8,
+      "irish-whiskey": 0.85
+    },
+    "tags": [
+      "cream",
+      "irish",
+      "dessert",
+      "sweet"
+    ]
+  },
+  {
+    "id": "frangelico",
+    "name": "Frangelico",
+    "nameZh": "富蘭杰利可榛果利口酒",
+    "brand": "Frangelico",
+    "category": "liqueur",
+    "subcategory": "nut_liqueur",
+    "abv": 20.0,
+    "sugarContent": 28,
+    "acidPH": 6.0,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 88,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.8,
+      0.5,
+      0.3,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "hazelnut",
+      "vanilla",
+      "cocoa"
+    ],
+    "aroma": [
+      "toasted hazelnut",
+      "vanilla",
+      "cocoa",
+      "coffee"
+    ],
+    "taste": [
+      "roasted hazelnut",
+      "vanilla sweetness",
+      "subtle cocoa",
+      "coffee undertone"
+    ],
+    "finish": "Smooth, nutty, gently sweet",
+    "origin": "Piedmont, Italy",
+    "productionMethod": "Infusion of toasted hazelnuts, cocoa, vanilla, and other natural flavors in spirit",
+    "rarity": "common",
+    "colorHex": "#B8862A",
+    "description": "Italian hazelnut liqueur with rich nutty flavor and hints of cocoa and vanilla.",
+    "descriptionZh": "義大利榛果利口酒，濃郁堅果風味伴隨可可與香草的微妙層次。",
+    "substitutes": [
+      "amaretto",
+      "creme-de-cacao"
+    ],
+    "pairingBonus": {
+      "kahlua": 0.9,
+      "baileys": 0.85,
+      "vodka": 0.8
+    },
+    "tags": [
+      "hazelnut",
+      "italian",
+      "nutty",
+      "dessert"
+    ]
+  },
+  {
+    "id": "chambord",
+    "name": "Chambord",
+    "nameZh": "香波堡黑覆盆子利口酒",
+    "brand": "Chambord",
+    "category": "liqueur",
+    "subcategory": "fruit_liqueur",
+    "abv": 16.5,
+    "sugarContent": 35,
+    "acidPH": 3.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 92,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.9,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "raspberry",
+      "berry",
+      "sweet"
+    ],
+    "aroma": [
+      "black raspberry",
+      "blackberry",
+      "vanilla",
+      "honey"
+    ],
+    "taste": [
+      "rich black raspberry",
+      "blackberry",
+      "subtle vanilla",
+      "honey sweetness"
+    ],
+    "finish": "Smooth, berry-rich, lingering fruit",
+    "origin": "Loire Valley, France",
+    "productionMethod": "Infusion of black raspberries, blackberries, Madagascar vanilla, Moroccan citrus peel, honey, and cognac",
+    "rarity": "common",
+    "colorHex": "#5B1040",
+    "description": "Royal French black raspberry liqueur with luxurious berry richness and cognac depth.",
+    "descriptionZh": "法國皇家黑覆盆子利口酒，奢華莓果豐韻與干邑深度。",
+    "substitutes": [
+      "creme-de-cacao",
+      "grenadine"
+    ],
+    "pairingBonus": {
+      "vodka": 0.85,
+      "prosecco": 0.9,
+      "fresh-lemon-juice": 0.85
+    },
+    "tags": [
+      "french",
+      "berry",
+      "luxury",
+      "fruit"
+    ]
+  },
+  {
+    "id": "midori",
+    "name": "Midori Melon Liqueur",
+    "nameZh": "蜜多麗蜜瓜利口酒",
+    "brand": "Midori",
+    "category": "liqueur",
+    "subcategory": "fruit_liqueur",
+    "abv": 20.0,
+    "sugarContent": 40,
+    "acidPH": 5.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 95,
+    "flavorVector": [
+      0.0,
+      0.3,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "melon",
+      "sweet",
+      "fruity"
+    ],
+    "aroma": [
+      "honeydew melon",
+      "muskmelon",
+      "candy sweetness"
+    ],
+    "taste": [
+      "sweet melon",
+      "honeydew",
+      "candy-like sweetness"
+    ],
+    "finish": "Sweet, melon, short",
+    "origin": "Japan",
+    "productionMethod": "Neutral spirit infused with premium Yubari and muskmelon flavors",
+    "rarity": "common",
+    "colorHex": "#00FF00",
+    "description": "Iconic bright green melon liqueur. Brings vivid color and sweet melon flavor to cocktails.",
+    "descriptionZh": "標誌性亮綠色蜜瓜利口酒，為調酒帶來鮮豔色彩與甜蜜哈密瓜風味。",
+    "substitutes": [
+      "elderflower-liqueur"
+    ],
+    "pairingBonus": {
+      "vodka": 0.85,
+      "pineapple-juice": 0.85,
+      "fresh-lime-juice": 0.8
+    },
+    "tags": [
+      "japanese",
+      "melon",
+      "green",
+      "sweet"
+    ]
+  },
+  {
+    "id": "galliano",
+    "name": "Galliano L'Autentico",
+    "nameZh": "加利安奴利口酒",
+    "brand": "Galliano",
+    "category": "liqueur",
+    "subcategory": "herbal_liqueur",
+    "abv": 42.3,
+    "sugarContent": 30,
+    "acidPH": 5.5,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 100,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.6,
+      0.2,
+      0.4,
+      0.1,
+      0.0,
+      0.0,
+      0.8,
+      0.2,
+      0.2,
+      0.1,
+      0.0
+    ],
+    "flavorTags": [
+      "vanilla",
+      "anise",
+      "herbal"
+    ],
+    "aroma": [
+      "vanilla",
+      "anise",
+      "lavender",
+      "cinnamon",
+      "juniper"
+    ],
+    "taste": [
+      "dominant vanilla",
+      "anise sweetness",
+      "herbal complexity",
+      "warm spice"
+    ],
+    "finish": "Long, vanilla-rich, warming herbal",
+    "origin": "Livorno, Italy",
+    "productionMethod": "Infusion and distillation of over 30 herbs, spices, and plant extracts",
+    "rarity": "uncommon",
+    "colorHex": "#FFD700",
+    "description": "Italian herbal liqueur with prominent vanilla and anise character. Key ingredient in the Harvey Wallbanger.",
+    "descriptionZh": "義大利草本利口酒，以突出的香草與茴香風味著稱，Harvey Wallbanger的關鍵材料。",
+    "substitutes": [
+      "benedictine",
+      "licor-43"
+    ],
+    "pairingBonus": {
+      "vodka": 0.85,
+      "orange-juice": 0.9
+    },
+    "tags": [
+      "italian",
+      "vanilla",
+      "herbal",
+      "classic"
+    ]
+  },
+  {
+    "id": "drambuie",
+    "name": "Drambuie",
+    "nameZh": "杜林標蜂蜜威士忌利口酒",
+    "brand": "Drambuie",
+    "category": "liqueur",
+    "subcategory": "whisky_liqueur",
+    "abv": 40.0,
+    "sugarContent": 28,
+    "acidPH": 5.5,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 100,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.1,
+      0.4,
+      0.1,
+      0.1,
+      0.1,
+      0.3,
+      0.4,
+      0.2,
+      0.0,
+      0.2
+    ],
+    "flavorTags": [
+      "honey",
+      "herbal",
+      "whisky",
+      "spice"
+    ],
+    "aroma": [
+      "heather honey",
+      "aged scotch",
+      "herbs",
+      "saffron",
+      "anise"
+    ],
+    "taste": [
+      "rich honey",
+      "scotch warmth",
+      "herbal complexity",
+      "saffron spice"
+    ],
+    "finish": "Long, honeyed, warming with herbal fade",
+    "origin": "Edinburgh, Scotland",
+    "productionMethod": "Blend of aged Scotch whisky, heather honey, herbs, and spices based on a secret recipe",
+    "rarity": "common",
+    "colorHex": "#D4A030",
+    "description": "Scotch-based honey liqueur with a secret herbal recipe. The soul of the Rusty Nail cocktail.",
+    "descriptionZh": "以蘇格蘭威士忌為基底的蜂蜜利口酒，秘密草本配方，Rusty Nail調酒的靈魂。",
+    "substitutes": [
+      "benedictine",
+      "honey-syrup"
+    ],
+    "pairingBonus": {
+      "scotch-whisky": 0.95,
+      "fresh-lemon-juice": 0.8
+    },
+    "tags": [
+      "scottish",
+      "honey",
+      "whisky-based",
+      "classic"
+    ]
+  },
+  {
+    "id": "grand-marnier",
+    "name": "Grand Marnier Cordon Rouge",
+    "nameZh": "柑曼怡橙味干邑利口酒",
+    "brand": "Grand Marnier",
+    "category": "liqueur",
+    "subcategory": "orange_liqueur",
+    "abv": 40.0,
+    "sugarContent": 25,
+    "acidPH": 5.0,
+    "bitterUnit": 8,
+    "caloriesPer30ml": 92,
+    "flavorVector": [
+      0.5,
+      0.1,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.5,
+      0.3,
+      0.1,
+      0.0,
+      0.3
+    ],
+    "flavorTags": [
+      "orange",
+      "cognac",
+      "vanilla"
+    ],
+    "aroma": [
+      "bitter orange",
+      "cognac",
+      "vanilla",
+      "hazelnut"
+    ],
+    "taste": [
+      "rich orange",
+      "cognac warmth",
+      "vanilla sweetness",
+      "candied peel"
+    ],
+    "finish": "Long, orange-cognac, warming and complex",
+    "origin": "Neauphle-le-Château, France",
+    "productionMethod": "Distillation of bitter orange peel blended with cognac and aged in French oak",
+    "rarity": "common",
+    "colorHex": "#D4842A",
+    "description": "Prestigious orange-cognac liqueur with depth beyond simple triple sec. Elevates Margaritas and Sidecars.",
+    "descriptionZh": "尊貴的橙味干邑利口酒，深度遠超一般橙酒，提升Margarita和Sidecar的品質。",
+    "substitutes": [
+      "triple-sec",
+      "elderflower-liqueur"
+    ],
+    "pairingBonus": {
+      "cognac": 0.9,
+      "fresh-lime-juice": 0.85,
+      "fresh-lemon-juice": 0.85
+    },
+    "tags": [
+      "french",
+      "orange",
+      "cognac-based",
+      "premium"
+    ]
+  },
+  {
+    "id": "amaro-montenegro",
+    "name": "Amaro Montenegro",
+    "nameZh": "蒙特內格羅苦酒",
+    "brand": "Montenegro",
+    "category": "liqueur",
+    "subcategory": "amaro",
+    "abv": 23.0,
+    "sugarContent": 25,
+    "acidPH": 4.8,
+    "bitterUnit": 45,
+    "caloriesPer30ml": 80,
+    "flavorVector": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.6,
+      0.3,
+      0.2,
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.6,
+      0.1,
+      0.1
+    ],
+    "flavorTags": [
+      "bitter",
+      "herbal",
+      "orange",
+      "floral"
+    ],
+    "aroma": [
+      "orange peel",
+      "herbs",
+      "rose",
+      "coriander",
+      "clove"
+    ],
+    "taste": [
+      "balanced bitterness",
+      "orange marmalade",
+      "herbal complexity",
+      "floral sweetness"
+    ],
+    "finish": "Medium, bittersweet, elegant orange and herb fade",
+    "origin": "Bologna, Italy",
+    "productionMethod": "Infusion of 40 botanicals including herbs, spices, and citrus in spirit",
+    "rarity": "common",
+    "colorHex": "#8B4513",
+    "description": "One of Italy's most beloved amari, with a perfectly balanced bitter-sweet profile and floral elegance.",
+    "descriptionZh": "義大利最受歡迎的苦酒之一，苦甜完美平衡，帶花香優雅。",
+    "substitutes": [
+      "campari",
+      "aperol"
+    ],
+    "pairingBonus": {
+      "fresh-lemon-juice": 0.85,
+      "soda-water": 0.8,
+      "prosecco": 0.85
+    },
+    "tags": [
+      "amaro",
+      "italian",
+      "bitter",
+      "digestif"
+    ]
+  },
+  {
+    "id": "fernet-branca",
+    "name": "Fernet-Branca",
+    "nameZh": "費奈特布蘭卡苦酒",
+    "brand": "Branca",
+    "category": "liqueur",
+    "subcategory": "amaro",
+    "abv": 39.0,
+    "sugarContent": 15,
+    "acidPH": 4.5,
+    "bitterUnit": 85,
+    "caloriesPer30ml": 80,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.0,
+      0.5,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.1,
+      0.0
+    ],
+    "flavorTags": [
+      "bitter",
+      "menthol",
+      "herbal",
+      "intense"
+    ],
+    "aroma": [
+      "menthol",
+      "chamomile",
+      "myrrh",
+      "saffron",
+      "bitter herbs"
+    ],
+    "taste": [
+      "intense bitterness",
+      "cooling menthol",
+      "dark herbs",
+      "eucalyptus",
+      "gentian root"
+    ],
+    "finish": "Long, intensely bitter, minty-herbal",
+    "origin": "Milan, Italy",
+    "productionMethod": "Secret recipe of 27 herbs and spices macerated in grape spirit, aged in oak for minimum one year",
+    "aging": "Minimum 1 year in oak",
+    "rarity": "common",
+    "colorHex": "#2A1A0A",
+    "description": "Intensely bitter Italian amaro with menthol and herbal character. A bartender handshake and Argentine obsession.",
+    "descriptionZh": "極度苦澀的義大利苦酒，薄荷醇與草本風味，調酒師暗號與阿根廷國民飲品。",
+    "substitutes": [
+      "campari",
+      "amaro-montenegro"
+    ],
+    "pairingBonus": {
+      "soda-water": 0.8,
+      "ginger-beer": 0.85
+    },
+    "tags": [
+      "amaro",
+      "italian",
+      "bitter",
+      "menthol",
+      "bartender"
+    ]
+  },
+  {
+    "id": "cynar",
+    "name": "Cynar",
+    "nameZh": "奇納朝鮮薊苦酒",
+    "brand": "Cynar",
+    "category": "liqueur",
+    "subcategory": "amaro",
+    "abv": 16.5,
+    "sugarContent": 20,
+    "acidPH": 4.8,
+    "bitterUnit": 55,
+    "caloriesPer30ml": 72,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.1,
+      0.4,
+      0.0,
+      0.1,
+      0.1,
+      0.3,
+      0.7,
+      0.2,
+      0.0
+    ],
+    "flavorTags": [
+      "bitter",
+      "earthy",
+      "herbal",
+      "artichoke"
+    ],
+    "aroma": [
+      "artichoke",
+      "dark caramel",
+      "bitter herbs",
+      "cocoa"
+    ],
+    "taste": [
+      "earthy artichoke",
+      "dark caramel",
+      "herbal bitterness",
+      "vegetal depth"
+    ],
+    "finish": "Medium, earthy-bitter, pleasantly vegetal",
+    "origin": "Padua, Italy",
+    "productionMethod": "Infusion of 13 herbs and plants including artichoke in spirit",
+    "rarity": "uncommon",
+    "colorHex": "#3A2010",
+    "description": "Unique artichoke-based Italian amaro with earthy, bittersweet depth. Surprisingly versatile in cocktails.",
+    "descriptionZh": "以朝鮮薊為基底的獨特義大利苦酒，泥土般的苦甜深度，在調酒中出奇地百搭。",
+    "substitutes": [
+      "amaro-montenegro",
+      "campari"
+    ],
+    "pairingBonus": {
+      "fresh-lemon-juice": 0.85,
+      "soda-water": 0.85,
+      "sweet-vermouth": 0.8
+    },
+    "tags": [
+      "amaro",
+      "italian",
+      "artichoke",
+      "bitter",
+      "earthy"
+    ]
+  },
+  {
+    "id": "licor-43",
+    "name": "Licor 43",
+    "nameZh": "43號利口酒",
+    "brand": "Licor 43",
+    "category": "liqueur",
+    "subcategory": "vanilla_liqueur",
+    "abv": 31.0,
+    "sugarContent": 35,
+    "acidPH": 5.0,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 100,
+    "flavorVector": [
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.3,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "vanilla",
+      "citrus",
+      "sweet",
+      "spice"
+    ],
+    "aroma": [
+      "rich vanilla",
+      "citrus",
+      "cinnamon",
+      "clove"
+    ],
+    "taste": [
+      "dominant vanilla",
+      "citrus sweetness",
+      "warm spice",
+      "honey"
+    ],
+    "finish": "Sweet, vanilla-forward, lingering citrus spice",
+    "origin": "Cartagena, Spain",
+    "productionMethod": "Maceration and distillation of 43 different ingredients including citrus, vanilla, and Mediterranean herbs",
+    "rarity": "common",
+    "colorHex": "#FFD040",
+    "description": "Spanish vanilla-citrus liqueur made from 43 ingredients. Sweet, versatile, and crowd-pleasing.",
+    "descriptionZh": "西班牙香草柑橘利口酒，由43種原料製成，甜美百搭，深受大眾喜愛。",
+    "substitutes": [
+      "galliano",
+      "benedictine"
+    ],
+    "pairingBonus": {
+      "kahlua": 0.85,
+      "vodka": 0.8,
+      "orange-juice": 0.85
+    },
+    "tags": [
+      "spanish",
+      "vanilla",
+      "sweet",
+      "versatile"
+    ]
+  },
+  {
+    "id": "creme-de-violette",
+    "name": "Crème de Violette",
+    "nameZh": "紫羅蘭利口酒",
+    "category": "liqueur",
+    "subcategory": "floral_liqueur",
+    "abv": 20.0,
+    "sugarContent": 30,
+    "acidPH": 5.0,
+    "bitterUnit": 2,
+    "caloriesPer30ml": 85,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.9,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "floral",
+      "violet",
+      "perfumed"
+    ],
+    "aroma": [
+      "fresh violets",
+      "rose",
+      "candy sweetness"
+    ],
+    "taste": [
+      "delicate violet",
+      "subtle berry",
+      "floral sweetness",
+      "perfumed elegance"
+    ],
+    "finish": "Short, floral, delicate",
+    "origin": "France",
+    "productionMethod": "Maceration of violet flowers and petals in neutral spirit with sugar",
+    "rarity": "uncommon",
+    "colorHex": "#8A2BE2",
+    "description": "Delicate violet-flavored liqueur that gives the Aviation cocktail its signature purple hue.",
+    "descriptionZh": "精緻的紫羅蘭利口酒，賦予Aviation調酒標誌性的紫色光澤。",
+    "substitutes": [
+      "elderflower-liqueur"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.9,
+      "fresh-lemon-juice": 0.9,
+      "maraschino": 0.85
+    },
+    "tags": [
+      "floral",
+      "violet",
+      "aviation",
+      "delicate"
+    ]
+  },
+  {
+    "id": "champagne-moet",
+    "name": "Champagne (Moët & Chandon Impérial)",
+    "nameZh": "酩悅香檳",
+    "brand": "Moët & Chandon",
+    "category": "wine",
+    "subcategory": "champagne",
+    "abv": 12.0,
+    "sugarContent": 6,
+    "acidPH": 3.1,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 25,
+    "flavorVector": [
+      0.3,
+      0.1,
+      0.0,
+      0.2,
+      0.0,
+      0.3,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "flavorTags": [
+      "sparkling",
+      "crisp",
+      "elegant"
+    ],
+    "aroma": [
+      "green apple",
+      "toast",
+      "white flower",
+      "citrus",
+      "brioche"
+    ],
+    "taste": [
+      "fine bubbles",
+      "green apple",
+      "toasty brioche",
+      "mineral",
+      "citrus"
+    ],
+    "finish": "Crisp, elegant, persistent mousse",
+    "origin": "Champagne, France",
+    "productionMethod": "Traditional méthode champenoise, Pinot Noir/Chardonnay/Pinot Meunier blend",
+    "rarity": "common",
+    "colorHex": "#F5EFC0",
+    "description": "Iconic French champagne with fine bubbles, toasty brioche, and crisp apple character. Essential for celebrations and cocktails.",
+    "descriptionZh": "經典法國香檳，細膩氣泡，烤麵包布里歐與清脆蘋果風味，慶典與調酒的首選。",
+    "substitutes": [
+      "prosecco"
+    ],
+    "pairingBonus": {
+      "elderflower-liqueur": 0.9,
+      "chambord": 0.85,
+      "fresh-lemon-juice": 0.8
+    },
+    "tags": [
+      "french",
+      "sparkling",
+      "champagne",
+      "celebration",
+      "premium"
+    ]
+  },
+  {
+    "id": "cabernet-sauvignon-napa",
+    "name": "Cabernet Sauvignon (Napa Valley)",
+    "nameZh": "納帕谷赤霞珠紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 14.5,
+    "sugarContent": 2,
+    "acidPH": 3.6,
+    "bitterUnit": 30,
+    "caloriesPer30ml": 26,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.5,
+      0.3,
+      0.2,
+      0.0,
+      0.2,
+      0.2,
+      0.0,
+      0.0,
+      0.4,
+      0.1,
+      0.3,
+      0.1,
+      0.7
+    ],
+    "flavorTags": [
+      "bold",
+      "tannic",
+      "dark fruit"
+    ],
+    "aroma": [
+      "blackcurrant",
+      "black cherry",
+      "cedar",
+      "vanilla",
+      "dark chocolate"
+    ],
+    "taste": [
+      "bold blackcurrant",
+      "firm tannin",
+      "dark cherry",
+      "cedar",
+      "mocha"
+    ],
+    "finish": "Long, structured, tannic with dark fruit and oak",
+    "origin": "Napa Valley, California, USA",
+    "productionMethod": "Fermented in stainless steel or oak, aged 18-24 months in French and American oak barrels",
+    "aging": "18-24 months in oak",
+    "rarity": "common",
+    "colorHex": "#4A0020",
+    "description": "Full-bodied Napa Cabernet with bold dark fruit, firm tannins, and oak complexity.",
+    "descriptionZh": "飽滿的納帕谷赤霞珠，大膽黑色水果、堅實單寧與橡木複雜度。",
+    "substitutes": [
+      "malbec-mendoza",
+      "barolo"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "full-bodied",
+      "american",
+      "tannic",
+      "oak-aged"
+    ]
+  },
+  {
+    "id": "pinot-noir-burgundy",
+    "name": "Pinot Noir (Burgundy)",
+    "nameZh": "勃艮第黑皮諾紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 13.0,
+    "sugarContent": 1,
+    "acidPH": 3.5,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 23,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.7,
+      0.3,
+      0.2,
+      0.3,
+      0.1,
+      0.4,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.2,
+      0.2,
+      0.3
+    ],
+    "flavorTags": [
+      "elegant",
+      "berry",
+      "earthy"
+    ],
+    "aroma": [
+      "red cherry",
+      "raspberry",
+      "rose petal",
+      "mushroom",
+      "forest floor"
+    ],
+    "taste": [
+      "red cherry",
+      "raspberry",
+      "earthy complexity",
+      "silky tannin",
+      "truffle"
+    ],
+    "finish": "Medium-long, silky, earthy with lingering red fruit",
+    "origin": "Burgundy, France",
+    "productionMethod": "Whole cluster and destemmed fermentation, aged 12-18 months in French oak",
+    "aging": "12-18 months in French oak",
+    "rarity": "uncommon",
+    "colorHex": "#8B0020",
+    "description": "Elegant Burgundy Pinot Noir with red berry fruit, earthy complexity, and silky texture.",
+    "descriptionZh": "優雅的勃艮第黑皮諾，紅莓果、泥土複雜度與絲滑質地。",
+    "substitutes": [
+      "chianti-classico",
+      "tempranillo-rioja"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "light-medium",
+      "french",
+      "elegant",
+      "burgundy"
+    ]
+  },
+  {
+    "id": "merlot-bordeaux",
+    "name": "Merlot (Bordeaux)",
+    "nameZh": "波爾多梅洛紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 13.5,
+    "sugarContent": 2,
+    "acidPH": 3.5,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 24,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.5,
+      0.4,
+      0.1,
+      0.1,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.3,
+      0.1,
+      0.2,
+      0.1,
+      0.5
+    ],
+    "flavorTags": [
+      "plush",
+      "dark fruit",
+      "smooth"
+    ],
+    "aroma": [
+      "plum",
+      "black cherry",
+      "chocolate",
+      "cedar",
+      "violet"
+    ],
+    "taste": [
+      "ripe plum",
+      "black cherry",
+      "soft tannin",
+      "chocolate",
+      "herbal touch"
+    ],
+    "finish": "Medium, smooth, plummy with gentle oak",
+    "origin": "Bordeaux, France",
+    "productionMethod": "Traditional Bordeaux winemaking, aged 12-18 months in French oak barriques",
+    "aging": "12-18 months in French oak",
+    "rarity": "common",
+    "colorHex": "#5A0028",
+    "description": "Medium-bodied Bordeaux Merlot with plush plum, soft tannins, and elegant oak integration.",
+    "descriptionZh": "中等酒體的波爾多梅洛，豐滿李子、柔和單寧與優雅橡木融合。",
+    "substitutes": [
+      "pinot-noir-burgundy",
+      "cabernet-sauvignon-napa"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "medium-bodied",
+      "french",
+      "bordeaux",
+      "smooth"
+    ]
+  },
+  {
+    "id": "sauvignon-blanc-marlborough",
+    "name": "Sauvignon Blanc (Marlborough)",
+    "nameZh": "馬爾堡長相思白酒",
+    "category": "wine",
+    "subcategory": "white_wine",
+    "abv": 12.5,
+    "sugarContent": 2,
+    "acidPH": 3.1,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 22,
+    "flavorVector": [
+      0.5,
+      0.3,
+      0.0,
+      0.1,
+      0.4,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "crisp",
+      "grassy",
+      "citrus"
+    ],
+    "aroma": [
+      "passion fruit",
+      "grapefruit",
+      "cut grass",
+      "gooseberry",
+      "lime zest"
+    ],
+    "taste": [
+      "zesty grapefruit",
+      "passion fruit",
+      "herbaceous green",
+      "crisp acidity"
+    ],
+    "finish": "Crisp, clean, vibrant citrus-herbal",
+    "origin": "Marlborough, New Zealand",
+    "productionMethod": "Cool-climate fermentation in stainless steel, minimal oak contact",
+    "rarity": "common",
+    "colorHex": "#E8F0C0",
+    "description": "Vibrant Marlborough Sauvignon Blanc with intense tropical fruit, grassy notes, and crisp acidity.",
+    "descriptionZh": "活力四射的馬爾堡長相思，濃郁熱帶水果、青草香氣與爽脆酸度。",
+    "substitutes": [
+      "pinot-grigio-alto-adige",
+      "riesling-mosel"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "white",
+      "crisp",
+      "new zealand",
+      "aromatic"
+    ]
+  },
+  {
+    "id": "chardonnay-burgundy",
+    "name": "Chardonnay (Burgundy)",
+    "nameZh": "勃艮第夏多內白酒",
+    "category": "wine",
+    "subcategory": "white_wine",
+    "abv": 13.0,
+    "sugarContent": 2,
+    "acidPH": 3.3,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 23,
+    "flavorVector": [
+      0.2,
+      0.1,
+      0.0,
+      0.3,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.2,
+      0.4,
+      0.2,
+      0.1,
+      0.1,
+      0.5
+    ],
+    "flavorTags": [
+      "buttery",
+      "mineral",
+      "stone fruit"
+    ],
+    "aroma": [
+      "white peach",
+      "lemon",
+      "butter",
+      "toast",
+      "hazelnut"
+    ],
+    "taste": [
+      "ripe citrus",
+      "white peach",
+      "creamy butter",
+      "toasted hazelnut",
+      "mineral"
+    ],
+    "finish": "Long, creamy, mineral with citrus and oak",
+    "origin": "Burgundy, France",
+    "productionMethod": "Barrel fermented and aged in French oak with bâtonnage (lees stirring)",
+    "aging": "10-16 months in French oak",
+    "rarity": "uncommon",
+    "colorHex": "#F0E8A0",
+    "description": "Classic Burgundy Chardonnay with creamy texture, stone fruit, and elegant mineral backbone.",
+    "descriptionZh": "經典勃艮第夏多內，奶油質地、核果與優雅礦物骨架。",
+    "substitutes": [
+      "sauvignon-blanc-marlborough",
+      "pinot-grigio-alto-adige"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "white",
+      "full",
+      "french",
+      "burgundy",
+      "oak-aged"
+    ]
+  },
+  {
+    "id": "riesling-mosel",
+    "name": "Riesling (Mosel)",
+    "nameZh": "摩澤爾雷司令白酒",
+    "category": "wine",
+    "subcategory": "white_wine",
+    "abv": 9.0,
+    "sugarContent": 15,
+    "acidPH": 2.9,
+    "bitterUnit": 2,
+    "caloriesPer30ml": 22,
+    "flavorVector": [
+      0.4,
+      0.2,
+      0.0,
+      0.4,
+      0.0,
+      0.5,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "aromatic",
+      "petrol",
+      "stone fruit"
+    ],
+    "aroma": [
+      "white peach",
+      "green apple",
+      "lime blossom",
+      "slate mineral",
+      "petrol (aged)"
+    ],
+    "taste": [
+      "vivid acidity",
+      "ripe peach",
+      "lime",
+      "honey sweetness",
+      "mineral slate"
+    ],
+    "finish": "Long, electric acidity, mineral with lingering fruit",
+    "origin": "Mosel, Germany",
+    "productionMethod": "Cool-climate fermentation in stainless steel, steep slate vineyard terroir",
+    "rarity": "common",
+    "colorHex": "#F0F5B0",
+    "description": "Aromatic Mosel Riesling with electric acidity, stone fruit, and distinctive slate minerality.",
+    "descriptionZh": "芳香四溢的摩澤爾雷司令，電光般酸度，核果與獨特板岩礦物感。",
+    "substitutes": [
+      "gewurztraminer-alsace",
+      "sauvignon-blanc-marlborough"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "white",
+      "aromatic",
+      "german",
+      "off-dry",
+      "mineral"
+    ]
+  },
+  {
+    "id": "malbec-mendoza",
+    "name": "Malbec (Mendoza)",
+    "nameZh": "門多薩馬爾貝克紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 14.0,
+    "sugarContent": 2,
+    "acidPH": 3.5,
+    "bitterUnit": 25,
+    "caloriesPer30ml": 25,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.6,
+      0.3,
+      0.1,
+      0.2,
+      0.3,
+      0.1,
+      0.1,
+      0.0,
+      0.3,
+      0.2,
+      0.2,
+      0.1,
+      0.5
+    ],
+    "flavorTags": [
+      "bold",
+      "dark fruit",
+      "velvety"
+    ],
+    "aroma": [
+      "dark plum",
+      "blackberry",
+      "violet",
+      "cocoa",
+      "leather"
+    ],
+    "taste": [
+      "juicy dark plum",
+      "blackberry",
+      "milk chocolate",
+      "soft tannin",
+      "smoky touch"
+    ],
+    "finish": "Medium-long, velvety, dark fruit with chocolate",
+    "origin": "Mendoza, Argentina",
+    "productionMethod": "High-altitude viticulture, aged 12-16 months in French and American oak",
+    "aging": "12-16 months in oak",
+    "rarity": "common",
+    "colorHex": "#3A0020",
+    "description": "Full-bodied Argentinian Malbec with velvety dark fruit, chocolate, and violet notes from high-altitude vineyards.",
+    "descriptionZh": "飽滿的阿根廷馬爾貝克，絲絨般黑色水果、巧克力與紫羅蘭，來自高海拔葡萄園。",
+    "substitutes": [
+      "cabernet-sauvignon-napa",
+      "merlot-bordeaux"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "full-bodied",
+      "argentinian",
+      "velvety"
+    ]
+  },
+  {
+    "id": "tempranillo-rioja",
+    "name": "Tempranillo (Rioja Reserva)",
+    "nameZh": "里奧哈珍藏丹魄紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 13.5,
+    "sugarContent": 2,
+    "acidPH": 3.5,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 24,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.4,
+      0.2,
+      0.2,
+      0.0,
+      0.2,
+      0.3,
+      0.0,
+      0.1,
+      0.5,
+      0.2,
+      0.2,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "leather",
+      "berry",
+      "oak",
+      "earthy"
+    ],
+    "aroma": [
+      "dark cherry",
+      "leather",
+      "tobacco",
+      "vanilla",
+      "dried herb"
+    ],
+    "taste": [
+      "dark cherry",
+      "leather",
+      "vanilla oak",
+      "tobacco",
+      "dried fig"
+    ],
+    "finish": "Long, savoury, leather and tobacco with oak warmth",
+    "origin": "Rioja, Spain",
+    "productionMethod": "Traditional Rioja winemaking, aged minimum 12 months in American and French oak, 12 months in bottle",
+    "aging": "12 months in oak, 12 months in bottle",
+    "rarity": "common",
+    "colorHex": "#5A1020",
+    "description": "Classic Rioja Reserva with leather, tobacco, and vanilla oak character from extended aging.",
+    "descriptionZh": "經典里奧哈珍藏，皮革、菸草與香草橡木特色，來自長時間陳年。",
+    "substitutes": [
+      "pinot-noir-burgundy",
+      "chianti-classico"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "spanish",
+      "rioja",
+      "oak-aged",
+      "traditional"
+    ]
+  },
+  {
+    "id": "pinot-grigio-alto-adige",
+    "name": "Pinot Grigio (Alto Adige)",
+    "nameZh": "上阿迪傑灰皮諾白酒",
+    "category": "wine",
+    "subcategory": "white_wine",
+    "abv": 12.5,
+    "sugarContent": 2,
+    "acidPH": 3.2,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 22,
+    "flavorVector": [
+      0.3,
+      0.1,
+      0.0,
+      0.2,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "light",
+      "crisp",
+      "mineral"
+    ],
+    "aroma": [
+      "green pear",
+      "white peach",
+      "almond",
+      "citrus blossom"
+    ],
+    "taste": [
+      "crisp pear",
+      "lemon zest",
+      "light mineral",
+      "clean acidity"
+    ],
+    "finish": "Short-medium, clean, refreshing mineral",
+    "origin": "Alto Adige, Italy",
+    "productionMethod": "Cool-climate mountain viticulture, gentle pressing, stainless steel fermentation",
+    "rarity": "common",
+    "colorHex": "#F5F5D0",
+    "description": "Crisp Italian Pinot Grigio from the alpine Alto Adige region with mineral purity and delicate fruit.",
+    "descriptionZh": "來自阿爾卑斯山腳上阿迪傑地區的清爽灰皮諾，礦物純淨與細膩果味。",
+    "substitutes": [
+      "sauvignon-blanc-marlborough",
+      "chardonnay-burgundy"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "white",
+      "light",
+      "italian",
+      "crisp",
+      "alpine"
+    ]
+  },
+  {
+    "id": "rose-provence",
+    "name": "Rosé (Provence)",
+    "nameZh": "普羅旺斯粉紅酒",
+    "category": "wine",
+    "subcategory": "rose_wine",
+    "abv": 12.5,
+    "sugarContent": 2,
+    "acidPH": 3.3,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 22,
+    "flavorVector": [
+      0.2,
+      0.1,
+      0.4,
+      0.2,
+      0.1,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "dry",
+      "berry",
+      "refreshing"
+    ],
+    "aroma": [
+      "strawberry",
+      "white peach",
+      "citrus blossom",
+      "garrigue herbs"
+    ],
+    "taste": [
+      "dry strawberry",
+      "watermelon",
+      "citrus",
+      "subtle herb"
+    ],
+    "finish": "Crisp, dry, refreshing with delicate fruit",
+    "origin": "Provence, France",
+    "productionMethod": "Direct press method, blend of Grenache, Cinsault, and Mourvèdre, stainless steel fermentation",
+    "rarity": "common",
+    "colorHex": "#F5C0B0",
+    "description": "Classic dry Provence rosé with pale salmon color, delicate strawberry, and Mediterranean herbal character.",
+    "descriptionZh": "經典普羅旺斯粉紅酒，淡鮭魚色，細膩草莓與地中海草本風味。",
+    "substitutes": [
+      "prosecco",
+      "pinot-grigio-alto-adige"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "rosé",
+      "french",
+      "provence",
+      "dry",
+      "summer"
+    ]
+  },
+  {
+    "id": "barolo",
+    "name": "Barolo (Piedmont)",
+    "nameZh": "巴羅洛紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 14.0,
+    "sugarContent": 1,
+    "acidPH": 3.4,
+    "bitterUnit": 35,
+    "caloriesPer30ml": 25,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.5,
+      0.2,
+      0.3,
+      0.5,
+      0.2,
+      0.4,
+      0.1,
+      0.1,
+      0.2,
+      0.1,
+      0.3,
+      0.2,
+      0.5
+    ],
+    "flavorTags": [
+      "tannic",
+      "floral",
+      "earthy",
+      "complex"
+    ],
+    "aroma": [
+      "dried rose",
+      "tar",
+      "truffle",
+      "cherry",
+      "leather"
+    ],
+    "taste": [
+      "sour cherry",
+      "dried rose petal",
+      "tar",
+      "truffle",
+      "firm tannin"
+    ],
+    "finish": "Very long, tannic, tar and roses",
+    "origin": "Piedmont, Italy",
+    "productionMethod": "100% Nebbiolo, traditional long maceration, aged minimum 38 months including 18 in oak",
+    "aging": "Minimum 38 months total, 18 in oak",
+    "rarity": "rare",
+    "colorHex": "#7A1830",
+    "description": "Italy's 'King of Wines' from Nebbiolo. Powerful tannins, tar, roses, and truffle with extraordinary aging potential.",
+    "descriptionZh": "義大利「葡萄酒之王」，內比歐露品種，強勁單寧，焦油、玫瑰與松露，陳年潛力非凡。",
+    "substitutes": [
+      "pinot-noir-burgundy",
+      "tempranillo-rioja"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "italian",
+      "premium",
+      "nebbiolo",
+      "powerful"
+    ]
+  },
+  {
+    "id": "chianti-classico",
+    "name": "Chianti Classico",
+    "nameZh": "經典乾地紅酒",
+    "category": "wine",
+    "subcategory": "red_wine",
+    "abv": 13.5,
+    "sugarContent": 2,
+    "acidPH": 3.4,
+    "bitterUnit": 22,
+    "caloriesPer30ml": 24,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.6,
+      0.2,
+      0.3,
+      0.1,
+      0.1,
+      0.3,
+      0.0,
+      0.1,
+      0.2,
+      0.1,
+      0.3,
+      0.2,
+      0.4
+    ],
+    "flavorTags": [
+      "cherry",
+      "herbal",
+      "earthy"
+    ],
+    "aroma": [
+      "sour cherry",
+      "dried herbs",
+      "leather",
+      "tomato leaf",
+      "violet"
+    ],
+    "taste": [
+      "bright cherry",
+      "herbal savory",
+      "moderate tannin",
+      "earthy complexity",
+      "blood orange"
+    ],
+    "finish": "Medium-long, savoury, cherry-herbal with pleasant grip",
+    "origin": "Tuscany, Italy",
+    "productionMethod": "Primarily Sangiovese, aged minimum 12 months including time in oak",
+    "aging": "Minimum 12 months, partially in oak",
+    "rarity": "common",
+    "colorHex": "#8A1828",
+    "description": "Tuscan Sangiovese with bright cherry, savory herbs, and food-friendly acidity. The wine of Florence.",
+    "descriptionZh": "托斯卡尼桑嬌維塞，明亮櫻桃、鹹香草本與親食性酸度，佛羅倫斯之酒。",
+    "substitutes": [
+      "pinot-noir-burgundy",
+      "tempranillo-rioja"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "red",
+      "italian",
+      "tuscan",
+      "sangiovese",
+      "food-friendly"
+    ]
+  },
+  {
+    "id": "gewurztraminer-alsace",
+    "name": "Gewürztraminer (Alsace)",
+    "nameZh": "阿爾薩斯瓊瑤漿白酒",
+    "category": "wine",
+    "subcategory": "white_wine",
+    "abv": 13.5,
+    "sugarContent": 10,
+    "acidPH": 3.4,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 24,
+    "flavorVector": [
+      0.1,
+      0.3,
+      0.0,
+      0.3,
+      0.1,
+      0.8,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "aromatic",
+      "spicy",
+      "floral"
+    ],
+    "aroma": [
+      "lychee",
+      "rose",
+      "ginger",
+      "Turkish delight",
+      "pineapple"
+    ],
+    "taste": [
+      "intense lychee",
+      "rose water",
+      "ginger spice",
+      "tropical sweetness",
+      "rich body"
+    ],
+    "finish": "Long, aromatic, ginger-rose with slight bitterness",
+    "origin": "Alsace, France",
+    "productionMethod": "Late harvest or dry, fermented in stainless steel or large oak, aromatic grape variety",
+    "rarity": "uncommon",
+    "colorHex": "#F5E8A0",
+    "description": "Intensely aromatic Alsatian white with lychee, rose, and exotic spice. Unmistakably perfumed.",
+    "descriptionZh": "濃郁芳香的阿爾薩斯白酒，荔枝、玫瑰與異國香料，香水般的獨特風味。",
+    "substitutes": [
+      "riesling-mosel",
+      "moscato-dasti"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "white",
+      "aromatic",
+      "french",
+      "alsace",
+      "spicy"
+    ]
+  },
+  {
+    "id": "sauternes",
+    "name": "Sauternes",
+    "nameZh": "蘇玳貴腐甜酒",
+    "category": "wine",
+    "subcategory": "dessert_wine",
+    "abv": 13.5,
+    "sugarContent": 120,
+    "acidPH": 3.5,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 40,
+    "flavorVector": [
+      0.2,
+      0.3,
+      0.0,
+      0.6,
+      0.0,
+      0.3,
+      0.1,
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.5,
+      0.0,
+      0.0,
+      0.2
+    ],
+    "flavorTags": [
+      "sweet",
+      "honey",
+      "apricot",
+      "botrytis"
+    ],
+    "aroma": [
+      "dried apricot",
+      "honey",
+      "saffron",
+      "marmalade",
+      "beeswax"
+    ],
+    "taste": [
+      "luscious honey",
+      "candied apricot",
+      "pineapple",
+      "marmalade",
+      "balancing acidity"
+    ],
+    "finish": "Very long, honeyed, complex with persistent sweetness",
+    "origin": "Sauternes, Bordeaux, France",
+    "productionMethod": "Sémillon and Sauvignon Blanc affected by noble rot (Botrytis cinerea), aged 18-24 months in French oak",
+    "aging": "18-24 months in French oak",
+    "rarity": "uncommon",
+    "colorHex": "#D4A030",
+    "description": "Luxurious French dessert wine from botrytis-affected grapes with intense honey, apricot, and saffron complexity.",
+    "descriptionZh": "奢華法國貴腐甜酒，受貴腐菌感染的葡萄釀造，蜂蜜、杏桃與番紅花的濃郁複雜度。",
+    "substitutes": [
+      "moscato-dasti"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "dessert wine",
+      "french",
+      "sweet",
+      "botrytis",
+      "luxury"
+    ]
+  },
+  {
+    "id": "port-tawny-20",
+    "name": "Port (Tawny 20 Year)",
+    "nameZh": "20年茶色波特酒",
+    "category": "fortified_wine",
+    "subcategory": "tawny_port",
+    "abv": 20.0,
+    "sugarContent": 100,
+    "acidPH": 3.5,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 50,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.1,
+      0.3,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.0,
+      0.6,
+      0.5,
+      0.8,
+      0.1,
+      0.1,
+      0.7
+    ],
+    "flavorTags": [
+      "caramel",
+      "nutty",
+      "dried fruit",
+      "complex"
+    ],
+    "aroma": [
+      "toffee",
+      "walnut",
+      "dried fig",
+      "orange peel",
+      "butterscotch"
+    ],
+    "taste": [
+      "rich toffee",
+      "roasted walnut",
+      "dried apricot",
+      "butterscotch",
+      "orange marmalade"
+    ],
+    "finish": "Very long, nutty-caramel, elegant oxidative warmth",
+    "origin": "Douro Valley, Portugal",
+    "productionMethod": "Fortified with grape spirit, aged 20 years in small oak casks with oxidative aging",
+    "aging": "Average 20 years in small oak casks",
+    "rarity": "uncommon",
+    "colorHex": "#A06030",
+    "description": "Elegant 20-year tawny port with extraordinary nutty-caramel complexity from two decades of oxidative aging.",
+    "descriptionZh": "優雅的20年茶色波特酒，經二十年氧化陳年帶來非凡的堅果焦糖複雜度。",
+    "substitutes": [
+      "madeira-malmsey",
+      "sherry-oloroso"
+    ],
+    "pairingBonus": {
+      "cognac": 0.8
+    },
+    "tags": [
+      "fortified",
+      "portuguese",
+      "aged",
+      "dessert",
+      "premium"
+    ]
+  },
+  {
+    "id": "sherry-fino",
+    "name": "Sherry (Fino)",
+    "nameZh": "菲諾雪莉酒",
+    "category": "fortified_wine",
+    "subcategory": "fino_sherry",
+    "abv": 15.0,
+    "sugarContent": 1,
+    "acidPH": 3.2,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 30,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.3,
+      0.4,
+      0.1
+    ],
+    "flavorTags": [
+      "dry",
+      "nutty",
+      "saline",
+      "yeasty"
+    ],
+    "aroma": [
+      "almond",
+      "sea salt",
+      "bread dough",
+      "chamomile",
+      "green olive"
+    ],
+    "taste": [
+      "bone dry",
+      "toasted almond",
+      "saline mineral",
+      "yeasty complexity",
+      "green apple"
+    ],
+    "finish": "Dry, crisp, almond-saline with pleasant bitterness",
+    "origin": "Jerez, Spain",
+    "productionMethod": "Palomino grape, biological aging under flor yeast in solera system",
+    "rarity": "uncommon",
+    "colorHex": "#F0E8B0",
+    "description": "Bone-dry fino sherry aged under flor yeast, with nutty, saline character. One of the world's great aperitif wines.",
+    "descriptionZh": "在酵母膜下陳年的極乾菲諾雪莉，堅果與鹹味特色，世界最偉大的餐前酒之一。",
+    "substitutes": [
+      "dry-vermouth",
+      "sherry-oloroso"
+    ],
+    "pairingBonus": {
+      "tonic-water": 0.8,
+      "fresh-lemon-juice": 0.8
+    },
+    "tags": [
+      "fortified",
+      "spanish",
+      "dry",
+      "sherry",
+      "aperitif"
+    ]
+  },
+  {
+    "id": "sherry-oloroso",
+    "name": "Sherry (Oloroso)",
+    "nameZh": "歐羅索雪莉酒",
+    "category": "fortified_wine",
+    "subcategory": "oloroso_sherry",
+    "abv": 18.0,
+    "sugarContent": 5,
+    "acidPH": 3.3,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 38,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.7,
+      0.2,
+      0.5,
+      0.2,
+      0.3,
+      0.6
+    ],
+    "flavorTags": [
+      "nutty",
+      "oxidative",
+      "caramel",
+      "rich"
+    ],
+    "aroma": [
+      "walnut",
+      "toffee",
+      "leather",
+      "dried fruit",
+      "tobacco"
+    ],
+    "taste": [
+      "roasted walnut",
+      "dark toffee",
+      "leather",
+      "dried fig",
+      "savoury umami"
+    ],
+    "finish": "Long, dry, nutty-oxidative with savoury depth",
+    "origin": "Jerez, Spain",
+    "productionMethod": "Palomino grape, oxidative aging without flor in solera system",
+    "rarity": "uncommon",
+    "colorHex": "#A07030",
+    "description": "Rich oxidative sherry aged without flor, with walnut, toffee, and leather complexity. Great in cocktails.",
+    "descriptionZh": "無酵母膜氧化陳年的豐厚雪莉酒，核桃、太妃糖與皮革複雜度，調酒表現出色。",
+    "substitutes": [
+      "sherry-fino",
+      "sweet-vermouth"
+    ],
+    "pairingBonus": {
+      "rye-whiskey": 0.85,
+      "cognac": 0.85
+    },
+    "tags": [
+      "fortified",
+      "spanish",
+      "sherry",
+      "oxidative",
+      "rich"
+    ]
+  },
+  {
+    "id": "madeira-malmsey",
+    "name": "Madeira (Malmsey)",
+    "nameZh": "馬德拉馬姆齊甜酒",
+    "category": "fortified_wine",
+    "subcategory": "madeira",
+    "abv": 19.0,
+    "sugarContent": 90,
+    "acidPH": 3.3,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 48,
+    "flavorVector": [
+      0.1,
+      0.1,
+      0.0,
+      0.3,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.1,
+      0.5,
+      0.4,
+      0.8,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "flavorTags": [
+      "caramel",
+      "nutty",
+      "sweet",
+      "oxidative"
+    ],
+    "aroma": [
+      "burnt caramel",
+      "coffee",
+      "walnut",
+      "dried fruit",
+      "toffee"
+    ],
+    "taste": [
+      "rich caramel",
+      "coffee",
+      "roasted nut",
+      "dried fig",
+      "bright acidity cutting sweetness"
+    ],
+    "finish": "Very long, caramelized, smoky-sweet with electric acidity",
+    "origin": "Madeira, Portugal",
+    "productionMethod": "Malvasia grape, fortified, heated estufagem process or canteiro aging, oxidative maturation",
+    "aging": "Minimum 5 years, often much longer",
+    "rarity": "uncommon",
+    "colorHex": "#8A5020",
+    "description": "Sweet Madeira from Malvasia grape with burnt caramel, coffee, and remarkable acidity. Nearly indestructible wine.",
+    "descriptionZh": "馬爾瓦西亞品種釀造的甜型馬德拉，焦糖、咖啡與驚人酸度，幾乎不朽的酒。",
+    "substitutes": [
+      "port-tawny-20",
+      "sherry-oloroso"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "fortified",
+      "portuguese",
+      "sweet",
+      "madeira",
+      "oxidative"
+    ]
+  },
+  {
+    "id": "moscato-dasti",
+    "name": "Moscato d'Asti",
+    "nameZh": "阿斯蒂蜜思嘉微氣泡酒",
+    "category": "wine",
+    "subcategory": "sparkling_wine",
+    "abv": 5.5,
+    "sugarContent": 80,
+    "acidPH": 3.2,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 28,
+    "flavorVector": [
+      0.2,
+      0.3,
+      0.1,
+      0.5,
+      0.0,
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "sweet",
+      "floral",
+      "fruity",
+      "light"
+    ],
+    "aroma": [
+      "white peach",
+      "orange blossom",
+      "honey",
+      "grape",
+      "apricot"
+    ],
+    "taste": [
+      "sweet peach",
+      "orange blossom",
+      "grape",
+      "honey",
+      "gentle fizz"
+    ],
+    "finish": "Short, sweet, refreshing with floral fade",
+    "origin": "Piedmont, Italy",
+    "productionMethod": "Muscat Blanc à Petits Grains, partial fermentation in sealed tanks (Asti method), low alcohol",
+    "rarity": "common",
+    "colorHex": "#F8F0C0",
+    "description": "Gently sparkling Italian sweet wine with peach, orange blossom, and honey. Low alcohol and irresistibly refreshing.",
+    "descriptionZh": "輕柔氣泡的義大利甜酒，蜜桃、橙花與蜂蜜，低酒精度，清爽迷人。",
+    "substitutes": [
+      "prosecco",
+      "sauternes"
+    ],
+    "pairingBonus": {},
+    "tags": [
+      "sparkling",
+      "italian",
+      "sweet",
+      "low-alcohol",
+      "dessert"
+    ]
+  },
+  {
+    "id": "lillet-blanc",
+    "name": "Lillet Blanc",
+    "nameZh": "力麗白開胃酒",
+    "brand": "Lillet",
+    "category": "fortified_wine",
+    "subcategory": "aperitif_wine",
+    "abv": 17.0,
+    "sugarContent": 12,
+    "acidPH": 3.5,
+    "bitterUnit": 15,
+    "caloriesPer30ml": 40,
+    "flavorVector": [
+      0.4,
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.2,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "citrus",
+      "floral",
+      "bitter",
+      "honeyed"
+    ],
+    "aroma": [
+      "orange blossom",
+      "citrus peel",
+      "honey",
+      "white flower"
+    ],
+    "taste": [
+      "bitter orange",
+      "honey sweetness",
+      "floral elegance",
+      "quinine hint"
+    ],
+    "finish": "Medium, citrus-floral, gentle bitterness",
+    "origin": "Podensac, France",
+    "productionMethod": "Blend of Bordeaux wines with citrus liqueurs and quinine, aged in oak",
+    "rarity": "common",
+    "colorHex": "#F5E8B0",
+    "description": "Elegant French aperitif wine with citrus, floral, and honeyed character. Key ingredient in the Vesper Martini.",
+    "descriptionZh": "優雅的法國開胃酒，柑橘、花香與蜂蜜風味，Vesper Martini的關鍵材料。",
+    "substitutes": [
+      "cocchi-americano",
+      "dry-vermouth"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.9,
+      "vodka": 0.85,
+      "prosecco": 0.85
+    },
+    "tags": [
+      "french",
+      "aperitif",
+      "citrus",
+      "floral",
+      "vesper"
+    ]
+  },
+  {
+    "id": "cocchi-americano",
+    "name": "Cocchi Americano",
+    "nameZh": "可奇美式開胃酒",
+    "brand": "Cocchi",
+    "category": "fortified_wine",
+    "subcategory": "aperitif_wine",
+    "abv": 16.5,
+    "sugarContent": 14,
+    "acidPH": 3.5,
+    "bitterUnit": 20,
+    "caloriesPer30ml": 42,
+    "flavorVector": [
+      0.4,
+      0.0,
+      0.0,
+      0.1,
+      0.3,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.4,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "bitter",
+      "citrus",
+      "herbal",
+      "wine"
+    ],
+    "aroma": [
+      "orange peel",
+      "gentian",
+      "chamomile",
+      "quinine",
+      "white wine"
+    ],
+    "taste": [
+      "bitter citrus",
+      "quinine",
+      "orange marmalade",
+      "herbal complexity",
+      "wine base"
+    ],
+    "finish": "Medium, bitter-citrus, quinine dryness",
+    "origin": "Asti, Italy",
+    "productionMethod": "Moscato d'Asti wine base aromatized with herbs, spices, and cinchona bark",
+    "rarity": "uncommon",
+    "colorHex": "#E8D890",
+    "description": "Italian aperitif wine similar to the original Kina Lillet. Essential for historically accurate Vesper Martinis.",
+    "descriptionZh": "義大利開胃酒，近似原始的奎納力麗，歷史正統Vesper Martini的必備材料。",
+    "substitutes": [
+      "lillet-blanc",
+      "dry-vermouth"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.9,
+      "vodka": 0.85,
+      "prosecco": 0.8
+    },
+    "tags": [
+      "italian",
+      "aperitif",
+      "bitter",
+      "vesper",
+      "quinine"
+    ]
+  },
+  {
+    "id": "punt-e-mes",
+    "name": "Punt e Mes",
+    "nameZh": "龐特美斯苦味香艾酒",
+    "brand": "Carpano",
+    "category": "fortified_wine",
+    "subcategory": "bitter_vermouth",
+    "abv": 16.0,
+    "sugarContent": 15,
+    "acidPH": 4.8,
+    "bitterUnit": 50,
+    "caloriesPer30ml": 55,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.2,
+      0.1,
+      0.4,
+      0.1,
+      0.3,
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.4,
+      0.7,
+      0.2,
+      0.3
+    ],
+    "flavorTags": [
+      "bitter",
+      "sweet",
+      "herbal",
+      "complex"
+    ],
+    "aroma": [
+      "bitter orange",
+      "caramel",
+      "herbs",
+      "dried cherry",
+      "quinine"
+    ],
+    "taste": [
+      "intense bitterness",
+      "dark caramel",
+      "orange peel",
+      "herbal depth",
+      "sweet counterpoint"
+    ],
+    "finish": "Long, bitter-sweet, lingering herbal complexity",
+    "origin": "Turin, Italy",
+    "productionMethod": "Aromatized wine with high proportion of bitter components, created at Carpano in 1870",
+    "rarity": "uncommon",
+    "colorHex": "#5A1A1A",
+    "description": "Intensely bitter Italian vermouth, halfway between sweet vermouth and amaro. A Negroni upgrade.",
+    "descriptionZh": "極度苦味的義大利香艾酒，介於甜香艾和苦酒之間，Negroni的升級之選。",
+    "substitutes": [
+      "sweet-vermouth",
+      "campari"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.9,
+      "campari": 0.85,
+      "rye-whiskey": 0.85
+    },
+    "tags": [
+      "vermouth",
+      "italian",
+      "bitter",
+      "turin",
+      "classic"
+    ]
+  },
+  {
+    "id": "dolin-dry-vermouth",
+    "name": "Dolin Dry Vermouth",
+    "nameZh": "多蘭乾型香艾酒",
+    "brand": "Dolin",
+    "category": "fortified_wine",
+    "subcategory": "dry_vermouth",
+    "abv": 17.5,
+    "sugarContent": 5,
+    "acidPH": 3.5,
+    "bitterUnit": 12,
+    "caloriesPer30ml": 35,
+    "flavorVector": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.3,
+      0.1,
+      0.1,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.2,
+      0.0,
+      0.1
+    ],
+    "flavorTags": [
+      "dry",
+      "herbal",
+      "floral",
+      "crisp"
+    ],
+    "aroma": [
+      "chamomile",
+      "elderflower",
+      "citrus peel",
+      "alpine herbs"
+    ],
+    "taste": [
+      "dry herbal",
+      "chamomile",
+      "citrus zest",
+      "floral elegance",
+      "crisp finish"
+    ],
+    "finish": "Clean, dry, herbal-floral with citrus",
+    "origin": "Chambéry, France",
+    "productionMethod": "Alpine white wine base aromatized with local herbs and botanicals from the Chartreuse mountains",
+    "rarity": "common",
+    "colorHex": "#F0E8C0",
+    "description": "Classic French dry vermouth from Chambéry with delicate herbal-floral character. A bartender favorite for Martinis.",
+    "descriptionZh": "來自尚貝里的經典法國乾型香艾酒，細膩草本花香，調酒師製作Martini的首選。",
+    "substitutes": [
+      "dry-vermouth",
+      "lillet-blanc"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.95,
+      "vodka": 0.9,
+      "hendricks-gin": 0.9
+    },
+    "tags": [
+      "vermouth",
+      "french",
+      "dry",
+      "martini",
+      "classic"
+    ]
+  },
+  {
+    "id": "coconut-water",
+    "name": "Coconut Water",
+    "nameZh": "椰子水",
+    "category": "mixer",
+    "subcategory": "natural_water",
+    "abv": 0,
+    "sugarContent": 5,
+    "acidPH": 5.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 6,
+    "flavorVector": [
+      0.0,
+      0.4,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0
+    ],
+    "flavorTags": [
+      "tropical",
+      "light",
+      "refreshing"
+    ],
+    "aroma": [
+      "fresh coconut",
+      "light sweetness",
+      "mineral"
+    ],
+    "taste": [
+      "light coconut",
+      "subtle sweetness",
+      "mineral electrolyte",
+      "clean"
+    ],
+    "finish": "Clean, light, gently tropical",
+    "rarity": "common",
+    "colorHex": "#F5F5F0",
+    "description": "Natural coconut water with light sweetness and mineral character. A refreshing, low-calorie tropical mixer.",
+    "descriptionZh": "天然椰子水，輕甜帶礦物質，清爽低卡的熱帶調酒素材。",
+    "substitutes": [
+      "coconut-cream",
+      "pineapple-juice"
+    ],
+    "pairingBonus": {
+      "bacardi-rum": 0.85,
+      "vodka": 0.8,
+      "fresh-lime-juice": 0.85
+    },
+    "tags": [
+      "tropical",
+      "light",
+      "hydrating",
+      "natural"
+    ]
+  },
+  {
+    "id": "cucumber",
+    "name": "Fresh Cucumber",
+    "nameZh": "新鮮小黃瓜",
+    "category": "fresh",
+    "subcategory": "vegetable",
+    "abv": 0,
+    "sugarContent": 2,
+    "acidPH": 5.5,
+    "bitterUnit": 2,
+    "caloriesPer30ml": 2,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.1,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "cool",
+      "fresh",
+      "green"
+    ],
+    "aroma": [
+      "cool green",
+      "melon-like",
+      "vegetal freshness"
+    ],
+    "taste": [
+      "cool cucumber",
+      "watery freshness",
+      "light vegetal",
+      "mild sweetness"
+    ],
+    "finish": "Clean, cool, refreshing",
+    "rarity": "common",
+    "colorHex": "#90C050",
+    "description": "Fresh cucumber for muddling or garnish. Adds cool, refreshing character to gin-based cocktails.",
+    "descriptionZh": "新鮮小黃瓜，用於搗碎或裝飾，為琴酒調酒增添清涼爽口風味。",
+    "substitutes": [
+      "fresh-mint"
+    ],
+    "pairingBonus": {
+      "hendricks-gin": 0.95,
+      "tanqueray-gin": 0.85,
+      "vodka": 0.85,
+      "fresh-lime-juice": 0.8
+    },
+    "tags": [
+      "fresh",
+      "cool",
+      "garnish",
+      "muddle"
+    ]
+  },
+  {
+    "id": "fresh-basil",
+    "name": "Fresh Basil",
+    "nameZh": "新鮮羅勒",
+    "category": "fresh",
+    "subcategory": "herb",
+    "abv": 0,
+    "sugarContent": 0,
+    "acidPH": 5.5,
+    "bitterUnit": 5,
+    "caloriesPer30ml": 1,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.2,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "herbal",
+      "aromatic",
+      "peppery"
+    ],
+    "aroma": [
+      "sweet basil",
+      "anise-like",
+      "clove",
+      "peppery green"
+    ],
+    "taste": [
+      "aromatic basil",
+      "sweet herbaceous",
+      "light anise",
+      "gentle pepper"
+    ],
+    "finish": "Fresh, herbal, slightly peppery",
+    "rarity": "common",
+    "colorHex": "#40A030",
+    "description": "Fresh basil leaves for muddling. Adds aromatic herbal complexity to gin and strawberry cocktails.",
+    "descriptionZh": "新鮮羅勒葉，用於搗碎，為琴酒和草莓調酒增添芳香草本層次。",
+    "substitutes": [
+      "fresh-mint"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.9,
+      "hendricks-gin": 0.85,
+      "fresh-lime-juice": 0.85,
+      "simple-syrup": 0.8
+    },
+    "tags": [
+      "fresh",
+      "herb",
+      "aromatic",
+      "muddle"
+    ]
+  },
+  {
+    "id": "espresso",
+    "name": "Espresso",
+    "nameZh": "義式濃縮咖啡",
+    "category": "mixer",
+    "subcategory": "coffee",
+    "abv": 0,
+    "sugarContent": 0,
+    "acidPH": 5.0,
+    "bitterUnit": 40,
+    "caloriesPer30ml": 2,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.2,
+      0.3,
+      0.1,
+      0.4,
+      0.6,
+      0.1,
+      0.0
+    ],
+    "flavorTags": [
+      "coffee",
+      "bitter",
+      "roasted"
+    ],
+    "aroma": [
+      "roasted coffee",
+      "dark chocolate",
+      "caramel",
+      "toasted nuts"
+    ],
+    "taste": [
+      "intense coffee",
+      "bittersweet chocolate",
+      "caramel",
+      "roasted complexity"
+    ],
+    "finish": "Bold, lingering coffee bitterness with crema sweetness",
+    "rarity": "common",
+    "colorHex": "#3A1A0A",
+    "description": "Freshly pulled espresso shot. Essential for Espresso Martini and Irish Coffee.",
+    "descriptionZh": "新鮮萃取的義式濃縮咖啡，Espresso Martini和愛爾蘭咖啡的必備材料。",
+    "substitutes": [
+      "kahlua"
+    ],
+    "pairingBonus": {
+      "vodka": 0.9,
+      "kahlua": 0.95,
+      "baileys": 0.9,
+      "simple-syrup": 0.85
+    },
+    "tags": [
+      "coffee",
+      "bitter",
+      "espresso martini",
+      "essential"
+    ]
+  },
+  {
+    "id": "cream-of-coconut",
+    "name": "Cream of Coconut (Coco López)",
+    "nameZh": "椰奶霜（可可洛佩斯）",
+    "brand": "Coco López",
+    "category": "mixer",
+    "subcategory": "coconut",
+    "abv": 0,
+    "sugarContent": 50,
+    "acidPH": 6.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 80,
+    "flavorVector": [
+      0.0,
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.3,
+      0.4,
+      0.3,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "sweet",
+      "coconut",
+      "rich",
+      "tropical"
+    ],
+    "aroma": [
+      "sweet coconut",
+      "vanilla",
+      "tropical cream"
+    ],
+    "taste": [
+      "intense sweet coconut",
+      "creamy richness",
+      "vanilla undertone",
+      "thick body"
+    ],
+    "finish": "Sweet, thick, lingering coconut cream",
+    "origin": "Puerto Rico",
+    "productionMethod": "Sweetened cream of coconut with added sugar and emulsifiers",
+    "rarity": "common",
+    "colorHex": "#FAF5E8",
+    "description": "The original sweetened cream of coconut, essential for authentic Piña Colada. Thicker and sweeter than coconut cream.",
+    "descriptionZh": "原創加糖椰奶霜，正宗Piña Colada的必備材料，比椰漿更濃厚甜蜜。",
+    "substitutes": [
+      "coconut-cream"
+    ],
+    "pairingBonus": {
+      "bacardi-rum": 0.95,
+      "pineapple-juice": 0.95,
+      "dark-rum": 0.9,
+      "fresh-lime-juice": 0.8
+    },
+    "tags": [
+      "tropical",
+      "sweet",
+      "tiki",
+      "coconut",
+      "pina colada"
+    ]
+  },
+  {
+    "id": "tonic-syrup",
+    "name": "Tonic Syrup",
+    "nameZh": "通寧糖漿",
+    "category": "syrup",
+    "subcategory": "flavored_syrup",
+    "abv": 0,
+    "sugarContent": 55,
+    "acidPH": 3.5,
+    "bitterUnit": 30,
+    "caloriesPer30ml": 75,
+    "flavorVector": [
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.3,
+      0.1,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.5,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "bitter",
+      "citrus",
+      "quinine"
+    ],
+    "aroma": [
+      "quinine",
+      "citrus peel",
+      "lemongrass",
+      "juniper"
+    ],
+    "taste": [
+      "bitter quinine",
+      "citrus sweetness",
+      "herbal complexity",
+      "tonic character"
+    ],
+    "finish": "Bitter-sweet, quinine dryness, citrus fade",
+    "origin": "Various",
+    "productionMethod": "Concentrated syrup of cinchona bark, citrus, and botanicals with sugar",
+    "rarity": "uncommon",
+    "colorHex": "#E8D8A0",
+    "description": "Concentrated tonic syrup for crafting custom G&T with soda water. More flavor control than bottled tonic.",
+    "descriptionZh": "濃縮通寧糖漿，搭配蘇打水自製琴通寧，比瓶裝通寧水更能控制風味。",
+    "substitutes": [
+      "tonic-water"
+    ],
+    "pairingBonus": {
+      "tanqueray-gin": 0.95,
+      "hendricks-gin": 0.9,
+      "soda-water": 0.95,
+      "club-soda": 0.9
+    },
+    "tags": [
+      "tonic",
+      "craft",
+      "bitter",
+      "concentrate"
+    ]
+  },
+  {
+    "id": "vanilla-syrup",
+    "name": "Vanilla Syrup",
+    "nameZh": "香草糖漿",
+    "category": "syrup",
+    "subcategory": "flavored_syrup",
+    "abv": 0,
+    "sugarContent": 60,
+    "acidPH": 6.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 80,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9,
+      0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "vanilla",
+      "sweet",
+      "creamy"
+    ],
+    "aroma": [
+      "rich vanilla bean",
+      "caramel hint",
+      "sweet cream"
+    ],
+    "taste": [
+      "pure vanilla sweetness",
+      "creamy body",
+      "subtle caramel"
+    ],
+    "finish": "Sweet, smooth, vanilla warmth",
+    "rarity": "common",
+    "colorHex": "#F5E8C0",
+    "description": "Vanilla bean-infused simple syrup. Adds warm vanilla sweetness to espresso martinis and bourbon cocktails.",
+    "descriptionZh": "香草莢浸泡的糖漿，為濃縮咖啡馬丁尼和波本調酒增添溫暖香草甜味。",
+    "substitutes": [
+      "simple-syrup",
+      "licor-43"
+    ],
+    "pairingBonus": {
+      "vodka": 0.85,
+      "espresso": 0.9,
+      "makers-mark-bourbon": 0.85
+    },
+    "tags": [
+      "vanilla",
+      "sweet",
+      "syrup",
+      "versatile"
+    ]
+  },
+  {
+    "id": "cinnamon-syrup",
+    "name": "Cinnamon Syrup",
+    "nameZh": "肉桂糖漿",
+    "category": "syrup",
+    "subcategory": "flavored_syrup",
+    "abv": 0,
+    "sugarContent": 60,
+    "acidPH": 6.5,
+    "bitterUnit": 2,
+    "caloriesPer30ml": 80,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.8,
+      0.1,
+      0.0,
+      0.0,
+      0.2,
+      0.3,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "cinnamon",
+      "warm",
+      "spicy"
+    ],
+    "aroma": [
+      "warm cinnamon",
+      "baking spice",
+      "subtle clove"
+    ],
+    "taste": [
+      "bold cinnamon",
+      "warm sweetness",
+      "baking spice",
+      "gentle heat"
+    ],
+    "finish": "Warm, spicy, lingering cinnamon",
+    "rarity": "common",
+    "colorHex": "#C08040",
+    "description": "Cinnamon-infused simple syrup. Adds warm spice to tiki drinks, apple cocktails, and hot toddies.",
+    "descriptionZh": "肉桂浸泡的糖漿，為提基飲品、蘋果調酒和熱托迪增添溫暖辛香。",
+    "substitutes": [
+      "simple-syrup",
+      "demerara-syrup"
+    ],
+    "pairingBonus": {
+      "dark-rum": 0.9,
+      "makers-mark-bourbon": 0.9,
+      "apple-juice": 0.85,
+      "fresh-lemon-juice": 0.85
+    },
+    "tags": [
+      "cinnamon",
+      "spicy",
+      "syrup",
+      "warm"
+    ]
+  },
+  {
+    "id": "raspberry-syrup",
+    "name": "Raspberry Syrup",
+    "nameZh": "覆盆子糖漿",
+    "category": "syrup",
+    "subcategory": "fruit_syrup",
+    "abv": 0,
+    "sugarContent": 55,
+    "acidPH": 3.5,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 75,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.9,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "raspberry",
+      "berry",
+      "sweet-tart"
+    ],
+    "aroma": [
+      "fresh raspberry",
+      "berry sweetness",
+      "floral hint"
+    ],
+    "taste": [
+      "vibrant raspberry",
+      "sweet-tart balance",
+      "berry richness"
+    ],
+    "finish": "Fruity, clean raspberry, tart edge",
+    "rarity": "common",
+    "colorHex": "#C02050",
+    "description": "Fresh raspberry syrup with vibrant berry flavor. Adds color and fruit sweetness to cocktails and lemonades.",
+    "descriptionZh": "新鮮覆盆子糖漿，活力莓果風味，為調酒和檸檬水增添色彩與果甜。",
+    "substitutes": [
+      "grenadine",
+      "chambord"
+    ],
+    "pairingBonus": {
+      "vodka": 0.85,
+      "fresh-lemon-juice": 0.9,
+      "prosecco": 0.85
+    },
+    "tags": [
+      "raspberry",
+      "fruit",
+      "syrup",
+      "berry"
+    ]
+  },
+  {
+    "id": "ginger-syrup",
+    "name": "Ginger Syrup",
+    "nameZh": "薑糖漿",
+    "category": "syrup",
+    "subcategory": "flavored_syrup",
+    "abv": 0,
+    "sugarContent": 55,
+    "acidPH": 5.0,
+    "bitterUnit": 3,
+    "caloriesPer30ml": 75,
+    "flavorVector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.7,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "ginger",
+      "spicy",
+      "warm"
+    ],
+    "aroma": [
+      "fresh ginger",
+      "zesty heat",
+      "earthy spice"
+    ],
+    "taste": [
+      "bold ginger heat",
+      "earthy spice",
+      "sweet balance",
+      "zesty warmth"
+    ],
+    "finish": "Warm, spicy ginger, lingering heat",
+    "rarity": "common",
+    "colorHex": "#D4B860",
+    "description": "Fresh ginger-infused syrup with bold spicy warmth. Essential for Penicillin and ginger-forward cocktails.",
+    "descriptionZh": "新鮮薑汁糖漿，辛辣溫暖，Penicillin調酒和薑味調酒的必備材料。",
+    "substitutes": [
+      "fresh-ginger",
+      "simple-syrup"
+    ],
+    "pairingBonus": {
+      "scotch-whisky": 0.95,
+      "fresh-lemon-juice": 0.9,
+      "dark-rum": 0.85,
+      "fresh-lime-juice": 0.85
+    },
+    "tags": [
+      "ginger",
+      "spicy",
+      "syrup",
+      "penicillin"
+    ]
+  },
+  {
+    "id": "passion-fruit-syrup",
+    "name": "Passion Fruit Syrup",
+    "nameZh": "百香果糖漿",
+    "category": "syrup",
+    "subcategory": "fruit_syrup",
+    "abv": 0,
+    "sugarContent": 55,
+    "acidPH": 3.0,
+    "bitterUnit": 0,
+    "caloriesPer30ml": 75,
+    "flavorVector": [
+      0.1,
+      0.9,
+      0.0,
+      0.1,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "tropical",
+      "passion fruit",
+      "sweet-tart"
+    ],
+    "aroma": [
+      "intense passion fruit",
+      "tropical guava",
+      "floral mango"
+    ],
+    "taste": [
+      "vibrant passion fruit",
+      "tropical sweetness",
+      "tangy acidity",
+      "exotic fruit"
+    ],
+    "finish": "Tangy, tropical, lingering exotic fruit",
+    "rarity": "common",
+    "colorHex": "#E8A020",
+    "description": "Concentrated passion fruit syrup for tropical cocktails. Key ingredient in Pornstar Martini and tiki drinks.",
+    "descriptionZh": "濃縮百香果糖漿，熱帶調酒的關鍵材料，Pornstar Martini和提基飲品的必備。",
+    "substitutes": [
+      "passion-fruit-puree",
+      "pineapple-juice"
+    ],
+    "pairingBonus": {
+      "vodka": 0.9,
+      "bacardi-rum": 0.9,
+      "prosecco": 0.85,
+      "fresh-lime-juice": 0.9
+    },
+    "tags": [
+      "tropical",
+      "passion fruit",
+      "syrup",
+      "tiki"
+    ]
+  }
+]

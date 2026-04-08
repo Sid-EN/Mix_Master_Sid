@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "dimensions": [
+    {"index": 0,  "name": "citrus",      "nameZh": "柑橘",    "color": "#FFD700"},
+    {"index": 1,  "name": "tropical",    "nameZh": "熱帶果香", "color": "#FF8C00"},
+    {"index": 2,  "name": "berry",       "nameZh": "莓果",    "color": "#DC143C"},
+    {"index": 3,  "name": "stone_fruit", "nameZh": "核果",    "color": "#FF7F50"},
+    {"index": 4,  "name": "herbal",      "nameZh": "草本",    "color": "#228B22"},
+    {"index": 5,  "name": "floral",      "nameZh": "花香",    "color": "#DDA0DD"},
+    {"index": 6,  "name": "spicy",       "nameZh": "辛香",    "color": "#B22222"},
+    {"index": 7,  "name": "earthy",      "nameZh": "大地",    "color": "#8B4513"},
+    {"index": 8,  "name": "smoky",       "nameZh": "煙燻",    "color": "#696969"},
+    {"index": 9,  "name": "nutty",       "nameZh": "堅果",    "color": "#D2691E"},
+    {"index": 10, "name": "vanilla",     "nameZh": "香草",    "color": "#F5DEB3"},
+    {"index": 11, "name": "caramel",     "nameZh": "焦糖",    "color": "#C27820"},
+    {"index": 12, "name": "bitter",      "nameZh": "苦韻",    "color": "#4B0082"},
+    {"index": 13, "name": "umami",       "nameZh": "鮮味",    "color": "#556B2F"},
+    {"index": 14, "name": "oak",         "nameZh": "橡木",    "color": "#8B6914"}
+  ],
+  "complementaryPairs": {
+    "0":  [4, 5],
+    "1":  [8, 6],
+    "2":  [9, 10],
+    "3":  [5, 11],
+    "4":  [0, 3],
+    "5":  [0, 2],
+    "6":  [1, 11],
+    "8":  [1, 2],
+    "9":  [2, 10],
+    "10": [12, 8],
+    "11": [0, 12],
+    "12": [10, 14],
+    "14": [12, 13]
+  },
+  "classicCombinations": [
+    {"name": "Sour",         "dims": [0, 4],  "description": "柑橘 + 草本"},
+    {"name": "Tropical Sour","dims": [0, 1],  "description": "柑橘 + 熱帶"},
+    {"name": "Smoky Sour",   "dims": [0, 8],  "description": "柑橘 + 煙燻"},
+    {"name": "Bitter Sweet", "dims": [12, 11],"description": "苦韻 + 焦糖"},
+    {"name": "Spiced Oak",   "dims": [6, 14], "description": "辛香 + 橡木"}
+  ]
+}

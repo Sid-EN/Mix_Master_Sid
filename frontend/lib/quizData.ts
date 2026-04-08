@@ -1,0 +1,355 @@
+export interface QuizQuestion {
+  id: string
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  category: 'basics' | 'wine' | 'spirits' | 'advanced'
+}
+
+export interface QuizCategory {
+  id: 'basics' | 'wine' | 'spirits' | 'advanced' | 'random'
+  label: string
+  labelEn: string
+  icon: string
+}
+
+export const QUIZ_CATEGORIES: QuizCategory[] = [
+  { id: 'basics',   label: '基礎調酒', labelEn: 'Basics',   icon: '🍹' },
+  { id: 'wine',     label: '葡萄酒',   labelEn: 'Wine',     icon: '🍷' },
+  { id: 'spirits',  label: '烈酒',     labelEn: 'Spirits',  icon: '🥃' },
+  { id: 'advanced', label: '進階技法', labelEn: 'Advanced', icon: '⚗️' },
+  { id: 'random',   label: '綜合隨機', labelEn: 'Random',   icon: '🎲' },
+]
+
+export const QUESTIONS_PER_ROUND = 8
+
+export const quizQuestions: QuizQuestion[] = [
+  // ── 基礎調酒 (Basics) ──
+  {
+    id: 'b1',
+    question: 'Jigger 是什麼工具？',
+    options: ['量酒器', '搖酒器', '吧匙', '濾冰器'],
+    correctIndex: 0,
+    explanation: 'Jigger 是量酒器，用於精確量取酒液的容量，確保調酒比例正確。',
+    category: 'basics',
+  },
+  {
+    id: 'b2',
+    question: '搖盪法（Shake）適合用於含有什麼成分的調酒？',
+    options: ['果汁與奶類', '只含烈酒', '碳酸飲料', '啤酒'],
+    correctIndex: 0,
+    explanation: '搖盪法適合含有果汁、奶類、蛋白等不易混合的材料，能充分乳化並降溫。',
+    category: 'basics',
+  },
+  {
+    id: 'b3',
+    question: '經典 Negroni 不包含以下哪種材料？',
+    options: ['伏特加', '琴酒', 'Campari', '甜香艾酒'],
+    correctIndex: 0,
+    explanation: 'Negroni 由等比例的琴酒、Campari 和甜香艾酒組成，不含伏特加。',
+    category: 'basics',
+  },
+  {
+    id: 'b4',
+    question: 'Old Fashioned 使用哪種手法？',
+    options: ['直調法 Build', '搖盪法 Shake', '攪拌法 Stir', '擲壺法 Roll'],
+    correctIndex: 2,
+    explanation: 'Old Fashioned 使用攪拌法（Stir），在杯中加冰攪拌使酒液均勻冷卻而不過度稀釋。',
+    category: 'basics',
+  },
+  {
+    id: 'b5',
+    question: '1 oz 等於多少 ml？',
+    options: ['30', '45', '60', '15'],
+    correctIndex: 0,
+    explanation: '1 盎司（oz）約等於 30 毫升（ml），這是調酒中最基本的換算單位。',
+    category: 'basics',
+  },
+  {
+    id: 'b6',
+    question: 'Muddling 是什麼技法？',
+    options: ['搗壓', '攪拌', '過濾', '搖盪'],
+    correctIndex: 0,
+    explanation: 'Muddling 是搗壓技法，用搗棒輕壓水果、香草等材料以釋放風味。',
+    category: 'basics',
+  },
+  {
+    id: 'b7',
+    question: 'Boston Shaker 由哪兩部分組成？',
+    options: ['鋼杯與玻璃杯', '兩個鋼杯', '鋼杯與過濾器', '玻璃杯與蓋子'],
+    correctIndex: 0,
+    explanation: 'Boston Shaker 由一個大鋼杯和一個小玻璃杯（或小鋼杯）組成，是專業調酒師最常用的搖酒器。',
+    category: 'basics',
+  },
+  {
+    id: 'b8',
+    question: 'Martini 經典裝飾是什麼？',
+    options: ['橄欖或檸檬皮', '櫻桃', '薄荷葉', '柳橙片'],
+    correctIndex: 0,
+    explanation: 'Martini 的經典裝飾是橄欖或檸檬皮捲，兩者各有不同的風味表現。',
+    category: 'basics',
+  },
+  {
+    id: 'b9',
+    question: 'Highball 杯通常用於哪種類型的調酒？',
+    options: ['長飲型調酒', '短飲型調酒', '熱飲', '純飲烈酒'],
+    correctIndex: 0,
+    explanation: 'Highball 杯容量較大，適合盛裝加入大量冰塊和汽水的長飲型調酒，如 Gin & Tonic。',
+    category: 'basics',
+  },
+  {
+    id: 'b10',
+    question: 'Dash 在調酒配方中通常指多少量？',
+    options: ['約 0.9 ml（一滴管）', '約 5 ml', '約 15 ml', '約 30 ml'],
+    correctIndex: 0,
+    explanation: 'Dash 通常指約 0.9 ml，常見於苦精的用量，從瓶口快速甩出一下即為一 dash。',
+    category: 'basics',
+  },
+
+  // ── 葡萄酒 (Wine) ──
+  {
+    id: 'w1',
+    question: '單寧（Tannin）主要來自葡萄的哪個部分？',
+    options: ['果皮與梗', '果肉', '果汁', '酵母'],
+    correctIndex: 0,
+    explanation: '單寧主要來自葡萄的果皮、籽和梗，是紅酒澀感的主要來源。',
+    category: 'wine',
+  },
+  {
+    id: 'w2',
+    question: 'Terroir 指的是什麼？',
+    options: ['風土條件', '釀造方法', '葡萄品種', '陳年時間'],
+    correctIndex: 0,
+    explanation: 'Terroir（風土）涵蓋土壤、氣候、地形等自然條件，賦予葡萄酒獨特的地域特色。',
+    category: 'wine',
+  },
+  {
+    id: 'w3',
+    question: '香檳使用的釀造法稱為？',
+    options: ['傳統法 Méthode Champenoise', '碳酸注入法', '自然發酵法', '索雷拉法'],
+    correctIndex: 0,
+    explanation: '香檳使用傳統法（Méthode Champenoise），在瓶中進行二次發酵產生氣泡。',
+    category: 'wine',
+  },
+  {
+    id: 'w4',
+    question: 'Pinot Noir 是什麼顏色的葡萄？',
+    options: ['紅', '白', '粉', '綠'],
+    correctIndex: 0,
+    explanation: 'Pinot Noir 是紅色葡萄品種，以薄皮著稱，能釀出優雅細緻的紅酒。',
+    category: 'wine',
+  },
+  {
+    id: 'w5',
+    question: '波爾多左岸的主要品種是？',
+    options: ['Cabernet Sauvignon', 'Merlot', 'Pinot Noir', 'Syrah'],
+    correctIndex: 0,
+    explanation: '波爾多左岸以 Cabernet Sauvignon 為主要品種，右岸則以 Merlot 為主。',
+    category: 'wine',
+  },
+  {
+    id: 'w6',
+    question: '冰酒（Ice Wine）的葡萄在什麼溫度下採收？',
+    options: ['-7°C 以下', '0°C', '10°C', '常溫'],
+    correctIndex: 0,
+    explanation: '冰酒的葡萄必須在 -7°C 以下的低溫自然結冰後採收，濃縮糖分和風味。',
+    category: 'wine',
+  },
+  {
+    id: 'w7',
+    question: '橡木桶 Toast Level 越高，帶來什麼風味？',
+    options: ['焦糖與煙燻', '果香', '花香', '酸度'],
+    correctIndex: 0,
+    explanation: '橡木桶烘烤程度越高，會帶來更多焦糖、煙燻、香草等風味。',
+    category: 'wine',
+  },
+  {
+    id: 'w8',
+    question: 'Botrytis 是什麼？',
+    options: ['貴腐菌', '酵母', '細菌', '黴菌防治法'],
+    correctIndex: 0,
+    explanation: 'Botrytis（貴腐菌）是一種使葡萄脫水濃縮的黴菌，用於釀造著名的貴腐甜酒。',
+    category: 'wine',
+  },
+  {
+    id: 'w9',
+    question: 'Decanting（醒酒）的主要目的是什麼？',
+    options: ['讓酒液接觸空氣並分離沉澱物', '降低酒精濃度', '加速冷卻', '增加甜度'],
+    correctIndex: 0,
+    explanation: '醒酒可以讓酒液與空氣接觸，使香氣打開，同時將陳年產生的沉澱物分離。',
+    category: 'wine',
+  },
+  {
+    id: 'w10',
+    question: 'Riesling 主要產自哪個國家？',
+    options: ['德國', '法國', '義大利', '西班牙'],
+    correctIndex: 0,
+    explanation: 'Riesling 是德國最具代表性的白葡萄品種，以高酸度和多樣甜度著稱。',
+    category: 'wine',
+  },
+
+  // ── 烈酒 (Spirits) ──
+  {
+    id: 's1',
+    question: '琴酒（Gin）的核心風味來自什麼？',
+    options: ['杜松子 Juniper', '麥芽', '龍舌蘭', '甘蔗'],
+    correctIndex: 0,
+    explanation: '琴酒的定義性風味來自杜松子（Juniper Berry），所有琴酒都必須以杜松子為主要植物原料。',
+    category: 'spirits',
+  },
+  {
+    id: 's2',
+    question: '龍舌蘭（Tequila）產自哪個國家？',
+    options: ['墨西哥', '巴西', '古巴', '秘魯'],
+    correctIndex: 0,
+    explanation: 'Tequila 必須產自墨西哥指定產區，主要以藍色龍舌蘭（Blue Agave）為原料。',
+    category: 'spirits',
+  },
+  {
+    id: 's3',
+    question: 'Single Malt Whisky 指的是？',
+    options: ['單一麥芽威士忌', '混合威士忌', '玉米威士忌', '裸麥威士忌'],
+    correctIndex: 0,
+    explanation: 'Single Malt 指在單一蒸餾廠中，僅使用麥芽為原料，以壺式蒸餾器製成的威士忌。',
+    category: 'spirits',
+  },
+  {
+    id: 's4',
+    question: 'Cognac 必須產自法國哪個地區？',
+    options: ['干邑', '波爾多', '香檳', '布根地'],
+    correctIndex: 0,
+    explanation: 'Cognac 必須產自法國干邑（Cognac）地區，並遵循嚴格的釀造法規。',
+    category: 'spirits',
+  },
+  {
+    id: 's5',
+    question: '伏特加（Vodka）的理想特色是？',
+    options: ['純淨無味', '果香濃郁', '煙燻', '甜味'],
+    correctIndex: 0,
+    explanation: '傳統伏特加追求純淨無味的特色，是調酒中最百搭的基酒之一。',
+    category: 'spirits',
+  },
+  {
+    id: 's6',
+    question: '蘭姆酒（Rum）的原料是？',
+    options: ['甘蔗', '穀物', '葡萄', '龍舌蘭'],
+    correctIndex: 0,
+    explanation: '蘭姆酒以甘蔗汁或糖蜜為原料，主要產自加勒比海地區。',
+    category: 'spirits',
+  },
+  {
+    id: 's7',
+    question: '壺式蒸餾（Pot Still）與柱式蒸餾（Column Still）的主要差別？',
+    options: ['批次 vs 連續', '溫度', '原料', '容量'],
+    correctIndex: 0,
+    explanation: '壺式蒸餾是批次生產，風味較豐富；柱式蒸餾可連續生產，酒體較純淨。',
+    category: 'spirits',
+  },
+  {
+    id: 's8',
+    question: 'Mezcal 與 Tequila 的主要差別是？',
+    options: ['龍舌蘭品種', '國家', '蒸餾方式', '陳年時間'],
+    correctIndex: 0,
+    explanation: 'Tequila 只能使用藍色龍舌蘭，而 Mezcal 可以使用超過 30 種不同的龍舌蘭品種。',
+    category: 'spirits',
+  },
+  {
+    id: 's9',
+    question: 'Bourbon 必須使用至少多少比例的玉米？',
+    options: ['51%', '30%', '75%', '100%'],
+    correctIndex: 0,
+    explanation: 'Bourbon 法規要求穀物配方中至少含有 51% 的玉米，並在新的炭化橡木桶中陳年。',
+    category: 'spirits',
+  },
+  {
+    id: 's10',
+    question: 'Absinthe（苦艾酒）的特徵性植物原料是？',
+    options: ['苦艾草', '杜松子', '薄荷', '八角'],
+    correctIndex: 0,
+    explanation: '苦艾酒以苦艾草（Wormwood）為特徵性原料，曾因含有側柏酮而被多國禁止。',
+    category: 'spirits',
+  },
+
+  // ── 進階技法 (Advanced) ──
+  {
+    id: 'a1',
+    question: '什麼是 Fat Washing？',
+    options: ['油脂洗滌增添風味', '清洗脂肪', '過濾油脂', '脂肪分離'],
+    correctIndex: 0,
+    explanation: 'Fat Washing 是將油脂（如奶油、培根油）與烈酒混合後冷凍去脂，使酒液保留油脂風味。',
+    category: 'advanced',
+  },
+  {
+    id: 'a2',
+    question: 'Sous Vide Infusion 的優點是？',
+    options: ['精準控溫快速萃取', '低成本', '簡單操作', '不需設備'],
+    correctIndex: 0,
+    explanation: 'Sous Vide 可精準控制溫度，在短時間內完成通常需要數天的浸泡萃取。',
+    category: 'advanced',
+  },
+  {
+    id: 'a3',
+    question: 'Oleo Saccharum 是什麼？',
+    options: ['柑橘皮糖浸油', '一種糖漿', '一種苦精', '一種裝飾'],
+    correctIndex: 0,
+    explanation: 'Oleo Saccharum 是用糖覆蓋柑橘皮，利用滲透壓萃取出的天然精油糖漿。',
+    category: 'advanced',
+  },
+  {
+    id: 'a4',
+    question: 'Clarified Milk Punch 使用什麼原理澄清？',
+    options: ['酪蛋白凝固', '過濾', '蒸餾', '冷凍'],
+    correctIndex: 0,
+    explanation: '牛奶中的酪蛋白遇酸凝固形成凝乳，吸附雜質後過濾，使調酒變得清澈透明。',
+    category: 'advanced',
+  },
+  {
+    id: 'a5',
+    question: 'Dry Shake 指的是什麼？',
+    options: ['不加冰搖盪', '不加酒搖盪', '乾燥搖盪', '快速搖盪'],
+    correctIndex: 0,
+    explanation: 'Dry Shake 是先不加冰搖盪（通常用於含蛋白的調酒），讓蛋白充分乳化產生綿密泡沫。',
+    category: 'advanced',
+  },
+  {
+    id: 'a6',
+    question: 'Spherification 使用什麼化學物質？',
+    options: ['海藻酸鈉', '明膠', '蛋白', '鮮奶油'],
+    correctIndex: 0,
+    explanation: '分子調酒中的球化技術使用海藻酸鈉與氯化鈣反應，形成薄膜包裹液體的珠狀物。',
+    category: 'advanced',
+  },
+  {
+    id: 'a7',
+    question: '自製苦精（Bitters）通常需要浸泡多久？',
+    options: ['2-4 週', '1 天', '1 小時', '6 個月'],
+    correctIndex: 0,
+    explanation: '自製苦精需將香料、草本浸泡在高濃度烈酒中 2-4 週，讓風味充分萃取。',
+    category: 'advanced',
+  },
+  {
+    id: 'a8',
+    question: 'Smoke Gun 用於調酒的目的是？',
+    options: ['增添煙燻風味', '加熱', '冷卻', '碳酸化'],
+    correctIndex: 0,
+    explanation: 'Smoke Gun 透過燃燒木屑產生煙霧，為調酒或杯器增添煙燻香氣與視覺效果。',
+    category: 'advanced',
+  },
+  {
+    id: 'a9',
+    question: 'Nitrogen Muddling 的目的是什麼？',
+    options: ['液態氮急凍食材後搗碎釋放更多風味', '加速發酵', '增加氣泡', '消毒'],
+    correctIndex: 0,
+    explanation: '使用液態氮急速冷凍新鮮食材，搗碎後能釋放更多精油和風味分子。',
+    category: 'advanced',
+  },
+  {
+    id: 'a10',
+    question: 'Acid-Adjusted Juice 的目的是什麼？',
+    options: ['用酸調整果汁以模擬其他柑橘風味', '增加甜度', '延長保存期限', '降低酒精度'],
+    correctIndex: 0,
+    explanation: '透過添加檸檬酸和蘋果酸調整果汁的酸度組成，可用一種柑橘模擬另一種的風味特性。',
+    category: 'advanced',
+  },
+]

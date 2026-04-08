@@ -1,0 +1,3725 @@
+[
+  {
+    "id": "classic-daiquiri",
+    "slug": "classic-daiquiri",
+    "type": "classic",
+    "nameEn": "Classic Daiquiri",
+    "nameZh": "經典黛綺麗",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 1,
+    "balanceScore": 96.0,
+    "grade": "A",
+    "description": "The perfect rum Sour. Three ingredients, perfect harmony.",
+    "descriptionZh": "完美的蘭姆酸酒。三種材料，完美和諧。Ernest Hemingway 的最愛。",
+    "ingredients": [
+      {
+        "slug": "bacardi-rum",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入白蘭姆 2 oz、萊姆汁 ¾ oz、糖漿 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾（Double Strain）倒入冷藏的 Coupe 杯。",
+      "以萊姆輪切裝飾。"
+    ],
+    "garnish": "萊姆輪切（Lime Wheel）",
+    "tags": [
+      "classic",
+      "sour",
+      "rum",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "黛綺麗誕生於 1900 年代初期的古巴聖地牙哥，由美國礦業工程師 Jennings Cox 在炎熱午後以當地蘭姆酒、萊姆與糖即興調製。後來在哈瓦那的 El Floridita 酒吧由傳奇調酒師 Constantino Ribalaigua 發揚光大，成為海明威每日必飲的經典。",
+    "origin": "Cuba, 1900s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "citrus",
+        "sugarcane",
+        "tropical"
+      ],
+      "acid": 0.7,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.6,
+      "description": "清爽的柑橘酸度與蘭姆酒的甘蔗甜韻完美交融，餘韻乾淨俐落。"
+    },
+    "glassImage": "🍸",
+    "tips": "搖盪時間是關鍵——12 秒能達到最佳稀釋與溫度。使用新鮮萊姆汁，絕對不要用瓶裝果汁，風味差距天壤之別。",
+    "pairings": [
+      "炸蝦天婦羅",
+      "鮮蝦薄餅",
+      "芒果沙拉",
+      "白身魚生魚片"
+    ]
+  },
+  {
+    "id": "classic-negroni",
+    "slug": "classic-negroni",
+    "type": "classic",
+    "nameEn": "Negroni",
+    "nameZh": "尼格羅尼",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 94.0,
+    "grade": "A",
+    "description": "The quintessential stirred cocktail. Equal parts perfection.",
+    "descriptionZh": "攪拌調酒的典範。三種等量材料的完美平衡，Campari 的苦甜魔法。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "campari",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Mixing Glass 中加入大量冰塊。",
+      "量入琴酒、Campari、甜香艾酒各 1 oz。",
+      "緩慢攪拌 30 秒至充分稀釋冷卻。",
+      "濾冰倒入放有大冰塊的 Rocks Glass。",
+      "以橙皮捲裝飾，擠壓橙皮油脂後放入杯中。"
+    ],
+    "garnish": "橙皮捲（Orange Twist）",
+    "tags": [
+      "classic",
+      "stirred",
+      "bitter",
+      "gin"
+    ],
+    "iba": true,
+    "story": "1919 年，佛羅倫斯的 Caffè Casoni 酒吧中，Camillo Negroni 伯爵要求調酒師將他常喝的 Americano 中的蘇打水換成琴酒，創造出更強勁的版本。這個簡單的替換誕生了二十世紀最偉大的調酒之一，至今仍是全球酒吧點單率最高的經典。",
+    "origin": "Italy, 1919",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bitter orange",
+        "herbal",
+        "juniper"
+      ],
+      "acid": 0.1,
+      "sweet": 0.4,
+      "bitter": 0.8,
+      "punch": 0.7,
+      "description": "Campari 的苦橙風味主導，琴酒的杜松子香氣與甜香艾酒的草本甜韻層層交疊。"
+    },
+    "glassImage": "🥃",
+    "tips": "攪拌時保持穩定節奏，讓冰塊沿杯壁旋轉而非碰撞碎裂。橙皮油脂的擠壓動作務必在杯口上方進行，讓精油霧化落在酒液表面。",
+    "pairings": [
+      "義式臘腸拼盤",
+      "帕瑪森起司",
+      "橄欖與醃漬物",
+      "義式烤麵包"
+    ]
+  },
+  {
+    "id": "classic-margarita",
+    "slug": "classic-margarita",
+    "type": "classic",
+    "nameEn": "Classic Margarita",
+    "nameZh": "經典瑪格麗特",
+    "method": "shake",
+    "glassType": "margarita_glass",
+    "difficulty": 1,
+    "balanceScore": 95.0,
+    "grade": "A",
+    "description": "Mexico's finest export. Tequila, lime, and orange liqueur.",
+    "descriptionZh": "墨西哥最偉大的調酒。龍舌蘭的大地氣息與柑橘的清爽完美共舞。",
+    "ingredients": [
+      {
+        "slug": "el-jimador-blanco-tequila",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "triple-sec",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "以鹽（或不加）沾杯口半圈。",
+      "在 Shaker 中加入冰塊。",
+      "量入龍舌蘭 2 oz、萊姆汁 1 oz、橙酒 ¾ oz。",
+      "用力搖盪 12 秒。",
+      "過濾倒入放有冰塊的 Margarita 杯或 Rocks Glass。",
+      "萊姆角裝飾。"
+    ],
+    "garnish": "鹽口 + 萊姆角（Salt Rim + Lime Wedge）",
+    "tags": [
+      "classic",
+      "sour",
+      "tequila",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "瑪格麗特的起源眾說紛紜，最廣為流傳的版本是 1948 年墨西哥提華納的社交名媛 Margarita Sames 在派對上為朋友調製了這杯酒。龍舌蘭與萊姆的組合完美體現了墨西哥的陽光精神，鹽口的巧思更成為調酒史上最具辨識度的特徵。",
+    "origin": "Mexico, 1940s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "lime",
+        "agave",
+        "orange zest"
+      ],
+      "acid": 0.7,
+      "sweet": 0.4,
+      "bitter": 0.05,
+      "punch": 0.65,
+      "description": "萊姆的明亮酸度、龍舌蘭的植物氣息與橙酒的柑橘甜韻三者平衡，鹽口提供鹹鮮對比。"
+    },
+    "glassImage": "🍹",
+    "tips": "鹽口只做半圈，讓客人可以選擇有鹽或無鹽的飲用角度。使用 100% 龍舌蘭的 Blanco Tequila 風味更純淨。",
+    "pairings": [
+      "墨西哥捲餅",
+      "酪梨醬配玉米片",
+      "烤魚塔可",
+      "辣味蝦仁"
+    ]
+  },
+  {
+    "id": "gin-tonic",
+    "slug": "gin-tonic",
+    "type": "classic",
+    "nameEn": "Gin & Tonic",
+    "nameZh": "琴湯尼",
+    "method": "build",
+    "glassType": "highball",
+    "difficulty": 1,
+    "balanceScore": 88.0,
+    "grade": "B",
+    "description": "The quintessential long drink. Gin meets tonic in perfect simplicity.",
+    "descriptionZh": "最優雅的長飲調酒。琴酒與通寧水的完美簡約，新手學習調酒的起點。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "tonic-water",
+        "amount": 4.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Highball 杯中加入大冰塊（越大越好，融化越慢）。",
+      "量入琴酒 1.5 oz。",
+      "沿著杯壁緩慢倒入通寧水 4.5 oz（保留氣泡）。",
+      "用 Bar Spoon 輕輕上下攪拌一次。",
+      "以萊姆角或黃瓜片裝飾。"
+    ],
+    "garnish": "萊姆角（Lime Wedge）或黃瓜片（Cucumber Slice）",
+    "tags": [
+      "classic",
+      "build",
+      "gin",
+      "beginner",
+      "highball"
+    ],
+    "iba": false,
+    "story": "琴湯尼的歷史可追溯至十九世紀英國殖民印度時期，英國軍官為了服用抗瘧疾的奎寧（通寧水的主要成分），將苦澀的藥水與琴酒混合飲用。這個出於實用目的的組合，意外創造了史上最受歡迎的長飲調酒，從殖民地酒吧流傳到全世界。",
+    "origin": "British India, 1850s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "juniper",
+        "quinine",
+        "citrus"
+      ],
+      "acid": 0.2,
+      "sweet": 0.3,
+      "bitter": 0.5,
+      "punch": 0.35,
+      "description": "琴酒的杜松子植物香氣與通寧水的奎寧微苦完美結合，氣泡帶來清爽口感。"
+    },
+    "glassImage": "🥂",
+    "tips": "通寧水沿杯壁緩慢倒入是保留氣泡的關鍵，千萬不要大力攪拌。冰塊越大越好，大冰塊融化慢，不會過度稀釋酒液。",
+    "pairings": [
+      "鹽酥雞",
+      "炸魚薯條",
+      "生蠔",
+      "凱薩沙拉"
+    ]
+  },
+  {
+    "id": "whiskey-sour",
+    "slug": "whiskey-sour",
+    "type": "classic",
+    "nameEn": "Whiskey Sour",
+    "nameZh": "威士忌酸酒",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 93.0,
+    "grade": "A",
+    "description": "Bourbon's finest cocktail. Silky foam from egg white is optional but recommended.",
+    "descriptionZh": "波本的最佳展演。加入蛋白後乾搖，頂部細緻泡沫是職人的印記。",
+    "ingredients": [
+      {
+        "slug": "makers-mark-bourbon",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "egg-white",
+        "amount": 1,
+        "unit": "個（可選）",
+        "isOptional": true
+      }
+    ],
+    "steps": [
+      "（若使用蛋白）先不加冰乾搖（Dry Shake）15 秒乳化蛋白。",
+      "加入冰塊後再次搖盪 12 秒。",
+      "雙重過濾倒入放有冰塊的 Rocks Glass。",
+      "以橙片 + 安格仕苦精點綴泡沫裝飾。"
+    ],
+    "garnish": "橙片 + 苦精圖案（Orange Slice + Bitters Dots）",
+    "tags": [
+      "classic",
+      "sour",
+      "bourbon",
+      "egg"
+    ],
+    "iba": true,
+    "story": "威士忌酸酒是 Sour 類調酒的原型之一，最早的文字紀錄出現在 1862 年 Jerry Thomas 的《How to Mix Drinks》中。十九世紀的美國水手發現，將烈酒、柑橘汁與糖混合不僅好喝，柑橘中的維他命 C 還能預防壞血病。加入蛋白的做法則在二十世紀初期開始流行。",
+    "origin": "USA, 1860s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bourbon",
+        "lemon",
+        "vanilla"
+      ],
+      "acid": 0.65,
+      "sweet": 0.5,
+      "bitter": 0.1,
+      "punch": 0.6,
+      "description": "波本的焦糖香草風味與檸檬的明亮酸度平衡，蛋白泡沫增添絲滑質感。"
+    },
+    "glassImage": "🥃",
+    "tips": "乾搖（Dry Shake）是蛋白調酒的關鍵步驟，不加冰搖盪 15 秒讓蛋白充分乳化，之後加冰再搖才能產生綿密持久的泡沫。苦精圖案可用牙籤拉出花紋。",
+    "pairings": [
+      "美式燒烤肋排",
+      "焦糖爆米花",
+      "蘋果派",
+      "煙燻鮭魚"
+    ]
+  },
+  {
+    "id": "mojito",
+    "slug": "mojito",
+    "type": "classic",
+    "nameEn": "Mojito",
+    "nameZh": "莫吉托",
+    "method": "build",
+    "glassType": "highball",
+    "difficulty": 1,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "Cuba's national cocktail. Rum, lime, mint, and effervescent joy.",
+    "descriptionZh": "古巴國民調酒。蘭姆、萊姆、薄荷、氣泡，清涼夏日的完美詮釋。",
+    "ingredients": [
+      {
+        "slug": "bacardi-rum",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-mint",
+        "amount": 8,
+        "unit": "leaves"
+      },
+      {
+        "slug": "soda-water",
+        "amount": 2.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "將薄荷葉放入杯底，加入糖漿。",
+      "用 Muddler 輕柔攪碎（壓力輕，只求釋放香氣，不破壞纖維）。",
+      "加入蘭姆酒、萊姆汁。",
+      "加入碎冰至杯口。",
+      "輕輕倒入蘇打水，輕攪一次。",
+      "薄荷枝 + 萊姆角裝飾。"
+    ],
+    "garnish": "薄荷枝（Mint Sprig）+ 萊姆角",
+    "tags": [
+      "classic",
+      "rum",
+      "mint",
+      "refreshing",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "莫吉托的根源可追溯至十六世紀古巴的「El Draque」，據說是英國海盜 Francis Drake 的船員用粗製蘭姆酒、萊姆與薄荷調製的飲品。現代版本在 1930 年代的哈瓦那 La Bodeguita del Medio 酒吧定型，海明威也是這裡的常客。",
+    "origin": "Cuba, 1930s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "mint",
+        "lime",
+        "sugarcane"
+      ],
+      "acid": 0.6,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.4,
+      "description": "薄荷的清涼香氣與萊姆酸度交織，蘇打氣泡帶來輕盈的飲用感受。"
+    },
+    "glassImage": "🍹",
+    "tips": "搗壓薄荷時只需輕壓釋放精油香氣，用力過度會壓碎葉脈釋放苦味。碎冰是莫吉托的靈魂，讓整杯酒保持冰涼且風味均勻。",
+    "pairings": [
+      "古巴三明治",
+      "烤蝦串",
+      "熱帶水果盤",
+      "椰子蝦"
+    ]
+  },
+  {
+    "id": "mezcal-negroni",
+    "slug": "mezcal-negroni",
+    "type": "classic",
+    "nameEn": "Mezcal Negroni",
+    "nameZh": "梅斯卡爾尼格羅尼",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 3,
+    "balanceScore": 89.0,
+    "grade": "B",
+    "description": "Negroni's smoky cousin. Mezcal replaces gin for earthier depth.",
+    "descriptionZh": "尼格羅尼的煙燻表親。以梅斯卡爾取代琴酒，帶來大地煙燻的神秘深度。",
+    "ingredients": [
+      {
+        "slug": "del-maguey-vida-mezcal",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "campari",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Mixing Glass 中加入大量冰塊。",
+      "量入梅斯卡爾、Campari、甜香艾酒各 1 oz。",
+      "攪拌 30 秒。",
+      "濾冰倒入放有大冰塊的 Rocks Glass。",
+      "火焰橙皮裝飾（Flamed Orange Peel）。"
+    ],
+    "garnish": "火焰橙皮（Flamed Orange Peel）",
+    "tags": [
+      "modern-classic",
+      "mezcal",
+      "smoky",
+      "stirred"
+    ],
+    "iba": false,
+    "story": "梅斯卡爾尼格羅尼是 2000 年代精釀調酒復興浪潮中的產物，當梅斯卡爾從墨西哥瓦哈卡的傳統蒸餾酒躍升為全球調酒師的新寵時，將其代入尼格羅尼的等比配方成為自然而然的實驗。煙燻風味與 Campari 的苦橙意外地產生了迷人的化學反應。",
+    "origin": "USA/Mexico, 2000s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "smoke",
+        "bitter orange",
+        "agave"
+      ],
+      "acid": 0.1,
+      "sweet": 0.35,
+      "bitter": 0.8,
+      "punch": 0.7,
+      "description": "梅斯卡爾的煙燻泥土氣息與 Campari 的苦橙交融，甜香艾酒在尾韻中提供草本甜潤。"
+    },
+    "glassImage": "🥃",
+    "tips": "火焰橙皮技巧：用打火機先加熱橙皮外側，再擠壓讓精油穿過火焰霧化，為酒液增添焦糖橙香。選擇煙燻感適中的梅斯卡爾，避免壓過其他風味。",
+    "pairings": [
+      "煙燻肉品拼盤",
+      "黑巧克力",
+      "烤玉米配辣椒粉",
+      "墨西哥莫雷醬雞"
+    ]
+  },
+  {
+    "id": "old-fashioned",
+    "slug": "old-fashioned",
+    "type": "classic",
+    "nameEn": "Old Fashioned",
+    "nameZh": "波本老時髦",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 95.0,
+    "grade": "A",
+    "description": "The original cocktail. Whiskey, sugar, bitters — timeless simplicity.",
+    "descriptionZh": "調酒的原點。威士忌、糖、苦精——極簡中見真章，穿越兩個世紀的經典。",
+    "ingredients": [
+      {
+        "slug": "makers-mark-bourbon",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "angostura-bitters",
+        "amount": 2,
+        "unit": "dashes"
+      }
+    ],
+    "steps": [
+      "在 Rocks Glass 中加入糖漿 ¼ oz 與安格仕苦精 2 dashes。",
+      "輕輕攪拌混合糖漿與苦精。",
+      "加入一顆大冰球或大冰塊。",
+      "量入波本威士忌 2 oz。",
+      "緩慢攪拌 20-30 秒至充分冷卻與稀釋。",
+      "以橙皮捲裝飾，擠壓橙皮油脂後輕放杯緣。"
+    ],
+    "garnish": "橙皮捲 + 酒漬櫻桃（Orange Twist + Cocktail Cherry）",
+    "tags": [
+      "classic",
+      "stirred",
+      "bourbon",
+      "spirit-forward"
+    ],
+    "iba": true,
+    "story": "Old Fashioned 是「調酒」一詞最原始的定義——烈酒加糖加苦精。1880 年代肯塔基州路易維爾的 Pendennis Club 據傳是這杯酒的發源地，當時客人要求調酒師以「老式做法」（old-fashioned way）調製，不要加入花俏的利口酒。這個名字從此流傳至今。",
+    "origin": "USA, 1880s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bourbon",
+        "caramel",
+        "aromatic spice"
+      ],
+      "acid": 0.05,
+      "sweet": 0.35,
+      "bitter": 0.3,
+      "punch": 0.8,
+      "description": "波本的焦糖與香草為主體，苦精的丁香肉桂香氣點綴，微甜收尾乾淨有力。"
+    },
+    "glassImage": "🥃",
+    "tips": "大冰塊是 Old Fashioned 的靈魂，融化速度慢才能維持風味平衡。糖漿比方糖更容易控制甜度且溶解均勻，建議用 2:1 的濃糖漿來減少稀釋。",
+    "pairings": [
+      "牛排",
+      "煙燻胡桃",
+      "黑巧克力布朗尼",
+      "陳年起司"
+    ]
+  },
+  {
+    "id": "manhattan",
+    "slug": "manhattan",
+    "type": "classic",
+    "nameEn": "Manhattan",
+    "nameZh": "曼哈頓",
+    "method": "stir",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 94.0,
+    "grade": "A",
+    "description": "The king of stirred cocktails. Rye whiskey and sweet vermouth in perfect matrimony.",
+    "descriptionZh": "攪拌調酒之王。裸麥威士忌與甜香艾酒的完美聯姻，紐約夜晚的靈魂。",
+    "ingredients": [
+      {
+        "slug": "rye-whiskey",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "angostura-bitters",
+        "amount": 2,
+        "unit": "dashes"
+      }
+    ],
+    "steps": [
+      "在 Mixing Glass 中加入大量冰塊。",
+      "量入裸麥威士忌 2 oz、甜香艾酒 1 oz。",
+      "加入安格仕苦精 2 dashes。",
+      "緩慢攪拌 30 秒至充分冷卻。",
+      "濾冰倒入冷藏的 Coupe 杯。",
+      "以酒漬櫻桃裝飾。"
+    ],
+    "garnish": "酒漬櫻桃（Cocktail Cherry）",
+    "tags": [
+      "classic",
+      "stirred",
+      "rye",
+      "spirit-forward"
+    ],
+    "iba": true,
+    "story": "曼哈頓誕生於 1870 年代的紐約曼哈頓俱樂部，傳說是為了 Winston Churchill 的母親 Lady Randolph Churchill 舉辦的宴會而創作。雖然此說法的真實性存疑，但這杯酒確實代表了鍍金時代紐約的奢華品味，至今仍是全球高級酒吧的必備經典。",
+    "origin": "USA, 1870s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "rye spice",
+        "dried cherry",
+        "herbal"
+      ],
+      "acid": 0.1,
+      "sweet": 0.45,
+      "bitter": 0.25,
+      "punch": 0.75,
+      "description": "裸麥的辛香料風味與甜香艾酒的果乾草本韻味交融，苦精增添芳香複雜度。"
+    },
+    "glassImage": "🍸",
+    "tips": "甜香艾酒開瓶後務必冷藏保存，否則氧化後風味會大打折扣。攪拌時保持穩定且輕柔的動作，避免過度稀釋破壞酒體結構。",
+    "pairings": [
+      "紐約牛排",
+      "藍紋起司",
+      "黑櫻桃巧克力",
+      "烤鴨胸"
+    ]
+  },
+  {
+    "id": "cosmopolitan",
+    "slug": "cosmopolitan",
+    "type": "classic",
+    "nameEn": "Cosmopolitan",
+    "nameZh": "柯夢波丹",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 1,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "The cocktail that defined the '90s. Vodka, cranberry, and citrus glamour.",
+    "descriptionZh": "定義九零年代的調酒。伏特加、蔓越莓與柑橘的華麗邂逅，都會時尚的代名詞。",
+    "ingredients": [
+      {
+        "slug": "vodka",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "triple-sec",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "cranberry-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入伏特加 1.5 oz、橙酒 1 oz、萊姆汁 0.5 oz、蔓越莓汁 1 oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "以火焰橙皮或萊姆輪切裝飾。"
+    ],
+    "garnish": "火焰橙皮（Flamed Orange Twist）",
+    "tags": [
+      "classic",
+      "sour",
+      "vodka",
+      "fruity"
+    ],
+    "iba": true,
+    "story": "柯夢波丹由傳奇調酒師 Dale DeGroff 在 1990 年代於紐約的 Rainbow Room 推廣而聞名，但原始版本可追溯至 1980 年代的舊金山。隨著電視劇《乳乳與乳城》的播出，這杯粉紅色調酒成為全球都會女性的象徵性飲品。",
+    "origin": "USA, 1980s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "cranberry",
+        "citrus",
+        "clean spirit"
+      ],
+      "acid": 0.5,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.5,
+      "description": "蔓越莓的微酸果香與柑橘利口酒的甜潤融合，伏特加提供乾淨的酒感基底。"
+    },
+    "glassImage": "🍸",
+    "tips": "蔓越莓汁選用 100% 純果汁（非雞尾酒調和果汁），酸度和色澤都更好。搖盪後的酒液應呈現透亮的淡粉紅色，過深表示蔓越莓汁用量過多。",
+    "pairings": [
+      "鮮蝦雞尾酒",
+      "山羊起司沙拉",
+      "白巧克力覆盆子塔",
+      "煙燻鮭魚捲"
+    ]
+  },
+  {
+    "id": "paloma",
+    "slug": "paloma",
+    "type": "classic",
+    "nameEn": "Paloma",
+    "nameZh": "帕洛瑪",
+    "method": "build",
+    "glassType": "highball",
+    "difficulty": 1,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "Mexico's true favorite. Tequila and grapefruit soda under the sun.",
+    "descriptionZh": "墨西哥人真正的最愛。龍舌蘭與葡萄柚汽水的陽光組合，比瑪格麗特更受在地人歡迎。",
+    "ingredients": [
+      {
+        "slug": "el-jimador-blanco-tequila",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "grapefruit-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "grapefruit-soda",
+        "amount": 3.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "agave-syrup",
+        "amount": 0.25,
+        "unit": "oz",
+        "isOptional": true
+      }
+    ],
+    "steps": [
+      "以鹽沾 Highball 杯口半圈（可選）。",
+      "在杯中加入大冰塊。",
+      "量入龍舌蘭 2 oz、萊姆汁 0.5 oz、葡萄柚汁 1 oz。",
+      "視口味加入龍舌蘭糖漿 ¼ oz 調整甜度。",
+      "緩慢倒入葡萄柚汽水 3 oz，保留氣泡。",
+      "輕攪一次，以葡萄柚片裝飾。"
+    ],
+    "garnish": "葡萄柚片（Grapefruit Slice）",
+    "tags": [
+      "classic",
+      "build",
+      "tequila",
+      "refreshing",
+      "highball"
+    ],
+    "iba": false,
+    "story": "帕洛瑪在墨西哥的實際飲用量遠超瑪格麗特，是街頭小攤到高級餐廳都能見到的國民飲品。其名稱在西班牙語中意為「鴿子」，起源已不可考，但與墨西哥流行的葡萄柚汽水 Jarritos 或 Squirt 的普及密切相關。這杯酒完美體現了墨西哥人對清爽飲品的熱愛。",
+    "origin": "Mexico, 1950s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "grapefruit",
+        "agave",
+        "lime"
+      ],
+      "acid": 0.5,
+      "sweet": 0.4,
+      "bitter": 0.2,
+      "punch": 0.4,
+      "description": "葡萄柚的微苦清香與龍舌蘭的植物氣息結合，氣泡帶來暢快的飲用體驗。"
+    },
+    "glassImage": "🍹",
+    "tips": "新鮮葡萄柚汁加葡萄柚汽水的組合比單用汽水風味更有層次。若找不到葡萄柚汽水，可用蘇打水加新鮮葡萄柚汁替代。",
+    "pairings": [
+      "墨西哥街頭玉米",
+      "酸橘汁醃魚",
+      "辣味薯片配莎莎醬",
+      "烤豬肉捲餅"
+    ]
+  },
+  {
+    "id": "aperol-spritz",
+    "slug": "aperol-spritz",
+    "type": "classic",
+    "nameEn": "Aperol Spritz",
+    "nameZh": "Aperol 氣泡",
+    "method": "build",
+    "glassType": "wine_glass",
+    "difficulty": 1,
+    "balanceScore": 87.0,
+    "grade": "B",
+    "description": "Italy's golden hour in a glass. Aperol, prosecco, and a splash of soda.",
+    "descriptionZh": "義大利黃昏時光的化身。Aperol、氣泡酒與蘇打水，開胃酒文化的完美代表。",
+    "ingredients": [
+      {
+        "slug": "aperol",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "prosecco",
+        "amount": 3.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "soda-water",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在大型紅酒杯中加入大量冰塊。",
+      "先倒入 Prosecco 氣泡酒 3 oz。",
+      "再倒入 Aperol 2 oz（順序重要，先氣泡酒能保留更多氣泡）。",
+      "最後加入蘇打水 1 oz。",
+      "用 Bar Spoon 輕輕攪拌一次混合。",
+      "以橙片裝飾。"
+    ],
+    "garnish": "橙片（Orange Slice）",
+    "tags": [
+      "classic",
+      "build",
+      "aperitif",
+      "sparkling",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "Aperol 誕生於 1919 年的帕多瓦國際博覽會，但 Spritz 的飲用方式可追溯至十九世紀奧匈帝國統治威尼托地區時期，奧地利人覺得義大利葡萄酒太烈，要求加蘇打水「噴灑」（spritzen）稀釋。現代的 Aperol Spritz 在 2000 年代透過社群媒體席捲全球，成為夏日開胃酒的代名詞。",
+    "origin": "Italy, 2000s (modern form)",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bitter orange",
+        "rhubarb",
+        "sparkling"
+      ],
+      "acid": 0.2,
+      "sweet": 0.5,
+      "bitter": 0.4,
+      "punch": 0.2,
+      "description": "Aperol 的苦橙與大黃風味輕盈爽口，Prosecco 的氣泡與微甜增添節慶感。"
+    },
+    "glassImage": "🥂",
+    "tips": "倒入順序很重要——先 Prosecco 再 Aperol，可以最大程度保留氣泡。使用大型紅酒杯而非普通杯子，冰塊與裝飾才有足夠空間展現這杯酒的視覺魅力。",
+    "pairings": [
+      "義式火腿配蜜瓜",
+      "炸花枝",
+      "醃漬橄欖",
+      "焦化奶油麵包條"
+    ]
+  },
+  {
+    "id": "dark-n-stormy",
+    "slug": "dark-n-stormy",
+    "type": "classic",
+    "nameEn": "Dark 'n' Stormy",
+    "nameZh": "黑色風暴",
+    "method": "build",
+    "glassType": "highball",
+    "difficulty": 1,
+    "balanceScore": 88.0,
+    "grade": "B",
+    "description": "Bermuda's signature cocktail. Dark rum floats over spicy ginger beer.",
+    "descriptionZh": "百慕達的招牌調酒。深色蘭姆酒漂浮在辛辣薑汁啤酒之上，如暴風雨前的天空。",
+    "ingredients": [
+      {
+        "slug": "dark-rum",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "ginger-beer",
+        "amount": 4.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Highball 杯中加入冰塊至八分滿。",
+      "擠入萊姆汁 0.5 oz。",
+      "倒入薑汁啤酒 4 oz。",
+      "將深色蘭姆酒 2 oz 沿著吧匙背面緩慢倒入，使其浮在表面。",
+      "不要攪拌——保留分層效果。",
+      "以萊姆角裝飾。"
+    ],
+    "garnish": "萊姆角（Lime Wedge）",
+    "tags": [
+      "classic",
+      "build",
+      "rum",
+      "ginger",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "黑色風暴是百慕達的國民調酒，與當地的 Goslings Black Seal 蘭姆酒密不可分——事實上 Goslings 擁有這個調酒名稱的商標權。這杯酒的名字來自水手們形容暴風雨來臨前海面上烏雲密布的景象，深色蘭姆酒浮在淺色薑汁啤酒上的分層效果完美重現了這個意象。",
+    "origin": "Bermuda, 1880s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "dark molasses",
+        "ginger spice",
+        "lime"
+      ],
+      "acid": 0.3,
+      "sweet": 0.45,
+      "bitter": 0.1,
+      "punch": 0.5,
+      "description": "深色蘭姆酒的糖蜜焦糖風味與薑汁啤酒的辛辣氣泡形成層次分明的口感。"
+    },
+    "glassImage": "🍹",
+    "tips": "分層效果是這杯酒的視覺靈魂——蘭姆酒務必沿著吧匙背面緩慢倒入。選用辛辣度較高的薑汁啤酒（Ginger Beer 而非 Ginger Ale），風味對比更鮮明。",
+    "pairings": [
+      "炸魚三明治",
+      "加勒比海烤雞",
+      "椰子蝦餅",
+      "香蕉太妃派"
+    ]
+  },
+  {
+    "id": "penicillin",
+    "slug": "penicillin",
+    "type": "classic",
+    "nameEn": "Penicillin",
+    "nameZh": "盤尼西林",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 3,
+    "balanceScore": 93.0,
+    "grade": "A",
+    "description": "The modern classic that cures all. Scotch, honey, ginger, and lemon.",
+    "descriptionZh": "治癒一切的現代經典。蘇格蘭威士忌、蜂蜜、薑與檸檬的完美處方。",
+    "ingredients": [
+      {
+        "slug": "scotch-whisky",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "honey-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-ginger",
+        "amount": 3,
+        "unit": "slices"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中放入三片新鮮薑片，用 Muddler 搗壓釋放薑汁。",
+      "加入蘇格蘭威士忌 2 oz、檸檬汁 ¾ oz、蜂蜜糖漿 ¾ oz。",
+      "加入足量冰塊。",
+      "用力搖盪 15 秒至充分冷卻。",
+      "雙重過濾倒入放有大冰塊的 Rocks Glass。",
+      "可選：淋上少許泥煤威士忌（Islay Scotch）作為煙燻點綴。"
+    ],
+    "garnish": "糖漬薑片（Candied Ginger）",
+    "tags": [
+      "modern-classic",
+      "shake",
+      "scotch",
+      "ginger",
+      "honey"
+    ],
+    "iba": false,
+    "story": "盤尼西林由紐約調酒師 Sam Ross 於 2005 年在著名的 Milk & Honey 酒吧創作，迅速成為二十一世紀最成功的現代經典調酒。其靈感來自蘇格蘭人感冒時喝熱威士忌加蜂蜜檸檬的傳統療法，Ross 加入新鮮薑汁並以泥煤威士忌漂浮作為煙燻點睛之筆。",
+    "origin": "USA, 2005",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "honey",
+        "ginger",
+        "smoky peat"
+      ],
+      "acid": 0.6,
+      "sweet": 0.5,
+      "bitter": 0.1,
+      "punch": 0.65,
+      "description": "蜂蜜的溫潤甜度與薑的辛辣暖意包裹蘇格蘭威士忌的麥芽風味，檸檬提供清亮酸度。"
+    },
+    "glassImage": "🥃",
+    "tips": "蜂蜜糖漿建議用 3:1 蜂蜜水比例製作，質地較濃稠才能與威士忌融合。新鮮薑片搗壓時不要過度，只需輕壓幾下釋放汁液即可，避免纖維碎片影響口感。",
+    "pairings": [
+      "蘇格蘭燻鮭魚",
+      "薑汁餅乾",
+      "蜂蜜烤鴨",
+      "溫熱蘋果派"
+    ]
+  },
+  {
+    "id": "last-word",
+    "slug": "last-word",
+    "type": "classic",
+    "nameEn": "Last Word",
+    "nameZh": "最後一語",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 3,
+    "balanceScore": 94.0,
+    "grade": "A",
+    "description": "A Prohibition-era equal-parts masterpiece — gin, lime, green chartreuse, and maraschino.",
+    "descriptionZh": "禁酒令時代的等比例傑作——琴酒、萊姆、綠色夏翠絲與黑櫻桃利口酒。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "triple-sec",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入琴酒 ¾ oz、萊姆汁 ¾ oz、糖漿 ¾ oz、橙酒 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻與乳化。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "不加裝飾，讓酒體本身說話。"
+    ],
+    "garnish": "無（None）",
+    "tags": [
+      "classic",
+      "gin",
+      "equal-parts",
+      "prohibition",
+      "advanced"
+    ],
+    "iba": false,
+    "story": "最後一語誕生於 1920 年代禁酒令時期底特律的 Detroit Athletic Club，但在創作後幾乎被遺忘了將近八十年。2004 年西雅圖傳奇調酒師 Murray Stenson 在一本老調酒書中重新發現了這個配方，並在他任職的 Zig Zag Café 復刻供應。這杯酒迅速在調酒社群中引起轟動，被譽為「等比例調酒的完美典範」。四種截然不同的材料各佔 ¾ oz，卻能創造出令人驚嘆的和諧，證明了簡單比例中蘊藏的深邃智慧。",
+    "origin": "USA (Detroit), 1920s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "herbal",
+        "lime",
+        "maraschino"
+      ],
+      "acid": 0.65,
+      "sweet": 0.5,
+      "bitter": 0.15,
+      "punch": 0.6,
+      "description": "草本利口酒的複雜藥草香氣與萊姆的明亮酸度相互輝映，橙酒增添柑橘甜韻，四種元素達到驚人的平衡。"
+    },
+    "glassImage": "🍸",
+    "tips": "等比例配方的精髓在於每一種材料都不可或缺——任何一種份量的偏差都會打破平衡。搖盪時間建議 12 秒，過長會導致過度稀釋而模糊風味層次。這杯酒適合在調製後立即飲用，溫度回升會改變風味表現。",
+    "pairings": [
+      "草本風味羊排",
+      "青醬義大利麵",
+      "百里香烤蘑菇",
+      "綠茶瑪德蓮蛋糕"
+    ]
+  },
+  {
+    "id": "corpse-reviver-2",
+    "slug": "corpse-reviver-2",
+    "type": "classic",
+    "nameEn": "Corpse Reviver #2",
+    "nameZh": "殭屍復活者二號",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 3,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "The legendary hangover cure from the Savoy. Four equal parts with an absinthe rinse.",
+    "descriptionZh": "薩佛伊飯店的傳奇解酒方。四等份加上苦艾酒潤杯。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "triple-sec",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "dry-vermouth",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "取一個 Coupe 杯，加入少量苦艾酒潤杯，旋轉覆蓋杯壁後倒掉。",
+      "在 Shaker 中加入足量冰塊。",
+      "量入琴酒 ¾ oz、橙酒 ¾ oz、檸檬汁 ¾ oz、不甜香艾酒 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入潤過苦艾酒的 Coupe 杯。",
+      "以橙皮捲裝飾。"
+    ],
+    "garnish": "橙皮捲（Orange Twist）",
+    "tags": [
+      "classic",
+      "gin",
+      "equal-parts",
+      "vintage"
+    ],
+    "iba": true,
+    "story": "殭屍復活者二號出自 1930 年 Harry Craddock 在倫敦薩佛伊飯店（The Savoy）出版的經典著作《The Savoy Cocktail Book》。書中 Craddock 幽默地警告：「連續喝四杯就能讓殭屍再次倒下。」這杯酒屬於「殭屍復活者」系列——一類專門設計用來治療宿醉的調酒。二號是系列中最著名的版本，苦艾酒潤杯帶來的茴香餘韻是它的標誌性特徵。在二十一世紀的調酒復興運動中，它重新獲得了應有的經典地位。",
+    "origin": "England (London), 1930s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "citrus",
+        "anise",
+        "herbal"
+      ],
+      "acid": 0.65,
+      "sweet": 0.45,
+      "bitter": 0.15,
+      "punch": 0.55,
+      "description": "檸檬的明亮酸度與橙酒的柑橘甜韻並駕齊驅，不甜香艾酒增添草本深度，苦艾酒潤杯留下若有似無的茴香尾韻。"
+    },
+    "glassImage": "🍸",
+    "tips": "苦艾酒潤杯只需極少量——用噴霧瓶噴灑杯內是最精準的做法。四種等量材料的品質同等重要，任何一種劣質材料都會暴露無遺。搖盪後立即飲用，這杯酒在最冰涼的狀態下風味最佳。",
+    "pairings": [
+      "英式早午餐拼盤",
+      "煙燻鮭魚班尼迪克蛋",
+      "帕馬森起司薄片",
+      "杏仁可頌"
+    ]
+  },
+  {
+    "id": "jungle-bird",
+    "slug": "jungle-bird",
+    "type": "classic",
+    "nameEn": "Jungle Bird",
+    "nameZh": "叢林鳥",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "A tropical Campari cocktail — dark rum meets bitter Italian aperitivo with pineapple.",
+    "descriptionZh": "熱帶金巴利調酒——黑蘭姆與義大利苦味開胃酒遇上鳳梨。",
+    "ingredients": [
+      {
+        "slug": "dark-rum",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "campari",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "pineapple-juice",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入黑蘭姆 1.5 oz、Campari 0.75 oz、鳳梨汁 1.5 oz、萊姆汁 0.5 oz、糖漿 0.5 oz。",
+      "用力搖盪 12 秒至充分冷卻與混合。",
+      "將酒液倒入放有大冰塊的 Rocks Glass。",
+      "以鳳梨葉裝飾。"
+    ],
+    "garnish": "鳳梨葉（Pineapple Leaf）",
+    "tags": [
+      "classic",
+      "tiki",
+      "rum",
+      "campari",
+      "tropical"
+    ],
+    "iba": false,
+    "story": "叢林鳥誕生於 1978 年馬來西亞吉隆坡希爾頓飯店的 Aviary Bar，由調酒團隊為飯店開幕特別創作。這杯酒大膽地將義大利的 Campari 苦味利口酒帶入了以甜美為主的 Tiki 世界，創造出前所未有的風味組合。長期被忽視後，在 2010 年代的調酒復興浪潮中被重新發掘，被譽為「連接歐洲苦味傳統與熱帶 Tiki 文化的天才之作」。Campari 的苦味與鳳梨的甜美形成令人上癮的對比張力。",
+    "origin": "Malaysia (Kuala Lumpur), 1978",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "pineapple",
+        "campari",
+        "dark rum"
+      ],
+      "acid": 0.5,
+      "sweet": 0.55,
+      "bitter": 0.4,
+      "punch": 0.6,
+      "description": "鳳梨的熱帶甜美與 Campari 的草本苦味形成迷人對比，黑蘭姆的焦糖深度串連一切，萊姆提供清爽收尾。"
+    },
+    "glassImage": "🥃",
+    "tips": "Campari 的苦味是這杯酒的靈魂，不要試圖減量——正是苦甜的對比讓叢林鳥如此特別。鳳梨汁建議使用新鮮現榨，罐裝鳳梨汁的風味深度不足。搖盪時確保充分混合，讓 Campari 的紅色均勻分布。",
+    "pairings": [
+      "馬來沙嗲串燒",
+      "泰式青木瓜沙拉",
+      "香辣椰漿飯",
+      "烤鳳梨佐辣粉"
+    ]
+  },
+  {
+    "id": "caipirinha",
+    "slug": "caipirinha",
+    "type": "classic",
+    "nameEn": "Caipirinha",
+    "nameZh": "卡琵莉亞",
+    "method": "build",
+    "glassType": "rocks_glass",
+    "difficulty": 1,
+    "balanceScore": 88.0,
+    "grade": "A",
+    "description": "Brazil's national cocktail. Muddled lime, sugar, and cachaça — raw, rustic, and irresistible.",
+    "descriptionZh": "巴西國飲。新鮮萊姆、糖與甘蔗酒的粗獷組合，簡單卻令人無法抗拒。",
+    "ingredients": [
+      {
+        "slug": "cachaca-leblon",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 1.0,
+        "unit": "whole"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "將一顆萊姆切成八等份，放入 Rocks Glass 中。",
+      "加入糖漿 ¾ oz。",
+      "用搗棒輕輕壓榨萊姆，釋放汁液與皮油（勿過度搗碎使苦味釋出）。",
+      "加入碎冰填滿杯子。",
+      "倒入 Cachaça 2 oz。",
+      "用吧匙輕輕攪拌混合均勻。"
+    ],
+    "garnish": "萊姆角（Lime Wedge）",
+    "tags": [
+      "classic",
+      "build",
+      "cachaça",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "卡琵莉亞的起源可追溯至二十世紀初的巴西，最初是農民用甘蔗烈酒 Cachaça 混合萊姆和糖製成的家庭飲品，據說也曾被當作治療感冒的偏方。隨著巴西文化在全球的傳播，這杯簡單卻充滿活力的調酒逐漸成為巴西的國民雞尾酒，2003 年被巴西政府正式列為國飲。它代表了巴西人對生活的熱情——不需要複雜的技巧，只需要最新鮮的材料和一顆愉快的心。",
+    "origin": "Brazil, early 1900s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "lime",
+        "sugarcane",
+        "grassy"
+      ],
+      "acid": 0.7,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.6,
+      "description": "萊姆的鮮明酸度與 Cachaça 獨特的甘蔗草本風味交織，甜度適中，尾韻帶有泥土般的質樸氣息。"
+    },
+    "glassImage": "🥃",
+    "tips": "搗壓萊姆時力道要輕柔，只需擠出汁液和少許皮油即可，過度搗碎會釋放白色果皮的苦味。使用碎冰而非大冰塊，讓稀釋更均勻。如果找不到 Cachaça，絕對不要用蘭姆酒替代——兩者風味截然不同。",
+    "pairings": [
+      "巴西烤肉串",
+      "炸木薯球",
+      "巴西起司麵包",
+      "熱帶水果拼盤"
+    ]
+  },
+  {
+    "id": "aviation",
+    "slug": "aviation",
+    "type": "classic",
+    "nameEn": "Aviation",
+    "nameZh": "飛行",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 3,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "A pre-Prohibition gem with a haunting violet hue. Floral, tart, and elegant — a sky-blue masterpiece.",
+    "descriptionZh": "禁酒令前的瑰寶，迷人的紫羅蘭色澤。花香、酸爽、優雅——一杯天空色的傑作。",
+    "ingredients": [
+      {
+        "slug": "hendricks-gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "maraschino-liqueur",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "creme-de-violette",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入琴酒 2 oz、Maraschino 利口酒 ½ oz、紫羅蘭利口酒 ¼ oz、檸檬汁 ¾ oz。",
+      "用力搖盪 12-15 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "以調酒櫻桃裝飾（可省略）。"
+    ],
+    "garnish": "調酒櫻桃（Brandied Cherry）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "advanced"
+    ],
+    "iba": true,
+    "story": "飛行雞尾酒由紐約 Hotel Wallick 的調酒師 Hugo Ensslin 在 1916 年創作，收錄在他的著作《Recipes for Mixed Drinks》中。原始配方包含紫羅蘭利口酒（Crème de Violette），但在禁酒令期間這種材料幾乎從美國市場消失，許多後來的酒譜便省略了它。直到 2007 年 Rothman & Winter 重新將紫羅蘭利口酒引入美國市場，這杯酒才恢復了原本迷人的淡紫色澤與完整風味。它的名字「Aviation」象徵著當時人們對飛行新時代的浪漫嚮往。",
+    "origin": "New York, 1916",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "violet",
+        "cherry",
+        "citrus"
+      ],
+      "acid": 0.6,
+      "sweet": 0.35,
+      "bitter": 0.1,
+      "punch": 0.6,
+      "description": "紫羅蘭的夢幻花香與 Maraschino 的杏仁櫻桃韻味交融，檸檬酸度提供明亮骨架，琴酒的杜松子風味在底層支撐。"
+    },
+    "glassImage": "🍸",
+    "tips": "紫羅蘭利口酒的用量是關鍵——¼ oz 剛好帶出淡紫色澤和花香，過多會讓酒變成肥皂水的味道。搖盪後務必雙重過濾，確保酒液清澈。這杯酒的視覺效果極為重要，選用透明的 Coupe 杯來展現它的天空色。",
+    "pairings": [
+      "法式馬卡龍",
+      "薰衣草蜂蜜蛋糕",
+      "白巧克力覆盆子塔",
+      "鮮蝦沙拉佐柑橘醬"
+    ]
+  },
+  {
+    "id": "corpse-reviver-no2",
+    "slug": "corpse-reviver-no2",
+    "type": "classic",
+    "nameEn": "Corpse Reviver #2",
+    "nameZh": "復活者二號",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 3,
+    "balanceScore": 92.0,
+    "grade": "A",
+    "description": "The ultimate 'hair of the dog' cocktail. A perfectly balanced hangover cure from the Savoy — but dangerously moreish.",
+    "descriptionZh": "終極「以毒攻毒」雞尾酒。來自倫敦 Savoy 的完美平衡宿醉解藥——但危險地令人上癮。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "lillet-blanc",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "cointreau",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "absinthe-pernod",
+        "amount": 0.05,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "用少量苦艾酒潤洗（rinse）冷藏的 Coupe 杯，倒掉多餘的酒。",
+      "在 Shaker 中加入足量冰塊。",
+      "量入琴酒、Lillet Blanc、Cointreau、檸檬汁各 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入苦艾酒潤洗過的杯中。",
+      "以橙皮捲裝飾。"
+    ],
+    "garnish": "橙皮捲（Orange Twist）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "advanced"
+    ],
+    "iba": true,
+    "story": "復活者二號出自 1930 年 Harry Craddock 的傳奇酒譜《The Savoy Cocktail Book》，他在倫敦 Savoy 酒店的 American Bar 任職時創作了這杯酒。Craddock 在書中幽默地警告：「連續喝四杯，你就會再度成為屍體。」這杯酒是「Corpse Reviver」系列中最著名的一款，原意是作為宿醉後的提神飲品。苦艾酒的潤洗為這杯看似清爽的雞尾酒增添了一絲神秘的茴香暗流，使它在眾多經典中獨樹一幟。",
+    "origin": "London, 1930",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "citrus",
+        "anise",
+        "floral"
+      ],
+      "acid": 0.6,
+      "sweet": 0.4,
+      "bitter": 0.15,
+      "punch": 0.6,
+      "description": "檸檬的明亮酸度引領，Lillet Blanc 的花香與 Cointreau 的柑橘甜韻在中段展開，苦艾酒的茴香如幽靈般在背景若隱若現。"
+    },
+    "glassImage": "🍸",
+    "tips": "苦艾酒潤洗是點睛之筆——倒入少許在杯中轉一圈後倒掉即可，留下的薄膜足以帶出茴香氣息而不會喧賓奪主。四種等量材料的精確度很重要，建議使用量酒器。Lillet Blanc 開瓶後要冷藏保存，風味變化很快。",
+    "pairings": [
+      "法式鵝肝慕斯",
+      "牡蠣配香檳醬",
+      "柑橘奶酪",
+      "輕熟成起司拼盤"
+    ]
+  },
+  {
+    "id": "paper-plane",
+    "slug": "paper-plane",
+    "type": "classic",
+    "nameEn": "Paper Plane",
+    "nameZh": "紙飛機",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 93.0,
+    "grade": "A",
+    "description": "A modern equal-parts classic. Bourbon meets Italian bitters in a bittersweet symphony that flies off the glass.",
+    "descriptionZh": "現代等比例經典。波本遇上義大利苦酒，一首苦甜交織的交響曲。",
+    "ingredients": [
+      {
+        "slug": "makers-mark-bourbon",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "amaro-montenegro",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "aperol",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入波本、Amaro Montenegro、Aperol、檸檬汁各 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "不加裝飾。"
+    ],
+    "garnish": "無裝飾",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "bourbon",
+      "intermediate"
+    ],
+    "iba": false,
+    "story": "紙飛機由紐約傳奇調酒師 Sam Ross 在 2007 年於 Milk & Honey 酒吧創作，靈感來自 M.I.A. 的歌曲《Paper Planes》。這杯酒以 Last Word 和 Final Ward 的等比例哲學為基礎，用波本取代琴酒，Amaro Montenegro 和 Aperol 取代夏翠絲和 Maraschino，創造出一個全新的風味世界。它迅速成為二十一世紀最成功的新經典之一，證明了等比例配方的魔法不僅限於禁酒令時代的配方。",
+    "origin": "New York, 2007",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bitter orange",
+        "caramel",
+        "herbal"
+      ],
+      "acid": 0.5,
+      "sweet": 0.35,
+      "bitter": 0.5,
+      "punch": 0.6,
+      "description": "Aperol 的苦橙與 Amaro Montenegro 的草本苦韻交疊，波本的焦糖香草溫暖底韻，檸檬酸度讓一切明亮飛揚。"
+    },
+    "glassImage": "🍸",
+    "tips": "這杯酒的成功在於四種材料的精確等量——任何偏差都會打破平衡。波本選擇中等強度的即可（如 Maker's Mark），過於強勁的波本會壓過 Amaro 的細膩。搖盪後不加裝飾，讓乾淨的橘金色酒液成為視覺焦點。",
+    "pairings": [
+      "義式火腿配蜜瓜",
+      "烤橙皮鴨胸",
+      "苦橙巧克力",
+      "義式杏仁餅乾"
+    ]
+  },
+  {
+    "id": "vieux-carre",
+    "slug": "vieux-carre",
+    "type": "classic",
+    "nameEn": "Vieux Carré",
+    "nameZh": "老廣場",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 3,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "New Orleans in a glass. Rye, cognac, and Bénédictine create a French Quarter symphony of depth and spice.",
+    "descriptionZh": "一杯裝著紐奧良的酒。裸麥威士忌、干邑與修道院甜酒譜出法國區的深度交響曲。",
+    "ingredients": [
+      {
+        "slug": "bulleit-rye",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "remy-martin-vsop",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "benedictine",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "angostura-bitters",
+        "amount": 2.0,
+        "unit": "dash"
+      },
+      {
+        "slug": "peychauds-bitters",
+        "amount": 2.0,
+        "unit": "dash"
+      }
+    ],
+    "steps": [
+      "在 Mixing Glass 中加入大量冰塊。",
+      "量入裸麥威士忌 ¾ oz、干邑 ¾ oz、甜香艾酒 ¾ oz。",
+      "加入 Bénédictine ¼ oz。",
+      "各加 2 抖 Angostura 與 Peychaud's 苦精。",
+      "緩慢攪拌 30 秒至充分冷卻稀釋。",
+      "濾冰倒入放有大冰塊的 Rocks Glass。",
+      "以檸檬皮捲裝飾。"
+    ],
+    "garnish": "檸檬皮捲（Lemon Twist）",
+    "tags": [
+      "classic",
+      "stirred",
+      "rye",
+      "advanced"
+    ],
+    "iba": true,
+    "story": "老廣場得名於紐奧良法國區的舊稱「Vieux Carré」，由 Monteleone 酒店旋轉木馬酒吧（Carousel Bar）的首席調酒師 Walter Bergeron 在 1930 年代創作。這杯酒融合了紐奧良兩大文化血脈——法國的干邑與美國的裸麥威士忌，再加上法國修道院的 Bénédictine 甜酒，完美呈現了這座城市的雙重文化遺產。Peychaud's 苦精的使用更是致敬了紐奧良本土品牌，讓這杯酒從材料到精神都屬於這座爵士之城。",
+    "origin": "New Orleans, 1930s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "spice",
+        "dried fruit",
+        "herbal"
+      ],
+      "acid": 0.1,
+      "sweet": 0.45,
+      "bitter": 0.4,
+      "punch": 0.8,
+      "description": "裸麥的辛香與干邑的果乾圓潤感交融，Bénédictine 的蜂蜜草本甜韻穿插其間，兩種苦精帶來多層次的芳香複雜度。"
+    },
+    "glassImage": "🥃",
+    "tips": "兩種基酒（裸麥和干邑）的選擇很重要——裸麥要有足夠辛香度，干邑要有圓潤果味，兩者互補才能展現這杯酒的深度。Bénédictine 用量不要超過 ¼ oz，它的甜度和草本風味很強，過量會壓過其他材料。",
+    "pairings": [
+      "紐奧良秋葵濃湯",
+      "法式肉醬配酸種麵包",
+      "焦糖布丁",
+      "煙燻鴨胸配無花果"
+    ]
+  },
+  {
+    "id": "sazerac",
+    "slug": "sazerac",
+    "type": "classic",
+    "nameEn": "Sazerac",
+    "nameZh": "賽乍瑞",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 3,
+    "balanceScore": 92.0,
+    "grade": "A",
+    "description": "America's oldest cocktail. Rye whiskey, Peychaud's bitters, and an absinthe rinse — the soul of New Orleans.",
+    "descriptionZh": "美國最古老的雞尾酒。裸麥威士忌、Peychaud's 苦精與苦艾酒潤洗——紐奧良的靈魂。",
+    "ingredients": [
+      {
+        "slug": "bulleit-rye",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "demerara-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "peychauds-bitters",
+        "amount": 4.0,
+        "unit": "dash"
+      },
+      {
+        "slug": "absinthe-pernod",
+        "amount": 0.05,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "用少量苦艾酒潤洗一個冷凍的 Rocks Glass，轉動杯子使內壁均勻覆蓋，倒掉多餘的酒。",
+      "在 Mixing Glass 中加入冰塊。",
+      "量入裸麥威士忌 2 oz、Demerara 糖漿 ¼ oz。",
+      "加入 Peychaud's 苦精 4 抖。",
+      "緩慢攪拌 30 秒至充分冷卻。",
+      "濾冰倒入苦艾酒潤洗過的杯中（不加冰）。",
+      "在杯口上方擠壓檸檬皮釋放精油，然後丟棄檸檬皮（不放入杯中）。"
+    ],
+    "garnish": "檸檬皮油（噴灑後丟棄）",
+    "tags": [
+      "classic",
+      "stirred",
+      "rye",
+      "advanced"
+    ],
+    "iba": true,
+    "story": "賽乍瑞被公認為美國最古老的雞尾酒之一，起源於 1850 年代紐奧良的 Sazerac Coffee House。最初使用干邑 Sazerac de Forge et Fils 作為基酒（酒吧因此得名），後來因 1870 年代歐洲葡萄根瘤蚜蟲疫情導致干邑短缺，改用裸麥威士忌。紐奧良藥劑師 Antoine Peychaud 發明的 Peychaud's 苦精是這杯酒不可替代的靈魂。2008 年，路易斯安那州正式將 Sazerac 定為州官方雞尾酒。",
+    "origin": "New Orleans, 1850s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "anise",
+        "spice",
+        "caramel"
+      ],
+      "acid": 0.05,
+      "sweet": 0.3,
+      "bitter": 0.4,
+      "punch": 0.8,
+      "description": "裸麥威士忌的辛香主導，Peychaud's 的櫻桃茴香韻味獨特，苦艾酒潤洗帶來飄渺的茴香底韻，Demerara 糖漿增添深邃焦糖甜度。"
+    },
+    "glassImage": "🥃",
+    "tips": "檸檬皮的處理方式是 Sazerac 的獨特儀式——只取其精油噴灑在酒面，然後丟棄，不放入杯中。這不是偷懶，而是傳統。苦艾酒潤洗要均勻薄薄一層即可。使用 Demerara 糖漿而非一般糖漿，其深色蔗糖風味與裸麥更搭。",
+    "pairings": [
+      "紐奧良炸牡蠣",
+      "卡真香料烤蝦",
+      "肉桂胡桃派",
+      "煙燻安杜依香腸"
+    ]
+  },
+  {
+    "id": "toronto",
+    "slug": "toronto",
+    "type": "classic",
+    "nameEn": "Toronto",
+    "nameZh": "多倫多",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 88.0,
+    "grade": "B",
+    "description": "A bold Old Fashioned variation with Fernet-Branca's minty menthol edge. Not for the faint-hearted.",
+    "descriptionZh": "大膽的古典雞尾酒變奏，加入 Fernet-Branca 的薄荷涼感。不適合膽小的人。",
+    "ingredients": [
+      {
+        "slug": "bulleit-rye",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fernet-branca",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "demerara-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "angostura-bitters",
+        "amount": 2.0,
+        "unit": "dash"
+      }
+    ],
+    "steps": [
+      "在 Mixing Glass 中加入大量冰塊。",
+      "量入裸麥威士忌 2 oz、Fernet-Branca ¼ oz、Demerara 糖漿 ¼ oz。",
+      "加入 Angostura 苦精 2 抖。",
+      "緩慢攪拌 30 秒至充分冷卻。",
+      "濾冰倒入放有大冰塊的 Rocks Glass。",
+      "以橙皮捲裝飾。"
+    ],
+    "garnish": "橙皮捲（Orange Twist）",
+    "tags": [
+      "classic",
+      "stirred",
+      "rye",
+      "intermediate"
+    ],
+    "iba": false,
+    "story": "多倫多雞尾酒首次出現在 1922 年 Robert Vermeire 的《Cocktails: How to Mix Them》中，以加拿大城市命名，暗示使用加拿大威士忌。這杯酒在很長一段時間裡鮮為人知，直到二十一世紀雞尾酒復興運動中，Fernet-Branca 在調酒界的人氣爆發（尤其在舊金山的調酒師圈子裡，Fernet 幾乎成為行業暗語），Toronto 才被重新挖掘出來。它本質上是一杯用 Fernet 替換部分苦精的 Old Fashioned，但那一小份量的 Fernet 帶來了驚人的複雜度。",
+    "origin": "Canada/Europe, 1922",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "menthol",
+        "spice",
+        "dark sugar"
+      ],
+      "acid": 0.05,
+      "sweet": 0.3,
+      "bitter": 0.6,
+      "punch": 0.8,
+      "description": "Fernet-Branca 的薄荷與藥草苦韻在前段衝擊味蕾，裸麥的辛香與 Demerara 的深邃焦糖甜度在中後段溫柔承接。"
+    },
+    "glassImage": "🥃",
+    "tips": "Fernet-Branca 的風味極為強勢，¼ oz 已經足夠——千萬不要多加。如果你不確定自己是否喜歡 Fernet，可以先嚐一小口純飲。這杯酒的平衡全靠 Demerara 糖漿的甜度來抵消 Fernet 的苦，兩者的比例是關鍵。",
+    "pairings": [
+      "黑巧克力薄荷松露",
+      "煙燻肉品拼盤",
+      "楓糖培根",
+      "肉桂蘋果塔"
+    ]
+  },
+  {
+    "id": "boulevardier",
+    "slug": "boulevardier",
+    "type": "classic",
+    "nameEn": "Boulevardier",
+    "nameZh": "花花公子",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 93.0,
+    "grade": "A",
+    "description": "A Negroni's warmer, richer American cousin. Bourbon replaces gin for a sweeter, rounder ride.",
+    "descriptionZh": "尼格羅尼更溫暖、更醇厚的美國表親。波本取代琴酒，帶來更甜美圓潤的體驗。",
+    "ingredients": [
+      {
+        "slug": "buffalo-trace-bourbon",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "campari",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Mixing Glass 中加入大量冰塊。",
+      "量入波本 1½ oz、Campari 1 oz、甜香艾酒 1 oz。",
+      "緩慢攪拌 30 秒至充分冷卻稀釋。",
+      "濾冰倒入放有大冰塊的 Rocks Glass。",
+      "以橙皮捲裝飾，擠壓釋放精油後放入杯中。"
+    ],
+    "garnish": "橙皮捲（Orange Twist）",
+    "tags": [
+      "classic",
+      "stirred",
+      "bourbon",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "花花公子由美國作家兼社交名流 Erskine Gwynne 在 1920 年代的巴黎創作。Gwynne 當時在巴黎出版一本名為《Boulevardier》的文學雜誌（法語意為「在林蔭大道上閒逛的人」），他將 Negroni 中的琴酒換成了美國波本威士忌。這杯酒首次被記錄在 1927 年 Harry McElhone 的《Barflies and Cocktails》中。長期以來它一直活在 Negroni 的陰影下，直到近年威士忌文化復興才真正獲得應有的關注。",
+    "origin": "Paris, 1920s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bitter orange",
+        "vanilla",
+        "caramel"
+      ],
+      "acid": 0.1,
+      "sweet": 0.5,
+      "bitter": 0.6,
+      "punch": 0.7,
+      "description": "波本的香草焦糖甜韻取代琴酒的杜松子，讓 Campari 的苦橙風味更加圓潤溫暖，甜香艾酒在中段提供草本深度。"
+    },
+    "glassImage": "🥃",
+    "tips": "比例可依個人口味調整——經典的 1:1:1 會偏苦，建議波本多半盎司（1.5:1:1）讓酒體更豐厚平衡。選擇有明顯甜味和焦糖感的波本效果最好。如果想更烈更辛，也可以用裸麥威士忌替代波本。",
+    "pairings": [
+      "牛排塔塔",
+      "義式燉牛肚",
+      "焦糖堅果布朗尼",
+      "熟成切達起司"
+    ]
+  },
+  {
+    "id": "naked-and-famous",
+    "slug": "naked-and-famous",
+    "type": "classic",
+    "nameEn": "Naked & Famous",
+    "nameZh": "赤裸名流",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 3,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "The Last Word's smoky Mexican twin. Mezcal, Chartreuse, Aperol, and lime in perfect equilibrium.",
+    "descriptionZh": "最後一語的煙燻墨西哥雙胞胎。梅斯卡爾、夏翠絲、Aperol 與萊姆的完美均衡。",
+    "ingredients": [
+      {
+        "slug": "del-maguey-mezcal",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "aperol",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "green-chartreuse",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入梅斯卡爾、Aperol、綠色夏翠絲、萊姆汁各 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "不加裝飾。"
+    ],
+    "garnish": "無裝飾",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "mezcal",
+      "advanced"
+    ],
+    "iba": false,
+    "story": "赤裸名流由紐約 Death & Co 酒吧的調酒師 Joaquín Simó 在 2011 年創作，是 Last Word 的變奏——用梅斯卡爾取代琴酒，Aperol 取代 Maraschino。這杯酒完美展現了等比例配方的魔法可以跨越時代和風格：梅斯卡爾的煙燻感取代了杜松子的清爽，Aperol 的苦橙取代了櫻桃甜韻，但四種材料之間的張力與平衡同樣令人驚嘆。它迅速成為 Death & Co 最受歡迎的酒款之一，也標誌著梅斯卡爾在現代調酒中的崛起。",
+    "origin": "New York, 2011",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "smoke",
+        "bitter orange",
+        "herbal"
+      ],
+      "acid": 0.6,
+      "sweet": 0.3,
+      "bitter": 0.5,
+      "punch": 0.7,
+      "description": "梅斯卡爾的煙燻泥土風味在前段震撼味蕾，Aperol 的苦橙與夏翠絲的草本在中段交織，萊姆的酸度在尾韻收束一切。"
+    },
+    "glassImage": "🍸",
+    "tips": "梅斯卡爾的煙燻程度因品牌差異很大，建議選用中等煙燻度的（如 Del Maguey Vida），過重的煙燻會壓過其他材料。等比例配方要嚴格精確，每一種都是 ¾ oz，不要隨意調整。",
+    "pairings": [
+      "墨西哥烤玉米",
+      "辣味巧克力松露",
+      "煙燻辣椒莎莎醬配玉米片",
+      "烤仙人掌沙拉"
+    ]
+  },
+  {
+    "id": "mai-tai",
+    "slug": "mai-tai",
+    "type": "classic",
+    "nameEn": "Mai Tai",
+    "nameZh": "邁泰",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "The king of tiki. Rum, orgeat, and curaçao — a Polynesian sunset in liquid form.",
+    "descriptionZh": "提基之王。蘭姆酒、杏仁糖漿與柑橘酒——液態的波里尼西亞日落。",
+    "ingredients": [
+      {
+        "slug": "appleton-12-rum",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "orgeat",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "cointreau",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入陳年蘭姆 2 oz、Orgeat 杏仁糖漿 ½ oz、Cointreau ½ oz、萊姆汁 1 oz、糖漿 ¼ oz。",
+      "用力搖盪 15 秒至充分冷卻。",
+      "倒入裝滿碎冰的 Rocks Glass（不需過濾）。",
+      "以薄荷枝和萊姆殼裝飾。",
+      "可選：漂浮少量深色蘭姆在表面。"
+    ],
+    "garnish": "薄荷枝與萊姆殼（Mint Sprig & Lime Shell）",
+    "tags": [
+      "classic",
+      "shaken",
+      "rum",
+      "tiki"
+    ],
+    "iba": true,
+    "story": "邁泰的創作權長期存在爭議，兩位提基文化巨頭都聲稱是發明者。Trader Vic（Victor Bergeron）說他在 1944 年的奧克蘭餐廳為來自大溪地的朋友調製了這杯酒，朋友驚嘆「Maita'i roa ae!」（大溪地語意為「太棒了！」）。而 Don the Beachcomber（Ernest Gantt）則聲稱自己在 1933 年就已經創作了原版配方。無論真相如何，Trader Vic 的版本——以牙買加蘭姆為基底，搭配 Orgeat 杏仁糖漿和柑橘——成為了今日公認的經典配方，也是提基文化最具代表性的雞尾酒。",
+    "origin": "Oakland, 1944",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "almond",
+        "tropical",
+        "citrus"
+      ],
+      "acid": 0.6,
+      "sweet": 0.5,
+      "bitter": 0.1,
+      "punch": 0.7,
+      "description": "Orgeat 的杏仁奶香甜韻與陳年蘭姆的焦糖深度交融，萊姆的鮮明酸度貫穿始終，Cointreau 增添柑橘芳香層次。"
+    },
+    "glassImage": "🥃",
+    "tips": "蘭姆酒的選擇是邁泰的靈魂——使用帶有明顯風味的牙買加陳年蘭姆（如 Appleton Estate），避免使用清淡的白蘭姆。Orgeat 的品質差異很大，有條件的話使用小批量手工 Orgeat。薄荷裝飾不只是好看，拿起杯子喝酒時鼻子直接聞到薄荷香氣，是體驗的重要部分。",
+    "pairings": [
+      "夏威夷烤豬肉",
+      "椰子蝦",
+      "鮪魚 Poke 碗",
+      "熱帶水果串"
+    ]
+  },
+  {
+    "id": "pina-colada",
+    "slug": "pina-colada",
+    "type": "classic",
+    "nameEn": "Piña Colada",
+    "nameZh": "鳳梨乳可達",
+    "method": "shake",
+    "glassType": "hurricane",
+    "difficulty": 1,
+    "balanceScore": 86.0,
+    "grade": "B",
+    "description": "Tropical paradise in a glass. Rum, coconut cream, and pineapple — pure vacation vibes.",
+    "descriptionZh": "杯中的熱帶天堂。蘭姆酒、椰奶與鳳梨——純粹的度假氛圍。",
+    "ingredients": [
+      {
+        "slug": "plantation-white-rum",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "coconut-cream",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "pineapple-juice",
+        "amount": 3.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入白蘭姆 2 oz、椰奶 1½ oz、鳳梨汁 3 oz。",
+      "用力搖盪 15 秒至充分混合冷卻。",
+      "倒入裝滿碎冰的 Hurricane 杯（也可用果汁機打成冰沙版本）。",
+      "以鳳梨角和調酒櫻桃裝飾。"
+    ],
+    "garnish": "鳳梨角與調酒櫻桃（Pineapple Wedge & Cherry）",
+    "tags": [
+      "classic",
+      "shaken",
+      "rum",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "鳳梨乳可達誕生於 1950 年代的波多黎各，關於誰是發明者有兩個說法。Caribe Hilton 酒店聲稱調酒師 Ramón \"Monchito\" Marrero 在 1954 年完善了這個配方，而 Barrachina 餐廳則說是 Ricardo García 在 1963 年創作。無論如何，波多黎各在 1978 年將鳳梨乳可達定為官方飲品。它的名字源自西班牙語「piña」（鳳梨）和「colada」（過濾），意指過濾的鳳梨汁。這杯酒代表了一整個時代對熱帶天堂的浪漫想像，也啟發了 Rupert Holmes 1979 年的經典歌曲《Escape (The Piña Colada Song)》。",
+    "origin": "Puerto Rico, 1954",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "coconut",
+        "pineapple",
+        "vanilla"
+      ],
+      "acid": 0.3,
+      "sweet": 0.7,
+      "bitter": 0.0,
+      "punch": 0.4,
+      "description": "椰奶的濃郁奶香與鳳梨的熱帶酸甜完美融合，蘭姆酒提供溫和的甘蔗底韻，整體圓潤甜美如液態假期。"
+    },
+    "glassImage": "🍹",
+    "tips": "椰奶（Cream of Coconut，如 Coco López）和椰漿（Coconut Milk）是完全不同的東西——必須使用甜的椰奶。鳳梨汁用新鮮現榨最佳。如果做冰沙版本，用果汁機加入一杯冰塊一起打，口感更滑順。搖盪版本的優點是口感更清爽、風味更集中。",
+    "pairings": [
+      "烤蝦串",
+      "炸椰子雞柳",
+      "熱帶水果沙拉",
+      "椰子蛋糕"
+    ]
+  },
+  {
+    "id": "zombie",
+    "slug": "zombie",
+    "type": "classic",
+    "nameEn": "Zombie",
+    "nameZh": "乍屍",
+    "method": "shake",
+    "glassType": "tiki_mug",
+    "difficulty": 4,
+    "balanceScore": 88.0,
+    "grade": "A",
+    "description": "The drink so strong, bars limited you to two. Three rums, tropical juices, and a mysterious blend of spices.",
+    "descriptionZh": "強到酒吧限制你只能喝兩杯的酒。三種蘭姆酒、熱帶果汁與神秘香料的組合。",
+    "ingredients": [
+      {
+        "slug": "plantation-white-rum",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "appleton-12-rum",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "martinique-dark-rum",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "falernum",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "grenadine",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "pineapple-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "angostura-bitters",
+        "amount": 2.0,
+        "unit": "dash"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入白蘭姆 1½ oz、陳年牙買加蘭姆 1½ oz。",
+      "加入萊姆汁 ¾ oz、Falernum ½ oz、紅石榴糖漿 ½ oz、鳳梨汁 1 oz。",
+      "加入 Angostura 苦精 2 抖。",
+      "用力搖盪 15 秒至充分混合冷卻。",
+      "倒入裝滿碎冰的 Tiki Mug。",
+      "最後漂浮深色蘭姆 1 oz 在表面。",
+      "以薄荷枝、萊姆輪切和調酒櫻桃裝飾。"
+    ],
+    "garnish": "薄荷枝、萊姆輪切、調酒櫻桃",
+    "tags": [
+      "classic",
+      "shaken",
+      "rum",
+      "expert"
+    ],
+    "iba": false,
+    "story": "乍屍由提基文化之父 Don the Beachcomber（Ernest Gantt）在 1934 年的好萊塢同名餐廳創作。傳說他為一位宿醉嚴重、即將出差的商人調製了這杯酒，商人回來後抱怨這杯酒讓他「像殭屍一樣」度過了整趟旅程。因為酒精濃度極高，Don the Beachcomber 在酒吧實施了「每人限兩杯」的規定。原始配方是嚴格保密的，Don 甚至將部分材料用代號標記，防止競爭對手複製。Jeff \"Beachbum\" Berry 花了數十年才破解了原始配方，在他 2007 年的著作中公之於眾。",
+    "origin": "Hollywood, 1934",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "tropical",
+        "spice",
+        "dark fruit"
+      ],
+      "acid": 0.5,
+      "sweet": 0.5,
+      "bitter": 0.15,
+      "punch": 0.95,
+      "description": "三種蘭姆酒各自貢獻不同層次——白蘭姆的清爽、陳年蘭姆的果乾焦糖、深色蘭姆的糖蜜厚重，Falernum 的丁香肉桂與鳳梨的熱帶甜美在其間穿梭。"
+    },
+    "glassImage": "🗿",
+    "tips": "三種不同風格的蘭姆酒缺一不可——白蘭姆提供清爽、陳年蘭姆提供深度、深色蘭姆漂浮在表面提供香氣。Falernum 是提基調酒的關鍵材料，不要省略。深色蘭姆的漂浮要用吧匙背面緩慢倒入，讓它浮在表面形成漸層效果。這杯酒的酒精含量極高，請適量飲用。",
+    "pairings": [
+      "烤肋排佐百香果醬",
+      "泰式炸春捲",
+      "夏威夷 Loco Moco",
+      "芒果糯米飯"
+    ]
+  },
+  {
+    "id": "french-75",
+    "slug": "french-75",
+    "type": "classic",
+    "nameEn": "French 75",
+    "nameZh": "法式七五",
+    "method": "shake",
+    "glassType": "flute",
+    "difficulty": 2,
+    "balanceScore": 92.0,
+    "grade": "A",
+    "description": "Gin, lemon, and champagne — elegant artillery. Named after the French 75mm field gun for its explosive kick.",
+    "descriptionZh": "琴酒、檸檬與香檳——優雅的火砲。以法國 75mm 野戰砲命名，形容其爆炸性的後勁。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "champagne-moet",
+        "amount": 3.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入冰塊。",
+      "量入琴酒 1 oz、檸檬汁 ½ oz、糖漿 ½ oz。",
+      "搖盪 10 秒至冷卻。",
+      "雙重過濾倒入冷藏的 Flute 杯。",
+      "緩慢注入冷藏的香檳約 3 oz 至杯口。",
+      "以檸檬皮捲裝飾。"
+    ],
+    "garnish": "檸檬皮捲（Lemon Twist）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "法式七五的名字來自一戰中法國陸軍威力強大的 75mm 野戰砲——形容這杯酒的後勁如同被大砲擊中。最早的版本出現在 1915 年巴黎的 Harry's New York Bar，由調酒師 Harry MacElhone 創作。1927 年版本被收錄在《Here's How》一書中。後來倫敦 Savoy 的 Harry Craddock 在 1930 年的《The Savoy Cocktail Book》中完善了今日公認的經典配方——琴酒、檸檬、糖和香檳。這杯酒在二戰期間成為慶祝勝利的象徵飲品，至今仍是新年和特殊場合的首選。",
+    "origin": "Paris, 1915",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "citrus",
+        "floral",
+        "yeast"
+      ],
+      "acid": 0.5,
+      "sweet": 0.35,
+      "bitter": 0.05,
+      "punch": 0.6,
+      "description": "檸檬的明亮酸度與琴酒的杜松子清香在香檳的細緻氣泡中飛舞，尾韻乾爽優雅，帶有麵包般的酵母香氣。"
+    },
+    "glassImage": "🥂",
+    "tips": "香檳必須冰透且在最後一步才加入——搖盪香檳會讓氣泡消失殆盡。選用品質好但不需要太貴的香檳或氣泡酒（Brut Dry），過甜的會影響平衡。注入香檳時動作要輕柔，讓氣泡保持活力。這杯酒比看起來烈得多，後勁十足。",
+    "pairings": [
+      "法式鹹派",
+      "煙燻鮭魚布里尼",
+      "生蠔配檸檬",
+      "馬卡龍"
+    ]
+  },
+  {
+    "id": "bees-knees",
+    "slug": "bees-knees",
+    "type": "classic",
+    "nameEn": "Bee's Knees",
+    "nameZh": "蜂之膝",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 1,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "Prohibition-era sweetness. Honey syrup was used to mask bathtub gin — but this version celebrates it.",
+    "descriptionZh": "禁酒令時代的甜蜜。蜂蜜糖漿原用來掩蓋劣質琴酒的味道——但這個版本歌頌它。",
+    "ingredients": [
+      {
+        "slug": "hendricks-gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "honey-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入琴酒 2 oz、蜂蜜糖漿 ¾ oz、檸檬汁 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "以檸檬皮捲裝飾。"
+    ],
+    "garnish": "檸檬皮捲（Lemon Twist）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "beginner"
+    ],
+    "iba": false,
+    "story": "蜂之膝誕生於 1920 年代美國禁酒令時期，當時合法酒類被禁止，人們只能喝到品質低劣的「浴缸琴酒」（Bathtub Gin）。為了掩蓋劣質酒的刺鼻味道，調酒師們開始使用蜂蜜和柑橘汁來調味。「Bee's Knees」是 1920 年代的俚語，意思是「最棒的東西」——而這杯酒確實名副其實。諷刺的是，這個為了掩蓋缺陷而誕生的配方，在使用優質琴酒後反而成為了展現蜂蜜與柑橘和諧之美的完美載體。",
+    "origin": "United States, 1920s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "honey",
+        "citrus",
+        "juniper"
+      ],
+      "acid": 0.6,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.6,
+      "description": "蜂蜜的花香甜韻與檸檬的明亮酸度完美交融，琴酒的杜松子與植物香氣在底層提供複雜度，整體圓潤柔順。"
+    },
+    "glassImage": "🍸",
+    "tips": "蜂蜜糖漿（Honey Syrup）是蜂蜜和熱水以 1:1 比例稀釋製成——純蜂蜜太稠，無法在冷飲中均勻混合。蜂蜜的品種會影響風味，花蜜類（如洋槐蜜、百花蜜）比深色蜂蜜更適合。搖盪要充分，讓蜂蜜糖漿完全乳化。",
+    "pairings": [
+      "蜂蜜核桃起司",
+      "檸檬塔",
+      "香草冰淇淋",
+      "法式薄餅配蜂蜜"
+    ]
+  },
+  {
+    "id": "gold-rush",
+    "slug": "gold-rush",
+    "type": "classic",
+    "nameEn": "Gold Rush",
+    "nameZh": "淘金熱",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 1,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "A modern whiskey sour with honey replacing sugar. Simple, golden, and perfectly balanced.",
+    "descriptionZh": "用蜂蜜取代糖的現代威士忌酸酒。簡單、金黃、完美平衡。",
+    "ingredients": [
+      {
+        "slug": "buffalo-trace-bourbon",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "honey-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入波本 2 oz、蜂蜜糖漿 ¾ oz、檸檬汁 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入放有大冰塊的 Rocks Glass。"
+    ],
+    "garnish": "無裝飾",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "bourbon",
+      "beginner"
+    ],
+    "iba": false,
+    "story": "淘金熱由紐約傳奇地下酒吧 Milk & Honey 的創辦人 Sasha Petraske 在 2000 年代初創作。它本質上是一杯用蜂蜜糖漿取代簡單糖漿的波本酸酒，但這個看似微小的替換帶來了巨大的風味升級——蜂蜜的花香甜韻與波本的香草焦糖完美互補。這杯酒體現了 Petraske 的調酒哲學：不需要花俏的材料或複雜的技巧，只需要最好的材料和精確的比例。Gold Rush 迅速成為新千年最具影響力的新經典之一。",
+    "origin": "New York, 2000s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "honey",
+        "vanilla",
+        "citrus"
+      ],
+      "acid": 0.6,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.65,
+      "description": "蜂蜜的溫潤甜度與波本的香草橡木風味自然交融，檸檬酸度提供明亮骨架，整體溫暖圓潤如液態黃金。"
+    },
+    "glassImage": "🥃",
+    "tips": "蜂蜜糖漿（1:1 蜂蜜兌熱水）要提前製作放涼。不要試圖用純蜂蜜直接搖盪——冷的蜂蜜會結塊無法混合。這杯酒的美在於簡單，不需要任何裝飾。選擇有明顯甜味的波本（如 Buffalo Trace）效果更佳。",
+    "pairings": [
+      "蜂蜜烤堅果",
+      "焦糖蘋果派",
+      "楓糖煎培根",
+      "熟成高達起司"
+    ]
+  },
+  {
+    "id": "amaretto-sour",
+    "slug": "amaretto-sour",
+    "type": "classic",
+    "nameEn": "Amaretto Sour",
+    "nameZh": "杏仁酸酒",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 89.0,
+    "grade": "A",
+    "description": "Redeemed by the modern recipe. Amaretto, bourbon backbone, lemon, and a silky egg white foam.",
+    "descriptionZh": "被現代配方拯救的經典。杏仁利口酒、波本骨架、檸檬與絲滑蛋白泡沫。",
+    "ingredients": [
+      {
+        "slug": "amaretto",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "makers-mark-bourbon",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "egg-white",
+        "amount": 1.0,
+        "unit": "whole"
+      }
+    ],
+    "steps": [
+      "將所有材料加入 Shaker（不加冰）。",
+      "先進行 Dry Shake（無冰搖盪）15 秒使蛋白乳化起泡。",
+      "加入足量冰塊。",
+      "再次用力搖盪 12-15 秒至充分冷卻。",
+      "雙重過濾倒入放有大冰塊的 Rocks Glass。",
+      "以 Angostura 苦精在蛋白泡沫上畫出裝飾圖案。"
+    ],
+    "garnish": "苦精裝飾圖案（Angostura Bitters Art）",
+    "tags": [
+      "classic",
+      "shaken",
+      "amaretto",
+      "intermediate"
+    ],
+    "iba": false,
+    "story": "杏仁酸酒在 1970-80 年代的美國酒吧文化中廣泛流行，但因為大多數版本只是杏仁利口酒加酸甜混合液（Sour Mix），味道甜膩而被認真的調酒師們鄙視。2012 年，調酒師 Jeffrey Morgenthaler 在《Bartender's Choice》中發表了革命性的改良版本——加入波本威士忌提供酒體骨架、新鮮檸檬汁取代酸甜混合液、蛋白增添絲滑質感。這個版本徹底改變了杏仁酸酒的地位，從被嘲笑的「甜水」變成了受尊重的經典。這是調酒復興運動中最成功的「拯救」案例之一。",
+    "origin": "United States, 1970s (modernized 2012)",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "almond",
+        "vanilla",
+        "citrus"
+      ],
+      "acid": 0.6,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.5,
+      "description": "杏仁利口酒的杏仁與杏桃甜韻在蛋白泡沫中展開，波本提供香草橡木的骨架支撐，檸檬酸度防止甜膩，口感如天鵝絨般滑順。"
+    },
+    "glassImage": "🥃",
+    "tips": "波本是這杯酒從平庸到卓越的關鍵——它提供了杏仁利口酒所缺乏的酒精強度和風味深度。Dry Shake 是蛋白雞尾酒的必要步驟，先不加冰搖盪讓蛋白充分乳化，再加冰搖盪冷卻。如果對生蛋白有疑慮，可以使用巴氏殺菌蛋白。",
+    "pairings": [
+      "杏仁瓦片餅乾",
+      "提拉米蘇",
+      "烤杏仁配蜂蜜",
+      "義式奶酪"
+    ]
+  },
+  {
+    "id": "white-russian",
+    "slug": "white-russian",
+    "type": "classic",
+    "nameEn": "White Russian",
+    "nameZh": "白色俄羅斯人",
+    "method": "build",
+    "glassType": "rocks_glass",
+    "difficulty": 1,
+    "balanceScore": 84.0,
+    "grade": "B",
+    "description": "The Dude abides. Vodka, Kahlúa, and cream — a dessert cocktail immortalized by The Big Lebowski.",
+    "descriptionZh": "The Dude 的最愛。伏特加、卡魯哇與鮮奶油——被《乃乃乃乃》永垂不朽的甜點雞尾酒。",
+    "ingredients": [
+      {
+        "slug": "titos-vodka",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "kahlua",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "coconut-cream",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Rocks Glass 中放入大冰塊。",
+      "倒入伏特加 2 oz。",
+      "加入 Kahlúa 咖啡利口酒 1 oz。",
+      "輕輕攪拌混合。",
+      "最後將鮮奶油 1 oz 沿吧匙背面緩緩倒入，使其漂浮在表面。",
+      "可自行決定是否攪拌混合。"
+    ],
+    "garnish": "無裝飾",
+    "tags": [
+      "classic",
+      "build",
+      "vodka",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "白色俄羅斯人的前身是「黑色俄羅斯人」（Black Russian），由比利時布魯塞爾 Hotel Metropole 的調酒師 Gustave Tops 在 1949 年為美國駐盧森堡大使 Perle Mesta 創作——伏特加加 Kahlúa，代表冷戰時期東西方的碰撞。1960 年代有人加入鮮奶油，創造出「白色」版本。但真正讓這杯酒封神的是 1998 年科恩兄弟的電影《乃乃乃乃》——Jeff Bridges 飾演的「The Dude」在片中不停地喝白色俄羅斯人，讓這杯原本有些過時的飲品重新獲得了一整個世代的崇拜。",
+    "origin": "Brussels, 1960s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "coffee",
+        "cream",
+        "vanilla"
+      ],
+      "acid": 0.05,
+      "sweet": 0.6,
+      "bitter": 0.2,
+      "punch": 0.5,
+      "description": "Kahlúa 的咖啡甜韻在鮮奶油的絲滑中展開，伏特加提供乾淨的酒精底韻，整體如同液態提拉米蘇。"
+    },
+    "glassImage": "🥃",
+    "tips": "鮮奶油的漂浮是這杯酒的經典呈現——用吧匙背面讓奶油緩緩流下，形成美麗的分層效果。你可以像 The Dude 一樣直接攪拌混合喝，也可以享受從分層到混合的漸變過程。使用全脂鮮奶油效果最好，低脂的太稀無法形成分層。",
+    "pairings": [
+      "巧克力布朗尼",
+      "提拉米蘇",
+      "咖啡冰淇淋",
+      "焦糖爆米花"
+    ]
+  },
+  {
+    "id": "gimlet",
+    "slug": "gimlet",
+    "type": "classic",
+    "nameEn": "Gimlet",
+    "nameZh": "琴蕾",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 1,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "Raymond Chandler's cocktail of choice. Gin and lime — crisp, clean, and devastatingly simple.",
+    "descriptionZh": "Raymond Chandler 的最愛。琴酒與萊姆——清脆、乾淨、簡單到令人折服。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入琴酒 2 oz、萊姆汁 ¾ oz、糖漿 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "以萊姆輪切裝飾。"
+    ],
+    "garnish": "萊姆輪切（Lime Wheel）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "琴蕾的起源與英國皇家海軍的壞血病預防有關。十九世紀後期，海軍軍醫 Thomas Gimlette 爵士據說鼓勵水手們將配給的琴酒與 Rose's 萊姆汁混合飲用，以確保他們攝取足夠的維他命 C。Raymond Chandler 在 1953 年的偵探小說《漫長的告別》中寫道：「一杯真正的琴蕾應該是一半琴酒、一半 Rose's 萊姆汁，別無他物。」現代版本使用新鮮萊姆汁取代了 Rose's，讓這杯酒從甜膩的懷舊飲品變成了清爽優雅的經典。",
+    "origin": "British Royal Navy, late 1800s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "lime",
+        "juniper",
+        "floral"
+      ],
+      "acid": 0.7,
+      "sweet": 0.4,
+      "bitter": 0.05,
+      "punch": 0.6,
+      "description": "萊姆的鮮明酸度與琴酒的杜松子清香完美對話，糖漿在兩者之間扮演柔和的橋樑角色，整體清爽俐落。"
+    },
+    "glassImage": "🍸",
+    "tips": "這杯酒只有三種材料，每一種的品質都至關重要。萊姆汁必須新鮮現榨——放置超過四小時的萊姆汁風味會顯著衰退。關於比例有兩個派別：經典派用 Rose's 萊姆汁（已含糖），現代派用新鮮萊姆汁加糖漿。兩種都試試，找到你的偏好。",
+    "pairings": [
+      "鮮蝦冷盤",
+      "越南春捲",
+      "生魚片拼盤",
+      "萊姆椰子塔"
+    ]
+  },
+  {
+    "id": "tom-collins",
+    "slug": "tom-collins",
+    "type": "classic",
+    "nameEn": "Tom Collins",
+    "nameZh": "湯姆柯林斯",
+    "method": "shake",
+    "glassType": "collins",
+    "difficulty": 1,
+    "balanceScore": 88.0,
+    "grade": "B",
+    "description": "The original long drink. Gin, lemon, sugar, and soda — refreshingly timeless.",
+    "descriptionZh": "最原始的長飲。琴酒、檸檬、糖與蘇打水——歷久彌新的清爽。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "soda-water",
+        "amount": 3.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入冰塊。",
+      "量入琴酒 2 oz、檸檬汁 1 oz、糖漿 ¾ oz。",
+      "搖盪 10 秒至冷卻。",
+      "濾冰倒入裝滿冰塊的 Collins Glass。",
+      "注入冷藏的蘇打水約 3 oz。",
+      "輕輕攪拌一次混合。",
+      "以檸檬輪切和調酒櫻桃裝飾。"
+    ],
+    "garnish": "檸檬輪切與調酒櫻桃（Lemon Wheel & Cherry）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "湯姆柯林斯的誕生與 1874 年紐約的一場大規模惡作劇有關——「Tom Collins Hoax」。人們會對朋友說：「Tom Collins 在到處說你壞話！」朋友急忙到處尋找這個不存在的人。精明的調酒師們趁機創造了一杯以此命名的飲品，讓憤怒的尋人者有東西喝。這杯酒的基礎其實是更早的「John Collins」——使用荷蘭琴酒的版本，而 Tom Collins 使用倫敦乾琴酒（Old Tom Gin），名稱也因此從 John 變成了 Tom。",
+    "origin": "New York, 1870s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "citrus",
+        "juniper",
+        "effervescent"
+      ],
+      "acid": 0.5,
+      "sweet": 0.35,
+      "bitter": 0.05,
+      "punch": 0.4,
+      "description": "檸檬的清爽酸度與琴酒的植物香氣在蘇打水的氣泡中輕盈展開，甜度適中，是完美的消暑長飲。"
+    },
+    "glassImage": "🥤",
+    "tips": "蘇打水必須在最後一步加入，而且要冰透——溫的蘇打水氣泡消散很快。不要過度攪拌，一次輕柔的翻攪就夠了，否則會損失氣泡。這杯酒要盡快飲用，放久了氣泡消失後就失去了靈魂。Collins Glass 的高窄形狀有助於保持氣泡。",
+    "pairings": [
+      "英式三明治",
+      "凱撒沙拉",
+      "炸魚薯條",
+      "黃瓜三明治"
+    ]
+  },
+  {
+    "id": "moscow-mule",
+    "slug": "moscow-mule",
+    "type": "classic",
+    "nameEn": "Moscow Mule",
+    "nameZh": "莫斯科騾子",
+    "method": "build",
+    "glassType": "copper_mug",
+    "difficulty": 1,
+    "balanceScore": 86.0,
+    "grade": "B",
+    "description": "The cocktail that launched a thousand copper mugs. Vodka, ginger beer, and lime — effervescent and spicy.",
+    "descriptionZh": "讓銅杯銷售破千的雞尾酒。伏特加、薑汁啤酒與萊姆——氣泡與辛辣的完美結合。",
+    "ingredients": [
+      {
+        "slug": "titos-vodka",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "ginger-beer",
+        "amount": 4.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在銅杯中放入大量冰塊。",
+      "倒入伏特加 2 oz。",
+      "擠入半顆萊姆汁。",
+      "注入冷藏的薑汁啤酒約 4 oz。",
+      "輕輕攪拌一次混合。",
+      "以萊姆角裝飾。"
+    ],
+    "garnish": "萊姆角（Lime Wedge）",
+    "tags": [
+      "classic",
+      "build",
+      "vodka",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "莫斯科騾子誕生於 1941 年的洛杉磯 Cock'n'Bull 酒吧，是一個完美的商業合作故事。Smirnoff 伏特加的美國經銷商 John G. Martin 正苦於伏特加在美國賣不動，酒吧老闆 Jack Morgan 手上有大量滯銷的自家品牌薑汁啤酒，而一位銅器商人有賣不掉的銅杯——三人一拍即合，創造了莫斯科騾子。Martin 帶著拍立得相機走遍全美酒吧推銷這杯酒，每到一處就拍下調酒師拿著銅杯的照片，這可能是最早的「社交媒體行銷」策略之一。這杯酒幾乎一手將伏特加從無人問津推上了美國最暢銷烈酒的寶座。",
+    "origin": "Los Angeles, 1941",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "ginger",
+        "lime",
+        "spice"
+      ],
+      "acid": 0.4,
+      "sweet": 0.3,
+      "bitter": 0.1,
+      "punch": 0.4,
+      "description": "薑汁啤酒的辛辣氣泡主導，萊姆的柑橘酸度提供清爽對比，伏特加在背景提供乾淨的酒精感。"
+    },
+    "glassImage": "🍺",
+    "tips": "銅杯不只是裝飾——銅的導熱性讓杯子迅速變冰，觸感和溫度都是體驗的一部分。薑汁啤酒的品質和辣度差異很大，選擇辣度適中、氣泡充足的品牌。萊姆汁不要太多，這杯酒的主角是薑汁啤酒而非柑橘。",
+    "pairings": [
+      "泰式炸春捲",
+      "薑汁燒肉",
+      "辣味蝦餅",
+      "壽司拼盤"
+    ]
+  },
+  {
+    "id": "mint-julep",
+    "slug": "mint-julep",
+    "type": "classic",
+    "nameEn": "Mint Julep",
+    "nameZh": "薄荷乃浦",
+    "method": "build",
+    "glassType": "copper_mug",
+    "difficulty": 2,
+    "balanceScore": 88.0,
+    "grade": "A",
+    "description": "Kentucky Derby's signature drink. Bourbon, fresh mint, and crushed ice — Southern elegance in a silver cup.",
+    "descriptionZh": "肯塔基賽馬的招牌飲品。波本、新鮮薄荷與碎冰——銀杯中的南方優雅。",
+    "ingredients": [
+      {
+        "slug": "makers-mark-bourbon",
+        "amount": 2.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-mint",
+        "amount": 10.0,
+        "unit": "leaves"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在銀杯或銅杯底部放入 8-10 片薄荷葉和糖漿 ½ oz。",
+      "用搗棒輕輕按壓薄荷（不要撕碎），釋放香氣精油。",
+      "加入波本 2½ oz。",
+      "填入碎冰至杯口堆成小山。",
+      "用吧匙輕輕攪拌，讓杯壁結霜。",
+      "以大束薄荷枝裝飾，插在碎冰中靠近吸管。"
+    ],
+    "garnish": "大束薄荷枝（Mint Bouquet）",
+    "tags": [
+      "classic",
+      "build",
+      "bourbon",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "薄荷乃浦的歷史可追溯到十八世紀末的美國南方，是美國最古老的雞尾酒之一。1938 年起，它成為肯塔基德比（Kentucky Derby）賽馬會的官方飲品，每年賽事期間消耗超過 12 萬杯。傳統上使用銀杯盛裝，手持杯子時銀的導冷性讓杯壁迅速結霜，既美觀又實用。南方紳士們有一條不成文的規矩：喝薄荷乃浦時只能握住杯底或杯口，讓杯壁的霜花保持完整——這是優雅的象徵。Mark Twain 曾寫道：「過於溫暖的天氣太令人沮喪了，除非你有一杯 Mint Julep。」",
+    "origin": "American South, late 1700s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "mint",
+        "vanilla",
+        "caramel"
+      ],
+      "acid": 0.05,
+      "sweet": 0.4,
+      "bitter": 0.05,
+      "punch": 0.7,
+      "description": "清涼的薄荷香氣在鼻腔中爆發，波本的香草焦糖甜韻在冰涼的口感中緩緩展開，碎冰的快速稀釋讓酒體輕盈易飲。"
+    },
+    "glassImage": "🍺",
+    "tips": "搗壓薄荷時只需輕輕按壓幾下，絕對不要把葉子撕碎——撕碎會釋放苦味的葉綠素。碎冰是這杯酒的靈魂，冰塊要夠碎夠多，堆成小山。薄荷裝飾的位置很重要，放在吸管旁邊，讓你每一口都能聞到薄荷的清香。如果有銀杯，握住杯底讓杯壁結霜是最正統的享用方式。",
+    "pairings": [
+      "南方炸雞",
+      "肯塔基煙燻火腿",
+      "蜜桃派",
+      "玉米麵包"
+    ]
+  },
+  {
+    "id": "rusty-nail",
+    "slug": "rusty-nail",
+    "type": "classic",
+    "nameEn": "Rusty Nail",
+    "nameZh": "鏽釘",
+    "method": "stir",
+    "glassType": "rocks_glass",
+    "difficulty": 1,
+    "balanceScore": 85.0,
+    "grade": "B",
+    "description": "Scotch meets Drambuie in a honeyed embrace. A Rat Pack favorite — smooth, warming, and unapologetically boozy.",
+    "descriptionZh": "蘇格蘭威士忌與金蜜利口酒的蜜甜擁抱。鼠幫最愛——滑順、溫暖、毫不掩飾的烈。",
+    "ingredients": [
+      {
+        "slug": "jw-black-scotch",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "drambuie",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Rocks Glass 中放入大冰塊。",
+      "倒入蘇格蘭威士忌 1½ oz。",
+      "加入 Drambuie ¾ oz。",
+      "輕輕攪拌混合。",
+      "以檸檬皮捲裝飾。"
+    ],
+    "garnish": "檸檬皮捲（Lemon Twist）",
+    "tags": [
+      "classic",
+      "stirred",
+      "scotch",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "鏽釘在 1960 年代的紐約成為風靡一時的飲品，深受 Rat Pack（Frank Sinatra、Dean Martin 等）和紐約社交名流的喜愛。Drambuie 是一種以蘇格蘭威士忌為基底、加入蜂蜜和草本的利口酒，據說其配方可追溯到 1745 年蘇格蘭王子 Charles Edward Stuart（Bonnie Prince Charlie）流亡時留給 MacKinnon 家族的感謝禮物。鏽釘的名字來源有多種說法——有人說是因為最初用生鏽的釘子攪拌，也有人說是因為它「像鏽釘一樣堅硬」。無論如何，它代表了一個威士忌雞尾酒還很稀有的年代。",
+    "origin": "New York, 1960s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "honey",
+        "heather",
+        "smoke"
+      ],
+      "acid": 0.05,
+      "sweet": 0.5,
+      "bitter": 0.15,
+      "punch": 0.8,
+      "description": "Drambuie 的蜂蜜甜韻與蘇格蘭威士忌的煙燻麥芽風味水乳交融，草本與石楠花的暗流在溫暖的酒體中流動。"
+    },
+    "glassImage": "🥃",
+    "tips": "Drambuie 的比例是關鍵——太多會過甜，太少則缺乏特色。經典比例是 2:1（威士忌:Drambuie），但如果你偏好不那麼甜，可以調整到 2:0.75。威士忌的選擇會大幅影響風味——調和威士忌（如 Johnnie Walker Black）帶來圓潤平衡，單一麥芽則更有個性。",
+    "pairings": [
+      "蘇格蘭奶油軟糖",
+      "蜂蜜烤核桃",
+      "燕麥餅乾",
+      "煙燻鮭魚"
+    ]
+  },
+  {
+    "id": "sidecar",
+    "slug": "sidecar",
+    "type": "classic",
+    "nameEn": "Sidecar",
+    "nameZh": "側車",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 92.0,
+    "grade": "A",
+    "description": "The cognac Sour, perfected. Brandy, Cointreau, and lemon — a Parisian classic with a sugared rim.",
+    "descriptionZh": "完美的干邑酸酒。白蘭地、Cointreau 與檸檬——帶糖口杯緣的巴黎經典。",
+    "ingredients": [
+      {
+        "slug": "remy-martin-vsop",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "cointreau",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "用檸檬汁沾濕 Coupe 杯的半邊杯緣，沾上細白糖（半糖口）。",
+      "在 Shaker 中加入足量冰塊。",
+      "量入干邑 2 oz、Cointreau ¾ oz、檸檬汁 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入準備好的杯中。",
+      "以橙皮捲裝飾。"
+    ],
+    "garnish": "半糖口杯緣與橙皮捲（Half Sugar Rim & Orange Twist）",
+    "tags": [
+      "classic",
+      "shaken",
+      "cognac",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "側車的起源在巴黎和倫敦之間存在爭議。一說是 1920 年代巴黎 Harry's New York Bar 的 Harry MacElhone 所創，另一說來自倫敦 Buck's Club 的 Pat MacGarry。「Sidecar」之名據說是因為一位常客總是搭乘摩托車邊車到酒吧。這杯酒是經典酸酒（Sour）結構的典範——基酒、柑橘、甜味的完美三角，用干邑的優雅取代了威士忌的粗獷。傳統做法會在杯緣沾上糖霜，現代調酒師則偏好只沾半邊，讓飲者自行選擇是否需要額外甜度。",
+    "origin": "Paris, 1920s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "orange",
+        "dried fruit",
+        "citrus"
+      ],
+      "acid": 0.6,
+      "sweet": 0.4,
+      "bitter": 0.1,
+      "punch": 0.7,
+      "description": "干邑的果乾與橡木風味在 Cointreau 的柑橘甜韻中展開，檸檬的明亮酸度貫穿始終，形成圓潤豐厚的口感。"
+    },
+    "glassImage": "🍸",
+    "tips": "半糖口是現代標準做法——只在杯緣的外側一半沾糖，讓飲者可以選擇從有糖或無糖的一側喝。干邑的選擇很重要，VSOP 等級最適合調酒，VS 太年輕缺乏深度，XO 太貴且風味會被其他材料掩蓋。Cointreau 不要用廉價的橙皮酒替代，品質差距很大。",
+    "pairings": [
+      "法式焦糖布丁",
+      "柑橘鴨胸",
+      "杏仁可頌",
+      "橙皮巧克力"
+    ]
+  },
+  {
+    "id": "clover-club",
+    "slug": "clover-club",
+    "type": "classic",
+    "nameEn": "Clover Club",
+    "nameZh": "三葉草俱樂部",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "A pre-Prohibition pink beauty. Gin, raspberry, lemon, and egg white — velvety, fruity, and impossibly elegant.",
+    "descriptionZh": "禁酒令前的粉紅佳人。琴酒、覆盆子、檸檬與蛋白——天鵝絨般的果香優雅。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "raspberry-syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "egg-white",
+        "amount": 1.0,
+        "unit": "whole"
+      }
+    ],
+    "steps": [
+      "將所有材料加入 Shaker（不加冰）。",
+      "先進行 Dry Shake 15 秒使蛋白乳化起泡。",
+      "加入足量冰塊。",
+      "再次用力搖盪 12-15 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "可以用幾滴覆盆子糖漿在泡沫上做裝飾。"
+    ],
+    "garnish": "新鮮覆盆子（Fresh Raspberries）",
+    "tags": [
+      "classic",
+      "shaken",
+      "gin",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "三葉草俱樂部得名於費城 Bellevue-Stratford 酒店內同名的紳士俱樂部，該俱樂部成立於 1882 年，成員包括律師、銀行家和政治家。這杯酒在禁酒令之前（約 1910 年代）是費城社交圈的標誌性飲品。禁酒令結束後，它逐漸被遺忘，甚至在 1934 年被《Esquire》雜誌列為「十大最糟糕飲品」。然而在 2000 年代的雞尾酒復興中，它被重新發現並獲得了全新的評價——2008 年，紐約甚至開了一家以它命名的酒吧。粉紅色的蛋白泡沫讓它成為 Instagram 時代最上鏡的經典之一。",
+    "origin": "Philadelphia, 1910s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "raspberry",
+        "citrus",
+        "juniper"
+      ],
+      "acid": 0.6,
+      "sweet": 0.45,
+      "bitter": 0.05,
+      "punch": 0.55,
+      "description": "覆盆子的莓果甜酸在蛋白泡沫中綻放，琴酒的杜松子與柑橘皮香氣在底層支撐，檸檬酸度保持清爽，整體如粉紅色的天鵝絨。"
+    },
+    "glassImage": "🍸",
+    "tips": "Dry Shake 是蛋白雞尾酒的必要步驟——先不加冰搖盪讓蛋白完全乳化，再加冰搖盪冷卻。覆盆子糖漿可以用新鮮覆盆子搗碎後加糖過濾自製，風味遠勝商業產品。泡沫的品質是這杯酒的門面，搖盪要足夠充分。",
+    "pairings": [
+      "覆盆子馬卡龍",
+      "白巧克力慕斯",
+      "法式草莓塔",
+      "玫瑰花瓣土耳其軟糖"
+    ]
+  },
+  {
+    "id": "hemingway-daiquiri",
+    "slug": "hemingway-daiquiri",
+    "type": "classic",
+    "nameEn": "Hemingway Daiquiri",
+    "nameZh": "海明威黛綺麗",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "Papa's double-size daiquiri. Rum, lime, grapefruit, and maraschino — drier, more complex, more literary.",
+    "descriptionZh": "海明威的雙份黛綺麗。蘭姆、萊姆、葡萄柚與黑櫻桃——更乾爽、更複雜、更文學。",
+    "ingredients": [
+      {
+        "slug": "bacardi-rum",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-grapefruit-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "maraschino-liqueur",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入白蘭姆 2 oz、萊姆汁 ¾ oz、葡萄柚汁 ½ oz、Maraschino 利口酒 ½ oz。",
+      "用力搖盪 12-15 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "以萊姆輪切裝飾。"
+    ],
+    "garnish": "萊姆輪切（Lime Wheel）",
+    "tags": [
+      "classic",
+      "shaken",
+      "rum",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "海明威黛綺麗（又稱 Papa Doble）是哈瓦那 El Floridita 酒吧的傳奇調酒師 Constantino Ribalaigua 為 Ernest Hemingway 特別調製的版本。海明威因糖尿病不吃糖，所以要求去掉糖漿，改用葡萄柚汁和 Maraschino 利口酒增添風味。他通常一次喝雙份（Papa Doble），據說一個下午可以喝掉十二杯。海明威在 El Floridita 有專屬座位，至今酒吧裡還放著他的銅像。現代版本通常會加回少量糖漿以改善平衡，因為完全無糖的原版對大多數人來說太酸太烈。",
+    "origin": "Havana, 1930s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "grapefruit",
+        "cherry",
+        "citrus"
+      ],
+      "acid": 0.7,
+      "sweet": 0.25,
+      "bitter": 0.15,
+      "punch": 0.65,
+      "description": "葡萄柚的微苦酸度與萊姆的鮮明柑橘交疊，Maraschino 的杏仁櫻桃甜韻在中段提供唯一的甜味支撐，蘭姆的甘蔗底韻串連一切。比經典黛綺麗更乾爽、更複雜。"
+    },
+    "glassImage": "🍸",
+    "tips": "這杯酒比經典黛綺麗更乾爽（少甜），如果你覺得太酸，可以加入 ¼ oz 簡單糖漿。葡萄柚汁必須用新鮮現榨的——粉紅葡萄柚比白葡萄柚的風味更豐富。Maraschino 利口酒用量不要超過 ½ oz，否則會有止咳糖漿的感覺。",
+    "pairings": [
+      "古巴三明治",
+      "烤蝦佐萊姆奶油",
+      "葡萄柚塔",
+      "鮮蝦酪梨莎莎"
+    ]
+  },
+  {
+    "id": "blood-and-sand",
+    "slug": "blood-and-sand",
+    "type": "classic",
+    "nameEn": "Blood & Sand",
+    "nameZh": "血與沙",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 3,
+    "balanceScore": 87.0,
+    "grade": "B",
+    "description": "Named after a 1922 bullfighting film. Scotch, sweet vermouth, cherry liqueur, and orange juice — a dramatic matador of a cocktail.",
+    "descriptionZh": "以 1922 年鬥牛電影命名。蘇格蘭威士忌、甜香艾酒、櫻桃利口酒與柳橙汁——一杯戲劇性的鬥牛士調酒。",
+    "ingredients": [
+      {
+        "slug": "jw-black-scotch",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "maraschino-liqueur",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-orange-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入蘇格蘭威士忌、甜香艾酒、櫻桃利口酒、柳橙汁各 ¾ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "以橙皮捲裝飾。"
+    ],
+    "garnish": "橙皮捲（Orange Twist）",
+    "tags": [
+      "classic",
+      "shaken",
+      "scotch",
+      "advanced"
+    ],
+    "iba": true,
+    "story": "血與沙以 1922 年由 Rudolph Valentino 主演的鬥牛電影《Blood and Sand》命名，酒譜首次出現在 1930 年 Harry Craddock 的《The Savoy Cocktail Book》中。這杯酒長期以來備受爭議——許多調酒師認為蘇格蘭威士忌和柳橙汁的搭配很奇怪，甚至稱它為「不該成功但偏偏成功了」的酒。在雞尾酒復興運動中，調酒師們重新審視這杯酒，發現使用高品質的材料（尤其是新鮮現榨柳橙汁和好的櫻桃利口酒）時，四種看似不搭的材料確實能達到出人意料的和諧。",
+    "origin": "London, 1930",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "cherry",
+        "orange",
+        "smoke"
+      ],
+      "acid": 0.4,
+      "sweet": 0.5,
+      "bitter": 0.2,
+      "punch": 0.55,
+      "description": "櫻桃利口酒的甜美果香與蘇格蘭威士忌的煙燻麥芽形成戲劇性對比，甜香艾酒的草本深度在中段展開，柳橙汁的酸甜串連一切。"
+    },
+    "glassImage": "🍸",
+    "tips": "柳橙汁必須新鮮現榨——這杯酒用紙盒柳橙汁和用新鮮的完全是兩杯不同的酒。櫻桃利口酒建議用 Cherry Heering 而非 Maraschino（雖然 Maraschino 也可以接受），風味更飽滿。蘇格蘭威士忌選用調和型即可，不需要泥煤味太重的。",
+    "pairings": [
+      "西班牙火腿",
+      "烤甜椒塔帕斯",
+      "黑櫻桃巧克力",
+      "曼徹格起司配櫻桃醬"
+    ]
+  },
+  {
+    "id": "bramble",
+    "slug": "bramble",
+    "type": "classic",
+    "nameEn": "Bramble",
+    "nameZh": "荊棘",
+    "method": "build",
+    "glassType": "rocks_glass",
+    "difficulty": 2,
+    "balanceScore": 89.0,
+    "grade": "A",
+    "description": "A British berry classic. Gin, lemon, and a cascade of blackberry liqueur — like foraging in an English hedgerow.",
+    "descriptionZh": "英國莓果經典。琴酒、檸檬與傾瀉而下的黑莓利口酒——如同在英國樹籬間採集野果。",
+    "ingredients": [
+      {
+        "slug": "tanqueray-gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "chambord",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Rocks Glass 中填滿碎冰。",
+      "倒入琴酒 2 oz、檸檬汁 ¾ oz、糖漿 ½ oz。",
+      "輕輕攪拌混合。",
+      "再堆上碎冰至杯口。",
+      "最後將 Chambord（或黑莓利口酒）½ oz 緩緩淋在碎冰上，讓它自然滲透形成漸層效果。",
+      "以新鮮黑莓和檸檬輪切裝飾。"
+    ],
+    "garnish": "新鮮黑莓與檸檬輪切（Blackberry & Lemon Wheel）",
+    "tags": [
+      "modern-classic",
+      "build",
+      "gin",
+      "intermediate"
+    ],
+    "iba": false,
+    "story": "荊棘由倫敦調酒傳奇 Dick Bradsell 在 1984 年的 Fred's Club 創作。靈感來自他小時候在英格蘭懷特島（Isle of Wight）的田園生活，在荊棘叢中採摘黑莓的記憶。Bradsell 將這份童年的鄉愁轉化為一杯琴酒雞尾酒，黑莓利口酒從碎冰頂端緩緩滲透的視覺效果，就像黑莓的汁液在荊棘叢中滴落。這杯酒是英國對世界調酒文化最重要的貢獻之一，Bradsell 也因此和 Espresso Martini 的發明一起，被尊為英國現代調酒之父。",
+    "origin": "London, 1984",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "blackberry",
+        "citrus",
+        "juniper"
+      ],
+      "acid": 0.6,
+      "sweet": 0.45,
+      "bitter": 0.1,
+      "punch": 0.55,
+      "description": "黑莓利口酒的深紫莓果甜韻從冰層滲透，與琴酒的杜松子和檸檬的明亮酸度交織，碎冰的快速稀釋讓整體清爽易飲。"
+    },
+    "glassImage": "🥃",
+    "tips": "黑莓利口酒（Chambord 或 Crème de Mûre）要在最後一步淋上碎冰，讓它自然滲透——這個視覺效果是 Bramble 的標誌。不要攪拌黑莓利口酒，讓飲者在喝的過程中體驗從酸到甜的風味變化。碎冰要夠多夠碎，讓利口酒能緩慢滲透。",
+    "pairings": [
+      "英式司康配果醬",
+      "莓果優格帕菲",
+      "烤鴨胸佐莓果醬",
+      "檸檬磅蛋糕"
+    ]
+  },
+  {
+    "id": "pisco-sour",
+    "slug": "pisco-sour",
+    "type": "classic",
+    "nameEn": "Pisco Sour",
+    "nameZh": "皮斯可酸酒",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 91.0,
+    "grade": "A",
+    "description": "South America's proudest cocktail. Pisco, lime, sugar, and a cloud of egg white — Peru and Chile's eternal dispute.",
+    "descriptionZh": "南美洲最驕傲的雞尾酒。皮斯可、萊姆、糖與蛋白雲朵——秘魯和智利的永恆爭論。",
+    "ingredients": [
+      {
+        "slug": "aperture-pisco",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "egg-white",
+        "amount": 1.0,
+        "unit": "whole"
+      },
+      {
+        "slug": "angostura-bitters",
+        "amount": 3.0,
+        "unit": "dash"
+      }
+    ],
+    "steps": [
+      "將皮斯可、萊姆汁、糖漿、蛋白加入 Shaker（不加冰）。",
+      "先進行 Dry Shake 15 秒使蛋白乳化起泡。",
+      "加入足量冰塊。",
+      "再次用力搖盪 12-15 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "在蛋白泡沫上滴 3 抖 Angostura 苦精做裝飾圖案。"
+    ],
+    "garnish": "Angostura 苦精裝飾圖案",
+    "tags": [
+      "classic",
+      "shaken",
+      "pisco",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "皮斯可酸酒的發明權是秘魯與智利之間最激烈的爭議之一。秘魯版本的歷史記載更早——1920 年代，美國調酒師 Victor Vaughen Morris 在利馬開設的 Morris' Bar 將這杯酒推廣開來，他在 1903 年就已經移居秘魯。智利則聲稱 Pisco Sour 的根源更古老。秘魯在 2003 年將每年二月的第一個星期六定為「Pisco Sour Day」。這場爭論甚至上升到了外交層面——兩國都宣稱 Pisco 是本國產品。無論歸屬如何，這杯酒以其雲朵般的蛋白泡沫和完美的酸甜平衡，征服了全世界的味蕾。",
+    "origin": "Lima, 1920s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "grape",
+        "citrus",
+        "floral"
+      ],
+      "acid": 0.7,
+      "sweet": 0.4,
+      "bitter": 0.15,
+      "punch": 0.6,
+      "description": "皮斯可的葡萄蒸餾香氣透過蛋白泡沫優雅地釋放，萊姆的鮮明酸度在中段主導，Angostura 苦精的芳香在表面飄浮，整體質感如雲朵般輕盈。"
+    },
+    "glassImage": "🍸",
+    "tips": "Dry Shake 是這杯酒成功的關鍵——蛋白需要在沒有冰塊的情況下先充分乳化，才能形成厚實綿密的泡沫。苦精裝飾不只是好看，它在你每一口喝酒時提供芳香的嗅覺體驗。皮斯可的品質很重要，選用秘魯的 Quebranta 葡萄品種釀造的最為正統。",
+    "pairings": [
+      "秘魯酸橘汁醃魚",
+      "安地斯烤玉米",
+      "薄切生牛肉配萊姆",
+      "炸魷魚圈"
+    ]
+  },
+  {
+    "id": "harvey-wallbanger",
+    "slug": "harvey-wallbanger",
+    "type": "classic",
+    "nameEn": "Harvey Wallbanger",
+    "nameZh": "哈維撞牆",
+    "method": "build",
+    "glassType": "highball",
+    "difficulty": 1,
+    "balanceScore": 82.0,
+    "grade": "B",
+    "description": "A 1970s icon. Vodka, OJ, and a Galliano float — the surfer's screwdriver with an Italian accent.",
+    "descriptionZh": "1970 年代的圖騰。伏特加、柳橙汁與漂浮 Galliano——帶義大利腔調的衝浪者螺絲起子。",
+    "ingredients": [
+      {
+        "slug": "titos-vodka",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-orange-juice",
+        "amount": 4.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "galliano",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Highball Glass 中填滿冰塊。",
+      "倒入伏特加 1½ oz。",
+      "加入新鮮柳橙汁約 4 oz。",
+      "輕輕攪拌混合。",
+      "最後用吧匙背面將 Galliano ½ oz 漂浮在表面。",
+      "以橙片裝飾。"
+    ],
+    "garnish": "橙片（Orange Slice）",
+    "tags": [
+      "classic",
+      "build",
+      "vodka",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "哈維撞牆的故事帶有濃厚的 1970 年代加州文化色彩。據說有一位名叫 Harvey 的衝浪者在曼哈頓海灘的一場衝浪比賽中失利後，跑到當地酒吧猛灌加了 Galliano 的螺絲起子（Screwdriver），喝醉後不斷撞到牆壁，因此得名。但更可信的版本是，這杯酒其實是 Galliano 品牌在 1970 年代精心策劃的行銷活動，他們聘請了推銷員 George Bednar 在全美酒吧推廣這個配方，並製作了著名的「Harvey Wallbanger」卡通形象。無論如何，它成為了 1970 年代美國酒吧文化的標誌性飲品。",
+    "origin": "California, 1970s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "orange",
+        "vanilla",
+        "anise"
+      ],
+      "acid": 0.3,
+      "sweet": 0.5,
+      "bitter": 0.05,
+      "punch": 0.35,
+      "description": "柳橙汁的果香甜酸主導，Galliano 的香草茴香風味在表面飄浮，入口時先感受到義大利草本香甜，隨後柳橙的清爽展開。"
+    },
+    "glassImage": "🥤",
+    "tips": "Galliano 必須漂浮在表面而非混合——它的香草茴香風味在表面時最能被鼻子感受到。柳橙汁用新鮮現榨的風味遠勝罐裝或紙盒裝。這杯酒本質上是升級版的螺絲起子（Screwdriver），Galliano 的 ½ oz 是讓它從平凡變為特別的關鍵。",
+    "pairings": [
+      "法式吐司佐柳橙醬",
+      "義式奶酪",
+      "烤雞佐柑橘沙拉",
+      "香草冰淇淋"
+    ]
+  },
+  {
+    "id": "pornstar-martini",
+    "slug": "pornstar-martini",
+    "type": "classic",
+    "nameEn": "Pornstar Martini",
+    "nameZh": "百香果馬丁尼",
+    "method": "shake",
+    "glassType": "coupe",
+    "difficulty": 2,
+    "balanceScore": 88.0,
+    "grade": "A",
+    "description": "London's most ordered cocktail. Vanilla vodka, passion fruit, and a prosecco sidecar — bold, fruity, and shamelessly fun.",
+    "descriptionZh": "倫敦點單率最高的雞尾酒。香草伏特加、百香果與氣泡酒小杯——大膽、果味、毫不掩飾的歡樂。",
+    "ingredients": [
+      {
+        "slug": "titos-vodka",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "passion-fruit-puree",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "vanilla-syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "prosecco",
+        "amount": 2.0,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入伏特加 2 oz、百香果泥 1 oz、香草糖漿 ½ oz、萊姆汁 ½ oz。",
+      "用力搖盪 12 秒至充分冷卻。",
+      "雙重過濾倒入冷藏的 Coupe 杯。",
+      "將半顆新鮮百香果漂浮在酒面。",
+      "另外倒一小杯冰鎮 Prosecco 作為 Sidecar 一起上桌。"
+    ],
+    "garnish": "半顆新鮮百香果（Half Passion Fruit）",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "vodka",
+      "intermediate"
+    ],
+    "iba": false,
+    "story": "百香果馬丁尼由英國調酒傳奇 Douglas Ankrah 在 2002 年倫敦蘇荷區的 Townhouse 酒吧創作。Ankrah 曾說這杯酒的靈感來自他在南非開普敦一家脫衣舞俱樂部的經歷——大膽、華麗、毫不掩飾地追求感官愉悅。它搭配一小杯 Prosecco 作為 Sidecar 的獨特呈現方式（先喝一口氣泡酒清潔味蕾，再喝主酒）迅速成為英國酒吧文化的現象級飲品。2018 年的調查顯示它已超越 Mojito 成為英國最受歡迎的雞尾酒。Ankrah 在 2021 年不幸離世，但他的創作繼續征服全世界。",
+    "origin": "London, 2002",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "passion fruit",
+        "vanilla",
+        "citrus"
+      ],
+      "acid": 0.5,
+      "sweet": 0.55,
+      "bitter": 0.05,
+      "punch": 0.5,
+      "description": "百香果的濃郁熱帶酸甜在香草的溫柔甜韻中綻放，萊姆提供清爽骨架，Prosecco Sidecar 的氣泡為整體體驗增添節慶感。"
+    },
+    "glassImage": "🍸",
+    "tips": "百香果泥的品質決定一切——最好用新鮮百香果現挖，或使用冷凍百香果泥。香草糖漿可以自製（香草莢加糖水煮）。Prosecco Sidecar 是這杯酒不可分割的一部分，不要省略——先喝一口氣泡酒，再喝主酒，感受風味的對比和變化。漂浮在表面的半顆百香果既是裝飾也是風味來源。",
+    "pairings": [
+      "百香果起司蛋糕",
+      "芒果糯米飯",
+      "烤蝦佐熱帶莎莎",
+      "馬卡龍拼盤"
+    ]
+  },
+  {
+    "id": "penicillin-okinawa",
+    "slug": "penicillin-okinawa",
+    "type": "classic",
+    "nameEn": "Penicillin (Okinawa Variation)",
+    "nameZh": "盤尼西林（沖繩變奏）",
+    "method": "shake",
+    "glassType": "rocks_glass",
+    "difficulty": 3,
+    "balanceScore": 93.0,
+    "grade": "A",
+    "description": "A Japanese twist on the modern classic. Nikka whisky, honey-ginger, lemon, and a Laphroaig float — East meets peat.",
+    "descriptionZh": "現代經典的日式變奏。Nikka 威士忌、蜂蜜薑汁、檸檬與 Laphroaig 漂浮——東方遇上泥煤。",
+    "ingredients": [
+      {
+        "slug": "nikka-coffey-grain",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "honey-syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lemon-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "ginger-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "slug": "laphroaig-scotch",
+        "amount": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Shaker 中加入足量冰塊。",
+      "量入日本威士忌 2 oz、蜂蜜糖漿 ¾ oz、檸檬汁 ¾ oz、薑汁糖漿 ¼ oz。",
+      "用力搖盪 12-15 秒至充分冷卻。",
+      "雙重過濾倒入放有大冰塊的 Rocks Glass。",
+      "用吧匙背面將 Laphroaig ¼ oz 輕輕漂浮在表面。",
+      "以糖漬薑片裝飾。"
+    ],
+    "garnish": "糖漬薑片（Candied Ginger）",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "whisky",
+      "advanced"
+    ],
+    "iba": false,
+    "story": "盤尼西林由紐約 Milk & Honey 的 Sam Ross 在 2005 年創作，被譽為二十一世紀最偉大的新經典雞尾酒。原版使用調和蘇格蘭威士忌搭配 Islay 單一麥芽漂浮。這個沖繩變奏版本以日本威士忌（如 Nikka Coffey Grain）取代調和蘇格蘭，其柔順細膩的質地與蜂蜜薑汁的搭配帶來了更優雅的東方風韻，同時保留 Laphroaig 的泥煤煙燻漂浮作為點睛之筆。名為「沖繩」是致敬日本威士忌產業將蘇格蘭傳統與東方美學融合的精神，如同這杯酒本身——東方的柔與西方的烈，在杯中找到了完美的平衡。",
+    "origin": "New York, 2005 (variation)",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "honey",
+        "ginger",
+        "peat smoke"
+      ],
+      "acid": 0.6,
+      "sweet": 0.45,
+      "bitter": 0.15,
+      "punch": 0.7,
+      "description": "蜂蜜的溫潤甜度與薑的辛辣暖意交融，日本威士忌的柔順細膩在中段展開，Laphroaig 漂浮的泥煤煙燻在表面如狼煙般升起，每一口都先感受煙燻再進入甜蜜。"
+    },
+    "glassImage": "🥃",
+    "tips": "Laphroaig 的漂浮是這杯酒的靈魂——它的泥煤煙燻香氣在你舉杯時直衝鼻腔，為整體風味增添了煙燻維度。薑汁糖漿可以自製（鮮薑汁與糖 1:1 混合），比市售的風味更鮮明。日本威士忌的選擇要柔順細膩，讓它與蜂蜜薑汁自然融合，不要選太強勢的。",
+    "pairings": [
+      "薑汁燒豬肉",
+      "味噌烤鱈魚",
+      "蜂蜜柚子蛋糕",
+      "煙燻鰻魚壽司"
+    ]
+  },
+  {
+    "id": "negroni-sbagliato",
+    "slug": "negroni-sbagliato",
+    "type": "classic",
+    "nameEn": "Negroni Sbagliato",
+    "nameZh": "錯誤的尼格羅尼",
+    "method": "build",
+    "glassType": "rocks_glass",
+    "difficulty": 1,
+    "balanceScore": 87.0,
+    "grade": "B",
+    "description": "The happy accident. Campari, sweet vermouth, and prosecco instead of gin — lighter, bubblier, equally bitter-sweet.",
+    "descriptionZh": "美麗的錯誤。Campari、甜香艾酒與氣泡酒取代琴酒——更輕盈、更多氣泡、同樣苦甜。",
+    "ingredients": [
+      {
+        "slug": "campari",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "sweet-vermouth",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "prosecco",
+        "amount": 1.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Rocks Glass 中放入大冰塊。",
+      "倒入 Campari 1 oz。",
+      "加入甜香艾酒 1 oz。",
+      "輕輕攪拌混合。",
+      "注入冰鎮的 Prosecco 約 1½ oz。",
+      "再輕輕攪拌一次。",
+      "以橙片裝飾。"
+    ],
+    "garnish": "橙片（Orange Slice）",
+    "tags": [
+      "classic",
+      "build",
+      "campari",
+      "beginner"
+    ],
+    "iba": true,
+    "story": "Negroni Sbagliato（義大利語「sbagliato」意為「錯誤的」）誕生於 1972 年米蘭的 Bar Basso，調酒師 Mirko Stocchetto 在忙碌中不小心拿了一瓶氣泡酒而非琴酒——這個美麗的錯誤創造了一杯全新的經典。Bar Basso 至今仍以超大號的 Negroni Sbagliato 聞名於世。2022 年，演員 Emma D'Arcy 在一段採訪中被問到最喜歡的飲品時回答「Negroni Sbagliato... with prosecco in it」，這段影片在 TikTok 上爆紅，讓這杯酒在全球的搜索量暴增 7,400%，成為當年最具病毒傳播力的雞尾酒時刻。",
+    "origin": "Milan, 1972",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "bitter orange",
+        "herbal",
+        "effervescent"
+      ],
+      "acid": 0.15,
+      "sweet": 0.4,
+      "bitter": 0.6,
+      "punch": 0.35,
+      "description": "Campari 的苦橙風味依然主導，但 Prosecco 的氣泡讓一切變得更輕盈活潑，甜香艾酒的草本甜韻在苦與甜之間建立橋樑。"
+    },
+    "glassImage": "🥃",
+    "tips": "Prosecco 要在最後加入且動作輕柔，保持氣泡活力。不要過度攪拌——一兩次輕柔的翻攪就足夠。這杯酒的酒精度比標準 Negroni 低得多，適合作為餐前開胃飲。選用品質好的乾型（Brut）Prosecco，過甜的會失去苦甜平衡。",
+    "pairings": [
+      "義式開胃小點",
+      "帕瑪火腿配蜜瓜",
+      "橄欖與堅果",
+      "義式 Bruschetta"
+    ]
+  },
+  {
+    "id": "espresso-martini",
+    "slug": "espresso-martini",
+    "type": "classic",
+    "nameEn": "Espresso Martini",
+    "nameZh": "濃縮咖啡馬丁尼",
+    "method": "shake",
+    "glassType": "martini",
+    "difficulty": 2,
+    "balanceScore": 90.0,
+    "grade": "A",
+    "description": "The world's most glamorous pick-me-up. Vodka, Kahlúa, and fresh espresso — when you want to stay awake and party.",
+    "descriptionZh": "世界上最華麗的提神飲品。伏特加、卡魯哇與新鮮濃縮咖啡——當你想保持清醒繼續狂歡時。",
+    "ingredients": [
+      {
+        "slug": "titos-vodka",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "kahlua",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "espresso",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "simple-syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "先製作一份新鮮的 Espresso 並稍微放涼（不需要完全冷卻）。",
+      "在 Shaker 中加入足量冰塊。",
+      "量入伏特加 2 oz、Kahlúa ½ oz、Espresso 1 oz、糖漿 ¼ oz。",
+      "非常用力地搖盪 15 秒——比平常更用力，以產生綿密的 Crema 泡沫。",
+      "雙重過濾倒入冷藏的 Martini Glass。",
+      "以三顆咖啡豆裝飾在泡沫上。"
+    ],
+    "garnish": "三顆咖啡豆（Three Coffee Beans）",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "vodka",
+      "intermediate"
+    ],
+    "iba": true,
+    "story": "濃縮咖啡馬丁尼由倫敦調酒傳奇 Dick Bradsell 在 1983 年的 Fred's Club 創作。傳說一位年輕的超級名模走到吧台前說：「給我一杯能讓我清醒、然後繼續瘋狂的東西。」（'Wake me up and then f**k me up.'）Bradsell 於是結合了當時 Fred's Club 新安裝的 Espresso 機和伏特加，創造了這杯劃時代的飲品。最初名為「Vodka Espresso」，後來改名為「Pharmaceutical Stimulant」，最後才定名為 Espresso Martini。Bradsell 同樣也是 Bramble 的發明者，被尊為英國現代調酒之父。這杯酒在 2020 年代經歷了爆發性的全球復興，成為社交媒體時代最上鏡的雞尾酒。",
+    "origin": "London, 1983",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "espresso",
+        "coffee",
+        "vanilla"
+      ],
+      "acid": 0.15,
+      "sweet": 0.35,
+      "bitter": 0.5,
+      "punch": 0.65,
+      "description": "新鮮 Espresso 的焦香苦韻主導，Kahlúa 的咖啡利口酒甜度柔化稜角，伏特加提供乾淨的酒精背景，表面的 Crema 泡沫帶來絲滑口感。"
+    },
+    "glassImage": "🍸",
+    "tips": "新鮮的 Espresso 是這杯酒的靈魂——絕對不要用即溶咖啡或冷萃咖啡，它們無法產生 Crema 泡沫。Espresso 最好在搖盪前幾分鐘製作，微溫的 Espresso 比完全冷卻的更容易產生泡沫。搖盪的力度要比平常大，目標是讓咖啡的天然油脂和蛋白質形成綿密持久的泡沫層。三顆咖啡豆的裝飾代表健康、財富和幸福。",
+    "pairings": [
+      "提拉米蘇",
+      "黑巧克力松露",
+      "焦糖堅果布朗尼",
+      "義式脆餅（Biscotti）"
+    ]
+  },
+  {
+    "id": "chartreuse-swizzle",
+    "slug": "chartreuse-swizzle",
+    "type": "classic",
+    "nameEn": "Chartreuse Swizzle",
+    "nameZh": "夏翠絲旋轉",
+    "method": "shake",
+    "glassType": "highball",
+    "difficulty": 3,
+    "balanceScore": 89.0,
+    "grade": "A",
+    "description": "Green Chartreuse as the star. Pineapple, lime, and falernum support the 130-herb monastic liqueur in a frosty swizzle.",
+    "descriptionZh": "綠色夏翠絲獨挑大樑。鳳梨、萊姆與法勒南為這款 130 種草本修道院利口酒打造冰霜旋轉。",
+    "ingredients": [
+      {
+        "slug": "green-chartreuse",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "slug": "pineapple-juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "slug": "fresh-lime-juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "slug": "falernum",
+        "amount": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "steps": [
+      "在 Highball Glass 中加入所有材料。",
+      "填入碎冰至杯子三分之二滿。",
+      "使用 Swizzle Stick（或吧匙）快速旋轉攪拌，直到杯壁結霜。",
+      "再堆上碎冰至杯口。",
+      "以新鮮薄荷枝和現磨肉豆蔻裝飾。"
+    ],
+    "garnish": "薄荷枝與現磨肉豆蔻（Mint Sprig & Freshly Grated Nutmeg）",
+    "tags": [
+      "modern-classic",
+      "shaken",
+      "chartreuse",
+      "advanced"
+    ],
+    "iba": false,
+    "story": "夏翠絲旋轉由舊金山 Clock Bar 的調酒師 Marcovaldo Dionysos 在 2000 年代中期創作，是現代精品雞尾酒運動中最具創意的作品之一。它大膽地將綠色夏翠絲——這種由法國阿爾卑斯山 Grande Chartreuse 修道院的卡爾特修會修士釀造的利口酒——從配角推上了主角位置。綠色夏翠絲的配方包含 130 種草本植物，自 1737 年以來配方始終保密，全世界只有兩位修士知道完整配方。Falernum 的加勒比海辛香與鳳梨的熱帶甜美巧妙地馴服了夏翠絲的強勢草本風味，Swizzle 的碎冰呈現方式讓這杯酒同時具有提基的趣味和修道院的神秘。",
+    "origin": "San Francisco, 2000s",
+    "flavorProfile": {
+      "primaryFlavors": [
+        "herbal",
+        "pineapple",
+        "spice"
+      ],
+      "acid": 0.5,
+      "sweet": 0.4,
+      "bitter": 0.4,
+      "punch": 0.65,
+      "description": "綠色夏翠絲的 130 種草本風味如森林般在口中展開，鳳梨的熱帶甜美和 Falernum 的丁香肉桂在中段柔化草本的強勢，萊姆酸度讓一切保持清爽。"
+    },
+    "glassImage": "🥤",
+    "tips": "Swizzle 的技巧是關鍵——將 Swizzle Stick 的分叉端插入碎冰中，用雙手快速搓動旋轉，直到杯壁出現霜層。如果沒有 Swizzle Stick，可以用長吧匙代替。碎冰要夠碎夠多，形成冰霜效果。現磨肉豆蔻的芳香是點睛之筆，不要省略。綠色夏翠絲的酒精度高達 55%，雖然被稀釋了，但這杯酒仍然不弱。",
+    "pairings": [
+      "草本烤雞",
+      "鳳梨薄荷沙拉",
+      "加勒比海辣蝦",
+      "肉桂蘋果酥"
+    ]
+  }
+]

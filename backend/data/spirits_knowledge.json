@@ -1,0 +1,819 @@
+{
+  "spirits": [
+    {
+      "id": "gin",
+      "nameEn": "Gin",
+      "nameZh": "琴酒",
+      "origin": "荷蘭（Genever 前身）→ 英國倫敦乾式琴酒（London Dry Gin）",
+      "description": "以中性烈酒為基底，透過杜松子（Juniper Berry）及多種植物香料（Botanicals）蒸餾而成的芳香型烈酒。從 17 世紀荷蘭藥用酒演變為英國國民酒，再到當代精釀琴酒革命，琴酒是調酒世界最百搭的基酒。",
+      "abvRange": "37.5%–50%",
+      "productionProcess": [
+        "選擇高純度中性基底烈酒（通常為穀物蒸餾）",
+        "準備植物配方（Botanical Recipe）：杜松子為必要，搭配芫荽籽、當歸根、鳶尾根、柑橘皮等",
+        "蒸餾法：浸泡蒸餾（Steep & Boil）或蒸氣萃取（Vapour Infusion）",
+        "調和稀釋至裝瓶酒精度",
+        "部分品牌會進行短期靜置熟成"
+      ],
+      "styles": [
+        {
+          "name": "London Dry Gin",
+          "nameZh": "倫敦乾式琴酒",
+          "description": "最經典風格，杜松子主導，不添加人工香料，蒸餾後不加糖。代表：Tanqueray、Beefeater"
+        },
+        {
+          "name": "Plymouth Gin",
+          "nameZh": "普利茅斯琴酒",
+          "description": "僅限 Plymouth 產區，口感較圓潤柔和，地理標示保護（GI）"
+        },
+        {
+          "name": "Old Tom Gin",
+          "nameZh": "老湯姆琴酒",
+          "description": "微甜風格，介於 Genever 與 London Dry 之間，Tom Collins 的靈魂"
+        },
+        {
+          "name": "New Western Gin",
+          "nameZh": "新式西方琴酒",
+          "description": "杜松子不再主導，強調獨特植物配方，代表：Hendrick's（黃瓜玫瑰）、Roku（櫻花）"
+        },
+        {
+          "name": "Navy Strength Gin",
+          "nameZh": "海軍強度琴酒",
+          "description": "ABV ≥ 57%，源自英國皇家海軍規定，即使灑到火藥仍可點燃"
+        }
+      ],
+      "classicCocktails": [
+        "Gin & Tonic",
+        "Negroni",
+        "Martini",
+        "Gimlet",
+        "Last Word",
+        "Aviation",
+        "Tom Collins",
+        "Bee's Knees"
+      ],
+      "buyingGuide": "入門推薦 Tanqueray 或 Beefeater（經典杜松子風格），進階嘗試 Hendrick's（花香路線）或 Monkey 47（複雜植物譜）。",
+      "funFacts": [
+        "倫敦琴酒熱潮（Gin Craze, 1720-1751）導致英國立法限制琴酒銷售",
+        "Gin & Tonic 源自英國殖民印度時，用琴酒掩蓋奎寧水的苦味以防瘧疾",
+        "全球精釀琴酒品牌已超過 6000 個"
+      ]
+    },
+    {
+      "id": "vodka",
+      "nameEn": "Vodka",
+      "nameZh": "伏特加",
+      "origin": "波蘭/俄羅斯（起源爭議至今）",
+      "description": "以穀物、馬鈴薯或葡萄等原料蒸餾、過濾至高度純淨的中性烈酒。伏特加的靈魂在於純粹與乾淨，它是全球銷量最大的烈酒類別，也是最versatile的調酒基酒。",
+      "abvRange": "37.5%–50%",
+      "productionProcess": [
+        "選擇原料：穀物（小麥、裸麥）、馬鈴薯、葡萄等",
+        "糖化與發酵：將澱粉轉化為糖，再由酵母發酵為酒精",
+        "連續蒸餾（Column Still）：多次蒸餾達到 95%+ ABV",
+        "活性炭過濾（Charcoal Filtration）：去除雜質與雜醇",
+        "稀釋至裝瓶酒精度，部分品牌加入微量添加劑"
+      ],
+      "styles": [
+        {
+          "name": "Grain Vodka",
+          "nameZh": "穀物伏特加",
+          "description": "小麥基底清爽圓潤，裸麥基底帶辛辣尾韻。代表：Grey Goose（小麥）、Belvedere（裸麥）"
+        },
+        {
+          "name": "Potato Vodka",
+          "nameZh": "馬鈴薯伏特加",
+          "description": "口感醇厚油潤，質地明顯。代表：Chopin、Luksusowa"
+        },
+        {
+          "name": "Grape Vodka",
+          "nameZh": "葡萄伏特加",
+          "description": "果香柔和，口感滑順。代表：Cîroc"
+        },
+        {
+          "name": "Flavored Vodka",
+          "nameZh": "風味伏特加",
+          "description": "浸泡或蒸餾加入水果、香料等風味，代表：Absolut Citron"
+        }
+      ],
+      "classicCocktails": [
+        "Moscow Mule",
+        "Martini（Vodka版）",
+        "Cosmopolitan",
+        "Bloody Mary",
+        "White Russian",
+        "Espresso Martini",
+        "Harvey Wallbanger"
+      ],
+      "buyingGuide": "入門推薦 Absolut 或 Smirnoff（穩定品質），中階嘗試 Belvedere 或 Grey Goose，體驗不同基底差異選 Chopin（馬鈴薯）或 Cîroc（葡萄）。",
+      "funFacts": [
+        "俄語 'vodka' 意為「小水」（little water）",
+        "伏特加在俄羅斯曾被當作貨幣使用",
+        "門得列夫（發明元素周期表的化學家）曾研究伏特加的最佳酒精濃度"
+      ]
+    },
+    {
+      "id": "rum",
+      "nameEn": "Rum",
+      "nameZh": "蘭姆酒",
+      "origin": "加勒比海地區（巴貝多、牙買加、古巴）",
+      "description": "以甘蔗汁或糖蜜（Molasses）為原料，經發酵蒸餾而成的烈酒。蘭姆酒承載了加勒比海的陽光與殖民歷史，從海盜的粗獷配給到 Tiki 文化的華麗調酒，風味光譜極其寬廣。",
+      "abvRange": "37.5%–75%+（Overproof）",
+      "productionProcess": [
+        "原料處理：糖蜜（Industrial Rum）或新鮮甘蔗汁（Rhum Agricole）",
+        "發酵：快速發酵（清爽風格）或慢速發酵（酯類豐富，如 Jamaican Funk）",
+        "蒸餾：壺式蒸餾（風味濃郁）或柱式蒸餾（清爽純淨）",
+        "陳年：多數使用美國波本桶，熱帶氣候加速熟成（天使的分享高達 6-10%/年）",
+        "調和與裝瓶"
+      ],
+      "styles": [
+        {
+          "name": "White/Silver Rum",
+          "nameZh": "白蘭姆",
+          "description": "未陳年或短期陳年後過濾，清爽適合調酒。代表：Bacardi Superior、Havana Club 3"
+        },
+        {
+          "name": "Gold/Amber Rum",
+          "nameZh": "金蘭姆",
+          "description": "短期桶陳，帶香草焦糖調。代表：Mount Gay Eclipse"
+        },
+        {
+          "name": "Dark/Aged Rum",
+          "nameZh": "陳年黑蘭姆",
+          "description": "長期桶陳，複雜深沉。代表：Appleton 12、Zacapa 23"
+        },
+        {
+          "name": "Rhum Agricole",
+          "nameZh": "農業蘭姆",
+          "description": "法屬加勒比，新鮮甘蔗汁蒸餾，AOC 規範。代表：Clément、Rhum J.M"
+        },
+        {
+          "name": "Overproof Rum",
+          "nameZh": "超高濃度蘭姆",
+          "description": "ABV > 57.5%，Tiki 調酒必備。代表：Wray & Nephew 63%"
+        },
+        {
+          "name": "Spiced Rum",
+          "nameZh": "香料蘭姆",
+          "description": "添加香草、肉桂、丁香等香料。代表：Sailor Jerry、Kraken"
+        }
+      ],
+      "classicCocktails": [
+        "Daiquiri",
+        "Mojito",
+        "Mai Tai",
+        "Piña Colada",
+        "Dark 'n' Stormy",
+        "Zombie",
+        "Rum Punch"
+      ],
+      "buyingGuide": "白蘭姆入門：Bacardi 或 Havana Club 3。陳年蘭姆純飲：Appleton 12 或 Diplomatico Reserva。Tiki 調酒必備：Smith & Cross（高酯）+ Wray & Nephew（Overproof）。",
+      "funFacts": [
+        "英國皇家海軍每日配給蘭姆酒（Tot）直到 1970 年才取消",
+        "Jamaican Rum 的 'Funk' 來自高酯發酵，酯類含量可達其他蘭姆的 10 倍",
+        "加勒比海的天使分享（Angel's Share）是蘇格蘭的 3-5 倍"
+      ]
+    },
+    {
+      "id": "tequila-mezcal",
+      "nameEn": "Tequila & Mezcal",
+      "nameZh": "龍舌蘭與梅斯卡爾",
+      "origin": "墨西哥（哈利斯科州為龍舌蘭核心產區，瓦哈卡州為梅斯卡爾重鎮）",
+      "description": "龍舌蘭（Tequila）專用藍色龍舌蘭（Blue Weber Agave），梅斯卡爾（Mezcal）可使用 30+ 種龍舌蘭屬植物。前者是精緻現代的代表，後者保留了傳統煙燻土坑烘烤的原始風味。",
+      "abvRange": "35%–55%",
+      "productionProcess": [
+        "收割：Jimador 手工砍下成熟龍舌蘭心（Piña），需 6-12 年生長",
+        "烘烤：龍舌蘭用磚造烤爐（Autoclave），梅斯卡爾傳統用地下土坑（Pit Oven）",
+        "榨汁：傳統用火山石磨（Tahona），現代用機械壓榨",
+        "發酵：開放式木桶或不鏽鋼桶，天然或商業酵母",
+        "蒸餾：銅壺蒸餾兩次（部分梅斯卡爾使用陶土蒸餾器）",
+        "分級：Blanco（未陳年）、Reposado（2-12月）、Añejo（1-3年）、Extra Añejo（3年+）"
+      ],
+      "styles": [
+        {
+          "name": "Blanco/Silver",
+          "nameZh": "銀標（未陳年）",
+          "description": "蒸餾後直接裝瓶或靜置 < 2 月，最純粹的龍舌蘭風味"
+        },
+        {
+          "name": "Reposado",
+          "nameZh": "微陳年",
+          "description": "橡木桶陳年 2-12 個月，柔化口感，帶輕微木質調"
+        },
+        {
+          "name": "Añejo",
+          "nameZh": "陳年",
+          "description": "桶陳 1-3 年，豐富香草、焦糖風味，適合純飲"
+        },
+        {
+          "name": "Extra Añejo",
+          "nameZh": "特陳",
+          "description": "桶陳 3 年以上，2006 年新增的頂級分類"
+        },
+        {
+          "name": "Mezcal Joven",
+          "nameZh": "梅斯卡爾新酒",
+          "description": "未陳年，煙燻風味最鮮明，蟲子是 Mezcal de Gusano 的標誌"
+        },
+        {
+          "name": "Cristalino",
+          "nameZh": "水晶龍舌蘭",
+          "description": "陳年後用活性炭過濾去色，保留桶陳風味但外觀透明"
+        }
+      ],
+      "classicCocktails": [
+        "Margarita",
+        "Paloma",
+        "Tequila Sunrise",
+        "Tommy's Margarita",
+        "Oaxaca Old Fashioned（Mezcal）",
+        "Naked & Famous"
+      ],
+      "buyingGuide": "入門龍舌蘭推薦 El Jimador Blanco 或 Espolòn。中階：Fortaleza Blanco（傳統 Tahona 製法）。梅斯卡爾入門：Del Maguey Vida。高階純飲：Clase Azul Reposado。",
+      "funFacts": [
+        "一株藍色龍舌蘭需要 6-8 年才能成熟採收",
+        "「Tequila」是受墨西哥法律保護的地理標示（DO）",
+        "梅斯卡爾瓶中的蟲其實是蛾類幼蟲（Gusano），非所有梅斯卡爾都有"
+      ]
+    },
+    {
+      "id": "whisky",
+      "nameEn": "Whisky / Whiskey",
+      "nameZh": "威士忌",
+      "origin": "蘇格蘭、愛爾蘭（起源爭議），後擴展至美國、日本、台灣等全球產區",
+      "description": "以穀物（大麥、玉米、裸麥、小麥）為原料，經糖化、發酵、蒸餾、橡木桶陳年而成的烈酒。威士忌是全球最複雜的烈酒類別，從蘇格蘭的泥煤煙燻到肯塔基的焦糖甜玉米，每一滴都承載著風土與時間的故事。",
+      "abvRange": "40%–65%（Cask Strength）",
+      "productionProcess": [
+        "發麥（Malting）：大麥浸水發芽啟動酵素，再用泥煤或熱風乾燥終止",
+        "糖化（Mashing）：磨碎麥芽加入熱水，酵素將澱粉轉化為糖",
+        "發酵（Fermentation）：麥汁加入酵母，在 Washback 中發酵 48-96 小時",
+        "蒸餾（Distillation）：蘇格蘭用銅壺蒸餾兩次（部分艾雷島三次），波本用柱式蒸餾",
+        "陳年（Maturation）：在橡木桶中最少 3 年（蘇格蘭法規），波本需使用全新燒烤美國白橡木桶",
+        "調和或單桶裝瓶"
+      ],
+      "styles": [
+        {
+          "name": "Single Malt Scotch",
+          "nameZh": "蘇格蘭單一麥芽",
+          "description": "單一酒廠、100% 大麥麥芽，蘇格蘭最高殿堂。五大產區：Speyside、Highland、Islay、Lowland、Campbeltown"
+        },
+        {
+          "name": "Blended Scotch",
+          "nameZh": "蘇格蘭調和威士忌",
+          "description": "混合多家酒廠的麥芽與穀物威士忌。代表：Johnnie Walker、Chivas"
+        },
+        {
+          "name": "Bourbon",
+          "nameZh": "波本威士忌",
+          "description": "美國肯塔基，玉米 ≥ 51%，全新燒烤橡木桶，甜美焦糖調。代表：Maker's Mark、Woodford Reserve"
+        },
+        {
+          "name": "Rye Whiskey",
+          "nameZh": "裸麥威士忌",
+          "description": "裸麥 ≥ 51%，辛辣乾爽，經典雞尾酒（Manhattan, Old Fashioned）的首選"
+        },
+        {
+          "name": "Japanese Whisky",
+          "nameZh": "日本威士忌",
+          "description": "師承蘇格蘭，注重精緻與平衡。代表：山崎、白州、余市、響"
+        },
+        {
+          "name": "Irish Whiskey",
+          "nameZh": "愛爾蘭威士忌",
+          "description": "三次蒸餾，口感柔順輕盈。代表：Jameson、Redbreast"
+        }
+      ],
+      "classicCocktails": [
+        "Old Fashioned",
+        "Manhattan",
+        "Whiskey Sour",
+        "Mint Julep",
+        "Rob Roy",
+        "Penicillin",
+        "Sazerac（Rye）",
+        "Rusty Nail"
+      ],
+      "buyingGuide": "蘇格蘭入門：Glenfiddich 12（Speyside 花果香）。艾雷島泥煤入門：Laphroaig 10。波本入門：Buffalo Trace。日威入門：角（Kakubin）Highball。",
+      "funFacts": [
+        "蘇格蘭有超過 130 家運營中的蒸餾廠",
+        "威士忌在桶中每年蒸發 1-2%（天使的分享）",
+        "日本威士忌之父竹鶴政孝在蘇格蘭學藝後創立余市蒸餾所"
+      ]
+    },
+    {
+      "id": "brandy-cognac",
+      "nameEn": "Brandy & Cognac",
+      "nameZh": "白蘭地與干邑",
+      "origin": "法國干邑區（Cognac）、雅馬邑（Armagnac），以及全球各產區",
+      "description": "將葡萄酒（或其他水果酒）蒸餾並橡木桶陳年的烈酒。干邑是白蘭地中的皇冠，受 AOC 法規嚴格保護，只有在法國干邑產區以特定方式生產的白蘭地才能稱為 Cognac。",
+      "abvRange": "40%–60%",
+      "productionProcess": [
+        "釀造基酒：使用高酸度低酒精的白葡萄酒（Ugni Blanc 為主）",
+        "雙次壺式蒸餾（Charentais Alembic）：第一次蒸餾得到 Brouillis（約 30%），第二次得到 Bonne Chauffe（約 70%）",
+        "陳年：法國利穆贊（Limousin）或特宏塞（Tronçais）橡木桶，至少 2 年",
+        "調配大師（Maître de Chai）調和不同年份的生命之水（Eaux-de-vie）",
+        "加水稀釋、焦糖調色（合法添加）、裝瓶"
+      ],
+      "styles": [
+        {
+          "name": "VS (Very Special)",
+          "nameZh": "VS 干邑",
+          "description": "最年輕成分陳年至少 2 年，果香鮮明。代表：Hennessy VS"
+        },
+        {
+          "name": "VSOP (Very Superior Old Pale)",
+          "nameZh": "VSOP 干邑",
+          "description": "最年輕成分陳年至少 4 年，柔和複雜。代表：Rémy Martin VSOP"
+        },
+        {
+          "name": "XO (Extra Old)",
+          "nameZh": "XO 干邑",
+          "description": "最年輕成分陳年至少 10 年（2018 年起），極致濃郁。代表：Hennessy XO"
+        },
+        {
+          "name": "Armagnac",
+          "nameZh": "雅馬邑",
+          "description": "法國加斯科涅地區，單次柱式蒸餾，風格較粗獷豪邁。代表：Delord、Dartigalongue"
+        },
+        {
+          "name": "Pisco",
+          "nameZh": "皮斯可",
+          "description": "秘魯/智利的葡萄白蘭地，不經橡木桶陳年，保留葡萄原始風味"
+        },
+        {
+          "name": "Calvados",
+          "nameZh": "卡爾瓦多斯",
+          "description": "法國諾曼第的蘋果白蘭地，AOC 保護"
+        }
+      ],
+      "classicCocktails": [
+        "Sidecar",
+        "Brandy Alexander",
+        "Vieux Carré",
+        "Sazerac（原始版）",
+        "Pisco Sour",
+        "French Connection"
+      ],
+      "buyingGuide": "干邑入門：Hennessy VS 或 Courvoisier VS（調酒用）。純飲入門：Rémy Martin VSOP。進階體驗：Pierre Ferrand 1840（調酒師最愛）。雅馬邑：Delord 系列性價比極高。",
+      "funFacts": [
+        "干邑的六大產區中，Grande Champagne 和 Petite Champagne 產出最優質的生命之水",
+        "拿破崙是干邑的著名愛好者，「Napoleon」等級因此得名",
+        "雅馬邑是法國最古老的白蘭地產區，歷史比干邑更久"
+      ]
+    },
+    {
+      "id": "absinthe",
+      "nameEn": "Absinthe",
+      "nameZh": "苦艾酒",
+      "origin": "瑞士 Val-de-Travers → 法國（19 世紀黃金時期）",
+      "description": "以大茴香、苦艾草（Artemisia absinthium）和甜茴香為核心香料，加上眾多草本植物蒸餾而成的高度烈酒。19 世紀巴黎波希米亞文化的象徵，曾被禁長達近一世紀（1915-2007），如今已重新合法。",
+      "abvRange": "45%–74%",
+      "productionProcess": [
+        "浸泡草本植物於高度中性烈酒中",
+        "蒸餾萃取：只保留透明的心段（Hearts）",
+        "著色（可選）：以小茴香、蒲公英等植物自然染成翠綠色",
+        "稀釋與熟成（部分品牌）",
+        "裝瓶（不過濾，保留植物油脂以產生 Louche 效應）"
+      ],
+      "styles": [
+        {
+          "name": "Verte (Green)",
+          "nameZh": "綠苦艾",
+          "description": "傳統風格，天然植物著色呈翠綠。代表：Pernod Absinthe"
+        },
+        {
+          "name": "Blanche (White)",
+          "nameZh": "白苦艾",
+          "description": "未經著色的透明版本，也稱 La Bleue。代表：Kübler"
+        },
+        {
+          "name": "Bohemian/Czech Style",
+          "nameZh": "波希米亞風格",
+          "description": "通常苦艾草含量較高，配合火焰儀式（非傳統做法）"
+        }
+      ],
+      "classicCocktails": [
+        "Sazerac",
+        "Corpse Reviver #2",
+        "Death in the Afternoon（海明威）",
+        "Absinthe Frappé"
+      ],
+      "buyingGuide": "傳統法式風格：Pernod Absinthe 或 St. George Absinthe Verte。瑞士風格：Kübler。調酒用少量 Rinse：任何品質尚可的 Absinthe 皆可。",
+      "funFacts": [
+        "加水後變混濁的「Louche 效應」是因為茴香腦（Anethole）遇水析出微粒",
+        "梵谷、王爾德、海明威都是苦艾酒的著名愛好者",
+        "苦艾酒的致幻傳說源自苦艾草中的側柏酮（Thujone），但現代研究證實合法含量完全安全"
+      ]
+    },
+    {
+      "id": "cachaca",
+      "nameEn": "Cachaça",
+      "nameZh": "卡夏莎",
+      "origin": "巴西",
+      "description": "巴西國酒，以新鮮甘蔗汁直接發酵蒸餾而成（非糖蜜），與法屬加勒比的 Rhum Agricole 是近親。2013 年獲美國官方承認為獨立烈酒類別（非蘭姆酒的子類）。",
+      "abvRange": "38%–48%",
+      "productionProcess": [
+        "壓榨新鮮甘蔗取汁（必須在 24 小時內使用）",
+        "自然發酵：使用野生酵母或傳統酵母菌種",
+        "蒸餾：銅壺蒸餾（Alembique）或柱式蒸餾",
+        "陳年（可選）：巴西原生木桶（Amburana、Jequitibá）或橡木桶",
+        "分級：Prata/Branca（白色/未陳年）、Ouro/Envelhecida（金色/陳年）"
+      ],
+      "styles": [
+        {
+          "name": "Prata (Silver)",
+          "nameZh": "銀卡夏莎",
+          "description": "未陳年，清爽甘蔗風味，Caipirinha 的靈魂"
+        },
+        {
+          "name": "Ouro (Gold)",
+          "nameZh": "金卡夏莎",
+          "description": "橡木桶或巴西原生木桶陳年，風味豐富適合純飲"
+        },
+        {
+          "name": "Extra Premium",
+          "nameZh": "頂級陳年",
+          "description": "陳年 3 年以上，部分使用 Amburana 木桶帶出獨特肉桂香草調"
+        }
+      ],
+      "classicCocktails": [
+        "Caipirinha",
+        "Batida",
+        "Rabo de Galo"
+      ],
+      "buyingGuide": "調酒入門：Leblon 或 Novo Fogo Silver。純飲體驗：Avuá Amburana（獨特巴西木桶）。",
+      "funFacts": [
+        "巴西每年消費超過 15 億公升卡夏莎",
+        "Caipirinha 是巴西官方國家雞尾酒",
+        "高品質卡夏莎使用銅壺蒸餾並僅取酒心（Coração）"
+      ]
+    }
+  ],
+  "distillation": {
+    "methods": [
+      {
+        "name": "Pot Still Distillation",
+        "nameZh": "壺式蒸餾",
+        "description": "最古老的蒸餾方式，使用銅製壺型蒸餾器（Alembic/Pot Still），每批次獨立蒸餾。銅壺的形狀（高矮胖瘦）直接影響蒸餾液的風格——高瘦壺產出輕盈酒體，矮胖壺保留更多濃郁風味。",
+        "characteristics": [
+          "批次生產",
+          "保留更多風味同族物",
+          "酒體醇厚",
+          "需要技術性的切割（Cuts）"
+        ],
+        "usedFor": [
+          "單一麥芽威士忌",
+          "干邑白蘭地",
+          "部分蘭姆酒",
+          "梅斯卡爾"
+        ]
+      },
+      {
+        "name": "Column Still Distillation",
+        "nameZh": "柱式蒸餾（連續蒸餾）",
+        "description": "也稱 Coffey Still 或 Patent Still，由 Aeneas Coffey 於 1831 年改良。可連續進料連續產出，效率極高，能達到 95%+ 的酒精純度。",
+        "characteristics": [
+          "連續生產",
+          "高純度（可達 96% ABV）",
+          "酒體較輕盈",
+          "成本效益高"
+        ],
+        "usedFor": [
+          "伏特加",
+          "穀物威士忌",
+          "白蘭姆酒",
+          "琴酒基底烈酒"
+        ]
+      },
+      {
+        "name": "Hybrid Still",
+        "nameZh": "混合式蒸餾器",
+        "description": "結合壺式與柱式的優點，在壺式蒸餾器上方加裝精餾柱（Rectification Column），讓蒸餾師可以靈活控制風味保留程度。",
+        "characteristics": [
+          "靈活度高",
+          "可調整回流量",
+          "精釀蒸餾廠常見",
+          "一次蒸餾可達所需純度"
+        ],
+        "usedFor": [
+          "精釀琴酒",
+          "新式威士忌",
+          "小批量烈酒"
+        ]
+      },
+      {
+        "name": "Vacuum Distillation",
+        "nameZh": "真空蒸餾",
+        "description": "在低壓環境下進行蒸餾，降低沸點以保留溫度敏感的香氣分子。常見於精釀琴酒和風味實驗。Rotary Evaporator（旋轉蒸發儀）是調酒 R&D 的利器。",
+        "characteristics": [
+          "低溫蒸餾（30-40°C）",
+          "極度保留香氣",
+          "設備昂貴",
+          "小批量實驗性生產"
+        ],
+        "usedFor": [
+          "實驗性琴酒",
+          "調酒用風味萃取",
+          "香水工業"
+        ]
+      }
+    ],
+    "concepts": [
+      {
+        "term": "Heads / Hearts / Tails",
+        "termZh": "酒頭 / 酒心 / 酒尾",
+        "description": "蒸餾液依序分為三段：酒頭含甲醇和揮發性雜質（丟棄），酒心是最純淨的精華（保留裝瓶），酒尾含高沸點雜醇油（部分回收再蒸餾）。切割點的判斷是蒸餾師的核心技藝。"
+      },
+      {
+        "term": "Proof / ABV",
+        "termZh": "酒度 / 酒精濃度",
+        "description": "ABV (Alcohol By Volume) 是國際標準：40% ABV = 酒精佔總體積 40%。Proof 是美國制：Proof = ABV × 2（80 proof = 40% ABV）。英國舊制 Proof 不同：100° UK proof ≈ 57.15% ABV。"
+      },
+      {
+        "term": "Angel's Share",
+        "termZh": "天使的分享",
+        "description": "陳年過程中蒸發流失的酒液。溫帶氣候（蘇格蘭）約 1-2%/年，熱帶氣候（加勒比海）可達 6-10%/年。這是為什麼同年份的熱帶陳年烈酒比蘇格蘭威士忌更加濃縮。"
+      },
+      {
+        "term": "Congeners",
+        "termZh": "同族物 / 雜質",
+        "description": "蒸餾過程中隨酒精一起被攜帶的風味化合物，包括酯類、醛類、高級醇類。壺式蒸餾保留更多同族物（風味豐富），柱式蒸餾去除更多（純淨輕盈）。同族物也是宿醉的主要原因之一。"
+      },
+      {
+        "term": "Wash / Mash",
+        "termZh": "酒醪 / 醪液",
+        "description": "蒸餾前的發酵液體。啤酒蒸餾威士忌時稱為 Wash（約 7-10% ABV），玉米醪液蒸餾波本時稱為 Mash（含固體穀物殘渣）。Sour Mash 是波本特有的技術——將上一批蒸餾的殘液加入新批次以維持 pH 穩定。"
+      },
+      {
+        "term": "Cuts / Feints",
+        "termZh": "切割 / 回收液",
+        "description": "蒸餾師決定何時開始收集酒心、何時停止的關鍵決策。Feints 是不合格的部分（酒頭+酒尾），可以回收加入下一批次重新蒸餾，不浪費任何原料。"
+      }
+    ]
+  },
+  "aging": {
+    "barrelTypes": [
+      {
+        "name": "American White Oak (Quercus alba)",
+        "nameZh": "美國白橡木",
+        "description": "最廣泛使用的桶材，香草、椰子、焦糖風味。波本必須使用全新美國白橡木桶。",
+        "flavorNotes": [
+          "香草",
+          "椰子",
+          "焦糖",
+          "奶油太妃"
+        ]
+      },
+      {
+        "name": "European Oak (Quercus robur)",
+        "nameZh": "歐洲橡木",
+        "description": "紋理較粗，單寧含量是美國橡木的 2-3 倍。Sherry 桶和法國橡木桶的主要材料。",
+        "flavorNotes": [
+          "肉桂",
+          "丁香",
+          "黑巧克力",
+          "乾果"
+        ]
+      },
+      {
+        "name": "Japanese Mizunara Oak",
+        "nameZh": "日本水楢木",
+        "description": "極稀有且昂貴，木質多孔易滲漏。賦予獨特的線香、檀木、東方香料風味，日本威士忌的秘密武器。",
+        "flavorNotes": [
+          "線香",
+          "檀木",
+          "椰子",
+          "東方香料"
+        ]
+      },
+      {
+        "name": "French Oak (Quercus petraea)",
+        "nameZh": "法國橡木",
+        "description": "紋理細密，干邑和葡萄酒的首選。利穆贊橡木偏粗獷（適合干邑），Allier/Tronçais 偏細緻（適合葡萄酒）。",
+        "flavorNotes": [
+          "香草（細緻）",
+          "烘焙香料",
+          "絲質單寧"
+        ]
+      },
+      {
+        "name": "Ex-Sherry Cask",
+        "nameZh": "雪莉桶",
+        "description": "裝過 Oloroso、PX（Pedro Ximénez）或 Fino 雪莉酒的歐洲橡木桶。蘇格蘭威士忌的經典過桶選擇。",
+        "flavorNotes": [
+          "乾果",
+          "堅果",
+          "黑巧克力",
+          "太妃糖"
+        ]
+      },
+      {
+        "name": "Ex-Bourbon Barrel",
+        "nameZh": "波本桶",
+        "description": "美國法規要求波本使用全新桶，使用一次後大量出口。蘇格蘭威士忌 90%+ 使用二手波本桶。",
+        "flavorNotes": [
+          "香草",
+          "蜂蜜",
+          "奶油",
+          "淡椰子"
+        ]
+      },
+      {
+        "name": "Ex-Wine Cask",
+        "nameZh": "葡萄酒桶",
+        "description": "紅酒桶（Bordeaux、Burgundy）、Port 桶、Madeira 桶等，用於 Finish（過桶熟成）。",
+        "flavorNotes": [
+          "莓果",
+          "紅色水果",
+          "巧克力",
+          "單寧"
+        ]
+      },
+      {
+        "name": "Amburana (Brazilian)",
+        "nameZh": "巴西 Amburana 木桶",
+        "description": "巴西原生樹種，賦予獨特的肉桂、香草、丁香風味，卡夏莎陳年的特色選擇。",
+        "flavorNotes": [
+          "肉桂",
+          "香草",
+          "丁香",
+          "杏仁"
+        ]
+      }
+    ],
+    "agingFactors": [
+      {
+        "factor": "Climate",
+        "factorZh": "氣候",
+        "description": "溫度波動越大，酒液與木桶的交互作用越活躍。肯塔基的四季溫差讓波本在 4-6 年就能達到蘇格蘭 12 年的桶味強度。"
+      },
+      {
+        "factor": "Barrel Size",
+        "factorZh": "桶型大小",
+        "description": "小桶（Quarter Cask, 125L）接觸面積大，加速熟成；大桶（Butt, 500L）慢熟但更細緻。標準波本桶為 200L（ASB），雪莉桶通常為 500L（Butt）或 250L（Hogshead）。"
+      },
+      {
+        "factor": "Warehouse Position",
+        "factorZh": "倉庫位置",
+        "description": "多層倉庫中，頂層溫度最高（天使分享最大，風味濃縮），底層溫度低（熟成慢，保留更多原酒特性）。"
+      },
+      {
+        "factor": "Char / Toast Level",
+        "factorZh": "碳化/烘烤程度",
+        "description": "No.1（15秒）到 No.4「Alligator Char」（55秒），碳化層越深，香草素和焦糖化合物越多。烘烤（Toast）比碳化（Char）溫和，產生更多烘焙和堅果風味。"
+      },
+      {
+        "factor": "Number of Fills",
+        "factorZh": "使用次數",
+        "description": "First-Fill 桶風味最強烈（主導桶味），Second-Fill 較柔和，Third-Fill+ 主要提供氧化熟成而非木桶風味。酒廠會策略性搭配不同 Fill 的桶來調和最終產品。"
+      }
+    ],
+    "finishingTechniques": [
+      {
+        "technique": "Double Wood / Double Matured",
+        "techniqueZh": "雙桶熟成",
+        "description": "先在主要桶型陳年，再轉入第二種桶型短期熟成（通常 6-12 個月）。例：Balvenie DoubleWood（波本桶 → 雪莉桶）。"
+      },
+      {
+        "technique": "Solera System",
+        "techniqueZh": "索雷拉系統",
+        "description": "雪莉酒的傳統混齡系統，從最底層（最老）的桶取酒裝瓶，上層逐級補充。確保風格一致性。部分蘭姆酒和威士忌也採用。"
+      },
+      {
+        "technique": "STR Cask",
+        "techniqueZh": "STR 桶",
+        "description": "由已故威士忌大師 Jim Swan 博士開發：Shaved（刨削舊木層）、Toasted（烘烤）、Re-charred（重新碳化）。台灣噶瑪蘭酒廠的標誌性技術。"
+      },
+      {
+        "technique": "Cask Finishing",
+        "techniqueZh": "過桶熟成",
+        "description": "在最後階段轉入特殊桶型增添風味層次。常見：Port Cask Finish、Rum Cask Finish、Sauternes Cask Finish、Mizunara Finish。"
+      },
+      {
+        "technique": "Married / Vatting",
+        "techniqueZh": "融合/桶中調和",
+        "description": "將不同桶的酒液混合後，再放入一個桶中靜置數月，讓不同批次的風味互相融合。蘇格蘭調和威士忌的關鍵步驟。"
+      },
+      {
+        "technique": "Virgin Oak Finish",
+        "techniqueZh": "新桶過桶",
+        "description": "使用全新橡木桶進行短期熟成，快速提取木桶風味。常見於加速熟成的精釀蒸餾廠。"
+      }
+    ]
+  },
+  "cocktailFamilies": [
+    {
+      "name": "Sour Family",
+      "nameZh": "酸酒家族",
+      "formula": "基酒 + 柑橘汁 + 甜味劑",
+      "ratio": "2:1:1（基酒:酸:甜）或 2:¾:¾",
+      "description": "最基礎也最重要的調酒家族。掌握 Sour 的平衡，就掌握了調酒的核心。",
+      "examples": [
+        "Daiquiri",
+        "Whiskey Sour",
+        "Sidecar",
+        "Margarita",
+        "Gimlet",
+        "Pisco Sour",
+        "Bee's Knees"
+      ]
+    },
+    {
+      "name": "Old Fashioned Family",
+      "nameZh": "古典家族",
+      "formula": "基酒 + 糖 + 苦精",
+      "ratio": "2oz 基酒 + 1 糖塊/¼oz 糖漿 + 2-3 dash 苦精",
+      "description": "調酒的原型（The Original Cocktail），所有酒吧的基石。改變基酒就是一杯新的調酒。",
+      "examples": [
+        "Old Fashioned",
+        "Sazerac",
+        "Oaxaca Old Fashioned",
+        "Rum Old Fashioned"
+      ]
+    },
+    {
+      "name": "Martini / Manhattan Family",
+      "nameZh": "馬丁尼/曼哈頓家族",
+      "formula": "基酒 + 加烈酒/香艾酒（+ 苦精可選）",
+      "ratio": "2:1 到 5:1（基酒:香艾酒）",
+      "description": "優雅攪拌法的代表，用 Vermouth 的草本風味平衡烈酒。Dry/Sweet/Perfect 三種變體。",
+      "examples": [
+        "Dry Martini",
+        "Manhattan",
+        "Negroni",
+        "Rob Roy",
+        "Boulevardier",
+        "Vieux Carré"
+      ]
+    },
+    {
+      "name": "Highball Family",
+      "nameZh": "海波家族",
+      "formula": "基酒 + 碳酸飲料/長飲稀釋",
+      "ratio": "1:2 到 1:4（基酒:mixer）",
+      "description": "最易入門的調酒形式，用碳酸飲料稀釋基酒，清爽解渴。日本 Highball 文化將其提升為藝術。",
+      "examples": [
+        "Gin & Tonic",
+        "Moscow Mule",
+        "Whisky Highball",
+        "Dark 'n' Stormy",
+        "Paloma",
+        "Rum & Coke"
+      ]
+    },
+    {
+      "name": "Fizz / Collins Family",
+      "nameZh": "費茲/柯林斯家族",
+      "formula": "Sour 基底 + 蘇打水",
+      "ratio": "Sour 配方 + 2-3oz 蘇打水",
+      "description": "Sour 的延伸版——加入蘇打水使其成為 Long Drink。Fizz 通常較小杯，Collins 用高腳杯。",
+      "examples": [
+        "Tom Collins",
+        "French 75",
+        "Gin Fizz",
+        "Ramos Gin Fizz",
+        "Aperol Spritz"
+      ]
+    },
+    {
+      "name": "Tiki Family",
+      "nameZh": "提基家族",
+      "formula": "多種蘭姆酒 + 熱帶果汁 + 糖漿 + 香料",
+      "ratio": "依配方而異，通常 3-5 種材料",
+      "description": "1930-1960 年代 Tiki 文化的產物，以 Trader Vic 和 Don the Beachcomber 為兩大創始人。華麗裝飾、複雜配方、逃逸主義的極致。",
+      "examples": [
+        "Mai Tai",
+        "Zombie",
+        "Piña Colada",
+        "Navy Grog",
+        "Jungle Bird",
+        "Painkiller"
+      ]
+    },
+    {
+      "name": "Negroni / Bitter-Forward Family",
+      "nameZh": "內格羅尼/苦味主導家族",
+      "formula": "基酒 + 苦味利口酒 + 甜香艾酒",
+      "ratio": "1:1:1 等比例",
+      "description": "義大利 Aperitivo 文化的精髓，苦味不是缺陷而是風味。等比例的簡潔帶來無窮變化。",
+      "examples": [
+        "Negroni",
+        "Boulevardier",
+        "Negroni Sbagliato",
+        "Americano",
+        "Paper Plane"
+      ]
+    },
+    {
+      "name": "Flip / Nog Family",
+      "nameZh": "翻轉/蛋奶家族",
+      "formula": "基酒 + 全蛋或蛋黃 + 糖",
+      "ratio": "2oz 基酒 + 1 全蛋 + ¾oz 糖漿",
+      "description": "古老的調酒家族，利用蛋的乳化特性創造天鵝絨般的口感。現代變體加入咖啡、巧克力、香料。",
+      "examples": [
+        "Eggnog",
+        "Brandy Flip",
+        "New York Flip",
+        "Advocaat"
+      ]
+    }
+  ]
+}

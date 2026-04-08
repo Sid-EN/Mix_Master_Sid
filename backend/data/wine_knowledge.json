@@ -1,0 +1,2960 @@
+{
+  "winemaking": {
+    "titleZh": "葡萄酒釀造流程",
+    "titleEn": "Winemaking Process",
+    "steps": [
+      {
+        "order": 1,
+        "nameEn": "Harvesting",
+        "nameZh": "採收",
+        "descriptionZh": "葡萄採收是釀酒的第一步，也是決定酒質的關鍵。手工採收能精確挑選最佳果實，機械採收則適用於大面積產區。採收時機取決於糖度（Brix 通常在 22-28 之間）、酸度、酚類成熟度與天氣條件。",
+        "keyFactors": [
+          "timing",
+          "sugar levels (Brix)",
+          "acidity",
+          "phenolic ripeness",
+          "weather"
+        ],
+        "proTip": "頂級酒莊往往在凌晨採收，低溫能保持果實新鮮度，防止提前氧化。"
+      },
+      {
+        "order": 2,
+        "nameEn": "Destemming & Crushing",
+        "nameZh": "去梗與破碎",
+        "descriptionZh": "去梗機將葡萄粒從莖梗上分離，避免過多青澀的植物性單寧。破碎則輕柔地壓破果皮，釋放果汁。部分釀酒師選擇保留整串葡萄（Whole Cluster）以增添複雜度與香料感。",
+        "keyFactors": [
+          "stem inclusion ratio",
+          "crushing intensity",
+          "whole cluster percentage"
+        ],
+        "proTip": "布根地的黑皮諾常保留 20-50% 整串發酵，為酒液增添獨特的花香與辛香。"
+      },
+      {
+        "order": 3,
+        "nameEn": "Maceration",
+        "nameZh": "浸皮",
+        "descriptionZh": "浸皮是果皮與果汁接觸的過程，萃取顏色、單寧與風味化合物。紅酒浸皮可持續 1-4 週，冷浸泡（Cold Soak）在發酵前以低溫浸漬 3-5 天，能萃取更多色素與果香而非粗獷單寧。",
+        "keyFactors": [
+          "duration",
+          "temperature",
+          "punch-down vs pump-over"
+        ],
+        "proTip": "冷浸泡（5°C 左右）是現代布根地與新世界黑皮諾的標準技術。"
+      },
+      {
+        "order": 4,
+        "nameEn": "Fermentation",
+        "nameZh": "發酵",
+        "descriptionZh": "酵母將葡萄糖轉化為酒精與二氧化碳。野生酵母發酵帶來更複雜的風味層次，但風險較高；商業酵母則提供穩定一致的結果。溫控至關重要：白酒在 12-18°C 低溫發酵保持果香，紅酒在 25-30°C 萃取色澤與結構。蘋果酸乳酸發酵（MLF）將尖銳的蘋果酸轉化為柔和的乳酸。",
+        "keyFactors": [
+          "yeast selection",
+          "temperature control",
+          "MLF decision",
+          "fermentation vessel"
+        ],
+        "proTip": "不鏽鋼槽發酵保持純淨果香，橡木桶發酵則增添奶油與烘烤質感，常見於頂級夏多內。"
+      },
+      {
+        "order": 5,
+        "nameEn": "Pressing",
+        "nameZh": "榨汁",
+        "descriptionZh": "發酵後將固體殘渣（皮、籽）與液體分離。自流汁（Free-run）品質最高，壓榨汁（Press Wine）單寧更重但結構更強。現代氣囊式壓榨機（Pneumatic Press）比傳統籃式壓榨更溫和，減少苦澀萃取。",
+        "keyFactors": [
+          "press type",
+          "pressure level",
+          "free-run vs press separation"
+        ],
+        "proTip": "許多頂級酒莊將自流汁與不同階段壓榨汁分開陳年，最後再決定調配比例。"
+      },
+      {
+        "order": 6,
+        "nameEn": "Aging",
+        "nameZh": "陳年",
+        "descriptionZh": "陳年是酒液在容器中緩慢氧化、整合風味的過程。橡木桶陳年賦予香草、烘烤、辛香料風味，並透過木材毛孔進行微氧化使單寧柔化。不鏽鋼槽則保持原始果香的純淨度。陳年時間從數月到數年不等。",
+        "keyFactors": [
+          "vessel type",
+          "duration",
+          "new vs used oak",
+          "lees contact"
+        ],
+        "proTip": "法國橡木桶帶來細膩優雅的風味，美國橡木桶則較為奔放，帶椰子與香草調性。"
+      },
+      {
+        "order": 7,
+        "nameEn": "Blending",
+        "nameZh": "調配",
+        "descriptionZh": "調配是將不同品種、地塊或年份的酒液混合，創造均衡和諧的最終作品。波爾多以卡本內蘇維翁、梅洛、品麗珠的調配聞名，香檳則是調配的最高藝術。釀酒師透過反覆品試確定最佳比例。",
+        "keyFactors": [
+          "varietal composition",
+          "vineyard parcels",
+          "barrel selection",
+          "balance goals"
+        ],
+        "proTip": "頂級酒莊的首席釀酒師可能品試上百個樣本才決定最終的 Grand Vin 調配。"
+      },
+      {
+        "order": 8,
+        "nameEn": "Fining & Filtering",
+        "nameZh": "澄清與過濾",
+        "descriptionZh": "澄清劑（如膨潤土、蛋白、明膠）去除懸浮微粒使酒液澄清。過濾則進一步移除酵母和細菌。然而，越來越多自然派釀酒師選擇不澄清、不過濾（Unfined & Unfiltered），認為這能保留更多風味物質與質地。",
+        "keyFactors": [
+          "fining agent choice",
+          "filtration level",
+          "unfined/unfiltered decision"
+        ],
+        "proTip": "「不過濾」不代表品質更好或更差，關鍵在於釀酒師的意圖與酒液本身的穩定性。"
+      },
+      {
+        "order": 9,
+        "nameEn": "Bottling",
+        "nameZh": "裝瓶",
+        "descriptionZh": "裝瓶是將完成的酒液封入玻璃瓶中。無菌裝瓶技術防止微生物汙染。瓶塞的選擇（天然軟木塞 vs 螺旋蓋 vs 合成塞）影響酒的陳年潛力與風味發展。螺旋蓋能完全避免 TCA 汙染，但部分傳統產區仍堅持使用軟木塞。",
+        "keyFactors": [
+          "sterile conditions",
+          "closure type",
+          "bottle size",
+          "fill level"
+        ],
+        "proTip": "375ml 半瓶裝的酒熟成速度約為標準 750ml 的兩倍；1.5L 大瓶裝則更慢，是收藏家的首選。"
+      },
+      {
+        "order": 10,
+        "nameEn": "Bottle Aging",
+        "nameZh": "瓶中陳年",
+        "descriptionZh": "裝瓶後，酒液在瓶中繼續緩慢演化。氧氣透過瓶塞微量滲入，促進單寧聚合、色素穩定與風味整合。理想的儲存條件為 12-15°C、濕度 70%、避光、無震動。並非所有酒都適合陳年，全球 90% 以上的酒款適合在 5 年內飲用。",
+        "keyFactors": [
+          "storage temperature",
+          "humidity",
+          "light exposure",
+          "vibration",
+          "bottle position"
+        ],
+        "proTip": "橫放存酒能保持軟木塞濕潤，防止乾裂進氣。但螺旋蓋酒款可直立存放。"
+      }
+    ]
+  },
+  "grapeVarieties": [
+    {
+      "id": "cabernet-sauvignon",
+      "nameEn": "Cabernet Sauvignon",
+      "nameZh": "卡本內蘇維翁",
+      "color": "red",
+      "origin": "Bordeaux, France",
+      "characteristics": {
+        "body": "full",
+        "tannin": "high",
+        "acidity": "medium-high",
+        "alcohol": "13.5-15%",
+        "aromas": [
+          "blackcurrant",
+          "cedar",
+          "tobacco",
+          "dark chocolate",
+          "graphite"
+        ],
+        "aromasZh": [
+          "黑醋栗",
+          "雪松",
+          "菸草",
+          "黑巧克力",
+          "石墨"
+        ]
+      },
+      "keyRegions": [
+        "Bordeaux",
+        "Napa Valley",
+        "Coonawarra",
+        "Maipo Valley",
+        "Stellenbosch"
+      ],
+      "agingPotential": "10-30+ years",
+      "foodPairings": [
+        "碳烤肋眼牛排",
+        "紅燒牛小排",
+        "陳年硬質起司",
+        "羊肩排"
+      ],
+      "descriptionZh": "葡萄酒之王。小顆粒、厚果皮帶來深邃色澤與強勁單寧。在波爾多與梅洛調配堪稱經典，在納帕谷則以單一品種展現濃郁果味。陳年後發展出雪松、菸葉、皮革等複雜三級香氣。"
+    },
+    {
+      "id": "merlot",
+      "nameEn": "Merlot",
+      "nameZh": "梅洛",
+      "color": "red",
+      "origin": "Bordeaux, France",
+      "characteristics": {
+        "body": "medium-full",
+        "tannin": "medium",
+        "acidity": "medium",
+        "alcohol": "13-14.5%",
+        "aromas": [
+          "plum",
+          "cherry",
+          "chocolate",
+          "herbal",
+          "velvet"
+        ],
+        "aromasZh": [
+          "李子",
+          "櫻桃",
+          "巧克力",
+          "草本",
+          "絲絨"
+        ]
+      },
+      "keyRegions": [
+        "Bordeaux (Saint-Émilion, Pomerol)",
+        "Tuscany",
+        "Washington State",
+        "Chile"
+      ],
+      "agingPotential": "5-20 years",
+      "foodPairings": [
+        "烤鴨",
+        "燉牛肉",
+        "蘑菇燴飯",
+        "軟質起司"
+      ],
+      "descriptionZh": "波爾多右岸的靈魂品種。比卡本內蘇維翁更柔順圓潤，果香更為奔放。Pétrus 酒莊證明梅洛可以達到世界頂級的高度。適合初學者入門的紅酒品種。"
+    },
+    {
+      "id": "pinot-noir",
+      "nameEn": "Pinot Noir",
+      "nameZh": "黑皮諾",
+      "color": "red",
+      "origin": "Burgundy, France",
+      "characteristics": {
+        "body": "light-medium",
+        "tannin": "low-medium",
+        "acidity": "high",
+        "alcohol": "12-14%",
+        "aromas": [
+          "cherry",
+          "raspberry",
+          "rose",
+          "earth",
+          "mushroom"
+        ],
+        "aromasZh": [
+          "櫻桃",
+          "覆盆子",
+          "玫瑰",
+          "泥土",
+          "蘑菇"
+        ]
+      },
+      "keyRegions": [
+        "Burgundy",
+        "Oregon",
+        "Central Otago",
+        "Sonoma Coast",
+        "Champagne"
+      ],
+      "agingPotential": "5-25+ years",
+      "foodPairings": [
+        "烤三文魚",
+        "油封鴨腿",
+        "松露燴飯",
+        "鮮菇料理"
+      ],
+      "descriptionZh": "最嬌貴也最迷人的紅葡萄品種。果皮薄、色澤淺，但能展現無與倫比的細膩度與複雜性。布根地的 Grand Cru 是葡萄酒聖殿級的存在，價格也令人嘆為觀止。"
+    },
+    {
+      "id": "syrah-shiraz",
+      "nameEn": "Syrah / Shiraz",
+      "nameZh": "希哈 / 施赫",
+      "color": "red",
+      "origin": "Rhône Valley, France",
+      "characteristics": {
+        "body": "full",
+        "tannin": "medium-high",
+        "acidity": "medium",
+        "alcohol": "13-15%",
+        "aromas": [
+          "blackberry",
+          "black pepper",
+          "smoked meat",
+          "violet",
+          "licorice"
+        ],
+        "aromasZh": [
+          "黑莓",
+          "黑胡椒",
+          "煙燻肉",
+          "紫羅蘭",
+          "甘草"
+        ]
+      },
+      "keyRegions": [
+        "Northern Rhône",
+        "Barossa Valley",
+        "McLaren Vale",
+        "Washington State"
+      ],
+      "agingPotential": "5-25 years",
+      "foodPairings": [
+        "碳烤羊排",
+        "BBQ 肋排",
+        "黑胡椒牛柳",
+        "野味"
+      ],
+      "descriptionZh": "在法國隆河谷稱為 Syrah，展現優雅的胡椒與花香；在澳洲稱為 Shiraz，風格更為濃郁奔放。北隆河的 Hermitage 與 Côte-Rôtie 是世界頂級產區。"
+    },
+    {
+      "id": "tempranillo",
+      "nameEn": "Tempranillo",
+      "nameZh": "田帕尼優",
+      "color": "red",
+      "origin": "Rioja, Spain",
+      "characteristics": {
+        "body": "medium-full",
+        "tannin": "medium",
+        "acidity": "medium",
+        "alcohol": "13-14.5%",
+        "aromas": [
+          "cherry",
+          "leather",
+          "tobacco",
+          "dried fig",
+          "vanilla"
+        ],
+        "aromasZh": [
+          "櫻桃",
+          "皮革",
+          "菸草",
+          "無花果乾",
+          "香草"
+        ]
+      },
+      "keyRegions": [
+        "Rioja",
+        "Ribera del Duero",
+        "Toro",
+        "Alentejo"
+      ],
+      "agingPotential": "5-20 years",
+      "foodPairings": [
+        "伊比利火腿",
+        "西班牙海鮮飯",
+        "烤乳豬",
+        "曼切格起司"
+      ],
+      "descriptionZh": "西班牙最重要的紅葡萄品種。在 Rioja 產區經過美國橡木桶陳年展現經典的香草與皮革調性。Gran Reserva 等級需陳年至少 5 年方可上市。"
+    },
+    {
+      "id": "sangiovese",
+      "nameEn": "Sangiovese",
+      "nameZh": "山乔維賽",
+      "color": "red",
+      "origin": "Tuscany, Italy",
+      "characteristics": {
+        "body": "medium",
+        "tannin": "high",
+        "acidity": "high",
+        "alcohol": "12.5-14.5%",
+        "aromas": [
+          "cherry",
+          "tomato leaf",
+          "oregano",
+          "tea",
+          "leather"
+        ],
+        "aromasZh": [
+          "酸櫻桃",
+          "番茄葉",
+          "奧勒岡",
+          "茶",
+          "皮革"
+        ]
+      },
+      "keyRegions": [
+        "Chianti",
+        "Brunello di Montalcino",
+        "Vino Nobile di Montepulciano"
+      ],
+      "agingPotential": "5-25 years",
+      "foodPairings": [
+        "義大利麵佐番茄肉醬",
+        "佛羅倫斯丁骨牛排",
+        "披薩",
+        "帕瑪森起司"
+      ],
+      "descriptionZh": "托斯卡尼的靈魂。高酸度與明亮的酸櫻桃風味是其標誌。Brunello di Montalcino 需 100% 山乔維賽釀造，是義大利最頂級的紅酒之一。"
+    },
+    {
+      "id": "malbec",
+      "nameEn": "Malbec",
+      "nameZh": "馬爾貝克",
+      "color": "red",
+      "origin": "Cahors, France / Mendoza, Argentina",
+      "characteristics": {
+        "body": "full",
+        "tannin": "medium-high",
+        "acidity": "medium",
+        "alcohol": "13.5-15%",
+        "aromas": [
+          "plum",
+          "blackberry",
+          "cocoa",
+          "violet",
+          "mocha"
+        ],
+        "aromasZh": [
+          "李子",
+          "黑莓",
+          "可可",
+          "紫羅蘭",
+          "摩卡"
+        ]
+      },
+      "keyRegions": [
+        "Mendoza",
+        "Cahors",
+        "Uco Valley",
+        "Salta"
+      ],
+      "agingPotential": "3-15 years",
+      "foodPairings": [
+        "阿根廷烤肉",
+        "煙燻牛胸",
+        "辣味墨西哥料理",
+        "黑巧克力"
+      ],
+      "descriptionZh": "在法國 Cahors 幾近被遺忘，卻在阿根廷門多薩的高海拔葡萄園重獲新生。濃郁的深紫色澤與柔順的果味使其成為全球最受歡迎的紅酒之一。"
+    },
+    {
+      "id": "nebbiolo",
+      "nameEn": "Nebbiolo",
+      "nameZh": "內比歐露",
+      "color": "red",
+      "origin": "Piedmont, Italy",
+      "characteristics": {
+        "body": "full",
+        "tannin": "very high",
+        "acidity": "high",
+        "alcohol": "13.5-15%",
+        "aromas": [
+          "tar",
+          "rose",
+          "cherry",
+          "truffle",
+          "dried herb"
+        ],
+        "aromasZh": [
+          "柏油",
+          "玫瑰",
+          "酸櫻桃",
+          "松露",
+          "乾燥香草"
+        ]
+      },
+      "keyRegions": [
+        "Barolo",
+        "Barbaresco",
+        "Langhe",
+        "Valtellina"
+      ],
+      "agingPotential": "10-40+ years",
+      "foodPairings": [
+        "白松露義大利麵",
+        "燉小牛膝",
+        "陳年帕瑪森",
+        "野豬肉燴飯"
+      ],
+      "descriptionZh": "皮埃蒙特的驕傲，「酒中之王，王者之酒」。色澤出乎意料地淺淡，但單寧極為強勁。Barolo 需至少 38 個月陳年（其中 18 個月在桶中），頂級年份可陳放數十年。"
+    },
+    {
+      "id": "chardonnay",
+      "nameEn": "Chardonnay",
+      "nameZh": "夏多內",
+      "color": "white",
+      "origin": "Burgundy, France",
+      "characteristics": {
+        "body": "medium-full",
+        "tannin": "none",
+        "acidity": "medium",
+        "alcohol": "13-14.5%",
+        "aromas": [
+          "apple",
+          "citrus",
+          "butter",
+          "vanilla",
+          "hazelnut"
+        ],
+        "aromasZh": [
+          "蘋果",
+          "柑橘",
+          "奶油",
+          "香草",
+          "榛果"
+        ]
+      },
+      "keyRegions": [
+        "Burgundy (Chablis, Meursault, Puligny)",
+        "Champagne",
+        "Napa Valley",
+        "Margaret River"
+      ],
+      "agingPotential": "2-15 years",
+      "foodPairings": [
+        "焗烤龍蝦",
+        "奶油白醬義大利麵",
+        "烤雞",
+        "布利起司"
+      ],
+      "descriptionZh": "全球種植最廣的白葡萄品種，風格極度多變。Chablis 展現純淨礦物感，Meursault 帶奶油榛果質地，新世界則常見熱帶水果與橡木風味。是唯一能與紅酒匹敵陳年潛力的白葡萄。"
+    },
+    {
+      "id": "sauvignon-blanc",
+      "nameEn": "Sauvignon Blanc",
+      "nameZh": "白蘇維翁",
+      "color": "white",
+      "origin": "Loire Valley, France",
+      "characteristics": {
+        "body": "light-medium",
+        "tannin": "none",
+        "acidity": "high",
+        "alcohol": "12-13.5%",
+        "aromas": [
+          "grapefruit",
+          "gooseberry",
+          "grass",
+          "passion fruit",
+          "flint"
+        ],
+        "aromasZh": [
+          "葡萄柚",
+          "醋栗",
+          "青草",
+          "百香果",
+          "燧石"
+        ]
+      },
+      "keyRegions": [
+        "Loire Valley (Sancerre, Pouilly-Fumé)",
+        "Marlborough",
+        "Bordeaux",
+        "Casablanca Valley"
+      ],
+      "agingPotential": "1-5 years",
+      "foodPairings": [
+        "生蠔",
+        "山羊起司沙拉",
+        "白酒蒸淡菜",
+        "泰式涼拌"
+      ],
+      "descriptionZh": "以爽脆高酸和鮮明草本香氣著稱。紐西蘭 Marlborough 產區的百香果風格風靡全球，法國 Sancerre 則展現更內斂的礦物質感。極少數會經過橡木桶處理。"
+    },
+    {
+      "id": "riesling",
+      "nameEn": "Riesling",
+      "nameZh": "麗絲玲",
+      "color": "white",
+      "origin": "Rhine, Germany",
+      "characteristics": {
+        "body": "light-medium",
+        "tannin": "none",
+        "acidity": "very high",
+        "alcohol": "8-13%",
+        "aromas": [
+          "lime",
+          "peach",
+          "petrol",
+          "honey",
+          "slate"
+        ],
+        "aromasZh": [
+          "萊姆",
+          "水蜜桃",
+          "汽油",
+          "蜂蜜",
+          "板岩"
+        ]
+      },
+      "keyRegions": [
+        "Mosel",
+        "Rheingau",
+        "Alsace",
+        "Clare Valley",
+        "Finger Lakes"
+      ],
+      "agingPotential": "5-30+ years",
+      "foodPairings": [
+        "德式豬腳",
+        "泰式咖哩",
+        "北京烤鴨",
+        "辣味四川菜"
+      ],
+      "descriptionZh": "德國最高貴的白葡萄品種，風格涵蓋骨幹乾型到甜蜜 Trockenbeerenauslese。高酸度使其擁有驚人的陳年潛力，老年份會發展出獨特的「汽油味」（Petrol Note）。是搭配亞洲料理的最佳選擇之一。"
+    },
+    {
+      "id": "pinot-grigio",
+      "nameEn": "Pinot Grigio / Pinot Gris",
+      "nameZh": "灰皮諾",
+      "color": "white",
+      "origin": "Alsace, France / Veneto, Italy",
+      "characteristics": {
+        "body": "light-medium",
+        "tannin": "none",
+        "acidity": "medium",
+        "alcohol": "12-13.5%",
+        "aromas": [
+          "pear",
+          "apple",
+          "almond",
+          "honey",
+          "white flowers"
+        ],
+        "aromasZh": [
+          "西洋梨",
+          "蘋果",
+          "杏仁",
+          "蜂蜜",
+          "白花"
+        ]
+      },
+      "keyRegions": [
+        "Alsace",
+        "Veneto",
+        "Oregon",
+        "Alto Adige"
+      ],
+      "agingPotential": "1-5 years",
+      "foodPairings": [
+        "海鮮義大利麵",
+        "凱撒沙拉",
+        "輕食前菜",
+        "壽司"
+      ],
+      "descriptionZh": "義大利風格（Pinot Grigio）清爽輕盈，是夏日午後的完美選擇。法國亞爾薩斯風格（Pinot Gris）則更飽滿豐腴，帶蜂蜜與香料調性。"
+    },
+    {
+      "id": "gewurztraminer",
+      "nameEn": "Gewürztraminer",
+      "nameZh": "格烏茲塔明那",
+      "color": "white",
+      "origin": "Alsace, France",
+      "characteristics": {
+        "body": "medium-full",
+        "tannin": "none",
+        "acidity": "low-medium",
+        "alcohol": "13-15%",
+        "aromas": [
+          "lychee",
+          "rose",
+          "ginger",
+          "turkish delight",
+          "cinnamon"
+        ],
+        "aromasZh": [
+          "荔枝",
+          "玫瑰",
+          "薑",
+          "土耳其軟糖",
+          "肉桂"
+        ]
+      },
+      "keyRegions": [
+        "Alsace",
+        "Alto Adige",
+        "Pfalz",
+        "New Zealand"
+      ],
+      "agingPotential": "2-10 years",
+      "foodPairings": [
+        "亞洲咖哩",
+        "法式鵝肝",
+        "泰式酸辣湯",
+        "水果塔"
+      ],
+      "descriptionZh": "最具辨識度的白葡萄品種。強烈的荔枝與玫瑰花香讓人過鼻不忘。「Gewürz」在德文中意為「辛香料」，名副其實。搭配亞洲料理的能力無出其右。"
+    },
+    {
+      "id": "chenin-blanc",
+      "nameEn": "Chenin Blanc",
+      "nameZh": "白梢楠",
+      "color": "white",
+      "origin": "Loire Valley, France",
+      "characteristics": {
+        "body": "light-full",
+        "tannin": "none",
+        "acidity": "very high",
+        "alcohol": "11.5-14%",
+        "aromas": [
+          "quince",
+          "apple",
+          "chamomile",
+          "honey",
+          "wet wool"
+        ],
+        "aromasZh": [
+          "榲桲",
+          "蘋果",
+          "洋甘菊",
+          "蜂蜜",
+          "濕羊毛"
+        ]
+      },
+      "keyRegions": [
+        "Vouvray",
+        "Savennières",
+        "Stellenbosch",
+        "Swartland"
+      ],
+      "agingPotential": "5-30+ years",
+      "foodPairings": [
+        "鵝肝",
+        "洗皮起司",
+        "蘋果豬排",
+        "奶油南瓜湯"
+      ],
+      "descriptionZh": "羅亞爾河谷的變色龍品種，能釀出骨幹乾型、半甜、貴腐甜酒乃至氣泡酒（Crémant de Loire）。南非是其第二故鄉，老藤白梢楠表現極為出色。"
+    },
+    {
+      "id": "viognier",
+      "nameEn": "Viognier",
+      "nameZh": "維歐尼耶",
+      "color": "white",
+      "origin": "Northern Rhône, France",
+      "characteristics": {
+        "body": "full",
+        "tannin": "none",
+        "acidity": "low-medium",
+        "alcohol": "13.5-15%",
+        "aromas": [
+          "apricot",
+          "peach",
+          "jasmine",
+          "honeysuckle",
+          "mango"
+        ],
+        "aromasZh": [
+          "杏桃",
+          "水蜜桃",
+          "茉莉花",
+          "金銀花",
+          "芒果"
+        ]
+      },
+      "keyRegions": [
+        "Condrieu",
+        "Languedoc",
+        "Virginia",
+        "Central Coast California"
+      ],
+      "agingPotential": "1-5 years",
+      "foodPairings": [
+        "香煎干貝",
+        "印度咖哩雞",
+        "烤白肉魚",
+        "椰奶甜點"
+      ],
+      "descriptionZh": "北隆河 Condrieu 產區的獨家品種，曾瀕臨絕種。以濃郁的杏桃花香與油潤質地聞名。有趣的是，Côte-Rôtie 產區允許加入最多 20% 維歐尼耶與希哈共同發酵。"
+    },
+    {
+      "id": "grenache-garnacha",
+      "nameEn": "Grenache / Garnacha",
+      "nameZh": "格那希 / 格納查",
+      "color": "red",
+      "origin": "Aragon, Spain / Southern Rhône, France",
+      "characteristics": {
+        "body": "medium-full",
+        "tannin": "low-medium",
+        "acidity": "medium",
+        "alcohol": "14-16%",
+        "aromas": [
+          "strawberry",
+          "raspberry",
+          "white pepper",
+          "dried herbs",
+          "orange peel"
+        ],
+        "aromasZh": [
+          "草莓",
+          "覆盆子",
+          "白胡椒",
+          "乾燥香草",
+          "橙皮"
+        ]
+      },
+      "keyRegions": [
+        "Southern Rhône (Châteauneuf-du-Pape)",
+        "Priorat",
+        "Sardinia (Cannonau)",
+        "Barossa Valley",
+        "Navarra"
+      ],
+      "agingPotential": "3-15 years",
+      "foodPairings": [
+        "普羅旺斯燉菜",
+        "烤羊腿佐迷迭香",
+        "西班牙 Tapas",
+        "番茄燉肉"
+      ],
+      "descriptionZh": "全球種植面積最大的紅葡萄品種之一，卻常被忽視為配角。高酒精、低單寧、豐沛的紅色莓果風味是其標誌。在教皇新堡（Châteauneuf-du-Pape）與歌海娜、慕合懷特、希哈混釀（GSM），展現南隆河的溫暖大度。西班牙 Priorat 的老藤格納查能釀出令人驚嘆的濃縮佳作。"
+    },
+    {
+      "id": "mourvedre-monastrell",
+      "nameEn": "Mourvèdre / Monastrell",
+      "nameZh": "慕合懷特 / 莫納斯特雷爾",
+      "color": "red",
+      "origin": "Southern France / Southeastern Spain",
+      "characteristics": {
+        "body": "full",
+        "tannin": "high",
+        "acidity": "medium",
+        "alcohol": "13.5-15%",
+        "aromas": [
+          "blackberry",
+          "game meat",
+          "leather",
+          "black pepper",
+          "earth"
+        ],
+        "aromasZh": [
+          "黑莓",
+          "野味肉",
+          "皮革",
+          "黑胡椒",
+          "泥土"
+        ]
+      },
+      "keyRegions": [
+        "Bandol",
+        "Châteauneuf-du-Pape",
+        "Jumilla",
+        "Barossa Valley"
+      ],
+      "agingPotential": "5-20 years",
+      "foodPairings": [
+        "紅燒牛尾",
+        "燉野豬肉",
+        "黑橄欖燴羊膝",
+        "煙燻臘腸"
+      ],
+      "descriptionZh": "南法 Bandol 產區的靈魂品種，以濃郁的肉感、皮革與泥土氣息著稱。需要充足的陽光與溫暖氣候才能完全成熟。在 GSM 混釀中扮演骨架角色，提供結構與深度。西班牙 Jumilla 產區的老藤莫納斯特雷爾以極高性價比聞名。"
+    },
+    {
+      "id": "cabernet-franc",
+      "nameEn": "Cabernet Franc",
+      "nameZh": "品麗珠",
+      "color": "red",
+      "origin": "Loire Valley / Bordeaux, France",
+      "characteristics": {
+        "body": "medium",
+        "tannin": "medium",
+        "acidity": "medium-high",
+        "alcohol": "12-13.5%",
+        "aromas": [
+          "raspberry",
+          "violet",
+          "bell pepper",
+          "pencil shaving",
+          "tobacco leaf"
+        ],
+        "aromasZh": [
+          "覆盆子",
+          "紫羅蘭",
+          "青椒",
+          "鉛筆削",
+          "菸葉"
+        ]
+      },
+      "keyRegions": [
+        "Loire Valley (Chinon, Bourgueil, Saumur-Champigny)",
+        "Bordeaux (Saint-Émilion)",
+        "Finger Lakes",
+        "Friuli"
+      ],
+      "agingPotential": "3-15 years",
+      "foodPairings": [
+        "烤鮭魚",
+        "豬肉佐蘑菇醬",
+        "山羊起司",
+        "烤甜椒沙拉"
+      ],
+      "descriptionZh": "卡本內蘇維翁的親本之一，風格更為優雅纖細。羅亞爾河谷的 Chinon 與 Bourgueil 是其單一品種的經典表現——清新的覆盆子果香、迷人的紫羅蘭花香與細緻的草本調性。在波爾多右岸是重要的調配品種，Cheval Blanc 酒莊以高比例品麗珠聞名於世。"
+    },
+    {
+      "id": "zinfandel-primitivo",
+      "nameEn": "Zinfandel / Primitivo",
+      "nameZh": "金芬黛 / 普里米蒂沃",
+      "color": "red",
+      "origin": "California, USA / Puglia, Italy",
+      "characteristics": {
+        "body": "full",
+        "tannin": "medium",
+        "acidity": "medium",
+        "alcohol": "14-17%",
+        "aromas": [
+          "blackberry jam",
+          "black cherry",
+          "cinnamon",
+          "clove",
+          "sweet tobacco"
+        ],
+        "aromasZh": [
+          "黑莓果醬",
+          "黑櫻桃",
+          "肉桂",
+          "丁香",
+          "甜菸草"
+        ]
+      },
+      "keyRegions": [
+        "Sonoma (Dry Creek Valley)",
+        "Lodi",
+        "Paso Robles",
+        "Puglia (Manduria)"
+      ],
+      "agingPotential": "3-12 years",
+      "foodPairings": [
+        "BBQ 豬肋排",
+        "辣味烤雞翅",
+        "義式番茄燉肉丸",
+        "藍紋起司漢堡"
+      ],
+      "descriptionZh": "DNA 鑑定證實金芬黛與義大利南部的普里米蒂沃是同一品種，原產克羅埃西亞。加州老藤金芬黛以濃郁的果醬風味、高酒精度與辛香料調性聞名，是美國最具代表性的紅酒之一。該品種成熟度不均的特性（同一串葡萄上有生青、成熟與葡萄乾並存），造就了其獨特的風味複雜度。"
+    },
+    {
+      "id": "gamay",
+      "nameEn": "Gamay",
+      "nameZh": "加美",
+      "color": "red",
+      "origin": "Beaujolais, France",
+      "characteristics": {
+        "body": "light",
+        "tannin": "low",
+        "acidity": "high",
+        "alcohol": "11-13%",
+        "aromas": [
+          "cherry",
+          "banana",
+          "bubblegum",
+          "peony",
+          "cranberry"
+        ],
+        "aromasZh": [
+          "櫻桃",
+          "香蕉",
+          "泡泡糖",
+          "牡丹",
+          "蔓越莓"
+        ]
+      },
+      "keyRegions": [
+        "Beaujolais (Morgon, Fleurie, Moulin-à-Vent)",
+        "Loire Valley",
+        "Switzerland",
+        "Oregon"
+      ],
+      "agingPotential": "1-8 years",
+      "foodPairings": [
+        "法式鄉村肉派",
+        "涼拌火腿",
+        "壽司",
+        "輕食沙拉"
+      ],
+      "descriptionZh": "薄酒萊的唯一主角，以二氧化碳浸漬法（Carbonic Maceration）釀造的薄酒萊新酒每年 11 月第三個星期四全球同步上市。然而，真正的加美精華在十個特級村莊（Cru Beaujolais），如 Morgon、Fleurie、Moulin-à-Vent 等，這些酒款結構更佳，可陳年數年，風格可媲美布根地黑皮諾。"
+    },
+    {
+      "id": "carmenere",
+      "nameEn": "Carménère",
+      "nameZh": "卡乜內爾",
+      "color": "red",
+      "origin": "Chile (originally Bordeaux, France)",
+      "characteristics": {
+        "body": "medium-full",
+        "tannin": "medium",
+        "acidity": "medium",
+        "alcohol": "13-14.5%",
+        "aromas": [
+          "green pepper",
+          "dark chocolate",
+          "plum",
+          "coffee",
+          "smoky herbs"
+        ],
+        "aromasZh": [
+          "青椒",
+          "黑巧克力",
+          "李子",
+          "咖啡",
+          "煙燻香草"
+        ]
+      },
+      "keyRegions": [
+        "Colchagua Valley",
+        "Rapel Valley",
+        "Maipo Valley",
+        "Cachapoal"
+      ],
+      "agingPotential": "3-12 years",
+      "foodPairings": [
+        "碳烤牛排佐奇米丘里醬",
+        "墨西哥辣肉醬",
+        "黑豆燉肉",
+        "烤蔬菜"
+      ],
+      "descriptionZh": "波爾多的「失落品種」，在 19 世紀根瘤蚜蟲危機中幾乎從法國絕跡。1994 年智利安培葛塔教授在被誤標為梅洛的葡萄園中重新辨識出此品種。如今卡乜內爾是智利的國寶品種，獨特的青椒與黑巧克力調性，加上柔順的口感，使其深受全球消費者喜愛。"
+    },
+    {
+      "id": "touriga-nacional",
+      "nameEn": "Touriga Nacional",
+      "nameZh": "國產多瑞加",
+      "color": "red",
+      "origin": "Douro Valley, Portugal",
+      "characteristics": {
+        "body": "full",
+        "tannin": "high",
+        "acidity": "medium-high",
+        "alcohol": "13-14.5%",
+        "aromas": [
+          "violet",
+          "blackberry",
+          "rock rose",
+          "dark plum",
+          "incense"
+        ],
+        "aromasZh": [
+          "紫羅蘭",
+          "黑莓",
+          "岩薔薇",
+          "深色李子",
+          "線香"
+        ]
+      },
+      "keyRegions": [
+        "Douro Valley",
+        "Dão",
+        "Alentejo",
+        "Bairrada"
+      ],
+      "agingPotential": "5-25+ years",
+      "foodPairings": [
+        "葡式燉肉",
+        "燒烤沙丁魚",
+        "燉牛膝佐紅酒醬",
+        "陳年硬質起司"
+      ],
+      "descriptionZh": "葡萄牙最尊貴的本土品種，波特酒的核心靈魂。小顆粒、厚果皮賦予極深邃的色澤與濃郁的紫羅蘭花香。近年葡萄牙斗羅河谷的干紅餐酒（非加烈）越來越受國際關注，國產多瑞加正從波特酒的配角蛻變為獨當一面的明星品種。"
+    },
+    {
+      "id": "albarino",
+      "nameEn": "Albariño",
+      "nameZh": "阿爾巴利諾",
+      "color": "white",
+      "origin": "Rías Baixas, Galicia, Spain",
+      "characteristics": {
+        "body": "light",
+        "tannin": "none",
+        "acidity": "high",
+        "alcohol": "12-13%",
+        "aromas": [
+          "peach",
+          "apricot",
+          "lemon zest",
+          "saline",
+          "white flowers"
+        ],
+        "aromasZh": [
+          "水蜜桃",
+          "杏桃",
+          "檸檬皮",
+          "鹽味",
+          "白花"
+        ]
+      },
+      "keyRegions": [
+        "Rías Baixas",
+        "Vinho Verde (as Alvarinho)",
+        "Galicia"
+      ],
+      "agingPotential": "1-4 years",
+      "foodPairings": [
+        "西班牙蒜蝦",
+        "烤章魚",
+        "新鮮海鮮拼盤",
+        "壽司"
+      ],
+      "descriptionZh": "西班牙加利西亞海岸的白葡萄瑰寶。獨特的鹹味礦物感反映了大西洋沿岸的海洋風土。清新的桃杏果香、爽脆的酸度與海鹽般的尾韻，使其成為搭配海鮮的完美之選。在葡萄牙北部的 Vinho Verde 產區稱為 Alvarinho，風格更為清瘦纖細。"
+    },
+    {
+      "id": "gruner-veltliner",
+      "nameEn": "Grüner Veltliner",
+      "nameZh": "綠維特利納",
+      "color": "white",
+      "origin": "Austria",
+      "characteristics": {
+        "body": "light-medium",
+        "tannin": "none",
+        "acidity": "high",
+        "alcohol": "12-13.5%",
+        "aromas": [
+          "white pepper",
+          "green apple",
+          "lentil sprout",
+          "grapefruit",
+          "radish"
+        ],
+        "aromasZh": [
+          "白胡椒",
+          "青蘋果",
+          "豆芽",
+          "葡萄柚",
+          "蘿蔔"
+        ]
+      },
+      "keyRegions": [
+        "Wachau",
+        "Kamptal",
+        "Kremstal",
+        "Weinviertel"
+      ],
+      "agingPotential": "2-10 years",
+      "foodPairings": [
+        "維也納炸豬排",
+        "蘆筍料理",
+        "亞洲涼拌菜",
+        "新鮮蔬食沙拉"
+      ],
+      "descriptionZh": "奧地利的國寶白葡萄品種，佔全國種植面積近三分之一。標誌性的白胡椒辛香（Pfefferl）是最易辨識的特徵。Wachau 產區的 Smaragd 等級（最高成熟度）能展現驚人的濃郁度與陳年潛力。2002 年倫敦的盲品會上，頂級綠維特利納擊敗布根地 Grand Cru，震驚酒壇。"
+    },
+    {
+      "id": "torrontes",
+      "nameEn": "Torrontés",
+      "nameZh": "托隆蒂斯",
+      "color": "white",
+      "origin": "Argentina",
+      "characteristics": {
+        "body": "light-medium",
+        "tannin": "none",
+        "acidity": "medium",
+        "alcohol": "13-14%",
+        "aromas": [
+          "muscat grape",
+          "rose petal",
+          "geranium",
+          "peach",
+          "lemon"
+        ],
+        "aromasZh": [
+          "麝香葡萄",
+          "玫瑰花瓣",
+          "天竺葵",
+          "水蜜桃",
+          "檸檬"
+        ]
+      },
+      "keyRegions": [
+        "Salta (Cafayate)",
+        "La Rioja (Argentina)",
+        "San Juan"
+      ],
+      "agingPotential": "1-3 years",
+      "foodPairings": [
+        "泰式涼拌",
+        "印度咖哩",
+        "拉丁美洲 Ceviche",
+        "水果沙拉"
+      ],
+      "descriptionZh": "阿根廷最具特色的白葡萄品種，由亞歷山大麝香與 Criolla 葡萄的自然雜交而成。Salta 省的 Cafayate 海拔可達 1,700 公尺，是全球最高的葡萄園之一，強烈紫外線賦予葡萄濃郁的花香與芳香。風格類似格烏茲塔明那但更為輕盈爽口，是搭配亞洲與拉丁美洲料理的絕佳選擇。"
+    },
+    {
+      "id": "marsanne-roussanne",
+      "nameEn": "Marsanne / Roussanne",
+      "nameZh": "馬珊 / 胡珊",
+      "color": "white",
+      "origin": "Northern Rhône, France",
+      "characteristics": {
+        "body": "full",
+        "tannin": "none",
+        "acidity": "low-medium",
+        "alcohol": "13-14.5%",
+        "aromas": [
+          "almond",
+          "white peach",
+          "beeswax",
+          "herbal tea",
+          "hazelnut"
+        ],
+        "aromasZh": [
+          "杏仁",
+          "白桃",
+          "蜂蠟",
+          "花草茶",
+          "榛果"
+        ]
+      },
+      "keyRegions": [
+        "Hermitage",
+        "Saint-Joseph",
+        "Crozes-Hermitage",
+        "Languedoc",
+        "Victoria (Australia)"
+      ],
+      "agingPotential": "3-15 years",
+      "foodPairings": [
+        "奶油白醬雞肉",
+        "烤白肉魚佐奶油醬",
+        "南瓜濃湯",
+        "熟成軟質起司"
+      ],
+      "descriptionZh": "北隆河白酒的經典雙人組。馬珊提供飽滿酒體與杏仁蜂蠟質感，胡珊則帶來更精緻的花香與酸度支撐。Hermitage 的白酒（以此二品種混釀）是全世界最能陳年的白酒之一，可陳放 20 年以上。單獨釀造時，馬珊較為豐腴圓潤，胡珊更為芬芳優雅。"
+    },
+    {
+      "id": "semillon",
+      "nameEn": "Sémillon",
+      "nameZh": "賽美蓉",
+      "color": "white",
+      "origin": "Bordeaux, France / Hunter Valley, Australia",
+      "characteristics": {
+        "body": "medium",
+        "tannin": "none",
+        "acidity": "low-medium",
+        "alcohol": "12-14%",
+        "aromas": [
+          "lemon",
+          "beeswax",
+          "lanolin",
+          "fig",
+          "honey"
+        ],
+        "aromasZh": [
+          "檸檬",
+          "蜂蠟",
+          "羊毛脂",
+          "無花果",
+          "蜂蜜"
+        ]
+      },
+      "keyRegions": [
+        "Bordeaux (Sauternes, Graves)",
+        "Hunter Valley",
+        "Barossa Valley",
+        "Margaret River"
+      ],
+      "agingPotential": "5-25+ years",
+      "foodPairings": [
+        "鵝肝醬",
+        "奶油焗海鮮",
+        "藍紋起司",
+        "烤雞佐檸檬醬"
+      ],
+      "descriptionZh": "波爾多白酒的幕後功臣，與白蘇維翁混釀是 Graves 產區的經典組合。薄果皮使其極易感染貴腐黴菌（Botrytis cinerea），是 Sauternes 貴腐甜酒的主要品種。澳洲獵人谷（Hunter Valley）的賽美蓉以極低酒精度裝瓶（約 10-11%），卻能發展出驚人的蜂蠟與烤吐司陳年風味，被譽為「最被低估的偉大白酒」。"
+    },
+    {
+      "id": "muscadet-melon-de-bourgogne",
+      "nameEn": "Muscadet (Melon de Bourgogne)",
+      "nameZh": "慕斯卡得（布根地香瓜）",
+      "color": "white",
+      "origin": "Loire Valley, France",
+      "characteristics": {
+        "body": "light",
+        "tannin": "none",
+        "acidity": "high",
+        "alcohol": "11.5-12.5%",
+        "aromas": [
+          "lemon",
+          "green apple",
+          "sea spray",
+          "mineral",
+          "yeast"
+        ],
+        "aromasZh": [
+          "檸檬",
+          "青蘋果",
+          "海水氣息",
+          "礦物",
+          "酵母"
+        ]
+      },
+      "keyRegions": [
+        "Muscadet Sèvre et Maine",
+        "Muscadet Côtes de Grandlieu",
+        "Muscadet Coteaux de la Loire"
+      ],
+      "agingPotential": "1-5 years (sur lie cuvées up to 10 years)",
+      "foodPairings": [
+        "布列塔尼生蠔",
+        "白酒蒸淡菜",
+        "炸魚薯條",
+        "新鮮蝦類"
+      ],
+      "descriptionZh": "羅亞爾河口大西洋沿岸的經典白酒，以極致的清爽純淨著稱。「Sur Lie」（酒泥陳釀）技法是慕斯卡得的靈魂——酒液在酵母殘渣上過冬至少到翌年三月，獲得額外的質地與細微的酵母風味。是搭配生蠔與新鮮貝類海鮮的完美選擇，地域搭配的典範。"
+    }
+  ],
+  "regions": [
+    {
+      "id": "bordeaux",
+      "nameEn": "Bordeaux",
+      "nameZh": "波爾多",
+      "country": "France",
+      "climate": "Maritime",
+      "soil": "Gravel, limestone, clay",
+      "keyGrapes": [
+        "cabernet-sauvignon",
+        "merlot",
+        "cabernet-franc",
+        "sauvignon-blanc",
+        "sémillon"
+      ],
+      "classification": "1855 Classification, Cru Bourgeois, Saint-Émilion Classification",
+      "subRegions": [
+        "Médoc",
+        "Saint-Émilion",
+        "Pomerol",
+        "Graves/Pessac-Léognan",
+        "Sauternes",
+        "Margaux",
+        "Pauillac"
+      ],
+      "famousProducers": [
+        "Château Lafite Rothschild",
+        "Château Margaux",
+        "Pétrus",
+        "Château Haut-Brion",
+        "Château d'Yquem"
+      ],
+      "descriptionZh": "全球最著名的葡萄酒產區，擁有超過 7,000 座酒莊。左岸（Médoc）以卡本內蘇維翁為主，風格強勁優雅；右岸（Saint-Émilion、Pomerol）以梅洛為主，風格柔順豐腴。1855 年分級制度至今仍是葡萄酒世界最具影響力的評級系統。"
+    },
+    {
+      "id": "burgundy",
+      "nameEn": "Burgundy",
+      "nameZh": "布根地",
+      "country": "France",
+      "climate": "Continental",
+      "soil": "Limestone, marl, clay",
+      "keyGrapes": [
+        "pinot-noir",
+        "chardonnay",
+        "gamay",
+        "aligoté"
+      ],
+      "classification": "Grand Cru, Premier Cru, Village, Régionale",
+      "subRegions": [
+        "Chablis",
+        "Côte de Nuits",
+        "Côte de Beaune",
+        "Côte Chalonnaise",
+        "Mâconnais",
+        "Beaujolais"
+      ],
+      "famousProducers": [
+        "Domaine de la Romanée-Conti",
+        "Domaine Leroy",
+        "Domaine Leflaive",
+        "Domaine Coche-Dury"
+      ],
+      "descriptionZh": "風土（Terroir）概念的發源地。布根地人相信，偉大的酒來自偉大的土地。同一條路的兩側可能是截然不同的 Grand Cru 與 Village 級別。DRC（Romanée-Conti）是全球最昂貴的葡萄酒。"
+    },
+    {
+      "id": "champagne",
+      "nameEn": "Champagne",
+      "nameZh": "香檳",
+      "country": "France",
+      "climate": "Cool continental",
+      "soil": "Chalk, limestone",
+      "keyGrapes": [
+        "pinot-noir",
+        "chardonnay",
+        "pinot-meunier"
+      ],
+      "classification": "Grand Cru, Premier Cru",
+      "subRegions": [
+        "Montagne de Reims",
+        "Côte des Blancs",
+        "Vallée de la Marne",
+        "Côte des Bar"
+      ],
+      "famousProducers": [
+        "Dom Pérignon",
+        "Krug",
+        "Louis Roederer",
+        "Bollinger",
+        "Salon"
+      ],
+      "descriptionZh": "唯一有權使用「Champagne」名稱的產區。傳統法（Méthode Champenoise）要求在瓶中進行二次發酵，產生細緻持久的氣泡。非年份香檳（NV）是大廠調配的藝術結晶，年份香檳（Vintage）則只在頂級年份推出。"
+    },
+    {
+      "id": "tuscany",
+      "nameEn": "Tuscany",
+      "nameZh": "托斯卡尼",
+      "country": "Italy",
+      "climate": "Mediterranean",
+      "soil": "Galestro (chalk-clay), sandstone",
+      "keyGrapes": [
+        "sangiovese",
+        "cabernet-sauvignon",
+        "merlot",
+        "vernaccia"
+      ],
+      "classification": "DOCG, DOC, IGT (Super Tuscan)",
+      "subRegions": [
+        "Chianti Classico",
+        "Brunello di Montalcino",
+        "Vino Nobile di Montepulciano",
+        "Bolgheri",
+        "San Gimignano"
+      ],
+      "famousProducers": [
+        "Antinori",
+        "Sassicaia",
+        "Ornellaia",
+        "Biondi-Santi",
+        "Fontodi"
+      ],
+      "descriptionZh": "義大利葡萄酒的心臟。Chianti Classico 的黑公雞標誌舉世聞名。1970 年代的「超級托斯卡尼」(Super Tuscan) 革命，以國際品種打破傳統法規限制，創造了 Sassicaia、Tignanello 等傳奇酒款。"
+    },
+    {
+      "id": "rioja",
+      "nameEn": "Rioja",
+      "nameZh": "里奧哈",
+      "country": "Spain",
+      "climate": "Continental-Mediterranean",
+      "soil": "Clay-chalk, alluvial, ferrous clay",
+      "keyGrapes": [
+        "tempranillo",
+        "garnacha",
+        "graciano",
+        "mazuelo"
+      ],
+      "classification": "Crianza, Reserva, Gran Reserva",
+      "subRegions": [
+        "Rioja Alta",
+        "Rioja Alavesa",
+        "Rioja Oriental"
+      ],
+      "famousProducers": [
+        "López de Heredia",
+        "La Rioja Alta",
+        "CVNE",
+        "Marqués de Riscal",
+        "Muga"
+      ],
+      "descriptionZh": "西班牙最經典的葡萄酒產區。以美國橡木桶長期陳年的傳統風格聞名：Crianza 至少 2 年、Reserva 3 年、Gran Reserva 5 年以上。近年也有新派釀酒師改用法國橡木桶，追求更現代的風格。"
+    },
+    {
+      "id": "napa-valley",
+      "nameEn": "Napa Valley",
+      "nameZh": "納帕谷",
+      "country": "USA",
+      "climate": "Mediterranean",
+      "soil": "Volcanic, alluvial, sedimentary",
+      "keyGrapes": [
+        "cabernet-sauvignon",
+        "chardonnay",
+        "merlot",
+        "sauvignon-blanc"
+      ],
+      "classification": "AVA (American Viticultural Area)",
+      "subRegions": [
+        "Oakville",
+        "Rutherford",
+        "Stags Leap",
+        "Howell Mountain",
+        "Calistoga",
+        "Carneros"
+      ],
+      "famousProducers": [
+        "Opus One",
+        "Screaming Eagle",
+        "Harlan Estate",
+        "Robert Mondavi",
+        "Stag's Leap Wine Cellars"
+      ],
+      "descriptionZh": "1976 年「巴黎品酒會」（Judgment of Paris）讓納帕谷一戰成名，加州酒擊敗法國頂級酒莊震驚世界。如今納帕以濃郁飽滿的卡本內蘇維翁著稱，Cult Wine 文化盛行，頂級酒款價格直逼波爾多列級酒莊。"
+    },
+    {
+      "id": "barossa-valley",
+      "nameEn": "Barossa Valley",
+      "nameZh": "巴羅莎谷",
+      "country": "Australia",
+      "climate": "Warm Mediterranean",
+      "soil": "Red-brown earth, sand over clay",
+      "keyGrapes": [
+        "syrah-shiraz",
+        "grenache",
+        "mourvèdre",
+        "riesling"
+      ],
+      "classification": "GI (Geographical Indication)",
+      "subRegions": [
+        "Barossa Valley Floor",
+        "Eden Valley",
+        "High Eden"
+      ],
+      "famousProducers": [
+        "Penfolds",
+        "Henschke",
+        "Torbreck",
+        "Two Hands",
+        "Peter Lehmann"
+      ],
+      "descriptionZh": "澳洲最重要的葡萄酒產區，擁有全球最老的希哈老藤（部分超過 170 年）。Penfolds Grange 是南半球最具傳奇色彩的酒款。巴羅莎的 Shiraz 以濃郁、飽滿、帶巧克力與胡椒的風格聞名世界。"
+    },
+    {
+      "id": "mosel",
+      "nameEn": "Mosel",
+      "nameZh": "摩澤爾",
+      "country": "Germany",
+      "climate": "Cool continental",
+      "soil": "Slate (blue, grey, red)",
+      "keyGrapes": [
+        "riesling",
+        "müller-thurgau",
+        "elbling"
+      ],
+      "classification": "VDP (Großes Gewächs, Erste Lage), Prädikatswein",
+      "subRegions": [
+        "Bernkastel",
+        "Piesport",
+        "Ürziger Würzgarten",
+        "Scharzhofberg"
+      ],
+      "famousProducers": [
+        "Egon Müller",
+        "Joh. Jos. Prüm",
+        "Fritz Haag",
+        "Markus Molitor"
+      ],
+      "descriptionZh": "世界頂級麗絲玲的故鄉。陡峭到近乎垂直的板岩坡地（坡度可達 65°）賦予酒款獨特的礦物質感。Mosel 麗絲玲以低酒精（有時僅 7-8%）、高酸度、纖細優雅的風格著稱。Egon Müller 的 TBA 是全球最貴的白酒。"
+    },
+    {
+      "id": "mendoza",
+      "nameEn": "Mendoza",
+      "nameZh": "門多薩",
+      "country": "Argentina",
+      "climate": "Arid continental",
+      "soil": "Alluvial, sandy, rocky",
+      "keyGrapes": [
+        "malbec",
+        "cabernet-sauvignon",
+        "bonarda",
+        "torrontés"
+      ],
+      "classification": "DOC, IG",
+      "subRegions": [
+        "Luján de Cuyo",
+        "Uco Valley",
+        "Maipú",
+        "Tupungato",
+        "Gualtallary"
+      ],
+      "famousProducers": [
+        "Catena Zapata",
+        "Achaval-Ferrer",
+        "Zuccardi",
+        "Terrazas de los Andes"
+      ],
+      "descriptionZh": "安地斯山腳下的葡萄酒天堂，海拔 800-1,500 公尺的高海拔產區。充足日照與巨大日夜溫差造就了 Malbec 深邃的色澤與濃郁的果味。Uco Valley 近年成為最受矚目的頂級子產區。"
+    },
+    {
+      "id": "marlborough",
+      "nameEn": "Marlborough",
+      "nameZh": "馬爾堡",
+      "country": "New Zealand",
+      "climate": "Cool maritime",
+      "soil": "Greywacke gravel, clay",
+      "keyGrapes": [
+        "sauvignon-blanc",
+        "pinot-noir",
+        "chardonnay"
+      ],
+      "classification": "GI",
+      "subRegions": [
+        "Wairau Valley",
+        "Southern Valleys",
+        "Awatere Valley"
+      ],
+      "famousProducers": [
+        "Cloudy Bay",
+        "Villa Maria",
+        "Dog Point",
+        "Craggy Range"
+      ],
+      "descriptionZh": "紐西蘭最大的葡萄酒產區，以爆炸性的百香果與青草調白蘇維翁震撼全球市場。1985 年 Cloudy Bay 的首個年份一炮而紅。近年黑皮諾也展現出令人驚豔的品質，成為布根地以外最受關注的產區之一。"
+    },
+    {
+      "id": "rhone-valley",
+      "nameEn": "Rhône Valley",
+      "nameZh": "隆河谷",
+      "country": "France",
+      "climate": "Continental (North), Mediterranean (South)",
+      "soil": "Granite, schist (North); galets roulés, limestone, sand (South)",
+      "keyGrapes": [
+        "syrah",
+        "grenache",
+        "mourvèdre",
+        "viognier",
+        "marsanne",
+        "roussanne"
+      ],
+      "classification": "AOC/AOP, Cru (Hermitage, Côte-Rôtie, Châteauneuf-du-Pape)",
+      "subRegions": [
+        "Côte-Rôtie",
+        "Hermitage",
+        "Crozes-Hermitage",
+        "Saint-Joseph",
+        "Condrieu",
+        "Châteauneuf-du-Pape",
+        "Gigondas",
+        "Vacqueyras",
+        "Côtes du Rhône"
+      ],
+      "famousProducers": [
+        "E. Guigal",
+        "M. Chapoutier",
+        "Jean-Louis Chave",
+        "Château de Beaucastel",
+        "Domaine de la Janasse"
+      ],
+      "descriptionZh": "法國第二大 AOC 葡萄酒產區，以隆河為軸分為風格迥異的南北兩段。北隆河以希哈單一品種稱王，Hermitage 與 Côte-Rôtie 是世界頂級產區；南隆河以格那希為主的混釀聞名，教皇新堡（Châteauneuf-du-Pape）允許使用多達 13 種葡萄品種。河灘上布滿的大型鵝卵石（galets roulés）白天吸收太陽熱量、夜間釋放，是南隆河獨特風土的標誌。"
+    },
+    {
+      "id": "piedmont",
+      "nameEn": "Piedmont",
+      "nameZh": "皮埃蒙特",
+      "country": "Italy",
+      "climate": "Continental with fog",
+      "soil": "Marl, limestone, clay, sand (Tortonian and Helvetian soils)",
+      "keyGrapes": [
+        "nebbiolo",
+        "barbera",
+        "dolcetto",
+        "moscato",
+        "arneis",
+        "cortese"
+      ],
+      "classification": "DOCG (Barolo, Barbaresco, Asti), DOC",
+      "subRegions": [
+        "Barolo",
+        "Barbaresco",
+        "Langhe",
+        "Roero",
+        "Asti",
+        "Gavi",
+        "Monferrato"
+      ],
+      "famousProducers": [
+        "Giacomo Conterno",
+        "Bruno Giacosa",
+        "Gaja",
+        "Bartolo Mascarello",
+        "Vietti",
+        "Paolo Scavino"
+      ],
+      "descriptionZh": "義大利西北部的葡萄酒聖地，被阿爾卑斯山環抱。Barolo 與 Barbaresco 以 100% 內比歐露釀造，是義大利最具陳年潛力的紅酒。產區名「Piedmont」意為「山腳」，秋季的濃霧（nebbia）正是內比歐露品種名稱的由來。傳統派與現代派的釀酒哲學之爭（大桶 vs 小桶）至今仍是酒界最熱烈的辯論之一。Asti 的甜美氣泡 Moscato 則是完全不同的溫柔面向。"
+    },
+    {
+      "id": "loire-valley",
+      "nameEn": "Loire Valley",
+      "nameZh": "羅亞爾河谷",
+      "country": "France",
+      "climate": "Maritime (west) to Continental (east)",
+      "soil": "Tuffeau limestone, schist, flint (silex), gravel, sand",
+      "keyGrapes": [
+        "chenin-blanc",
+        "cabernet-franc",
+        "melon-de-bourgogne",
+        "sauvignon-blanc",
+        "gamay"
+      ],
+      "classification": "AOC/AOP (Sancerre, Vouvray, Chinon, Muscadet, Savennières)",
+      "subRegions": [
+        "Muscadet",
+        "Anjou-Saumur",
+        "Touraine",
+        "Sancerre",
+        "Pouilly-Fumé",
+        "Vouvray",
+        "Chinon",
+        "Bourgueil",
+        "Savennières"
+      ],
+      "famousProducers": [
+        "Domaine Huet",
+        "Nicolas Joly",
+        "Didier Dagueneau",
+        "Domaine des Baumard",
+        "Charles Joguet"
+      ],
+      "descriptionZh": "法國最長河流沿岸的葡萄酒花園，從大西洋海岸延伸至法國中部，綿延超過 1,000 公里。白梢楠（Chenin Blanc）在此展現驚人的多面性——Vouvray 的干型到甜型、Savennières 的嚴峻礦物感。品麗珠在 Chinon 與 Bourgueil 達到單一品種的巔峰。Sancerre 的白蘇維翁則是法國最純淨的表達。羅亞爾河谷也是法國自然酒運動的重鎮。"
+    },
+    {
+      "id": "alsace",
+      "nameEn": "Alsace",
+      "nameZh": "亞爾薩斯",
+      "country": "France",
+      "climate": "Semi-continental, dry (rain shadow of Vosges mountains)",
+      "soil": "Granite, limestone, volcanic, marl, sandstone",
+      "keyGrapes": [
+        "riesling",
+        "gewurztraminer",
+        "pinot-gris",
+        "muscat",
+        "pinot-noir",
+        "sylvaner"
+      ],
+      "classification": "AOC Alsace, Alsace Grand Cru (51 vineyards), Vendange Tardive, Sélection de Grains Nobles",
+      "subRegions": [
+        "Haut-Rhin",
+        "Bas-Rhin",
+        "51 Grand Cru vineyards"
+      ],
+      "famousProducers": [
+        "Trimbach",
+        "Domaine Weinbach",
+        "Zind-Humbrecht",
+        "Marcel Deiss",
+        "Hugel"
+      ],
+      "descriptionZh": "法德邊境的獨特產區，融合兩國文化精華。受佛日山脈（Vosges）雨影效應保護，是法國最乾燥的葡萄酒產區之一。亞爾薩斯是法國唯一在酒標上標示葡萄品種名的傳統產區。51 個 Grand Cru 園各有獨特的地質與微氣候。Vendange Tardive（遲摘）與 Sélection de Grains Nobles（貴腐精選）是甜酒的最高等級。"
+    },
+    {
+      "id": "douro-valley",
+      "nameEn": "Douro Valley",
+      "nameZh": "斗羅河谷",
+      "country": "Portugal",
+      "climate": "Hot continental, semi-arid",
+      "soil": "Schist, granite",
+      "keyGrapes": [
+        "touriga-nacional",
+        "touriga-franca",
+        "tinta-roriz",
+        "tinta-barroca",
+        "tinto-cao"
+      ],
+      "classification": "DOC Douro, Porto DOC",
+      "subRegions": [
+        "Baixo Corgo",
+        "Cima Corgo",
+        "Douro Superior"
+      ],
+      "famousProducers": [
+        "Quinta do Noval",
+        "Taylor's",
+        "Graham's",
+        "Niepoort",
+        "Quinta do Crasto"
+      ],
+      "descriptionZh": "世界上最古老的法定產區之一（1756 年劃定），UNESCO 世界文化遺產。陡峭的板岩梯田沿斗羅河蜿蜒，壯觀的景觀令人嘆為觀止。這裡是波特酒的故鄉——加烈甜紅酒的經典，透過在發酵中途加入白蘭地中斷發酵，保留天然糖分。近年越來越多酒莊轉向生產高品質的干紅餐酒，以國產多瑞加為首的本土品種展現出驚人的深度與個性。"
+    },
+    {
+      "id": "willamette-valley",
+      "nameEn": "Willamette Valley",
+      "nameZh": "威拉梅特谷",
+      "country": "USA (Oregon)",
+      "climate": "Cool maritime, marine-influenced",
+      "soil": "Volcanic (Jory), sedimentary (Willakenzie), loess (Laurelwood)",
+      "keyGrapes": [
+        "pinot-noir",
+        "pinot-gris",
+        "chardonnay",
+        "riesling"
+      ],
+      "classification": "AVA (American Viticultural Area)",
+      "subRegions": [
+        "Dundee Hills",
+        "Eola-Amity Hills",
+        "Ribbon Ridge",
+        "Chehalem Mountains",
+        "McMinnville",
+        "Yamhill-Carlton"
+      ],
+      "famousProducers": [
+        "Domaine Drouhin Oregon",
+        "Eyrie Vineyards",
+        "Domaine Serene",
+        "Beaux Frères",
+        "Cristom"
+      ],
+      "descriptionZh": "美國黑皮諾的首都。1965 年 David Lett 在此種下第一批黑皮諾，被當時所有人嘲笑太冷。然而 1979 年他的 Eyrie Vineyards 在巴黎盲品會上擊敗多款布根地名莊，從此奠定威拉梅特谷的地位。火山土壤（Jory）與海洋性氣候的組合，賦予酒款優雅的結構與明亮的酸度。不同子產區的土壤差異（火山岩 vs 沉積岩 vs 黃土）正在被越來越精細地研究與表達。"
+    },
+    {
+      "id": "central-otago",
+      "nameEn": "Central Otago",
+      "nameZh": "中奧塔哥",
+      "country": "New Zealand",
+      "climate": "Continental (semi-arid), extreme diurnal temperature variation",
+      "soil": "Schist, loess, gravel, mica",
+      "keyGrapes": [
+        "pinot-noir",
+        "riesling",
+        "pinot-gris",
+        "chardonnay"
+      ],
+      "classification": "GI (Geographical Indication)",
+      "subRegions": [
+        "Bannockburn",
+        "Gibbston",
+        "Bendigo",
+        "Pisa Range",
+        "Cromwell",
+        "Wanaka"
+      ],
+      "famousProducers": [
+        "Felton Road",
+        "Mt Difficulty",
+        "Rippon",
+        "Burn Cottage",
+        "Amisfield"
+      ],
+      "descriptionZh": "世界最南端的葡萄酒產區之一（南緯 45 度），也是紐西蘭唯一的大陸性氣候產區。極端的日夜溫差（可達 25°C）賦予黑皮諾濃郁的果味與鮮明的酸度，風格介於布根地的優雅與新世界的奔放之間。壯麗的南阿爾卑斯山脈環繞的景觀，使其成為全球最美的葡萄酒產區之一。Felton Road 的黑皮諾已被公認為世界頂級。"
+    },
+    {
+      "id": "priorat",
+      "nameEn": "Priorat",
+      "nameZh": "普里奧拉特",
+      "country": "Spain",
+      "climate": "Hot Mediterranean, extreme terrain",
+      "soil": "Llicorella (black and red slate)",
+      "keyGrapes": [
+        "grenache",
+        "carignan",
+        "cabernet-sauvignon",
+        "syrah",
+        "merlot"
+      ],
+      "classification": "DOCa (Denominación de Origen Calificada) - Spain's highest",
+      "subRegions": [
+        "Gratallops",
+        "Porrera",
+        "Bellmunt del Priorat",
+        "Torroja",
+        "La Morera de Montsant"
+      ],
+      "famousProducers": [
+        "Álvaro Palacios (L'Ermita)",
+        "Clos Mogador",
+        "Clos Erasmus",
+        "Mas Doix",
+        "Terroir al Límit"
+      ],
+      "descriptionZh": "西班牙僅有的兩個最高等級 DOCa 產區之一（另一為 Rioja）。1990 年代 Álvaro Palacios 等先鋒釀酒師在這片被遺忘的陡峭板岩山坡上掀起革命，將老藤格那希與卡利濃（Carignan）釀成震驚世界的濃縮佳作。獨特的 Llicorella 板岩土壤（由黑色與紅色板岩碎片組成）賦予酒款獨特的礦物感與深邃度。產量極低，每株老藤僅產出一杯酒量的果實。"
+    },
+    {
+      "id": "stellenbosch",
+      "nameEn": "Stellenbosch",
+      "nameZh": "斯泰倫博斯",
+      "country": "South Africa",
+      "climate": "Mediterranean, maritime influence",
+      "soil": "Granite, sandstone, Table Mountain series",
+      "keyGrapes": [
+        "cabernet-sauvignon",
+        "chenin-blanc",
+        "pinotage",
+        "syrah",
+        "merlot"
+      ],
+      "classification": "WO (Wine of Origin)",
+      "subRegions": [
+        "Stellenbosch Mountain",
+        "Helderberg",
+        "Simonsberg",
+        "Bottelary Hills",
+        "Banghoek"
+      ],
+      "famousProducers": [
+        "Kanonkop",
+        "Meerlust",
+        "Rustenberg",
+        "Thelema",
+        "Vergelegen"
+      ],
+      "descriptionZh": "南非葡萄酒的心臟與靈魂，擁有 350 多年的釀酒歷史。壯麗的山脈地形創造出多樣的微氣候與海拔差異。卡本內蘇維翁在此展現出色的波爾多風格，白梢楠老藤則是南非獨特的寶藏。Pinotage——黑皮諾與仙梭（Cinsaut）的雜交品種，是南非的專屬品種，風味從煙燻咖啡到紅色莓果不等。近年南非酒界的「Old Vine Project」致力保護珍貴的老藤遺產。"
+    },
+    {
+      "id": "tokaj",
+      "nameEn": "Tokaj",
+      "nameZh": "托卡伊",
+      "country": "Hungary",
+      "climate": "Continental with warm autumns, river fog",
+      "soil": "Volcanic clay, loess, zemplén andesite",
+      "keyGrapes": [
+        "furmint",
+        "hárslevelű",
+        "sárga-muskotály",
+        "kabar"
+      ],
+      "classification": "Tokaji Aszú (3-6 Puttonyos), Tokaji Eszencia, Tokaji Szamorodni",
+      "subRegions": [
+        "Mád",
+        "Tarcal",
+        "Tokaj town",
+        "Tolcsva",
+        "Erdőbénye"
+      ],
+      "famousProducers": [
+        "Royal Tokaji",
+        "Disznókő",
+        "Oremus",
+        "István Szepsy",
+        "Dobogó"
+      ],
+      "descriptionZh": "「酒中之王，王者之酒」——路易十四如此讚美托卡伊。這是世界上最古老的法定甜酒產區（1730 年），比波爾多 1855 年分級早了一個多世紀。Tokaji Aszú 以手工逐粒挑選貴腐葡萄，加入基酒中浸泡，創造出金黃色的瓊漿玉液。Eszencia（精華）含糖量可達 800g/L 以上，發酵後僅 2-3% 酒精度，可陳放數百年，是葡萄酒世界最極致的液態黃金。Furmint 品種近年也以干型白酒的面貌重獲國際關注。"
+    }
+  ],
+  "barrels": {
+    "titleZh": "木桶科學與藝術",
+    "titleEn": "The Science & Art of Oak Barrels",
+    "introductionZh": "橡木桶是葡萄酒陳年的靈魂容器。木桶不僅賦予酒液香草、烘烤、香料等風味，更透過木材毛孔進行微量氧氣交換，使酒體圓潤柔化、單寧聚合、色素穩定。選擇正確的木桶種類、大小與烘烤程度，是釀酒師最重要的藝術決策之一。",
+    "oakTypes": [
+      {
+        "id": "french-oak",
+        "nameEn": "French Oak (Quercus robur / petraea)",
+        "nameZh": "法國橡木",
+        "origin": "Limousin, Allier, Tronçais, Vosges",
+        "grainType": "tight",
+        "flavorContributionZh": [
+          "香草",
+          "辛香料",
+          "絲綢質感",
+          "細膩烘烤",
+          "雪松"
+        ],
+        "commonUse": "Burgundy Pinot Noir, Bordeaux blends, premium Chardonnay",
+        "priceRange": "$$$$",
+        "descriptionZh": "法國橡木以緊密的木紋結構聞名，緩慢釋放細膩的風味物質。Allier 與 Tronçais 森林的橡木質地最為細緻，是布根地與波爾多頂級酒莊的首選。單一新桶成本可達 800-1200 歐元。"
+      },
+      {
+        "id": "american-oak",
+        "nameEn": "American Oak (Quercus alba)",
+        "nameZh": "美國橡木",
+        "origin": "Missouri, Minnesota, Oregon, Virginia",
+        "grainType": "wide",
+        "flavorContributionZh": [
+          "椰子",
+          "香草",
+          "焦糖",
+          "奶油糖",
+          "蒔蘿"
+        ],
+        "commonUse": "Rioja Tempranillo, Bourbon aging, Australian Shiraz",
+        "priceRange": "$$",
+        "descriptionZh": "美國白橡木紋理較寬，釋放風味更為奔放直接。濃郁的椰子與香草調性是其標誌。西班牙里奧哈傳統上以美國橡木桶陳年，賦予酒款經典的甜美香草風格。價格約為法國橡木的三分之一。"
+      },
+      {
+        "id": "hungarian-oak",
+        "nameEn": "Hungarian Oak (Quercus petraea)",
+        "nameZh": "匈牙利橡木",
+        "origin": "Zemplén Mountains, Tokaj region",
+        "grainType": "medium-tight",
+        "flavorContributionZh": [
+          "肉桂",
+          "丁香",
+          "烤杏仁",
+          "蜂蜜"
+        ],
+        "commonUse": "Tokaji wines, Central European wines, alternative to French oak",
+        "priceRange": "$$$",
+        "descriptionZh": "匈牙利橡木與法國 petraea 種同屬，但風土條件的差異使其展現獨特的辛香料調性。Tokaji 甜酒傳統上在匈牙利橡木桶中陳年。近年越來越多波爾多與義大利酒莊開始嘗試使用。"
+      },
+      {
+        "id": "slavonian-oak",
+        "nameEn": "Slavonian Oak",
+        "nameZh": "斯拉沃尼亞橡木",
+        "origin": "Croatia (Slavonia region)",
+        "grainType": "very tight",
+        "flavorContributionZh": [
+          "極淡木質",
+          "礦物感",
+          "維持果味純淨"
+        ],
+        "commonUse": "Barolo, Brunello, traditional Italian wines",
+        "priceRange": "$$$",
+        "descriptionZh": "義大利傳統釀酒的支柱。斯拉沃尼亞橡木的極緊密紋理使其風味影響極為含蓄，主要功能是提供緩慢的微氧化而非木桶風味。大型 Botte 桶（20-100 百升）是 Barolo 傳統派的堅持。"
+      },
+      {
+        "id": "mizunara-oak",
+        "nameEn": "Japanese Mizunara Oak (Quercus crispula)",
+        "nameZh": "日本水楢橡木",
+        "origin": "Hokkaido, Japan",
+        "grainType": "very porous",
+        "flavorContributionZh": [
+          "檀香",
+          "椰子",
+          "東方辛香料",
+          "線香",
+          "日本柏木"
+        ],
+        "commonUse": "Japanese whisky, premium sake, experimental wines",
+        "priceRange": "$$$$$",
+        "descriptionZh": "全球最稀有的橡木之一。水楢木質地多孔、易漏，製桶難度極高，但能賦予獨特的東方禪意香氣——檀香、線香與日本柏木的迷人調性。山崎與白州威士忌的水楢桶版本在國際拍賣會上屢創天價。"
+      },
+      {
+        "id": "acacia-wood",
+        "nameEn": "Acacia Wood (Robinia pseudoacacia)",
+        "nameZh": "洋槐木",
+        "origin": "Central Europe (Hungary, France)",
+        "grainType": "medium",
+        "flavorContributionZh": [
+          "蜂蜜",
+          "花香",
+          "中性風味",
+          "微甜調性"
+        ],
+        "commonUse": "Aromatic white wines, Sauvignon Blanc, some dessert wines",
+        "priceRange": "$$$",
+        "descriptionZh": "洋槐木是橡木以外最受關注的替代木材。相比橡木，洋槐木對酒液的風味影響更為含蓄中性，主要賦予細微的蜂蜜與花香調性，不會掩蓋葡萄本身的果香。特別適合芳香型白葡萄品種的陳年，義大利部分產區開始將其用於白蘇維翁與灰皮諾的短期熟成。"
+      },
+      {
+        "id": "chestnut",
+        "nameEn": "Chestnut (Castanea sativa)",
+        "nameZh": "栗木",
+        "origin": "Italy, Portugal, France",
+        "grainType": "very wide",
+        "flavorContributionZh": [
+          "堅果",
+          "單寧",
+          "乾燥木質",
+          "輕微苦味"
+        ],
+        "commonUse": "Traditional Italian wines, some Portuguese wines, balsamic vinegar",
+        "priceRange": "$$",
+        "descriptionZh": "栗木是義大利部分產區的傳統陳年容器，在橡木桶普及之前曾廣泛使用。木紋粗大且多孔，單寧萃取量遠超橡木，因此需要經過多次使用後風味才趨於溫和。如今主要見於義大利托斯卡尼與翁布里亞的傳統小型酒莊，以及傳統巴薩米克醋（Aceto Balsamico Tradizionale）的陳年系統中。栗木桶的復古魅力正吸引一些自然派釀酒師的重新關注。"
+      }
+    ],
+    "toastLevels": [
+      {
+        "level": "Light",
+        "levelZh": "輕烘烤",
+        "flavorZh": "香草、椰子、淡花香、新鮮木材",
+        "descriptionZh": "輕度烘烤保留最多原始木材特性，以清新的香草與椰子調為主。適合不希望木桶過度影響果味的釀酒師，常用於清爽風格的白酒。"
+      },
+      {
+        "level": "Medium",
+        "levelZh": "中烘烤",
+        "flavorZh": "焦糖、太妃、吐司、丁香、肉豆蔻",
+        "descriptionZh": "最受歡迎的烘烤程度。中烘烤在木質與甜美之間取得平衡，帶出迷人的焦糖與烘烤麵包風味。大多數波爾多與布根地酒莊的標準選擇。"
+      },
+      {
+        "level": "Medium-Plus",
+        "levelZh": "中重烘烤",
+        "flavorZh": "咖啡、黑巧克力、煙燻、摩卡",
+        "descriptionZh": "較深的烘烤帶來更濃郁的風味衝擊。咖啡與黑巧克力調性明顯，適合結構強勁的紅酒。新世界酒莊偏好此程度。"
+      },
+      {
+        "level": "Heavy",
+        "levelZh": "重烘烤",
+        "flavorZh": "炭燒、濃縮咖啡、營火、焦炭",
+        "descriptionZh": "重烘烤在木材表面形成一層炭化層，風味極為強烈。使用不當容易掩蓋果味。波本威士忌法規要求使用炭化新橡木桶（Charred），與重烘烤有異曲同工之處。"
+      }
+    ],
+    "barrelSizes": [
+      {
+        "nameEn": "Barrique (Bordeaux)",
+        "nameZh": "波爾多小橡木桶",
+        "liters": 225,
+        "usage": "波爾多標準陳年桶，每桶約裝 300 瓶。新桶對酒的風味影響最大。"
+      },
+      {
+        "nameEn": "Pièce (Burgundy)",
+        "nameZh": "布根地桶",
+        "liters": 228,
+        "usage": "布根地傳統規格，比 Barrique 略大。Grand Cru 常用 100% 新桶。"
+      },
+      {
+        "nameEn": "Hogshead",
+        "nameZh": "豬頭桶",
+        "liters": 300,
+        "usage": "常見於澳洲 Shiraz 與蘇格蘭威士忌。容量介於 Barrique 與 Puncheon 之間。"
+      },
+      {
+        "nameEn": "Puncheon",
+        "nameZh": "龐奇桶",
+        "liters": 500,
+        "usage": "雪莉酒陳年的傳統用桶。較大容量使木桶影響更為溫和。"
+      },
+      {
+        "nameEn": "Foudre",
+        "nameZh": "大型橡木桶",
+        "liters": 1000,
+        "usage": "亞爾薩斯與隆河谷常用。極溫和的木桶影響，主要提供微氧化環境。"
+      },
+      {
+        "nameEn": "Botte",
+        "nameZh": "義大利傳統大桶",
+        "liters": 2500,
+        "usage": "Barolo 與 Brunello 傳統派的選擇。容量 20-100 百升，幾乎不帶來木桶風味。"
+      }
+    ],
+    "agingConcepts": [
+      {
+        "concept": "New vs Used Oak",
+        "conceptZh": "新桶 vs 舊桶",
+        "descriptionZh": "新橡木桶風味影響最強，第二次使用約減半，第三次以上僅提供微氧化功能。頂級酒莊精心計算新桶比例：100% 新桶帶來強烈木質調性，50% 新桶則更為平衡。DRC 的 Romanée-Conti 使用 100% 新桶卻不顯突兀，展現了頂級果實的承載力。"
+      },
+      {
+        "concept": "Micro-oxygenation",
+        "conceptZh": "微氧化",
+        "descriptionZh": "橡木桶壁的微小毛孔允許極少量氧氣緩慢滲入，促進單寧聚合與色素穩定。每年約有 2-5ml 氧氣透過桶壁進入酒液。這個緩慢的氧化過程是橡木桶陳年的核心機制，不鏽鋼槽無法複製。"
+      },
+      {
+        "concept": "Bâtonnage (Lees Stirring)",
+        "conceptZh": "攪桶（酒泥攪拌）",
+        "descriptionZh": "定期攪動沉澱的酵母殘渣（酒泥），使其重新懸浮於酒液中。酒泥能增加酒體圓潤度、奶油質感與複雜度，並具有天然的抗氧化作用。這是頂級白布根地（Meursault、Puligny-Montrachet）的關鍵技術。"
+      },
+      {
+        "concept": "Racking",
+        "conceptZh": "換桶",
+        "descriptionZh": "將酒液從一個容器轉移到另一個容器，留下底部的沉澱物。每次換桶都會引入少量氧氣，促進酒的演化。波爾多傳統每 3-4 個月換桶一次，而某些自然派釀酒師選擇盡量減少換桶以降低氧化風險。"
+      },
+      {
+        "concept": "Oxidative vs Reductive Aging",
+        "conceptZh": "氧化式 vs 還原式陳年",
+        "descriptionZh": "氧化式陳年（如雪莉酒的 Solera 系統）刻意接觸空氣，發展出堅果、太妃等風味。還原式陳年（如滿桶密封）則盡量隔絕氧氣，保持果味的新鮮活力。兩者各有美感，關鍵在於釀酒師的意圖與酒款的風格定位。"
+      }
+    ]
+  },
+  "tasting": {
+    "titleZh": "葡萄酒品飲指南",
+    "titleEn": "Wine Tasting Guide",
+    "steps": [
+      {
+        "step": "See",
+        "stepZh": "觀色",
+        "descriptionZh": "將酒杯傾斜 45 度，以白色背景觀察酒液的顏色深淺、透明度與邊緣色調。紅酒從紫紅→寶石紅→石榴紅→磚紅演變代表陳年程度；白酒從淡綠→稻草黃→金黃→琥珀色則反映氧化程度。",
+        "keyPoints": [
+          "color depth indicates extraction",
+          "rim variation shows age",
+          "clarity suggests filtration",
+          "legs/tears indicate alcohol & glycerol"
+        ]
+      },
+      {
+        "step": "Swirl",
+        "stepZh": "搖杯",
+        "descriptionZh": "輕柔地旋轉酒杯，讓酒液沿杯壁流動，增加與空氣的接觸面積以釋放香氣分子。搖杯後杯壁上的「酒淚」（Tears/Legs）流速與密度能粗略判斷酒精濃度與甜度。",
+        "keyPoints": [
+          "releases volatile aromatics",
+          "shows viscosity",
+          "slower legs = higher alcohol/sugar",
+          "swirl 3-5 seconds is sufficient"
+        ]
+      },
+      {
+        "step": "Smell",
+        "stepZh": "聞香",
+        "descriptionZh": "先不搖杯聞第一層香氣，再搖杯後聞第二層。一級香氣來自葡萄本身（果香、花香）；二級香氣來自發酵（奶油、麵包）；三級香氣來自陳年（皮革、蘑菇、雪松）。鼻子能分辨超過 10,000 種氣味。",
+        "keyPoints": [
+          "primary aromas = grape variety",
+          "secondary aromas = fermentation",
+          "tertiary aromas = aging",
+          "common off-odors: wet cardboard (TCA), nail polish (VA)"
+        ]
+      },
+      {
+        "step": "Sip",
+        "stepZh": "品飲",
+        "descriptionZh": "啜飲一小口，讓酒液滾過整個口腔。舌尖感受甜度、兩側感受酸度、舌根感受苦味、整個口腔感受單寧的收斂感。注意酒體（輕盈如水或飽滿如全脂牛奶）、酸度（唾液分泌量）與酒精感（喉嚨的溫熱感）。",
+        "keyPoints": [
+          "acidity = salivation level",
+          "tannin = drying sensation",
+          "body = weight on palate",
+          "balance = harmony of all elements"
+        ]
+      },
+      {
+        "step": "Savor",
+        "stepZh": "回味",
+        "descriptionZh": "吞嚥後留意口中殘留的風味持續時間，這是判斷酒質的重要指標。偉大的酒回味可持續 30 秒甚至超過 1 分鐘（稱為 Long Finish）。回味中出現的新風味層次也是複雜度的體現。",
+        "keyPoints": [
+          "finish length: short(<5s), medium(5-10s), long(>10s)",
+          "new flavors may emerge",
+          "bitterness in finish is often a flaw",
+          "pleasant warmth is normal for high-alcohol wines"
+        ]
+      }
+    ],
+    "commonFlaws": [
+      {
+        "flaw": "Cork Taint (TCA)",
+        "flawZh": "軟木塞汙染（TCA）",
+        "detectionZh": "聞到濕紙板、發霉地下室或濕狗的氣味。三氯苯甲醚（TCA）即使在極低濃度（2-3 ppt）下就能被察覺。全球約 3-5% 的軟木塞封裝葡萄酒受到影響。這是螺旋蓋興起的主要原因之一。"
+      },
+      {
+        "flaw": "Oxidation",
+        "flawZh": "氧化",
+        "detectionZh": "白酒顏色異常偏深（棕黃色），紅酒偏磚褐色。聞到雪莉酒般的堅果、布丁或爛蘋果氣味。通常由不良儲存條件（高溫、瓶塞乾裂）造成。少量氧化在某些酒款（如 Vin Jaune）中是刻意的風格特徵。"
+      },
+      {
+        "flaw": "Volatile Acidity (VA)",
+        "flawZh": "揮發性酸度（VA）",
+        "detectionZh": "聞到刺鼻的醋酸或去光水（醋酸乙酯）氣味。所有葡萄酒都含微量 VA，但超過閾值（紅酒 >1.2g/L）即為瑕疵。醋酸菌在酒液暴露於空氣中時大量繁殖。少量 VA 在老年份波爾多中被某些品飲者視為複雜度的一部分。"
+      },
+      {
+        "flaw": "Reduction",
+        "flawZh": "還原味",
+        "detectionZh": "聞到臭雞蛋、火柴頭、大蒜或橡膠的氣味。這是因為酒液在極度缺氧環境中產生過多硫化物。輕微的還原味通常醒酒後會消散。嚴重者可嘗試將一枚銅幣放入杯中，銅能與硫化氫反應消除臭味。"
+      }
+    ],
+    "servingTemperature": [
+      {
+        "type": "Sparkling",
+        "typeZh": "氣泡酒",
+        "tempC": "6-8°C",
+        "noteZh": "過冷會抑制香氣，過暖則氣泡消散過快"
+      },
+      {
+        "type": "Light White / Rosé",
+        "typeZh": "清爽白酒 / 粉紅酒",
+        "tempC": "8-10°C",
+        "noteZh": "Sauvignon Blanc、Pinot Grigio 的理想溫度"
+      },
+      {
+        "type": "Full-bodied White",
+        "typeZh": "飽滿白酒",
+        "tempC": "10-13°C",
+        "noteZh": "過冰會掩蓋 Chardonnay 的複雜度"
+      },
+      {
+        "type": "Light Red",
+        "typeZh": "清爽紅酒",
+        "tempC": "13-16°C",
+        "noteZh": "Pinot Noir、Beaujolais 略為冰鎮更佳"
+      },
+      {
+        "type": "Full-bodied Red",
+        "typeZh": "飽滿紅酒",
+        "tempC": "16-18°C",
+        "noteZh": "室溫概念源自歐洲酒窖溫度，不是亞洲的 30°C"
+      },
+      {
+        "type": "Dessert Wine",
+        "typeZh": "甜酒",
+        "tempC": "6-8°C",
+        "noteZh": "冰鎮能平衡甜度，避免過膩"
+      }
+    ],
+    "servingTemperatures": [
+      {
+        "wineType": "Sparkling Wine",
+        "wineTypeZh": "氣泡酒",
+        "range": "6-8°C",
+        "descriptionZh": "冰鎮飲用，保持細緻氣泡與清爽口感。過冷會抑制香氣，過暖氣泡消散過快。"
+      },
+      {
+        "wineType": "Light White & Rosé",
+        "wineTypeZh": "輕盈白酒與粉紅酒",
+        "range": "8-10°C",
+        "descriptionZh": "如 Sauvignon Blanc、Pinot Grigio、Provence Rosé。微冰凸顯果香與酸度的清新感。"
+      },
+      {
+        "wineType": "Full-bodied White",
+        "wineTypeZh": "飽滿白酒",
+        "range": "10-13°C",
+        "descriptionZh": "如 Chardonnay（尤其桶陳版）、Viognier。稍高溫度釋放奶油、烤杏仁等複雜香氣。"
+      },
+      {
+        "wineType": "Light Red",
+        "wineTypeZh": "輕盈紅酒",
+        "range": "13-15°C",
+        "descriptionZh": "如 Pinot Noir、Beaujolais Gamay。微涼服務凸顯莓果香與細緻酸度，避免過度酒感。"
+      },
+      {
+        "wineType": "Medium Red",
+        "wineTypeZh": "中等紅酒",
+        "range": "15-17°C",
+        "descriptionZh": "如 Merlot、Sangiovese、Tempranillo。此溫度帶平衡果味、單寧與酒體。"
+      },
+      {
+        "wineType": "Full-bodied Red",
+        "wineTypeZh": "飽滿紅酒",
+        "range": "17-19°C",
+        "descriptionZh": "如 Cabernet Sauvignon、Barolo、Syrah。所謂「室溫」實指歐洲石造房屋的涼爽室溫，非台灣的 30°C。"
+      },
+      {
+        "wineType": "Dessert Wine",
+        "wineTypeZh": "甜酒",
+        "range": "8-12°C",
+        "descriptionZh": "如 Sauternes、Ice Wine、Tokaji。冰涼服務平衡甜度，避免過於膩口。"
+      },
+      {
+        "wineType": "Fortified Wine (Dry)",
+        "wineTypeZh": "乾型加烈酒",
+        "range": "10-14°C",
+        "descriptionZh": "如 Fino Sherry、Dry Madeira。微涼飲用凸顯堅果與鹹鮮風味。"
+      },
+      {
+        "wineType": "Fortified Wine (Sweet)",
+        "wineTypeZh": "甜型加烈酒",
+        "range": "14-18°C",
+        "descriptionZh": "如 Tawny Port、PX Sherry。稍高溫度釋放乾果、焦糖等複雜陳年香氣。"
+      }
+    ]
+  },
+  "foodPairing": {
+    "titleZh": "餐酒搭配原則",
+    "titleEn": "Wine & Food Pairing Principles",
+    "principles": [
+      {
+        "principle": "Match Weight",
+        "principleZh": "匹配重量",
+        "descriptionZh": "酒體與食物的「重量感」要匹配。清爽的白酒配輕盈的海鮮，飽滿的紅酒配濃郁的紅肉。例如：Chablis 配生蠔，Barolo 配燉肉。"
+      },
+      {
+        "principle": "Complement or Contrast",
+        "principleZh": "互補或對比",
+        "descriptionZh": "互補搭配強化共同風味（如帶橡木的 Chardonnay 配奶油醬汁），對比搭配則以反差創造驚喜（如高酸 Riesling 切穿油膩鵝肝）。"
+      },
+      {
+        "principle": "Tannin Loves Protein",
+        "principleZh": "單寧配蛋白質",
+        "descriptionZh": "紅酒的單寧與肉類蛋白質結合後，收斂感顯著降低，口感變得柔順。這就是為什麼牛排配卡本內蘇維翁是永恆經典。反之，高單寧紅酒配魚類會產生令人不悅的金屬味。"
+      },
+      {
+        "principle": "Acid Cuts Fat",
+        "principleZh": "酸度切割油脂",
+        "descriptionZh": "高酸度的酒能清理口腔中的油膩感。義大利高酸的山乔維賽配番茄紅醬義大利麵、Champagne 配炸物都是絕佳案例。"
+      },
+      {
+        "principle": "Sweet Balances Spicy",
+        "principleZh": "甜味平衡辛辣",
+        "descriptionZh": "辛辣食物會放大酒精感與苦味。微甜、低酒精的酒（如 Riesling Spätlese 或 Gewürztraminer）是搭配辛辣亞洲料理的最佳選擇。"
+      },
+      {
+        "principle": "Regional Pairing",
+        "principleZh": "地域搭配",
+        "descriptionZh": "在地酒配在地菜，幾百年的飲食文化自然形成最佳組合。Chianti 配佛羅倫斯丁骨牛排、Muscadet 配布列塔尼生蠔、Rioja 配西班牙 Tapas。"
+      }
+    ],
+    "classicPairings": [
+      {
+        "wine": "Cabernet Sauvignon",
+        "wineZh": "卡本內蘇維翁",
+        "food": "Grilled Ribeye",
+        "foodZh": "碳烤肋眼牛排",
+        "whyZh": "濃郁果味與肉汁交融，高單寧被蛋白質柔化"
+      },
+      {
+        "wine": "Pinot Noir",
+        "wineZh": "黑皮諾",
+        "food": "Roasted Duck",
+        "foodZh": "烤鴨",
+        "whyZh": "細膩的酸度切穿鴨肉油脂，櫻桃果香與鴨肉的野味相得益彰"
+      },
+      {
+        "wine": "Chardonnay (oaked)",
+        "wineZh": "夏多內（過桶）",
+        "food": "Lobster in Butter Sauce",
+        "foodZh": "奶油龍蝦",
+        "whyZh": "奶油質感與橡木風味完美匹配龍蝦的豐腴"
+      },
+      {
+        "wine": "Sauvignon Blanc",
+        "wineZh": "白蘇維翁",
+        "food": "Fresh Oysters",
+        "foodZh": "新鮮生蠔",
+        "whyZh": "高酸度與礦物感呼應海洋風味，柑橘調提升生蠔鮮味"
+      },
+      {
+        "wine": "Riesling (off-dry)",
+        "wineZh": "麗絲玲（微甜）",
+        "food": "Thai Green Curry",
+        "foodZh": "泰式綠咖哩",
+        "whyZh": "微甜平衡辣度，低酒精不加重灼熱感，高酸度保持清爽"
+      },
+      {
+        "wine": "Sangiovese (Chianti)",
+        "wineZh": "山乔維賽（Chianti）",
+        "food": "Pasta al Pomodoro",
+        "foodZh": "番茄義大利麵",
+        "whyZh": "高酸度紅酒是番茄類料理的唯一正解"
+      },
+      {
+        "wine": "Champagne",
+        "wineZh": "香檳",
+        "food": "Fried Chicken",
+        "foodZh": "炸雞",
+        "whyZh": "氣泡與酸度如同液態刀切穿油炸外皮的油膩感"
+      },
+      {
+        "wine": "Sauternes",
+        "wineZh": "蘇玳貴腐甜酒",
+        "food": "Foie Gras",
+        "foodZh": "法式鵝肝",
+        "whyZh": "甜酒的甜美與鵝肝的油潤是法國美食的終極搭配"
+      },
+      {
+        "wine": "Port (Tawny)",
+        "wineZh": "茶色波特",
+        "food": "Dark Chocolate Dessert",
+        "foodZh": "黑巧克力甜點",
+        "whyZh": "波特的甜度與堅果調性完美擁抱黑巧克力的苦甜"
+      },
+      {
+        "wine": "Gewürztraminer",
+        "wineZh": "格烏茲塔明那",
+        "food": "Mapo Tofu",
+        "foodZh": "麻婆豆腐",
+        "whyZh": "濃郁花香與微甜口感駕馭花椒的麻與辣椒的辣"
+      }
+    ]
+  },
+  "vintageGuide": {
+    "titleZh": "年份判讀指南",
+    "titleEn": "Vintage Guide",
+    "explanationZh": "年份（Vintage）代表葡萄採收的年份，直接反映該年的氣候條件對葡萄品質的影響。偉大年份意味著理想的生長季節——充足陽光、適度降雨、乾燥的採收期。然而，年份評價因產區而異，波爾多的好年份未必是布根地的好年份。此外，優秀的釀酒師在一般年份也能釀出卓越的酒，年份只是參考指標之一。",
+    "topVintages": [
+      {
+        "region": "Bordeaux",
+        "regionZh": "波爾多",
+        "greatYears": [
+          2000,
+          2005,
+          2009,
+          2010,
+          2015,
+          2016,
+          2018,
+          2019,
+          2020
+        ]
+      },
+      {
+        "region": "Burgundy",
+        "regionZh": "布根地",
+        "greatYears": [
+          2002,
+          2005,
+          2009,
+          2010,
+          2015,
+          2017,
+          2019,
+          2020
+        ]
+      },
+      {
+        "region": "Champagne",
+        "regionZh": "香檳",
+        "greatYears": [
+          2002,
+          2004,
+          2008,
+          2012,
+          2013,
+          2019
+        ]
+      },
+      {
+        "region": "Napa Valley",
+        "regionZh": "納帕谷",
+        "greatYears": [
+          2001,
+          2007,
+          2012,
+          2013,
+          2016,
+          2018,
+          2019
+        ]
+      },
+      {
+        "region": "Barossa Valley",
+        "regionZh": "巴羅莎谷",
+        "greatYears": [
+          2004,
+          2006,
+          2010,
+          2012,
+          2018
+        ]
+      },
+      {
+        "region": "Piedmont (Barolo)",
+        "regionZh": "皮埃蒙特（巴羅洛）",
+        "greatYears": [
+          2001,
+          2004,
+          2006,
+          2010,
+          2013,
+          2016,
+          2019
+        ]
+      },
+      {
+        "region": "Rhône Valley",
+        "regionZh": "隆河谷",
+        "greatYears": [
+          2005,
+          2007,
+          2009,
+          2010,
+          2015,
+          2016,
+          2019
+        ]
+      },
+      {
+        "region": "Mosel",
+        "regionZh": "摩澤爾",
+        "greatYears": [
+          2001,
+          2005,
+          2007,
+          2009,
+          2015,
+          2019,
+          2020
+        ]
+      },
+      {
+        "region": "Tuscany",
+        "regionZh": "托斯卡尼",
+        "greatYears": [
+          2004,
+          2006,
+          2010,
+          2015,
+          2016,
+          2019
+        ]
+      }
+    ]
+  },
+  "spiritProduction": {
+    "titleZh": "烈酒釀造與蒸餾",
+    "titleEn": "Spirit Production & Distillation",
+    "distillationMethods": [
+      {
+        "id": "pot-still",
+        "nameEn": "Pot Still",
+        "nameZh": "壺式蒸餾",
+        "descriptionZh": "最古老且最具匠心的蒸餾方式。銅製壺式蒸餾器以批次方式運作——每次裝填酒液，加熱蒸餾，收集餾出液，清空後再重新開始。銅的催化作用能有效去除硫化物等不良風味。壺式蒸餾的關鍵在於「切割」（Cut）——蒸餾師必須精準判斷何時開始收集「酒心」（Hearts），捨棄含有毒甲醇的「酒頭」（Foreshots/Heads）與帶雜油醇的「酒尾」（Tails/Feints）。這種手工判斷賦予每批蒸餾獨特的個性。",
+        "characteristics": [
+          "批次式操作",
+          "風味豐富飽滿",
+          "銅質催化淨化",
+          "需要精準切割技術",
+          "產出效率較低"
+        ],
+        "usedFor": [
+          "Single Malt Scotch",
+          "Cognac",
+          "Pot Still Rum",
+          "Single Pot Still Irish Whiskey"
+        ]
+      },
+      {
+        "id": "column-still",
+        "nameEn": "Column Still (Coffey Still / Patent Still)",
+        "nameZh": "連續式蒸餾（柯菲蒸餾器）",
+        "descriptionZh": "1831 年由 Aeneas Coffey 改良完善的連續蒸餾技術，革命性地提高了蒸餾效率。由兩個高聳的銅柱組成——分析柱（Analyzer）與精餾柱（Rectifier），蒸汽與液體在柱內的多層蒸餾板上反覆接觸，實現連續不間斷的蒸餾。能在單次通過中達到極高的酒精濃度（可超過 95%），產出的烈酒風格輕盈純淨。是大規模工業化生產的基石。",
+        "characteristics": [
+          "連續操作，效率極高",
+          "風味較為輕盈純淨",
+          "可達極高酒精濃度",
+          "適合大規模生產",
+          "成本較低"
+        ],
+        "usedFor": [
+          "Grain Whisky",
+          "Vodka",
+          "Light Rum",
+          "Neutral Spirit for Gin"
+        ]
+      },
+      {
+        "id": "hybrid-still",
+        "nameEn": "Hybrid Still",
+        "nameZh": "混合式蒸餾",
+        "descriptionZh": "結合壺式蒸餾器與柱式精餾段的創新設計，讓蒸餾師在同一設備上靈活切換或組合兩種蒸餾方式。壺身提供風味複雜度，頂部的柱式精餾段則增加純淨度與效率。許多精釀蒸餾廠（Craft Distillery）選擇混合式蒸餾器，因為它能以單一設備釀造多種不同風格的烈酒——從濃郁的威士忌到清爽的琴酒。",
+        "characteristics": [
+          "靈活多變",
+          "兼具風味與純淨度",
+          "適合小型精釀蒸餾廠",
+          "可調整精餾程度",
+          "一機多用"
+        ],
+        "usedFor": [
+          "Craft Whiskey",
+          "Craft Gin",
+          "Eau de Vie",
+          "Various craft spirits"
+        ]
+      },
+      {
+        "id": "alembic",
+        "nameEn": "Alembic (Charentais)",
+        "nameZh": "蒸餾壺（夏朗德式）",
+        "descriptionZh": "源自阿拉伯煉金術的古老蒸餾器形式，「Alembic」一詞來自阿拉伯語 al-anbiq。干邑（Cognac）產區使用的夏朗德壺式蒸餾器（Alambic Charentais）是其最精緻的演化——必須以銅製造，容量嚴格限制在 30 百升以下，且必須進行兩次蒸餾（Double Distillation）。第一次蒸餾產出 brouillis（約 30% ABV），第二次蒸餾的 bonne chauffe 才是最終的酒心（約 70% ABV）。蒸餾時是否保留酒泥（lees）也會影響最終風味的豐腴度。",
+        "characteristics": [
+          "古老傳統形式",
+          "干邑法定蒸餾器",
+          "銅質，容量受限",
+          "必須雙重蒸餾",
+          "風味極為豐富細膩"
+        ],
+        "usedFor": [
+          "Cognac",
+          "Armagnac (single distillation)",
+          "Pisco",
+          "Traditional Brandy"
+        ]
+      }
+    ],
+    "spiritCategories": [
+      {
+        "id": "whisky",
+        "nameEn": "Whisky / Whiskey",
+        "nameZh": "威士忌",
+        "baseIngredient": "穀物（大麥、玉米、裸麥、小麥）",
+        "descriptionZh": "威士忌是全球最多元複雜的烈酒類別，從穀物選擇、發酵、蒸餾到橡木桶陳年，每個環節都深刻影響最終風味。",
+        "productionSteps": [
+          "選擇穀物原料並進行發麥（Malting）——將大麥浸水發芽，啟動酵素將澱粉轉化為可發酵糖分",
+          "烘乾麥芽（Kilning）——蘇格蘭艾雷島使用泥煤（Peat）烘乾，賦予標誌性的煙燻風味",
+          "糖化（Mashing）——將磨碎的麥芽與熱水混合，萃取甜麥汁（Wort）",
+          "發酵（Fermentation）——在木質或不鏽鋼發酵槽中以酵母發酵 48-96 小時，產出約 8% ABV 的酒醪（Wash）",
+          "蒸餾（Distillation）——蘇格蘭單一麥芽通常進行兩次壺式蒸餾；愛爾蘭三次蒸餾更為柔順",
+          "桶陳（Maturation）——蘇格蘭法規要求至少 3 年橡木桶陳年；波本至少使用全新炭化美國橡木桶"
+        ],
+        "subTypes": [
+          {
+            "name": "Scotch Single Malt",
+            "nameZh": "蘇格蘭單一麥芽威士忌",
+            "descriptionZh": "由單一蒸餾廠以 100% 麥芽大麥、壺式蒸餾器釀造，在蘇格蘭陳年至少 3 年。五大產區風格迥異：斯佩塞（Speyside）果味優雅、艾雷島（Islay）煙燻泥煤、高地（Highlands）多元豐富、低地（Lowlands）輕盈花香、坎貝爾鎮（Campbeltown）海鹽鹹鮮。"
+          },
+          {
+            "name": "Bourbon",
+            "nameZh": "波本威士忌",
+            "descriptionZh": "美國法定要求：穀物配方（Mash Bill）中至少 51% 玉米，使用全新炭化美國橡木桶陳年，蒸餾酒精度不超過 80% ABV，入桶酒精度不超過 62.5% ABV。肯塔基州生產約 95% 的波本。高比例玉米帶來甜美的焦糖與香草風味，新桶的炭化層賦予獨特的太妃糖與煙燻調性。"
+          },
+          {
+            "name": "Irish Whiskey",
+            "nameZh": "愛爾蘭威士忌",
+            "descriptionZh": "傳統上以三次蒸餾聞名，產出更為柔順滑順的酒體。Single Pot Still 風格是愛爾蘭獨有——在壺式蒸餾器中混合使用發麥與未發麥大麥，帶來獨特的油潤辛香質感。Midleton 蒸餾廠是世界上最大的壺式蒸餾器所在地。"
+          },
+          {
+            "name": "Japanese Whisky",
+            "nameZh": "日本威士忌",
+            "descriptionZh": "以蘇格蘭技術為基礎，融入日本職人精神（Monozukuri）。特色在於同一蒸餾廠擁有多種形狀的蒸餾器，透過不同組合在廠內創造多元風味原酒，而非依賴跨廠交換（蘇格蘭傳統）。山崎、白州、余市、宮城峽是四大經典蒸餾廠。水楢桶（Mizunara）陳年賦予獨特的檀香與東方辛香料調性。"
+          }
+        ]
+      },
+      {
+        "id": "gin",
+        "nameEn": "Gin",
+        "nameZh": "琴酒",
+        "baseIngredient": "中性烈酒 + 植物配方（Botanicals），杜松子為必要主角",
+        "descriptionZh": "琴酒的核心是杜松子（Juniper Berry）的松木與樹脂香氣，但每個品牌的獨特風味來自其秘密的植物配方——可能包含芫荽籽、當歸根、柑橘皮、鳶尾根、肉桂、薰衣草等數十種植物。",
+        "productionSteps": [
+          "取得高純度中性烈酒（通常以穀物為基底，蒸餾至 96% ABV 以上）",
+          "準備植物配方——各品牌的核心機密，可能包含 6-30 種以上的植物素材",
+          "浸泡（Maceration）——將植物素材浸泡在中性烈酒中 24-48 小時萃取風味",
+          "再蒸餾（Re-distillation）——將浸泡液放入壺式蒸餾器重新蒸餾，或使用蒸氣籃（Vapour Basket）讓蒸氣穿過植物素材萃取更輕盈的芳香",
+          "稀釋至裝瓶酒精度（通常 40-47% ABV）並過濾"
+        ],
+        "subTypes": [
+          {
+            "name": "London Dry Gin",
+            "nameZh": "倫敦乾琴酒",
+            "descriptionZh": "最嚴格的琴酒類別——所有風味必須在蒸餾過程中獲得，蒸餾後不得添加任何風味物質（僅允許極少量糖分）。杜松子風味必須佔主導地位。儘管名為「倫敦」，但可在世界任何地方生產。經典代表：Beefeater、Tanqueray、Sipsmith。"
+          },
+          {
+            "name": "Distilled Gin",
+            "nameZh": "蒸餾琴酒",
+            "descriptionZh": "以中性烈酒為基底，經過再蒸餾並加入植物素材。與 London Dry 的區別在於蒸餾後允許添加天然風味。Hendrick's 在蒸餾後加入玫瑰與黃瓜萃取物，是此類別的經典。"
+          },
+          {
+            "name": "Compound Gin",
+            "nameZh": "調配琴酒",
+            "descriptionZh": "最簡單的生產方式——直接將植物精華、香精或天然萃取物混合加入中性烈酒中，無需再蒸餾。品質參差不齊，但一些精心調配的 Compound Gin 也能展現優秀的風味。Bathtub Gin 概念即源於此。"
+          },
+          {
+            "name": "New Western / Contemporary Gin",
+            "nameZh": "新西方 / 當代琴酒",
+            "descriptionZh": "突破傳統杜松子主導的框架，以其他植物素材為風味核心。日本的季之美（Ki No Bi）以玉露茶、柚子、山椒等日本素材為主角；Monkey 47 使用 47 種來自黑森林的植物。這股創新浪潮讓琴酒成為近年最熱門的烈酒類別。"
+          }
+        ]
+      },
+      {
+        "id": "rum",
+        "nameEn": "Rum",
+        "nameZh": "蘭姆酒",
+        "baseIngredient": "甘蔗汁或糖蜜（Molasses）",
+        "descriptionZh": "蘭姆酒是加勒比海的靈魂烈酒，風格從清爽透明到深邃濃郁，涵蓋極大的風味光譜。原料的選擇（新鮮甘蔗汁 vs 糖蜜）是決定風格的第一道分水嶺。",
+        "productionSteps": [
+          "原料準備——糖蜜（製糖副產物）或新鮮甘蔗汁（Agricole 風格）",
+          "發酵——時間從 24 小時到 3 週不等，較長的發酵產出更多酯類（Esters），帶來更豐富的果味與「Funk」",
+          "蒸餾——連續式蒸餾器產出輕盈風格（Light Rum），壺式蒸餾器產出濃郁風格（Heavy/Pot Still Rum）",
+          "陳年——熱帶氣候加速陳年（天使份額 Angel's Share 可達 6-8%/年，是蘇格蘭的 3-4 倍）",
+          "調配——許多蘭姆酒是不同年份與風格的調配成果"
+        ],
+        "subTypes": [
+          {
+            "name": "Light/White Rum",
+            "nameZh": "白蘭姆酒",
+            "descriptionZh": "以連續式蒸餾器生產，通常短暫桶陳後以活性碳過濾去色。清爽純淨，是 Mojito、Daiquiri 等經典調酒的基酒。古巴 Havana Club 與波多黎各 Bacardí 是兩大代表。"
+          },
+          {
+            "name": "Dark/Aged Rum",
+            "nameZh": "深色 / 陳年蘭姆酒",
+            "descriptionZh": "經過橡木桶長期陳年，發展出焦糖、香草、太妃糖、乾果等複雜風味。頂級陳年蘭姆酒（如 Ron Zacapa 23、Appleton Estate 21）可與高年份干邑媲美。適合純飲或 Old Fashioned 等烈酒主導型調酒。"
+          },
+          {
+            "name": "Rhum Agricole",
+            "nameZh": "農業蘭姆酒",
+            "descriptionZh": "法屬加勒比海島嶼（馬提尼克、瓜德羅普）的特產，以新鮮甘蔗汁而非糖蜜為原料。馬提尼克擁有 AOC 法定產區認證——全球唯一的蘭姆酒 AOC。風味更具草本清新感，帶甘蔗的青綠植物調性。白色 Agricole 是 Ti' Punch 的唯一正統基酒。"
+          },
+          {
+            "name": "Demerara Rum",
+            "nameZh": "德梅拉拉蘭姆酒",
+            "descriptionZh": "來自圭亞那的德梅拉拉河地區，El Dorado 蒸餾廠保存了全球最古老的木製壺式蒸餾器（包括傳奇的 Port Mourant 雙重木桶壺式蒸餾器）。風格濃郁深沉，帶太妃糖、黑糖蜜與香料調性。是經典 Tiki 調酒不可或缺的元素。"
+          },
+          {
+            "name": "Jamaican Pot Still Rum",
+            "nameZh": "牙買加壺式蒸餾蘭姆酒",
+            "descriptionZh": "以極長發酵時間（有時超過 3 週）與壺式蒸餾聞名。超高酯含量產生的「Funk」——一種獨特的過熟熱帶水果、香蕉、鳳梨與膠水般的強烈芳香——是牙買加蘭姆酒的靈魂標誌。Hampden Estate 的 Overproof 蘭姆酒酯含量可達 1,600 gr/hlpa，是烈酒界最極端的風味表達之一。"
+          }
+        ]
+      },
+      {
+        "id": "tequila-mezcal",
+        "nameEn": "Tequila & Mezcal",
+        "nameZh": "龍舌蘭酒與梅斯卡爾",
+        "baseIngredient": "龍舌蘭（Agave）心",
+        "descriptionZh": "龍舌蘭酒是梅斯卡爾的一個子類別——所有龍舌蘭酒都是梅斯卡爾，但並非所有梅斯卡爾都是龍舌蘭酒。龍舌蘭酒必須使用藍色韋伯龍舌蘭（Blue Weber Agave），而梅斯卡爾可使用 30 多種龍舌蘭品種。",
+        "productionSteps": [
+          "龍舌蘭種植——藍色韋伯龍舌蘭需 6-8 年成熟；野生品種可能需 15-30 年",
+          "採收（Jima）——Jimador 以特殊的 Coa 刀砍去葉片，取出富含糖分的龍舌蘭心（Piña），重量可達 40-90 公斤",
+          "烹煮——龍舌蘭酒使用磚窯（Horno）或高壓蒸氣鍋爐；傳統梅斯卡爾使用地下坑窯（土坑以火山石、木炭、泥土覆蓋燜烤 3-5 天），賦予標誌性的煙燻風味",
+          "壓榨——傳統方式使用石磨（Tahona），現代方式使用機械壓榨機萃取甜汁",
+          "發酵——木桶或水泥池中自然發酵 4-10 天",
+          "蒸餾——通常進行兩次蒸餾。傳統梅斯卡爾使用小型銅或陶土壺式蒸餾器"
+        ],
+        "subTypes": [
+          {
+            "name": "Tequila Blanco/Silver",
+            "nameZh": "龍舌蘭酒 白色/銀色",
+            "descriptionZh": "蒸餾後直接裝瓶或僅短暫靜置（不超過 60 天）。最能展現藍色龍舌蘭的純粹風味——青草、柑橘、胡椒與礦物感。是 Margarita 的理想基酒，也是許多行家的首選，認為它最忠實地表達了龍舌蘭的本質。"
+          },
+          {
+            "name": "Tequila Reposado",
+            "nameZh": "龍舌蘭酒 微陳",
+            "descriptionZh": "在橡木桶中陳年 2-12 個月。輕柔的木桶影響帶來蜂蜜、焦糖與香草調性，同時保留龍舌蘭的草本果香。是最暢銷的龍舌蘭酒類別，適合純飲或調酒。"
+          },
+          {
+            "name": "Tequila Añejo",
+            "nameZh": "龍舌蘭酒 陳年",
+            "descriptionZh": "在橡木桶中陳年 1-3 年。深金色澤，飽滿的太妃糖、烘烤堅果與辛香料風味。適合純飲品鑒，風格接近陳年干邑或波本威士忌。"
+          },
+          {
+            "name": "Tequila Extra Añejo",
+            "nameZh": "龍舌蘭酒 特陳",
+            "descriptionZh": "2006 年新增的類別，陳年 3 年以上。深琥珀色，極為豐富複雜的風味——黑巧克力、乾果、皮革、橡木。頂級 Extra Añejo 已被視為可與頂級干邑和威士忌媲美的烈酒。"
+          },
+          {
+            "name": "Mezcal (Artisanal/Ancestral)",
+            "nameZh": "梅斯卡爾（手工/祖傳）",
+            "descriptionZh": "梅斯卡爾的靈魂在於其原始手工精神。「Ancestral」等級要求全程使用傳統工具——地下坑窯烹煮、石磨壓榨、木桶發酵、陶土蒸餾器蒸餾。不同龍舌蘭品種（Espadín、Tobalá、Tepeztate、Arroqueño 等）各有獨特風味。稀有野生品種的梅斯卡爾已成為烈酒收藏界的新寵，價格可達數百美元一瓶。"
+          }
+        ]
+      },
+      {
+        "id": "cognac-brandy",
+        "nameEn": "Cognac & Brandy",
+        "nameZh": "干邑與白蘭地",
+        "baseIngredient": "葡萄酒（Wine）",
+        "descriptionZh": "白蘭地（Brandy）泛指所有以水果蒸餾的烈酒，而干邑（Cognac）是其中最崇高的表達——必須產自法國干邑地區，使用特定葡萄品種，遵循嚴格的生產法規。",
+        "productionSteps": [
+          "釀造基酒——使用高酸低酒精的白葡萄酒（主要品種 Ugni Blanc / Trebbiano），酒精度約 8-9%",
+          "雙重蒸餾——在夏朗德壺式蒸餾器（Alambic Charentais）中進行兩次蒸餾，第二次蒸餾需精準切割酒頭酒尾",
+          "橡木桶陳年——使用利穆贊（Limousin）或特隆賽（Tronçais）橡木桶，最低陳年 2 年",
+          "調配——干邑大廠的調配師（Maître de Chai）將數十甚至數百個不同年份與產區的原酒調配成一致的品牌風格"
+        ],
+        "subTypes": [
+          {
+            "name": "Cognac VS (Very Special)",
+            "nameZh": "干邑 VS（非常特別）",
+            "descriptionZh": "最年輕的干邑等級，調配中最年輕的原酒至少陳年 2 年。實際上大廠的 VS 通常使用 4-7 年的原酒。果味奔放，帶花香與輕柔的橡木調性。適合調酒使用。"
+          },
+          {
+            "name": "Cognac VSOP (Very Superior Old Pale)",
+            "nameZh": "干邑 VSOP（非常優質陳年淡色）",
+            "descriptionZh": "調配中最年輕的原酒至少陳年 4 年。實際上頂級 VSOP 可能使用 8-15 年的原酒。更為圓潤飽滿，帶杏桃、香草、肉桂與蜂蜜風味。純飲或加冰皆宜。"
+          },
+          {
+            "name": "Cognac XO (Extra Old)",
+            "nameZh": "干邑 XO（特陳）",
+            "descriptionZh": "自 2018 年起，調配中最年輕的原酒至少陳年 10 年（此前為 6 年）。頂級 XO 可能包含 20-50 年以上的原酒。極為複雜——蜜餞水果、皮革、雪茄盒、黑巧克力、陳皮、肉豆蔻。Rémy Martin Louis XIII 使用 40-100 年的原酒。"
+          },
+          {
+            "name": "Armagnac",
+            "nameZh": "雅馬邑",
+            "descriptionZh": "干邑的「鄉村表親」，產自加斯科涅地區，是法國最古老的白蘭地（比干邑早 200 年）。關鍵差異：通常僅進行一次連續式蒸餾（使用傳統的 Alambic Armagnacais），保留更多風味物質，風格更為粗獷、濃郁、帶有更明顯的水果與泥土調性。年份雅馬邑（Vintage/Millésime）是該產區的特色——不經調配的單一年份裝瓶。"
+          }
+        ]
+      },
+      {
+        "id": "vodka",
+        "nameEn": "Vodka",
+        "nameZh": "伏特加",
+        "baseIngredient": "穀物、馬鈴薯、葡萄或其他含糖/澱粉原料",
+        "descriptionZh": "伏特加追求的是純淨——透過反覆蒸餾與過濾，盡可能去除雜質與風味物質，達到接近純酒精與水的狀態。然而「無味」並非完全準確，不同基底原料仍會帶來微妙的質地與口感差異。",
+        "productionSteps": [
+          "原料選擇——穀物（小麥、裸麥最常見）、馬鈴薯、葡萄、甚至甘蔗或牛奶乳糖",
+          "發酵——將澱粉質原料糖化後發酵",
+          "蒸餾——通常在連續式蒸餾器中多次蒸餾（許多品牌標榜 3-6 次蒸餾）",
+          "過濾——活性碳過濾是最常見的方式，部分品牌使用鑽石粉、銀離子或其他特殊介質",
+          "稀釋——以純水稀釋至裝瓶酒精度（通常 40% ABV），水質對最終口感至關重要"
+        ],
+        "subTypes": [
+          {
+            "name": "Grain Vodka",
+            "nameZh": "穀物伏特加",
+            "descriptionZh": "最主流的伏特加類型。小麥基底（如 Absolut、Grey Goose）帶來清爽柔順的口感；裸麥基底（如 Belvedere）帶有微妙的辛香料尾韻與奶油質地。穀物伏特加是雞尾酒調製中最百搭的基酒。"
+          },
+          {
+            "name": "Potato Vodka",
+            "nameZh": "馬鈴薯伏特加",
+            "descriptionZh": "波蘭與北歐的傳統。馬鈴薯基底賦予更為飽滿厚實的口感與奶油質地，帶有微妙的泥土調性。Chopin（波蘭）是最知名的馬鈴薯伏特加品牌。生產效率較穀物低——約需 8 公斤馬鈴薯才能生產 1 公升伏特加。"
+          },
+          {
+            "name": "Grape Vodka",
+            "nameZh": "葡萄伏特加",
+            "descriptionZh": "以葡萄為原料蒸餾，在法國尤為流行。Cîroc 是最知名的葡萄伏特加品牌，使用法國干邑產區的 Mauzac Blanc 與 Ugni Blanc 葡萄。口感更為圓潤細膩，帶有微妙的花果香氣。被視為更「高端」的伏特加類型。"
+          }
+        ]
+      }
+    ]
+  },
+  "advancedWinemaking": {
+    "titleZh": "進階釀酒技術",
+    "titleEn": "Advanced Winemaking Techniques",
+    "techniques": [
+      {
+        "id": "carbonic-maceration",
+        "nameEn": "Carbonic Maceration",
+        "nameZh": "二氧化碳浸漬法",
+        "descriptionZh": "將整串未經破碎的葡萄放入充滿二氧化碳的密封容器中。在無氧環境下，完整葡萄粒的細胞內部自發進行酶促發酵（Intracellular Fermentation），將少量糖分轉化為酒精（約 1.5-2% ABV）。這個過程萃取大量色素與果香，但幾乎不萃取單寧。數天後壓榨出的果汁再以傳統方式完成酒精發酵。成品酒以鮮明的紅色莓果香、糖果與香蕉味聞名，單寧極低，適合即飲。",
+        "examples": [
+          "薄酒萊新酒（Beaujolais Nouveau）——每年11月第三個星期四全球同步發售的節慶酒",
+          "薄酒萊村莊級（Beaujolais-Villages）——部分使用此技法",
+          "部分現代西班牙 Garnacha 與羅亞爾河 Gamay"
+        ],
+        "proTip": "完全二氧化碳浸漬（Whole Berry）與半二氧化碳浸漬（Semi-Carbonic，底層葡萄被重量壓破自然發酵）會產生不同風味。許多薄酒萊 Cru 實際上使用的是 Semi-Carbonic 技法。"
+      },
+      {
+        "id": "solera-system",
+        "nameEn": "Solera System",
+        "nameZh": "索雷拉系統",
+        "descriptionZh": "一種精妙的分級混調陳年法，起源於西班牙安達盧西亞的雪莉酒產區。橡木桶按年份層層堆疊——最底層（Solera）是最老的酒，最上層（Criadera）是最年輕的酒。裝瓶時從最底層抽取不超過三分之一的酒液，再由上一層補充，層層向上遞補，最頂層加入最新年份的酒。這確保了產品風格的永續一致性——一個 Solera 系統可能包含數十年甚至上百年前的酒液成分。",
+        "examples": [
+          "雪莉酒（Sherry）——Fino、Manzanilla、Amontillado、Oloroso、Palo Cortado 等所有風格",
+          "馬德拉酒（Madeira）——部分生產者使用",
+          "部分白蘭地（如 Torres、Cardenal Mendoza）",
+          "部分陳年蘭姆酒與醋（巴薩米克醋 Aceto Balsamico）"
+        ],
+        "proTip": "雪莉酒標籤上的年份（如 30 Year Old）代表 Solera 系統中最老酒液的平均年齡，並非最年輕酒液的年齡。新的 VOS（20年）與 VORS（30年）認證對此有更嚴格的規範。"
+      },
+      {
+        "id": "methode-champenoise",
+        "nameEn": "Méthode Champenoise (Traditional Method)",
+        "nameZh": "香檳法（傳統法）",
+        "descriptionZh": "全世界最精緻複雜的氣泡酒釀造法，法定只有在香檳產區才能稱為「Méthode Champenoise」，其他產區稱為「Traditional Method」或「Méthode Traditionnelle」。完整流程包含：\n\n1. **基酒釀造**（Vin Clair）——釀造靜態白酒作為基底\n2. **調配**（Assemblage）——混合不同品種、年份、地塊的基酒\n3. **添加甜酒液**（Liqueur de Tirage）——基酒加入酵母與糖的混合液後裝瓶封蓋\n4. **瓶中二次發酵**（Prise de Mousse）——瓶內密封發酵產生約 6 大氣壓的二氧化碳\n5. **酒泥陳釀**（Sur Lie Aging）——非年份至少 15 個月，年份至少 3 年（頂級酒款可達 10 年以上）\n6. **轉瓶**（Riddling/Remuage）——緩慢旋轉瓶身使沉澱物聚集於瓶口\n7. **除渣**（Disgorgement/Dégorgement）——冷凍瓶口，開蓋彈出酵母沉澱\n8. **添加調配液**（Liqueur d'Expédition）——補充少量糖酒液，決定最終甜度（Brut Nature 到 Doux）",
+        "examples": [
+          "香檳（Champagne）——唯一可使用此名稱的產區",
+          "Crémant——法國其他產區的傳統法氣泡酒（Crémant d'Alsace、de Loire、de Bourgogne 等）",
+          "Cava——西班牙加泰隆尼亞的傳統法氣泡酒",
+          "Franciacorta——義大利倫巴底的傳統法氣泡酒，法規比香檳更嚴格",
+          "Cap Classique——南非的傳統法氣泡酒"
+        ],
+        "proTip": "香檳的甜度分級從最乾到最甜：Brut Nature（0-3g/L 殘糖）→ Extra Brut → Brut → Extra Dry → Dry/Sec → Demi-Sec → Doux。最大的陷阱是「Extra Dry」反而比「Brut」甜——歷史遺留的命名混亂。"
+      },
+      {
+        "id": "late-harvest-botrytis",
+        "nameEn": "Late Harvest / Botrytis (Noble Rot)",
+        "nameZh": "遲摘 / 貴腐黴（高貴腐爛）",
+        "descriptionZh": "貴腐黴菌（Botrytis cinerea）在特定的溫濕條件下感染成熟葡萄——需要清晨的霧氣帶來濕度讓黴菌生長，午後的陽光與乾燥風使果實脫水濃縮。菌絲穿透果皮，使水分蒸發、糖分酸度大幅濃縮（含糖量可達 300-400g/L），同時產生獨特的蜂蜜、杏桃乾與番紅花風味。這是大自然最精巧的魔法，但也極為脆弱——稍有不慎，高貴的 Botrytis cinerea 就會變成災難性的灰黴病（Grey Rot）。",
+        "examples": [
+          "蘇玳（Sauternes）——波爾多，以賽美蓉為主。Château d'Yquem 每株葡萄僅產一杯酒",
+          "托卡伊 Aszú（Tokaji Aszú）——匈牙利，以 Furmint 為主。逐粒手工挑選貴腐葡萄",
+          "德國 Beerenauslese / Trockenbeerenauslese（BA/TBA）——麗絲玲的終極甜酒表達",
+          "亞爾薩斯 Sélection de Grains Nobles——法國亞爾薩斯的頂級貴腐甜酒"
+        ],
+        "proTip": "Château d'Yquem 的採收可能持續 6-8 週，採收隊伍在葡萄園中穿梭多達 6-9 次（稱為 Tries Successives），每次只摘取達到完美貴腐狀態的果粒。在不良年份（如 2012），Yquem 會放棄整個年份的生產。"
+      },
+      {
+        "id": "ice-wine",
+        "nameEn": "Ice Wine (Eiswein)",
+        "nameZh": "冰酒",
+        "descriptionZh": "在葡萄自然結凍於藤上時採收（溫度須低於 -7°C 至 -8°C），立即壓榨。由於水分結冰後與濃縮的糖分、酸度分離，壓出的果汁含糖量極高（通常 35-40 Brix），發酵後產出天然高甜度、高酸度的甜酒。與貴腐甜酒的關鍵差異在於——冰酒保留了更純淨的果味，沒有 Botrytis 帶來的蜂蜜複雜度，而是展現水晶般的清澈甜美。",
+        "examples": [
+          "加拿大冰酒——安大略省尼亞加拉半島與英屬哥倫比亞省是全球最大產區。VQA 法規極為嚴格",
+          "德國 Eiswein——以麗絲玲為主，產量極不穩定（暖冬年份可能完全無法生產）",
+          "奧地利 Eiswein——品質頂尖但產量稀少"
+        ],
+        "proTip": "真正的冰酒必須是葡萄在藤上自然結凍——加拿大 VQA 與德國法規都嚴格禁止人工冷凍。採收通常在凌晨 3-5 點進行，需在日出前完成壓榨，否則溫度上升冰晶融化就會前功盡棄。市面上許多廉價「冰酒」實際上是人工冷凍（Cryo-extraction），品質與價格皆遠遜於真正的 Eiswein/Ice Wine。"
+      },
+      {
+        "id": "orange-wine",
+        "nameEn": "Orange Wine (Skin-Contact White)",
+        "nameZh": "橘酒（浸皮白酒）",
+        "descriptionZh": "將白葡萄以紅酒的方式釀造——保留果皮與果汁長時間接觸（從數天到數月不等），萃取出琥珀橘黃的色澤、單寧結構與更複雜的風味。這不是一種新技術，而是最古老的釀酒法——喬治亞 8,000 年前就在陶罐（Qvevri）中如此釀酒。21 世紀自然酒運動的興起使橘酒重新回到國際聚光燈下。",
+        "examples": [
+          "喬治亞 Qvevri 橘酒——使用 Rkatsiteli、Mtsvane 等本土品種",
+          "義大利 Friuli（Collio、Carso）——Gravner、Radikon 等先驅酒莊",
+          "斯洛維尼亞 Brda 地區",
+          "全球自然酒運動中越來越普遍"
+        ],
+        "proTip": "橘酒的侍酒溫度應介於白酒與紅酒之間（12-16°C），且因單寧存在，搭配食物的邏輯更接近紅酒而非白酒。其獨特的單寧結構使它成為搭配亞洲發酵食品（味噌、醃漬物、泡菜）的驚人絕配。"
+      },
+      {
+        "id": "biodynamic-winemaking",
+        "nameEn": "Biodynamic Winemaking",
+        "nameZh": "生物動力法釀酒",
+        "descriptionZh": "基於奧地利哲學家魯道夫·史坦納（Rudolf Steiner）1924 年的農業理論，將葡萄園視為一個自給自足的生態整體。核心實踐包括：遵循月亮與星象曆法決定種植、修剪與採收時機（根日、葉日、花日、果日）；使用特殊的生物動力製劑（Preparations 500-508），如牛角糞肥（將牛糞填入牛角埋入土中過冬，春天取出稀釋噴灑）與牛角矽石（研磨石英裝入牛角）。認證機構為 Demeter。",
+        "examples": [
+          "Domaine de la Romanée-Conti（布根地）——全球最貴的酒莊採用生物動力法",
+          "Domaine Leroy（布根地）",
+          "Nicolas Joly / Coulée de Serrant（羅亞爾河）——生物動力法最知名的倡導者",
+          "Zind-Humbrecht（亞爾薩斯）",
+          "Chapoutier（隆河谷）"
+        ],
+        "proTip": "科學界對生物動力法的宇宙能量與星象理論持懷疑態度，但不可否認的事實是——世界上最頂級的酒莊中有相當高比例採用此法。批評者認為其效果來自更精心的葡萄園管理而非神秘主義；支持者則堅信這套整體論方法確實賦予葡萄酒更強的生命力與風土表達。"
+      },
+      {
+        "id": "amphora-qvevri",
+        "nameEn": "Amphora / Qvevri Aging",
+        "nameZh": "陶罐 / 克韋弗里陳年",
+        "descriptionZh": "人類最古老的釀酒容器。喬治亞的 Qvevri 是大型蛋形陶土罐（容量 800-3,500 公升），埋入地下至頸部，利用地下恆溫（約 14-15°C）進行發酵與陳年。2013 年喬治亞的 Qvevri 釀酒法被列入 UNESCO 非物質文化遺產。陶土的多孔性允許類似橡木桶的微氧化，但不會賦予木質風味，讓葡萄品種與風土的表達更為純粹。蛋形的幾何設計使酒泥在罐內自然循環對流。",
+        "examples": [
+          "喬治亞傳統 Qvevri——8,000 年歷史，全球最古老的釀酒傳統",
+          "義大利（Elisabetta Foradori 在 Trentino 使用西班牙 Tinajas）",
+          "西班牙 Tinajas——La Mancha 地區的傳統大型陶甕",
+          "全球越來越多酒莊實驗性使用各種陶罐"
+        ],
+        "proTip": "不同產地的陶土成分會微妙地影響酒液——喬治亞 Qvevri 內壁塗蠟的與未塗蠟的風格截然不同。義大利 Foradori 使用的西班牙陶甕與喬治亞 Qvevri 在透氣性上也有差異。陶罐釀酒的復興不僅是復古潮流，更代表對「非木桶、非不鏽鋼」第三選擇的探索。"
+      },
+      {
+        "id": "sur-lie-aging",
+        "nameEn": "Sur Lie Aging",
+        "nameZh": "酒泥陳釀",
+        "descriptionZh": "「Sur Lie」在法文中意為「在酒泥上」。酒泥（Lees）是發酵後沉澱的死酵母細胞。傳統做法是將酒液與酒泥分離（Racking），但 Sur Lie 技法刻意讓酒液在酒泥上長時間接觸。酵母細胞自溶（Autolysis）釋放出甘露醣蛋白與氨基酸，賦予酒液奶油般的圓潤質地、烘烤麵包與酵母的香氣，並提供天然的抗氧化保護。",
+        "examples": [
+          "慕斯卡得 Sur Lie——法規要求在酒泥上至少過冬至翌年 3 月",
+          "香檳——瓶中酒泥接觸是香檳複雜度的核心來源（非年份至少 15 個月，年份至少 3 年）",
+          "布根地白酒——Meursault 與 Puligny-Montrachet 的攪桶（Bâtonnage）技法",
+          "部分 Crémant 與 Cava 氣泡酒"
+        ],
+        "proTip": "酒泥陳釀的時間長短劇烈影響風格——慕斯卡得的短期 Sur Lie 帶來微妙的酵母鮮味與氣泡感；香檳的長期 Sur Lie（頂級酒款可達 10 年以上）則發展出烤吐司、布里歐許麵包與榛果的深層複雜度。"
+      },
+      {
+        "id": "appassimento",
+        "nameEn": "Appassimento (Grape Drying)",
+        "nameZh": "風乾葡萄法",
+        "descriptionZh": "採收後將葡萄串放置在通風良好的閣樓或特殊乾燥室（Fruttaio）中風乾 2-4 個月，使水分蒸發 30-40%，糖分與風味物質高度濃縮。風乾後的葡萄再進行發酵，由於糖分極高，發酵過程漫長且困難（可持續 30-50 天），最終產出酒精度約 15-16% 的濃郁紅酒。這項技術至少可追溯至古羅馬時代。",
+        "examples": [
+          "Amarone della Valpolicella——義大利 Veneto 的旗艦酒款，以 Corvina、Rondinella、Molinara 風乾釀造",
+          "Recioto della Valpolicella——Amarone 的甜型版本（發酵未完全，保留殘糖）",
+          "Sforzato di Valtellina——以 Nebbiolo（當地稱 Chiavennasca）風乾釀造",
+          "Vin Santo——托斯卡尼的傳統甜酒，以 Trebbiano 與 Malvasia 風乾釀造"
+        ],
+        "proTip": "Amarone 的「Ripasso」技法是一個聰明的副產品——將清淡的 Valpolicella 基酒重新過濾通過 Amarone 的風乾葡萄皮渣進行二次發酵，獲得更濃郁的風味與更高的酒精度，被譽為「Baby Amarone」，性價比極高。"
+      }
+    ]
+  }
+}

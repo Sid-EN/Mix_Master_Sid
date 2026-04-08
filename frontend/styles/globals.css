@@ -1,0 +1,268 @@
+/* ============================================================
+   MixMaster — Global Styles
+   Theme: Cyberpunk Speakeasy (Light / Dark)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Theme CSS Variables ──────────────────────────────────── */
+html[data-theme="dark"],
+html:not([data-theme]) {
+  --color-bg-primary:    #0A0A0F;
+  --color-bg-secondary:  #111118;
+  --color-bg-tertiary:   #1A1A25;
+  --color-bg-overlay:    #0D0D14;
+  --color-neon-amber:    #F5A623;
+  --color-neon-amber-dim:#C47D0E;
+  --color-neon-cyan:     #00FFFF;
+  --color-neon-cyan-dim: #00BFBF;
+  --color-neon-purple:   #9B59B6;
+  --color-midnight-deep: #0D1B2A;
+  --color-midnight-mid:  #1B2A3B;
+  --color-midnight-light:#2C4A6E;
+  --color-charcoal-900:  #141414;
+  --color-charcoal-800:  #1F1F2E;
+  --color-charcoal-700:  #2D2D3E;
+  --color-charcoal-600:  #3D3D50;
+  --color-charcoal-500:  #6B6B80;
+  --color-text-warm:     #F0EDE4;
+  --color-text-secondary:#B8B0A0;
+  --color-text-muted:    #6B6358;
+
+  --shadow-neon-amber:     rgba(245, 166, 35, 0.4);
+  --shadow-neon-amber-dim: rgba(245, 166, 35, 0.15);
+  --shadow-neon-cyan:      rgba(0, 255, 255, 0.4);
+  --shadow-neon-cyan-dim:  rgba(0, 255, 255, 0.15);
+  --shadow-glass:          inset 0 1px 0 0 rgba(255,255,255,0.05), 0 4px 16px rgba(0,0,0,0.5);
+  --shadow-card:           0 2px 20px rgba(0,0,0,0.6);
+
+  --gradient-dark:     radial-gradient(ellipse at top, #1A1A25 0%, #0A0A0F 70%);
+  --gradient-midnight: linear-gradient(180deg, #0D1B2A 0%, #0A0A0F 100%);
+
+  --frosted-bg:        rgba(17, 17, 24, 0.85);
+  --glass-overlay:     linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  --border-glow-amber: 0 0 8px rgba(245, 166, 35, 0.25), inset 0 0 8px rgba(245, 166, 35, 0.05);
+  --scrollbar-track:   #0A0A0F;
+  --scrollbar-thumb:   #3D3D50;
+  --selection-bg:      rgba(245, 166, 35, 0.3);
+  --selection-color:   #F0EDE4;
+
+  --glow-amber-text:   0 0 8px rgba(245, 166, 35, 0.5), 0 0 20px rgba(245, 166, 35, 0.2);
+  --glow-cyan-text:    0 0 8px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.2);
+  --gradient-amber-text: linear-gradient(135deg, #F5A623 0%, #C47D0E 100%);
+  --gradient-cyan-text:  linear-gradient(135deg, #00FFFF 0%, #00BFBF 100%);
+}
+
+html[data-theme="light"] {
+  --color-bg-primary:    #F5F3EF;
+  --color-bg-secondary:  #FFFFFF;
+  --color-bg-tertiary:   #EDE9E3;
+  --color-bg-overlay:    #E8E4DC;
+  --color-neon-amber:    #D4890A;
+  --color-neon-amber-dim:#A06A08;
+  --color-neon-cyan:     #0099AA;
+  --color-neon-cyan-dim: #007788;
+  --color-neon-purple:   #7B3F96;
+  --color-midnight-deep: #E8E4DC;
+  --color-midnight-mid:  #D5D0C8;
+  --color-midnight-light:#B0ACA5;
+  --color-charcoal-900:  #F0ECE6;
+  --color-charcoal-800:  #E8E4DC;
+  --color-charcoal-700:  #D5D0C8;
+  --color-charcoal-600:  #9A968F;
+  --color-charcoal-500:  #B0ACA5;
+  --color-text-warm:     #2D2A26;
+  --color-text-secondary:#5A5650;
+  --color-text-muted:    #8A857E;
+
+  --shadow-neon-amber:     rgba(212, 137, 10, 0.3);
+  --shadow-neon-amber-dim: rgba(212, 137, 10, 0.1);
+  --shadow-neon-cyan:      rgba(0, 153, 170, 0.3);
+  --shadow-neon-cyan-dim:  rgba(0, 153, 170, 0.1);
+  --shadow-glass:          0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-card:           0 2px 12px rgba(0,0,0,0.08);
+
+  --gradient-dark:     radial-gradient(ellipse at top, #EDE9E3 0%, #F5F3EF 70%);
+  --gradient-midnight: linear-gradient(180deg, #E8E4DC 0%, #F5F3EF 100%);
+
+  --frosted-bg:        rgba(255, 255, 255, 0.85);
+  --glass-overlay:     linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 100%);
+  --border-glow-amber: 0 0 8px rgba(212, 137, 10, 0.2), inset 0 0 8px rgba(212, 137, 10, 0.04);
+  --scrollbar-track:   #F5F3EF;
+  --scrollbar-thumb:   #D5D0C8;
+  --selection-bg:      rgba(212, 137, 10, 0.2);
+  --selection-color:   #2D2A26;
+
+  --glow-amber-text:   0 0 6px rgba(212, 137, 10, 0.3), 0 0 14px rgba(212, 137, 10, 0.1);
+  --glow-cyan-text:    0 0 6px rgba(0, 153, 170, 0.3), 0 0 14px rgba(0, 153, 170, 0.1);
+  --gradient-amber-text: linear-gradient(135deg, #D4890A 0%, #A06A08 100%);
+  --gradient-cyan-text:  linear-gradient(135deg, #0099AA 0%, #007788 100%);
+}
+
+/* ── 基礎重設 ─────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-warm);
+    background-image: var(--gradient-dark);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    @apply font-sans;
+  }
+
+  h1, h2, h3 { @apply font-display; }
+  h4, h5, h6 { @apply font-sans font-semibold; }
+
+  /* 自訂捲軸（Webkit） */
+  ::-webkit-scrollbar        { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track  { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-neon-amber); }
+
+  /* 選取文字高亮 */
+  ::selection { background: var(--selection-bg); color: var(--selection-color); }
+}
+
+/* ── 自訂元件 ─────────────────────────────────────────────── */
+@layer components {
+  /* 霓虹按鈕 */
+  .btn-neon-amber {
+    @apply relative inline-flex items-center justify-center px-6 py-3
+           bg-transparent border border-neon-amber text-neon-amber
+           font-sans font-medium text-sm tracking-widest uppercase
+           cursor-pointer;
+    transition: all 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .btn-neon-amber:hover {
+    @apply bg-neon-amber text-bg-primary;
+    box-shadow: 0 0 15px var(--shadow-neon-amber), 0 0 30px var(--shadow-neon-amber-dim);
+  }
+
+  .btn-neon-cyan {
+    @apply relative inline-flex items-center justify-center px-6 py-3
+           bg-transparent border border-neon-cyan text-neon-cyan
+           font-sans font-medium text-sm tracking-widest uppercase
+           cursor-pointer;
+    transition: all 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .btn-neon-cyan:hover {
+    @apply bg-neon-cyan text-bg-primary;
+    box-shadow: 0 0 15px var(--shadow-neon-cyan), 0 0 30px var(--shadow-neon-cyan-dim);
+  }
+
+  /* 毛玻璃卡片 */
+  .glass-card {
+    @apply relative rounded-sm overflow-hidden;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-charcoal-700);
+    box-shadow: var(--shadow-glass);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-5;
+    background: var(--glass-overlay);
+    pointer-events: none;
+  }
+
+  /* 霓虹邊框（靜態） */
+  .border-neon-amber-glow {
+    border: 1px solid var(--color-neon-amber);
+    box-shadow: var(--border-glow-amber);
+  }
+
+  /* 材料輸入框 */
+  .input-neon {
+    @apply w-full px-4 py-3 font-mono text-sm;
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-charcoal-600);
+    color: var(--color-text-warm);
+    transition: all 0.2s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .input-neon::placeholder {
+    color: var(--color-text-muted);
+  }
+  .input-neon:focus {
+    outline: none;
+    border-color: var(--color-neon-cyan);
+    box-shadow: 0 0 15px var(--shadow-neon-cyan), 0 0 30px var(--shadow-neon-cyan-dim);
+  }
+
+  /* 風味評級標籤 */
+  .grade-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 text-xs font-mono font-bold tracking-wider;
+  }
+
+  /* 學院文章卡片 */
+  .academy-card {
+    @apply glass-card p-6 cursor-pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .academy-card:hover {
+    border-color: var(--color-neon-amber);
+  }
+
+  /* 章節分隔線 */
+  .divider-amber {
+    @apply relative;
+    border-top: 1px solid var(--color-charcoal-700);
+  }
+  .divider-amber::after {
+    content: '';
+    @apply absolute top-0 left-0 w-20 h-px;
+    background-color: var(--color-neon-amber);
+  }
+}
+
+/* ── 工具類擴充 ───────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient-amber {
+    background: var(--gradient-amber-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-cyan {
+    background: var(--gradient-cyan-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* 霓虹文字光暈（一行文字標題使用） */
+  .text-neon-glow-amber {
+    text-shadow: var(--glow-amber-text);
+  }
+
+  .text-neon-glow-cyan {
+    text-shadow: var(--glow-cyan-text);
+  }
+
+  /* 暗色磨砂背景 */
+  .bg-frosted {
+    background: var(--frosted-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Theme transition helper */
+  .theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+}
