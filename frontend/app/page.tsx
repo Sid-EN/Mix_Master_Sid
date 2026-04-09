@@ -1,5 +1,8 @@
 import { serverUrl } from '../lib/api'
 import HomeRecommendations from '../components/HomeRecommendations'
+import CocktailOfTheDay from '../components/CocktailOfTheDay'
+import SeasonalRecommendations from '../components/SeasonalRecommendations'
+import { HomeHeroText, HomeCtaButtons, HomeSectionTitle } from '../components/HomeI18nSections'
 
 async function getStats() {
   try {
@@ -25,20 +28,7 @@ export default async function HomePage() {
         {/* Ambient glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-amber/5 rounded-full blur-3xl pointer-events-none" />
 
-        <p className="font-mono text-neon-amber text-xs tracking-[0.35em] uppercase mb-6 opacity-60 animate-fade-in">
-          ⟡ Cyberpunk Speakeasy ⟡
-        </p>
-
-        <h1 className="font-display text-7xl md:text-9xl font-bold text-gradient-amber text-neon-glow-amber animate-fade-in leading-tight">
-          MixMaster
-        </h1>
-
-        <p className="font-display italic text-text-secondary text-xl md:text-2xl mt-6 animate-fade-in">
-          「從認識一瓶酒，到掌握一杯酒的藝術」
-        </p>
-        <p className="text-text-muted text-sm mt-2 font-mono tracking-wider animate-fade-in">
-          AI-Powered Cocktail Intelligence Platform
-        </p>
+        <HomeHeroText />
 
         {/* Decorative neon dividers */}
         <div className="flex items-center gap-3 mt-10 mb-12">
@@ -50,22 +40,7 @@ export default async function HomePage() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-          <a href="/engine" className="btn-neon-amber">
-            <span className="mr-2">🧪</span>智慧配方引擎
-          </a>
-          <a href="/academy" className="btn-neon-cyan">
-            <span className="mr-2">🎓</span>調酒學院
-          </a>
-          <a
-            href="/recipes"
-            className="border border-charcoal-600 text-text-secondary px-6 py-3 text-sm tracking-widest uppercase
-                       hover:border-neon-amber hover:text-neon-amber transition-all duration-300
-                       inline-flex items-center justify-center gap-2"
-          >
-            <span>📚</span>配方庫
-          </a>
-        </div>
+        <HomeCtaButtons />
       </section>
 
       {/* ── Stats Bar ────────────────────────────────────────── */}
@@ -88,12 +63,15 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── Cocktail of the Day ──────────────────────────────── */}
+      <CocktailOfTheDay />
+
+      {/* ── Seasonal Recommendations ─────────────────────────── */}
+      <SeasonalRecommendations />
+
       {/* ── Feature Cards ────────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="text-center mb-12">
-          <p className="font-mono text-xs text-neon-cyan tracking-[0.3em] uppercase mb-3">Core Modules</p>
-          <h2 className="font-display text-3xl md:text-4xl text-text-warm">平台核心功能</h2>
-        </div>
+        <HomeSectionTitle subtitleKey="home_coreModules" titleKey="home_coreTitle" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="glass-card p-8 hover:border-neon-amber transition-colors duration-300 group">
@@ -139,10 +117,7 @@ export default async function HomePage() {
 
       {/* ── Today's Classic ──────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-6 pb-20">
-        <div className="text-center mb-10">
-          <p className="font-mono text-xs text-neon-amber tracking-[0.3em] uppercase mb-3">Featured Cocktail</p>
-          <h2 className="font-display text-3xl md:text-4xl text-text-warm">今日經典</h2>
-        </div>
+        <HomeSectionTitle subtitleKey="home_featuredCocktail" titleKey="home_todayClassic" />
 
         <div className="glass-card border-neon-amber-glow max-w-2xl mx-auto p-8 md:p-10">
           <div className="flex items-start justify-between mb-6">

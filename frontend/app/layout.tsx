@@ -4,7 +4,10 @@ import Navbar from '../components/layout/Navbar'
 import { FavoritesProvider } from '../components/FavoritesContext'
 import { ProgressProvider } from '../components/ProgressContext'
 import { ThemeProvider } from '../components/ThemeContext'
+import { I18nProvider } from '../components/I18nContext'
 import ServiceWorkerRegistration from '../components/ServiceWorkerRegistration'
+import PageTransition from '../components/PageTransition'
+import AchievementChecker from '../components/AchievementChecker'
 
 export const metadata: Metadata = {
   title: 'MixMaster — 智慧調酒平台',
@@ -29,16 +32,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-Hant" data-theme="dark" suppressHydrationWarning>
       <body>
+        <I18nProvider>
         <ThemeProvider>
           <FavoritesProvider>
             <ProgressProvider>
               <Navbar />
               <div className="pt-16">
-                {children}
+                <PageTransition>
+                  {children}
+                </PageTransition>
               </div>
+              <AchievementChecker />
             </ProgressProvider>
           </FavoritesProvider>
         </ThemeProvider>
+        </I18nProvider>
         <ServiceWorkerRegistration />
       </body>
     </html>

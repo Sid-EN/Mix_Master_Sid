@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import SearchModal from '../SearchModal'
 import FlavorPreference from '../FlavorPreference'
 import XPBar from '../XPBar'
+import LanguageSwitcher from '../LanguageSwitcher'
 import { useTheme } from '../ThemeContext'
 
 /* ── All nav items (used by mobile + mega menu) ─────────── */
@@ -39,8 +40,10 @@ const MEGA_COLUMNS = [
     titleEn: 'MY SPACE',
     color: 'text-neon-cyan',
     items: [
-      { href: '/my-bar',    icon: '🍸', label: '我的酒櫃', desc: '材料庫存與配方推薦' },
-      { href: '/favorites', icon: '⭐', label: '我的收藏', desc: '收藏配方與品飲筆記' },
+      { href: '/dashboard',     icon: '📊', label: '個人儀表板', desc: '統計數據與學習進度' },
+      { href: '/my-bar',        icon: '🍸', label: '我的酒櫃', desc: '材料庫存與配方推薦' },
+      { href: '/favorites',     icon: '⭐', label: '我的收藏', desc: '收藏配方與品飲筆記' },
+      { href: '/achievements',  icon: '🏅', label: '成就徽章', desc: '解鎖挑戰與里程碑' },
     ],
   },
   {
@@ -64,6 +67,10 @@ const MEGA_COLUMNS = [
       { href: '/academy/spirits',      icon: '🥃', label: '烈酒百科', desc: '蒸餾・陳年・風味' },
       { href: '/academy/techniques',   icon: '📐', label: '技法圖解', desc: '10 種調酒手法' },
       { href: '/quiz',                 icon: '❓', label: '知識測驗', desc: '40 題挑戰你的實力' },
+      { href: '/flavor-wheel',         icon: '🎡', label: '互動風味輪', desc: '視覺化探索風味' },
+      { href: '/world-map',            icon: '🗺️', label: '產地地圖', desc: '世界產區風土探索' },
+      { href: '/history',              icon: '📜', label: '歷史時間軸', desc: '數千年調酒文明' },
+      { href: '/hall-of-fame',         icon: '🏆', label: '名人堂', desc: '15 位傳奇調酒師' },
     ],
   },
 ]
@@ -93,7 +100,8 @@ function MegaMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
   return (
     <div ref={ref}
          className="absolute top-full left-0 right-0 z-[60] border-b border-charcoal-700
-                    bg-bg-secondary/98 backdrop-blur-xl shadow-2xl animate-fade-in">
+                    bg-bg-primary shadow-2xl animate-fade-in"
+         style={{ backgroundColor: 'var(--color-bg-secondary, #111118)' }}>
       <div className="max-w-7xl mx-auto px-8 py-8">
         <div className="grid grid-cols-4 gap-8">
           {MEGA_COLUMNS.map(col => (
@@ -167,7 +175,8 @@ function MobileMenu({
   if (!isOpen) return null
 
   return (
-    <div className="md:hidden bg-bg-secondary border-b border-charcoal-800 animate-fade-in max-h-[80vh] overflow-y-auto">
+    <div className="md:hidden border-b border-charcoal-800 animate-fade-in max-h-[80vh] overflow-y-auto"
+         style={{ backgroundColor: 'var(--color-bg-secondary, #111118)' }}>
       {/* Search */}
       <button
         onClick={() => { onSearch(); onClose() }}
@@ -229,7 +238,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-frosted border-b border-charcoal-800">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-charcoal-800"
+           style={{ backgroundColor: 'var(--color-bg-secondary, #111118)' }}>
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* Logo */}
@@ -309,6 +319,8 @@ export default function Navbar() {
             >
               {theme === 'dark' ? '☀️' : '🌙'}
             </button>
+
+            <LanguageSwitcher />
 
             <a href="/docs" target="_blank" rel="noopener noreferrer"
                className="ml-1 px-2.5 py-1 border border-charcoal-700 font-mono text-[10px]
