@@ -26,6 +26,8 @@ module.exports = {
         'charcoal-700':  'var(--color-charcoal-700)',
         'charcoal-600':  'var(--color-charcoal-600)',
         'charcoal-500':  'var(--color-charcoal-500)',
+        'charcoal-400':  'var(--color-charcoal-400)',
+        'charcoal-300':  'var(--color-charcoal-300)',
         'text-warm':     'var(--color-text-warm)',
         'text-secondary':'var(--color-text-secondary)',
         'text-muted':    'var(--color-text-muted)',
