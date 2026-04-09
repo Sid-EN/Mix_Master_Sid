@@ -5,6 +5,7 @@ import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   Radar, ResponsiveContainer,
 } from 'recharts'
+import { SkeletonIngredientSelector } from '../../components/Skeleton'
 
 /* ── Types ────────────────────────────────────────────────── */
 type Ingredient = { id: string; label: string; sub: string; cat: string }
@@ -158,10 +159,7 @@ export default function EnginePage() {
         <p className="text-text-muted text-sm mb-6">點選你擁有的食材，至少選擇一項即可生成配方</p>
 
         {loadingData ? (
-          <div className="flex flex-col items-center justify-center py-16 gap-4">
-            <div className="w-12 h-12 border-2 border-neon-amber/30 border-t-neon-amber rounded-full animate-spin" />
-            <p className="font-mono text-sm text-text-muted">載入材料資料庫中...</p>
-          </div>
+          <SkeletonIngredientSelector />
         ) : (
         <>
         {/* Category tabs */}

@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "🛑 停止 MixMaster..."
 
-for port in 8000 3000; do
+for port in 8000 6880; do
   PIDS=$(ss -tlnp | grep ":$port" | grep -oP 'pid=\K[0-9]+' | sort -u)
   if [ -n "$PIDS" ]; then
     for pid in $PIDS; do

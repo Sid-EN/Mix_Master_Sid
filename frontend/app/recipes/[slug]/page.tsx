@@ -4,6 +4,8 @@ import { serverUrl } from '../../../lib/api'
 import RecipeActions from './RecipeActions'
 import RecipeTracker from '../../../components/RecipeTracker'
 import RecipeTriedButton from '../../../components/RecipeTriedButton'
+import IngredientSubstitutions from '../../../components/IngredientSubstitutions'
+import FoodPairingSection from '../../../components/FoodPairingSection'
 
 const METHOD_ICON: Record<string, string> = { shake: '🧊', stir: '🥄', build: '🥃' }
 const METHOD_ZH: Record<string, string>   = { shake: '搖盪法', stir: '攪拌法', build: '直調法' }
@@ -205,6 +207,19 @@ export default async function RecipeDetailPage({ params }: { params: { slug: str
           })}
         </div>
       </section>
+
+      {/* ── Ingredient Substitutions ────────────────────────── */}
+      <IngredientSubstitutions
+        ingredients={ingredients.map((ing: any) => ({
+          name: typeof ing === 'string' ? ing : (ing.name || ing.ingredientName || ''),
+          nameZh: typeof ing === 'string' ? ing : (ing.nameZh || ing.name_zh || ing.ingredientNameZh || ''),
+          amount: typeof ing === 'string' ? '' : String(ing.amount ?? ing.quantity ?? ''),
+          unit: typeof ing === 'string' ? '' : (ing.unit || ''),
+        }))}
+      />
+
+      {/* ── Food Pairing Suggestions ─────────────────────────── */}
+      <FoodPairingSection recipe={r} />
 
       {/* ── Steps Section ────────────────────────────────────── */}
       {steps.length > 0 && (

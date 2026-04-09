@@ -33,6 +33,8 @@ const MEGA_COLUMNS = [
       { href: '/recipes',  icon: '📚', label: '配方庫',       desc: '51+ 經典與創意酒譜' },
       { href: '/prep',     icon: '🫙', label: '備料工坊',     desc: '糖漿・苦精・浸泡酒' },
       { href: '/compare',  icon: '📊', label: '配方比較器',   desc: '雷達圖並排比較' },
+      { href: '/random',   icon: '🎲', label: '隨機轉盤',     desc: '命運之輪選配方' },
+      { href: '/mood',     icon: '🎵', label: '情境酒單',     desc: '依心情推薦調酒' },
     ],
   },
   {
@@ -58,19 +60,30 @@ const MEGA_COLUMNS = [
     ],
   },
   {
-    title: '學習成長',
-    titleEn: 'LEARN',
+    title: '知識學院',
+    titleEn: 'ACADEMY',
     color: 'text-green-400',
     items: [
       { href: '/academy',              icon: '🎓', label: '調酒學院', desc: '系統化知識體系' },
       { href: '/academy/wine',         icon: '🍷', label: '葡萄酒百科', desc: '產區・品種・年份' },
       { href: '/academy/spirits',      icon: '🥃', label: '烈酒百科', desc: '蒸餾・陳年・風味' },
       { href: '/academy/techniques',   icon: '📐', label: '技法圖解', desc: '10 種調酒手法' },
-      { href: '/quiz',                 icon: '❓', label: '知識測驗', desc: '40 題挑戰你的實力' },
-      { href: '/flavor-wheel',         icon: '🎡', label: '互動風味輪', desc: '視覺化探索風味' },
-      { href: '/world-map',            icon: '🗺️', label: '產地地圖', desc: '世界產區風土探索' },
-      { href: '/history',              icon: '📜', label: '歷史時間軸', desc: '數千年調酒文明' },
-      { href: '/hall-of-fame',         icon: '🏆', label: '名人堂', desc: '15 位傳奇調酒師' },
+      { href: '/academy/molecular',    icon: '🧪', label: '分子調酒', desc: '球化・煙燻・泡沫' },
+      { href: '/academy/ice',          icon: '🧊', label: '冰塊百科', desc: '冰的藝術與科學' },
+      { href: '/academy/glassware',    icon: '🥂', label: '杯型百科', desc: '16 種經典杯型' },
+      { href: '/academy/hangover',     icon: '💊', label: '宿醉指南', desc: '科學預防與迷思' },
+    ],
+  },
+  {
+    title: '探索發現',
+    titleEn: 'EXPLORE',
+    color: 'text-rose-400',
+    items: [
+      { href: '/flavor-wheel',  icon: '🎡', label: '互動風味輪', desc: '視覺化探索風味' },
+      { href: '/world-map',     icon: '🗺️', label: '產地地圖', desc: '世界產區風土探索' },
+      { href: '/history',       icon: '📜', label: '歷史時間軸', desc: '數千年調酒文明' },
+      { href: '/hall-of-fame',  icon: '🏆', label: '名人堂', desc: '15 位傳奇調酒師' },
+      { href: '/quiz',          icon: '❓', label: '知識測驗', desc: '40 題挑戰你的實力' },
     ],
   },
 ]
@@ -103,7 +116,7 @@ function MegaMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
                     bg-bg-primary shadow-2xl animate-fade-in"
          style={{ backgroundColor: 'var(--color-bg-secondary, #111118)' }}>
       <div className="max-w-7xl mx-auto px-8 py-8">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-5 gap-6">
           {MEGA_COLUMNS.map(col => (
             <div key={col.titleEn}>
               <h3 className={`font-mono text-[10px] tracking-[0.3em] uppercase mb-4 ${col.color}`}>

@@ -40,26 +40,26 @@ for i in $(seq 1 15); do
 done
 
 # ── 3. 啟動前端 (Next.js) ─────────────────────────────────
-echo "[2/2] 啟動前端 (port 3000)..."
+echo "[2/2] 啟動前端 (port 6880)..."
 
-# 釋放 port 3000（若被佔用）
-PIDS=$(ss -tlnp | grep ':3000' | grep -oP 'pid=\K[0-9]+' | sort -u)
+# 釋放 port 6880（若被佔用）
+PIDS=$(ss -tlnp | grep ':6880' | grep -oP 'pid=\K[0-9]+' | sort -u)
 if [ -n "$PIDS" ]; then
   for pid in $PIDS; do
-    kill "$pid" 2>/dev/null && echo "  已釋放 port 3000 (PID $pid)"
+    kill "$pid" 2>/dev/null && echo "  已釋放 port 6880 (PID $pid)"
   done
   sleep 1
 fi
 
 cd "$PROJECT_DIR/frontend"
-nohup npx next dev -H 0.0.0.0 -p 3000 > /tmp/mixmaster-frontend.log 2>&1 &
+nohup npx next dev -H 0.0.0.0 -p 6880 > /tmp/mixmaster-frontend.log 2>&1 &
 FRONT_PID=$!
 echo "  前端 PID: $FRONT_PID"
 
 # ── 4. 等待前端就緒 ────────────────────────────────────────
 echo "  等待前端就緒..."
 for i in $(seq 1 30); do
-  if curl -sf http://localhost:3000 > /dev/null 2>&1; then
+  if curl -sf http://localhost:6880 > /dev/null 2>&1; then
     echo "  ✅ 前端已就緒"
     break
   fi
@@ -72,14 +72,14 @@ echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "🍹 MixMaster 啟動完成！"
 echo ""
-echo "  🏠 首頁           http://localhost:3000"
-echo "  🧪 智慧配方引擎   http://localhost:3000/engine"
-echo "  🎓 調酒學院       http://localhost:3000/academy"
-echo "  📚 配方庫         http://localhost:3000/recipes"
-echo "  📖 API 文件       http://localhost:3000/docs"
+echo "  🏠 首頁           http://localhost:6880"
+echo "  🧪 智慧配方引擎   http://localhost:6880/engine"
+echo "  🎓 調酒學院       http://localhost:6880/academy"
+echo "  📚 配方庫         http://localhost:6880/recipes"
+echo "  📖 API 文件       http://localhost:6880/docs"
 if [ -n "$HOST_IP" ]; then
 echo ""
-echo "  📡 區域網路存取   http://${HOST_IP}:3000"
+echo "  📡 區域網路存取   http://${HOST_IP}:6880"
 fi
 echo ""
 echo "  停止服務：bash stop.sh"
