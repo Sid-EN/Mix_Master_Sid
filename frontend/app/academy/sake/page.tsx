@@ -2,626 +2,832 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import AcademyTracker from '../../../components/AcademyTracker'
 
-/* ──────────────────────────────────────────────────────────
-   Sake & Plum Wine Encyclopedia — 清酒與梅酒百科
-   ────────────────────────────────────────────────────────── */
+/* ================================================================
+   清酒百科 — Sake Encyclopedia
+   ================================================================ */
 
-type TabKey = 'brewing' | 'grades' | 'tasting' | 'umeshu' | 'cocktails'
+type TabKey = 'basics' | 'classification' | 'brewing' | 'tasting' | 'breweries' | 'cocktails'
 
-const tabs: { key: TabKey; zh: string; en: string }[] = [
-  { key: 'brewing',   zh: '清酒釀造', en: 'Brewing' },
-  { key: 'grades',    zh: '等級分類', en: 'Grades' },
-  { key: 'tasting',   zh: '清酒品鑑', en: 'Tasting' },
-  { key: 'umeshu',    zh: '梅酒百科', en: 'Umeshu' },
-  { key: 'cocktails', zh: '調酒應用', en: 'Cocktails' },
+const tabs: { key: TabKey; label: string }[] = [
+  { key: 'basics',         label: '基礎知識' },
+  { key: 'classification', label: '分類系統' },
+  { key: 'brewing',        label: '釀造製程' },
+  { key: 'tasting',        label: '品飲指南' },
+  { key: 'breweries',      label: '著名酒造' },
+  { key: 'cocktails',      label: '清酒調酒' },
 ]
 
-/* ── 清酒釀造 ───────────────────────────────────────────── */
-function BrewingContent() {
-  const steps = [
-    {
-      step: '01',
-      name: '精米 Seimai',
-      en: 'Rice Polishing',
-      desc: '清酒的一切從精米開始。玄米（Brown Rice）的外層富含蛋白質、脂肪與礦物質，這些成分在發酵時會產生雜味。精米步合（Seimaibuai）表示碾磨後殘留的米芯比例——精米步合 60% 表示磨去了外層 40%，僅保留 60% 的米芯。磨得越多，風味越純淨精緻，但原料損耗也越大，這就是大吟釀價格高昂的原因之一。頂級酒款的精米步合可低至 23%（如「獺祭 磨き二割三分」），僅保留米粒的最核心部分。',
-    },
-    {
-      step: '02',
-      name: '洗米・浸漬 Senmai & Shinseki',
-      en: 'Washing & Soaking',
-      desc: '精米後的白米需經過精確的洗米與浸漬。洗米去除表面殘留的米糠；浸漬則讓米粒吸收適當水分，為接下來的蒸米做準備。吸水量的控制以秒計算——高精白米的浸漬時間可能僅有數十秒，因為米芯的澱粉結構更脆弱、更容易吸水。杜氏（Toji，首席釀酒師）會以手感判斷米粒的含水狀態，這是無法被機器完全取代的經驗判斷。',
-    },
-    {
-      step: '03',
-      name: '蒸米 Mushimai',
-      en: 'Steaming',
-      desc: '使用大型蒸米機（甑, Koshiki）將浸漬好的米以蒸汽加熱 40–60 分鐘。蒸米而非煮米的關鍵在於——蒸出的米「外硬內軟」（外はサバけ、内はひねり），外層不黏手方便製麴時麴菌附著，內部柔軟則有利於糊化澱粉被酶分解。蒸好的米依用途分配：約 20% 用於製麴、約 70% 用於發酵投料（掛米）、約 10% 用於酒母。',
-    },
-    {
-      step: '04',
-      name: '製麴 Seikiku',
-      en: 'Koji Making',
-      desc: '製麴是清酒釀造中最關鍵也最耗費心力的步驟，常被稱為「一麴、二酛、三造り」（麴最重要，其次是酒母，第三才是醪的管理）。在溫度與濕度嚴格控制的麴室（Kojimuro, 30–36°C）中，將黃麴菌（Aspergillus oryzae）的孢子撒布在蒸米上，經過約 48 小時的培養，麴菌菌絲深入米粒內部，分泌出將澱粉分解為葡萄糖的糖化酶（Amylase）。麴的品質直接決定了清酒的風味基調——「突破精」（菌絲深入的麴）適合釀造味道濃醇的酒，「總破精」（表面均勻覆蓋的麴）則適合輕快纖細的風格。杜氏在夜間每隔數小時就需進入麴室翻動、調整溫濕度，常連續工作 48 小時不休息。',
-    },
-    {
-      step: '05',
-      name: '酒母 Shubo / Moto',
-      en: 'Yeast Starter',
-      desc: '酒母是培養大量健康酵母菌的「種子液」。將蒸米、米麴、水與酵母菌混合在小型容器中，讓酵母在安全的高酸度環境中大量繁殖。酒母的製作方法有兩大流派：速釀酛（Sokujo-moto）使用乳酸添加快速建立酸度保護，約兩週即可完成；生酛（Kimoto）則依靠空氣中的天然乳酸菌自然產酸，需時 4 週以上，風味更為複雜厚實。山廢（Yamahai）是生酛的簡化版，省略了費力的「山卸」（磨碎米粒）操作，但保留了自然乳酸發酵的特色，風味通常帶有獨特的酸味與濃厚的旨味（Umami）。',
-    },
-    {
-      step: '06',
-      name: '醪 Moromi（並行複發酵）',
-      en: 'Main Fermentation (Multiple Parallel)',
-      desc: '這是清酒獨一無二的核心技術——並行複發酵（Multiple Parallel Fermentation, MPF）。在同一個發酵槽中，兩個生化反應同時進行：（1）麴菌的酵素將澱粉分解為葡萄糖（糖化）；（2）酵母菌將葡萄糖轉化為酒精（發酵）。這兩個過程在同一個容器中「並行」且「同時」發生，是地球上最精密的酒精飲料發酵方式。糖化的速率控制了發酵的速率，使酵母不會因一次性接觸過高濃度的糖分而「中毒」死亡（啤酒和葡萄酒不具備這個特性），因此清酒的原酒可達到 20% ABV 以上——是所有釀造酒中最高的。發酵過程採用「三段仕込」（三階段投料法）：添（Soe）→ 仲（Naka）→ 留（Tome），將蒸米與麴分批加入，讓酵母有時間適應逐漸增加的體積。整個發酵歷時 18–32 天，溫度控制在 8–18°C（吟釀類更低至 5–10°C 以產生更多果香酯類）。',
-    },
-    {
-      step: '07',
-      name: '壓搾・過濾・殺菌 Joso / Roka / Hi-ire',
-      en: 'Pressing, Filtering & Pasteurization',
-      desc: '發酵完成的醪經過壓搾分離酒液與酒粕（Kasu, 可用於醃漬或烹飪）。傳統的「槽搾り」（Fune-shibori, 木槽壓搾法）出酒緩慢但品質最佳；「袋吊り」（Fukuro-tsuri, 袋吊法）更是僅靠重力讓酒液自然滴下，產量極少，通常僅用於出品大會或限量酒款。壓搾後的清酒經過過濾去除殘餘固體，再以約 65°C 的低溫進行一次或兩次火入れ（Hi-ire, 巴斯德殺菌），殺死殘存的酵母與酶，穩定酒質。「生酒」（Namazake）跳過殺菌步驟，保留活性酵母帶來的鮮爽感，但需要冷藏保存。',
-    },
-  ]
+/* ── Tab 1: 基礎知識 ──────────────────────────────────────── */
 
+const coreIngredients = [
+  {
+    emoji: '🌾',
+    name: '酒米 (Sakamai)',
+    desc: '特殊品種，粒大心白明顯',
+  },
+  {
+    emoji: '💧',
+    name: '水 (Mizu)',
+    desc: '軟水＝甘口、硬水＝辛口',
+  },
+  {
+    emoji: '🫘',
+    name: '米麴 (Koji)',
+    desc: '黴菌分解澱粉為糖',
+  },
+  {
+    emoji: '🧫',
+    name: '酵母 (Kobo)',
+    desc: '將糖轉化為酒精',
+  },
+]
+
+const basicsFacts = [
+  {
+    emoji: '🍶',
+    title: '什麼是清酒',
+    desc: '以米、水、米麴、酵母釀造的日本國酒',
+  },
+  {
+    emoji: '📜',
+    title: '歷史',
+    desc: '2000+ 年歷史，起源於神社祭祀',
+  },
+  {
+    emoji: '🔬',
+    title: '酒精濃度',
+    desc: '通常 14–18%（比葡萄酒略高）',
+  },
+  {
+    emoji: '🏷️',
+    title: '日本酒 vs 清酒',
+    desc: '所有清酒都是日本酒，但日本酒也包括梅酒、燒酒等',
+  },
+]
+
+/* ── Tab 2: 分類系統 ──────────────────────────────────────── */
+
+interface Grade {
+  name: string
+  en: string
+  ratio: string
+  note: string
+  style: string
+}
+
+const gradeTable: Grade[] = [
+  { name: '純米大吟釀', en: 'Junmai Daiginjo', ratio: '≤50%', note: '最高級，只用米＋水＋麴', style: '華麗果香、極致細膩' },
+  { name: '大吟釀',     en: 'Daiginjo',        ratio: '≤50%', note: '可添加釀造酒精',       style: '芳香、輕盈、複雜' },
+  { name: '純米吟釀',   en: 'Junmai Ginjo',     ratio: '≤60%', note: '純米，吟釀等級',       style: '果香、花香、均衡' },
+  { name: '吟釀',       en: 'Ginjo',            ratio: '≤60%', note: '可添加少量酒精',       style: '清香、細緻' },
+  { name: '特別純米',   en: 'Tokubetsu Junmai', ratio: '≤60% 或特殊工藝', note: '純米、特別製法', style: '米香豐富、濃郁' },
+  { name: '純米',       en: 'Junmai',           ratio: '無限制', note: '純米＋水＋麴',        style: '醇厚、米味突出' },
+  { name: '本釀造',     en: 'Honjozo',          ratio: '≤70%', note: '添加少量酒精',         style: '清爽、入門' },
+]
+
+interface FlavorType {
+  emoji: string
+  name: string
+  en: string
+  desc: string
+  examples: string
+  serve: string
+  color: string
+}
+
+const flavorTypes: FlavorType[] = [
+  { emoji: '🌸', name: '薫酒', en: 'Kunshu', desc: '華麗果香型', examples: '大吟釀、吟釀', serve: '白酒杯品飲', color: '#E8A0BF' },
+  { emoji: '❄️', name: '爽酒', en: 'Soshu',  desc: '清爽淡麗型', examples: '本釀造、生酒', serve: '冰鎮飲用',   color: '#7EC8E3' },
+  { emoji: '🍚', name: '醇酒', en: 'Junshu', desc: '濃醇豐滿型', examples: '純米、山廢',   serve: '常溫或溫酒',  color: '#F5A623' },
+  { emoji: '🏺', name: '熟酒', en: 'Jukushu', desc: '熟成複雜型', examples: '古酒、長期熟成', serve: '室溫或溫酒', color: '#C69C6D' },
+]
+
+interface SpecialType {
+  emoji: string
+  name: string
+  en: string
+  desc: string
+}
+
+const specialTypes: SpecialType[] = [
+  { emoji: '💎', name: '生酒',     en: 'Namazake',      desc: '未經殺菌，需冷藏，清新活潑' },
+  { emoji: '☁️', name: '濁酒',     en: 'Nigorizake',    desc: '未完全過濾，乳白色，米香濃郁' },
+  { emoji: '🪵', name: '樽酒',     en: 'Taruzake',      desc: '杉木桶貯存，帶有木香' },
+  { emoji: '🏛️', name: '古酒',     en: 'Koshu',         desc: '長期熟成（3–10年+），類似雪莉酒' },
+  { emoji: '🫧', name: '發泡清酒', en: 'Sparkling Sake', desc: '含碳酸，如日本的香檳' },
+]
+
+/* ── Tab 3: 釀造製程 ──────────────────────────────────────── */
+
+interface BrewStep {
+  num: number
+  title: string
+  en: string
+  desc: string
+  detail?: string[]
+}
+
+const brewingSteps: BrewStep[] = [
+  {
+    num: 1,
+    title: '精米',
+    en: 'Seimai',
+    desc: '外層蛋白質脂肪會產生雜味，磨掉越多越純淨',
+  },
+  {
+    num: 2,
+    title: '洗米・浸漬',
+    en: 'Senmai / Shinseki',
+    desc: '精確控制吸水率，以秒計算',
+  },
+  {
+    num: 3,
+    title: '蒸米',
+    en: 'Mushimai',
+    desc: '外硬內軟的理想狀態',
+  },
+  {
+    num: 4,
+    title: '製麴',
+    en: 'Seikiku',
+    desc: '在溫度控制的麴室中培養 48 小時，最關鍵步驟',
+  },
+  {
+    num: 5,
+    title: '酒母',
+    en: 'Shubo / Moto',
+    desc: '培養濃縮酵母菌群',
+    detail: [
+      '速釀系 (Sokujo)：添加乳酸，2 週完成',
+      '山廢系 (Yamahai)：天然乳酸菌發酵，4 週，風味更複雜',
+      '生酛系 (Kimoto)：最傳統，手工搗碎米飯，風味最深沉',
+    ],
+  },
+  {
+    num: 6,
+    title: '醪',
+    en: 'Moromi',
+    desc: '三段仕込（三次投料），平行複式發酵（世界獨有）',
+  },
+  {
+    num: 7,
+    title: '上槽',
+    en: 'Joso',
+    desc: '壓榨分離酒液與酒粕',
+    detail: [
+      '袋吊 (Fukurozuri)：最高級，自然滴落',
+      '薮田式 (Yabuta)：機械壓榨',
+    ],
+  },
+  {
+    num: 8,
+    title: '殺菌・貯藏',
+    en: 'Hi-ire / Chozo',
+    desc: '加熱至 65°C 殺菌，儲存熟成',
+  },
+]
+
+/* ── Tab 4: 品飲指南 ──────────────────────────────────────── */
+
+interface TempRange {
+  name: string
+  romaji: string
+  temp: string
+  color: string
+}
+
+const temperatureScale: TempRange[] = [
+  { name: '雪冷え',  romaji: 'Yukihie',    temp: '5°C',   color: '#A0D8EF' },
+  { name: '花冷え',  romaji: 'Hanahie',    temp: '10°C',  color: '#7EC8E3' },
+  { name: '涼冷え',  romaji: 'Suzuhie',    temp: '15°C',  color: '#5BB8D4' },
+  { name: '常温',    romaji: 'Joon',       temp: '20°C',  color: '#E8D5B7' },
+  { name: '日向燗',  romaji: 'Hinatacan',  temp: '30°C',  color: '#F5C88C' },
+  { name: '人肌燗',  romaji: 'Hitohadacan', temp: '35°C', color: '#F5A623' },
+  { name: 'ぬる燗',  romaji: 'Nurucan',    temp: '40°C',  color: '#E8874A' },
+  { name: '上燗',    romaji: 'Jocan',      temp: '45°C',  color: '#D66A3A' },
+  { name: '熱燗',    romaji: 'Atsucan',    temp: '50°C',  color: '#C04B2D' },
+  { name: '飛切燗',  romaji: 'Tobikiri',   temp: '55°C+', color: '#A03020' },
+]
+
+const tastingSteps = [
+  { emoji: '👁️', step: '觀色', desc: '清澈度、色澤（透明～琥珀）' },
+  { emoji: '👃', step: '聞香', desc: '上立香（杯中直接香氣）、含香（口中香氣）' },
+  { emoji: '👅', step: '入口', desc: '甘辛度、酸度、旨味、質感' },
+  { emoji: '✨', step: '餘韻', desc: '留存時間、回甘、變化' },
+]
+
+const drinkware = [
+  { emoji: '🔵', name: '蛇目杯', en: 'Janome', desc: '鑑定用，白底藍圈' },
+  { emoji: '🍶', name: '豬口杯', en: 'Ochoko', desc: '最常見的小型酒杯' },
+  { emoji: '🫗', name: '片口',   en: 'Katakuchi', desc: '單嘴注酒器' },
+  { emoji: '📦', name: '升',     en: 'Masu', desc: '木製方杯，節慶用' },
+]
+
+const pairings = [
+  { food: '刺身',   match: '淡麗辛口', icon: '🐟' },
+  { food: '天婦羅', match: '吟釀',     icon: '🍤' },
+  { food: '烤物',   match: '純米',     icon: '🍖' },
+  { food: '火鍋',   match: '燗酒',     icon: '🫕' },
+]
+
+/* ── Tab 5: 著名酒造 ──────────────────────────────────────── */
+
+interface Brewery {
+  rank: number
+  name: string
+  en: string
+  region: string
+  company: string
+  desc: string
+  accent: string
+}
+
+const breweries: Brewery[] = [
+  { rank: 1,  name: '獺祭',   en: 'Dassai',    region: '山口縣', company: '旭酒造',         desc: '純米大吟釀專門',    accent: '#F5A623' },
+  { rank: 2,  name: '十四代', en: 'Juyondai',  region: '山形縣', company: '高木酒造',       desc: '夢幻逸品',          accent: '#E8A0BF' },
+  { rank: 3,  name: '久保田', en: 'Kubota',    region: '新潟縣', company: '朝日酒造',       desc: '淡麗辛口代表',      accent: '#7EC8E3' },
+  { rank: 4,  name: '八海山', en: 'Hakkaisan', region: '新潟縣', company: '八海釀造',       desc: '雪國名酒',          accent: '#A0D8EF' },
+  { rank: 5,  name: '而今',   en: 'Jikon',     region: '三重縣', company: '木屋正酒造',     desc: '新世代王者',        accent: '#9B59B6' },
+  { rank: 6,  name: '黑龍',   en: 'Kokuryu',   region: '福井縣', company: '黑龍酒造',       desc: '石田屋傳說',        accent: '#4A4A4A' },
+  { rank: 7,  name: '新政',   en: 'Aramasa',   region: '秋田縣', company: '新政酒造',       desc: '革新派領袖',        accent: '#00FFCC' },
+  { rank: 8,  name: '田酒',   en: 'Denshu',    region: '青森縣', company: '西田酒造',       desc: '用米說話',          accent: '#C69C6D' },
+  { rank: 9,  name: '飛露喜', en: 'Hiroki',    region: '福島縣', company: '廣木酒造',       desc: '復興傳奇',          accent: '#E06C75' },
+  { rank: 10, name: '作',     en: 'Zaku',      region: '三重縣', company: '清水清三郎商店', desc: 'G7 乾杯酒',        accent: '#D4AF37' },
+]
+
+/* ── Tab 6: 清酒調酒 ──────────────────────────────────────── */
+
+interface Cocktail {
+  name: string
+  nameEn: string
+  emoji: string
+  ingredients: string[]
+  method: string
+  color: string
+}
+
+const sakeCocktails: Cocktail[] = [
+  {
+    name: '清酒馬丁尼',
+    nameEn: 'Sake Martini',
+    emoji: '🍸',
+    ingredients: ['清酒 60ml', 'Dry Vermouth 15ml', '柚子皮'],
+    method: '攪拌法，冰鎮馬丁尼杯，柚子皮裝飾',
+    color: '#F5A623',
+  },
+  {
+    name: '清酒莫西多',
+    nameEn: 'Sake Mojito',
+    emoji: '🌿',
+    ingredients: ['清酒 60ml', '薄荷', '萊姆', '蘇打水'],
+    method: '輕搗薄荷與萊姆，加入清酒與冰，蘇打水補滿',
+    color: '#2ECC71',
+  },
+  {
+    name: '柚子清酒氣泡',
+    nameEn: 'Yuzu Sake Spritz',
+    emoji: '🍊',
+    ingredients: ['清酒 90ml', '柚子汁 15ml', '氣泡水'],
+    method: '直調法，先倒清酒與柚子汁，再加氣泡水',
+    color: '#F39C12',
+  },
+  {
+    name: '清酒血腥瑪麗',
+    nameEn: 'Sake Bloody Mary',
+    emoji: '🍅',
+    ingredients: ['清酒 90ml', '番茄汁', '山葵'],
+    method: '滾動法，加入山葵替代辣醬，日式風味',
+    color: '#E74C3C',
+  },
+  {
+    name: '清酒老時髦',
+    nameEn: 'Sake Old Fashioned',
+    emoji: '🥃',
+    ingredients: ['清酒 90ml', '梅酒 15ml', '柚子苦精'],
+    method: '攪拌法，大冰球，柚子皮捲裝飾',
+    color: '#C69C6D',
+  },
+  {
+    name: '清酒嗨棒',
+    nameEn: 'Sake Highball',
+    emoji: '🥂',
+    ingredients: ['清酒 60ml', '通寧水 120ml', '紫蘇葉'],
+    method: '直調法，高球杯，紫蘇葉輕拍釋放香氣',
+    color: '#9B59B6',
+  },
+]
+
+/* ================================================================
+   Sub-components
+   ================================================================ */
+
+function SectionHeader({
+  emoji,
+  title,
+  eng,
+}: {
+  emoji: string
+  title: string
+  eng: string
+}) {
   return (
-    <div className="space-y-8">
-      <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-xl text-text-warm mb-2">
-          並行複發酵——清酒獨有的魔法
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Multiple Parallel Fermentation</span>
-        </h3>
-        <p className="text-text-secondary text-sm leading-relaxed">
-          清酒是世界上唯一採用「並行複發酵」技術的主流酒類。葡萄酒是單發酵（糖到酒精）；啤酒是先糖化再發酵的
-          逐步發酵。唯有清酒，在同一個容器中同時進行糖化與發酵——麴菌持續將澱粉拆解為糖，酵母持續將糖轉化為
-          酒精。這種精密的平衡使清酒原酒能達到 18–20% ABV，是釀造酒之最高紀錄。
-        </p>
-      </div>
-
-      <div className="space-y-6">
-        {steps.map((s) => (
-          <div key={s.step} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-            <div className="flex items-start gap-4 mb-3">
-              <div className="flex-shrink-0 w-12 h-12 border-2 border-neon-amber flex items-center justify-center">
-                <span className="font-mono text-neon-amber text-sm font-bold">{s.step}</span>
-              </div>
-              <div>
-                <h4 className="font-display text-lg text-text-warm">{s.name}</h4>
-                <p className="font-mono text-xs text-charcoal-500 tracking-wider">{s.en}</p>
-              </div>
-            </div>
-            <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
-          </div>
-        ))}
-      </div>
+    <div className="mb-8">
+      <div className="divider-amber mb-8" />
+      <h2 className="font-display text-2xl md:text-3xl text-text-warm">
+        <span className="mr-3">{emoji}</span>
+        {title}
+        <span className="font-mono text-sm text-charcoal-500 ml-3">{eng}</span>
+      </h2>
     </div>
   )
 }
 
-/* ── 等級分類 ───────────────────────────────────────────── */
-function GradesContent() {
-  const grades = [
-    {
-      name: '大吟釀',
-      en: 'Daiginjo',
-      seimaibuai: '≤ 50%',
-      alcohol: '可添加',
-      flavor: '華麗的果香與花香，口感極為精緻輕盈。蘋果、哈密瓜、白桃、茉莉花等香氣層層疊疊。是清酒藝術的最高表現。',
-      note: '添加少量釀造酒精可以萃取更多香氣成分（酯類），使香味更為華麗。',
-    },
-    {
-      name: '純米大吟釀',
-      en: 'Junmai Daiginjo',
-      seimaibuai: '≤ 50%',
-      alcohol: '不可添加',
-      flavor: '純米系的最高等級，兼具大吟釀的華麗香氣與純米的米味厚度。口感豐腴卻不失優雅，餘韻悠長。許多酒迷認為這是清酒的終極形態。',
-      note: '100% 米、米麴、水釀造，展現最純粹的原料個性。',
-    },
-    {
-      name: '吟釀',
-      en: 'Ginjo',
-      seimaibuai: '≤ 60%',
-      alcohol: '可添加',
-      flavor: '吟釀等級開始展現「吟釀香」（Ginjo-ka）——低溫長時間發酵產生的果香酯類化合物（乙酸異戊酯→蘋果香；己酸乙酯→哈密瓜香）。風格清新芳醇。',
-      note: '低溫發酵（5-10°C）是產生吟釀香的關鍵技術。',
-    },
-    {
-      name: '純米吟釀',
-      en: 'Junmai Ginjo',
-      seimaibuai: '≤ 60%',
-      alcohol: '不可添加',
-      flavor: '純米系吟釀，果香與米的旨味平衡最好的類型。適合搭配各類日式料理，溫度適應範圍廣（冷飲至微溫皆宜）。日常飲用的高品質選擇。',
-      note: '許多精釀酒藏的主力商品，CP 值最高的等級。',
-    },
-    {
-      name: '特別純米',
-      en: 'Tokubetsu Junmai',
-      seimaibuai: '≤ 60% 或特殊製法',
-      alcohol: '不可添加',
-      flavor: '「特別」表示有超越基本純米規格的特殊之處——可能是更高的精米步合、使用特殊酒米品種或獨特釀造法。風味通常比普通純米更為精緻，帶有清晰的米味旨味與舒適的酸度。',
-      note: '酒標上通常會標示其「特別」之處。',
-    },
-    {
-      name: '純米',
-      en: 'Junmai',
-      seimaibuai: '無特定限制',
-      alcohol: '不可添加',
-      flavor: '最能展現「米味」的類型。飽滿的旨味（Umami）、溫潤的口感、適中的酸度。冷飲、常溫、溫燗皆宜，是最萬用的清酒風格。生酛/山廢製法的純米酒更帶有濃厚的乳酸風味與複雜度。',
-      note: '2004 年法規修改後取消了精米步合 70% 以下的限制。',
-    },
-    {
-      name: '本釀造',
-      en: 'Honjozo',
-      seimaibuai: '≤ 70%',
-      alcohol: '可添加（≤ 10%）',
-      flavor: '添加少量釀造酒精使口感更為輕快乾爽。是入門清酒的好選擇，價格親民且風格多元。適合溫燗飲用，加溫後會展現更多穀物與堅果的暖調風味。',
-      note: '釀造酒精添加量不得超過白米重量的 10%。',
-    },
-  ]
+/* ================================================================
+   Page Component
+   ================================================================ */
 
-  const riceTypes = [
-    { name: '山田錦', en: 'Yamada Nishiki', origin: '兵庫縣', desc: '酒米之王。心白（Shinpaku，米粒中心的白色不透明澱粉核心）大且明確，蛋白質含量低，是釀造大吟釀的首選。全日本超過 60% 的特定名稱酒使用山田錦。' },
-    { name: '五百萬石', en: 'Gohyakumangoku', origin: '新潟縣', desc: '北陸地區的代表品種。心白較小，適合釀造口感淡麗辛口（乾爽）的清酒，是新潟「端麗辛口」風格的基石。不太適合高度精白（50% 以下容易碎裂）。' },
-    { name: '美山錦', en: 'Miyama Nishiki', origin: '長野縣', desc: '寒冷地區的優質品種，耐寒性極佳。釀出的清酒風格清新，帶有明確的酸度與輕快的口感，適合吟釀等級。' },
-    { name: '雄町', en: 'Omachi', origin: '岡山縣', desc: '最古老的酒米品種之一（1859 年發現），是山田錦的祖先。稻穗極長容易倒伏，栽培困難。釀出的酒風格豐腴飽滿，帶有野性的旨味與深厚的層次，被愛好者稱為「雄町ロマン」（Omachi Romance）。' },
-    { name: '愛山', en: 'Aiyama', origin: '兵庫縣', desc: '極為稀少的夢幻酒米。大粒、心白大，但栽培與精米都極為困難。釀出的清酒甜潤華麗，帶有蜂蜜、花香與獨特的妖豔感。僅有少數酒藏使用。' },
-  ]
-
-  return (
-    <div className="space-y-8">
-      {/* 等級表 */}
-      <div>
-        <h3 className="font-display text-xl text-text-warm mb-4">
-          特定名稱酒分類
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Tokutei Meishoshu Classification</span>
-        </h3>
-        <div className="space-y-4">
-          {grades.map((g) => (
-            <div key={g.en} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-              <div className="flex flex-wrap items-center gap-3 mb-3">
-                <h4 className="font-display text-lg text-text-warm">{g.name}</h4>
-                <span className="font-mono text-sm text-neon-amber tracking-wider">{g.en}</span>
-                <span className="font-mono text-xs text-charcoal-500 border border-charcoal-700 px-2 py-0.5">
-                  精米 {g.seimaibuai}
-                </span>
-                <span className={`font-mono text-xs px-2 py-0.5 ${
-                  g.alcohol === '不可添加'
-                    ? 'text-green-400 border border-green-400/30'
-                    : 'text-charcoal-500 border border-charcoal-700'
-                }`}>
-                  醸造酒精 {g.alcohol}
-                </span>
-              </div>
-              <p className="text-text-secondary text-sm leading-relaxed mb-2">{g.flavor}</p>
-              <p className="font-mono text-xs text-charcoal-500 leading-relaxed">💡 {g.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 酒米品種 */}
-      <div>
-        <div className="divider-amber mb-8" />
-        <h3 className="font-display text-xl text-text-warm mb-2">
-          酒造好適米
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Sake Rice Varieties</span>
-        </h3>
-        <p className="text-text-muted text-sm mb-6">
-          「酒造好適米」是專門為釀造清酒培育的稻米品種，與食用米最大的差異在於擁有更大的「心白」（Shinpaku）。
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {riceTypes.map((r) => (
-            <div key={r.en} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-              <h4 className="font-display text-base text-text-warm mb-0.5">{r.name}</h4>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="font-mono text-xs text-neon-amber">{r.en}</span>
-                <span className="font-mono text-[10px] text-charcoal-500">📍 {r.origin}</span>
-              </div>
-              <p className="text-text-secondary text-sm leading-relaxed">{r.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 日本酒度 */}
-      <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
-          日本酒度 SMV
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Sake Meter Value (Nihonshu-do)</span>
-        </h3>
-        <p className="text-text-secondary text-sm leading-relaxed mb-3">
-          日本酒度（SMV）是衡量清酒甘辛度的標準指標。以 4°C 的純水比重為基準（±0），
-          數值為正（+）表示比重低於水（含糖少→傾向辛口/乾爽），數值為負（-）表示比重高於水（含糖多→傾向甘口/甜潤）。
-          但 SMV 只是參考，實際甘辛感受還受酸度與胺基酸度的影響——高酸度會讓甘口酒喝起來更乾爽。
-        </p>
-        <div className="grid grid-cols-5 gap-2 font-mono text-xs text-center">
-          <div className="p-2 bg-bg-tertiary border border-charcoal-700">
-            <div className="text-neon-amber font-bold">-6 以下</div>
-            <div className="text-charcoal-500 mt-1">大甘口</div>
-          </div>
-          <div className="p-2 bg-bg-tertiary border border-charcoal-700">
-            <div className="text-neon-amber font-bold">-2 ~ -5</div>
-            <div className="text-charcoal-500 mt-1">甘口</div>
-          </div>
-          <div className="p-2 bg-bg-tertiary border border-charcoal-700">
-            <div className="text-neon-amber font-bold">-1 ~ +1</div>
-            <div className="text-charcoal-500 mt-1">中間</div>
-          </div>
-          <div className="p-2 bg-bg-tertiary border border-charcoal-700">
-            <div className="text-neon-amber font-bold">+2 ~ +5</div>
-            <div className="text-charcoal-500 mt-1">辛口</div>
-          </div>
-          <div className="p-2 bg-bg-tertiary border border-charcoal-700">
-            <div className="text-neon-amber font-bold">+6 以上</div>
-            <div className="text-charcoal-500 mt-1">大辛口</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-/* ── 清酒品鑑 ───────────────────────────────────────────── */
-function TastingContent() {
-  const temps = [
-    { name: '雪冷え',  en: 'Yukibie',   temp: '5°C',   desc: '雪般冰冷。香氣收斂，口感清冽如泉水。適合大吟釀類的華麗酒款，低溫能讓果香在口中慢慢綻放。過冷可能掩蓋風味細節，建議在入口後讓酒液在口中停留數秒回溫。' },
-    { name: '花冷え',  en: 'Hanabie',    temp: '10°C',  desc: '花瓣般的涼爽。這是大多數吟釀酒的最佳品飲溫度。果香與花香表現完美，口感爽淨，酸度明亮。從冰箱取出後放置 5–10 分鐘即可達到此溫度。' },
-    { name: '涼冷え',  en: 'Suzubie',    temp: '15°C',  desc: '涼爽宜人。香氣開始開展，米的旨味漸漸浮現。純米吟釀在此溫度展現最佳平衡——果香不搶風頭，米味也未完全退場。' },
-    { name: '常温',    en: 'Jō-on',      temp: '20°C',  desc: '室溫飲用。所有的風味要素——米味、酸度、旨味、苦味——均衡呈現。最適合品評清酒的「真實面貌」，也是最適合配餐飲用的溫度。純米酒在此溫度最為出色。' },
-    { name: '日向燗',  en: 'Hinata-kan', temp: '30°C',  desc: '陽光般的微溫。香氣開始舒展開來，口感變得柔和圓潤。開始感受到溫酒的魅力。適合本釀造與純米酒。' },
-    { name: '人肌燗',  en: 'Hitohada',   temp: '35°C',  desc: '體溫般的溫度。米的甘甜與旨味明顯增強，口感如絲綢般滑順。生酛/山廢系的清酒在此溫度展現迷人的乳酸風味與複雜度。這是最「治癒」的飲用溫度。' },
-    { name: '上燗',    en: 'Jō-kan',     temp: '45°C',  desc: '明顯的溫熱感。香氣以穀物、栗子、堅果調為主。酸度更加突出，與油脂豐滿的料理（如烤魚、天婦羅）搭配絕佳。純米酒和本釀造在此溫度達到另一個風味高峰。' },
-    { name: '熱燗',    en: 'Atsu-kan',   temp: '50°C',  desc: '熱飲。風味奔放，酒精感明顯但被米的甜味包裹。適合體格強健的純米酒或本釀造。寒冬夜晚搭配關東煮（Oden）是日本人的終極暖心組合。注意：不建議將吟釀酒加熱至此溫度。' },
-  ]
-
-  const vessels = [
-    { name: '猪口 Ochoko', desc: '最傳統的清酒小杯，容量約 45–60ml。陶瓷材質最常見，窄口設計集中香氣，適合品評與搭餐。不同窯燒的猪口本身就是日本陶藝文化的縮影。' },
-    { name: '德利 Tokkuri', desc: '酒壺，容量 180ml（一合）或 360ml（二合）。陶瓷或玻璃材質。窄頸設計有助於控制倒酒量，也能在燗酒時熱水浴中快速均勻加溫。' },
-    { name: '升 Masu', desc: '傳統的方形木杯，容量 180ml（一合）。以日本扁柏（ヒノキ, Hinoki）製成，帶有清新的木香。慶典場合使用，象徵「滿溢」的吉祥意涵。部分居酒屋會將猪口放入升中，倒酒至溢出——表示店家大方好客。' },
-    { name: '葡萄酒杯 Wine Glass', desc: '大吟釀用葡萄酒杯品飲正日益流行。廣口杯（如 Burgundy 杯型）能讓吟釀香充分展開，搖杯後的香氣複雜度令人驚嘆。RIEDEL 和 Kimoto Glass 都有推出清酒專用杯型。' },
-  ]
-
-  return (
-    <div className="space-y-8">
-      {/* 溫度帶 */}
-      <div>
-        <h3 className="font-display text-xl text-text-warm mb-2">
-          清酒溫度帶
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Temperature Spectrum</span>
-        </h3>
-        <p className="text-text-secondary text-sm mb-6 leading-relaxed">
-          清酒的獨特之處在於品飲溫度範圍極廣——從 5°C 到 55°C 都有其最佳表現。
-          日本人為每個溫度帶賦予了詩意的名稱，每個溫度帶都能讓同一款酒展現截然不同的面貌。
-        </p>
-        <div className="space-y-3">
-          {temps.map((t) => (
-            <div key={t.en} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-              <div className="flex flex-wrap items-center gap-3 mb-2">
-                <h4 className="font-display text-base text-text-warm">{t.name}</h4>
-                <span className="font-mono text-xs text-neon-amber">{t.en}</span>
-                <span className="font-mono text-xs text-neon-cyan border border-neon-cyan/30 px-2 py-0.5">
-                  {t.temp}
-                </span>
-              </div>
-              <p className="text-text-secondary text-sm leading-relaxed">{t.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 酒器 */}
-      <div>
-        <div className="divider-amber mb-8" />
-        <h3 className="font-display text-xl text-text-warm mb-2">
-          酒器指南
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Sake Vessels</span>
-        </h3>
-        <p className="text-text-muted text-sm mb-6">
-          酒器的材質、形狀與容量都會影響品飲體驗。選擇正確的酒器是品鑑清酒的重要一環。
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {vessels.map((v) => (
-            <div key={v.name} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-              <h4 className="font-display text-base text-text-warm mb-2">{v.name}</h4>
-              <p className="text-text-secondary text-sm leading-relaxed">{v.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 品鑑流程 */}
-      <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-3">
-          品鑑四步驟
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Tasting Protocol</span>
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
-          <div>
-            <span className="font-mono text-neon-amber text-xs block mb-1">01 — 外觀 Appearance</span>
-            <p className="leading-relaxed">觀察透明度、色澤（無色→淡黃→琥珀）、黏度。生酒通常帶有微濁的光澤，陳年酒會呈現深琥珀色。</p>
-          </div>
-          <div>
-            <span className="font-mono text-neon-amber text-xs block mb-1">02 — 上立ち香 Uwadachi-ka</span>
-            <p className="leading-relaxed">不搖杯直接嗅聞的香氣。吟釀酒此時應能感受到果香（蘋果、哈密瓜、梨子）與花香（茉莉、百合）。</p>
-          </div>
-          <div>
-            <span className="font-mono text-neon-amber text-xs block mb-1">03 — 含み香 Fukumi-ka</span>
-            <p className="leading-relaxed">入口後從口腔傳至鼻腔的逆行香氣（Retronasal）。這是體驗米味旨味、乳酸風味與穀物調性的關鍵階段。</p>
-          </div>
-          <div>
-            <span className="font-mono text-neon-amber text-xs block mb-1">04 — 餘韻 Finish</span>
-            <p className="leading-relaxed">吞嚥後風味的持續時間與演變。優質清酒的餘韻乾淨俐落（「キレ」Kire），不留殘味。大吟釀的餘韻則如水彩般透明漸層消散。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-/* ── 梅酒百科 ───────────────────────────────────────────── */
-function UmeshuContent() {
-  return (
-    <div className="space-y-6">
-      <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
-          梅酒概論
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Umeshu Overview</span>
-        </h3>
-        <p className="text-text-secondary text-sm leading-relaxed">
-          梅酒（Umeshu）是以未熟青梅（Ume, 日本杏 Prunus mume）浸漬於酒精基底（通常為白色蒸餾酒「ホワイトリカー」White Liquor，
-          35% ABV）中，加入糖類製成的利口酒。它不是「發酵」產物，而是「浸漬萃取」——梅子的有機酸（檸檬酸、蘋果酸）、
-          果膠、酚類化合物與香氣成分隨時間溶入酒液，與糖類交互作用，形成獨特的酸甜風味。
-        </p>
-        <p className="text-text-secondary text-sm leading-relaxed mt-2">
-          在日本，家庭自釀梅酒是每年六月的季節風物詩。超市在梅雨季（「梅」雨＝梅子成熟的雨季）前會設立專區，
-          販售青梅、冰糖與大型玻璃罐（果實酒瓶），每個家庭都有自己傳承的黃金比例。
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-1">南高梅 Nanko-ume</h4>
-          <p className="font-mono text-xs text-charcoal-500 mb-2">📍 和歌山縣 — 梅酒之王</p>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            日本最高級的梅品種，果實碩大（直徑 3–4cm）、果肉厚實、種核小。果皮薄而柔軟，
-            浸漬時能快速釋出風味。製成的梅酒色澤透亮如琥珀，風味濃郁圓潤，帶有明確的杏桃、
-            蜂蜜與花香。和歌山縣佔全日本南高梅產量的 65% 以上，「紀州梅」是品質的代名詞。
-          </p>
-        </div>
-        <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-1">古城梅 Kojo-ume</h4>
-          <p className="font-mono text-xs text-charcoal-500 mb-2">📍 和歌山縣 — 青梅首選</p>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            果實較南高梅小，但果肉紮實、酸度較高，特別適合製作梅酒。比南高梅更耐浸漬，
-            不易過軟崩解。製成的梅酒風格清爽、酸度明亮，帶有清新的青草與柑橘調性，
-            是講求「酸甜平衡」的梅酒愛好者首選。
-          </p>
-        </div>
-      </div>
-
-      <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
-          製作黃金比例
-          <span className="font-mono text-xs text-charcoal-500 ml-2">Classic Recipe Ratio</span>
-        </h3>
-        <div className="grid grid-cols-3 gap-4 mb-4">
-          <div className="p-4 bg-bg-tertiary border border-charcoal-700 text-center">
-            <div className="font-mono text-2xl text-neon-amber font-bold">1 kg</div>
-            <div className="text-text-secondary text-sm mt-1">青梅</div>
-            <div className="font-mono text-[10px] text-charcoal-500">Green Ume</div>
-          </div>
-          <div className="p-4 bg-bg-tertiary border border-charcoal-700 text-center">
-            <div className="font-mono text-2xl text-neon-amber font-bold">1.8 L</div>
-            <div className="text-text-secondary text-sm mt-1">基底酒</div>
-            <div className="font-mono text-[10px] text-charcoal-500">White Liquor 35%</div>
-          </div>
-          <div className="p-4 bg-bg-tertiary border border-charcoal-700 text-center">
-            <div className="font-mono text-2xl text-neon-amber font-bold">500–800g</div>
-            <div className="text-text-secondary text-sm mt-1">冰糖</div>
-            <div className="font-mono text-[10px] text-charcoal-500">Rock Sugar</div>
-          </div>
-        </div>
-        <p className="text-text-secondary text-sm leading-relaxed">
-          經典配方為 1:1.8:0.5–0.8（梅:酒:糖）。糖量越少越辛口，500g 適合偏好酸味的飲者；
-          800g 則偏甜潤。冰糖（Rock Sugar）比白砂糖更佳，因為它溶解緩慢，讓萃取過程更溫和均勻。
-          基底酒也可用白蘭地（風味更華麗）、琴酒（草本清新）或日本燒酎（旨味更重）替代。
-        </p>
-      </div>
-
-      <div className="glass-card p-6">
-        <h4 className="text-text-warm font-medium mb-3">熟成與陳年風味演變</h4>
-        <div className="space-y-3 text-sm text-text-secondary">
-          <div className="flex gap-3 items-start">
-            <span className="font-mono text-neon-amber flex-shrink-0">3 個月</span>
-            <p className="leading-relaxed">開始可飲，但風味尚未整合。梅子的青澀感明顯，酸度較突出，甜味與酒精感分離。可用於調酒但不建議純飲。</p>
-          </div>
-          <div className="flex gap-3 items-start">
-            <span className="font-mono text-neon-amber flex-shrink-0">6 個月</span>
-            <p className="leading-relaxed">風味開始圓潤，酸甜平衡改善。梅子的果香開始融入酒液，出現杏桃與蜜餞的風味。此時建議取出梅子，避免過度萃取苦澀。</p>
-          </div>
-          <div className="flex gap-3 items-start">
-            <span className="font-mono text-neon-amber flex-shrink-0">1 年</span>
-            <p className="leading-relaxed">經典熟成期。風味飽滿圓潤，酸甜完美平衡，口感絲滑。琥珀色澤加深，帶有蜂蜜、焦糖的暖調。純飲加冰的最佳時機。</p>
-          </div>
-          <div className="flex gap-3 items-start">
-            <span className="font-mono text-neon-amber flex-shrink-0">3–5 年</span>
-            <p className="leading-relaxed">深度陳年。色澤呈深琥珀至紅銅色。風味極為複雜——焦糖、太妃糖、乾果、微妙的木質調。口感如蜂蜜般濃稠，餘韻悠長。如同陳年雪莉酒的質地。</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">商業品牌精選</h4>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            CHOYA 蝶矢（日本最大梅酒品牌）、明利酒類 百年梅酒（糖少偏辛口）、
-            梅乃宿 あらごし梅酒（果肉型）、中野 BC 紀州梅酒（和歌山產）、
-            鶴梅（大吟釀基底的頂級梅酒）。
-          </p>
-        </div>
-        <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">進階基底酒選擇</h4>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            白蘭地基底：果香華麗、風味複雜；日本燒酎基底：旨味濃厚、適合配餐；
-            威士忌基底：煙燻木質、適合秋冬；琴酒基底：草本清新、適合調酒應用。
-          </p>
-        </div>
-        <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">飲用方式</h4>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            純飲加冰（On the Rocks）、梅酒蘇打（Umeshu Soda，1:2 比例）、
-            梅酒熱飲（お湯割り Hot Water，1:1，冬季暖心飲法）、
-            冷凍梅酒（Frozen Umeshu，冷凍後呈雪泥狀）。
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-/* ── 調酒應用 ───────────────────────────────────────────── */
-function CocktailsContent() {
-  const cocktails = [
-    {
-      name: 'Sake Martini',
-      nameZh: '清酒馬丁尼',
-      ingredients: '清酒 60ml · Dry Vermouth 15ml · 柚子皮',
-      method: 'Stir 攪拌法',
-      desc: '以吟釀等級清酒取代部分琴酒或伏特加，輕搖或攪拌後倒入冰鎮 Martini 杯，以柚子皮扭轉裝飾。口感比傳統 Martini 更為柔和、帶有清雅的米香與柚子精油的芬芳。適合不喜歡高酒精度調酒的飲者。',
-    },
-    {
-      name: 'Umeshu Sour',
-      nameZh: '梅酒酸酒',
-      ingredients: '梅酒 60ml · 新鮮檸檬汁 20ml · 蛋白 · 苦精少許',
-      method: 'Dry Shake + Shake',
-      desc: '先乾搖（不加冰）乳化蛋白質，再加冰搖盪後雙重過濾倒入 Coupe 杯。梅酒本身的酸甜度加上檸檬汁的鮮爽，蛋白提供絲滑泡沫。是展示梅酒調酒潛力的最佳入門作品。',
-    },
-    {
-      name: 'Sakura Spring',
-      nameZh: '櫻花春意',
-      ingredients: '純米酒 45ml · 接骨木花利口酒 20ml · 氣泡水 · 櫻花鹽漬裝飾',
-      method: 'Build 直調法',
-      desc: '在 Highball 杯中先加冰，依序倒入清酒與接骨木花利口酒，最後緩慢加入氣泡水並輕拉一下。以鹽漬櫻花瓣裝飾——鹽漬花瓣在碳酸中會緩慢展開，視覺效果如同瓶中花開。清新花香與米味的完美融合，是春季限定的夢幻飲品。',
-    },
-    {
-      name: 'Ume Old Fashioned',
-      nameZh: '梅酒老派',
-      ingredients: '日本威士忌 45ml · 梅酒 15ml · 苦精 2 dash · 梅子裝飾',
-      method: 'Build 直調法',
-      desc: '在 Rocks 杯中以大冰球或方形冰塊降溫，將威士忌、梅酒與苦精直接在杯中攪拌。梅酒取代了傳統 Old Fashioned 中的糖漿角色，提供了酸甜度與果香。以漬梅子或柑橘皮裝飾。日式洋酒文化的經典融合。',
-    },
-    {
-      name: 'Tokyo Drift',
-      nameZh: '東京甩尾',
-      ingredients: '琴酒 30ml · 柚子清酒 30ml · 生薑糖漿 10ml · 蘇打水',
-      method: 'Shake + Top',
-      desc: '搖盪琴酒、柚子清酒與生薑糖漿後倒入 Collins 杯，加上蘇打水。薑的辛辣、柚子的清苦、琴酒的杜松子與清酒的米香形成多層次的風味旅程。是完美的餐前開胃飲品。',
-    },
-    {
-      name: 'Plum Negroni',
-      nameZh: '梅酒內格羅尼',
-      ingredients: '琴酒 30ml · 梅酒 20ml · Campari 15ml · Sweet Vermouth 15ml',
-      method: 'Stir 攪拌法',
-      desc: '以梅酒替換部分 Sweet Vermouth，在攪拌杯中加冰攪拌後倒入 Rocks 杯搭配大冰球。梅酒的酸甜柔化了 Campari 的苦韻，同時增添了獨特的東亞果香層次。以柚子皮或乾燥梅片裝飾。',
-    },
-  ]
-
-  return (
-    <div className="space-y-6">
-      <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
-          東方風味 × 西方技法
-        </h3>
-        <p className="text-text-secondary text-sm leading-relaxed">
-          清酒與梅酒在調酒中正迅速崛起。清酒的低酒精度（15–17% ABV）使其成為降低調酒酒精強度的優雅選擇，
-          同時帶來西方烈酒所缺乏的旨味（Umami）維度。梅酒的天然酸甜度可替代糖漿與柑橘汁的角色，
-          簡化配方同時增添風味深度。全球頂尖酒吧如東京的 Bar High Five、新加坡的 Jigger & Pony
-          都在菜單中融入了清酒元素。
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        {cocktails.map((c) => (
-          <div key={c.name} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-            <div className="flex flex-wrap items-center gap-3 mb-3">
-              <h4 className="font-display text-lg text-text-warm">{c.nameZh}</h4>
-              <span className="font-mono text-sm text-neon-amber">{c.name}</span>
-              <span className="font-mono text-xs text-charcoal-500 border border-charcoal-700 px-2 py-0.5">
-                {c.method}
-              </span>
-            </div>
-            <div className="flex flex-wrap gap-2 mb-3">
-              {c.ingredients.split(' · ').map((ing) => (
-                <span key={ing} className="font-mono text-xs px-2.5 py-1 bg-bg-tertiary border border-charcoal-700 text-text-secondary">
-                  {ing}
-                </span>
-              ))}
-            </div>
-            <p className="text-text-secondary text-sm leading-relaxed">{c.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-/* ── Content Map & Page ─────────────────────────────────── */
-const contentMap: Record<TabKey, () => React.JSX.Element> = {
-  brewing: BrewingContent,
-  grades: GradesContent,
-  tasting: TastingContent,
-  umeshu: UmeshuContent,
-  cocktails: CocktailsContent,
-}
-
-export default function SakePage() {
-  const [activeTab, setActiveTab] = useState<TabKey>('brewing')
-  const Content = contentMap[activeTab]
+export default function SakeEncyclopediaPage() {
+  const [activeTab, setActiveTab] = useState<TabKey>('basics')
 
   return (
     <main className="min-h-screen bg-bg-primary">
-      <section className="px-6 pt-20 pb-8 max-w-6xl mx-auto">
+      <AcademyTracker sectionId="sake" />
+
+      {/* ── Hero ─────────────────────────────────────────── */}
+      <section className="px-6 pt-20 pb-12 max-w-6xl mx-auto">
         <Link
           href="/academy"
           className="font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors"
         >
           ← 返回學院
         </Link>
-        <div className="mt-8">
-          <p className="font-mono text-neon-amber text-xs tracking-[0.3em] uppercase mb-3">
-            Sake & Umeshu Encyclopedia
+
+        <div className="mt-8 text-center">
+          <p className="font-mono text-xs tracking-[0.3em] uppercase mb-3 animate-fade-in"
+             style={{ color: '#E8A0BF' }}>
+            Sake Encyclopedia
           </p>
-          <h1 className="font-display text-4xl md:text-5xl text-gradient-amber mb-2">
-            清酒與梅酒百科
+          <h1 className="font-display text-4xl md:text-6xl text-gradient-amber leading-tight mb-4 animate-fade-in">
+            🍶 清酒百科
           </h1>
-          <p className="text-text-secondary max-w-3xl">
-            從精米到並行複發酵——探索日本千年釀酒智慧，品味東亞風味的極致表現。
+          <p className="font-mono text-sm mb-2 animate-fade-in" style={{ color: '#E8A0BF' }}>
+            Sake Encyclopedia
+          </p>
+          <p className="text-text-secondary max-w-2xl mx-auto text-base md:text-lg animate-fade-in">
+            日本千年釀造智慧——從米粒到杯中的完美旅程
           </p>
         </div>
+
+        <div className="divider-amber mx-auto mt-10 mb-2" />
       </section>
 
-      <section className="px-6 max-w-6xl mx-auto">
-        <div className="flex flex-wrap gap-1 border-b border-charcoal-700 mb-8">
-          {tabs.map((tab) => (
+      {/* ── Tab Navigation ───────────────────────────────── */}
+      <nav className="sticky top-16 z-30 bg-bg-primary/80 backdrop-blur-md border-b border-charcoal-800">
+        <div className="max-w-6xl mx-auto px-4 flex gap-1 overflow-x-auto py-2 scrollbar-hide">
+          {tabs.map((t) => (
             <button
-              key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
-              className={`px-4 py-3 font-sans text-sm transition-all duration-200 border-b-2 -mb-px ${
-                activeTab === tab.key
-                  ? 'border-neon-amber text-neon-amber'
-                  : 'border-transparent text-charcoal-500 hover:text-text-secondary'
+              key={t.key}
+              onClick={() => setActiveTab(t.key)}
+              className={`whitespace-nowrap px-4 py-2 rounded-full font-mono text-xs transition-all duration-300 ${
+                activeTab === t.key
+                  ? 'border text-neon-amber'
+                  : 'text-charcoal-500 hover:text-text-primary border border-transparent'
               }`}
+              style={
+                activeTab === t.key
+                  ? { background: 'rgba(245,166,35,0.12)', borderColor: 'rgba(245,166,35,0.4)' }
+                  : undefined
+              }
             >
-              {tab.zh}
-              <span className="font-mono text-xs ml-1.5 opacity-60">{tab.en}</span>
+              {t.label}
             </button>
           ))}
         </div>
-      </section>
+      </nav>
 
-      <section className="px-6 pb-24 max-w-6xl mx-auto animate-fade-in" key={activeTab}>
-        <Content />
-      </section>
+      {/* ── Content Area ─────────────────────────────────── */}
+      <div className="max-w-6xl mx-auto px-6 pb-24">
+
+        {/* ════════════════════════════════════════════════════
+            Tab 1 — 基礎知識
+           ════════════════════════════════════════════════════ */}
+        {activeTab === 'basics' && (
+          <section className="pt-16 animate-fade-in">
+            <SectionHeader emoji="📖" title="基礎知識" eng="Sake Basics" />
+
+            {/* Overview Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+              {basicsFacts.map((f, i) => (
+                <div
+                  key={f.title}
+                  className="glass-card p-6 group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                >
+                  <span className="text-4xl mb-3 block group-hover:scale-110 transition-transform duration-300">
+                    {f.emoji}
+                  </span>
+                  <h3 className="font-display text-xl text-text-warm group-hover:text-neon-amber transition-colors mb-2">
+                    {f.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm leading-relaxed">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Core Ingredients */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              🧬 核心原料
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Core Ingredients</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {coreIngredients.map((ing, i) => (
+                <div
+                  key={ing.name}
+                  className="glass-card p-6 text-center group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <span className="text-5xl block mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {ing.emoji}
+                  </span>
+                  <h4 className="font-display text-lg text-text-warm mb-1">{ing.name}</h4>
+                  <p className="text-text-secondary text-sm">{ing.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ════════════════════════════════════════════════════
+            Tab 2 — 分類系統
+           ════════════════════════════════════════════════════ */}
+        {activeTab === 'classification' && (
+          <section className="pt-16 animate-fade-in">
+            <SectionHeader emoji="📊" title="分類系統" eng="Classification System" />
+
+            {/* Grade Table */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              精米步合分類
+              <span className="font-mono text-xs text-charcoal-500 ml-2">By Seimaibuai (Rice Polishing Ratio)</span>
+            </h3>
+            <div className="glass-card overflow-x-auto mb-12">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-charcoal-700">
+                    <th className="text-left p-4 font-mono text-xs text-neon-amber tracking-wider">等級</th>
+                    <th className="text-left p-4 font-mono text-xs text-neon-amber tracking-wider">精米步合</th>
+                    <th className="text-left p-4 font-mono text-xs text-neon-amber tracking-wider hidden sm:table-cell">說明</th>
+                    <th className="text-left p-4 font-mono text-xs tracking-wider hidden md:table-cell" style={{ color: '#E8A0BF' }}>風格</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {gradeTable.map((g, i) => (
+                    <tr
+                      key={g.en}
+                      className="border-b border-charcoal-800 hover:bg-neon-amber/5 transition-colors"
+                    >
+                      <td className="p-4">
+                        <span className="font-display text-text-warm">{g.name}</span>
+                        <br />
+                        <span className="font-mono text-xs text-charcoal-500">{g.en}</span>
+                      </td>
+                      <td className="p-4 font-mono text-neon-amber">{g.ratio}</td>
+                      <td className="p-4 text-text-secondary hidden sm:table-cell">{g.note}</td>
+                      <td className="p-4 hidden md:table-cell" style={{ color: '#E8A0BF' }}>{g.style}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Flavor Types */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              風味分類
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Flavor Types</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+              {flavorTypes.map((ft, i) => (
+                <div
+                  key={ft.en}
+                  className="glass-card p-6 group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.08}s`, borderLeftWidth: '3px', borderLeftColor: ft.color }}
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-3xl">{ft.emoji}</span>
+                    <div>
+                      <h4 className="font-display text-lg text-text-warm">{ft.name}</h4>
+                      <span className="font-mono text-xs" style={{ color: ft.color }}>{ft.en}</span>
+                    </div>
+                  </div>
+                  <p className="text-text-secondary text-sm mb-2">{ft.desc}</p>
+                  <p className="font-mono text-xs text-charcoal-500">代表：{ft.examples}</p>
+                  <p className="font-mono text-xs mt-1" style={{ color: '#E8A0BF' }}>🍷 {ft.serve}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Special Types */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              特殊類型
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Special Types</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {specialTypes.map((st, i) => (
+                <div
+                  key={st.en}
+                  className="glass-card p-5 group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                >
+                  <span className="text-3xl mb-2 block">{st.emoji}</span>
+                  <h4 className="font-display text-lg text-text-warm">{st.name}</h4>
+                  <p className="font-mono text-xs text-charcoal-500 mb-2">{st.en}</p>
+                  <p className="text-text-secondary text-sm">{st.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ════════════════════════════════════════════════════
+            Tab 3 — 釀造製程
+           ════════════════════════════════════════════════════ */}
+        {activeTab === 'brewing' && (
+          <section className="pt-16 animate-fade-in">
+            <SectionHeader emoji="🏭" title="釀造製程" eng="Brewing Process" />
+
+            <div className="relative">
+              {/* Timeline line */}
+              <div
+                className="absolute left-6 top-0 bottom-0 w-px hidden md:block"
+                style={{ background: 'linear-gradient(to bottom, #F5A623, #E8A0BF)' }}
+              />
+
+              <div className="space-y-6">
+                {brewingSteps.map((s, i) => (
+                  <div
+                    key={s.num}
+                    className="glass-card p-6 md:ml-14 relative group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                    style={{ animationDelay: `${i * 0.06}s` }}
+                  >
+                    {/* Step number dot */}
+                    <div
+                      className="hidden md:flex absolute -left-[3.75rem] top-6 w-10 h-10 rounded-full items-center justify-center font-mono text-sm font-bold border-2 z-10"
+                      style={{
+                        borderColor: '#F5A623',
+                        color: '#F5A623',
+                        backgroundColor: 'var(--color-bg-primary)',
+                      }}
+                    >
+                      {s.num}
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <span
+                        className="md:hidden flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-mono text-xs font-bold border"
+                        style={{ borderColor: '#F5A623', color: '#F5A623' }}
+                      >
+                        {s.num}
+                      </span>
+                      <div className="flex-1">
+                        <h3 className="font-display text-xl text-text-warm group-hover:text-neon-amber transition-colors">
+                          {s.title}
+                          <span className="font-mono text-xs text-charcoal-500 ml-2">{s.en}</span>
+                        </h3>
+                        <p className="text-text-secondary text-sm mt-2 leading-relaxed">{s.desc}</p>
+
+                        {s.detail && (
+                          <ul className="mt-3 space-y-1">
+                            {s.detail.map((d) => (
+                              <li key={d} className="text-sm flex items-start gap-2">
+                                <span style={{ color: '#E8A0BF' }}>▸</span>
+                                <span className="text-text-secondary">{d}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ════════════════════════════════════════════════════
+            Tab 4 — 品飲指南
+           ════════════════════════════════════════════════════ */}
+        {activeTab === 'tasting' && (
+          <section className="pt-16 animate-fade-in">
+            <SectionHeader emoji="🎌" title="品飲指南" eng="Tasting Guide" />
+
+            {/* Temperature Scale */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              🌡️ 溫度帶
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Temperature Spectrum</span>
+            </h3>
+            <div className="glass-card p-6 mb-12">
+              <div className="space-y-2">
+                {temperatureScale.map((t, i) => {
+                  const pct = (i / (temperatureScale.length - 1)) * 100
+                  return (
+                    <div
+                      key={t.romaji}
+                      className="flex items-center gap-4 py-2 group animate-fade-in"
+                      style={{ animationDelay: `${i * 0.05}s` }}
+                    >
+                      <div
+                        className="w-14 h-8 rounded flex items-center justify-center font-mono text-xs font-bold flex-shrink-0"
+                        style={{ backgroundColor: t.color + '25', color: t.color, border: `1px solid ${t.color}50` }}
+                      >
+                        {t.temp}
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 rounded-full bg-charcoal-800 overflow-hidden">
+                          <div
+                            className="h-full rounded-full transition-all duration-700"
+                            style={{ width: `${pct}%`, backgroundColor: t.color }}
+                          />
+                        </div>
+                      </div>
+                      <div className="w-28 text-right">
+                        <span className="font-display text-sm text-text-warm">{t.name}</span>
+                        <br />
+                        <span className="font-mono text-xs text-charcoal-500">{t.romaji}</span>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+              <div className="flex justify-between mt-4 font-mono text-xs text-charcoal-500">
+                <span>❄️ 冷</span>
+                <span>🔥 熱</span>
+              </div>
+            </div>
+
+            {/* Tasting Steps */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              品飲步驟
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Tasting Steps</span>
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+              {tastingSteps.map((ts, i) => (
+                <div
+                  key={ts.step}
+                  className="glass-card p-5 text-center group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <span className="text-4xl block mb-2">{ts.emoji}</span>
+                  <h4 className="font-display text-lg text-text-warm mb-1">{ts.step}</h4>
+                  {i < tastingSteps.length - 1 && (
+                    <span className="hidden md:inline-block absolute -right-3 top-1/2 text-charcoal-600">→</span>
+                  )}
+                  <p className="text-text-secondary text-xs leading-relaxed">{ts.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Drinkware */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              品飲器具
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Sake Vessels</span>
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+              {drinkware.map((dw, i) => (
+                <div
+                  key={dw.en}
+                  className="glass-card p-5 text-center group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <span className="text-4xl block mb-2">{dw.emoji}</span>
+                  <h4 className="font-display text-base text-text-warm">{dw.name}</h4>
+                  <p className="font-mono text-xs text-charcoal-500 mb-1">{dw.en}</p>
+                  <p className="text-text-secondary text-xs">{dw.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Food Pairings */}
+            <h3 className="font-display text-xl text-text-warm mb-6">
+              佐餐搭配
+              <span className="font-mono text-xs text-charcoal-500 ml-2">Food Pairings</span>
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {pairings.map((p, i) => (
+                <div
+                  key={p.food}
+                  className="glass-card p-5 text-center group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <span className="text-4xl block mb-2">{p.icon}</span>
+                  <h4 className="font-display text-base text-text-warm">{p.food}</h4>
+                  <p className="font-mono text-xs mt-1" style={{ color: '#E8A0BF' }}>→ {p.match}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ════════════════════════════════════════════════════
+            Tab 5 — 著名酒造
+           ════════════════════════════════════════════════════ */}
+        {activeTab === 'breweries' && (
+          <section className="pt-16 animate-fade-in">
+            <SectionHeader emoji="🏯" title="著名酒造" eng="Famous Breweries" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {breweries.map((b, i) => (
+                <div
+                  key={b.en}
+                  className="glass-card p-6 group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.06}s`, borderLeftWidth: '3px', borderLeftColor: b.accent }}
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <span
+                        className="inline-block font-mono text-xs font-bold px-2 py-0.5 rounded-full mb-2"
+                        style={{ backgroundColor: b.accent + '20', color: b.accent, border: `1px solid ${b.accent}40` }}
+                      >
+                        #{b.rank}
+                      </span>
+                      <h3 className="font-display text-2xl text-text-warm group-hover:text-neon-amber transition-colors">
+                        {b.name}
+                      </h3>
+                      <p className="font-mono text-xs text-charcoal-500">{b.en}</p>
+                    </div>
+                    <span className="text-3xl opacity-30 group-hover:opacity-60 transition-opacity">🍶</span>
+                  </div>
+                  <div className="space-y-1 text-sm">
+                    <p className="text-text-secondary">
+                      <span style={{ color: '#E8A0BF' }}>📍</span> {b.region} · {b.company}
+                    </p>
+                    <p className="text-text-secondary">
+                      <span className="text-neon-amber">✦</span> {b.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ════════════════════════════════════════════════════
+            Tab 6 — 清酒調酒
+           ════════════════════════════════════════════════════ */}
+        {activeTab === 'cocktails' && (
+          <section className="pt-16 animate-fade-in">
+            <SectionHeader emoji="🍹" title="清酒調酒" eng="Sake Cocktails" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sakeCocktails.map((c, i) => (
+                <div
+                  key={c.nameEn}
+                  className="glass-card p-6 group hover:border-neon-amber transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{c.emoji}</span>
+                    <div>
+                      <h3 className="font-display text-xl text-text-warm group-hover:text-neon-amber transition-colors">
+                        {c.name}
+                      </h3>
+                      <p className="font-mono text-xs text-charcoal-500">{c.nameEn}</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <p className="font-mono text-xs tracking-wider mb-2" style={{ color: '#E8A0BF' }}>
+                      材料 INGREDIENTS
+                    </p>
+                    <ul className="space-y-1">
+                      {c.ingredients.map((ing) => (
+                        <li key={ing} className="text-text-secondary text-sm flex items-center gap-2">
+                          <span
+                            className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                            style={{ backgroundColor: c.color }}
+                          />
+                          {ing}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div
+                    className="rounded p-3 text-sm"
+                    style={{ backgroundColor: c.color + '10', border: `1px solid ${c.color}30` }}
+                  >
+                    <p className="font-mono text-xs tracking-wider mb-1" style={{ color: c.color }}>
+                      做法 METHOD
+                    </p>
+                    <p className="text-text-secondary text-xs leading-relaxed">{c.method}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
     </main>
   )
 }

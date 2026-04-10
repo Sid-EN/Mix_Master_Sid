@@ -20,6 +20,7 @@ const NAV_ITEMS = [
   { href: '/tools',    label: '工具箱',     labelEn: 'TOOLS',   icon: '🛠️' },
   { href: '/academy',  label: '調酒學院',   labelEn: 'ACADEMY', icon: '🎓' },
   { href: '/quiz',     label: '知識測驗',   labelEn: 'QUIZ',    icon: '❓' },
+  { href: '/mocktails', label: '無酒精特調', labelEn: 'MOCKTAILS', icon: '🧉' },
 ]
 
 /* ── Mega Menu column definitions ───────────────────────── */
@@ -35,6 +36,7 @@ const MEGA_COLUMNS = [
       { href: '/compare',  icon: '📊', label: '配方比較器',   desc: '雷達圖並排比較' },
       { href: '/random',   icon: '🎲', label: '隨機轉盤',     desc: '命運之輪選配方' },
       { href: '/mood',     icon: '🎵', label: '情境酒單',     desc: '依心情推薦調酒' },
+      { href: '/mocktails', icon: '🧉', label: '無酒精特調', desc: '健康美味零酒精' },
     ],
   },
   {
@@ -53,10 +55,12 @@ const MEGA_COLUMNS = [
     titleEn: 'TOOLS',
     color: 'text-neon-purple',
     items: [
-      { href: '/batch',          icon: '🧮', label: '批次換算', desc: '多人份量自動換算' },
-      { href: '/tools/abv',      icon: '📐', label: 'ABV 計算', desc: '酒精濃度即時計算' },
-      { href: '/tools/cost',     icon: '💰', label: '成本計算', desc: '每杯成本精算' },
-      { href: '/tools/convert',  icon: '🌡️', label: '單位換算', desc: 'oz・ml・cl 互轉' },
+      { href: '/batch',              icon: '🧮', label: '批次換算', desc: '多人份量自動換算' },
+      { href: '/tools/abv',          icon: '📐', label: 'ABV 計算', desc: '酒精濃度即時計算' },
+      { href: '/tools/cost',         icon: '💰', label: '成本計算', desc: '每杯成本精算' },
+      { href: '/tools/convert',      icon: '🌡️', label: '單位換算', desc: 'oz・ml・cl 互轉' },
+      { href: '/tools/dilution',     icon: '🔬', label: '稀釋模擬器', desc: 'ABV 與溫度即時模擬' },
+      { href: '/tools/nutrition',    icon: '📊', label: '營養計算', desc: '卡路里與糖分計算' },
     ],
   },
   {
@@ -71,6 +75,11 @@ const MEGA_COLUMNS = [
       { href: '/academy/molecular',    icon: '🧪', label: '分子調酒', desc: '球化・煙燻・泡沫' },
       { href: '/academy/ice',          icon: '🧊', label: '冰塊百科', desc: '冰的藝術與科學' },
       { href: '/academy/glassware',    icon: '🥂', label: '杯型百科', desc: '16 種經典杯型' },
+      { href: '/academy/garnish',      icon: '🎨', label: '裝飾藝術', desc: '20 種裝飾技法' },
+      { href: '/academy/flair',        icon: '🎪', label: '花式調酒', desc: '10 種表演動作' },
+      { href: '/academy/sake',         icon: '🍶', label: '清酒百科', desc: '日本千年釀造智慧' },
+      { href: '/academy/infusions',    icon: '🧪', label: '浸泡酒工坊', desc: '15 款自製配方' },
+      { href: '/academy/temperature',  icon: '🌡️', label: '溫度指南', desc: '最佳服務溫度' },
       { href: '/academy/hangover',     icon: '💊', label: '宿醉指南', desc: '科學預防與迷思' },
     ],
   },
@@ -83,7 +92,10 @@ const MEGA_COLUMNS = [
       { href: '/world-map',     icon: '🗺️', label: '產地地圖', desc: '世界產區風土探索' },
       { href: '/history',       icon: '📜', label: '歷史時間軸', desc: '數千年調酒文明' },
       { href: '/hall-of-fame',  icon: '🏆', label: '名人堂', desc: '15 位傳奇調酒師' },
+      { href: '/famous-bars',   icon: '🏪', label: '經典酒吧', desc: '20 間世界傳奇酒吧' },
       { href: '/quiz',          icon: '❓', label: '知識測驗', desc: '40 題挑戰你的實力' },
+      { href: '/personality',  icon: '🎭', label: '調酒人格', desc: '發現你的風格' },
+      { href: '/glossary',      icon: '💬', label: '術語辭典', desc: '100+ 中英日對照術語' },
     ],
   },
 ]
