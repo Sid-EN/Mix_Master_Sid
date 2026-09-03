@@ -1,16 +1,9 @@
 """routes_prep.py — 備料製作 CRUD 路由 (Prep Recipe Routes)"""
-import json
-import os
 from fastapi import APIRouter, HTTPException, Query
 
+from ..data_store import preps as _load
+
 router = APIRouter(prefix="/prep", tags=["Prep Recipes 🧪"])
-
-_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "prep_recipes.json")
-
-
-def _load() -> list[dict]:
-    with open(_DATA, encoding="utf-8") as f:
-        return json.load(f)
 
 
 # ---------- endpoints ----------

@@ -1,5 +1,6 @@
 'use client'
 
+import { clientUrl } from '@/lib/api'
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import FlavorPreference, { loadPref, getRecommendations } from './FlavorPreference'
@@ -35,7 +36,7 @@ export default function HomeRecommendations() {
     let cancelled = false
     async function fetchRecipes() {
       try {
-        const res = await fetch('/api/v1/recipes?limit=100')
+        const res = await fetch(clientUrl('/api/v1/recipes?limit=100'))
         if (!res.ok) throw new Error('fetch failed')
         const data = await res.json()
         if (!cancelled) setRecipes(data.items || [])

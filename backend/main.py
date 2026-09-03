@@ -26,10 +26,14 @@ app = FastAPI(
 )
 
 # CORS
+# 瀏覽器規範禁止 allow_origins=["*"] 與 allow_credentials=True 併用——
+# 兩者同時設定時憑證請求會被直接拒絕。萬用字元來源時關閉 credentials，
+# 明列來源時才啟用。
+_wildcard_origins = "*" in settings.allowed_origins
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.allowed_origins,
-    allow_credentials=True,
+    allow_credentials=not _wildcard_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )

@@ -1,5 +1,6 @@
 'use client'
 
+import { clientUrl } from '@/lib/api'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useFavorites, type FavoriteData } from '../../components/FavoritesContext'
@@ -27,7 +28,7 @@ export default function FavoritesPage() {
   const [sort, setSort] = useState<SortKey>('date')
 
   useEffect(() => {
-    fetch('/api/v1/recipes?limit=100')
+    fetch(clientUrl('/api/v1/recipes?limit=100'))
       .then(res => res.ok ? res.json() : Promise.reject())
       .then(data => {
         const list = Array.isArray(data) ? data : data.items || data.recipes || []

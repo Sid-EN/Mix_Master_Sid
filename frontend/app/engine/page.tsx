@@ -1,5 +1,6 @@
 'use client'
 
+import { clientUrl } from '@/lib/api'
 import { useState, useRef, useEffect } from 'react'
 import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
@@ -50,7 +51,7 @@ export default function EnginePage() {
   useEffect(() => {
     async function fetchIngredients() {
       try {
-        const res = await fetch('/api/v1/ingredients?limit=500')
+        const res = await fetch(clientUrl('/api/v1/ingredients?limit=500'))
         const data = await res.json()
         const items: Ingredient[] = (data.items || []).map((i: any) => ({
           id: i.id || i.slug,
@@ -99,7 +100,7 @@ export default function EnginePage() {
     if (!selected.length) { setError('請至少選擇 1 種材料'); return }
     setLoading(true); setError(''); setResult(null)
     try {
-      const res = await fetch('/api/v1/engine/generate', {
+      const res = await fetch(clientUrl('/api/v1/engine/generate'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ availableIngredients: selected }),

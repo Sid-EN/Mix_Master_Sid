@@ -1,22 +1,9 @@
 """routes_search.py — 跨庫統一搜尋路由 (Unified Search Routes)"""
-import json
-import os
 from fastapi import APIRouter, HTTPException, Query
 
+from ..data_store import cocktails as _load_cocktails, preps as _load_prep
+
 router = APIRouter(prefix="/search", tags=["Search 🔍"])
-
-_COCKTAIL_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "classic_recipes.json")
-_PREP_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "prep_recipes.json")
-
-
-def _load_cocktails() -> list[dict]:
-    with open(_COCKTAIL_DATA, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _load_prep() -> list[dict]:
-    with open(_PREP_DATA, encoding="utf-8") as f:
-        return json.load(f)
 
 
 def _searchable_cocktail(r: dict) -> str:

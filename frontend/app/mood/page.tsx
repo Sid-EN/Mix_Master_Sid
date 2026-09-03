@@ -1,5 +1,6 @@
 'use client';
 
+import { clientUrl } from '@/lib/api'
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
@@ -229,7 +230,7 @@ export default function MoodPage() {
 
   /* Fetch all recipes once on mount */
   useEffect(() => {
-    fetch('/api/v1/recipes?limit=200')
+    fetch(clientUrl('/api/v1/recipes?limit=200'))
       .then((res) => (res.ok ? res.json() : { items: [] }))
       .then((data) => setAllRecipes(data.items ?? []))
       .catch(() => setAllRecipes([]));

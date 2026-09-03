@@ -1,5 +1,6 @@
 'use client'
 
+import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Link from 'next/link'
 
@@ -45,7 +46,7 @@ interface BatchResult {
 
 type Mode = 'cocktail' | 'prep'
 
-const API = '/api/v1'
+const API = `${CLIENT_API}/api/v1`
 
 const METHOD_ICONS: Record<string, string> = {
   shake: '🧊', stir: '🥄', build: '🥃', roll: '🌀', throw: '✨',

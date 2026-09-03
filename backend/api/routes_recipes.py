@@ -1,20 +1,9 @@
 """routes_recipes.py — 配方 CRUD 路由"""
-import json, os
 from fastapi import APIRouter, HTTPException, Query
 
+from ..data_store import cocktails as _load, ingredient_index as _ingredient_index
+
 router = APIRouter(prefix="/recipes", tags=["Recipes 🍹"])
-_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "classic_recipes.json")
-_INGREDIENT_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "ingredients.json")
-
-
-def _load():
-    with open(_DATA, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _ingredient_index() -> dict[str, dict]:
-    with open(_INGREDIENT_DATA, encoding="utf-8") as f:
-        return {i["id"]: i for i in json.load(f)}
 
 
 def _with_ingredient_names(recipe: dict, index: dict[str, dict]) -> dict:

@@ -1,5 +1,6 @@
 'use client'
 
+import { clientUrl } from '@/lib/api'
 import { useState, useEffect, useMemo } from 'react'
 
 /* ================================================================
@@ -153,10 +154,10 @@ export default function FlavorWheelPage() {
   useEffect(() => {
     let cancelled = false
     Promise.all([
-      fetch('/api/v1/recipes?limit=200')
+      fetch(clientUrl('/api/v1/recipes?limit=200'))
         .then(r => r.ok ? r.json() : { items: [] })
         .catch(() => ({ items: [] })),
-      fetch('/api/v1/ingredients?limit=500')
+      fetch(clientUrl('/api/v1/ingredients?limit=500'))
         .then(r => r.ok ? r.json() : { items: [] })
         .catch(() => ({ items: [] })),
     ]).then(([rd, id]) => {

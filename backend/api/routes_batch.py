@@ -1,15 +1,15 @@
 """routes_batch.py — 智慧批次換算路由 (Batch Calculation Routes)"""
-import json
 import math
-import os
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
-router = APIRouter(prefix="/batch", tags=["Batch Calculator 🧮"])
+from ..data_store import (
+    cocktails as _load_cocktails,
+    ingredient_index as _ingredient_index,
+    preps as _load_prep,
+)
 
-_COCKTAIL_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "classic_recipes.json")
-_PREP_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "prep_recipes.json")
-_INGREDIENT_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "ingredients.json")
+router = APIRouter(prefix="/batch", tags=["Batch Calculator 🧮"])
 
 OZ_TO_ML = 29.5735
 
@@ -18,22 +18,6 @@ DILUTION_FACTORS = {
     "stir": 1.15,
     "build": 1.0,
 }
-
-
-def _load_cocktails() -> list[dict]:
-    with open(_COCKTAIL_DATA, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _load_prep() -> list[dict]:
-    with open(_PREP_DATA, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _ingredient_index() -> dict[str, dict]:
-    """以 id 為鍵的材料索引，供配方 slug 解析名稱使用。"""
-    with open(_INGREDIENT_DATA, encoding="utf-8") as f:
-        return {i["id"]: i for i in json.load(f)}
 
 
 def _find(data: list[dict], id_or_slug: str) -> dict | None:

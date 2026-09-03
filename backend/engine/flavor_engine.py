@@ -20,8 +20,6 @@ flavor_engine.py
 
 from __future__ import annotations
 
-import json
-import os
 from dataclasses import dataclass, field
 
 from ..engine.balance_model import (
@@ -37,23 +35,12 @@ from ..engine.flavor_wheel import (
 )
 from ..engine.name_generator import generate_recipe_name
 
-# 材料資料庫路徑
-_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-_INGREDIENTS_FILE = os.path.join(_DATA_DIR, "ingredients.json")
-
-
-def _load_ingredients() -> list[dict]:
-    """從 JSON 載入材料資料庫（帶快取）"""
-    if not hasattr(_load_ingredients, "_cache"):
-        with open(_INGREDIENTS_FILE, encoding="utf-8") as f:
-            _load_ingredients._cache = json.load(f)
-    return _load_ingredients._cache
+from ..data_store import ingredients as _load_ingredients, reload_all
 
 
 def _reload_ingredients() -> list[dict]:
     """強制重新載入材料資料庫（開發時用）"""
-    if hasattr(_load_ingredients, "_cache"):
-        del _load_ingredients._cache
+    reload_all()
     return _load_ingredients()
 
 

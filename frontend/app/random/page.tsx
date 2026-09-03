@@ -1,5 +1,6 @@
 'use client'
 
+import { clientUrl } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 
@@ -444,7 +445,7 @@ export default function RandomRoulettePage() {
   useEffect(() => {
     async function fetchRecipes() {
       try {
-        const res = await fetch('/api/v1/recipes?limit=200')
+        const res = await fetch(clientUrl('/api/v1/recipes?limit=200'))
         if (!res.ok) throw new Error('Failed')
         const data = await res.json()
         setAllRecipes(data.items || [])

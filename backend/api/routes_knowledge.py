@@ -1,24 +1,9 @@
 """routes_knowledge.py — 知識庫 API 路由 (Knowledge Base Routes)"""
-import json
-import os
 from fastapi import APIRouter, HTTPException
 
+from ..data_store import spirits_knowledge as _load_spirits, wine_knowledge as _load_wine
+
 router = APIRouter(prefix="/knowledge", tags=["Knowledge 📚"])
-
-_WINE_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "wine_knowledge.json")
-_SPIRITS_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "spirits_knowledge.json")
-
-
-def _load_wine() -> dict:
-    with open(_WINE_DATA, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _load_spirits() -> dict | None:
-    if os.path.exists(_SPIRITS_DATA):
-        with open(_SPIRITS_DATA, encoding="utf-8") as f:
-            return json.load(f)
-    return None
 
 
 # ── Wine Knowledge ──────────────────────────────────────────

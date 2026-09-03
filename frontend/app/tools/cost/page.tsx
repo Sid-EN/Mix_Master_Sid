@@ -1,5 +1,6 @@
 'use client'
 
+import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import {
@@ -40,7 +41,7 @@ type Mode = 'recipe' | 'custom'
 type Currency = 'NTD' | 'USD'
 
 /* ─── Constants ─── */
-const API = '/api/v1'
+const API = `${CLIENT_API}/api/v1`
 const USD_TO_NTD = 32
 const AVG_BAR_PRICE_NTD = 350
 const STORAGE_KEY = 'mixmaster-prices'

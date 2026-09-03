@@ -1,16 +1,9 @@
 """routes_ingredients.py — 材料庫 API 路由 (Ingredients Routes)"""
-import json
-import os
 from fastapi import APIRouter, HTTPException, Query
 
+from ..data_store import ingredients as _load
+
 router = APIRouter(prefix="/ingredients", tags=["Ingredients 🧂"])
-
-_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "ingredients.json")
-
-
-def _load() -> list[dict]:
-    with open(_DATA, encoding="utf-8") as f:
-        return json.load(f)
 
 
 @router.get("", summary="全部材料列表")

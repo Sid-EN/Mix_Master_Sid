@@ -1,5 +1,6 @@
 'use client'
 
+import { clientUrl } from '@/lib/api'
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 
@@ -103,8 +104,8 @@ export default function MyBarPage() {
     async function fetchData() {
       try {
         const [ingRes, recRes] = await Promise.all([
-          fetch('/api/v1/ingredients?limit=500'),
-          fetch('/api/v1/recipes?limit=100'),
+          fetch(clientUrl('/api/v1/ingredients?limit=500')),
+          fetch(clientUrl('/api/v1/recipes?limit=100')),
         ])
         const ingData = await ingRes.json()
         const recData = await recRes.json()

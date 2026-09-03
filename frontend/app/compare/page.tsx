@@ -1,5 +1,6 @@
 'use client'
 
+import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Link from 'next/link'
 import {
@@ -34,7 +35,7 @@ interface Recipe {
 }
 
 /* ── Constants ────────────────────────────────────────────── */
-const API = '/api/v1'
+const API = `${CLIENT_API}/api/v1`
 
 const SLOT_COLORS = [
   { name: 'neon-amber', hex: '#F5A623', border: 'border-[#F5A623]', text: 'text-[#F5A623]', bg: 'bg-[#F5A623]' },
