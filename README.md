@@ -536,6 +536,10 @@ MixMaster 是完整的 Progressive Web App：
 後端合計 172 項、前端 39 項、E2E 68 項。
 
 ```bash
+# 後端 lint 與型別檢查
+python3 -m ruff check backend tests
+python3 -m mypy
+
 # 後端（172 項，含覆蓋率）
 python3 -m pytest tests --cov=backend
 
@@ -549,8 +553,12 @@ bash start.sh && npx playwright test
 > 執行測試前請先安裝開發依賴：`pip install -r requirements-dev.txt`
 > E2E 首次執行需下載瀏覽器：`npx playwright install chromium`
 
+**程式碼品質**：後端以 `ruff`（lint + import 排序）與 `mypy`（型別檢查）把關，
+設定分別位於 `ruff.toml` 與 `mypy.ini`。專案未採用 `black`——既有排版已一致，
+導入會重排 27 個檔案逾 1100 行，徒增雜訊而無實質收益。
+
 **CI**：`.github/workflows/ci.yml` 於 push 與 PR 時執行三個 job——
-後端（pytest + 覆蓋率）、前端（型別檢查／lint／單元測試／正式建置）、
+後端（ruff + mypy + pytest + 覆蓋率）、前端（型別檢查／lint／單元測試／正式建置）、
 E2E（啟動前後端後跑 Playwright）。
 
 ---

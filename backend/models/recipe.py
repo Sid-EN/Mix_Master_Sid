@@ -5,12 +5,14 @@ Pydantic v2 配方資料模型 (Recipe Data Models)
 """
 
 from __future__ import annotations
-from typing import Literal, Optional
+
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
-
 RecipeType   = Literal["classic", "generated", "user"]
-RecipeMethod = Literal["shake", "stir", "build", "roll", "throw"]
+# 調製手法的權威定義；資料驗證與使用者配方端點皆由此衍生，避免各處清單不一致
+RecipeMethod = Literal["shake", "stir", "build", "blend", "roll", "throw"]
 RecipeGrade  = Literal["A", "B", "C", "D"]
 
 
@@ -21,7 +23,7 @@ class RecipeIngredientItem(BaseModel):
     amount: float = Field(..., gt=0)
     unit: str = "oz"
     is_optional: bool = False
-    notes: Optional[str] = None
+    notes: str | None = None
 
 
 class FlavorProfileOut(BaseModel):
@@ -42,7 +44,7 @@ class AlternativeSuggestion(BaseModel):
 
 class RecipeInsights(BaseModel):
     balance_analysis: str = Field(alias="balanceAnalysis")
-    tips_for_improvement: Optional[str] = Field(None, alias="tipsForImprovement")
+    tips_for_improvement: str | None = Field(None, alias="tipsForImprovement")
 
     model_config = {"populate_by_name": True}
 
@@ -57,7 +59,7 @@ class RecipeOut(BaseModel):
     grade: RecipeGrade
     ingredients: list[RecipeIngredientItem]
     steps: list[str]
-    garnish: Optional[str] = None
+    garnish: str | None = None
     flavor_profile: FlavorProfileOut = Field(alias="flavorProfile")
     alternatives: list[AlternativeSuggestion] = Field(default_factory=list)
 
@@ -72,7 +74,7 @@ class GenerateRequest(BaseModel):
         max_length=20,
         description="材料 slug 列表",
     )
-    preferences: Optional[dict] = None
+    preferences: dict | None = None
     user_level: int = Field(default=1, alias="userLevel", ge=1, le=5)
 
     model_config = {"populate_by_name": True}

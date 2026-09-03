@@ -1,0 +1,23 @@
+# Ruff 設定
+# 沿用專案既有風格：不強制重新排版，只攔截真正的問題。
+line-length = 110
+target-version = "py312"
+
+[lint]
+select = [
+    "E",    # pycodestyle 錯誤
+    "F",    # pyflakes（未使用的匯入與變數、未定義名稱）
+    "I",    # import 排序
+    "B",    # flake8-bugbear（常見陷阱）
+    "UP",   # pyupgrade
+]
+ignore = [
+    "E501",  # 行長由 line-length 控制，不另行報錯
+]
+
+[lint.per-file-ignores]
+# 測試中的斷言輔助與長字串不需受限
+"tests/**" = [
+    "B011",
+    "UP038",  # isinstance 的元組寫法在測試中較易讀
+]

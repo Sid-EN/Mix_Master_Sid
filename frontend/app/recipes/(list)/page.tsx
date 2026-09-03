@@ -1,5 +1,5 @@
-import RecipeListClient from './RecipeListClient'
-import { serverUrl } from '../../lib/api'
+import RecipeListClient from '../RecipeListClient'
+import { serverUrl } from '../../../lib/api'
 
 async function getRecipes() {
   try {

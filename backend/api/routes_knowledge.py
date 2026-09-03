@@ -1,7 +1,8 @@
 """routes_knowledge.py — 知識庫 API 路由 (Knowledge Base Routes)"""
 from fastapi import APIRouter, HTTPException
 
-from ..data_store import spirits_knowledge as _load_spirits, wine_knowledge as _load_wine
+from ..data_store import spirits_knowledge as _load_spirits
+from ..data_store import wine_knowledge as _load_wine
 
 router = APIRouter(prefix="/knowledge", tags=["Knowledge 📚"])
 

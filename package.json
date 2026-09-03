@@ -8,7 +8,9 @@
     "test:e2e:ui": "playwright test --ui",
     "test:backend": "python3 -m pytest tests -q",
     "test:frontend": "npm --prefix frontend test",
-    "test:all": "npm run test:backend && npm run test:frontend && npm run test:e2e"
+    "test:all": "npm run test:backend && npm run test:frontend && npm run test:e2e",
+    "lint:backend": "python3 -m ruff check backend tests",
+    "typecheck:backend": "python3 -m mypy"
   },
   "devDependencies": {
     "@playwright/test": "1.49.1"

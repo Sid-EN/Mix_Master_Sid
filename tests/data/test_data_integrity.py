@@ -4,7 +4,10 @@
 資料是本專案的核心，且靜默損壞最難察覺——配方引用了不存在的材料時，
 API 仍回 200，畫面只是少了一列。這些測試把資料的隱含契約明確化。
 """
-import pytest
+
+from typing import get_args
+
+from backend.models.recipe import RecipeMethod
 
 REQUIRED_INGREDIENT_FIELDS = [
     "id", "name", "nameZh", "category", "abv", "sugarContent",
@@ -13,7 +16,8 @@ REQUIRED_INGREDIENT_FIELDS = [
 REQUIRED_RECIPE_FIELDS = ["id", "nameEn", "nameZh", "method", "ingredients", "steps"]
 
 FLAVOR_VECTOR_LEN = 15
-VALID_METHODS = {"shake", "stir", "build", "blend", "throw"}
+# 由 models.recipe 的權威 Literal 衍生，避免測試與程式碼各持一份清單
+VALID_METHODS = set(get_args(RecipeMethod))
 VALID_GRADES = {"A", "B", "C", "D"}
 
 # 已知使用的單位；新增單位時須同步更新 balance_model.to_oz

@@ -10,15 +10,15 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
-from .config import get_settings
-from .api.routes_engine import router as engine_router
-from .api.routes_recipes import router as recipes_router
 from .api.routes_academy import router as academy_router
-from .api.routes_prep import router as prep_router
-from .api.routes_search import router as search_router
 from .api.routes_batch import router as batch_router
+from .api.routes_engine import router as engine_router
 from .api.routes_ingredients import router as ingredients_router
 from .api.routes_knowledge import router as knowledge_router
+from .api.routes_prep import router as prep_router
+from .api.routes_recipes import router as recipes_router
+from .api.routes_search import router as search_router
+from .config import get_settings
 
 settings = get_settings()
 

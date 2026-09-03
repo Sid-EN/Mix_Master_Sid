@@ -69,7 +69,7 @@ class TestBatch:
                           json={"recipeId": "classic-negroni", "multiplier": 1}).json()
         ten = client.post("/api/v1/batch/calculate",
                           json={"recipeId": "classic-negroni", "multiplier": 10}).json()
-        for a, b in zip(one["ingredients"], ten["ingredients"]):
+        for a, b in zip(one["ingredients"], ten["ingredients"], strict=False):
             assert b["scaledAmount"] == pytest.approx(a["scaledAmount"] * 10, rel=1e-6)
 
     def test_ingredient_names_are_resolved(self, client):

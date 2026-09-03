@@ -12,6 +12,8 @@ ABV 越高 → 甜味感知被抑制 → 需要更多甜味與酸味以維持平
 import math
 from dataclasses import dataclass
 
+from ..models.recipe import RecipeGrade
+
 
 @dataclass
 class BalanceParameters:
@@ -210,7 +212,7 @@ def calculate_overall_balance_score(
     sweet_total: float,
     bitter_total: float,
     punch_total: float,
-) -> tuple[float, str]:
+) -> tuple[float, RecipeGrade]:
     """
     計算配方的整體平衡分數。
 
@@ -248,6 +250,7 @@ def calculate_overall_balance_score(
 
     score = max(0.0, min(100.0, 100.0 - penalty))
 
+    grade: RecipeGrade
     if score >= 90:
         grade = "A"
     elif score >= 75:

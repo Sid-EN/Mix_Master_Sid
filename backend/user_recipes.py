@@ -12,7 +12,7 @@ import os
 import tempfile
 import threading
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 _DEFAULT_PATH = os.path.join(os.path.dirname(__file__), "data", "user_recipes.json")
 _lock = threading.Lock()
@@ -51,7 +51,7 @@ def _write(recipes: list[dict]) -> None:
 
 
 def _now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(UTC).isoformat(timespec="seconds")
 
 
 def create(payload: dict) -> dict:

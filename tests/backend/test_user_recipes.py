@@ -5,7 +5,6 @@
 測試以獨立的暫存儲存檔執行，避免污染實際資料。
 """
 import json
-import os
 
 import pytest
 from fastapi.testclient import TestClient

@@ -9,6 +9,7 @@ name_generator.py
 """
 
 from __future__ import annotations
+
 import random
 
 # 風味 → 前綴詞語料庫

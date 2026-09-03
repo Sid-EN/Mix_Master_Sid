@@ -1,14 +1,19 @@
 """routes_recipes.py — 配方 CRUD 路由"""
+from typing import get_args
+
 from fastapi import APIRouter, HTTPException, Query, status
 from pydantic import BaseModel, Field
 
 from .. import user_recipes as store
-from ..data_store import cocktails as _load, ingredient_index as _ingredient_index
+from ..data_store import cocktails as _load
+from ..data_store import ingredient_index as _ingredient_index
 from ..engine.balance_model import calculate_overall_balance_score, flavor_totals
+from ..models.recipe import RecipeMethod
 
 router = APIRouter(prefix="/recipes", tags=["Recipes 🍹"])
 
-VALID_METHODS = {"shake", "stir", "build", "blend", "throw"}
+# 由權威定義衍生，避免與 models.recipe 的 Literal 逐漸失同步
+VALID_METHODS = set(get_args(RecipeMethod))
 
 
 class UserRecipeIngredient(BaseModel):
@@ -126,7 +131,7 @@ async def create_recipe(body: UserRecipeIn):
     try:
         created = store.create(payload)
     except ValueError as e:
-        raise HTTPException(status.HTTP_409_CONFLICT, detail=str(e))
+        raise HTTPException(status.HTTP_409_CONFLICT, detail=str(e)) from e
     return _with_ingredient_names(created, _ingredient_index())
 
 

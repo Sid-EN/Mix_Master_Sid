@@ -31,6 +31,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt -r requirements-dev.txt
 
+      - name: Lint (ruff)
+        run: python -m ruff check backend tests
+
+      - name: 型別檢查 (mypy)
+        run: python -m mypy
+
       - name: 執行測試與覆蓋率
         run: |
           python -m pytest tests \

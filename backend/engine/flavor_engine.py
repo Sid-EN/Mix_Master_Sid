@@ -22,6 +22,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from ..data_store import ingredients as _load_ingredients
+from ..data_store import reload_all
 from ..engine.balance_model import (
     BalanceParameters,
     calculate_balance_parameters,
@@ -34,8 +36,7 @@ from ..engine.flavor_wheel import (
     synthesize_flavor_profile,
 )
 from ..engine.name_generator import generate_recipe_name
-
-from ..data_store import ingredients as _load_ingredients, reload_all
+from ..models.recipe import RecipeGrade, RecipeMethod
 
 
 def _reload_ingredients() -> list[dict]:
@@ -81,10 +82,10 @@ class RecipeResult:
     """配方生成結果"""
     name_en: str
     name_zh: str
-    method: str                              # shake | stir | build
+    method: RecipeMethod
     glass_type: str
     balance_score: float
-    grade: str                               # A | B | C | D
+    grade: RecipeGrade
     ingredients: list[RecipeIngredient]
     steps: list[str]
     garnish: str
@@ -256,7 +257,7 @@ class FlavorEngine:
 
         return items
 
-    def _determine_method(self, ingredients: list[dict], prefs: dict) -> str:
+    def _determine_method(self, ingredients: list[dict], prefs: dict) -> RecipeMethod:
         has_citrus = any((i.get("acidPH") or 7) < 4.5 for i in ingredients)
         has_dairy = any(i["category"] in ("dairy", "egg") for i in ingredients)
 

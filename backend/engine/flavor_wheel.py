@@ -20,7 +20,7 @@ from typing import TYPE_CHECKING
 import numpy as np
 
 if TYPE_CHECKING:
-    from ..models.ingredient import IngredientOut
+    pass
 
 # 風味維度索引（對應 TypeScript FlavorVector）
 FLAVOR_DIMS = [

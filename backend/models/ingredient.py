@@ -5,7 +5,9 @@ Pydantic v2 材料資料模型 (Ingredient Data Models)
 """
 
 from __future__ import annotations
-from typing import Literal, Optional
+
+from typing import Literal
+
 from pydantic import BaseModel, Field, field_validator
 
 FlavorVector = list[float]  # 15 維，每個值 0.0–1.0
@@ -27,28 +29,28 @@ class IngredientBase(BaseModel):
     id: str = Field(..., description="唯一識別 slug，如 'tanqueray-gin'")
     name: str = Field(..., max_length=200)
     name_zh: str = Field(..., alias="nameZh", max_length=200)
-    brand: Optional[str] = Field(None, max_length=100)
+    brand: str | None = Field(None, max_length=100)
     category: IngredientCategory
-    subcategory: Optional[str] = Field(None, max_length=50)
+    subcategory: str | None = Field(None, max_length=50)
 
     # 化學屬性
     abv: float = Field(default=0.0, ge=0.0, le=100.0)
-    sugar_content: Optional[float] = Field(None, alias="sugarContent", ge=0.0)
-    acid_ph: Optional[float] = Field(None, alias="acidPH", ge=0.0, le=14.0)
-    bitter_unit: Optional[int] = Field(None, alias="bitterUnit", ge=0, le=100)
-    calories_per_30ml: Optional[int] = Field(None, alias="caloriesPer30ml", ge=0)
+    sugar_content: float | None = Field(None, alias="sugarContent", ge=0.0)
+    acid_ph: float | None = Field(None, alias="acidPH", ge=0.0, le=14.0)
+    bitter_unit: int | None = Field(None, alias="bitterUnit", ge=0, le=100)
+    calories_per_30ml: int | None = Field(None, alias="caloriesPer30ml", ge=0)
 
     # 風味資料
     flavor_vector: FlavorVector = Field(..., alias="flavorVector")
     flavor_tags: list[FlavorDimension] = Field(default_factory=list, alias="flavorTags")
     aroma: list[str] = Field(default_factory=list)
     taste: list[str] = Field(default_factory=list)
-    finish: Optional[str] = None
+    finish: str | None = None
 
     # 產地製程
-    origin: Optional[str] = Field(None, max_length=100)
-    production_method: Optional[str] = Field(None, alias="productionMethod")
-    aging: Optional[str] = None
+    origin: str | None = Field(None, max_length=100)
+    production_method: str | None = Field(None, alias="productionMethod")
+    aging: str | None = None
 
     # 系統屬性
     rarity: RarityLevel = "common"
@@ -57,7 +59,7 @@ class IngredientBase(BaseModel):
     description_zh: str = Field(default="", alias="descriptionZh")
     substitutes: list[str] = Field(default_factory=list)
     pairing_bonus: dict[str, float] = Field(default_factory=dict, alias="pairingBonus")
-    image_url: Optional[str] = Field(None, alias="imageUrl")
+    image_url: str | None = Field(None, alias="imageUrl")
     tags: list[str] = Field(default_factory=list)
 
     @field_validator("flavor_vector")

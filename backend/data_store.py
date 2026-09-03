@@ -74,4 +74,4 @@ def reload_all() -> None:
     """清除所有快取，強制下次存取時重新讀檔（測試與開發時使用）。"""
     for fn in (cocktails, preps, ingredients, ingredient_index,
                wine_knowledge, spirits_knowledge, flavor_wheel):
-        fn.cache_clear()
+        fn.cache_clear()  # type: ignore[attr-defined]  # lru_cache 包裝後的屬性

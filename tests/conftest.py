@@ -45,6 +45,7 @@ def preps():
 def client():
     """FastAPI TestClient；整個測試 session 共用一個應用實例。"""
     from fastapi.testclient import TestClient
+
     from backend.main import app
     with TestClient(app) as c:
         yield c

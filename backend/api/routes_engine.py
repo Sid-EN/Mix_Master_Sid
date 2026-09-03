@@ -7,12 +7,17 @@ routes_engine.py
 from fastapi import APIRouter, HTTPException, Request, status
 
 from ..config import get_settings
-from ..models.recipe import (
-    GenerateRequest, GenerateResponse, SubstituteRequest,
-    RecipeOut, RecipeIngredientItem, FlavorProfileOut,
-    AlternativeSuggestion, RecipeInsights
-)
 from ..engine.flavor_engine import FlavorEngine
+from ..models.recipe import (
+    AlternativeSuggestion,
+    FlavorProfileOut,
+    GenerateRequest,
+    GenerateResponse,
+    RecipeIngredientItem,
+    RecipeInsights,
+    RecipeOut,
+    SubstituteRequest,
+)
 
 router = APIRouter(prefix="/engine", tags=["Flavor Engine 🧪"])
 _engine = FlavorEngine()
@@ -49,9 +54,9 @@ async def generate_recipe(request: Request, body: GenerateRequest):
             user_level=body.user_level,
         )
     except ValueError as e:
-        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e))
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e)) from e
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e)) from e
 
     # 序列化
     recipe_ings = [
@@ -112,7 +117,7 @@ async def find_substitute(body: SubstituteRequest):
             top_n=body.top_n,
         )
     except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
+        raise HTTPException(status_code=404, detail=str(e)) from e
 
     return {
         "missingSlug": body.missing_slug,
@@ -133,7 +138,7 @@ async def find_substitute(body: SubstituteRequest):
 @router.get("/flavor-wheel", summary="取得風味輪資料")
 async def get_flavor_wheel():
     """返回 15 維風味輪維度定義與互補關係資料"""
-    from ..engine.flavor_wheel import FLAVOR_DIMS, COMPLEMENTARY_PAIRS
+    from ..engine.flavor_wheel import COMPLEMENTARY_PAIRS, FLAVOR_DIMS
     return {
         "dimensions": [
             {"index": i, "name": d}

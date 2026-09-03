@@ -9,7 +9,6 @@
   - 端點裝飾器會拋出 RateLimitExceeded，由本專案的處理器回傳 {"detail": ...}
 """
 import importlib
-import sys
 
 import pytest
 from fastapi.testclient import TestClient

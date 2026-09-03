@@ -1,4 +1,4 @@
-import { SkeletonHero, SkeletonRecipeGrid } from '../../components/Skeleton';
+import { SkeletonHero, SkeletonRecipeGrid } from '../../../components/Skeleton';
 
 export default function RecipesLoading() {
   return (

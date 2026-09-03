@@ -1,7 +1,8 @@
 """routes_search.py — 跨庫統一搜尋路由 (Unified Search Routes)"""
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Query
 
-from ..data_store import cocktails as _load_cocktails, preps as _load_prep
+from ..data_store import cocktails as _load_cocktails
+from ..data_store import preps as _load_prep
 
 router = APIRouter(prefix="/search", tags=["Search 🔍"])
 

@@ -49,4 +49,21 @@ test.describe('動態路由', () => {
     await page.goto('/recipes/definitely-not-a-recipe', { waitUntil: 'networkidle' })
     expect(await page.locator('body').innerText()).toMatch(/404|找不到|not found/i)
   })
+
+  /**
+   * 迴歸：/recipes/[slug] 對不存在的 slug 曾回傳 HTTP 200（軟 404）。
+   * 成因是 app/recipes/loading.tsx 的 Suspense 邊界會讓回應提早以 200 串流，
+   * notFound() 之後只改變畫面而無法改變狀態碼；已改以 route group 將
+   * loading.tsx 限定於列表頁。開發模式不重現此差異，故僅於正式建置檢查。
+   */
+  test('不存在的動態路由回傳 404 狀態碼', async ({ request }) => {
+    const probe = await request.get('/prep/definitely-not-a-prep')
+    test.skip(probe.status() !== 404,
+      '開發模式的狀態碼行為與正式建置不同，此檢查僅於正式建置執行')
+
+    for (const path of ['/recipes/definitely-not-a-recipe', '/prep/definitely-not-a-prep', '/totally-bogus-page']) {
+      const res = await request.get(path)
+      expect(res.status(), `${path} 應回傳 404 而非軟 404`).toBe(404)
+    }
+  })
 })
