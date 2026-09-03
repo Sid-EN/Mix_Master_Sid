@@ -40,6 +40,7 @@
 - [📱 PWA 功能](#-pwa-功能)
 - [🗺️ 頁面目錄](#️-頁面目錄)
 - [🧪 測試](#-測試)
+- [📋 版本紀錄](#-版本紀錄)
 - [📈 開發路線圖](#-開發路線圖)
 - [🤝 貢獻指南](#-貢獻指南)
 - [📄 授權條款](#-授權條款)
@@ -282,6 +283,54 @@ cd frontend && npm install && cd ..
 # 5. 一鍵啟動
 bash start.sh
 ```
+
+### 資料庫容器（PostgreSQL）
+
+配方與材料等靜態資料以 JSON 檔提供，啟動應用本身**不需要資料庫**。
+帳號與跨裝置同步功能則需要 PostgreSQL；本專案以獨立的 Docker 容器提供。
+
+```bash
+# 首次建立（密碼請自行產生，勿沿用範例值）
+docker run -d --name mixmaster-db --restart unless-stopped \
+  -e POSTGRES_USER=mixmaster \
+  -e POSTGRES_PASSWORD="$(head -c 24 /dev/urandom | base64 | tr -d '/+=' | head -c 24)" \
+  -e POSTGRES_DB=mixmaster \
+  -p 127.0.0.1:5432:5432 \
+  -v mixmaster-pgdata:/var/lib/postgresql/data \
+  postgres:16
+```
+
+| 項目 | 值 |
+|---|---|
+| 容器名稱 | `mixmaster-db` |
+| 映像 | `postgres:16` |
+| 連接埠 | `127.0.0.1:5432`（僅綁本機，不對外曝露） |
+| 資料卷 | `mixmaster-pgdata`（具名 volume，容器刪除後資料仍保留） |
+| 資料庫／使用者 | `mixmaster` / `mixmaster` |
+| 重啟策略 | `unless-stopped` |
+
+連線字串請寫入 `backend/.env`（該檔已列入 `.gitignore`，切勿提交）：
+
+```
+DATABASE_URL=postgresql+psycopg2://mixmaster:<password>@127.0.0.1:5432/mixmaster
+```
+
+常用維運指令：
+
+```bash
+docker ps --filter name=mixmaster-db          # 查看狀態
+docker logs mixmaster-db                       # 檢視日誌
+docker exec -it mixmaster-db psql -U mixmaster # 進入 psql
+docker stop mixmaster-db                       # 停止（資料保留）
+docker start mixmaster-db                      # 啟動
+
+# 完整移除（含資料，不可復原）
+docker rm -f mixmaster-db && docker volume rm mixmaster-pgdata
+```
+
+> 連接埠僅綁定 `127.0.0.1`，不會對區域網路開放。
+> 若 5432 已被其他服務占用，改用 `-p 127.0.0.1:5433:5432` 並同步調整
+> `DATABASE_URL` 的埠號。
 
 啟動後可存取：
 
@@ -560,6 +609,25 @@ bash start.sh && npx playwright test
 **CI**：`.github/workflows/ci.yml` 於 push 與 PR 時執行三個 job——
 後端（ruff + mypy + pytest + 覆蓋率）、前端（型別檢查／lint／單元測試／正式建置）、
 E2E（啟動前後端後跑 Playwright）。
+
+---
+
+## 📋 版本紀錄
+
+所有版本變更記錄於 [CHANGELOG.md](CHANGELOG.md)，格式依循
+[Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，
+版本編號依循[語意化版本](https://semver.org/lang/zh-TW/)。
+
+| 層級 | 何時遞增 | 範例 |
+|---|---|---|
+| **主版本**（大更版） | 不相容的變更 | `1.x.x` → `2.0.0` |
+| **次版本**（小更版） | 向下相容的新功能 | `1.1.0` → `1.2.0` |
+| **修訂號** | 向下相容的缺陷修正 | `1.1.0` → `1.1.1` |
+
+發布新版本時請一併更新三處版本號，並確認彼此一致：
+`backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
+
+**目前版本：`1.1.0`**
 
 ---
 

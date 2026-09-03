@@ -7,7 +7,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     # 應用
     app_name: str = "MixMaster API"
-    app_version: str = "1.0.0-alpha"
+    app_version: str = "1.1.0"
     environment: str = "development"
     app_debug: bool = True
 
