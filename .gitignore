@@ -38,3 +38,12 @@ logs/
 
 # Claude
 .claude/
+
+# 測試產物
+.pytest_cache/
+coverage.xml
+pytest-report.xml
+frontend/coverage/
+playwright-report/
+test-results/
+node_modules/

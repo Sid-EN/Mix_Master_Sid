@@ -525,12 +525,13 @@ export function getRecommendedPairings(recipe: any, limit = 6): ScoredPairing[] 
     if (result.length >= limit) break
   }
 
-  // If we still need items, fill from remaining
-  if (result.length < 4) {
+  // If we still need items, fill from remaining (never exceeding the caller's limit)
+  const floor = Math.min(4, limit)
+  if (result.length < floor) {
     for (const item of scored) {
       if (!result.includes(item)) {
         result.push(item)
-        if (result.length >= 4) break
+        if (result.length >= floor) break
       }
     }
   }

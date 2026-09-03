@@ -1,0 +1,16 @@
+{
+  "name": "mixmaster",
+  "version": "1.0.0-alpha",
+  "private": true,
+  "description": "MixMaster — 全端調酒知識與創作平台（測試與 E2E 工作區）",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:backend": "python3 -m pytest tests -q",
+    "test:frontend": "npm --prefix frontend test",
+    "test:all": "npm run test:backend && npm run test:frontend && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.1"
+  }
+}
