@@ -1,6 +1,7 @@
 'use client'
 
 import { clientUrl } from '@/lib/api'
+import SubstituteHint from '@/components/SubstituteHint'
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 
@@ -395,6 +396,7 @@ export default function MyBarPage() {
                     key={recipe.slug}
                     recipe={recipe}
                     ingredientNameMap={ingredientNameMap}
+                    ownedSlugs={owned}
                     showMissing
                   />
                 ))}
@@ -413,10 +415,12 @@ export default function MyBarPage() {
 function RecipeMatchCard({
   recipe,
   ingredientNameMap,
+  ownedSlugs = [],
   showMissing = false,
 }: {
   recipe: MatchedRecipe
   ingredientNameMap: Record<string, string>
+  ownedSlugs?: string[]
   showMissing?: boolean
 }) {
   const method = recipe.method || 'build'
@@ -469,9 +473,16 @@ function RecipeMatchCard({
 
       {/* Missing callout */}
       {showMissing && recipe.missingIngredients.length > 0 && (
-        <p className="font-mono text-[10px] text-red-400/80 mb-2">
-          缺少: {recipe.missingIngredients.map(s => ingredientNameMap[s] || s).join('、')}
-        </p>
+        <>
+          <p className="font-mono text-[10px] text-red-400/80 mb-2">
+            缺少: {recipe.missingIngredients.map(s => ingredientNameMap[s] || s).join('、')}
+          </p>
+          <SubstituteHint
+            missingSlugs={recipe.missingIngredients}
+            ownedSlugs={ownedSlugs}
+            nameMap={ingredientNameMap}
+          />
+        </>
       )}
 
       {/* Footer */}

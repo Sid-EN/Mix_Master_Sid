@@ -18,6 +18,8 @@ class Settings(BaseSettings):
     allowed_origins: list[str] = ["*"]
 
     # 速率限制
+    # 開發與測試時關閉，避免測試套件因限流而不穩定；正式環境預設開啟。
+    rate_limit_enabled: bool = True
     rate_limit_default: str = "100/minute"
     rate_limit_engine: str = "10/minute"
 

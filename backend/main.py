@@ -2,8 +2,13 @@
 main.py — MixMaster FastAPI 應用入口
 """
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from slowapi import Limiter
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
+from slowapi.util import get_remote_address
 
 from .config import get_settings
 from .api.routes_engine import router as engine_router
@@ -37,6 +42,30 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# 速率限制
+# config.py 早已定義限制值卻從未套用；此處接上 slowapi。
+# 以 RATE_LIMIT_ENABLED=false 關閉（開發與自動化測試使用），
+# 否則固定次數的測試會因限流而隨機失敗。
+limiter = Limiter(
+    key_func=get_remote_address,
+    default_limits=[settings.rate_limit_default],
+    enabled=settings.rate_limit_enabled,
+    headers_enabled=True,   # 回傳 X-RateLimit-* 供客戶端自行節流
+)
+app.state.limiter = limiter
+
+
+@app.exception_handler(RateLimitExceeded)
+async def _rate_limit_handler(request: Request, exc: RateLimitExceeded):
+    return JSONResponse(
+        status_code=429,
+        content={"detail": f"請求過於頻繁，請稍後再試（限制：{exc.detail}）"},
+    )
+
+
+if settings.rate_limit_enabled:
+    app.add_middleware(SlowAPIMiddleware)
 
 # 路由
 app.include_router(engine_router,      prefix="/api/v1")

@@ -4,7 +4,9 @@ routes_engine.py
 風味引擎 API 路由 (Flavor Engine Endpoints)
 """
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Request, status
+
+from ..config import get_settings
 from ..models.recipe import (
     GenerateRequest, GenerateResponse, SubstituteRequest,
     RecipeOut, RecipeIngredientItem, FlavorProfileOut,
@@ -14,10 +16,24 @@ from ..engine.flavor_engine import FlavorEngine
 
 router = APIRouter(prefix="/engine", tags=["Flavor Engine 🧪"])
 _engine = FlavorEngine()
+_settings = get_settings()
 
 
+def _limit(spec: str):
+    """套用 slowapi 限制；未啟用時回傳原函式。"""
+    def decorator(fn):
+        if not _settings.rate_limit_enabled:
+            return fn
+        from slowapi import Limiter  # 延後匯入，避免關閉限流時的相依
+        from slowapi.util import get_remote_address
+        return Limiter(key_func=get_remote_address).limit(spec)(fn)
+    return decorator
+
+
+# 配方生成的運算成本遠高於其他端點，套用較嚴格的限制
 @router.post("/generate", response_model=GenerateResponse, summary="生成調酒配方")
-async def generate_recipe(body: GenerateRequest):
+@_limit(_settings.rate_limit_engine)
+async def generate_recipe(request: Request, body: GenerateRequest):
     """
     核心功能：根據使用者提供的材料 slug 列表，
     透過智慧風味平衡引擎生成最佳化調酒配方。

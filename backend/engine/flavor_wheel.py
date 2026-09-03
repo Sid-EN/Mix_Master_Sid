@@ -121,22 +121,55 @@ def combined_match_score(
     return round(w_sim * sim + w_comp * comp, 4)
 
 
+# 可互相替代的類別群組。跨群組替代（例如以果汁取代利口酒）幾乎不可行，
+# 因此給予重罰而非直接排除——同群組內仍以風味相似度決定排序。
+_SUBSTITUTABLE_GROUPS = [
+    {"base_spirit"},
+    {"liqueur", "fortified_wine"},
+    {"syrup"},
+    {"juice", "fresh"},
+    {"mixer"},
+    {"bitter"},
+    {"wine", "fortified_wine"},
+    {"dairy", "egg"},
+]
+
+
+def _category_affinity(a: str | None, b: str | None) -> float:
+    """類別相容度：相同為 1.0，同群組 0.85，其餘 0.45。"""
+    if a == b:
+        return 1.0
+    for group in _SUBSTITUTABLE_GROUPS:
+        if a in group and b in group:
+            return 0.85
+    return 0.45
+
+
 def find_substitutes(
     missing_vector: list[float],
     available_ingredients: list[dict],
     same_category_only: bool = False,
     target_category: str | None = None,
     top_n: int = 3,
+    min_score: float = 0.5,
 ) -> list[FlavorMatch]:
     """
     為缺失材料尋找最佳替代品。
+
+    排序依據為「風味相似度 × 類別相容度」。
+
+    先前的公式為 0.6×相似度 + 0.4×互補度，但互補度衡量的是「兩者搭配
+    起來協調」，與「可互相取代」恰好相反：金巴利→艾普羅（相似度 0.96，
+    教科書級替代）得 0.58，君度→萊姆汁卻得 0.91。互補度仍保留於回傳
+    結果供參考，但不再參與排序。
 
     Args:
         missing_vector:         缺失材料的 15 維風味向量
         available_ingredients:  可用材料字典列表（含 flavorVector 欄位）
         same_category_only:     是否只在相同類別中搜尋
-        target_category:        若 same_category_only=True，指定類別
+        target_category:        缺失材料的類別，用於計算相容度
         top_n:                  返回前 N 個結果
+        min_score:              低於此分數不回傳，避免給出無用建議
 
     Returns:
         按 combined_score 排序的 FlavorMatch 列表
@@ -154,16 +187,21 @@ def find_substitutes(
 
         sim = cosine_similarity(missing_vector, cand_vec)
         comp = complementary_score(missing_vector, cand_vec)
-        total = round(0.6 * sim + 0.4 * comp, 4)
+        affinity = _category_affinity(target_category, ing.get("category"))
+        total = round(sim * affinity, 4)
 
-        # 生成匹配原因
+        if total < min_score:
+            continue
+
         reason_parts = []
-        if sim > 0.7:
+        if sim > 0.85:
             reason_parts.append("風味輪廓高度相似")
-        elif sim > 0.4:
+        elif sim > 0.6:
             reason_parts.append("風味輪廓中度相似")
-        if comp > 0.4:
-            reason_parts.append("提供良好的互補層次感")
+        if affinity == 1.0:
+            reason_parts.append("同類別材料")
+        elif affinity < 0.85:
+            reason_parts.append("跨類別替代，風味會有落差")
         reason = "；".join(reason_parts) if reason_parts else "基礎替代方案"
 
         matches.append(FlavorMatch(

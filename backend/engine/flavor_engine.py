@@ -212,7 +212,10 @@ class FlavorEngine:
 
         available = [self._db_map[s] for s in available_slugs if s in self._db_map]
         return find_substitutes(
-            missing["flavorVector"], available, top_n=top_n
+            missing["flavorVector"],
+            available,
+            target_category=missing.get("category"),
+            top_n=top_n,
         )
 
     # ─────────────────────────── Private helpers ────────────────────────────

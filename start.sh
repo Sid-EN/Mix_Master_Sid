@@ -15,6 +15,9 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "[1/2] 啟動後端 API (port 8000)..."
 source .venv/bin/activate
 
+# 本機開發關閉限流，避免瀏覽與 E2E 測試被擋
+export RATE_LIMIT_ENABLED=false
+
 # 釋放 port 8000（若被佔用）
 PIDS=$(ss -tlnp | grep ':8000' | grep -oP 'pid=\K[0-9]+' | sort -u)
 if [ -n "$PIDS" ]; then

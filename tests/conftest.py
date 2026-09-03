@@ -9,6 +9,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
+# 測試會在數秒內送出數百次請求；限流開啟時會造成隨機失敗。
+# 限流本身另由 test_rate_limit.py 以獨立的應用實例驗證。
+os.environ.setdefault("RATE_LIMIT_ENABLED", "false")
+
 DATA_DIR = os.path.join(ROOT, "backend", "data")
 
 
