@@ -3,7 +3,7 @@ import { serverUrl } from '../../lib/api'
 
 async function getRecipes() {
   try {
-    const res = await fetch(serverUrl('/api/v1/recipes?limit=100'), { cache: 'no-store' })
+    const res = await fetch(serverUrl('/api/v1/recipes?limit=500'), { cache: 'no-store' })
     const data = await res.json()
     return data.items || []
   } catch {
@@ -29,6 +29,16 @@ export default async function RecipesPage() {
           收錄 <span className="text-neon-amber font-mono">{recipes.length}</span> 款經典與創意調酒配方
         </p>
         <div className="divider-amber mt-6" />
+      </div>
+
+      {/* 建立自己的配方 */}
+      <div className="mb-8">
+        <a
+          href="/recipes/new"
+          className="inline-flex items-center gap-2 px-4 py-2 font-mono text-xs border border-neon-amber/60 text-neon-amber rounded hover:bg-neon-amber/10 transition-colors"
+        >
+          ＋ 建立我的配方
+        </a>
       </div>
 
       {/* Client-side filterable list */}

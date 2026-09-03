@@ -47,3 +47,6 @@ frontend/coverage/
 playwright-report/
 test-results/
 node_modules/
+
+# 使用者自建配方（本機資料，不納入版控）
+backend/data/user_recipes.json
