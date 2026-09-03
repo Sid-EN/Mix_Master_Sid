@@ -96,6 +96,115 @@ def calculate_balance_parameters(
     )
 
 
+# ── 單位換算 ────────────────────────────────────────────────
+# 配方資料混用多種單位；非容積單位（葉片、整顆、切片）不計入液體體積，
+# 否則會嚴重稀釋所有比例（例：10 leaves 薄荷曾被當成 10 oz）。
+OZ_TO_ML = 29.5735
+
+VOLUME_OZ = {
+    "oz": 1.0, "ml": 1.0 / OZ_TO_ML, "cl": 10.0 / OZ_TO_ML,
+    "tsp": 1.0 / 6, "bsp": 1.0 / 8,
+    "dash": 1.0 / 32, "dashes": 1.0 / 32,
+    "drop": 1.0 / 600, "drops": 1.0 / 600,
+    "g": 1.0 / OZ_TO_ML,
+}
+NON_VOLUME_UNITS = {
+    "whole", "leaf", "leaves", "slice", "slices", "sprig", "sprigs",
+    "wedge", "wedges", "pinch", "piece", "pieces", "個", "根", "枝", "顆",
+}
+
+LIME_PH = 2.2  # 以新鮮萊姆汁作為酸度強度 1.0 的基準
+
+
+def to_oz(amount: float, unit: str | None) -> float:
+    """將配方用量換算為 oz；非容積單位回傳 0。"""
+    u = (unit or "oz").strip().lower()
+    if u in VOLUME_OZ:
+        return amount * VOLUME_OZ[u]
+    if u in NON_VOLUME_UNITS or any(n in u for n in NON_VOLUME_UNITS):
+        return 0.0
+    return 0.0
+
+
+def acid_strength(ph: float | None) -> float:
+    """
+    由 pH 推得相對酸度強度 (0–1)。
+
+    pH 是對數尺度，直接線性使用會嚴重高估弱酸——通寧水 (pH 3.0) 會被
+    當成與萊姆汁 (pH 2.2) 同級。改以氫離子濃度比值計算才符合實際味覺。
+    """
+    if ph is None or ph >= 4.5:
+        return 0.0
+    return min(1.0, 10 ** (LIME_PH - ph))
+
+
+def flavor_totals(items) -> tuple[float, float, float, float]:
+    """
+    由 (材料 dict, 用量, 單位) 序列計算正規化的四項風味總量。
+
+    以實際糖度／酸度／苦度／酒精含量加權，而非僅依類別歸屬——
+    通寧水含糖卻不屬於 syrup 類別，果汁含糖也一樣。
+
+    Returns:
+        (acid, sweet, bitter, punch)，皆為相對總容積的比例 (0–1)
+    """
+    acid = sweet = bitter = punch = total = 0.0
+    for ingredient, amount, unit in items:
+        vol = to_oz(amount, unit)
+        total += vol
+        if not ingredient:
+            continue
+        acid += vol * acid_strength(ingredient.get("acidPH"))
+        sweet += vol * (ingredient.get("sugarContent") or 0) / 100.0
+        bitter += vol * (ingredient.get("bitterUnit") or 0) / 100.0
+        punch += vol * (ingredient.get("abv") or 0) / 100.0
+    total = total or 1.0
+    return acid / total, sweet / total, bitter / total, punch / total
+
+
+# ── 平衡評分 ────────────────────────────────────────────────
+# 三大調酒家族的可接受區間，取自 51 道經典配方的實測分布。
+# 區間內不扣分，超出者依區間寬度正規化後扣分。
+_BANDS = {
+    "spirit_forward": {"punch": (0.22, 0.40), "sweet": (0.05, 0.16), "bitter": (0.00, 0.40)},
+    "highball":       {"ratio": (0.26, 2.64), "punch": (0.09, 0.17), "sweet": (0.04, 0.17)},
+    "sour":           {"ratio": (0.80, 4.89), "punch": (0.19, 0.32), "sweet": (0.05, 0.22)},
+}
+_WEIGHTS = {
+    "spirit_forward": {"punch": 60.0, "sweet": 30.0, "bitter": 22.0},
+    "highball":       {"ratio": 26.0, "punch": 55.0, "sweet": 30.0},
+    "sour":           {"ratio": 26.0, "punch": 55.0, "sweet": 30.0},
+}
+_INTERIOR_SPREAD = 12.0   # 區間內仍給予細部梯度，避免所有配方同分
+_MAX_EXCURSION = 2.5
+_EPS = 1e-6
+
+
+def classify_family(acid: float, sweet: float, bitter: float, punch: float) -> str:
+    """
+    判定調酒家族。
+
+    無酸味者屬烈酒基調（Negroni／Manhattan／Old Fashioned）；
+    酒感偏低者屬長飲（Gin & Tonic／Moscow Mule）；其餘為酸味短飲。
+    """
+    if acid < 0.02:
+        return "spirit_forward"
+    return "highball" if punch < 0.18 else "sour"
+
+
+def _excursion(v: float, lo: float, hi: float) -> float:
+    if v < lo:
+        return (lo - v) / max(hi - lo, 1e-3)
+    if v > hi:
+        return (v - hi) / max(hi - lo, 1e-3)
+    return 0.0
+
+
+def _interior(v: float, lo: float, hi: float) -> float:
+    mid = (lo + hi) / 2
+    return min(1.0, abs(v - mid) / max((hi - lo) / 2, 1e-3))
+
+
 def calculate_overall_balance_score(
     acid_total: float,
     sweet_total: float,
@@ -103,28 +212,41 @@ def calculate_overall_balance_score(
     punch_total: float,
 ) -> tuple[float, str]:
     """
-    計算一個配方的整體平衡分數。
+    計算配方的整體平衡分數。
+
+    先判定家族，再以該家族的可接受區間評分——不同家族的平衡標準本就不同，
+    以單一酸糖比評斷會把整個烈酒基調家族誤判為不及格。
 
     Args:
-        acid_total:   配方中所有酸味成分的正規化總量 (0–1)
-        sweet_total:  配方中所有甜味成分的正規化總量 (0–1)
-        bitter_total: 配方中所有苦味成分的正規化總量 (0–1)
-        punch_total:  配方中酒感的正規化總量 (0–1)
+        acid_total:   酸度總量（相對總容積，0–1）
+        sweet_total:  糖度總量（相對總容積，0–1）
+        bitter_total: 苦度總量（相對總容積，0–1）
+        punch_total:  酒精總量（相對總容積，0–1）
 
     Returns:
         (score: float, grade: str) — score 0–100，grade A/B/C/D
     """
-    if sweet_total == 0 or acid_total == 0:
+    if acid_total + sweet_total + bitter_total + punch_total <= _EPS:
         return 0.0, "D"
 
-    acid_sweet = acid_total / sweet_total  # 理想接近 1.0
-    punch_acid = punch_total / max(acid_total, 0.01)  # 理想接近 2.5
+    family = classify_family(acid_total, sweet_total, bitter_total, punch_total)
+    bands, weights = _BANDS[family], _WEIGHTS[family]
+    values = {
+        "ratio": acid_total / max(sweet_total, 0.01),
+        "punch": punch_total,
+        "sweet": sweet_total,
+        "bitter": bitter_total,
+    }
 
-    acid_sweet_dev = abs(acid_sweet - 1.0)
-    punch_acid_dev = abs(punch_acid - 2.5) / 2.5
+    penalty = 0.0
+    interior = []
+    for key, (lo, hi) in bands.items():
+        v = values[key]
+        penalty += min(_excursion(v, lo, hi), _MAX_EXCURSION) * weights[key]
+        interior.append(_interior(v, lo, hi))
+    penalty += (sum(interior) / len(interior)) * _INTERIOR_SPREAD
 
-    score = 100.0 - (acid_sweet_dev * 40.0) - (punch_acid_dev * 30.0)
-    score = max(0.0, min(100.0, score))
+    score = max(0.0, min(100.0, 100.0 - penalty))
 
     if score >= 90:
         grade = "A"

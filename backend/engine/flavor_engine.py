@@ -28,6 +28,7 @@ from ..engine.balance_model import (
     BalanceParameters,
     calculate_balance_parameters,
     calculate_overall_balance_score,
+    flavor_totals,
 )
 from ..engine.flavor_wheel import (
     FlavorMatch,
@@ -169,26 +170,11 @@ class FlavorEngine:
         )
 
         # Step 7：計算平衡分數
-        acid_t = sum(
-            ri.amount for ri in recipe_ings
-            if (ri.ingredient.get("acidPH") or 7) < 4.5
+        # 以實際糖度／酸度／苦度加權並正確換算單位（2 dashes 苦精不等於 2 oz）
+        acid_t, sweet_t, bitter_t, punch_t = flavor_totals(
+            [(ri.ingredient, ri.amount, ri.unit) for ri in recipe_ings]
         )
-        sweet_t = sum(
-            ri.amount for ri in recipe_ings
-            if ri.ingredient["category"] in ("syrup", "liqueur")
-        )
-        punch_t = sum(
-            ri.amount * (ri.ingredient.get("abv", 0) / 100)
-            for ri in recipe_ings
-        )
-        bitter_t = sum(
-            ri.amount for ri in recipe_ings
-            if ri.ingredient["category"] == "bitter"
-        )
-        total = sum(ri.amount for ri in recipe_ings) or 1
-        score, grade = calculate_overall_balance_score(
-            acid_t / total, sweet_t / total, bitter_t / total, punch_t / total
-        )
+        score, grade = calculate_overall_balance_score(acid_t, sweet_t, bitter_t, punch_t)
 
         # Step 8：命名
         names = generate_recipe_name(

@@ -9,6 +9,7 @@ router = APIRouter(prefix="/batch", tags=["Batch Calculator 🧮"])
 
 _COCKTAIL_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "classic_recipes.json")
 _PREP_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "prep_recipes.json")
+_INGREDIENT_DATA = os.path.join(os.path.dirname(__file__), "..", "data", "ingredients.json")
 
 OZ_TO_ML = 29.5735
 
@@ -27,6 +28,12 @@ def _load_cocktails() -> list[dict]:
 def _load_prep() -> list[dict]:
     with open(_PREP_DATA, encoding="utf-8") as f:
         return json.load(f)
+
+
+def _ingredient_index() -> dict[str, dict]:
+    """以 id 為鍵的材料索引，供配方 slug 解析名稱使用。"""
+    with open(_INGREDIENT_DATA, encoding="utf-8") as f:
+        return {i["id"]: i for i in json.load(f)}
 
 
 def _find(data: list[dict], id_or_slug: str) -> dict | None:
@@ -75,6 +82,8 @@ async def calculate_batch(req: BatchRequest):
     method = recipe.get("method", "build")
     dilution = DILUTION_FACTORS.get(method, 1.0)
 
+    ing_index = _ingredient_index()
+
     total_oz = 0.0
     scaled_ingredients = []
     for ing in recipe.get("ingredients", []):
@@ -89,9 +98,12 @@ async def calculate_batch(req: BatchRequest):
             ml = scaled
             total_oz += scaled / OZ_TO_ML
 
+        slug = ing.get("slug", "")
+        meta = ing_index.get(slug, {})
         scaled_ingredients.append({
-            "name": ing.get("slug", ing.get("name", "")),
-            "nameZh": ing.get("nameZh", ing.get("name", "")),
+            "slug": slug,
+            "name": meta.get("name") or ing.get("name") or slug,
+            "nameZh": meta.get("nameZh") or ing.get("nameZh") or "",
             "originalAmount": amount,
             "scaledAmount": scaled,
             "unit": unit,

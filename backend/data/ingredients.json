@@ -7860,5 +7860,254 @@
       "syrup",
       "tiki"
     ]
+  },
+  {
+    "id": "buffalo-trace-bourbon",
+    "name": "Buffalo Trace Bourbon",
+    "nameZh": "水牛足跡波本威士忌",
+    "brand": "Buffalo Trace",
+    "category": "base_spirit",
+    "subcategory": "bourbon",
+    "abv": 45.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 18,
+    "caloriesPer30ml": 70,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.0,
+      0.1,
+      0.4,
+      0.1,
+      0.1,
+      0.2,
+      0.7,
+      0.7,
+      0.1,
+      0.1,
+      0.6
+    ],
+    "flavorTags": [
+      "vanilla",
+      "caramel",
+      "spicy"
+    ],
+    "aroma": [
+      "vanilla",
+      "brown sugar",
+      "mint",
+      "toffee"
+    ],
+    "taste": [
+      "sweet caramel",
+      "baking spice",
+      "soft oak"
+    ],
+    "finish": "Medium, warm with vanilla and spice",
+    "origin": "USA (Kentucky)",
+    "productionMethod": "Column-distilled from a low-rye mash bill, aged in new charred oak",
+    "rarity": "common",
+    "colorHex": "#B5651D",
+    "description": "Kentucky straight bourbon with rich caramel and vanilla; a versatile cocktail base.",
+    "descriptionZh": "肯塔基純波本，焦糖與香草飽滿，酒體均衡，是 Boulevardier 與 Gold Rush 的理想基酒。",
+    "substitutes": [
+      "makers-mark-bourbon",
+      "woodford-reserve",
+      "wild-turkey-101"
+    ],
+    "tags": [
+      "bourbon",
+      "whiskey",
+      "classic"
+    ]
+  },
+  {
+    "id": "laphroaig-scotch",
+    "name": "Laphroaig 10 Year",
+    "nameZh": "拉弗格 10 年艾雷島單一麥芽威士忌",
+    "brand": "Laphroaig",
+    "category": "base_spirit",
+    "subcategory": "islay_single_malt",
+    "abv": 40.0,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 25,
+    "caloriesPer30ml": 65,
+    "flavorVector": [
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.3,
+      0.0,
+      0.3,
+      0.6,
+      0.95,
+      0.1,
+      0.2,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "flavorTags": [
+      "smoky",
+      "peaty",
+      "medicinal"
+    ],
+    "aroma": [
+      "peat smoke",
+      "iodine",
+      "seaweed",
+      "wet stone"
+    ],
+    "taste": [
+      "intense peat",
+      "brine",
+      "ash",
+      "sweet malt core"
+    ],
+    "finish": "Long, smoky, maritime",
+    "origin": "Scotland (Islay)",
+    "productionMethod": "Peated single malt, aged 10 years in ex-bourbon barrels",
+    "rarity": "common",
+    "colorHex": "#C68E17",
+    "description": "Intensely peated Islay single malt with iodine and maritime character.",
+    "descriptionZh": "重泥煤艾雷島單一麥芽，碘味與海洋氣息強烈，是 Penicillin 沖洗層的靈魂。",
+    "substitutes": [
+      "scotch-whisky",
+      "hakushu-12"
+    ],
+    "tags": [
+      "scotch",
+      "peated",
+      "islay",
+      "smoky"
+    ],
+    "aging": "10 years"
+  },
+  {
+    "id": "aperture-pisco",
+    "name": "Aperture Pisco Puro",
+    "nameZh": "皮斯可葡萄蒸餾酒",
+    "brand": "Aperture",
+    "category": "base_spirit",
+    "subcategory": "pisco",
+    "abv": 41.3,
+    "sugarContent": 0,
+    "acidPH": 7.0,
+    "bitterUnit": 10,
+    "caloriesPer30ml": 68,
+    "flavorVector": [
+      0.3,
+      0.2,
+      0.1,
+      0.5,
+      0.2,
+      0.6,
+      0.1,
+      0.1,
+      0.0,
+      0.0,
+      0.1,
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "floral",
+      "stone_fruit",
+      "grape"
+    ],
+    "aroma": [
+      "muscat grape",
+      "orange blossom",
+      "ripe apricot"
+    ],
+    "taste": [
+      "floral grape",
+      "stone fruit",
+      "clean warmth"
+    ],
+    "finish": "Clean, floral, gently warming",
+    "origin": "Peru",
+    "productionMethod": "Single-distilled from Quebranta and Italia grapes, unaged",
+    "rarity": "common",
+    "colorHex": "#F5F3E7",
+    "description": "Unaged Peruvian grape brandy with floral aromatics — the base of a Pisco Sour.",
+    "descriptionZh": "未過桶的秘魯葡萄蒸餾酒，花香與核果調明亮，Pisco Sour 的指定基酒。",
+    "substitutes": [
+      "cognac",
+      "leblon-cachaca"
+    ],
+    "tags": [
+      "pisco",
+      "brandy",
+      "south-american"
+    ]
+  },
+  {
+    "id": "grapefruit-soda",
+    "name": "Grapefruit Soda",
+    "nameZh": "葡萄柚汽水",
+    "brand": null,
+    "category": "mixer",
+    "subcategory": "citrus_soda",
+    "abv": 0,
+    "sugarContent": 10,
+    "acidPH": 3.2,
+    "bitterUnit": 8,
+    "caloriesPer30ml": 13,
+    "flavorVector": [
+      0.8,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "flavorTags": [
+      "citrus",
+      "sweet"
+    ],
+    "aroma": [
+      "pink grapefruit",
+      "citrus zest"
+    ],
+    "taste": [
+      "sweet-tart grapefruit",
+      "light bitterness",
+      "crisp fizz"
+    ],
+    "finish": "Short, clean, effervescent",
+    "origin": "Mexico",
+    "productionMethod": "Carbonated water with grapefruit juice and cane sugar",
+    "rarity": "common",
+    "colorHex": "#F6C1B2",
+    "description": "Sweet-tart sparkling grapefruit soda, the traditional lengthener in a Paloma.",
+    "descriptionZh": "帶甜的氣泡葡萄柚飲料，Paloma 的傳統延長材料。",
+    "substitutes": [
+      "grapefruit-juice",
+      "club-soda",
+      "tonic-water"
+    ],
+    "tags": [
+      "soda",
+      "citrus",
+      "non-alcoholic"
+    ]
   }
 ]

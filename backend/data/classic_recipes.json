@@ -1238,7 +1238,7 @@
     "descriptionZh": "巴西國飲。新鮮萊姆、糖與甘蔗酒的粗獷組合，簡單卻令人無法抗拒。",
     "ingredients": [
       {
-        "slug": "cachaca-leblon",
+        "slug": "leblon-cachaca",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -1312,7 +1312,7 @@
         "unit": "oz"
       },
       {
-        "slug": "maraschino-liqueur",
+        "slug": "maraschino",
         "amount": 0.5,
         "unit": "oz"
       },
@@ -1390,7 +1390,7 @@
         "unit": "oz"
       },
       {
-        "slug": "cointreau",
+        "slug": "triple-sec",
         "amount": 0.75,
         "unit": "oz"
       },
@@ -1400,7 +1400,7 @@
         "unit": "oz"
       },
       {
-        "slug": "absinthe-pernod",
+        "slug": "pernod-absinthe",
         "amount": 0.05,
         "unit": "oz"
       }
@@ -1632,7 +1632,7 @@
         "unit": "dash"
       },
       {
-        "slug": "absinthe-pernod",
+        "slug": "pernod-absinthe",
         "amount": 0.05,
         "unit": "oz"
       }
@@ -1834,7 +1834,7 @@
     "descriptionZh": "最後一語的煙燻墨西哥雙胞胎。梅斯卡爾、夏翠絲、Aperol 與萊姆的完美均衡。",
     "ingredients": [
       {
-        "slug": "del-maguey-mezcal",
+        "slug": "del-maguey-vida-mezcal",
         "amount": 0.75,
         "unit": "oz"
       },
@@ -1844,7 +1844,7 @@
         "unit": "oz"
       },
       {
-        "slug": "green-chartreuse",
+        "slug": "chartreuse-green",
         "amount": 0.75,
         "unit": "oz"
       },
@@ -1907,7 +1907,7 @@
     "descriptionZh": "提基之王。蘭姆酒、杏仁糖漿與柑橘酒——液態的波里尼西亞日落。",
     "ingredients": [
       {
-        "slug": "appleton-12-rum",
+        "slug": "appleton-estate-12",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -1917,7 +1917,7 @@
         "unit": "oz"
       },
       {
-        "slug": "cointreau",
+        "slug": "triple-sec",
         "amount": 0.5,
         "unit": "oz"
       },
@@ -1986,7 +1986,7 @@
     "descriptionZh": "杯中的熱帶天堂。蘭姆酒、椰奶與鳳梨——純粹的度假氛圍。",
     "ingredients": [
       {
-        "slug": "plantation-white-rum",
+        "slug": "plantation-3-stars-rum",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -2054,17 +2054,17 @@
     "descriptionZh": "強到酒吧限制你只能喝兩杯的酒。三種蘭姆酒、熱帶果汁與神秘香料的組合。",
     "ingredients": [
       {
-        "slug": "plantation-white-rum",
+        "slug": "plantation-3-stars-rum",
         "amount": 1.5,
         "unit": "oz"
       },
       {
-        "slug": "appleton-12-rum",
+        "slug": "appleton-estate-12",
         "amount": 1.5,
         "unit": "oz"
       },
       {
-        "slug": "martinique-dark-rum",
+        "slug": "dark-rum",
         "amount": 1.0,
         "unit": "oz"
       },
@@ -2438,7 +2438,7 @@
     "descriptionZh": "The Dude 的最愛。伏特加、卡魯哇與鮮奶油——被《乃乃乃乃》永垂不朽的甜點雞尾酒。",
     "ingredients": [
       {
-        "slug": "titos-vodka",
+        "slug": "vodka",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -2650,7 +2650,7 @@
     "descriptionZh": "讓銅杯銷售破千的雞尾酒。伏特加、薑汁啤酒與萊姆——氣泡與辛辣的完美結合。",
     "ingredients": [
       {
-        "slug": "titos-vodka",
+        "slug": "vodka",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -2788,7 +2788,7 @@
     "descriptionZh": "蘇格蘭威士忌與金蜜利口酒的蜜甜擁抱。鼠幫最愛——滑順、溫暖、毫不掩飾的烈。",
     "ingredients": [
       {
-        "slug": "jw-black-scotch",
+        "slug": "scotch-whisky",
         "amount": 1.5,
         "unit": "oz"
       },
@@ -2856,7 +2856,7 @@
         "unit": "oz"
       },
       {
-        "slug": "cointreau",
+        "slug": "triple-sec",
         "amount": 0.75,
         "unit": "oz"
       },
@@ -3004,12 +3004,12 @@
         "unit": "oz"
       },
       {
-        "slug": "fresh-grapefruit-juice",
+        "slug": "grapefruit-juice",
         "amount": 0.5,
         "unit": "oz"
       },
       {
-        "slug": "maraschino-liqueur",
+        "slug": "maraschino",
         "amount": 0.5,
         "unit": "oz"
       }
@@ -3067,7 +3067,7 @@
     "descriptionZh": "以 1922 年鬥牛電影命名。蘇格蘭威士忌、甜香艾酒、櫻桃利口酒與柳橙汁——一杯戲劇性的鬥牛士調酒。",
     "ingredients": [
       {
-        "slug": "jw-black-scotch",
+        "slug": "scotch-whisky",
         "amount": 0.75,
         "unit": "oz"
       },
@@ -3077,12 +3077,12 @@
         "unit": "oz"
       },
       {
-        "slug": "maraschino-liqueur",
+        "slug": "maraschino",
         "amount": 0.75,
         "unit": "oz"
       },
       {
-        "slug": "fresh-orange-juice",
+        "slug": "orange-juice",
         "amount": 0.75,
         "unit": "oz"
       }
@@ -3293,12 +3293,12 @@
     "descriptionZh": "1970 年代的圖騰。伏特加、柳橙汁與漂浮 Galliano——帶義大利腔調的衝浪者螺絲起子。",
     "ingredients": [
       {
-        "slug": "titos-vodka",
+        "slug": "vodka",
         "amount": 1.5,
         "unit": "oz"
       },
       {
-        "slug": "fresh-orange-juice",
+        "slug": "orange-juice",
         "amount": 4.0,
         "unit": "oz"
       },
@@ -3362,7 +3362,7 @@
     "descriptionZh": "倫敦點單率最高的雞尾酒。香草伏特加、百香果與氣泡酒小杯——大膽、果味、毫不掩飾的歡樂。",
     "ingredients": [
       {
-        "slug": "titos-vodka",
+        "slug": "vodka",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -3590,7 +3590,7 @@
     "descriptionZh": "世界上最華麗的提神飲品。伏特加、卡魯哇與新鮮濃縮咖啡——當你想保持清醒繼續狂歡時。",
     "ingredients": [
       {
-        "slug": "titos-vodka",
+        "slug": "vodka",
         "amount": 2.0,
         "unit": "oz"
       },
@@ -3664,7 +3664,7 @@
     "descriptionZh": "綠色夏翠絲獨挑大樑。鳳梨、萊姆與法勒南為這款 130 種草本修道院利口酒打造冰霜旋轉。",
     "ingredients": [
       {
-        "slug": "green-chartreuse",
+        "slug": "chartreuse-green",
         "amount": 1.5,
         "unit": "oz"
       },
