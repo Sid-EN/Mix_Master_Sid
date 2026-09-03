@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import '../styles/globals.css'
 import Navbar from '../components/layout/Navbar'
+import { AuthProvider } from '../components/AuthContext'
 import { FavoritesProvider } from '../components/FavoritesContext'
 import { ProgressProvider } from '../components/ProgressContext'
 import { ThemeProvider } from '../components/ThemeContext'
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <I18nProvider>
         <ThemeProvider>
+          <AuthProvider>
           <FavoritesProvider>
             <ProgressProvider>
               <Navbar />
@@ -45,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <AchievementChecker />
             </ProgressProvider>
           </FavoritesProvider>
+          </AuthProvider>
         </ThemeProvider>
         </I18nProvider>
         <ServiceWorkerRegistration />

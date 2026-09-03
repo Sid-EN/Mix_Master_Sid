@@ -40,6 +40,7 @@
 - [📱 PWA 功能](#-pwa-功能)
 - [🗺️ 頁面目錄](#️-頁面目錄)
 - [🧪 測試](#-測試)
+- [🔐 帳號與跨裝置同步](#-帳號與跨裝置同步)
 - [📋 版本紀錄](#-版本紀錄)
 - [📈 開發路線圖](#-開發路線圖)
 - [🤝 貢獻指南](#-貢獻指南)
@@ -313,6 +314,24 @@ docker run -d --name mixmaster-db --restart unless-stopped \
 
 ```
 DATABASE_URL=postgresql+psycopg2://mixmaster:<password>@127.0.0.1:5432/mixmaster
+```
+
+建立資料表（Alembic 遷移）：
+
+```bash
+python3 -m alembic upgrade head     # 套用至最新
+python3 -m alembic current          # 查看目前版本
+python3 -m alembic downgrade -1     # 回退一版
+```
+
+> 連線字串由 `migrations/env.py` 讀取 `backend/config.py` 供給，
+> 不在 `alembic.ini` 中重複維護，因此密碼不會進入版控。
+
+執行測試前需另建測試資料庫（與開發資料庫分離）：
+
+```bash
+docker exec mixmaster-db psql -U mixmaster -d postgres \
+  -c "CREATE DATABASE mixmaster_test OWNER mixmaster;"
 ```
 
 常用維運指令：
@@ -612,6 +631,36 @@ E2E（啟動前後端後跑 Playwright）。
 
 ---
 
+## 🔐 帳號與跨裝置同步
+
+未登入時，使用者資料僅存於瀏覽器 localStorage（與原本行為相同）；
+登入後改以伺服器為準，可在多台裝置間同步。
+
+| 端點 | 說明 |
+|---|---|
+| `POST /api/v1/auth/register` | 註冊，回傳存取權杖 |
+| `POST /api/v1/auth/login` | 登入，回傳存取權杖 |
+| `GET /api/v1/auth/me` | 取得目前登入的帳號 |
+| `GET /api/v1/sync` | 取得全部同步資料 |
+| `GET /api/v1/sync/{key}` | 取得單一項目 |
+| `PUT /api/v1/sync/{key}` | 寫入單一項目 |
+| `DELETE /api/v1/sync/{key}` | 刪除單一項目 |
+
+**同步項目**：收藏與評分、我的酒櫃、學習進度、風味偏好、測驗紀錄、調酒人格。
+佈景主題與語言屬單一裝置的顯示偏好，刻意**不**同步。
+
+**登入時的合併策略**：伺服器已有的項目以伺服器為準覆寫本機；伺服器沒有、
+但本機有的項目則上傳。不做欄位級合併——各項資料形狀不一（陣列、字典、
+紀錄清單），通用合併規則容易產生使用者無法預期的結果。
+
+**安全性**：密碼以 bcrypt 雜湊儲存，永不以明文保存；權杖為 HS256 簽章的
+JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼錯誤」，
+避免洩漏哪些信箱已註冊。同步端點僅以權杖識別身分，不接受 `user_id` 參數。
+
+> 正式環境務必覆寫 `SECRET_KEY`（預設值僅供開發使用）。
+
+---
+
 ## 📋 版本紀錄
 
 所有版本變更記錄於 [CHANGELOG.md](CHANGELOG.md)，格式依循
@@ -627,7 +676,7 @@ E2E（啟動前後端後跑 Playwright）。
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`1.1.0`**
+**目前版本：`1.2.0`**
 
 ---
 

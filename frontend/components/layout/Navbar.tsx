@@ -5,6 +5,7 @@ import SearchModal from '../SearchModal'
 import FlavorPreference from '../FlavorPreference'
 import XPBar from '../XPBar'
 import LanguageSwitcher from '../LanguageSwitcher'
+import AccountLink from '../AccountLink'
 import { useTheme } from '../ThemeContext'
 
 /* ── All nav items (used by mobile + mega menu) ─────────── */
@@ -346,6 +347,8 @@ export default function Navbar() {
             </button>
 
             <LanguageSwitcher />
+
+            <AccountLink />
 
             <a href="/docs" target="_blank" rel="noopener noreferrer"
                className="ml-1 px-2.5 py-1 border border-charcoal-700 font-mono text-[10px]

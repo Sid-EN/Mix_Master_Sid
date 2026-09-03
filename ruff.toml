@@ -15,6 +15,21 @@ ignore = [
     "E501",  # 行長由 line-length 控制，不另行報錯
 ]
 
+[lint.flake8-bugbear]
+# FastAPI 以參數預設值宣告相依項是官方標準寫法，B008 對此為誤報。
+# 僅豁免這些呼叫，而非停用整條規則，其餘真正的可變預設值仍會被攔截。
+extend-immutable-calls = [
+    "fastapi.Depends",
+    "fastapi.Query",
+    "fastapi.Path",
+    "fastapi.Body",
+    "fastapi.Header",
+    "fastapi.Cookie",
+    "fastapi.File",
+    "fastapi.Form",
+    "fastapi.Security",
+]
+
 [lint.per-file-ignores]
 # 測試中的斷言輔助與長字串不需受限
 "tests/**" = [
