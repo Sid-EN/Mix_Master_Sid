@@ -179,7 +179,7 @@ MixMaster 是一個全端調酒知識與創作平台，結合 **AI 風味分析�
 ## 📁 專案結構
 
 ```
-PracticeAICCD_Sid/
+Mix_Master/
 ├── backend/
 │   ├── main.py              # FastAPI 應用程式入口
 │   ├── config.py             # 環境設定
@@ -255,7 +255,7 @@ PracticeAICCD_Sid/
 ```bash
 # 1. Clone 專案
 git clone <repo-url>
-cd PracticeAICCD_Sid
+cd Mix_Master
 
 # 2. 建立 Python 虛擬環境
 python3 -m venv .venv

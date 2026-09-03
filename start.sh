@@ -4,7 +4,7 @@
 # ============================================================
 set -e
 
-PROJECT_DIR="/home/eng/Sid/Mix_Master/PracticeAICCD_Sid"
+PROJECT_DIR="/home/eng/Sid/Mix_Master"
 cd "$PROJECT_DIR"
 
 echo ""

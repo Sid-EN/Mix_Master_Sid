@@ -77,10 +77,12 @@ const GAP = 1.5                 // gap degrees between segments
 const OFF = -90                 // rotate so 0° = top
 
 function rad(d: number) { return (d * Math.PI) / 180 }
+// round to 3dp so SSR and client stringify coordinates identically (avoids hydration mismatch)
+function px(n: number) { return Math.round(n * 1000) / 1000 }
 
 function xy(r: number, deg: number): [number, number] {
   const a = rad(deg + OFF)
-  return [CX + r * Math.cos(a), CY + r * Math.sin(a)]
+  return [px(CX + r * Math.cos(a)), px(CY + r * Math.sin(a))]
 }
 
 function arcPath(ri: number, ro: number, s: number, e: number): string {
@@ -259,7 +261,7 @@ export default function FlavorWheelPage() {
 
   const explodeXY = (startDeg: number, endDeg: number, dist: number): [number, number] => {
     const mid = (startDeg + endDeg) / 2
-    return [dist * Math.cos(rad(mid + OFF)), dist * Math.sin(rad(mid + OFF))]
+    return [px(dist * Math.cos(rad(mid + OFF))), px(dist * Math.sin(rad(mid + OFF)))]
   }
 
   /* ---------- render ---------- */

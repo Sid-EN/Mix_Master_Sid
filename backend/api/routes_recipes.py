@@ -14,7 +14,7 @@ def _load():
 @router.get("", summary="配方列表")
 async def list_recipes(
     type: str | None = Query(None, description="classic | generated | user"),
-    limit: int = Query(20, ge=1, le=100),
+    limit: int = Query(20, ge=1, le=500),
     offset: int = Query(0, ge=0),
 ):
     data = _load()
