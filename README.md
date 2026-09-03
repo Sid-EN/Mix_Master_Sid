@@ -39,6 +39,7 @@
 - [🌐 國際化支援](#-國際化支援)
 - [📱 PWA 功能](#-pwa-功能)
 - [🗺️ 頁面目錄](#️-頁面目錄)
+- [🧪 測試](#-測試)
 - [📈 開發路線圖](#-開發路線圖)
 - [🤝 貢獻指南](#-貢獻指南)
 - [📄 授權條款](#-授權條款)
@@ -48,7 +49,7 @@
 
 ## 🎯 功能總覽
 
-MixMaster 是一個全端調酒知識與創作平台，結合 **AI 風味分析引擎**與**互動式學習系統**，涵蓋 **50+ 頁面**、**51+ 經典配方**、**117 種原料**，提供從入門到進階的完整調酒體驗。
+MixMaster 是一個全端調酒知識與創作平台，結合 **AI 風味分析引擎**與**互動式學習系統**，涵蓋 **50+ 頁面**、**51+ 經典配方**、**121 種原料**，提供從入門到進階的完整調酒體驗。
 
 ### 🧪 核心功能
 
@@ -144,7 +145,7 @@ MixMaster 是一個全端調酒知識與創作平台，結合 **AI 風味分析�
 │   NumPy · SciPy · Pydantic · SQLAlchemy      │
 ├─────────────────────────────────────────────┤
 │                   Data                        │
-│   Static JSON (51 recipes · 117 ingredients)  │
+│   Static JSON (51 recipes · 121 ingredients)  │
 │   Knowledge Bases (spirits · wine)            │
 │   PostgreSQL 16 (Phase 2)                     │
 └─────────────────────────────────────────────┘
@@ -181,8 +182,10 @@ MixMaster 是一個全端調酒知識與創作平台，結合 **AI 風味分析�
 ```
 Mix_Master/
 ├── backend/
-│   ├── main.py              # FastAPI 應用程式入口
+│   ├── main.py              # FastAPI 應用程式入口（含 CORS 與速率限制）
 │   ├── config.py             # 環境設定
+│   ├── data_store.py         # 資料檔集中載入與快取
+│   ├── user_recipes.py       # 使用者自建配方儲存層
 │   ├── api/                  # API 路由 (8 個 Router)
 │   │   ├── routes_engine.py      # 風味引擎 API
 │   │   ├── routes_recipes.py     # 配方 CRUD
@@ -199,14 +202,14 @@ Mix_Master/
 │   │   └── name_generator.py     # 雙語配方命名器
 │   ├── data/                 # 靜態資料
 │   │   ├── classic_recipes.json  # 51 經典配方
-│   │   ├── ingredients.json      # 117 原料資料庫
+│   │   ├── ingredients.json      # 121 原料資料庫
 │   │   ├── prep_recipes.json     # 18 備料配方
 │   │   ├── flavor_wheel.json     # 風味輪定義
 │   │   ├── spirits_knowledge.json
 │   │   └── wine_knowledge.json
 │   └── models/               # 資料模型
 ├── frontend/
-│   ├── app/                  # Next.js App Router (48 個 page.tsx)
+│   ├── app/                  # Next.js App Router (49 個 page.tsx)
 │   │   ├── page.tsx              # 首頁
 │   │   ├── layout.tsx            # 全域 Layout + Providers
 │   │   ├── engine/               # 風味引擎
@@ -232,10 +235,19 @@ Mix_Master/
 │       ├── sw.js                 # Service Worker
 │       ├── offline.html          # 離線 Fallback 頁面
 │       └── icons/                # App Icons
+├── tests/                    # 測試套件
+│   ├── conftest.py               # 共用 fixture
+│   ├── data/                     # 資料完整性測試
+│   ├── backend/                  # 單元與 API 整合測試
+│   └── e2e/                      # Playwright 端對端測試
+├── .github/workflows/ci.yml  # CI：後端／前端／E2E 三個 job
 ├── docs/                     # 專案文件
 ├── start.sh                  # 一鍵啟動腳本
 ├── stop.sh                   # 一鍵停止腳本
-├── requirements.txt          # Python 依賴
+├── requirements.txt          # Python 執行期依賴
+├── requirements-dev.txt      # 測試與程式碼品質工具
+├── playwright.config.ts      # E2E 測試設定
+├── pytest.ini                # 後端測試設定
 ├── BLUEPRINT.md              # 架構藍圖
 └── LICENSE                   # MIT License
 ```
@@ -307,7 +319,7 @@ npx next dev -H 0.0.0.0 -p 6880
 | 資料集 | 數量 | 說明 |
 |--------|------|------|
 | 經典配方 | 51+ | 完整配方含步驟、風味評分、杯具、裝飾 |
-| 原料資料庫 | 117 | 12 類別：基酒、利口酒、果汁、糖漿、苦精、Mixer… |
+| 原料資料庫 | 121 | 12 類別：基酒、利口酒、果汁、糖漿、苦精、Mixer… |
 | 備料配方 | 18 | 自製糖漿、苦精、浸漬液 |
 | 風味維度 | 15 | citrus, tropical, berry, stone_fruit, herbal, floral, spicy, earthy, smoky, nutty, vanilla, caramel, bitter, umami, oak |
 | Mocktail 配方 | 20 | 無酒精調飲 |
@@ -508,6 +520,38 @@ MixMaster 是完整的 Progressive Web App：
 | `/famous-bars` | 世界名吧 | 20 間酒吧 |
 | `/quiz` | 知識測驗 | 40 題問答 |
 | `/glossary` | 調酒辭典 | 109 術語（三語） |
+
+---
+
+## 🧪 測試
+
+| 層級 | 位置 | 數量 | 說明 |
+|---|---|---|---|
+| 資料完整性 | `tests/data/` | 16 | 材料與配方資料的隱含契約：slug 可解析、單位已知、值域合理 |
+| 引擎單元 | `tests/backend/test_balance_model.py` 等 | — | 單位換算、酸度、風味總量、家族判定、評分、替代品排序 |
+| API 整合 | `tests/backend/` | — | 全端點狀態碼、分頁、limit 邊界、404、CRUD、速率限制 |
+| 前端單元 | `frontend/__tests__/` | 39 | lib 純函式與元件；含三語系翻譯鍵一致性 |
+| 端對端 | `tests/e2e/` | 68 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線 |
+
+後端合計 172 項、前端 39 項、E2E 68 項。
+
+```bash
+# 後端（172 項，含覆蓋率）
+python3 -m pytest tests --cov=backend
+
+# 前端單元測試
+npm --prefix frontend test
+
+# 端對端（需先啟動前後端）
+bash start.sh && npx playwright test
+```
+
+> 執行測試前請先安裝開發依賴：`pip install -r requirements-dev.txt`
+> E2E 首次執行需下載瀏覽器：`npx playwright install chromium`
+
+**CI**：`.github/workflows/ci.yml` 於 push 與 PR 時執行三個 job——
+後端（pytest + 覆蓋率）、前端（型別檢查／lint／單元測試／正式建置）、
+E2E（啟動前後端後跑 Playwright）。
 
 ---
 
