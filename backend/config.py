@@ -12,7 +12,7 @@ _ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 class Settings(BaseSettings):
     # 應用
     app_name: str = "MixMaster API"
-    app_version: str = "1.2.0"
+    app_version: str = "1.2.1"
     environment: str = "development"
     app_debug: bool = True
 
@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     database_url: str = "postgresql://mixmaster_user:password@localhost:5432/mixmaster_db"
 
     # 安全
-    secret_key: str = "change-me-in-production-min-32-chars"
+    secret_key: str = "change-me-in-production-min-32-chars"   # 正式環境必須覆寫
     allowed_origins: list[str] = ["*"]
 
     # JWT
@@ -38,6 +38,17 @@ class Settings(BaseSettings):
         case_sensitive = False
 
 
+DEFAULT_SECRET_KEY = "change-me-in-production-min-32-chars"
+
+
 @lru_cache
 def get_settings() -> Settings:
-    return Settings()
+    settings = Settings()
+    # 以預設密鑰簽發的 JWT 任何人都能偽造；正式環境必須攔阻，
+    # 否則此疏漏會在部署後靜默生效而無人察覺。
+    if settings.environment == "production" and settings.secret_key == DEFAULT_SECRET_KEY:
+        raise RuntimeError(
+            "SECRET_KEY 仍為預設值，正式環境不得使用。請設定足夠長度的隨機密鑰："
+            "SECRET_KEY=$(python3 -c 'import secrets; print(secrets.token_urlsafe(48))')"
+        )
+    return settings

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import '../styles/globals.css'
 import Navbar from '../components/layout/Navbar'
 import { AuthProvider } from '../components/AuthContext'
+import SyncAgent from '../components/SyncAgent'
 import { FavoritesProvider } from '../components/FavoritesContext'
 import { ProgressProvider } from '../components/ProgressContext'
 import { ThemeProvider } from '../components/ThemeContext'
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </PageTransition>
               </div>
               <AchievementChecker />
+              <SyncAgent />
             </ProgressProvider>
           </FavoritesProvider>
           </AuthProvider>

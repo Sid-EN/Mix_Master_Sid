@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { clientUrl } from '@/lib/api'
+import { clearSyncState } from '@/lib/sync'
 
 const TOKEN_KEY = 'mixmaster-token'
 
@@ -94,6 +95,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const logout = useCallback(() => {
     try { localStorage.removeItem(TOKEN_KEY) } catch { /* 忽略 */ }
+    // 清除同步狀態，避免下一位登入者沿用前一位的已同步紀錄
+    clearSyncState()
     setToken(null)
     setUser(null)
   }, [])

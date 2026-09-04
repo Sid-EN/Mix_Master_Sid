@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '@/components/AuthContext'
-import { SYNCABLE_KEYS, syncOnLogin } from '@/lib/sync'
+import { SYNCABLE_KEYS } from '@/lib/sync'
+import { SYNC_EVENT } from '@/components/SyncAgent'
 
 type Mode = 'login' | 'register'
 
@@ -26,18 +27,18 @@ export default function AccountPage() {
   const [error, setError] = useState('')
   const [syncNote, setSyncNote] = useState('')
 
-  // 登入後把本機資料與伺服器對齊
+  // 同步由 SyncAgent 統一執行，此處僅呈現結果，避免兩條路徑競態
   useEffect(() => {
     if (!token) return
-    let cancelled = false
-    syncOnLogin(token).then(({ pulled, pushed }) => {
-      if (cancelled) return
+    function onSynced(e: Event) {
+      const { pulled = [], pushed = [] } = (e as CustomEvent).detail ?? {}
       const parts = []
       if (pulled.length) parts.push(`已取回 ${pulled.length} 項`)
       if (pushed.length) parts.push(`已上傳 ${pushed.length} 項`)
       setSyncNote(parts.length ? `同步完成：${parts.join('、')}` : '所有資料皆為最新')
-    })
-    return () => { cancelled = true }
+    }
+    document.addEventListener(SYNC_EVENT, onSynced)
+    return () => document.removeEventListener(SYNC_EVENT, onSynced)
   }, [token])
 
   async function submit(e: React.FormEvent) {

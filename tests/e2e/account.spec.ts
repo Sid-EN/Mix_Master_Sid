@@ -136,3 +136,61 @@ test.describe('帳號 API 契約', () => {
     expect(res.status()).toBe(422)
   })
 })
+
+test.describe('登入後的持續同步', () => {
+  /**
+   * 迴歸：先前只在登入時同步，登入後的變更永不上傳，
+   * 下次登入還會被伺服器的舊資料覆寫而遺失。
+   */
+  test('登入後的變更會自動上傳至伺服器', async ({ page }) => {
+    const email = uniqueEmail()
+    await registerVia(page, email)
+    await page.waitForTimeout(1200)
+    const token = await page.evaluate(() => localStorage.getItem('mixmaster-token'))
+
+    await page.goto('/my-bar', { waitUntil: 'networkidle' })
+    await page.waitForTimeout(1000)
+    await page.evaluate(() =>
+      localStorage.setItem('mixmaster-my-bar', JSON.stringify(['tanqueray-gin', 'campari'])))
+
+    // 等待 debounce 後送出
+    await page.waitForTimeout(3000)
+    const onServer = await page.evaluate(async (t) => {
+      const r = await fetch('/api/v1/sync/my-bar', { headers: { Authorization: `Bearer ${t}` } })
+      return r.ok ? (await r.json()).value : null
+    }, token)
+    expect(onServer, '登入後的變更應已上傳').toEqual(['tanqueray-gin', 'campari'])
+  })
+
+  test('本機的未同步變更不會被伺服器舊資料覆寫', async ({ page }) => {
+    const email = uniqueEmail()
+    await page.goto('/my-bar', { waitUntil: 'networkidle' })
+    await page.evaluate(() =>
+      localStorage.setItem('mixmaster-my-bar', JSON.stringify(['tanqueray-gin'])))
+    await registerVia(page, email)
+    await page.waitForTimeout(1500)
+
+    // 模擬離線期間的修改：先阻斷同步請求，再改本機資料
+    await page.route('**/api/v1/sync/**', route => route.abort())
+    await page.goto('/my-bar', { waitUntil: 'networkidle' })
+    await page.evaluate(() =>
+      localStorage.setItem('mixmaster-my-bar', JSON.stringify(['tanqueray-gin', 'campari', 'aperol'])))
+    await page.waitForTimeout(2500)
+    await page.unroute('**/api/v1/sync/**')
+
+    // 回到帳號頁會觸發登入同步；本機較新，不應被覆寫
+    await page.goto('/account', { waitUntil: 'networkidle' })
+    await page.waitForTimeout(3000)
+    const local = await page.evaluate(() => JSON.parse(localStorage.getItem('mixmaster-my-bar') || '[]'))
+    expect(local, '本機的未同步變更應保留').toEqual(['tanqueray-gin', 'campari', 'aperol'])
+  })
+
+  test('登出後清除同步狀態', async ({ page }) => {
+    await registerVia(page, uniqueEmail())
+    await page.waitForTimeout(1200)
+    await page.click('text=登出')
+    await page.waitForTimeout(500)
+    const state = await page.evaluate(() => localStorage.getItem('mixmaster-sync-state'))
+    expect(state, '登出後不應殘留前一位使用者的同步紀錄').toBeNull()
+  })
+})
