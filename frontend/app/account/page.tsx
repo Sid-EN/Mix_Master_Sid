@@ -8,6 +8,7 @@ import { SYNCABLE_KEYS } from '@/lib/sync'
 import { SYNC_EVENT } from '@/components/SyncAgent'
 import PasswordSettings from '@/components/PasswordSettings'
 import BackupSettings from '@/components/BackupSettings'
+import NotificationSettings from '@/components/NotificationSettings'
 
 type Mode = 'login' | 'register'
 
@@ -113,6 +114,8 @@ export default function AccountPage() {
         </section>
 
         <PasswordSettings />
+
+        <NotificationSettings />
 
         <BackupSettings />
 

@@ -12,7 +12,7 @@ _ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 class Settings(BaseSettings):
     # 應用
     app_name: str = "MixMaster API"
-    app_version: str = "2.4.0"
+    app_version: str = "2.5.0"
     environment: str = "development"
     app_debug: bool = True
 
@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     # JWT
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 60 * 24 * 7   # 7 天
+
+    # 網頁推播（VAPID）；未設定金鑰時推播功能自動停用
+    vapid_public_key: str = ""
+    vapid_private_key: str = ""
+    vapid_subject: str = "mailto:admin@example.com"
 
     # 速率限制
     # 開發與測試時關閉，避免測試套件因限流而不穩定；正式環境預設開啟。

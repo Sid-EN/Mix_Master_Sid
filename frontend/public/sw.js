@@ -1,5 +1,5 @@
 /// MixMaster Service Worker
-const VERSION = 'v2';
+const VERSION = 'v3';
 const STATIC_CACHE = `mixmaster-static-${VERSION}`;
 const RUNTIME_CACHE = `mixmaster-runtime-${VERSION}`;
 const OFFLINE_URL = '/offline.html';
@@ -141,3 +141,42 @@ async function navigationHandler(request) {
     );
   }
 }
+
+
+/* ── 推播 ─────────────────────────────────────────────────
+   推播內容由伺服器以 JSON 傳入；若解析失敗仍顯示通用訊息，
+   否則使用者只會看到瀏覽器預設的「本網站於背景更新」。 */
+self.addEventListener('push', (event) => {
+  let payload = {};
+  try {
+    payload = event.data ? event.data.json() : {};
+  } catch {
+    payload = { body: event.data ? event.data.text() : '' };
+  }
+
+  const title = payload.title || 'MixMaster';
+  const options = {
+    body: payload.body || '',
+    icon: '/icons/icon-192.png',
+    badge: '/icons/icon-192.png',
+    data: { url: payload.url || '/' },
+    tag: payload.tag || 'mixmaster-notification',
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const target = (event.notification.data && event.notification.data.url) || '/';
+
+  // 已開啟的分頁優先聚焦，避免每次通知都開一個新視窗
+  event.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
+      for (const client of list) {
+        if (client.url.includes(target) && 'focus' in client) return client.focus();
+      }
+      return self.clients.openWindow ? self.clients.openWindow(target) : undefined;
+    })
+  );
+});

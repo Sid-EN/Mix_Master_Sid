@@ -683,6 +683,10 @@ E2E（啟動前後端後跑 Playwright）。
 | `GET /api/v1/engine/recommendations` | 個人化推薦（登入與否皆可） |
 | `GET /api/v1/backup/export` | 匯出全部資料為 JSON |
 | `POST /api/v1/backup/import` | 由備份還原（合併式） |
+| `GET /api/v1/push/public-key` | 推播公鑰（無需登入） |
+| `POST /api/v1/push/subscribe` | 登錄推播訂閱 |
+| `DELETE /api/v1/push/subscribe` | 取消訂閱 |
+| `POST /api/v1/push/test` | 對自己發送測試推播 |
 | `GET /api/v1/community/{token}/ratings` | 評分彙總（含自己的評分） |
 | `PUT /api/v1/community/{token}/ratings` | 送出或更新評分（1–5） |
 | `DELETE /api/v1/community/{token}/ratings` | 收回評分 |
@@ -724,7 +728,7 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`2.4.0`**
+**目前版本：`2.5.0`**
 
 ---
 

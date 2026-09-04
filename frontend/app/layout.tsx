@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import Navbar from '../components/layout/Navbar'
 import { AuthProvider } from '../components/AuthContext'
 import SyncAgent from '../components/SyncAgent'
+import InstallPrompt from '../components/InstallPrompt'
 import { FavoritesProvider } from '../components/FavoritesContext'
 import { ProgressProvider } from '../components/ProgressContext'
 import { ThemeProvider } from '../components/ThemeContext'
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               <AchievementChecker />
               <SyncAgent />
+              <InstallPrompt />
             </ProgressProvider>
           </FavoritesProvider>
           </AuthProvider>

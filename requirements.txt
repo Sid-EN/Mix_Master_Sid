@@ -47,6 +47,9 @@ numpy==1.26.4                 # 向量運算（風味引擎核心，flavor_wheel
 slowapi==0.1.9                # FastAPI Rate Limiting
 limits==3.9.0                 # slowapi 依賴
 
+# ── 8.5 網頁推播 (Web Push) ─────────────────────────────────
+pywebpush==2.2.0              # Web Push 協定（搭配 VAPID，不需外部推送帳號）
+
 # ── 9. CORS & 中介軟體 (Middleware) ─────────────────────────
 python-multipart==0.0.9       # 表單/文件上傳支援
 

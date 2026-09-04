@@ -50,6 +50,9 @@ class User(Base):
     recipes: Mapped[list["UserRecipe"]] = relationship(
         back_populates="user", cascade="all, delete-orphan"
     )
+    push_subscriptions: Mapped[list["PushSubscription"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
 
 
 class UserData(Base):
@@ -222,3 +225,27 @@ class RecipeComment(Base):
 
     recipe: Mapped[UserRecipe] = relationship(back_populates="comments")
     user: Mapped[User] = relationship()
+
+
+class PushSubscription(Base):
+    """
+    瀏覽器推播訂閱。
+
+    每個裝置／瀏覽器各有一組 endpoint，同一使用者可有多筆。
+    endpoint 由瀏覽器廠商的推送服務簽發，本身即為識別碼，故設為唯一。
+    """
+
+    __tablename__ = "push_subscriptions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    endpoint: Mapped[str] = mapped_column(Text, unique=True, nullable=False)
+    p256dh: Mapped[str] = mapped_column(String(255), nullable=False)
+    auth: Mapped[str] = mapped_column(String(255), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    user: Mapped[User] = relationship(back_populates="push_subscriptions")
