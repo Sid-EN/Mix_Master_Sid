@@ -738,8 +738,28 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 | **次版本**（小更版） | 向下相容的新功能 | `1.1.0` → `1.2.0` |
 | **修訂號** | 向下相容的缺陷修正 | `1.1.0` → `1.1.1` |
 
-發布新版本時請一併更新三處版本號，並確認彼此一致：
-`backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
+### 發布流程
+
+1. 更新三處版本號並確認一致：`backend/config.py` 的 `app_version`、
+   `package.json`、`frontend/package.json`
+2. 於 `CHANGELOG.md` 新增該版本區塊
+3. 提交後建立標註式 tag 並推送：
+
+```bash
+git tag -a v2.6.1 -m "簡述本次變更"
+git push origin v2.6.1
+```
+
+4. 以 CHANGELOG 的內容建立 GitHub Release：
+
+```bash
+gh release create v2.6.1 --title "v2.6.1 — 簡述" --notes-file <(...)
+# 或於 GitHub 網頁的 Releases 頁面貼上 CHANGELOG 對應區塊
+```
+
+> tag 一律加 `v` 前綴並使用標註式（`-a`），以便保留發布訊息與時間。
+> 既有版本的 tag 與 Release 均已建立，可於
+> [Releases](https://github.com/Sid-EN/Mix_Master_Sid/releases) 檢視。
 
 **目前版本：`2.6.1`**
 
