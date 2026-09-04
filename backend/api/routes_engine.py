@@ -4,10 +4,16 @@ routes_engine.py
 風味引擎 API 路由 (Flavor Engine Endpoints)
 """
 
-from fastapi import APIRouter, HTTPException, Request, status
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
+from ..auth import oauth2_scheme, optional_user
 from ..config import get_settings
+from ..db import get_db
 from ..engine.flavor_engine import FlavorEngine
+from ..engine.recommender import recommend
+from ..models.db_models import UserData
 from ..models.recipe import (
     AlternativeSuggestion,
     FlavorProfileOut,
@@ -148,3 +154,33 @@ async def get_flavor_wheel():
             str(k): v for k, v in COMPLEMENTARY_PAIRS.items()
         },
     }
+
+
+# ── 個人化推薦 ──────────────────────────────────────────────
+
+@router.get("/recommendations", summary="依收藏與酒櫃的個人化推薦")
+async def recommendations(
+    limit: int = Query(6, ge=1, le=20),
+    token: str | None = Depends(oauth2_scheme),
+    db: Session = Depends(get_db),
+):
+    """
+    以使用者收藏過的配方合成口味輪廓，推薦風味相近者。
+
+    未登入或尚無收藏時回傳評分最高的經典配方作為起點——
+    無從推論偏好時硬湊個人化結果，只會給出沒有依據的建議。
+    """
+    favorites: dict = {}
+    owned: list[str] = []
+
+    user = optional_user(token, db)
+    if user is not None:
+        rows = db.scalars(select(UserData).where(UserData.user_id == user.id)).all()
+        data = {r.key: r.value for r in rows}
+        fav = data.get("favorites")
+        if isinstance(fav, dict):
+            favorites = fav
+        if isinstance(data.get("my-bar"), list):
+            owned = [s for s in data["my-bar"] if isinstance(s, str)]
+
+    return recommend(favorites=favorites, owned=owned, limit=limit)

@@ -98,3 +98,21 @@ def get_current_user(
     if version != user.token_version:
         raise CREDENTIALS_ERROR
     return user
+
+
+def optional_user(token: str | None, db: Session) -> User | None:
+    """
+    取得目前使用者；未登入或權杖無效時回傳 None 而非拋出 401。
+
+    供「登入與否都可存取、但登入後內容更豐富」的端點使用。
+    """
+    if not token:
+        return None
+    try:
+        user_id, version = decode_token(token)
+    except HTTPException:
+        return None
+    user = db.get(User, user_id)
+    if user is None or version != user.token_version:
+        return None
+    return user

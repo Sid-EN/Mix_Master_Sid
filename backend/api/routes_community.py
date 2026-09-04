@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from ..auth import get_current_user, oauth2_scheme
+from ..auth import get_current_user, oauth2_scheme, optional_user
 from ..db import get_db
 from ..models.db_models import RecipeComment, RecipeRating, User, UserRecipe
 
@@ -43,21 +43,6 @@ def _shared_recipe(db: Session, share_token: str) -> UserRecipe:
     return row
 
 
-def _optional_user(token: str | None, db: Session) -> User | None:
-    """取得目前使用者；未登入時回傳 None 而非拋出 401。"""
-    if not token:
-        return None
-    try:
-        from ..auth import decode_token
-        user_id, version = decode_token(token)
-    except HTTPException:
-        return None
-    user = db.get(User, user_id)
-    if user is None or version != user.token_version:
-        return None
-    return user
-
-
 @router.get("/{share_token}/ratings", summary="配方的評分彙總")
 async def get_ratings(
     share_token: str,
@@ -72,7 +57,7 @@ async def get_ratings(
     count, average = stats[0], stats[1]
 
     mine = None
-    user = _optional_user(token, db)
+    user = optional_user(token, db)
     if user is not None:
         row = db.scalar(
             select(RecipeRating).where(

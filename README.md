@@ -680,6 +680,7 @@ E2E（啟動前後端後跑 Playwright）。
 
 | 端點 | 說明 |
 |---|---|
+| `GET /api/v1/engine/recommendations` | 個人化推薦（登入與否皆可） |
 | `GET /api/v1/community/{token}/ratings` | 評分彙總（含自己的評分） |
 | `PUT /api/v1/community/{token}/ratings` | 送出或更新評分（1–5） |
 | `DELETE /api/v1/community/{token}/ratings` | 收回評分 |
@@ -721,7 +722,7 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`2.2.0`**
+**目前版本：`2.3.0`**
 
 ---
 

@@ -1,5 +1,6 @@
 import { serverUrl } from '../lib/api'
 import HomeRecommendations from '../components/HomeRecommendations'
+import PersonalRecommendations from '../components/PersonalRecommendations'
 import CocktailOfTheDay from '../components/CocktailOfTheDay'
 import SeasonalRecommendations from '../components/SeasonalRecommendations'
 import { HomeHeroText, HomeCtaButtons, HomeSectionTitle } from '../components/HomeI18nSections'
@@ -151,6 +152,7 @@ export default async function HomePage() {
 
       {/* ── Recommendations ──────────────────────────────────── */}
       <ScrollReveal>
+        <PersonalRecommendations />
         <HomeRecommendations />
       </ScrollReveal>
 
