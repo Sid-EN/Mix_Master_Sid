@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
 import SearchModal from '../SearchModal'
 import FlavorPreference from '../FlavorPreference'
@@ -171,10 +172,10 @@ function MegaMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
                className="font-mono text-[11px] text-charcoal-500 hover:text-neon-cyan transition-colors tracking-wider">
               📖 API Docs ↗
             </a>
-            <a href="/health"
+            <Link href="/health"
                className="font-mono text-[11px] text-charcoal-500 hover:text-green-400 transition-colors tracking-wider">
               💚 Status
-            </a>
+            </Link>
           </div>
           <p className="font-mono text-[10px] text-charcoal-600 tracking-widest">
             MIXMASTER v1.0 · PHASE 1.5
@@ -269,7 +270,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2.5 group shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <span className="text-2xl group-hover:animate-pulse">🍹</span>
             <span className="font-display text-lg text-neon-amber text-neon-glow-amber tracking-wider">
               MixMaster
@@ -277,7 +278,7 @@ export default function Navbar() {
             <span className="hidden sm:inline font-mono text-[10px] text-charcoal-600 tracking-widest">
               v1.0
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav — clean row with key links + mega trigger */}
           <div className="hidden md:flex items-center gap-0.5">

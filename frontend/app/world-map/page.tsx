@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link'
 import { useState, useMemo } from 'react';
 import { regions, type Region } from '@/lib/regionData';
 
@@ -181,12 +182,11 @@ export default function WorldMapPage() {
   return (
     <main className="min-h-screen px-4 md:px-6 py-12 max-w-7xl mx-auto">
       {/* Back link */}
-      <a
-        href="/"
+      <Link href="/"
         className="font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors"
       >
         ← 返回首頁
-      </a>
+      </Link>
 
       {/* Header */}
       <div className="mt-8 mb-8">

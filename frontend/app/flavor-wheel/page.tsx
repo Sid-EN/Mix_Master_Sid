@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
 import { useState, useEffect, useMemo } from 'react'
 
@@ -269,12 +270,11 @@ export default function FlavorWheelPage() {
   return (
     <main className="min-h-screen px-4 md:px-8 py-12 max-w-5xl mx-auto">
       {/* Back link */}
-      <a
-        href="/"
+      <Link href="/"
         className="inline-flex items-center gap-2 font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors mb-6"
       >
         ← 返回首頁 Back to Home
-      </a>
+      </Link>
 
       {/* Header */}
       <div className="text-center mb-10 animate-fade-in">

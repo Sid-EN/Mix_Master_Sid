@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import RecipeListClient from '../RecipeListClient'
 import { serverUrl } from '../../../lib/api'
 
@@ -17,9 +18,9 @@ export default async function RecipesPage() {
   return (
     <main className="min-h-screen px-6 py-12 max-w-6xl mx-auto">
       {/* Back link */}
-      <a href="/" className="font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors inline-flex items-center gap-1">
+      <Link href="/" className="font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors inline-flex items-center gap-1">
         ← 返回首頁
-      </a>
+      </Link>
 
       {/* Page Header */}
       <div className="mt-8 mb-10">
@@ -33,12 +34,11 @@ export default async function RecipesPage() {
 
       {/* 建立自己的配方 */}
       <div className="mb-8">
-        <a
-          href="/recipes/new"
+        <Link href="/recipes/new"
           className="inline-flex items-center gap-2 px-4 py-2 font-mono text-xs border border-neon-amber/60 text-neon-amber rounded hover:bg-neon-amber/10 transition-colors"
         >
           ＋ 建立我的配方
-        </a>
+        </Link>
       </div>
 
       {/* Client-side filterable list */}

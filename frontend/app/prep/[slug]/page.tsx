@@ -44,8 +44,9 @@ function slugToDisplay(slug: string) {
     .join(' ')
 }
 
-export default async function PrepDetailPage({ params }: { params: { slug: string } }) {
-  const r = await getPrepRecipe(params.slug)
+export default async function PrepDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const r = await getPrepRecipe(slug)
   if (!r) notFound()
 
   const nameZh = r.nameZh || r.name_zh || r.name || '未知備料'

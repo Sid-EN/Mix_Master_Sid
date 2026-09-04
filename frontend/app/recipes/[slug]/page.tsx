@@ -43,8 +43,9 @@ function Stars({ count }: { count: number }) {
   )
 }
 
-export default async function RecipeDetailPage({ params }: { params: { slug: string } }) {
-  const r = await getRecipe(params.slug)
+export default async function RecipeDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const r = await getRecipe(slug)
   if (!r) notFound()
 
   const nameZh = r.nameZh || r.name_zh || r.name || '未知配方'
@@ -109,14 +110,14 @@ export default async function RecipeDetailPage({ params }: { params: { slug: str
       </div>
 
       {/* ── XP Tracking ────────────────────────────────────────── */}
-      <RecipeTracker slug={params.slug} />
+      <RecipeTracker slug={slug} />
 
       {/* ── Recipe Actions (Favorites, Rating, Notes) ────────── */}
-      <RecipeActions slug={params.slug} />
+      <RecipeActions slug={slug} />
 
       {/* ── Mark as Tried ────────────────────────────────────── */}
       <div className="mb-8">
-        <RecipeTriedButton slug={params.slug} />
+        <RecipeTriedButton slug={slug} />
       </div>
 
       {/* ── Meta Bar ─────────────────────────────────────────── */}

@@ -135,20 +135,33 @@ function describeArc(cx: number, cy: number, r: number, startAngle: number, endA
 }
 
 /* ── Confetti ─────────────────────────────────────────────── */
+interface Particle {
+  x: number; y: number; color: string
+  size: number; delay: number; shape: string; id: number
+}
+
 function ConfettiEffect() {
-  const particles = useMemo(() =>
-    Array.from({ length: 30 }, (_, i) => {
-      const angle = Math.random() * 360
-      const dist = 80 + Math.random() * 180
-      const x = Math.cos((angle * Math.PI) / 180) * dist
-      const y = Math.sin((angle * Math.PI) / 180) * dist
-      const color = SEGMENT_COLORS[i % SEGMENT_COLORS.length]
-      const size = 4 + Math.random() * 8
-      const delay = Math.random() * 0.3
-      const shape = Math.random() > 0.5 ? 'rounded-full' : 'rounded-sm'
-      return { x, y, color, size, delay, shape, id: i }
-    }), []
-  )
+  // 於 effect 中產生而非 useMemo：Math.random() 在渲染期屬不純運算，
+  // 伺服器與瀏覽器會得到不同結果而造成水合不一致。
+  const [particles, setParticles] = useState<Particle[]>([])
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: 30 }, (_, i) => {
+        const angle = Math.random() * 360
+        const dist = 80 + Math.random() * 180
+        return {
+          x: Math.cos((angle * Math.PI) / 180) * dist,
+          y: Math.sin((angle * Math.PI) / 180) * dist,
+          color: SEGMENT_COLORS[i % SEGMENT_COLORS.length],
+          size: 4 + Math.random() * 8,
+          delay: Math.random() * 0.3,
+          shape: Math.random() > 0.5 ? 'rounded-full' : 'rounded-sm',
+          id: i,
+        }
+      }),
+    )
+  }, [])
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useI18n } from './I18nContext'
 
 export function HomeHeroText() {
@@ -30,20 +31,19 @@ export function HomeCtaButtons() {
 
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-      <a href="/engine" className="btn-neon-amber">
+      <Link href="/engine" className="btn-neon-amber">
         <span className="mr-2">🧪</span>{t('home_ctaEngine')}
-      </a>
-      <a href="/academy" className="btn-neon-cyan">
+      </Link>
+      <Link href="/academy" className="btn-neon-cyan">
         <span className="mr-2">🎓</span>{t('home_ctaAcademy')}
-      </a>
-      <a
-        href="/recipes"
+      </Link>
+      <Link href="/recipes"
         className="border border-charcoal-600 text-text-secondary px-6 py-3 text-sm tracking-widest uppercase
                    hover:border-neon-amber hover:text-neon-amber transition-all duration-300
                    inline-flex items-center justify-center gap-2"
       >
         <span>📚</span>{t('home_ctaRecipes')}
-      </a>
+      </Link>
     </div>
   )
 }

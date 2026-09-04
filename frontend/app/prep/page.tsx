@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import PrepListClient from './PrepListClient'
 import { serverUrl } from '../../lib/api'
 
@@ -27,12 +28,11 @@ export default async function PrepPage() {
   return (
     <main className="min-h-screen px-6 py-12 max-w-6xl mx-auto">
       {/* Back link */}
-      <a
-        href="/"
+      <Link href="/"
         className="font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors inline-flex items-center gap-1"
       >
         ← 返回首頁
-      </a>
+      </Link>
 
       {/* Page Header */}
       <div className="mt-8 mb-10">

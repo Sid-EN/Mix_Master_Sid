@@ -28,6 +28,38 @@
 
 ---
 
+## [1.3.0] — 2026-09-04
+
+升級前端框架至現行支援版本，解除全部正式相依的安全公告。
+
+### 變更
+
+- **Next.js 14.2.35 → 16.3.4、React 18.3.1 → 19.2.8**。
+  14.x 分支已無修補版，剩餘 5 項 high 公告涵蓋整個 14.x，其中
+  「rewrites 的 HTTP request smuggling」與本專案直接相關（以 rewrites
+  代理後端）。升級後**正式相依的弱點歸零**。
+- 動態路由改為 `await params`。Next 15 起 `params` 為 Promise，
+  `/recipes/[slug]` 與 `/prep/[slug]` 需解構後使用。
+- ESLint 8 → 9 並遷移至 flat config（`eslint.config.mjs`）。
+  Next 16 移除了 `next lint`，改為直接執行 `eslint .`。
+- recharts 2.12.4 → 3.10.1（前者不支援 React 19）。
+- postcss → 8.5.23，解除 4 項 high 公告。
+- 9 個檔案的站內 `<a>` 改用 `next/link` 的 `<Link>`，恢復客戶端導覽。
+
+### 修正
+
+- `ConfettiEffect` 於 `useMemo` 中呼叫 `Math.random()`，屬渲染期不純運算，
+  伺服器與瀏覽器會得到不同結果而造成水合不一致；改於 effect 中產生。
+
+### 移除
+
+- 13 個宣告但從未被引用的前端相依：5 個 @radix-ui 元件、
+  @hookform/resolvers、@tanstack/react-query、clsx、lucide-react、
+  react-hook-form、tailwind-merge、zod、zustand。
+  其中 Radix 舊版正是阻擋 React 19 升級的原因。
+
+---
+
 ## [1.2.1] — 2026-09-04
 
 ### 修正

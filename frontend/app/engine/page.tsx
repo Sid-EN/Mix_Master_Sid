@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
 import { useState, useRef, useEffect } from 'react'
 import {
@@ -129,9 +130,9 @@ export default function EnginePage() {
   return (
     <main className="min-h-screen px-4 sm:px-6 py-12 max-w-5xl mx-auto">
       {/* Back link */}
-      <a href="/" className="inline-block font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors mb-8">
+      <Link href="/" className="inline-block font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors mb-8">
         ← 返回首頁
-      </a>
+      </Link>
 
       {/* ─── Hero Section ───────────────────────────────────── */}
       <section className="mb-14 text-center">

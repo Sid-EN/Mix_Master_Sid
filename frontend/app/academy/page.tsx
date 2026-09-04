@@ -152,12 +152,11 @@ export default function AcademyPage() {
     <main className="min-h-screen bg-bg-primary">
       {/* ── Hero ─────────────────────────────────────── */}
       <section className="relative px-6 pt-20 pb-16 max-w-6xl mx-auto text-center">
-        <a
-          href="/"
+        <Link href="/"
           className="absolute left-6 top-6 font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors"
         >
           ← 返回首頁
-        </a>
+        </Link>
 
         <p className="font-mono text-neon-amber text-xs tracking-[0.3em] uppercase mb-4 animate-fade-in">
           Mixology Academy
