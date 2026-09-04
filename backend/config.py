@@ -12,7 +12,7 @@ _ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 class Settings(BaseSettings):
     # 應用
     app_name: str = "MixMaster API"
-    app_version: str = "2.1.0"
+    app_version: str = "2.2.0"
     environment: str = "development"
     app_debug: bool = True
 

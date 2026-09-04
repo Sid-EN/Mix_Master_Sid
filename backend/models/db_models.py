@@ -9,7 +9,7 @@ db_models.py — 帳號與使用者資料的 ORM 模型
 """
 from datetime import UTC, datetime
 
-from sqlalchemy import DateTime, ForeignKey, Index, Integer, String, func
+from sqlalchemy import DateTime, ForeignKey, Index, Integer, String, Text, func
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -134,6 +134,12 @@ class UserRecipe(Base):
         back_populates="recipe", cascade="all, delete-orphan",
         order_by="UserRecipeVersion.version.desc()",
     )
+    ratings: Mapped[list["RecipeRating"]] = relationship(
+        back_populates="recipe", cascade="all, delete-orphan"
+    )
+    comments: Mapped[list["RecipeComment"]] = relationship(
+        back_populates="recipe", cascade="all, delete-orphan"
+    )
 
 
 class UserRecipeVersion(Base):
@@ -161,3 +167,58 @@ class UserRecipeVersion(Base):
     __table_args__ = (
         Index("ix_user_recipe_versions_recipe_version", "recipe_id", "version", unique=True),
     )
+
+
+class RecipeRating(Base):
+    """
+    他人對已公開配方的評分。
+
+    與 sync 中的 favorites 不同：後者是使用者自己的私人筆記與評分，
+    此處是可跨使用者彙總的公開評價，故需獨立資料表。
+    每位使用者對同一配方僅能有一筆評分。
+    """
+
+    __tablename__ = "recipe_ratings"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    recipe_id: Mapped[int] = mapped_column(
+        ForeignKey("user_recipes.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    score: Mapped[int] = mapped_column(Integer, nullable=False)   # 1–5
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=_utcnow, nullable=False
+    )
+
+    recipe: Mapped[UserRecipe] = relationship(back_populates="ratings")
+    user: Mapped[User] = relationship()
+
+    __table_args__ = (
+        Index("ix_recipe_ratings_recipe_user", "recipe_id", "user_id", unique=True),
+    )
+
+
+class RecipeComment(Base):
+    """已公開配方的留言。作者可刪自己的，配方擁有者可刪自己配方下的任一則。"""
+
+    __tablename__ = "recipe_comments"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    recipe_id: Mapped[int] = mapped_column(
+        ForeignKey("user_recipes.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    body: Mapped[str] = mapped_column(Text, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False, index=True
+    )
+
+    recipe: Mapped[UserRecipe] = relationship(back_populates="comments")
+    user: Mapped[User] = relationship()

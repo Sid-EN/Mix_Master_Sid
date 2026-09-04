@@ -674,6 +674,23 @@ E2E（啟動前後端後跑 Playwright）。
 **版本歷史**：每次更新配方前會自動保存當下內容，僅保留最近 20 版以免無限成長。
 回溯本身也會保存為新版本，因此回溯動作同樣可以還原。
 
+### 社群互動
+
+互動對象限定為**已公開分享**的配方——未公開者屬私人內容。
+
+| 端點 | 說明 |
+|---|---|
+| `GET /api/v1/community/{token}/ratings` | 評分彙總（含自己的評分） |
+| `PUT /api/v1/community/{token}/ratings` | 送出或更新評分（1–5） |
+| `DELETE /api/v1/community/{token}/ratings` | 收回評分 |
+| `GET /api/v1/community/{token}/comments` | 留言列表（**無需登入**） |
+| `POST /api/v1/community/{token}/comments` | 發表留言 |
+| `DELETE /api/v1/community/{token}/comments/{id}` | 刪除留言 |
+
+每位使用者對同一配方僅能有一筆評分，且不可為自己的配方評分。
+留言僅回傳顯示名稱，不外洩電子郵件；留言者可刪自己的，
+配方擁有者可刪自己配方下的任一則。撤銷分享後即無法再互動。
+
 **同步項目**：收藏與評分、我的酒櫃、學習進度、風味偏好、測驗紀錄、調酒人格。
 佈景主題與語言屬單一裝置的顯示偏好，刻意**不**同步。
 
@@ -704,7 +721,7 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`2.1.0`**
+**目前版本：`2.2.0`**
 
 ---
 

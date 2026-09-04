@@ -13,6 +13,7 @@ from slowapi.util import get_remote_address
 from .api.routes_academy import router as academy_router
 from .api.routes_auth import router as auth_router
 from .api.routes_batch import router as batch_router
+from .api.routes_community import router as community_router
 from .api.routes_engine import router as engine_router
 from .api.routes_ingredients import router as ingredients_router
 from .api.routes_knowledge import router as knowledge_router
@@ -72,6 +73,7 @@ if settings.rate_limit_enabled:
 # 路由
 app.include_router(auth_router,        prefix="/api/v1")
 app.include_router(sync_router,        prefix="/api/v1")
+app.include_router(community_router,   prefix="/api/v1")
 app.include_router(engine_router,      prefix="/api/v1")
 app.include_router(recipes_router,     prefix="/api/v1")
 app.include_router(academy_router,     prefix="/api/v1")

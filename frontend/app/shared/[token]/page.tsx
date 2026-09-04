@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { serverUrl } from '../../../lib/api'
+import RecipeCommunity from '../../../components/RecipeCommunity'
 
 /** 公開分享頁：憑不可猜測的權杖檢視，無需登入。撤銷後即回 404。 */
 async function getShared(token: string) {
@@ -70,6 +71,8 @@ export default async function SharedRecipePage({ params }: { params: Promise<{ t
       {r.garnish && (
         <p className="font-mono text-xs text-text-muted mb-8">🍋 裝飾：{r.garnish}</p>
       )}
+
+      <RecipeCommunity shareToken={token} />
 
       <Link href="/recipes" className="font-mono text-xs text-neon-amber hover:underline">
         瀏覽 MixMaster 配方庫 →
