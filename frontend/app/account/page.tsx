@@ -7,6 +7,7 @@ import { clientUrl } from '@/lib/api'
 import { SYNCABLE_KEYS } from '@/lib/sync'
 import { SYNC_EVENT } from '@/components/SyncAgent'
 import PasswordSettings from '@/components/PasswordSettings'
+import BackupSettings from '@/components/BackupSettings'
 
 type Mode = 'login' | 'register'
 
@@ -112,6 +113,8 @@ export default function AccountPage() {
         </section>
 
         <PasswordSettings />
+
+        <BackupSettings />
 
         <section className="glass-card p-6 mb-6">
           <h2 className="font-display text-lg text-neon-amber mb-3">☁️ 同步項目</h2>

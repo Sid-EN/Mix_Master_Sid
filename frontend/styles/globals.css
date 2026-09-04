@@ -431,3 +431,62 @@ html[data-theme="light"] .skeleton-shimmer {
   background-size: 200% 100%;
   animation: shimmer 1.5s ease-in-out infinite;
 }
+
+/* ── 列印樣式 ────────────────────────────────────────────────
+   配方常被列印出來放在吧檯邊參照。深色底在紙上既難讀又耗墨，
+   因此列印時改為白底黑字，並隱藏導覽與互動元件。 */
+@media print {
+  :root {
+    --print-fg: #111;
+  }
+
+  body {
+    background: #fff !important;
+    color: var(--print-fg) !important;
+  }
+
+  /* 導覽、互動與裝飾在紙上沒有意義 */
+  nav,
+  header,
+  footer,
+  button,
+  textarea,
+  input,
+  [data-no-print],
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    color: var(--print-fg) !important;
+    text-decoration: none !important;
+  }
+
+  /* 連結網址對紙本讀者有用，於文字後標示 */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+  }
+
+  .glass-card {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3,
+  p, span, li, dt, dd {
+    color: var(--print-fg) !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}

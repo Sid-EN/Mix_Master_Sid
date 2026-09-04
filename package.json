@@ -1,6 +1,6 @@
 {
   "name": "mixmaster",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "private": true,
   "description": "MixMaster — 全端調酒知識與創作平台（測試與 E2E 工作區）",
   "scripts": {
