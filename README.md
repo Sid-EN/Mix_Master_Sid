@@ -663,10 +663,16 @@ E2E（啟動前後端後跑 Playwright）。
 | `POST /api/v1/recipes/{id}/share` | 產生公開分享連結 |
 | `DELETE /api/v1/recipes/{id}/share` | 撤銷分享 |
 | `GET /api/v1/recipes/shared/{token}` | 以連結檢視（**無需登入**） |
+| `GET /api/v1/recipes/{id}/versions` | 版本歷史清單 |
+| `GET /api/v1/recipes/{id}/versions/{n}` | 檢視單一歷史版本 |
+| `POST /api/v1/recipes/{id}/versions/{n}/restore` | 回溯至指定版本 |
 
 分享以不可猜測的隨機權杖作為公開網址，而非直接暴露配方代號——
 後者一旦外流便無從收回。配方預設不公開，分享後可隨時撤銷，撤銷即失效。
 他人的配方一律回 404 而非 403，避免洩漏其是否存在。
+
+**版本歷史**：每次更新配方前會自動保存當下內容，僅保留最近 20 版以免無限成長。
+回溯本身也會保存為新版本，因此回溯動作同樣可以還原。
 
 **同步項目**：收藏與評分、我的酒櫃、學習進度、風味偏好、測驗紀錄、調酒人格。
 佈景主題與語言屬單一裝置的顯示偏好，刻意**不**同步。
@@ -698,7 +704,7 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`2.0.0`**
+**目前版本：`2.1.0`**
 
 ---
 

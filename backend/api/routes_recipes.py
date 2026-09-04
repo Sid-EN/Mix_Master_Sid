@@ -14,7 +14,7 @@ from ..data_store import cocktails as _load
 from ..data_store import ingredient_index as _ingredient_index
 from ..db import get_db
 from ..engine.balance_model import calculate_overall_balance_score, flavor_totals
-from ..models.db_models import User, UserRecipe
+from ..models.db_models import User, UserRecipe, UserRecipeVersion
 from ..models.recipe import RecipeMethod
 
 router = APIRouter(prefix="/recipes", tags=["Recipes 🍹"])
@@ -210,6 +210,7 @@ async def update_recipe(
     if any(r.get("id") == recipe_id for r in _load()):
         raise HTTPException(status.HTTP_403_FORBIDDEN, detail="經典配方不可修改")
     row = _own_recipe(db, recipe_id, user)
+    _snapshot(db, row)
     row.data = _validate(body)
     db.commit()
     db.refresh(row)
@@ -260,3 +261,107 @@ async def unshare_recipe(
     row.share_token = None
     db.commit()
     return None
+
+
+# ── 版本歷史 ────────────────────────────────────────────────
+# 每次更新前保存當下內容，使用者得以檢視改動並回溯。
+
+MAX_VERSIONS = 20
+
+
+def _snapshot(db: Session, row: UserRecipe) -> None:
+    """保存配方目前的內容為一個歷史版本，並汰除過舊的版本。"""
+    latest = db.scalar(
+        select(UserRecipeVersion.version)
+        .where(UserRecipeVersion.recipe_id == row.id)
+        .order_by(UserRecipeVersion.version.desc())
+        .limit(1)
+    )
+    db.add(UserRecipeVersion(
+        recipe_id=row.id,
+        version=(latest or 0) + 1,
+        data=dict(row.data),
+    ))
+    db.flush()
+
+    # 僅保留最近 MAX_VERSIONS 版，避免長期編輯導致資料無限成長
+    stale = db.scalars(
+        select(UserRecipeVersion)
+        .where(UserRecipeVersion.recipe_id == row.id)
+        .order_by(UserRecipeVersion.version.desc())
+        .offset(MAX_VERSIONS)
+    ).all()
+    for v in stale:
+        db.delete(v)
+
+
+@router.get("/{recipe_id}/versions", summary="配方的版本歷史")
+async def list_versions(
+    recipe_id: str,
+    user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    row = _own_recipe(db, recipe_id, user)
+    rows = db.scalars(
+        select(UserRecipeVersion)
+        .where(UserRecipeVersion.recipe_id == row.id)
+        .order_by(UserRecipeVersion.version.desc())
+    ).all()
+    return {
+        "total": len(rows),
+        "items": [
+            {
+                "version": v.version,
+                "nameZh": v.data.get("nameZh", ""),
+                "balanceScore": v.data.get("balanceScore"),
+                "grade": v.data.get("grade"),
+                "ingredientCount": len(v.data.get("ingredients", [])),
+                "createdAt": v.created_at.isoformat() if v.created_at else None,
+            }
+            for v in rows
+        ],
+    }
+
+
+@router.get("/{recipe_id}/versions/{version}", summary="檢視單一歷史版本")
+async def get_version(
+    recipe_id: str,
+    version: int,
+    user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    row = _own_recipe(db, recipe_id, user)
+    v = db.scalar(
+        select(UserRecipeVersion).where(
+            UserRecipeVersion.recipe_id == row.id,
+            UserRecipeVersion.version == version,
+        )
+    )
+    if v is None:
+        raise HTTPException(404, detail=f"找不到版本：{version}")
+    return _with_ingredient_names({**v.data, "version": v.version}, _ingredient_index())
+
+
+@router.post("/{recipe_id}/versions/{version}/restore", summary="回溯至指定版本")
+async def restore_version(
+    recipe_id: str,
+    version: int,
+    user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    row = _own_recipe(db, recipe_id, user)
+    target = db.scalar(
+        select(UserRecipeVersion).where(
+            UserRecipeVersion.recipe_id == row.id,
+            UserRecipeVersion.version == version,
+        )
+    )
+    if target is None:
+        raise HTTPException(404, detail=f"找不到版本：{version}")
+
+    # 回溯本身也保存為一個版本，使回溯這個動作同樣可以還原
+    _snapshot(db, row)
+    row.data = dict(target.data)
+    db.commit()
+    db.refresh(row)
+    return _with_ingredient_names(_as_dict(row), _ingredient_index())

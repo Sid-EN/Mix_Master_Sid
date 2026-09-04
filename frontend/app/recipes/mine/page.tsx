@@ -157,6 +157,14 @@ export default function MyRecipesPage() {
                   </button>
                 )}
 
+                <Link
+                  href={`/recipes/mine/${r.id}/versions`}
+                  className="px-3 py-1.5 font-mono text-xs rounded border border-charcoal-700
+                             text-text-muted hover:border-neon-amber hover:text-neon-amber transition-colors"
+                >
+                  版本歷史
+                </Link>
+
                 <button
                   onClick={() => remove(r)}
                   disabled={busyId === r.id}

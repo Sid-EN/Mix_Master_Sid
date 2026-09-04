@@ -130,3 +130,34 @@ class UserRecipe(Base):
     )
 
     user: Mapped[User] = relationship(back_populates="recipes")
+    versions: Mapped[list["UserRecipeVersion"]] = relationship(
+        back_populates="recipe", cascade="all, delete-orphan",
+        order_by="UserRecipeVersion.version.desc()",
+    )
+
+
+class UserRecipeVersion(Base):
+    """
+    配方的歷史版本。
+
+    每次更新前先保存當下內容，使用者得以檢視改動並回溯。
+    僅保留最近數版，避免長期編輯導致資料無限成長。
+    """
+
+    __tablename__ = "user_recipe_versions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    recipe_id: Mapped[int] = mapped_column(
+        ForeignKey("user_recipes.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    version: Mapped[int] = mapped_column(Integer, nullable=False)
+    data: Mapped[dict] = mapped_column(JSONB, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    recipe: Mapped[UserRecipe] = relationship(back_populates="versions")
+
+    __table_args__ = (
+        Index("ix_user_recipe_versions_recipe_version", "recipe_id", "version", unique=True),
+    )

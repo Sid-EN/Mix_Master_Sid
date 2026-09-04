@@ -151,3 +151,48 @@ test.describe('使用者配方 API', () => {
     expect((await request.delete('/api/v1/recipes/classic-negroni', { headers })).status()).toBe(403)
   })
 })
+
+test.describe('版本歷史', () => {
+  test('修改後可檢視並回溯至先前版本', async ({ page, request, errors }) => {
+    await registerVia(page, uniqueEmail())
+    const token = await page.evaluate(() => localStorage.getItem('mixmaster-token'))
+    const headers = { Authorization: `Bearer ${token}` }
+
+    const created = await request.post('/api/v1/recipes',
+      { data: { ...RECIPE, nameZh: '初版' }, headers })
+    const id = (await created.json()).id
+    await request.put(`/api/v1/recipes/${id}`,
+      { data: { ...RECIPE, nameZh: '第二版' }, headers })
+
+    await page.goto(`/recipes/mine/${id}/versions`, { waitUntil: 'networkidle' })
+    await page.waitForTimeout(1200)
+    await expect(page.getByText('初版').first()).toBeVisible()
+
+    await page.click('button:has-text("回溯至此版")')
+    await page.waitForTimeout(2000)
+
+    const mine = await (await request.get('/api/v1/recipes/mine', { headers })).json()
+    expect(mine.items[0].nameZh, '應回溯至初版').toBe('初版')
+  })
+
+  test('尚無修改時顯示空狀態', async ({ page, request }) => {
+    await registerVia(page, uniqueEmail())
+    const token = await page.evaluate(() => localStorage.getItem('mixmaster-token'))
+    const created = await request.post('/api/v1/recipes',
+      { data: RECIPE, headers: { Authorization: `Bearer ${token}` } })
+    const id = (await created.json()).id
+
+    await page.goto(`/recipes/mine/${id}/versions`, { waitUntil: 'networkidle' })
+    await expect(page.getByText('尚無歷史版本')).toBeVisible({ timeout: 10_000 })
+  })
+
+  test('版本 API 需要認證且僅擁有者可存取', async ({ request }) => {
+    const alice = await apiAccount(request)
+    const bob = await apiAccount(request)
+    const id = (await (await request.post('/api/v1/recipes',
+      { data: RECIPE, headers: alice })).json()).id
+
+    expect((await request.get(`/api/v1/recipes/${id}/versions`)).status()).toBe(401)
+    expect((await request.get(`/api/v1/recipes/${id}/versions`, { headers: bob })).status()).toBe(404)
+  })
+})
