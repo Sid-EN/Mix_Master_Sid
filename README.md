@@ -599,10 +599,10 @@ MixMaster 是完整的 Progressive Web App：
 | 資料完整性 | `tests/data/` | 16 | 材料與配方資料的隱含契約：slug 可解析、單位已知、值域合理 |
 | 引擎單元 | `tests/backend/test_balance_model.py` 等 | — | 單位換算、酸度、風味總量、家族判定、評分、替代品排序 |
 | API 整合 | `tests/backend/` | — | 全端點狀態碼、分頁、limit 邊界、404、CRUD、速率限制 |
-| 前端單元 | `frontend/__tests__/` | 39 | lib 純函式與元件；含三語系翻譯鍵一致性 |
+| 前端單元 | `frontend/__tests__/` | 133 | lib 純函式與元件；含同步邏輯、登入狀態、收藏與進度 |
 | 端對端 | `tests/e2e/` | 68 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線 |
 
-後端合計 172 項、前端 39 項、E2E 68 項。
+後端合計 356 項、前端 133 項、E2E 133 項。
 
 ```bash
 # 後端 lint 與型別檢查
@@ -741,7 +741,7 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`2.6.0`**
+**目前版本：`2.6.1`**
 
 ---
 
