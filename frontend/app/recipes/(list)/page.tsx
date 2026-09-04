@@ -39,6 +39,12 @@ export default async function RecipesPage() {
         >
           ＋ 建立我的配方
         </Link>
+        <Link
+          href="/recipes/mine"
+          className="ml-3 inline-flex items-center gap-2 px-4 py-2 font-mono text-xs border border-charcoal-700 text-text-muted rounded hover:border-neon-cyan hover:text-neon-cyan transition-colors"
+        >
+          我的配方
+        </Link>
       </div>
 
       {/* Client-side filterable list */}

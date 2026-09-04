@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
+import { useAuth } from '@/components/AuthContext'
 
 interface Ingredient {
   id: string
@@ -33,6 +34,7 @@ const emptyRow = (): Row => ({ slug: '', amount: '', unit: 'oz' })
 
 export default function NewRecipePage() {
   const router = useRouter()
+  const { token, ready } = useAuth()
   const [catalog, setCatalog] = useState<Ingredient[]>([])
   const [nameZh, setNameZh] = useState('')
   const [nameEn, setNameEn] = useState('')
@@ -72,7 +74,10 @@ export default function NewRecipePage() {
     try {
       const res = await fetch(clientUrl('/api/v1/recipes'), {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
         body: JSON.stringify({
           nameZh: nameZh.trim(),
           nameEn: nameEn.trim(),
@@ -92,12 +97,24 @@ export default function NewRecipePage() {
         const body = await res.json().catch(() => ({}))
         throw new Error(body.detail || `建立失敗（${res.status}）`)
       }
-      const created = await res.json()
-      router.push(`/recipes/${created.slug}`)
+      await res.json()
+      router.push('/recipes/mine')
     } catch (err) {
       setError(err instanceof Error ? err.message : '建立失敗')
       setSaving(false)
     }
+  }
+
+  if (ready && !token) {
+    return (
+      <main className="min-h-screen px-4 md:px-8 py-12 max-w-3xl mx-auto">
+        <h1 className="font-display text-3xl text-text-warm mb-4">建立我的配方</h1>
+        <p className="text-text-muted text-sm mb-6">配方屬於帳號，請先登入後再建立。</p>
+        <Link href="/account" className="font-mono text-xs text-neon-amber hover:underline">
+          前往登入 →
+        </Link>
+      </main>
+    )
   }
 
   return (

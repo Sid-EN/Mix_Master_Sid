@@ -645,6 +645,28 @@ E2E（啟動前後端後跑 Playwright）。
 | `GET /api/v1/sync/{key}` | 取得單一項目 |
 | `PUT /api/v1/sync/{key}` | 寫入單一項目 |
 | `DELETE /api/v1/sync/{key}` | 刪除單一項目 |
+| `POST /api/v1/auth/change-password` | 變更密碼（需目前密碼） |
+| `POST /api/v1/auth/forgot-password` | 申請重設連結 |
+| `POST /api/v1/auth/reset-password` | 以權杖設定新密碼 |
+| `PATCH /api/v1/auth/me` | 更新顯示名稱 |
+
+### 使用者配方與分享
+
+配方屬於帳號，僅擁有者可修改或刪除。
+
+| 端點 | 說明 |
+|---|---|
+| `GET /api/v1/recipes/mine` | 我的配方（需登入） |
+| `POST /api/v1/recipes` | 建立配方（需登入） |
+| `PUT /api/v1/recipes/{id}` | 更新（僅擁有者） |
+| `DELETE /api/v1/recipes/{id}` | 刪除（僅擁有者） |
+| `POST /api/v1/recipes/{id}/share` | 產生公開分享連結 |
+| `DELETE /api/v1/recipes/{id}/share` | 撤銷分享 |
+| `GET /api/v1/recipes/shared/{token}` | 以連結檢視（**無需登入**） |
+
+分享以不可猜測的隨機權杖作為公開網址，而非直接暴露配方代號——
+後者一旦外流便無從收回。配方預設不公開，分享後可隨時撤銷，撤銷即失效。
+他人的配方一律回 404 而非 403，避免洩漏其是否存在。
 
 **同步項目**：收藏與評分、我的酒櫃、學習進度、風味偏好、測驗紀錄、調酒人格。
 佈景主題與語言屬單一裝置的顯示偏好，刻意**不**同步。
@@ -676,7 +698,7 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 發布新版本時請一併更新三處版本號，並確認彼此一致：
 `backend/config.py` 的 `app_version`、`package.json`、`frontend/package.json`。
 
-**目前版本：`1.4.0`**
+**目前版本：`2.0.0`**
 
 ---
 

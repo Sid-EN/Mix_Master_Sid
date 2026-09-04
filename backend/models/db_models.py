@@ -47,6 +47,9 @@ class User(Base):
     reset_tokens: Mapped[list["PasswordResetToken"]] = relationship(
         back_populates="user", cascade="all, delete-orphan"
     )
+    recipes: Mapped[list["UserRecipe"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
 
 
 class UserData(Base):
@@ -93,3 +96,37 @@ class PasswordResetToken(Base):
     )
 
     user: Mapped[User] = relationship(back_populates="reset_tokens")
+
+
+class UserRecipe(Base):
+    """
+    使用者自建配方。
+
+    先前以 JSON 檔儲存且無擁有者概念，任何人都能刪改他人的配方。
+    改存資料庫並綁定帳號後，僅擁有者可修改。
+
+    配方內容欄位會隨功能演進，故以 JSONB 整包儲存；
+    slug 與分享權杖則獨立成欄，因需建立唯一索引供查詢。
+    """
+
+    __tablename__ = "user_recipes"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(String(120), unique=True, index=True, nullable=False)
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    data: Mapped[dict] = mapped_column(JSONB, nullable=False)
+    # 公開分享用的不可猜測權杖；為 None 代表未公開。
+    # 不直接以 slug 作為公開網址，否則無從撤銷分享。
+    share_token: Mapped[str | None] = mapped_column(
+        String(64), unique=True, index=True, nullable=True
+    )
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=_utcnow, nullable=False
+    )
+
+    user: Mapped[User] = relationship(back_populates="recipes")
