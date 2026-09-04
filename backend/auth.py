@@ -4,6 +4,8 @@ auth.py — 密碼雜湊與 JWT 存取權杖
 密碼以 bcrypt 雜湊儲存，永不以明文或可逆形式保存。
 權杖以 HS256 簽章，密鑰取自設定；正式環境務必覆寫 SECRET_KEY。
 """
+import hashlib
+import secrets
 from datetime import UTC, datetime, timedelta
 
 from fastapi import Depends, HTTPException, status
@@ -41,22 +43,43 @@ def verify_password(password: str, password_hash: str) -> bool:
         return False
 
 
-def create_access_token(user_id: int) -> str:
-    expire = datetime.now(UTC) + timedelta(minutes=settings.access_token_expire_minutes)
-    payload = {"sub": str(user_id), "exp": expire}
+def create_access_token(user_id: int, token_version: int = 0) -> str:
+    now = datetime.now(UTC)
+    payload = {
+        "sub": str(user_id),
+        "ver": token_version,
+        "iat": now,
+        "exp": now + timedelta(minutes=settings.access_token_expire_minutes),
+    }
     return jwt.encode(payload, settings.secret_key, algorithm=settings.jwt_algorithm)
 
 
-def decode_token(token: str) -> int:
-    """回傳權杖對應的使用者 id；無效時拋出 401。"""
+def decode_token(token: str) -> tuple[int, int]:
+    """回傳 (使用者 id, 權杖版本)；無效時拋出 401。"""
     try:
         payload = jwt.decode(token, settings.secret_key, algorithms=[settings.jwt_algorithm])
         subject = payload.get("sub")
         if subject is None:
             raise CREDENTIALS_ERROR
-        return int(subject)
-    except (JWTError, ValueError) as e:
+        return int(subject), int(payload.get("ver", 0))
+    except (JWTError, ValueError, TypeError) as e:
         raise CREDENTIALS_ERROR from e
+
+
+def hash_reset_token(raw: str) -> str:
+    """重設權杖為高熵隨機值，以 SHA-256 雜湊即可，不需 bcrypt 的計算成本。"""
+    return hashlib.sha256(raw.encode()).hexdigest()
+
+
+def generate_reset_token() -> tuple[str, str]:
+    """
+    產生密碼重設權杖，回傳 (明文, 雜湊)。
+
+    明文僅透過重設連結交付使用者，資料庫只存雜湊；
+    如此即使資料庫外洩，也無法據以重設他人密碼。
+    """
+    raw = secrets.token_urlsafe(32)
+    return raw, hash_reset_token(raw)
 
 
 def get_current_user(
@@ -66,8 +89,12 @@ def get_current_user(
     """取得目前登入的使用者；未提供或無效權杖一律 401。"""
     if not token:
         raise CREDENTIALS_ERROR
-    user = db.get(User, decode_token(token))
+    user_id, version = decode_token(token)
+    user = db.get(User, user_id)
     if user is None:
         # 權杖簽章有效但帳號已被刪除
+        raise CREDENTIALS_ERROR
+    # 變更或重設密碼會遞增版本，使先前簽發的權杖全部失效
+    if version != user.token_version:
         raise CREDENTIALS_ERROR
     return user

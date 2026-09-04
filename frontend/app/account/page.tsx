@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '@/components/AuthContext'
+import { clientUrl } from '@/lib/api'
 import { SYNCABLE_KEYS } from '@/lib/sync'
 import { SYNC_EVENT } from '@/components/SyncAgent'
+import PasswordSettings from '@/components/PasswordSettings'
 
 type Mode = 'login' | 'register'
 
@@ -27,6 +29,12 @@ export default function AccountPage() {
   const [error, setError] = useState('')
   const [syncNote, setSyncNote] = useState('')
 
+  // 登出後回到登入模式；否則先前切到註冊分頁的狀態會殘留，
+  // 使用者輸入既有帳號會得到「此電子郵件已註冊」而非登入
+  useEffect(() => {
+    if (!user) setMode('login')
+  }, [user])
+
   // 同步由 SyncAgent 統一執行，此處僅呈現結果，避免兩條路徑競態
   useEffect(() => {
     if (!token) return
@@ -40,6 +48,23 @@ export default function AccountPage() {
     document.addEventListener(SYNC_EVENT, onSynced)
     return () => document.removeEventListener(SYNC_EVENT, onSynced)
   }, [token])
+
+  async function requestReset() {
+    setError(''); setBusy(true)
+    try {
+      await fetch(clientUrl('/api/v1/auth/forgot-password'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
+      })
+      // 一律顯示相同訊息，不透露該信箱是否已註冊
+      setSyncNote('若該電子郵件已註冊，重設連結將寄送至該信箱')
+    } catch {
+      setError('申請失敗，請稍後再試')
+    } finally {
+      setBusy(false)
+    }
+  }
 
   async function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -85,6 +110,8 @@ export default function AccountPage() {
             </div>
           </dl>
         </section>
+
+        <PasswordSettings />
 
         <section className="glass-card p-6 mb-6">
           <h2 className="font-display text-lg text-neon-amber mb-3">☁️ 同步項目</h2>
@@ -182,6 +209,12 @@ export default function AccountPage() {
           />
         </label>
 
+        {syncNote && (
+          <p className="font-mono text-xs text-neon-cyan border border-neon-cyan/30 bg-neon-cyan/5 rounded px-3 py-2">
+            {syncNote}
+          </p>
+        )}
+
         {error && (
           <p role="alert" className="font-mono text-sm text-red-400 border border-red-500/40 bg-red-500/10 rounded px-3 py-2">
             {error}
@@ -195,6 +228,17 @@ export default function AccountPage() {
         >
           {busy ? '處理中…' : mode === 'login' ? '登入' : '建立帳號'}
         </button>
+
+        {mode === 'login' && (
+          <button
+            type="button"
+            onClick={requestReset}
+            disabled={busy || !email}
+            className="w-full font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors disabled:opacity-40"
+          >
+            忘記密碼？
+          </button>
+        )}
       </form>
 
       <div className="h-16" />

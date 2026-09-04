@@ -19,6 +19,10 @@ interface AuthContextValue {
   login: (email: string, password: string) => Promise<void>
   register: (email: string, password: string, displayName?: string) => Promise<void>
   logout: () => void
+  /** 重新取得帳號資料（更新顯示名稱後使用）。 */
+  refresh: () => Promise<void>
+  /** 直接套用新的權杖；變更密碼會使舊權杖失效，須立即改用回傳的新權杖。 */
+  applyToken: (token: string, user: AuthUser) => void
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null)
@@ -93,6 +97,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     persist(data.access_token, data.user)
   }, [persist])
 
+  const refresh = useCallback(async () => {
+    if (!token) return
+    try {
+      const res = await fetch(clientUrl('/api/v1/auth/me'), {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      if (res.ok) setUser(await res.json())
+    } catch {
+      /* 暫時性失敗時維持現有資料 */
+    }
+  }, [token])
+
+  const applyToken = useCallback((accessToken: string, u: AuthUser) => {
+    persist(accessToken, u)
+  }, [persist])
+
   const logout = useCallback(() => {
     try { localStorage.removeItem(TOKEN_KEY) } catch { /* 忽略 */ }
     // 清除同步狀態，避免下一位登入者沿用前一位的已同步紀錄
@@ -102,8 +122,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const value = useMemo(
-    () => ({ user, token, ready, login, register, logout }),
-    [user, token, ready, login, register, logout],
+    () => ({ user, token, ready, login, register, logout, refresh, applyToken }),
+    [user, token, ready, login, register, logout, refresh, applyToken],
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

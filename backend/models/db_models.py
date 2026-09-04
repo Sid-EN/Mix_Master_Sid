@@ -9,7 +9,7 @@ db_models.py — 帳號與使用者資料的 ORM 模型
 """
 from datetime import UTC, datetime
 
-from sqlalchemy import DateTime, ForeignKey, Index, String, func
+from sqlalchemy import DateTime, ForeignKey, Index, Integer, String, func
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -28,6 +28,12 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True, nullable=False)
     display_name: Mapped[str] = mapped_column(String(80), nullable=False, default="")
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
+    password_changed_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+    # 權杖版本；變更或重設密碼時遞增，使先前簽發的權杖全部失效。
+    # 不以簽發時間比對——JWT 的 iat 僅有秒精度，同一秒內簽發與撤銷無從區分。
+    token_version: Mapped[int] = mapped_column(Integer, nullable=False, server_default="0")
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
@@ -36,6 +42,9 @@ class User(Base):
     )
 
     data: Mapped[list["UserData"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
+    reset_tokens: Mapped[list["PasswordResetToken"]] = relationship(
         back_populates="user", cascade="all, delete-orphan"
     )
 
@@ -60,3 +69,27 @@ class UserData(Base):
     __table_args__ = (
         Index("ix_user_data_user_key", "user_id", "key", unique=True),
     )
+
+
+class PasswordResetToken(Base):
+    """
+    密碼重設權杖。
+
+    僅保存雜湊值：資料庫外洩時，攻擊者無法據以重設任何人的密碼。
+    權杖具時效且僅能使用一次。
+    """
+
+    __tablename__ = "password_reset_tokens"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    token_hash: Mapped[str] = mapped_column(String(128), unique=True, index=True, nullable=False)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    user: Mapped[User] = relationship(back_populates="reset_tokens")
