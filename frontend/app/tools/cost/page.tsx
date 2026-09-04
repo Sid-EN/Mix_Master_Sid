@@ -5,7 +5,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import {
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend,
-} from 'recharts'
+} from '@/components/charts/LazyCharts'
 
 /* ─── Types ─── */
 interface RecipeOption {

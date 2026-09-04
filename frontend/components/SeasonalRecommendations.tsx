@@ -1,6 +1,6 @@
 'use client'
 
-import { clientUrl } from '@/lib/api'
+import { fetchRecipes } from '@/lib/recipeCache'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getCurrentSeason, type Season } from '../lib/seasonalData'
@@ -131,12 +131,9 @@ export default function SeasonalRecommendations() {
   useEffect(() => {
     let cancelled = false
 
-    async function fetchRecipes() {
+    async function load() {
       try {
-        const res = await fetch(clientUrl('/api/v1/recipes?limit=200'))
-        if (!res.ok) throw new Error('fetch failed')
-        const data = await res.json()
-        const items: any[] = data.items || []
+        const items: any[] = await fetchRecipes()
         if (items.length === 0) throw new Error('no recipes')
 
         // Score & rank by seasonal relevance
@@ -163,7 +160,7 @@ export default function SeasonalRecommendations() {
       }
     }
 
-    fetchRecipes()
+    load()
     return () => { cancelled = true }
   }, [season])
 

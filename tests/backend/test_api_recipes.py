@@ -90,3 +90,40 @@ class TestIngredients:
 
     def test_categories(self, client):
         assert client.get("/api/v1/ingredients/categories").status_code == 200
+
+
+class TestSummaryFields:
+    """
+    列表視圖只顯示名稱、手法與等第，卻傳回含 story、steps、tips 的完整配方，
+    51 道即達 121 KB。fields=summary 僅回傳列表所需欄位。
+    """
+
+    def test_summary_is_much_smaller(self, client):
+        full = client.get("/api/v1/recipes?limit=500&fields=full")
+        summary = client.get("/api/v1/recipes?limit=500&fields=summary")
+        assert len(summary.content) < len(full.content) * 0.2, "摘要應顯著小於完整內容"
+
+    def test_summary_keeps_fields_the_list_uses(self, client):
+        items = client.get("/api/v1/recipes?limit=5&fields=summary").json()["items"]
+        for r in items:
+            for field in ["id", "slug", "nameZh", "method", "grade", "balanceScore"]:
+                assert field in r, f"列表需要 {field}"
+
+    def test_summary_omits_detail_fields(self, client):
+        items = client.get("/api/v1/recipes?limit=5&fields=summary").json()["items"]
+        for r in items:
+            for field in ["story", "steps", "tips", "ingredients"]:
+                assert field not in r, f"{field} 在列表中不顯示，不應傳送"
+
+    def test_full_remains_the_default(self, client):
+        """未指定時維持完整內容，既有整合不受影響。"""
+        items = client.get("/api/v1/recipes?limit=1").json()["items"]
+        assert "ingredients" in items[0]
+
+    def test_total_is_unaffected_by_projection(self, client):
+        full = client.get("/api/v1/recipes?limit=1&fields=full").json()["total"]
+        summary = client.get("/api/v1/recipes?limit=1&fields=summary").json()["total"]
+        assert full == summary
+
+    def test_rejects_unknown_projection(self, client):
+        assert client.get("/api/v1/recipes?fields=everything").status_code == 422

@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react'
 import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   Radar, ResponsiveContainer,
-} from 'recharts'
+} from '@/components/charts/LazyCharts'
 import { SkeletonIngredientSelector } from '../../components/Skeleton'
 
 /* ── Types ────────────────────────────────────────────────── */

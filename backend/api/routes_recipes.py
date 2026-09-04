@@ -79,6 +79,19 @@ def _validate(body: UserRecipeIn) -> dict:
     }
 
 
+# 列表視圖實際會用到的欄位。完整配方平均 2.4 KB，其中 story、steps、tips
+# 等詳情欄位在列表中並不顯示——51 道配方的完整清單達 121 KB，
+# 僅取這些欄位則為 7 KB。
+SUMMARY_FIELDS = {
+    "id", "slug", "type", "nameZh", "nameEn", "method", "glassType",
+    "balanceScore", "grade", "difficulty", "tags", "iba", "isShared",
+}
+
+
+def _summarise(recipe: dict) -> dict:
+    return {k: v for k, v in recipe.items() if k in SUMMARY_FIELDS}
+
+
 def _with_ingredient_names(recipe: dict, index: dict[str, dict]) -> dict:
     """
     補上材料的顯示名稱。
@@ -125,6 +138,10 @@ async def list_recipes(
     type: str | None = Query(None, description="classic | generated | user"),
     limit: int = Query(20, ge=1, le=500),
     offset: int = Query(0, ge=0),
+    fields: str = Query(
+        "full", pattern="^(full|summary)$",
+        description="summary 僅回傳列表所需欄位，體積約為完整內容的 6%",
+    ),
     db: Session = Depends(get_db),
 ):
     data = list(_load())
@@ -133,9 +150,12 @@ async def list_recipes(
         data = data + []
     if type:
         data = [r for r in data if r.get("type") == type]
+    window = data[offset: offset + limit]
+    if fields == "summary":
+        # 摘要不含材料，故不需解析材料名稱
+        return {"total": len(data), "items": [_summarise(r) for r in window]}
     index = _ingredient_index()
-    page = [_with_ingredient_names(r, index) for r in data[offset: offset + limit]]
-    return {"total": len(data), "items": page}
+    return {"total": len(data), "items": [_with_ingredient_names(r, index) for r in window]}
 
 
 @router.get("/mine", summary="我的配方")

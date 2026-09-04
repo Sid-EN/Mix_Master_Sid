@@ -1,6 +1,6 @@
 'use client'
 
-import { clientUrl } from '@/lib/api'
+import { fetchRecipes } from '@/lib/recipeCache'
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import FlavorPreference, { loadPref, getRecommendations } from './FlavorPreference'
@@ -34,19 +34,17 @@ export default function HomeRecommendations() {
   // Fetch recipes
   useEffect(() => {
     let cancelled = false
-    async function fetchRecipes() {
+    async function load() {
       try {
-        const res = await fetch(clientUrl('/api/v1/recipes?limit=100'))
-        if (!res.ok) throw new Error('fetch failed')
-        const data = await res.json()
-        if (!cancelled) setRecipes(data.items || [])
+        const items = await fetchRecipes()
+        if (!cancelled) setRecipes(items)
       } catch {
         // silently fail — section just won't show
       } finally {
         if (!cancelled) setLoading(false)
       }
     }
-    fetchRecipes()
+    load()
     return () => { cancelled = true }
   }, [])
 

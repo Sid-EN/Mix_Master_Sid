@@ -1,6 +1,6 @@
 'use client'
 
-import { clientUrl } from '@/lib/api'
+import { fetchRecipes } from '@/lib/recipeCache'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
@@ -74,10 +74,7 @@ export default function CocktailOfTheDay() {
 
     async function fetchAndPick() {
       try {
-        const res = await fetch(clientUrl('/api/v1/recipes?limit=200'))
-        if (!res.ok) throw new Error('fetch failed')
-        const data = await res.json()
-        const items = data.items || []
+        const items = await fetchRecipes()
         if (items.length === 0) throw new Error('no recipes')
         if (!cancelled) {
           setRecipe(items[getDayIndex(items.length)])

@@ -4,7 +4,7 @@ import { serverUrl } from '../../../lib/api'
 
 async function getRecipes() {
   try {
-    const res = await fetch(serverUrl('/api/v1/recipes?limit=500'), { cache: 'no-store' })
+    const res = await fetch(serverUrl('/api/v1/recipes?limit=500&fields=summary'), { cache: 'no-store' })
     const data = await res.json()
     return data.items || []
   } catch {

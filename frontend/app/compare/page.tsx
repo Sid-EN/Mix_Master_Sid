@@ -6,7 +6,7 @@ import Link from 'next/link'
 import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   Radar, ResponsiveContainer, Legend,
-} from 'recharts'
+} from '@/components/charts/LazyCharts'
 
 /* ── Types ────────────────────────────────────────────────── */
 interface FlavorProfile {
