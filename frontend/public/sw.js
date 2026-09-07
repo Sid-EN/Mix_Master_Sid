@@ -1,5 +1,5 @@
 /// MixMaster Service Worker
-const VERSION = 'v3';
+const VERSION = 'v4';
 const STATIC_CACHE = `mixmaster-static-${VERSION}`;
 const RUNTIME_CACHE = `mixmaster-runtime-${VERSION}`;
 
@@ -18,12 +18,24 @@ const OFFLINE_URL = path('/offline.html');
 // 執行期快取上限，避免長期瀏覽後無限成長
 const RUNTIME_MAX_ENTRIES = 120;
 
+/**
+ * 使用者主動下載的離線內容存在獨立的快取。
+ *
+ * 與執行期快取分開，才不會被 RUNTIME_MAX_ENTRIES 的淘汰機制清掉——
+ * 使用者特意下載的東西，不該因為多逛了幾頁就消失。
+ */
+const OFFLINE_CACHE = `mixmaster-offline-${VERSION}`;
+
 const PRECACHE_ASSETS = [
   path('/'),
   path('/recipes'),
   OFFLINE_URL,
   path('/manifest.json'),
   path('/icons/icon.svg'),
+  // 靜態版的資料檔：有了這幾份，搜尋與配方清單離線時仍可運作
+  path('/search-index.json'),
+  path('/recipes-summary.json'),
+  path('/recipe-data.json'),
 ];
 
 self.addEventListener('install', (event) => {
@@ -41,7 +53,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  const keep = new Set([STATIC_CACHE, RUNTIME_CACHE]);
+  const keep = new Set([STATIC_CACHE, RUNTIME_CACHE, OFFLINE_CACHE]);
   event.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(keys.filter((k) => !keep.has(k)).map((k) => caches.delete(k)))
@@ -190,4 +202,63 @@ self.addEventListener('notificationclick', (event) => {
       return self.clients.openWindow ? self.clients.openWindow(target) : undefined;
     })
   );
+});
+
+
+/* ── 完整離線 ─────────────────────────────────────────────
+   使用者可主動下載全部配方，之後即使沒有網路也讀得到未曾造訪的頁面。
+   先前只有「造訪過的頁面」會進快取，出門在外想查一杯沒看過的酒就沒轍。 */
+
+/** 逐一抓取並存入離線快取；回報進度讓介面能顯示。 */
+async function downloadForOffline(urls, reply) {
+  const cache = await caches.open(OFFLINE_CACHE);
+  let done = 0;
+  let failed = 0;
+
+  for (const url of urls) {
+    try {
+      // 明確跳過 HTTP 快取，確保存進去的是最新內容
+      const response = await fetch(url, { cache: 'reload' });
+      if (response.ok) {
+        await cache.put(url, response.clone());
+      } else {
+        failed++;
+      }
+    } catch {
+      failed++;
+    }
+    done++;
+    if (done % 5 === 0 || done === urls.length) {
+      reply({ type: 'OFFLINE_PROGRESS', done, total: urls.length, failed });
+    }
+  }
+  reply({ type: 'OFFLINE_DONE', done, total: urls.length, failed });
+}
+
+async function offlineStatus(reply) {
+  const cache = await caches.open(OFFLINE_CACHE);
+  const keys = await cache.keys();
+  reply({ type: 'OFFLINE_STATUS', count: keys.length });
+}
+
+async function clearOffline(reply) {
+  await caches.delete(OFFLINE_CACHE);
+  reply({ type: 'OFFLINE_STATUS', count: 0 });
+}
+
+self.addEventListener('message', (event) => {
+  const data = event.data || {};
+  // 回覆給發訊的分頁；沒有 port 時廣播給所有分頁
+  const reply = (message) => {
+    if (event.ports && event.ports[0]) event.ports[0].postMessage(message);
+    else self.clients.matchAll().then((cs) => cs.forEach((c) => c.postMessage(message)));
+  };
+
+  if (data.type === 'DOWNLOAD_OFFLINE' && Array.isArray(data.urls)) {
+    event.waitUntil(downloadForOffline(data.urls, reply));
+  } else if (data.type === 'OFFLINE_STATUS') {
+    event.waitUntil(offlineStatus(reply));
+  } else if (data.type === 'CLEAR_OFFLINE') {
+    event.waitUntil(clearOffline(reply));
+  }
 });

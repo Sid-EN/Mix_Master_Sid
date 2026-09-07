@@ -1,0 +1,1058 @@
+{
+  "_note": "配方內容的英文版本，以配方 id 為索引。缺少的欄位會回退到中文原文，而不是留白。",
+  "classic-daiquiri": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz white rum, ¾ oz lime juice and ¾ oz simple syrup.",
+        "Shake hard for 12 seconds until thoroughly chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with a lime wheel."
+      ],
+      "garnish": "Lime wheel",
+      "tips": "Shake time is everything — 12 seconds hits the sweet spot for dilution and temperature. Use fresh lime juice and never the bottled kind; the difference is night and day.",
+      "story": "The Daiquiri was born in Santiago de Cuba in the early 1900s, improvised by American mining engineer Jennings Cox on a hot afternoon from local rum, lime and sugar. It was later perfected at Havana's El Floridita by the legendary bartender Constantino Ribalaigua, and became Hemingway's daily ritual.",
+      "pairings": [
+        "Tempura prawns",
+        "Shrimp crêpes",
+        "Mango salad",
+        "White fish sashimi"
+      ]
+    }
+  },
+  "classic-negroni": {
+    "en": {
+      "steps": [
+        "Fill a mixing glass with plenty of ice.",
+        "Measure in 1 oz each of gin, Campari and sweet vermouth.",
+        "Stir slowly for 30 seconds until well chilled and diluted.",
+        "Strain over a large ice cube in a rocks glass.",
+        "Garnish with an orange twist, expressing the oils over the drink before dropping it in."
+      ],
+      "garnish": "Orange twist",
+      "tips": "Keep a steady rhythm while stirring so the ice spins along the wall of the glass rather than smashing about. Always express the orange peel above the rim so the mist of oil settles on the surface of the drink.",
+      "story": "In 1919, at Caffè Casoni in Florence, Count Camillo Negroni asked the bartender to replace the soda water in his usual Americano with gin. That one substitution produced one of the twentieth century's greatest cocktails, and it remains among the most-ordered drinks in bars worldwide.",
+      "pairings": [
+        "Italian salumi board",
+        "Parmesan",
+        "Olives and pickles",
+        "Bruschetta"
+      ]
+    }
+  },
+  "classic-margarita": {
+    "en": {
+      "steps": [
+        "Rim half the glass with salt (or leave it plain).",
+        "Fill a shaker with ice.",
+        "Measure in 2 oz tequila, 1 oz lime juice and ¾ oz orange liqueur.",
+        "Shake hard for 12 seconds.",
+        "Strain into an ice-filled margarita or rocks glass.",
+        "Garnish with a lime wedge."
+      ],
+      "garnish": "Salt rim and lime wedge",
+      "tips": "Salt only half the rim so the drinker can choose whether to take it with salt. A 100% agave blanco tequila gives a cleaner flavour.",
+      "story": "The Margarita's origin is much disputed; the most widely told version credits Margarita Sames, a Texan socialite who mixed one for friends at a party in Tijuana in 1948. Tequila and lime capture the Mexican sun perfectly, and the salted rim became one of the most recognisable signatures in cocktail history.",
+      "pairings": [
+        "Burritos",
+        "Guacamole with tortilla chips",
+        "Grilled fish tacos",
+        "Spicy prawns"
+      ]
+    }
+  },
+  "gin-tonic": {
+    "en": {
+      "steps": [
+        "Add large ice cubes to a highball glass — the bigger the better, as they melt more slowly.",
+        "Measure in 1.5 oz gin.",
+        "Pour 4.5 oz tonic slowly down the side of the glass to keep the bubbles.",
+        "Lift gently once with a bar spoon.",
+        "Garnish with a lime wedge or a slice of cucumber."
+      ],
+      "garnish": "Lime wedge or cucumber slice",
+      "tips": "Pouring the tonic slowly down the side of the glass is what preserves the carbonation — never stir it vigorously. Use the largest ice you can; big cubes melt slowly and won't over-dilute the drink.",
+      "story": "The Gin & Tonic dates to nineteenth-century British India, where officers mixed their bitter anti-malarial quinine with gin to make it palatable. A thoroughly practical combination that accidentally produced the most popular long drink in history, spreading from colonial bars to the whole world.",
+      "pairings": [
+        "Salt and pepper chicken",
+        "Fish and chips",
+        "Oysters",
+        "Caesar salad"
+      ]
+    }
+  },
+  "whiskey-sour": {
+    "en": {
+      "steps": [
+        "If using egg white, dry-shake without ice for 15 seconds to emulsify it.",
+        "Add ice and shake again for 12 seconds.",
+        "Double-strain into an ice-filled rocks glass.",
+        "Garnish with an orange slice and dots of Angostura on the foam."
+      ],
+      "garnish": "Orange slice with bitters dots",
+      "tips": "The dry shake is the key step for any egg-white drink: 15 seconds without ice emulsifies the protein, and only then does shaking with ice produce a dense, lasting foam. Drag a cocktail stick through the bitters to draw a pattern.",
+      "story": "The Whiskey Sour is one of the original sours, first recorded in Jerry Thomas's How to Mix Drinks in 1862. Nineteenth-century American sailors found that spirit, citrus and sugar not only tasted good but that the vitamin C warded off scurvy. The egg-white version became fashionable in the early twentieth century.",
+      "pairings": [
+        "Barbecue ribs",
+        "Caramel popcorn",
+        "Apple pie",
+        "Smoked salmon"
+      ]
+    }
+  },
+  "mojito": {
+    "en": {
+      "steps": [
+        "Put the mint leaves in the bottom of the glass and add the syrup.",
+        "Muddle gently — just enough to release the aroma, without shredding the leaves.",
+        "Add the rum and lime juice.",
+        "Fill the glass with crushed ice.",
+        "Top gently with soda water and stir once.",
+        "Garnish with a mint sprig and a lime wedge."
+      ],
+      "garnish": "Mint sprig and lime wedge",
+      "tips": "Press the mint just enough to release its oils; muddling hard bruises the veins and turns the drink bitter. Crushed ice is the soul of a Mojito — it keeps the drink cold and the flavour even throughout.",
+      "story": "The Mojito descends from the sixteenth-century Cuban 'El Draque', said to have been mixed by the crew of the English privateer Francis Drake from rough rum, lime and mint. The modern form settled in 1930s Havana at La Bodeguita del Medio, where Hemingway was a regular.",
+      "pairings": [
+        "Cuban sandwich",
+        "Grilled prawn skewers",
+        "Tropical fruit platter",
+        "Coconut shrimp"
+      ]
+    }
+  },
+  "mezcal-negroni": {
+    "en": {
+      "steps": [
+        "Fill a mixing glass with plenty of ice.",
+        "Measure in 1 oz each of mezcal, Campari and sweet vermouth.",
+        "Stir for 30 seconds.",
+        "Strain over a large ice cube in a rocks glass.",
+        "Garnish with a flamed orange peel."
+      ],
+      "garnish": "Flamed orange peel",
+      "tips": "To flame the peel, warm the skin side with a lighter first, then squeeze so the oils burst through the flame and caramelise over the drink. Choose a mezcal with moderate smoke so it doesn't bury everything else.",
+      "story": "The Mezcal Negroni came out of the craft cocktail revival of the 2000s. As mezcal rose from a traditional Oaxacan spirit to a bartender's favourite, dropping it into the Negroni's equal-parts formula was a natural experiment — and the smoke turned out to have remarkable chemistry with Campari's bitter orange.",
+      "pairings": [
+        "Smoked meat board",
+        "Dark chocolate",
+        "Grilled corn with chilli powder",
+        "Chicken mole"
+      ]
+    }
+  },
+  "old-fashioned": {
+    "en": {
+      "steps": [
+        "Add ¼ oz syrup and 2 dashes of Angostura to a rocks glass.",
+        "Stir gently to combine the syrup and bitters.",
+        "Add one large ice ball or cube.",
+        "Measure in 2 oz bourbon.",
+        "Stir slowly for 20–30 seconds until chilled and properly diluted.",
+        "Express an orange twist over the drink and rest it on the rim."
+      ],
+      "garnish": "Orange twist and a cocktail cherry",
+      "tips": "Large ice is the soul of an Old Fashioned — it melts slowly and keeps the balance intact. Syrup is easier to control than a sugar cube and dissolves evenly; a 2:1 rich syrup keeps dilution down.",
+      "story": "The Old Fashioned is the original definition of a cocktail: spirit, sugar and bitters. The Pendennis Club in Louisville, Kentucky is usually credited with it in the 1880s, when patrons asked for their drinks made the 'old-fashioned way', without the fashionable liqueurs of the day. The name stuck.",
+      "pairings": [
+        "Steak",
+        "Smoked pecans",
+        "Dark chocolate brownie",
+        "Aged cheese"
+      ]
+    }
+  },
+  "manhattan": {
+    "en": {
+      "steps": [
+        "Fill a mixing glass with plenty of ice.",
+        "Measure in 2 oz rye whiskey and 1 oz sweet vermouth.",
+        "Add 2 dashes of Angostura bitters.",
+        "Stir slowly for 30 seconds until well chilled.",
+        "Strain into a chilled coupe.",
+        "Garnish with a cocktail cherry."
+      ],
+      "garnish": "Cocktail cherry",
+      "tips": "Always refrigerate sweet vermouth once opened; oxidised vermouth will flatten the drink. Stir steadily and gently — over-dilution wrecks the structure.",
+      "story": "The Manhattan was born at New York's Manhattan Club in the 1870s, supposedly for a banquet hosted by Lady Randolph Churchill, Winston's mother. The story is doubtful, but the drink genuinely captures the opulence of Gilded Age New York and remains a fixture of serious bars worldwide.",
+      "pairings": [
+        "New York strip steak",
+        "Blue cheese",
+        "Black cherry chocolate",
+        "Roast duck breast"
+      ]
+    }
+  },
+  "cosmopolitan": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 1.5 oz vodka, 1 oz orange liqueur, 0.5 oz lime juice and 1 oz cranberry juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with a flamed orange twist or a lime wheel."
+      ],
+      "garnish": "Flamed orange twist",
+      "tips": "Use 100% cranberry juice rather than a sweetened cocktail blend — better acidity and better colour. The finished drink should be a clear, pale pink; if it's dark, there's too much cranberry.",
+      "story": "The Cosmopolitan was made famous by Dale DeGroff at New York's Rainbow Room in the 1990s, though earlier versions trace back to 1980s San Francisco. Television turned this pink drink into a symbol of metropolitan life the world over.",
+      "pairings": [
+        "Prawn cocktail",
+        "Goat's cheese salad",
+        "White chocolate raspberry tart",
+        "Smoked salmon rolls"
+      ]
+    }
+  },
+  "paloma": {
+    "en": {
+      "steps": [
+        "Salt half the rim of a highball glass (optional).",
+        "Add large ice cubes to the glass.",
+        "Measure in 2 oz tequila, 0.5 oz lime juice and 1 oz grapefruit juice.",
+        "Add ¼ oz agave syrup to taste.",
+        "Top slowly with 3 oz grapefruit soda, keeping the bubbles.",
+        "Stir once and garnish with a grapefruit slice."
+      ],
+      "garnish": "Grapefruit slice",
+      "tips": "Fresh grapefruit juice alongside the soda gives far more depth than soda alone. If you can't find grapefruit soda, soda water plus fresh grapefruit juice works.",
+      "story": "Mexicans drink far more Palomas than Margaritas; it turns up everywhere from street stalls to fine restaurants. The name means 'dove' in Spanish and its origin is lost, but it is bound up with the popularity of Mexican grapefruit sodas like Jarritos and Squirt.",
+      "pairings": [
+        "Mexican street corn",
+        "Ceviche",
+        "Spicy crisps with salsa",
+        "Pork carnitas tacos"
+      ]
+    }
+  },
+  "aperol-spritz": {
+    "en": {
+      "steps": [
+        "Fill a large wine glass with plenty of ice.",
+        "Pour in 3 oz Prosecco first.",
+        "Then add 2 oz Aperol — the order matters, as prosecco first keeps more bubbles.",
+        "Finish with 1 oz soda water.",
+        "Lift once with a bar spoon to combine.",
+        "Garnish with an orange slice."
+      ],
+      "garnish": "Orange slice",
+      "tips": "Order matters: Prosecco first, then Aperol, preserves the most carbonation. Use a large wine glass rather than a tumbler so the ice and garnish have room to show the drink off.",
+      "story": "Aperol was launched at the 1919 Padua International Fair, but the spritz habit goes back to the nineteenth century, when Austrians ruling the Veneto found Italian wine too strong and asked for it 'sprayed' (spritzen) with soda. The modern Aperol Spritz swept the world through social media in the 2000s and is now shorthand for a summer aperitivo.",
+      "pairings": [
+        "Prosciutto and melon",
+        "Fried calamari",
+        "Marinated olives",
+        "Grissini with brown butter"
+      ]
+    }
+  },
+  "dark-n-stormy": {
+    "en": {
+      "steps": [
+        "Fill a highball glass about four-fifths with ice.",
+        "Squeeze in 0.5 oz lime juice.",
+        "Add 4 oz ginger beer.",
+        "Float 2 oz dark rum by pouring slowly over the back of a bar spoon.",
+        "Do not stir — the layering is the point.",
+        "Garnish with a lime wedge."
+      ],
+      "garnish": "Lime wedge",
+      "tips": "The layers are this drink's whole visual identity — pour the rum slowly over the back of a spoon. Use a properly spicy ginger beer, not ginger ale; the contrast is much sharper.",
+      "story": "The Dark 'n' Stormy is Bermuda's national drink and inseparable from Goslings Black Seal rum — Goslings in fact holds the trademark on the name. Sailors named it for the black clouds massing over the sea before a storm, an image the dark rum floating over pale ginger beer reproduces exactly.",
+      "pairings": [
+        "Fried fish sandwich",
+        "Caribbean jerk chicken",
+        "Coconut shrimp cakes",
+        "Banoffee pie"
+      ]
+    }
+  },
+  "penicillin": {
+    "en": {
+      "steps": [
+        "Muddle three slices of fresh ginger in a shaker to release the juice.",
+        "Add 2 oz blended Scotch, ¾ oz lemon juice and ¾ oz honey syrup.",
+        "Fill with plenty of ice.",
+        "Shake hard for 15 seconds until well chilled.",
+        "Double-strain over a large ice cube in a rocks glass.",
+        "Optional: float a little peated Islay Scotch for smoke."
+      ],
+      "garnish": "Candied ginger",
+      "tips": "Make honey syrup at 3:1 honey to water; the thicker texture blends better with whisky. Press the ginger only a few times — over-muddling leaves fibrous shards that spoil the texture.",
+      "story": "The Penicillin was created by New York bartender Sam Ross at Milk & Honey in 2005 and quickly became one of the most successful modern classics. It draws on the Scottish cold remedy of hot whisky with honey and lemon; Ross added fresh ginger and the peated float that gives it its smoky signature.",
+      "pairings": [
+        "Scottish smoked salmon",
+        "Ginger biscuits",
+        "Honey-roast duck",
+        "Warm apple pie"
+      ]
+    }
+  },
+  "last-word": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in ¾ oz each of gin, lime juice, syrup and orange liqueur.",
+        "Shake hard for 12 seconds until chilled and emulsified.",
+        "Double-strain into a chilled coupe.",
+        "No garnish — let the drink speak for itself."
+      ],
+      "garnish": "None",
+      "tips": "The point of an equal-parts recipe is that nothing is optional — any deviation breaks the balance. Twelve seconds of shaking is right; longer over-dilutes and blurs the layers. Drink it straight away, as warming changes it noticeably.",
+      "story": "The Last Word was created at the Detroit Athletic Club during Prohibition in the 1920s, then forgotten for nearly eighty years. In 2004 the Seattle bartender Murray Stenson found the recipe in an old book and put it on the menu at Zig Zag Café. It caused a sensation and is now held up as the perfect equal-parts cocktail: four utterly different ingredients at ¾ oz each, producing a startling harmony.",
+      "pairings": [
+        "Herb-crusted lamb",
+        "Pesto pasta",
+        "Thyme-roasted mushrooms",
+        "Green tea madeleines"
+      ]
+    }
+  },
+  "corpse-reviver-2": {
+    "en": {
+      "steps": [
+        "Rinse a coupe with a little absinthe, swirl to coat and discard the excess.",
+        "Fill a shaker with plenty of ice.",
+        "Measure in ¾ oz each of gin, orange liqueur, lemon juice and dry vermouth.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into the absinthe-rinsed coupe.",
+        "Garnish with an orange twist."
+      ],
+      "garnish": "Orange twist",
+      "tips": "The absinthe rinse needs only a trace — an atomiser is the most precise way to do it. With four equal parts, the quality of every ingredient shows; a poor one has nowhere to hide. Serve immediately, as this drink is at its best ice cold.",
+      "story": "The Corpse Reviver #2 comes from Harry Craddock's 1930 Savoy Cocktail Book, written at London's Savoy Hotel. Craddock wryly warned that 'four of these taken in swift succession will unrevive the corpse again'. It belongs to the Corpse Reviver family of hangover cures, and its absinthe rinse — leaving a whisper of anise on the finish — is its signature. The twenty-first century cocktail revival restored it to the canon.",
+      "pairings": [
+        "English brunch board",
+        "Eggs Benedict with smoked salmon",
+        "Shaved Parmesan",
+        "Almond croissant"
+      ]
+    }
+  },
+  "jungle-bird": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 1.5 oz dark rum, 0.75 oz Campari, 1.5 oz pineapple juice, 0.5 oz lime juice and 0.5 oz syrup.",
+        "Shake hard for 12 seconds until chilled and combined.",
+        "Pour over a large ice cube in a rocks glass.",
+        "Garnish with a pineapple leaf."
+      ],
+      "garnish": "Pineapple leaf",
+      "tips": "Campari's bitterness is the heart of this drink — don't cut it back; the bitter-sweet tension is exactly what makes a Jungle Bird special. Use freshly pressed pineapple juice, as tinned lacks depth. Shake thoroughly so the Campari's red distributes evenly.",
+      "story": "The Jungle Bird was created in 1978 at the Aviary Bar of the Kuala Lumpur Hilton for the hotel's opening. Bringing an Italian bitter liqueur into the sweet world of tiki was a bold move that produced something genuinely new. Long overlooked, it was rediscovered during the 2010s revival and is now praised as a bridge between European bitters and tropical tiki.",
+      "pairings": [
+        "Malaysian satay skewers",
+        "Thai green papaya salad",
+        "Spicy coconut rice",
+        "Grilled pineapple with chilli"
+      ]
+    }
+  },
+  "caipirinha": {
+    "en": {
+      "steps": [
+        "Cut a lime into eight wedges and put them in a rocks glass.",
+        "Add ¾ oz syrup.",
+        "Muddle gently to release the juice and peel oils — don't crush hard or it turns bitter.",
+        "Fill the glass with crushed ice.",
+        "Pour in 2 oz cachaça.",
+        "Stir gently with a bar spoon to combine."
+      ],
+      "garnish": "Lime wedge",
+      "tips": "Muddle lightly — you want juice and a little peel oil, not the bitterness of the white pith. Crushed ice dilutes more evenly than cubes. If you can't find cachaça, don't substitute rum; they taste nothing alike.",
+      "story": "The Caipirinha goes back to early twentieth-century Brazil, where farmers mixed cachaça with lime and sugar at home — reputedly also as a cold remedy. As Brazilian culture spread, this simple, vivid drink became the national cocktail, formally recognised as such by the government in 2003. It embodies a Brazilian attitude to life: no elaborate technique required, just the freshest ingredients and good spirits.",
+      "pairings": [
+        "Brazilian churrasco skewers",
+        "Fried cassava",
+        "Pão de queijo",
+        "Tropical fruit platter"
+      ]
+    }
+  },
+  "aviation": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz gin, ½ oz maraschino liqueur, ¼ oz crème de violette and ¾ oz lemon juice.",
+        "Shake hard for 12–15 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with a brandied cherry (optional)."
+      ],
+      "garnish": "Brandied cherry",
+      "tips": "The violette measure is everything — ¼ oz gives the pale lilac colour and floral lift; any more and it tastes of soap. Always double-strain for a clear drink. Serve it in a clear coupe: the sky-blue tint is half the point.",
+      "story": "The Aviation was created by Hugo Ensslin at New York's Hotel Wallick in 1916 and printed in his Recipes for Mixed Drinks. The original included crème de violette, which all but vanished from the American market during Prohibition, so later recipes dropped it. Only when Rothman & Winter reintroduced it in 2007 did the drink regain its lilac colour and full flavour. The name captures the romance of the new age of flight.",
+      "pairings": [
+        "French macarons",
+        "Lavender honey cake",
+        "White chocolate raspberry tart",
+        "Prawn salad with citrus dressing"
+      ]
+    }
+  },
+  "corpse-reviver-no2": {
+    "en": {
+      "steps": [
+        "Rinse a chilled coupe with a little absinthe and discard the excess.",
+        "Fill a shaker with plenty of ice.",
+        "Measure in ¾ oz each of gin, Lillet Blanc, Cointreau and lemon juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into the absinthe-rinsed glass.",
+        "Garnish with an orange twist."
+      ],
+      "garnish": "Orange twist",
+      "tips": "The absinthe rinse is the finishing touch — a small pour, swirled and tipped out, leaves enough film for the anise to register without taking over. With four equal parts, use a jigger; precision matters. Refrigerate Lillet Blanc once opened, as it changes quickly.",
+      "story": "The Corpse Reviver #2 appears in Harry Craddock's legendary 1930 Savoy Cocktail Book, written during his time at the Savoy's American Bar. Craddock warned that 'four of these taken in swift succession will unrevive the corpse again'. It is the best known of the Corpse Reviver family, originally intended as a morning-after restorative, and the absinthe rinse gives this apparently bright drink a mysterious anise undercurrent that sets it apart.",
+      "pairings": [
+        "Foie gras mousse",
+        "Oysters with champagne sauce",
+        "Citrus panna cotta",
+        "Board of young cheeses"
+      ]
+    }
+  },
+  "paper-plane": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in ¾ oz each of bourbon, Amaro Montenegro, Aperol and lemon juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "No garnish."
+      ],
+      "garnish": "None",
+      "tips": "This drink works because the four parts are exactly equal — any deviation breaks it. A mid-weight bourbon such as Maker's Mark is ideal; anything too forceful buries the amaro's detail. Leave it unadorned and let the clean amber-gold colour do the work.",
+      "story": "The Paper Plane was created by Sam Ross at Milk & Honey in New York in 2007, named after the M.I.A. song. Built on the equal-parts logic of the Last Word and the Final Ward, it swaps in bourbon for gin and Amaro Montenegro and Aperol for Chartreuse and maraschino, producing an entirely new flavour world. It became one of the century's most successful new classics, proving the equal-parts trick was never confined to Prohibition-era recipes.",
+      "pairings": [
+        "Prosciutto and melon",
+        "Duck breast with orange",
+        "Bitter orange chocolate",
+        "Amaretti biscuits"
+      ]
+    }
+  },
+  "vieux-carre": {
+    "en": {
+      "steps": [
+        "Fill a mixing glass with plenty of ice.",
+        "Measure in ¾ oz each of rye whiskey, cognac and sweet vermouth.",
+        "Add ¼ oz Bénédictine.",
+        "Add 2 dashes each of Angostura and Peychaud's bitters.",
+        "Stir slowly for 30 seconds until chilled and diluted.",
+        "Strain over a large ice cube in a rocks glass.",
+        "Garnish with a lemon twist."
+      ],
+      "garnish": "Lemon twist",
+      "tips": "Both base spirits matter: the rye needs real spice and the cognac real roundness, and it's their complement that gives the drink its depth. Keep Bénédictine at ¼ oz — it is sweet and strongly herbal, and more will swamp everything else.",
+      "story": "The Vieux Carré takes its name from the old term for the French Quarter of New Orleans, and was created in the 1930s by Walter Bergeron, head bartender at the Hotel Monteleone's Carousel Bar. It blends the city's two cultural bloodlines — French cognac and American rye — with a French monastic liqueur, and the use of Peychaud's bitters is a nod to a local house. From ingredients to spirit, it belongs entirely to this jazz city.",
+      "pairings": [
+        "New Orleans gumbo",
+        "Pâté with sourdough",
+        "Crème brûlée",
+        "Smoked duck with figs"
+      ]
+    }
+  },
+  "sazerac": {
+    "en": {
+      "steps": [
+        "Rinse a frozen rocks glass with a little absinthe, swirl to coat and discard the excess.",
+        "Fill a mixing glass with ice.",
+        "Measure in 2 oz rye whiskey and ¼ oz demerara syrup.",
+        "Add 4 dashes of Peychaud's bitters.",
+        "Stir slowly for 30 seconds until well chilled.",
+        "Strain into the absinthe-rinsed glass, no ice.",
+        "Express a lemon peel over the surface, then discard it — the peel does not go in the glass."
+      ],
+      "garnish": "Expressed lemon oil, peel discarded",
+      "tips": "The lemon peel ritual is what makes a Sazerac a Sazerac — take only the oil and throw the peel away. That isn't laziness, it's the tradition. Keep the absinthe rinse to a thin, even film, and use demerara syrup rather than plain; its darker cane character suits rye.",
+      "story": "The Sazerac is regarded as one of America's oldest cocktails, originating at the Sazerac Coffee House in 1850s New Orleans. It was first built on the cognac Sazerac de Forge et Fils — from which the bar took its name — and switched to rye when phylloxera devastated European vineyards in the 1870s. The bitters invented by local apothecary Antoine Peychaud remain irreplaceable. Louisiana made it the official state cocktail in 2008.",
+      "pairings": [
+        "New Orleans fried oysters",
+        "Cajun-spiced prawns",
+        "Cinnamon pecan pie",
+        "Smoked andouille sausage"
+      ]
+    }
+  },
+  "toronto": {
+    "en": {
+      "steps": [
+        "Fill a mixing glass with plenty of ice.",
+        "Measure in 2 oz rye whiskey, ¼ oz Fernet-Branca and ¼ oz demerara syrup.",
+        "Add 2 dashes of Angostura bitters.",
+        "Stir slowly for 30 seconds until well chilled.",
+        "Strain over a large ice cube in a rocks glass.",
+        "Garnish with an orange twist."
+      ],
+      "garnish": "Orange twist",
+      "tips": "Fernet-Branca is ferociously assertive — ¼ oz is plenty, and more will ruin it. If you're unsure whether you like Fernet, taste a little neat first. The whole balance rests on the demerara syrup offsetting the bitterness, so that ratio is the thing to get right.",
+      "story": "The Toronto first appears in Robert Vermeire's 1922 Cocktails: How to Mix Them, named for the Canadian city and implying Canadian whisky. It languished in obscurity until the twenty-first century revival, when Fernet-Branca's popularity exploded among bartenders — particularly in San Francisco, where it became something of an industry handshake. It is essentially an Old Fashioned with Fernet standing in for some of the bitters, and that small measure adds startling complexity.",
+      "pairings": [
+        "Dark chocolate mint truffles",
+        "Smoked meat board",
+        "Maple bacon",
+        "Cinnamon apple tart"
+      ]
+    }
+  },
+  "boulevardier": {
+    "en": {
+      "steps": [
+        "Fill a mixing glass with plenty of ice.",
+        "Measure in 1½ oz bourbon, 1 oz Campari and 1 oz sweet vermouth.",
+        "Stir slowly for 30 seconds until chilled and diluted.",
+        "Strain over a large ice cube in a rocks glass.",
+        "Express an orange twist over the drink and drop it in."
+      ],
+      "garnish": "Orange twist",
+      "tips": "Adjust to taste — a strict 1:1:1 runs bitter, so an extra half ounce of bourbon (1.5:1:1) gives a rounder, better-balanced drink. A bourbon with clear sweetness and caramel works best; rye makes it drier and spicier if you prefer.",
+      "story": "The Boulevardier was created in 1920s Paris by the American writer and socialite Erskine Gwynne, who published a literary magazine there of the same name — French for someone who strolls the boulevards. He simply swapped the gin in a Negroni for American bourbon. It was first recorded in Harry McElhone's Barflies and Cocktails in 1927, and lived in the Negroni's shadow until the recent whiskey revival finally gave it its due.",
+      "pairings": [
+        "Steak tartare",
+        "Italian tripe stew",
+        "Caramel nut brownie",
+        "Aged cheddar"
+      ]
+    }
+  },
+  "naked-and-famous": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in ¾ oz each of mezcal, Aperol, green Chartreuse and lime juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "No garnish."
+      ],
+      "garnish": "None",
+      "tips": "Smoke levels vary enormously between mezcals; something moderate such as Del Maguey Vida works best, as heavy smoke buries everything else. Keep the equal parts exact at ¾ oz each — this is not a recipe to improvise with.",
+      "story": "Naked & Famous was created by Joaquín Simó at Death & Co in New York in 2011, as a variation on the Last Word with mezcal for gin and Aperol for maraschino. It shows that the magic of equal parts travels across eras and styles: smoke replaces juniper, bitter orange replaces cherry, yet the tension and balance are just as striking. It became one of Death & Co's most popular drinks and marked mezcal's arrival in modern bartending.",
+      "pairings": [
+        "Mexican grilled corn",
+        "Spiced chocolate truffles",
+        "Chipotle salsa with tortilla chips",
+        "Grilled nopal salad"
+      ]
+    }
+  },
+  "mai-tai": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz aged rum, ½ oz orgeat, ½ oz Cointreau, 1 oz lime juice and ¼ oz syrup.",
+        "Shake hard for 15 seconds until well chilled.",
+        "Pour unstrained into a rocks glass packed with crushed ice.",
+        "Garnish with a mint sprig and the spent lime shell.",
+        "Optional: float a little dark rum on top."
+      ],
+      "garnish": "Mint sprig and lime shell",
+      "tips": "The rum is the soul of a Mai Tai — use an aged Jamaican rum with real character, such as Appleton Estate, not a light white rum. Orgeat quality varies wildly; small-batch is worth seeking out. The mint isn't only decorative: you smell it as you lift the glass, and that's part of the drink.",
+      "story": "Authorship of the Mai Tai is disputed between two giants of tiki. Trader Vic (Victor Bergeron) said he mixed it at his Oakland restaurant in 1944 for friends from Tahiti, one of whom exclaimed 'Maita'i roa ae!' — Tahitian for 'out of this world'. Don the Beachcomber (Ernest Gantt) claimed an original version from 1933. Either way, Trader Vic's build — Jamaican rum with orgeat and citrus — is the accepted classic and the emblem of tiki culture.",
+      "pairings": [
+        "Hawaiian kalua pork",
+        "Coconut shrimp",
+        "Tuna poke bowl",
+        "Tropical fruit skewers"
+      ]
+    }
+  },
+  "pina-colada": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz white rum, 1½ oz cream of coconut and 3 oz pineapple juice.",
+        "Shake hard for 15 seconds until well combined and chilled.",
+        "Pour into a hurricane glass packed with crushed ice, or blend for a frozen version.",
+        "Garnish with a pineapple wedge and a cocktail cherry."
+      ],
+      "garnish": "Pineapple wedge and cocktail cherry",
+      "tips": "Cream of coconut (such as Coco López) and coconut milk are not the same thing — you need the sweetened cream. Fresh pineapple juice is far better. For a frozen version, blend with a cup of ice for a smoother texture; the shaken version is crisper and more concentrated.",
+      "story": "The Piña Colada was born in 1950s Puerto Rico, with two competing claims: the Caribe Hilton says Ramón 'Monchito' Marrero perfected it in 1954, while the Barrachina restaurant credits Ricardo García in 1963. Puerto Rico made it the official drink in 1978. The name is Spanish for 'strained pineapple'. It came to stand for an entire era's fantasy of tropical paradise, and inspired Rupert Holmes's 1979 hit Escape (The Piña Colada Song).",
+      "pairings": [
+        "Grilled prawn skewers",
+        "Coconut chicken strips",
+        "Tropical fruit salad",
+        "Coconut cake"
+      ]
+    }
+  },
+  "zombie": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 1½ oz white rum and 1½ oz aged Jamaican rum.",
+        "Add ¾ oz lime juice, ½ oz falernum, ½ oz grenadine and 1 oz pineapple juice.",
+        "Add 2 dashes of Angostura bitters.",
+        "Shake hard for 15 seconds until well combined and chilled.",
+        "Pour into a tiki mug packed with crushed ice.",
+        "Float 1 oz dark rum on top.",
+        "Garnish with a mint sprig, lime wheel and cocktail cherry."
+      ],
+      "garnish": "Mint sprig, lime wheel and cocktail cherry",
+      "tips": "All three rums earn their place: white for brightness, aged for depth, dark floated on top for aroma. Don't skip the falernum — it's a cornerstone of tiki. Pour the dark rum slowly over the back of a bar spoon so it sits on the surface. This drink is very strong; treat it with respect.",
+      "story": "The Zombie was created by Don the Beachcomber (Ernest Gantt) at his Hollywood restaurant in 1934. The story goes that he mixed it for a badly hungover businessman about to travel, who returned complaining it had left him feeling like a zombie for the whole trip. Because of its strength, Don imposed a two-per-customer limit. The original recipe was a closely guarded secret, with some ingredients labelled in code to foil imitators; Jeff 'Beachbum' Berry spent decades cracking it and published the result in 2007.",
+      "pairings": [
+        "Ribs with passionfruit glaze",
+        "Thai spring rolls",
+        "Hawaiian loco moco",
+        "Mango sticky rice"
+      ]
+    }
+  },
+  "french-75": {
+    "en": {
+      "steps": [
+        "Fill a shaker with ice.",
+        "Measure in 1 oz gin, ½ oz lemon juice and ½ oz syrup.",
+        "Shake for 10 seconds until chilled.",
+        "Double-strain into a chilled flute.",
+        "Top slowly with about 3 oz chilled champagne.",
+        "Garnish with a lemon twist."
+      ],
+      "garnish": "Lemon twist",
+      "tips": "The champagne must be properly cold and added last — shaking it destroys the bubbles. A decent brut, not necessarily expensive, is right; anything sweet unbalances the drink. Pour gently to keep the mousse alive. This is considerably stronger than it looks.",
+      "story": "The French 75 is named for the French army's devastating 75mm field gun — the kick was said to feel like being shelled. The earliest version appeared at Harry's New York Bar in Paris in 1915, from bartender Harry MacElhone, with a 1927 version printed in Here's How. Harry Craddock settled the accepted recipe — gin, lemon, sugar and champagne — in the 1930 Savoy Cocktail Book. It became a drink of victory celebrations during the Second World War and remains a first choice for New Year and other occasions.",
+      "pairings": [
+        "Quiche",
+        "Smoked salmon blinis",
+        "Oysters with lemon",
+        "Macarons"
+      ]
+    }
+  },
+  "bees-knees": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz gin, ¾ oz honey syrup and ¾ oz lemon juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with a lemon twist."
+      ],
+      "garnish": "Lemon twist",
+      "tips": "Honey syrup is honey thinned 1:1 with hot water — neat honey is too thick to combine in a cold drink. The variety matters: light floral honeys such as acacia or wildflower suit this better than dark ones. Shake thoroughly so the syrup emulsifies completely.",
+      "story": "The Bee's Knees dates from American Prohibition in the 1920s, when legal spirits were unavailable and people drank harsh 'bathtub gin'. Bartenders reached for honey and citrus to mask it. 'Bee's knees' was 1920s slang for the very best thing — and the drink lives up to it. The irony is that a recipe invented to hide flaws turns out, with good gin, to be a perfect showcase for the harmony of honey and citrus.",
+      "pairings": [
+        "Honey walnut cheese",
+        "Lemon tart",
+        "Vanilla ice cream",
+        "Crêpes with honey"
+      ]
+    }
+  },
+  "gold-rush": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz bourbon, ¾ oz honey syrup and ¾ oz lemon juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain over a large ice cube in a rocks glass."
+      ],
+      "garnish": "None",
+      "tips": "Make the honey syrup (1:1 honey to hot water) ahead and let it cool. Don't try to shake neat honey — cold honey seizes and won't combine. The beauty here is the simplicity; it needs no garnish. A sweeter bourbon such as Buffalo Trace works especially well.",
+      "story": "The Gold Rush was created by Sasha Petraske, founder of the legendary New York speakeasy Milk & Honey, in the early 2000s. It is essentially a bourbon sour with honey syrup in place of simple — a tiny substitution that transforms the drink, the honey's floral sweetness meeting the bourbon's vanilla and caramel. It captures Petraske's philosophy: no exotic ingredients or elaborate technique, just the best materials in exact proportion.",
+      "pairings": [
+        "Honey-roasted nuts",
+        "Caramel apple pie",
+        "Maple-glazed bacon",
+        "Aged Gouda"
+      ]
+    }
+  },
+  "amaretto-sour": {
+    "en": {
+      "steps": [
+        "Add all ingredients to a shaker without ice.",
+        "Dry-shake for 15 seconds to emulsify the egg white.",
+        "Add plenty of ice.",
+        "Shake hard again for 12–15 seconds until well chilled.",
+        "Double-strain over a large ice cube in a rocks glass.",
+        "Draw a pattern on the foam with Angostura bitters."
+      ],
+      "garnish": "Angostura bitters art",
+      "tips": "The bourbon is what lifts this drink from ordinary to excellent — it supplies the strength and depth the almond liqueur lacks. The dry shake is essential for any egg-white drink: emulsify first without ice, then chill with it. Use pasteurised egg white if raw egg is a concern.",
+      "story": "The Amaretto Sour was everywhere in 1970s and 80s American bars, but most versions were amaretto and bottled sour mix — cloying enough that serious bartenders despised it. In 2012 Jeffrey Morgenthaler published a rebuilt version: bourbon for backbone, fresh lemon in place of sour mix, and egg white for texture. It changed the drink's reputation entirely, from a joke to a respected classic, and stands as one of the revival's great rescues.",
+      "pairings": [
+        "Almond tuiles",
+        "Tiramisu",
+        "Honey-roasted almonds",
+        "Panna cotta"
+      ]
+    }
+  },
+  "white-russian": {
+    "en": {
+      "steps": [
+        "Add a large ice cube to a rocks glass.",
+        "Pour in 2 oz vodka.",
+        "Add 1 oz Kahlúa.",
+        "Stir gently to combine.",
+        "Float 1 oz cream by pouring slowly over the back of a bar spoon.",
+        "Stir it in or leave it layered, as you prefer."
+      ],
+      "garnish": "None",
+      "tips": "The floated cream is the classic presentation — pour it slowly over the back of a spoon for clean layers. You can stir it through like The Dude, or enjoy watching it marble. Use full-fat cream; anything lighter is too thin to float.",
+      "story": "The White Russian descends from the Black Russian, created in 1949 by Gustave Tops at the Hotel Metropole in Brussels for Perle Mesta, the American ambassador to Luxembourg — vodka and Kahlúa, an East-meets-West drink for the Cold War. Someone added cream in the 1960s. What truly immortalised it was the Coen brothers' 1998 film The Big Lebowski, in which Jeff Bridges's Dude drinks them continuously, winning a dated cocktail an entirely new generation of devotees.",
+      "pairings": [
+        "Chocolate brownie",
+        "Tiramisu",
+        "Coffee ice cream",
+        "Caramel popcorn"
+      ]
+    }
+  },
+  "gimlet": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz gin, ¾ oz lime juice and ¾ oz syrup.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with a lime wheel."
+      ],
+      "garnish": "Lime wheel",
+      "tips": "With only three ingredients, each one has to be good. The lime must be freshly squeezed — juice more than four hours old loses noticeably. There are two camps on proportions: traditionalists use Rose's lime cordial (already sweetened), moderns use fresh lime plus syrup. Try both and pick your side.",
+      "story": "The Gimlet's origins lie in the Royal Navy's fight against scurvy. In the late nineteenth century, Surgeon Rear-Admiral Sir Thomas Gimlette is said to have encouraged sailors to mix their gin ration with Rose's lime juice to get enough vitamin C. Raymond Chandler wrote in The Long Goodbye (1953) that 'a real gimlet is half gin and half Rose's Lime Juice and nothing else'. The modern fresh-lime version turned a sweet nostalgia drink into a crisp and elegant classic.",
+      "pairings": [
+        "Chilled prawns",
+        "Vietnamese summer rolls",
+        "Sashimi platter",
+        "Lime coconut tart"
+      ]
+    }
+  },
+  "tom-collins": {
+    "en": {
+      "steps": [
+        "Fill a shaker with ice.",
+        "Measure in 2 oz gin, 1 oz lemon juice and ¾ oz syrup.",
+        "Shake for 10 seconds until chilled.",
+        "Strain into an ice-filled collins glass.",
+        "Top with about 3 oz chilled soda water.",
+        "Lift once gently to combine.",
+        "Garnish with a lemon wheel and a cocktail cherry."
+      ],
+      "garnish": "Lemon wheel and cocktail cherry",
+      "tips": "Add the soda last and make sure it's properly cold — warm soda goes flat almost immediately. One gentle lift is enough; over-stirring costs you the carbonation. Drink it promptly, as a flat Collins has lost the point. The tall, narrow glass helps hold the bubbles.",
+      "story": "The Tom Collins owes its name to a mass practical joke in 1874 New York — the Great Tom Collins Hoax. People would tell a friend that 'Tom Collins is saying terrible things about you', sending them off to hunt for a man who did not exist. Quick-witted bartenders invented a drink of that name so the furious searchers had something to order. It builds on the earlier John Collins, made with Dutch genever; using Old Tom gin changed the first name from John to Tom.",
+      "pairings": [
+        "English sandwiches",
+        "Caesar salad",
+        "Fish and chips",
+        "Cucumber sandwiches"
+      ]
+    }
+  },
+  "moscow-mule": {
+    "en": {
+      "steps": [
+        "Fill a copper mug with plenty of ice.",
+        "Pour in 2 oz vodka.",
+        "Squeeze in the juice of half a lime.",
+        "Top with about 4 oz chilled ginger beer.",
+        "Lift once gently to combine.",
+        "Garnish with a lime wedge."
+      ],
+      "garnish": "Lime wedge",
+      "tips": "The copper mug isn't only decorative — copper conducts heat well, so the mug goes cold fast, and the feel and temperature are part of the drink. Ginger beers vary hugely in heat; pick one with moderate spice and lively carbonation. Go easy on the lime: the star here is the ginger, not the citrus.",
+      "story": "The Moscow Mule was invented in 1941 at the Cock'n'Bull in Los Angeles, in a perfect piece of commercial matchmaking. John G. Martin, the American distributor for Smirnoff, couldn't shift vodka; bar owner Jack Morgan was stuck with unsold ginger beer; and a copper merchant had mugs nobody wanted. Martin toured American bars with a Polaroid camera, photographing bartenders holding the copper mug — arguably one of the first social-media marketing campaigns. It almost single-handedly took vodka from obscurity to America's best-selling spirit.",
+      "pairings": [
+        "Thai spring rolls",
+        "Ginger pork",
+        "Spicy prawn cakes",
+        "Sushi platter"
+      ]
+    }
+  },
+  "mint-julep": {
+    "en": {
+      "steps": [
+        "Put 8–10 mint leaves and ½ oz syrup in the bottom of a silver or copper julep cup.",
+        "Press the mint gently — don't tear it — to release the oils.",
+        "Add 2½ oz bourbon.",
+        "Pack with crushed ice, mounded above the rim.",
+        "Stir gently with a bar spoon until the cup frosts.",
+        "Garnish with a generous bouquet of mint set beside the straw."
+      ],
+      "garnish": "Mint bouquet",
+      "tips": "Press the mint a few times only — never shred it, or the bitter chlorophyll comes out. Crushed ice is the soul of a julep: plenty of it, mounded high. Place the mint next to the straw so you smell it with every sip. If you have a silver cup, hold it by the base and let the frost form; that's the proper way.",
+      "story": "The Mint Julep goes back to the late eighteenth-century American South and is one of the country's oldest cocktails. Since 1938 it has been the official drink of the Kentucky Derby, where over 120,000 are served each year. The traditional silver cup frosts instantly in the hand — handsome and practical at once. Southern etiquette holds that you grip only the base or the rim so as not to spoil the frost. Mark Twain wrote that excessively warm weather was intolerable 'unless you have a mint julep'.",
+      "pairings": [
+        "Southern fried chicken",
+        "Kentucky country ham",
+        "Peach pie",
+        "Cornbread"
+      ]
+    }
+  },
+  "rusty-nail": {
+    "en": {
+      "steps": [
+        "Add a large ice cube to a rocks glass.",
+        "Pour in 1½ oz Scotch whisky.",
+        "Add ¾ oz Drambuie.",
+        "Stir gently to combine.",
+        "Garnish with a lemon twist."
+      ],
+      "garnish": "Lemon twist",
+      "tips": "The Drambuie ratio is everything — too much is cloying, too little and the drink loses its character. The classic is 2:1 whisky to Drambuie; dial it back to 2:0.75 if you prefer it drier. The whisky changes the drink completely: a blend such as Johnnie Walker Black gives roundness, a single malt more personality.",
+      "story": "The Rusty Nail was the drink of 1960s New York, beloved of the Rat Pack and the city's social set. Drambuie is a Scotch-based liqueur with honey and herbs whose recipe is said to date to 1745, given to the MacKinnon family by Bonnie Prince Charlie in gratitude during his exile. Explanations of the name vary — that it was stirred with a rusty nail, or that it is 'as tough as a rusty nail'. Either way it belongs to an age when whisky cocktails were still a rarity.",
+      "pairings": [
+        "Scottish tablet",
+        "Honey-roasted walnuts",
+        "Oat biscuits",
+        "Smoked salmon"
+      ]
+    }
+  },
+  "sidecar": {
+    "en": {
+      "steps": [
+        "Wet half the rim of a coupe with lemon and dip it in caster sugar.",
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz cognac, ¾ oz Cointreau and ¾ oz lemon juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into the prepared glass.",
+        "Garnish with an orange twist."
+      ],
+      "garnish": "Half sugar rim and orange twist",
+      "tips": "A half rim is the modern standard — sugar only the outer half so the drinker can choose their side. Cognac choice matters: VSOP is ideal for mixing, VS is too young to have depth, and XO is both expensive and lost among the other ingredients. Don't swap Cointreau for a cheap triple sec; the gap is wide.",
+      "story": "The Sidecar's origins are contested between Paris and London — either Harry MacElhone at Harry's New York Bar in 1920s Paris, or Pat MacGarry at Buck's Club in London. The name supposedly came from a regular who always arrived in a motorcycle sidecar. It is a model of the sour structure — spirit, citrus, sweet — with cognac's elegance standing in for whiskey's swagger. The traditional full sugar rim has largely given way to the half rim, leaving the choice to the drinker.",
+      "pairings": [
+        "Crème brûlée",
+        "Duck à l'orange",
+        "Almond croissant",
+        "Candied orange chocolate"
+      ]
+    }
+  },
+  "clover-club": {
+    "en": {
+      "steps": [
+        "Add all ingredients to a shaker without ice.",
+        "Dry-shake for 15 seconds to emulsify the egg white.",
+        "Add plenty of ice.",
+        "Shake hard again for 12–15 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Optionally dot the foam with raspberry syrup."
+      ],
+      "garnish": "Fresh raspberries",
+      "tips": "The dry shake is essential for egg-white drinks: emulsify first without ice, then chill with it. Homemade raspberry syrup — muddled fresh berries, sugar, strained — is far better than shop-bought. The foam is this drink's face, so shake properly.",
+      "story": "The Clover Club takes its name from a gentlemen's club founded in 1882 at Philadelphia's Bellevue-Stratford Hotel, whose members included lawyers, bankers and politicians. It was a signature of Philadelphia society before Prohibition. Afterwards it faded, and Esquire even listed it among the ten worst drinks in 1934. The 2000s revival rehabilitated it entirely — a New York bar named after it opened in 2008 — and the pink egg-white foam has made it one of the most photogenic classics of the Instagram age.",
+      "pairings": [
+        "Raspberry macarons",
+        "White chocolate mousse",
+        "Strawberry tart",
+        "Rose-petal Turkish delight"
+      ]
+    }
+  },
+  "hemingway-daiquiri": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz white rum, ¾ oz lime juice, ½ oz grapefruit juice and ½ oz maraschino liqueur.",
+        "Shake hard for 12–15 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with a lime wheel."
+      ],
+      "garnish": "Lime wheel",
+      "tips": "This is drier than a classic Daiquiri; if it reads too tart, add ¼ oz simple syrup. The grapefruit must be freshly squeezed, and pink gives more flavour than white. Keep the maraschino at ½ oz or less, or it starts to taste of cough syrup.",
+      "story": "The Hemingway Daiquiri, also called the Papa Doble, was made for Ernest Hemingway by Constantino Ribalaigua at El Floridita in Havana. Hemingway avoided sugar because of his diabetes, so the syrup was dropped in favour of grapefruit and maraschino. He drank it in double measures and was said to manage a dozen in an afternoon. He had his own seat at El Floridita, where a bronze statue of him still stands. Modern versions usually restore a little syrup, as the sugarless original is punishingly dry for most palates.",
+      "pairings": [
+        "Cuban sandwich",
+        "Grilled prawns with lime butter",
+        "Grapefruit tart",
+        "Prawn and avocado salsa"
+      ]
+    }
+  },
+  "blood-and-sand": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in ¾ oz each of Scotch whisky, sweet vermouth, cherry liqueur and orange juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Garnish with an orange twist."
+      ],
+      "garnish": "Orange twist",
+      "tips": "The orange juice must be freshly squeezed — made with carton juice this is simply a different, worse drink. Cherry Heering is preferable to maraschino for a fuller flavour, though maraschino will do. A blended Scotch is fine; heavy peat is not wanted here.",
+      "story": "Blood & Sand is named for the 1922 bullfighting film starring Rudolph Valentino, and first appears in Harry Craddock's 1930 Savoy Cocktail Book. It has long divided opinion — many bartenders find Scotch and orange juice an odd pairing and call it the drink that shouldn't work but does. The revival prompted a fresh look, and with good ingredients, especially fresh orange and a proper cherry liqueur, the four unlikely parts do reach a surprising harmony.",
+      "pairings": [
+        "Spanish jamón",
+        "Roasted pepper tapas",
+        "Black cherry chocolate",
+        "Manchego with cherry preserve"
+      ]
+    }
+  },
+  "bramble": {
+    "en": {
+      "steps": [
+        "Fill a rocks glass with crushed ice.",
+        "Pour in 2 oz gin, ¾ oz lemon juice and ½ oz syrup.",
+        "Stir gently to combine.",
+        "Mound more crushed ice above the rim.",
+        "Drizzle ½ oz Chambord or crème de mûre over the ice and let it bleed down.",
+        "Garnish with fresh blackberries and a lemon wheel."
+      ],
+      "garnish": "Fresh blackberries and lemon wheel",
+      "tips": "Drizzle the blackberry liqueur over the ice at the very end and let it seep down on its own — that gradient is the Bramble's signature. Don't stir it in; the drink is meant to shift from tart to sweet as you go. Use plenty of finely crushed ice so the liqueur can percolate slowly.",
+      "story": "The Bramble was created by the London legend Dick Bradsell at Fred's Club in 1984, inspired by childhood memories of picking blackberries in the hedgerows of the Isle of Wight. He turned that nostalgia into a gin drink where the liqueur bleeding down through crushed ice mimics juice dripping through a bramble bush. It is one of Britain's most important contributions to world cocktail culture, and — along with the Espresso Martini — the reason Bradsell is regarded as the father of modern British bartending.",
+      "pairings": [
+        "Scones with jam",
+        "Berry yoghurt parfait",
+        "Duck breast with berry sauce",
+        "Lemon drizzle cake"
+      ]
+    }
+  },
+  "pisco-sour": {
+    "en": {
+      "steps": [
+        "Add pisco, lime juice, syrup and egg white to a shaker without ice.",
+        "Dry-shake for 15 seconds to emulsify the egg white.",
+        "Add plenty of ice.",
+        "Shake hard again for 12–15 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Dot 3 dashes of Angostura on the foam and draw a pattern."
+      ],
+      "garnish": "Angostura bitters art",
+      "tips": "The dry shake is what makes this drink: the egg white has to emulsify fully without ice before you can build a thick, lasting foam. The bitters aren't only decorative — you smell them with every sip. Pisco quality matters; Peruvian pisco from Quebranta grapes is the most traditional choice.",
+      "story": "Authorship of the Pisco Sour is one of the fiercest disputes between Peru and Chile. The Peruvian record is earlier: the American bartender Victor Vaughen Morris, who moved to Peru in 1903, popularised the drink at Morris' Bar in Lima in the 1920s. Chile claims older roots. Peru declared the first Saturday of February 'Pisco Sour Day' in 2003, and the argument has reached diplomatic level, with both countries claiming pisco as their own. Whoever is right, the cloud-like foam and precise sweet-sour balance have won over the world.",
+      "pairings": [
+        "Peruvian ceviche",
+        "Andean corn",
+        "Beef carpaccio with lime",
+        "Fried calamari"
+      ]
+    }
+  },
+  "harvey-wallbanger": {
+    "en": {
+      "steps": [
+        "Fill a highball glass with ice.",
+        "Pour in 1½ oz vodka.",
+        "Add about 4 oz fresh orange juice.",
+        "Stir gently to combine.",
+        "Float ½ oz Galliano over the back of a bar spoon.",
+        "Garnish with an orange slice."
+      ],
+      "garnish": "Orange slice",
+      "tips": "The Galliano must float rather than be stirred in — its vanilla and anise register best at the surface, right under your nose. Fresh orange juice is far better than carton. This is really an upgraded Screwdriver, and that half ounce of Galliano is precisely what makes it interesting.",
+      "story": "The Harvey Wallbanger comes wrapped in 1970s California. The story goes that a surfer named Harvey, having lost a contest at Manhattan Beach, drowned his sorrows in Galliano-laced Screwdrivers and kept walking into walls on the way out. The likelier version is that it was a carefully engineered Galliano marketing campaign: the brand hired salesman George Bednar to push the recipe across American bars, complete with a cartoon Harvey. Either way it became an emblem of 1970s American bar culture.",
+      "pairings": [
+        "French toast with orange sauce",
+        "Panna cotta",
+        "Roast chicken with citrus salad",
+        "Vanilla ice cream"
+      ]
+    }
+  },
+  "pornstar-martini": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz vodka, 1 oz passion fruit purée, ½ oz vanilla syrup and ½ oz lime juice.",
+        "Shake hard for 12 seconds until well chilled.",
+        "Double-strain into a chilled coupe.",
+        "Float half a fresh passion fruit on the surface.",
+        "Serve with a small glass of chilled Prosecco alongside."
+      ],
+      "garnish": "Half a fresh passion fruit",
+      "tips": "The purée decides everything — scoop fresh passion fruit or use good frozen purée. Vanilla syrup is easy to make at home by simmering a split pod in sugar syrup. Don't skip the Prosecco sidecar; it's part of the drink. Sip the fizz first, then the cocktail, and notice the contrast. The floating half fruit is both garnish and flavour.",
+      "story": "The Pornstar Martini was created by the British bartender Douglas Ankrah at the Townhouse in Soho, London, in 2002. Ankrah said the idea came from a visit to a club in Cape Town — bold, glamorous and unapologetically pleasure-seeking. The Prosecco sidecar, sipped to clear the palate before the drink itself, became a phenomenon in British bars; by 2018 surveys had it overtaking the Mojito as Britain's most popular cocktail. Ankrah died in 2021, but his creation continues to win the world over.",
+      "pairings": [
+        "Passion fruit cheesecake",
+        "Mango sticky rice",
+        "Grilled prawns with tropical salsa",
+        "Assorted macarons"
+      ]
+    }
+  },
+  "penicillin-okinawa": {
+    "en": {
+      "steps": [
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz Japanese whisky, ¾ oz honey syrup, ¾ oz lemon juice and ¼ oz ginger syrup.",
+        "Shake hard for 12–15 seconds until well chilled.",
+        "Double-strain over a large ice cube in a rocks glass.",
+        "Float ¼ oz Laphroaig over the back of a bar spoon.",
+        "Garnish with candied ginger."
+      ],
+      "garnish": "Candied ginger",
+      "tips": "The Laphroaig float is the soul of the drink — the peat smoke hits your nose as you lift the glass and adds a whole dimension. Homemade ginger syrup (fresh juice and sugar, 1:1) is sharper than shop-bought. Choose a soft, refined Japanese whisky so it blends with the honey and ginger rather than fighting them.",
+      "story": "The Penicillin was created by Sam Ross at Milk & Honey in New York in 2005 and is widely regarded as the greatest new classic of the twenty-first century. The original uses blended Scotch with an Islay float. This Okinawa variation swaps in a Japanese whisky such as Nikka Coffey Grain, whose gentler texture gives the honey and ginger a more elegant, eastern character while keeping the Laphroaig float as the finishing stroke. The name honours the way Japanese whisky married Scottish tradition to eastern aesthetics — much as this drink balances eastern softness against western fire.",
+      "pairings": [
+        "Ginger pork",
+        "Miso-glazed cod",
+        "Honey yuzu cake",
+        "Smoked eel sushi"
+      ]
+    }
+  },
+  "negroni-sbagliato": {
+    "en": {
+      "steps": [
+        "Add a large ice cube to a rocks glass.",
+        "Pour in 1 oz Campari.",
+        "Add 1 oz sweet vermouth.",
+        "Stir gently to combine.",
+        "Top with about 1½ oz chilled Prosecco.",
+        "Stir once more, gently.",
+        "Garnish with an orange slice."
+      ],
+      "garnish": "Orange slice",
+      "tips": "Add the Prosecco last and handle it gently to keep the bubbles alive. Don't over-stir — one or two soft lifts is enough. It is much lower in alcohol than a standard Negroni, which makes it an ideal aperitivo. Use a good brut Prosecco; anything sweet loses the bitter-sweet balance.",
+      "story": "The Negroni Sbagliato — Italian for 'mistaken Negroni' — was born at Bar Basso in Milan in 1972, when bartender Mirko Stocchetto reached for a bottle of sparkling wine instead of gin in the rush. The happy accident produced a new classic, and Bar Basso is still known for its oversized version. In 2022 the actor Emma D'Arcy answered an interview question about their favourite drink with 'Negroni Sbagliato… with prosecco in it'; the clip went viral on TikTok and searches for the drink rose by 7,400%, making it the most contagious cocktail moment of the year.",
+      "pairings": [
+        "Italian aperitivo snacks",
+        "Parma ham with melon",
+        "Olives and nuts",
+        "Bruschetta"
+      ]
+    }
+  },
+  "espresso-martini": {
+    "en": {
+      "steps": [
+        "Pull a fresh espresso and let it cool slightly — it needn't be cold.",
+        "Fill a shaker with plenty of ice.",
+        "Measure in 2 oz vodka, ½ oz Kahlúa, 1 oz espresso and ¼ oz syrup.",
+        "Shake very hard for 15 seconds — harder than usual, to build the crema.",
+        "Double-strain into a chilled martini glass.",
+        "Garnish with three coffee beans on the foam."
+      ],
+      "garnish": "Three coffee beans",
+      "tips": "Fresh espresso is the soul of this drink — instant or cold brew will not produce crema. Pull it a few minutes before shaking; slightly warm espresso foams better than fully cooled. Shake harder than you think you need to: the aim is for the coffee's natural oils and proteins to form a dense, lasting head. The three beans traditionally stand for health, wealth and happiness.",
+      "story": "The Espresso Martini was created by the London legend Dick Bradsell at Fred's Club in 1983. The story goes that a young supermodel came to the bar and asked for something to 'wake me up and then mess me up'. Bradsell combined the club's newly installed espresso machine with vodka and produced a landmark drink, first called the Vodka Espresso, then the Pharmaceutical Stimulant, before settling on Espresso Martini. Bradsell also invented the Bramble and is regarded as the father of modern British bartending. The drink saw an explosive global revival in the 2020s.",
+      "pairings": [
+        "Tiramisu",
+        "Dark chocolate truffles",
+        "Caramel nut brownie",
+        "Biscotti"
+      ]
+    }
+  },
+  "chartreuse-swizzle": {
+    "en": {
+      "steps": [
+        "Add all ingredients to a highball glass.",
+        "Fill two-thirds with crushed ice.",
+        "Swizzle rapidly with a swizzle stick or bar spoon until the glass frosts.",
+        "Mound more crushed ice to the rim.",
+        "Garnish with a fresh mint sprig and freshly grated nutmeg."
+      ],
+      "garnish": "Mint sprig and freshly grated nutmeg",
+      "tips": "The swizzling technique is the point: plunge the forked end into the crushed ice and spin it briskly between both palms until frost forms on the outside of the glass. A long bar spoon will do if you have no swizzle stick. Use plenty of finely crushed ice for the frost, and don't skip the nutmeg — its aroma finishes the drink. Green Chartreuse is 55% ABV; even diluted, this is not a gentle drink.",
+      "story": "The Chartreuse Swizzle was created by Marcovaldo Dionysos at Clock Bar in San Francisco in the mid-2000s and is among the most inventive drinks of the modern craft movement. It boldly promotes green Chartreuse — made by Carthusian monks at the Grande Chartreuse monastery in the French Alps — from supporting player to lead. Its recipe of 130 herbs has been secret since 1737, and only two monks are said to know it in full. Caribbean falernum and tropical pineapple tame the liqueur's forceful herbal character, while the swizzled crushed ice gives the drink both tiki playfulness and monastic mystery.",
+      "pairings": [
+        "Herb-roasted chicken",
+        "Pineapple mint salad",
+        "Caribbean spiced prawns",
+        "Cinnamon apple crumble"
+      ]
+    }
+  }
+}

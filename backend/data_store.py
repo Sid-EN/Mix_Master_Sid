@@ -71,6 +71,17 @@ def flavor_wheel() -> dict:
     return _read("flavor_wheel.json")
 
 
+@lru_cache(maxsize=1)
+def recipe_translations() -> dict:
+    """
+    配方內容的其他語言版本（唯讀）。
+
+    與配方本體分開存放：翻譯會陸續補齊，混在同一份檔案裡會讓
+    「哪些已翻、哪些還沒」變得難以辨認，也讓 diff 難讀。
+    """
+    return _read("recipe_translations.json")
+
+
 _reload_hooks: list[Callable[[], None]] = []
 
 
@@ -88,7 +99,7 @@ def on_reload(fn: Callable[[], None]) -> Callable[[], None]:
 def reload_all() -> None:
     """清除所有快取，強制下次存取時重新讀檔（測試與開發時使用）。"""
     for fn in (cocktails, preps, ingredients, ingredient_index,
-               wine_knowledge, spirits_knowledge, flavor_wheel):
+               wine_knowledge, spirits_knowledge, flavor_wheel, recipe_translations):
         fn.cache_clear()  # type: ignore[attr-defined]  # lru_cache 包裝後的屬性
     for hook in _reload_hooks:
         hook()

@@ -8,6 +8,11 @@ import RecipeTracker from '../../../components/RecipeTracker'
 import RecipeTriedButton from '../../../components/RecipeTriedButton'
 import IngredientSubstitutions from '../../../components/IngredientSubstitutions'
 import RecipeCostBar from '../../../components/RecipeCostBar'
+import {
+  LocalisedParagraph,
+  LocalisedSteps,
+  LocalisedTags,
+} from '../../../components/LocalisedText'
 import { pageMetadata, recipeJsonLd, summarise } from '../../../lib/seo'
 import type { Metadata } from 'next'
 import FoodPairingSection from '../../../components/FoodPairingSection'
@@ -249,7 +254,12 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
       {story && (
         <section className="glass-card p-8 mb-8">
           <h2 className="font-display text-xl text-neon-amber mb-4">📖 故事</h2>
-          <p className="text-text-secondary italic leading-relaxed">{story}</p>
+          <LocalisedParagraph
+            zh={story}
+            en={r.storyEn}
+            italic
+            className="text-text-secondary italic leading-relaxed"
+          />
           {origin && (
             <p className="font-mono text-xs text-charcoal-500 mt-4 tracking-wider">— {origin}</p>
           )}
@@ -313,19 +323,11 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
       {steps.length > 0 && (
         <section className="mb-8">
           <h2 className="font-display text-xl text-neon-amber mb-6">📋 調製步驟</h2>
-          <div className="space-y-4">
-            {steps.map((step: any, i: number) => {
-              const text = typeof step === 'string' ? step : (step.text || step.description || step.step || '')
-              return (
-                <div key={i} className="flex gap-5">
-                  <span className="font-mono text-2xl font-bold text-neon-amber/80 text-neon-glow-amber w-10 shrink-0 text-right">
-                    {String(i + 1).padStart(2, '0')}.
-                  </span>
-                  <p className="text-text-secondary leading-relaxed pt-1">{text}</p>
-                </div>
-              )
-            })}
-          </div>
+          <LocalisedSteps
+            zh={steps.map((step: any) =>
+              typeof step === 'string' ? step : (step.text || step.description || step.step || ''))}
+            en={r.stepsEn}
+          />
         </section>
       )}
 
@@ -336,7 +338,11 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
             <span className="text-3xl">🌿</span>
             <div>
               <p className="font-mono text-[10px] text-charcoal-500 uppercase tracking-widest mb-1">Garnish</p>
-              <p className="text-text-warm text-lg font-display">{garnish}</p>
+              <LocalisedParagraph
+                zh={garnish}
+                en={r.garnishEn}
+                className="text-text-warm text-lg font-display"
+              />
             </div>
           </div>
         </section>
@@ -401,7 +407,11 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
             <span className="text-2xl shrink-0">💡</span>
             <div>
               <h2 className="font-display text-lg text-neon-cyan mb-3">調酒師筆記</h2>
-              <p className="text-text-secondary leading-relaxed text-sm">{tips}</p>
+              <LocalisedParagraph
+                zh={tips}
+                en={r.tipsEn}
+                className="text-text-secondary leading-relaxed text-sm"
+              />
             </div>
           </div>
         </section>
@@ -411,16 +421,7 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
       {pairings.length > 0 && (
         <section className="mb-8">
           <h2 className="font-display text-xl text-neon-amber mb-4">🍽️ 餐搭建議</h2>
-          <div className="flex flex-wrap gap-2">
-            {pairings.map((p: string, i: number) => (
-              <span
-                key={i}
-                className="font-mono text-xs px-3 py-1.5 bg-bg-tertiary border border-charcoal-700 text-text-secondary rounded-sm"
-              >
-                {p}
-              </span>
-            ))}
-          </div>
+          <LocalisedTags zh={pairings} en={r.pairingsEn} />
         </section>
       )}
 

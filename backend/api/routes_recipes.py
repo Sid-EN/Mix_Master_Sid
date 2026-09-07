@@ -12,6 +12,7 @@ from sqlalchemy.orm import Session
 from ..auth import get_current_user
 from ..data_store import cocktails as _load
 from ..data_store import ingredient_index as _ingredient_index
+from ..data_store import recipe_translations as _translations
 from ..db import get_db
 from ..engine.balance_model import calculate_overall_balance_score, flavor_totals
 from ..models.db_models import User, UserRecipe, UserRecipeVersion
@@ -111,6 +112,32 @@ def _with_ingredient_names(recipe: dict, index: dict[str, dict]) -> dict:
     return out
 
 
+# 可翻譯的欄位。名稱與描述本來就有英文欄位（nameEn / description），
+# 此處只處理原本僅有中文的內容。
+TRANSLATABLE_FIELDS = ("steps", "garnish", "tips", "story", "pairings")
+
+
+def _with_translations(recipe: dict) -> dict:
+    """
+    附上其他語言的內容。
+    
+    以 <欄位>En 的形式並列回傳，而不是就地取代——前端需要在不重新
+    取資料的情況下切換語言，兩種語言都得在手上。
+    尚未翻譯的欄位不會出現，前端據此回退到中文原文。
+    """
+    entry = _translations().get(recipe.get("id") or "", {})
+    english = entry.get("en") if isinstance(entry, dict) else None
+    if not isinstance(english, dict):
+        return recipe
+
+    out = dict(recipe)
+    for field in TRANSLATABLE_FIELDS:
+        value = english.get(field)
+        if value:
+            out[f"{field}En"] = value
+    return out
+
+
 def _as_dict(row: UserRecipe) -> dict:
     """將資料庫中的使用者配方轉為與經典配方一致的形狀。"""
     return {
@@ -186,7 +213,7 @@ async def get_shared_recipe(share_token: str, db: Session = Depends(get_db)):
 @router.get("/classic", summary="經典配方")
 async def classic_recipes():
     index = _ingredient_index()
-    return [_with_ingredient_names(r, index)
+    return [_with_translations(_with_ingredient_names(r, index))
             for r in _load() if r.get("type") == "classic"]
 
 
@@ -194,7 +221,7 @@ async def classic_recipes():
 async def get_recipe(recipe_id: str, db: Session = Depends(get_db)):
     for r in _load():
         if r.get("id") == recipe_id or r.get("slug") == recipe_id:
-            return _with_ingredient_names(r, _ingredient_index())
+            return _with_translations(_with_ingredient_names(r, _ingredient_index()))
     # 使用者配方需經 /recipes/mine 或分享連結取得，此處不公開
     raise HTTPException(404, detail=f"找不到配方：{recipe_id}")
 

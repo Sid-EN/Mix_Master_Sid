@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import TasteStatistics from '@/components/TasteStatistics'
+import OfflineSettings from '@/components/OfflineSettings'
 import Link from 'next/link'
 import { useProgress } from '../../components/ProgressContext'
 import { useFavorites } from '../../components/FavoritesContext'
@@ -640,6 +641,20 @@ export default function DashboardPage() {
           })}
         </div>
       </section>
+
+        {/* ── 離線內容 ─────────────────────────────────── */}
+        <section className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <h2 className="font-display text-2xl text-gradient-amber mb-1">
+            📥 離線閱讀
+          </h2>
+          <p className="font-mono text-xs text-charcoal-500 tracking-wider mb-4">
+            Offline Access · 沒有網路時也能查配方
+          </p>
+          <div className="divider-amber mb-6" />
+          <div className="glass-card p-6">
+            <OfflineSettings />
+          </div>
+        </section>
 
       {/* ── Footer CTA ─────────────────────────────────── */}
       <div className="text-center py-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
