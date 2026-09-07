@@ -193,9 +193,9 @@ function AchievementCard({
       </div>
 
       {/* Name & description */}
-      <h3 className="text-base font-bold text-text-warm mb-0.5">
+      <h2 className="text-base font-bold text-text-warm mb-0.5">
         {achievement.nameZh}
-      </h3>
+      </h2>
       <p className="text-xs text-text-muted mb-1">
         {achievement.nameEn}
       </p>

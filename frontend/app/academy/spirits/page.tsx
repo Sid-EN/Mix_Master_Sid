@@ -139,20 +139,20 @@ function DistillationSection({ methods, concepts }: {
       {/* Methods */}
       {methods && methods.length > 0 && (
         <>
-          <h3 className="font-display text-xl text-text-warm flex items-center gap-2">
+          <h2 className="font-display text-xl text-text-warm flex items-center gap-2">
             <span className="text-neon-amber">⚗️</span> 蒸餾方法
             <span className="font-mono text-xs text-charcoal-500">Distillation Methods</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {methods.map((m, i) => (
               <div key={i} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
                 <div className="flex items-start gap-4">
                   <span className="flex-shrink-0 w-10 h-10 rounded-full bg-neon-amber/10 border border-neon-amber/30 flex items-center justify-center font-mono text-neon-amber text-sm font-bold">{i + 1}</span>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-text-warm font-display text-lg mb-1">
+                    <h3 className="text-text-warm font-display text-lg mb-1">
                       {m.nameZh ?? m.name}
                       {m.name && <span className="font-mono text-xs text-charcoal-500 ml-2">{m.name}</span>}
-                    </h4>
+                    </h3>
                     {m.description && <p className="text-text-secondary text-sm leading-relaxed mb-3">{m.description}</p>}
                     {m.characteristics && m.characteristics.length > 0 && (
                       <div className="mb-3">
@@ -177,16 +177,16 @@ function DistillationSection({ methods, concepts }: {
       {/* Concepts */}
       {concepts && concepts.length > 0 && (
         <>
-          <h3 className="font-display text-xl text-text-warm flex items-center gap-2 mt-6">
+          <h2 className="font-display text-xl text-text-warm flex items-center gap-2 mt-6">
             <span className="text-neon-cyan">📖</span> 蒸餾術語
             <span className="font-mono text-xs text-charcoal-500">Key Concepts</span>
-          </h3>
+          </h2>
           <div className="space-y-4">
             {concepts.map((c, i) => (
               <div key={i} className="glass-card p-5">
-                <h4 className="text-neon-amber font-mono text-sm font-bold mb-1">
+                <h3 className="text-neon-amber font-mono text-sm font-bold mb-1">
                   {c.termZh} <span className="text-charcoal-500 font-normal">{c.term}</span>
-                </h4>
+                </h3>
                 {c.description && <p className="text-text-secondary text-sm leading-relaxed">{c.description}</p>}
               </div>
             ))}
@@ -207,10 +207,10 @@ function SpiritDetailSection({ spirit }: { spirit: Spirit }) {
         <div className="flex items-start gap-4">
           <span className="text-4xl">{SPIRIT_ICONS[spirit.id ?? ''] ?? '🍸'}</span>
           <div className="flex-1">
-            <h3 className="font-display text-2xl md:text-3xl text-gradient-amber mb-2">
+            <h2 className="font-display text-2xl md:text-3xl text-gradient-amber mb-2">
               {spirit.nameZh}
               {spirit.nameEn && <span className="font-mono text-sm text-charcoal-500 ml-3">{spirit.nameEn}</span>}
-            </h3>
+            </h2>
             {spirit.origin && (
               <p className="text-neon-cyan font-mono text-xs mb-2">📍 {spirit.origin}</p>
             )}
@@ -227,10 +227,10 @@ function SpiritDetailSection({ spirit }: { spirit: Spirit }) {
       {/* Production Process */}
       {spirit.productionProcess && spirit.productionProcess.length > 0 && (
         <div>
-          <h4 className="font-display text-xl text-text-warm mb-4 flex items-center gap-2">
+          <h3 className="font-display text-xl text-text-warm mb-4 flex items-center gap-2">
             <span className="text-neon-amber">⚗️</span> 製程工藝
             <span className="font-mono text-xs text-charcoal-500">Production Process</span>
-          </h4>
+          </h3>
           <div className="space-y-3">
             {spirit.productionProcess.map((step, i) => (
               <div key={i} className="glass-card p-5 hover:border-neon-cyan/30 transition-colors duration-300">
@@ -247,17 +247,17 @@ function SpiritDetailSection({ spirit }: { spirit: Spirit }) {
       {/* Styles */}
       {spirit.styles && spirit.styles.length > 0 && (
         <div>
-          <h4 className="font-display text-xl text-text-warm mb-4 flex items-center gap-2">
+          <h3 className="font-display text-xl text-text-warm mb-4 flex items-center gap-2">
             <span className="text-neon-purple">🏷️</span> 風格分類
             <span className="font-mono text-xs text-charcoal-500">Styles & Varieties</span>
-          </h4>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {spirit.styles.map((st, i) => (
               <div key={i} className="glass-card p-5 hover:border-neon-purple/30 transition-colors duration-300">
-                <h5 className="text-text-warm font-medium mb-2">
+                <h4 className="text-text-warm font-medium mb-2">
                   {st.nameZh ?? st.name}
                   {st.name && <span className="font-mono text-xs text-charcoal-500 ml-2">{st.name}</span>}
-                </h5>
+                </h4>
                 {st.description && <p className="text-text-secondary text-sm leading-relaxed">{st.description}</p>}
               </div>
             ))}
@@ -268,10 +268,10 @@ function SpiritDetailSection({ spirit }: { spirit: Spirit }) {
       {/* Classic Cocktails */}
       {spirit.classicCocktails && spirit.classicCocktails.length > 0 && (
         <div>
-          <h4 className="font-display text-xl text-text-warm mb-4 flex items-center gap-2">
+          <h3 className="font-display text-xl text-text-warm mb-4 flex items-center gap-2">
             <span>🍹</span> 經典調酒
             <span className="font-mono text-xs text-charcoal-500">Classic Cocktails</span>
-          </h4>
+          </h3>
           <div className="flex flex-wrap gap-2">
             {spirit.classicCocktails.map((c, i) => <Tag key={i} color="amber">{c}</Tag>)}
           </div>
@@ -281,9 +281,9 @@ function SpiritDetailSection({ spirit }: { spirit: Spirit }) {
       {/* Buying Guide */}
       {spirit.buyingGuide && (
         <div className="glass-card p-6 border border-neon-cyan/20">
-          <h4 className="font-display text-lg text-neon-cyan mb-3 flex items-center gap-2">
+          <h3 className="font-display text-lg text-neon-cyan mb-3 flex items-center gap-2">
             <span>🛒</span> 選購指南
-          </h4>
+          </h3>
           <p className="text-text-secondary text-sm leading-relaxed">{spirit.buyingGuide}</p>
         </div>
       )}
@@ -291,9 +291,9 @@ function SpiritDetailSection({ spirit }: { spirit: Spirit }) {
       {/* Fun Facts */}
       {spirit.funFacts && spirit.funFacts.length > 0 && (
         <div className="glass-card p-6 border border-neon-purple/20">
-          <h4 className="font-display text-lg text-neon-purple mb-3 flex items-center gap-2">
+          <h3 className="font-display text-lg text-neon-purple mb-3 flex items-center gap-2">
             <span>💡</span> 趣味冷知識
-          </h4>
+          </h3>
           <ul className="space-y-2">
             {spirit.funFacts.map((f, i) => (
               <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
@@ -318,17 +318,17 @@ function AgingSection({ aging }: { aging: SpiritsData['aging'] }) {
       {/* Barrel Types */}
       {barrelTypes && barrelTypes.length > 0 && (
         <>
-          <h3 className="font-display text-xl text-text-warm flex items-center gap-2">
+          <h2 className="font-display text-xl text-text-warm flex items-center gap-2">
             <span>🪵</span> 橡木桶種類
             <span className="font-mono text-xs text-charcoal-500">Barrel Types</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {barrelTypes.map((b, i) => (
               <div key={i} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-                <h4 className="text-text-warm font-display text-lg mb-1">
+                <h3 className="text-text-warm font-display text-lg mb-1">
                   {b.nameZh}
                   {b.name && <span className="font-mono text-[10px] text-charcoal-500 ml-2 block mt-0.5">{b.name}</span>}
-                </h4>
+                </h3>
                 {b.description && <p className="text-text-secondary text-sm leading-relaxed mb-3">{b.description}</p>}
                 {b.flavorNotes && b.flavorNotes.length > 0 && (
                   <div className="flex flex-wrap gap-1.5">
@@ -344,16 +344,16 @@ function AgingSection({ aging }: { aging: SpiritsData['aging'] }) {
       {/* Aging Factors */}
       {agingFactors && agingFactors.length > 0 && (
         <>
-          <h3 className="font-display text-xl text-text-warm flex items-center gap-2 mt-4">
+          <h2 className="font-display text-xl text-text-warm flex items-center gap-2 mt-4">
             <span>🌡️</span> 陳年要素
             <span className="font-mono text-xs text-charcoal-500">Aging Factors</span>
-          </h3>
+          </h2>
           <div className="space-y-4">
             {agingFactors.map((f, i) => (
               <div key={i} className="glass-card p-5">
-                <h4 className="text-neon-amber font-mono text-sm font-bold mb-1">
+                <h3 className="text-neon-amber font-mono text-sm font-bold mb-1">
                   {f.factorZh} <span className="text-charcoal-500 font-normal">{f.factor}</span>
-                </h4>
+                </h3>
                 {f.description && <p className="text-text-secondary text-sm leading-relaxed">{f.description}</p>}
               </div>
             ))}
@@ -364,17 +364,17 @@ function AgingSection({ aging }: { aging: SpiritsData['aging'] }) {
       {/* Finishing Techniques */}
       {finishingTechniques && finishingTechniques.length > 0 && (
         <>
-          <h3 className="font-display text-xl text-text-warm flex items-center gap-2 mt-4">
+          <h2 className="font-display text-xl text-text-warm flex items-center gap-2 mt-4">
             <span>✨</span> 過桶技術
             <span className="font-mono text-xs text-charcoal-500">Finishing Techniques</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {finishingTechniques.map((t, i) => (
               <div key={i} className="glass-card p-5 hover:border-neon-cyan/30 transition-colors">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {t.techniqueZh}
                   {t.technique && <span className="font-mono text-xs text-charcoal-500 ml-2">{t.technique}</span>}
-                </h4>
+                </h3>
                 {t.description && <p className="text-text-secondary text-sm leading-relaxed">{t.description}</p>}
               </div>
             ))}
@@ -399,10 +399,10 @@ function CocktailFamiliesSection({ families }: { families?: CocktailFamily[] }) 
       {families.map((f, i) => (
         <div key={i} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
           <div className="flex items-start justify-between mb-3">
-            <h4 className="font-display text-xl text-text-warm">
+            <h3 className="font-display text-xl text-text-warm">
               {f.nameZh}
               {f.name && <span className="font-mono text-xs text-charcoal-500 ml-2">{f.name}</span>}
-            </h4>
+            </h3>
           </div>
           {f.formula && (
             <p className="font-mono text-xs text-neon-amber mb-1">公式：{f.formula}</p>

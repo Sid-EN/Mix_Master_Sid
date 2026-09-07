@@ -35,7 +35,8 @@ export default function SpiritTabs({ tabs, panels, defaultTab }: SpiritTabsProps
             >
               <span className="mr-1.5">{tab.icon}</span>
               {tab.zh}
-              <span className="font-mono text-xs ml-1.5 opacity-60">{tab.en}</span>
+              {/* 不再疊不透明度：會把已達 4.6:1 的顏色壓回不合格 */}
+              <span className="font-mono text-xs ml-1.5">{tab.en}</span>
             </button>
           ))}
         </div>
@@ -43,6 +44,11 @@ export default function SpiritTabs({ tabs, panels, defaultTab }: SpiritTabsProps
 
       {/* Active panel */}
       <section className="px-6 pb-24 max-w-6xl mx-auto animate-fade-in" key={activeTab}>
+        {/*
+          每個分頁的內容各自從 h3 開始；沒有這個 h2，
+          切到任一分頁時標題層級都會從 h1 直接跳到 h3。
+        */}
+        <h2 className="sr-only">烈酒章節</h2>
         {panels[activeTab] ?? (
           <p className="text-text-muted text-sm">此章節尚無內容。</p>
         )}

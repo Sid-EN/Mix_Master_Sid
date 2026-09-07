@@ -108,6 +108,7 @@ function VolumeConverter() {
             placeholder="0"
           />
           <select
+            aria-label="換算單位"
             value={sourceUnit}
             onChange={e => setSourceUnit(e.target.value)}
             className="input-neon w-44 font-mono text-sm"
@@ -136,7 +137,7 @@ function VolumeConverter() {
 
       {/* Quick Reference */}
       <div className="glass-card p-5">
-        <h3 className="font-display text-sm text-text-warm mb-3">📋 常用換算 Quick Reference</h3>
+        <h2 className="font-display text-sm text-text-warm mb-3">📋 常用換算 Quick Reference</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 font-mono text-xs text-charcoal-400">
           <p>1 oz = 29.5735 ml</p>
           <p>1 dash = 0.9 ml</p>
@@ -211,7 +212,7 @@ function TemperatureConverter() {
 
       {/* Wine Presets */}
       <div className="glass-card p-5">
-        <h3 className="font-display text-sm text-text-warm mb-3">🍷 葡萄酒適飲溫度 Serving Temperatures</h3>
+        <h2 className="font-display text-sm text-text-warm mb-3">🍷 葡萄酒適飲溫度 Serving Temperatures</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {WINE_TEMPS.map(w => (
             <button
@@ -232,7 +233,7 @@ function TemperatureConverter() {
 
       {/* Quick Reference */}
       <div className="glass-card p-5">
-        <h3 className="font-display text-sm text-text-warm mb-3">📋 公式 Formula</h3>
+        <h2 className="font-display text-sm text-text-warm mb-3">📋 公式 Formula</h2>
         <div className="font-mono text-xs text-charcoal-400 space-y-1">
           <p>°F = °C × 9/5 + 32</p>
           <p>°C = (°F − 32) × 5/9</p>
@@ -276,6 +277,7 @@ function WeightConverter() {
             placeholder="0"
           />
           <select
+            aria-label="換算單位"
             value={sourceUnit}
             onChange={e => setSourceUnit(e.target.value)}
             className="input-neon w-36 font-mono text-sm"
@@ -302,7 +304,7 @@ function WeightConverter() {
 
       {/* Quick Reference */}
       <div className="glass-card p-5">
-        <h3 className="font-display text-sm text-text-warm mb-3">📋 常用換算 Quick Reference</h3>
+        <h2 className="font-display text-sm text-text-warm mb-3">📋 常用換算 Quick Reference</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 font-mono text-xs text-charcoal-400">
           <p>1 oz = 28.35 g</p>
           <p>1 lb = 453.6 g ≈ 16 oz</p>
@@ -389,7 +391,7 @@ function AlcoholConverter() {
 
       {/* Standard Drink Calculator */}
       <div className="glass-card p-5">
-        <h3 className="font-display text-sm text-text-warm mb-3">🍺 標準酒精單位計算 Standard Drink Calculator</h3>
+        <h2 className="font-display text-sm text-text-warm mb-3">🍺 標準酒精單位計算 Standard Drink Calculator</h2>
         <p className="font-mono text-[10px] text-charcoal-600 mb-4">
           1 標準杯 = 10g 純酒精 | 1 standard drink = 10g pure alcohol
         </p>
@@ -442,7 +444,7 @@ function AlcoholConverter() {
 
       {/* Quick Reference */}
       <div className="glass-card p-5">
-        <h3 className="font-display text-sm text-text-warm mb-3">📋 常用參考 Quick Reference</h3>
+        <h2 className="font-display text-sm text-text-warm mb-3">📋 常用參考 Quick Reference</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 font-mono text-xs text-charcoal-400">
           <p>US Proof = ABV% × 2</p>
           <p>UK Proof = ABV% × 1.75</p>

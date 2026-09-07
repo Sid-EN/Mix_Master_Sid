@@ -288,6 +288,7 @@ export default function BatchPage() {
             </button>
             <input
               type="number"
+              aria-label="杯數"
               min={0.5}
               max={100}
               step={0.5}

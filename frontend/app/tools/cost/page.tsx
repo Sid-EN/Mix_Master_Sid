@@ -374,9 +374,9 @@ export default function CostCalculatorPage() {
           {/* Recipe search (recipe mode) */}
           {mode === 'recipe' && (
             <div className="glass-card p-5">
-              <h3 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
+              <h2 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
                 🔍 選擇配方 SELECT RECIPE
-              </h3>
+              </h2>
 
               {loadingRecipes ? (
                 <p className="font-mono text-sm text-charcoal-500 animate-pulse">載入配方中...</p>
@@ -429,9 +429,9 @@ export default function CostCalculatorPage() {
           {/* Ingredient rows */}
           {(mode === 'recipe' ? entries : customEntries).length > 0 && (
             <div className="space-y-3">
-              <h3 className="font-mono text-xs text-charcoal-500 tracking-wider">
+              <h2 className="font-mono text-xs text-charcoal-500 tracking-wider">
                 🧾 材料成本 INGREDIENT COSTS
-              </h3>
+              </h2>
 
               {(mode === 'recipe' ? entries : customEntries).map((entry, idx) => {
                 const isRecipe = mode === 'recipe'
@@ -607,12 +607,13 @@ export default function CostCalculatorPage() {
 
           {/* Batch multiplier */}
           <div className="glass-card p-5">
-            <h3 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
+            <h2 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
               🍸 批次計算 BATCH
-            </h3>
+            </h2>
             <div className="flex items-center gap-3 mb-2">
               <input
                 type="range"
+                aria-label="批次杯數"
                 min="1"
                 max="50"
                 step="1"
@@ -654,9 +655,9 @@ export default function CostCalculatorPage() {
           {/* Pie chart */}
           {pieData.length > 0 && (
             <div className="glass-card p-5">
-              <h3 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
+              <h2 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
                 📊 成本分佈 BREAKDOWN
-              </h3>
+              </h2>
               <div className="w-full" style={{ height: 260 }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
@@ -690,9 +691,9 @@ export default function CostCalculatorPage() {
           {/* Cost breakdown list */}
           {calc.items.length > 0 && (
             <div className="glass-card p-5">
-              <h3 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
+              <h2 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
                 🧾 明細 DETAILS
-              </h3>
+              </h2>
               <div className="space-y-2">
                 {calc.items.map((item, i) => (
                   <div key={item.id} className="flex justify-between items-center font-mono text-sm">

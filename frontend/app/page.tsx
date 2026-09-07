@@ -179,9 +179,9 @@ export default async function HomePage() {
                 <div className="text-2xl mb-3 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h4 className="font-display text-base text-text-warm mb-1 group-hover:text-neon-amber transition-colors">
+                <h3 className="font-display text-base text-text-warm mb-1 group-hover:text-neon-amber transition-colors">
                   {item.title}
-                </h4>
+                </h3>
                 <p className="text-text-muted text-xs leading-relaxed">{item.desc}</p>
               </a>
             ))}
@@ -207,9 +207,9 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {/* Column 1 */}
             <div>
-              <h4 className="font-mono text-[10px] text-neon-amber tracking-[0.25em] uppercase mb-4">
+              <h3 className="font-mono text-[10px] text-neon-amber tracking-[0.25em] uppercase mb-4">
                 核心功能
-              </h4>
+              </h3>
               <ul className="space-y-2.5">
                 {[
                   { href: '/engine', icon: '🧪', label: '智慧配方引擎' },
@@ -228,9 +228,9 @@ export default async function HomePage() {
 
             {/* Column 2 */}
             <div>
-              <h4 className="font-mono text-[10px] text-neon-cyan tracking-[0.25em] uppercase mb-4">
+              <h3 className="font-mono text-[10px] text-neon-cyan tracking-[0.25em] uppercase mb-4">
                 調酒工具
-              </h4>
+              </h3>
               <ul className="space-y-2.5">
                 {[
                   { href: '/tools/abv', icon: '📐', label: 'ABV 計算器' },
@@ -250,9 +250,9 @@ export default async function HomePage() {
 
             {/* Column 3 */}
             <div>
-              <h4 className="font-mono text-[10px] text-neon-purple tracking-[0.25em] uppercase mb-4">
+              <h3 className="font-mono text-[10px] text-neon-purple tracking-[0.25em] uppercase mb-4">
                 調酒學院
-              </h4>
+              </h3>
               <ul className="space-y-2.5">
                 {[
                   { href: '/academy/wine', icon: '🍷', label: '葡萄酒百科' },

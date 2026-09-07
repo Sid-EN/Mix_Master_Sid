@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
+import TasteStatistics from '@/components/TasteStatistics'
 import Link from 'next/link'
 import { useProgress } from '../../components/ProgressContext'
 import { useFavorites } from '../../components/FavoritesContext'
@@ -399,6 +400,20 @@ export default function DashboardPage() {
                 </Link>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* ── Section 3b: 口味統計 ─────────────────────── */}
+        <section className="animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
+          <h2 className="font-display text-2xl text-gradient-amber mb-1">
+            📈 我的口味統計
+          </h2>
+          <p className="font-mono text-xs text-charcoal-500 tracking-wider mb-4">
+            Taste Statistics · 依實際收藏與紀錄推導，非自填偏好
+          </p>
+          <div className="divider-amber mb-6" />
+          <div className="glass-card p-6">
+            <TasteStatistics />
           </div>
         </section>
 

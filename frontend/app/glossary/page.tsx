@@ -280,7 +280,7 @@ export default function GlossaryPage() {
       {/* ── Body: sidebar + list ─────────────────────────────── */}
       <div className="max-w-5xl mx-auto px-6 py-8 flex gap-4">
         {/* A-Z sidebar (desktop) */}
-        <nav className="hidden lg:flex flex-col items-center gap-1 sticky top-44 self-start pt-2">
+        <nav className="hidden lg:flex flex-col items-center gap-1 sticky top-44 self-start pt-2" aria-label="頁面內導覽">
           {ALPHABET.map((letter) => (
             <button
               key={letter}

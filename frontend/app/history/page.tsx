@@ -167,7 +167,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ── Era Filter Buttons ─────────────────────────────── */}
-      <nav className="sticky top-0 z-30 bg-bg-primary/80 backdrop-blur-md border-b border-charcoal-800">
+      <nav className="sticky top-0 z-30 bg-bg-primary/80 backdrop-blur-md border-b border-charcoal-800" aria-label="頁面內導覽">
         <div className="max-w-5xl mx-auto px-4 py-3 flex flex-wrap justify-center gap-2">
           {ERAS.map((era) => (
             <button
@@ -349,9 +349,9 @@ function EventCard({
       </div>
 
       {/* Title */}
-      <h3 className="font-display text-base md:text-lg text-text-warm mb-2 leading-snug group-hover:text-neon-amber transition-colors duration-300">
+      <h2 className="font-display text-base md:text-lg text-text-warm mb-2 leading-snug group-hover:text-neon-amber transition-colors duration-300">
         {event.title}
-      </h3>
+      </h2>
 
       {/* Description */}
       <p className="text-text-secondary text-xs md:text-sm leading-relaxed">

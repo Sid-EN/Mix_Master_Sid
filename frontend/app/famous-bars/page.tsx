@@ -363,7 +363,7 @@ export default function FamousBarsPage() {
         </header>
 
         {/* ── Filter Tabs ── */}
-        <nav className="flex flex-wrap justify-center gap-2 mb-10 animate-fade-in-up-delay-1">
+        <nav className="flex flex-wrap justify-center gap-2 mb-10 animate-fade-in-up-delay-1" aria-label="頁面內導覽">
           {FILTERS.map((f) => (
             <button
               key={f.key}

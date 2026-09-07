@@ -123,9 +123,9 @@ function BartenderCard({
       {/* Name & Era */}
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="min-w-0">
-          <h3 className="text-lg font-bold text-text-warm leading-snug">
+          <h2 className="text-lg font-bold text-text-warm leading-snug">
             {bartender.flag} {bartender.name}
-          </h3>
+          </h2>
           <p className="font-mono text-xs text-charcoal-500 mt-0.5">
             {bartender.years}
           </p>

@@ -22,10 +22,10 @@ function FundamentalsContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           蒸餾的本質
           <span className="font-mono text-xs text-charcoal-500 ml-2">The Essence of Distillation</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           蒸餾是利用不同物質沸點差異來分離混合物的技術。乙醇（酒精）的沸點為 78.37°C，水的沸點為 100°C。
           當加熱含有酒精的液體時，酒精會比水更早蒸發，收集並冷凝這些蒸汽即可得到酒精濃度更高的液體。
@@ -36,10 +36,10 @@ function FundamentalsContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-3">
+        <h2 className="font-display text-xl text-text-warm mb-3">
           三段切割 Cuts
           <span className="font-mono text-xs text-charcoal-500 ml-2">Heads / Hearts / Tails</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed mb-4">
           壺式蒸餾中，蒸餾液依序分為三個階段，每個階段含有不同的化學化合物。蒸餾師必須精準判斷
           「切割點」（Cut Points），決定從哪一刻開始收集心段精華，又在哪一刻停止。切割的時機直接左右了
@@ -49,7 +49,7 @@ function FundamentalsContent() {
           <div className="p-5 bg-bg-tertiary border border-charcoal-700 hover:border-neon-amber transition-colors duration-300">
             <div className="flex items-center gap-2 mb-2">
               <span className="font-mono text-neon-amber font-bold text-lg">01</span>
-              <h4 className="text-text-warm font-medium">頭段 Foreshots / Heads</h4>
+              <h3 className="text-text-warm font-medium">頭段 Foreshots / Heads</h3>
             </div>
             <p className="font-mono text-xs text-charcoal-500 mb-2">沸點 &lt; 78°C · 酒精度最高</p>
             <p className="text-text-secondary text-sm leading-relaxed">
@@ -61,7 +61,7 @@ function FundamentalsContent() {
           <div className="p-5 bg-bg-tertiary border-2 border-neon-amber/50">
             <div className="flex items-center gap-2 mb-2">
               <span className="font-mono text-neon-amber font-bold text-lg">02</span>
-              <h4 className="text-text-warm font-medium">心段 Hearts</h4>
+              <h3 className="text-text-warm font-medium">心段 Hearts</h3>
             </div>
             <p className="font-mono text-xs text-neon-amber mb-2">沸點 78–82°C · 精華所在</p>
             <p className="text-text-secondary text-sm leading-relaxed">
@@ -74,7 +74,7 @@ function FundamentalsContent() {
           <div className="p-5 bg-bg-tertiary border border-charcoal-700 hover:border-neon-amber transition-colors duration-300">
             <div className="flex items-center gap-2 mb-2">
               <span className="font-mono text-neon-amber font-bold text-lg">03</span>
-              <h4 className="text-text-warm font-medium">尾段 Feints / Tails</h4>
+              <h3 className="text-text-warm font-medium">尾段 Feints / Tails</h3>
             </div>
             <p className="font-mono text-xs text-charcoal-500 mb-2">沸點 &gt; 82°C · 酒精度漸降</p>
             <p className="text-text-secondary text-sm leading-relaxed">
@@ -88,10 +88,10 @@ function FundamentalsContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           回流與銅的角色
           <span className="font-mono text-xs text-charcoal-500 ml-2">Reflux & Copper</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-neon-amber text-xs block mb-2">回流 Reflux</span>
@@ -159,7 +159,7 @@ function StillsContent() {
       <div className="space-y-6">
         {stills.map((s) => (
           <div key={s.en} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-            <h3 className="font-display text-xl text-text-warm mb-1">{s.name}</h3>
+            <h2 className="font-display text-xl text-text-warm mb-1">{s.name}</h2>
             <p className="font-mono text-sm text-neon-amber tracking-wider mb-3">{s.en}</p>
             <p className="text-text-secondary text-sm leading-relaxed mb-4">{s.desc}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -180,14 +180,14 @@ function StillsContent() {
       </div>
 
       <div className="divider-amber" />
-      <h3 className="font-display text-xl text-text-warm mb-4 mt-8">
+      <h2 className="font-display text-xl text-text-warm mb-4 mt-8">
         經典蒸餾器設計
         <span className="font-mono text-xs text-charcoal-500 ml-2">Iconic Designs</span>
-      </h3>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {special.map((s) => (
           <div key={s.name} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-            <h4 className="text-text-warm font-medium mb-0.5">{s.name}</h4>
+            <h3 className="text-text-warm font-medium mb-0.5">{s.name}</h3>
             <p className="font-mono text-[10px] text-neon-amber mb-2">📍 {s.region}</p>
             <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
           </div>
@@ -240,9 +240,9 @@ function BarrelsContent() {
   return (
     <div className="space-y-8">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           木桶的風味貢獻
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           業界普遍認為，蘇格蘭威士忌 60–70% 的風味來自木桶熟成。木桶是一個活的化學反應器——
           木材中的化合物（木質素 Lignin → 香草醛 Vanillin；半纖維素 Hemicellulose → 焦糖；
@@ -256,7 +256,7 @@ function BarrelsContent() {
       <div className="space-y-4">
         {oakTypes.map((o) => (
           <div key={o.name} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-            <h3 className="font-display text-lg text-text-warm mb-0.5">{o.name}</h3>
+            <h2 className="font-display text-lg text-text-warm mb-0.5">{o.name}</h2>
             <p className="font-mono text-xs text-charcoal-500 italic mb-3">{o.species}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-text-secondary">
               <div>
@@ -279,10 +279,10 @@ function BarrelsContent() {
       {/* 炙烤等級 */}
       <div>
         <div className="divider-amber mb-8" />
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           炙烤等級 Char Levels
           <span className="font-mono text-xs text-charcoal-500 ml-2">Toasting & Charring</span>
-        </h3>
+        </h2>
         <p className="text-text-muted text-sm mb-6">
           「烘烤」（Toasting）與「炙烤」（Charring）是兩個不同的工藝。烘烤以較低溫度緩慢加熱，
           促進木材中的化學轉化；炙烤則以高溫短時間燃燒桶內壁，形成一層焦炭。
@@ -291,7 +291,7 @@ function BarrelsContent() {
           {charLevels.map((c) => (
             <div key={c.level} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <h4 className="text-text-warm font-medium">{c.level}</h4>
+                <h3 className="text-text-warm font-medium">{c.level}</h3>
                 <span className="font-mono text-xs text-charcoal-500">{c.temp}</span>
               </div>
               <p className="text-text-secondary text-sm leading-relaxed">{c.flavor}</p>
@@ -302,10 +302,10 @@ function BarrelsContent() {
 
       {/* 桶次 */}
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           桶次與風味強度
           <span className="font-mono text-xs text-charcoal-500 ml-2">Fill Strength</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-4 gap-3 text-center font-mono text-xs">
           <div className="p-3 bg-bg-tertiary border border-neon-amber/50">
             <div className="text-neon-amber font-bold mb-1">First Fill</div>
@@ -372,7 +372,7 @@ function SpecialContent() {
     <div className="space-y-6">
       {techniques.map((t) => (
         <div key={t.en} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-          <h3 className="font-display text-xl text-text-warm mb-1">{t.name}</h3>
+          <h2 className="font-display text-xl text-text-warm mb-1">{t.name}</h2>
           <p className="font-mono text-sm text-neon-amber tracking-wider mb-3">{t.en}</p>
           <p className="text-text-secondary text-sm leading-relaxed mb-3">{t.desc}</p>
           <div className="p-3 bg-bg-tertiary border border-charcoal-700">
@@ -390,10 +390,10 @@ function WaterContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           水——看不見的第二原料
           <span className="font-mono text-xs text-charcoal-500 ml-2">The Invisible Ingredient</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           在烈酒的生產中，水扮演著三個關鍵角色：（1）製程用水（Process Water）——浸泡穀物、製作酒母；
           （2）冷卻用水（Cooling Water）——冷凝蒸餾蒸汽；（3）降度用水（Reduction / Proofing Water）——
@@ -404,13 +404,13 @@ function WaterContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           水源類型與風味影響
           <span className="font-mono text-xs text-charcoal-500 ml-2">Water Sources</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">泉水 / 井水 Spring & Well</h4>
+            <h3 className="text-text-warm font-medium mb-2">泉水 / 井水 Spring & Well</h3>
             <p className="text-text-secondary leading-relaxed">
               地下岩層自然過濾的水源，礦物質含量因地質而異。穿越花崗岩的水質偏軟（低礦物質），
               口感柔順乾淨；穿越石灰岩的水質偏硬（高鈣鎂），口感帶有礦物質的「骨感」與結構。
@@ -418,7 +418,7 @@ function WaterContent() {
             </p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">溪水 / 河水 Stream & River</h4>
+            <h3 className="text-text-warm font-medium mb-2">溪水 / 河水 Stream & River</h3>
             <p className="text-text-secondary leading-relaxed">
               地表水源，可能流經泥炭層而攜帶腐殖質，呈現茶褐色（如 Islay 島蒸餾廠的水源），
               為酒液增添微妙的泥土與有機風味。但地表水受季節與降雨影響大，水質穩定性不如地下水。
@@ -426,7 +426,7 @@ function WaterContent() {
             </p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">冰川水 Glacial Water</h4>
+            <h3 className="text-text-warm font-medium mb-2">冰川水 Glacial Water</h3>
             <p className="text-text-secondary leading-relaxed">
               經過數千年冰川過濾的水源，礦物質含量極低（幾乎是純水），口感極度柔滑中性。
               冰島的 Reyka Vodka 使用冰川水降度，賦予其標誌性的絲滑口感。
@@ -434,7 +434,7 @@ function WaterContent() {
             </p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">逆滲透水 RO Water</h4>
+            <h3 className="text-text-warm font-medium mb-2">逆滲透水 RO Water</h3>
             <p className="text-text-secondary leading-relaxed">
               經過逆滲透膜過濾去除幾乎所有礦物質的純水。大型商業蒸餾廠可能使用 RO 水確保品質一致性，
               然後再添加特定礦物質配方還原所需的水質特性。這是科技與效率的選擇，
@@ -445,10 +445,10 @@ function WaterContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           加水降度 Proofing
           <span className="font-mono text-xs text-charcoal-500 ml-2">Dilution to Bottle Strength</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed mb-4">
           蒸餾出的原酒酒精度通常在 60–70% ABV，而大多數烈酒的裝瓶酒精度為 40–46% ABV。
           加水降度看似簡單，實則有許多需要注意的科學細節。
@@ -470,10 +470,10 @@ function WaterContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           品飲加水的科學
           <span className="font-mono text-xs text-charcoal-500 ml-2">Adding Water When Tasting</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           2017 年瑞典林奈大學（Linnaeus University）的研究發表在《Scientific Reports》上，
           解釋了為什麼加水能「開放」威士忌的風味。研究發現，關鍵風味分子「愈創木酚」（Guaiacol，
@@ -535,7 +535,7 @@ export default function DistillationPage() {
               }`}
             >
               {tab.zh}
-              <span className="font-mono text-xs ml-1.5 opacity-60">{tab.en}</span>
+              <span className="font-mono text-xs ml-1.5">{tab.en}</span>
             </button>
           ))}
         </div>

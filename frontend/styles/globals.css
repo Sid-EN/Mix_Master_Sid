@@ -20,20 +20,20 @@ html:not([data-theme]) {
   --color-neon-amber-dim:#C47D0E;
   --color-neon-cyan:     #00FFFF;
   --color-neon-cyan-dim: #00BFBF;
-  --color-neon-purple:   #9B59B6;
+  --color-neon-purple:   #A76EBF;   /* 原 #9B59B6 在深色背景上僅 3.69:1 */
   --color-midnight-deep: #0D1B2A;
   --color-midnight-mid:  #1B2A3B;
   --color-midnight-light:#2C4A6E;
   --color-charcoal-900:  #141414;
   --color-charcoal-800:  #1F1F2E;
   --color-charcoal-700:  #2D2D3E;
-  --color-charcoal-600:  #3D3D50;
-  --color-charcoal-500:  #6B6B80;
-  --color-charcoal-400:  #55556A;
+  --color-charcoal-600:  #82829F;
+  --color-charcoal-500:  #838397;
+  --color-charcoal-400:  #82829B;
   --color-charcoal-300:  #8A8A9E;
   --color-text-warm:     #F0EDE4;
   --color-text-secondary:#B8B0A0;
-  --color-text-muted:    #6B6358;
+  --color-text-muted:    #8D8374;
 
   --shadow-neon-amber:     rgba(245, 166, 35, 0.4);
   --shadow-neon-amber-dim: rgba(245, 166, 35, 0.15);
@@ -65,9 +65,9 @@ html[data-theme="light"] {
   --color-bg-secondary:  #FFFFFF;
   --color-bg-tertiary:   #F0EDE8;
   --color-bg-overlay:    #E8E4DD;
-  --color-neon-amber:    #D4920A;
+  --color-neon-amber:    #8E6207;   /* 原 #D4920A 在淺色背景上僅 2.27:1 */
   --color-neon-amber-dim:#B07808;
-  --color-neon-cyan:     #0A8A7A;
+  --color-neon-cyan:     #09786A;   /* 原 #0A8A7A 在淺色背景上僅 3.65:1 */
   --color-neon-cyan-dim: #067A6A;
   --color-neon-purple:   #7B3F96;
   --color-midnight-deep: #F0EDE8;
@@ -76,13 +76,13 @@ html[data-theme="light"] {
   --color-charcoal-900:  #F5F2ED;
   --color-charcoal-800:  #EAE6DF;
   --color-charcoal-700:  #E0DCD5;
-  --color-charcoal-600:  #D4D0C8;
-  --color-charcoal-500:  #9A968F;
+  --color-charcoal-600:  #726959;
+  --color-charcoal-500:  #6E6A63;
   --color-charcoal-400:  #6A6A7E;
   --color-charcoal-300:  #4A4A5E;
   --color-text-warm:     #1A1A2E;
   --color-text-secondary:#4A4A5E;
-  --color-text-muted:    #7A7A8E;
+  --color-text-muted:    #69697B;
 
   --shadow-neon-amber:     rgba(212, 146, 10, 0.25);
   --shadow-neon-amber-dim: rgba(212, 146, 10, 0.08);
@@ -121,7 +121,7 @@ html[data-theme="light"] .glass-card::before {
 }
 
 html[data-theme="light"] .input-neon {
-  border-color: var(--color-charcoal-600);
+  border-color: var(--color-charcoal-700);
 }
 
 html[data-theme="light"] .input-neon:focus {
@@ -436,7 +436,17 @@ html[data-theme="light"] .skeleton-shimmer {
    配方常被列印出來放在吧檯邊參照。深色底在紙上既難讀又耗墨，
    因此列印時改為白底黑字，並隱藏導覽與互動元件。 */
 @media print {
-  :root {
+  /*
+ * 文字色階已依 WCAG AA（一般文字 4.5:1）調整。
+ *
+ * 先前 charcoal-400/500/600 與 text-muted 在深色背景上只有 1.6–3.8:1，
+ * axe 掃出 118 處對比不足；這些色階大量用於 10–11px 的等寬小字，
+ * 屬於一般文字而非大字，必須達 4.5:1。
+ * 調整時保留原有色相與飽和度，只提高（淺色主題則降低）明度到剛好達標，
+ * 以維持原本的視覺調性。
+ * 修改這些值前請以 scripts/check_contrast.py 重新驗算。
+ */
+:root {
     --print-fg: #111;
   }
 
@@ -488,5 +498,46 @@ html[data-theme="light"] .skeleton-shimmer {
 
   @page {
     margin: 1.5cm;
+  }
+}
+
+/* ── 無障礙 ───────────────────────────────────────────────── */
+
+/*
+ * 僅供輔助技術讀取的文字。
+ * Tailwind 內建 sr-only，但這裡也用於自訂元件，明確定義較保險。
+ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+ * 鍵盤焦點必須看得見。
+ * 先前多處以 outline:none 移除焦點框卻沒有替代樣式，
+ * 以鍵盤操作時完全不知道游標在哪裡。
+ */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-neon-cyan);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* 尊重系統的「減少動態效果」設定 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

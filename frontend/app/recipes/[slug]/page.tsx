@@ -217,7 +217,9 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
         {/* Balance Score */}
         {grade && (
           <span
-            className="font-mono text-sm font-bold px-3 py-1.5 rounded-sm text-white"
+            // 底色是固定的等第色，文字色也必須固定為深色：
+            // 白字在綠、黃底上僅 1.7–2.1:1，而 bg-primary 在淺色主題下本身是淺色。
+            className="font-mono text-sm font-bold px-3 py-1.5 rounded-sm text-[#0A0A0F]"
             style={{ backgroundColor: GRADE_CLR[grade] }}
           >
             {grade}{score ? ` ${score}` : ''}

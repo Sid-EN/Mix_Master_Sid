@@ -60,10 +60,10 @@ function WinemakingSection({ data }: { data: WineData['winemaking'] }) {
                   {step.order ?? i + 1}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-text-warm font-medium mb-1">
+                  <h3 className="text-text-warm font-medium mb-1">
                     {step.nameZh ?? step.name ?? step.title ?? `步驟 ${i + 1}`}
                     {step.nameEn && <span className="font-mono text-xs text-charcoal-500 ml-2">{step.nameEn}</span>}
-                  </h4>
+                  </h3>
                   {(step.descriptionZh || step.description) && (
                     <p className="text-text-secondary text-sm leading-relaxed">{step.descriptionZh ?? step.description}</p>
                   )}
@@ -108,18 +108,18 @@ function GrapeVarietiesSection({ data }: { data: WineData['grapeVarieties'] }) {
 
   const renderVarieties = (varieties: any[], color: string, label: string, labelEn: string) => (
     <div>
-      <h3 className="font-display text-xl text-text-warm mb-4">
+      <h2 className="font-display text-xl text-text-warm mb-4">
         {label} <span className="font-mono text-xs text-charcoal-500">{labelEn} ({varieties.length})</span>
-      </h3>
+      </h2>
       <div className="space-y-4">
         {varieties.map((v: any, i: number) => (
           <div key={i} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
             <div className="flex items-center gap-2 mb-2">
               <span className={`w-3 h-3 rounded-full ${color === 'red' ? 'bg-red-500' : 'bg-yellow-300'}`} />
-              <h4 className="text-text-warm font-medium">
+              <h3 className="text-text-warm font-medium">
                 {v.nameZh ?? v.name}
                 {v.nameEn && <span className="font-mono text-xs text-charcoal-500 ml-2">{v.nameEn}</span>}
-              </h4>
+              </h3>
             </div>
             {(v.descriptionZh || v.description) && <p className="text-text-secondary text-sm leading-relaxed mb-2">{v.descriptionZh ?? v.description}</p>}
             <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
@@ -178,12 +178,12 @@ function RegionsSection({ data }: { data: WineData['regions'] }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {data.map((region: any, i: number) => (
         <div key={i} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="font-display text-lg text-text-warm mb-1">
+          <h3 className="font-display text-lg text-text-warm mb-1">
             {region.nameZh ?? region.name}
             <span className="font-mono text-xs text-charcoal-500 ml-2">
               {region.nameEn ?? ''}{region.country ? ` · ${region.country}` : ''}
             </span>
-          </h4>
+          </h3>
           {region.climate && (
             <p className="text-neon-cyan text-xs font-mono mb-2">🌡 {region.climate}</p>
           )}
@@ -229,16 +229,16 @@ function BarrelsSection({ data }: { data: WineData['barrels'] }) {
       {/* Oak Types */}
       {data.oakTypes && data.oakTypes.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             橡木種類 <span className="font-mono text-xs text-charcoal-500">Oak Types ({data.oakTypes.length})</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.oakTypes.map((oak: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-purple transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {oak.nameZh ?? oak.name}
                   {oak.nameEn && <span className="font-mono text-[10px] text-charcoal-500 block mt-0.5">{oak.nameEn}</span>}
-                </h4>
+                </h3>
                 {(oak.descriptionZh || oak.description) && <p className="text-text-secondary text-sm leading-relaxed mt-2">{oak.descriptionZh ?? oak.description}</p>}
                 {oak.origin && <Detail label="產地" value={oak.origin} />}
                 {oak.grainType && <Detail label="紋理" value={oak.grainType} />}
@@ -257,16 +257,16 @@ function BarrelsSection({ data }: { data: WineData['barrels'] }) {
       {/* Toast Levels */}
       {data.toastLevels && data.toastLevels.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             烘烤程度 <span className="font-mono text-xs text-charcoal-500">Toast Levels</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {data.toastLevels.map((toast: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {toast.levelZh ?? toast.nameZh ?? toast.name ?? toast.level}
                   {toast.level && <span className="font-mono text-xs text-charcoal-500 ml-2">{toast.level}</span>}
-                </h4>
+                </h3>
                 {(toast.descriptionZh || toast.description) && <p className="text-text-secondary text-sm leading-relaxed">{toast.descriptionZh ?? toast.description}</p>}
                 {toast.flavorZh && <Detail label="風味" value={toast.flavorZh} />}
                 {toast.temperature && <Detail label="溫度" value={toast.temperature} />}
@@ -280,16 +280,16 @@ function BarrelsSection({ data }: { data: WineData['barrels'] }) {
       {/* Barrel Sizes */}
       {data.barrelSizes && data.barrelSizes.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             桶型尺寸 <span className="font-mono text-xs text-charcoal-500">Barrel Sizes</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.barrelSizes.map((barrel: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-cyan transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {barrel.nameZh ?? barrel.name}
                   {barrel.nameEn && <span className="font-mono text-xs text-charcoal-500 ml-2">{barrel.nameEn}</span>}
-                </h4>
+                </h3>
                 {barrel.liters && <Detail label="容量" value={`${barrel.liters} L`} />}
                 {barrel.capacity && <Detail label="容量" value={barrel.capacity} />}
                 {(barrel.descriptionZh || barrel.description) && <p className="text-text-secondary text-sm leading-relaxed">{barrel.descriptionZh ?? barrel.description}</p>}
@@ -304,16 +304,16 @@ function BarrelsSection({ data }: { data: WineData['barrels'] }) {
       {/* Aging Concepts */}
       {data.agingConcepts && data.agingConcepts.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             陳年概念 <span className="font-mono text-xs text-charcoal-500">Aging Concepts</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {data.agingConcepts.map((concept: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-purple transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {concept.conceptZh ?? concept.nameZh ?? concept.name}
                   {(concept.concept || concept.nameEn) && <span className="font-mono text-xs text-charcoal-500 ml-2">{concept.concept ?? concept.nameEn}</span>}
-                </h4>
+                </h3>
                 {(concept.descriptionZh || concept.description) && <p className="text-text-secondary text-sm leading-relaxed">{concept.descriptionZh ?? concept.description}</p>}
                 {concept.effect && <Detail label="效果" value={concept.effect} />}
                 {concept.duration && <Detail label="時間" value={concept.duration} />}
@@ -333,9 +333,9 @@ function TastingSection({ data }: { data: WineData['tasting'] }) {
       {/* Tasting Steps */}
       {data.steps && data.steps.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             品飲步驟 <span className="font-mono text-xs text-charcoal-500">Tasting Steps</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {data.steps.map((step: any, i: number) => (
               <div key={i} className="glass-card p-6 hover:border-neon-cyan transition-colors duration-300">
@@ -344,10 +344,10 @@ function TastingSection({ data }: { data: WineData['tasting'] }) {
                     {i + 1}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-text-warm font-medium mb-1">
+                    <h3 className="text-text-warm font-medium mb-1">
                       {step.stepZh ?? step.nameZh ?? step.name ?? step.title}
                       {(step.step || step.nameEn) && <span className="font-mono text-xs text-charcoal-500 ml-2">{step.step ?? step.nameEn}</span>}
-                    </h4>
+                    </h3>
                     {(step.descriptionZh || step.description) && <p className="text-text-secondary text-sm leading-relaxed">{step.descriptionZh ?? step.description}</p>}
                     {step.keyPoints && Array.isArray(step.keyPoints) && (
                       <div className="flex flex-wrap gap-1.5 mt-2">
@@ -368,16 +368,16 @@ function TastingSection({ data }: { data: WineData['tasting'] }) {
       {/* Common Flaws */}
       {data.commonFlaws && data.commonFlaws.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             常見缺陷 <span className="font-mono text-xs text-charcoal-500">Common Flaws</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.commonFlaws.map((flaw: any, i: number) => (
               <div key={i} className="glass-card p-5 border-l-2 border-l-red-500/50 hover:border-neon-amber transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {flaw.flawZh ?? flaw.nameZh ?? flaw.name}
                   {(flaw.flaw || flaw.nameEn) && <span className="font-mono text-xs text-charcoal-500 ml-2">{flaw.flaw ?? flaw.nameEn}</span>}
-                </h4>
+                </h3>
                 {(flaw.detectionZh || flaw.description) && <p className="text-text-secondary text-sm leading-relaxed">{flaw.detectionZh ?? flaw.description}</p>}
                 {flaw.cause && <Detail label="成因" value={flaw.cause} />}
                 {flaw.indicator && <Detail label="表現" value={flaw.indicator} />}
@@ -390,15 +390,15 @@ function TastingSection({ data }: { data: WineData['tasting'] }) {
       {/* Serving Temperatures */}
       {data.servingTemperatures && data.servingTemperatures.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             適飲溫度 <span className="font-mono text-xs text-charcoal-500">Serving Temperatures</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.servingTemperatures.map((temp: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-cyan transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {temp.name ?? temp.nameZh ?? temp.type ?? temp.wineType}
-                </h4>
+                </h3>
                 {(temp.temperature ?? temp.range) && (
                   <p className="text-neon-cyan font-mono text-lg font-bold mt-1">
                     🌡 {temp.temperature ?? temp.range}
@@ -422,16 +422,16 @@ function FoodPairingSection({ data }: { data: WineData['foodPairing'] }) {
       {/* Principles */}
       {data.principles && data.principles.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             搭配原則 <span className="font-mono text-xs text-charcoal-500">Pairing Principles</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {data.principles.map((p: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-                <h4 className="text-text-warm font-medium mb-1">
+                <h3 className="text-text-warm font-medium mb-1">
                   {p.principleZh ?? p.nameZh ?? p.name ?? p.title}
                   {(p.principle || p.nameEn) && <span className="font-mono text-xs text-charcoal-500 ml-2">{p.principle ?? p.nameEn}</span>}
-                </h4>
+                </h3>
                 {(p.descriptionZh || p.description) && <p className="text-text-secondary text-sm leading-relaxed">{p.descriptionZh ?? p.description}</p>}
                 {p.example && <Detail label="範例" value={p.example} />}
               </div>
@@ -443,15 +443,15 @@ function FoodPairingSection({ data }: { data: WineData['foodPairing'] }) {
       {/* Classic Pairings */}
       {data.classicPairings && data.classicPairings.length > 0 && (
         <div>
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             經典搭配 <span className="font-mono text-xs text-charcoal-500">Classic Pairings</span>
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.classicPairings.map((pair: any, i: number) => (
               <div key={i} className="glass-card p-5 hover:border-neon-purple transition-colors duration-300">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-neon-amber">🍷</span>
-                  <h4 className="text-text-warm font-medium">{pair.wineZh ?? pair.wine ?? pair.name ?? pair.nameZh}</h4>
+                  <h3 className="text-text-warm font-medium">{pair.wineZh ?? pair.wine ?? pair.name ?? pair.nameZh}</h3>
                   {pair.wine && pair.wineZh && <span className="font-mono text-xs text-charcoal-500">{pair.wine}</span>}
                 </div>
                 {(pair.foodZh || pair.food) && (
@@ -495,12 +495,12 @@ function VintageGuideSection({ data }: { data: WineData['vintageGuide'] }) {
       )}
       {vintageList.map((regionData: any, i: number) => (
         <div key={i} className="glass-card p-6">
-          <h3 className="font-display text-xl text-text-warm mb-4">
+          <h2 className="font-display text-xl text-text-warm mb-4">
             {regionData.regionZh ?? regionData.region ?? regionData.name ?? regionData.nameZh}
             {regionData.region && regionData.regionZh && (
               <span className="font-mono text-xs text-charcoal-500 ml-2">{regionData.region}</span>
             )}
-          </h3>
+          </h2>
           {/* Render greatYears or vintageChart */}
           {(regionData.greatYears || regionData.vintageChart) && (
             <div className="overflow-x-auto">
@@ -590,9 +590,9 @@ function AdvancedWinemakingSection({ data }: { data: WineData['advancedWinemakin
               <div className="flex items-start gap-3">
                 <span className="text-2xl mt-0.5">{icon}</span>
                 <div className="flex-1">
-                  <h4 className="font-display text-xl text-text-warm">
+                  <h3 className="font-display text-xl text-text-warm">
                     {technique.nameZh ?? technique.name}
-                  </h4>
+                  </h3>
                   {technique.nameEn && (
                     <p className="font-mono text-xs text-neon-purple/80 tracking-wider mt-0.5">{technique.nameEn}</p>
                   )}

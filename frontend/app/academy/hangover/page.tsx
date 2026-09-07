@@ -238,7 +238,7 @@ export default function HangoverGuidePage() {
       <AcademyTracker sectionId="hangover" />
 
       {/* ── Section Nav (sticky) ──────────────────────────── */}
-      <nav className="sticky top-16 z-30 bg-bg-secondary/90 backdrop-blur-md border-b border-charcoal-700">
+      <nav className="sticky top-16 z-30 bg-bg-secondary/90 backdrop-blur-md border-b border-charcoal-700" aria-label="頁面內導覽">
         <div className="max-w-6xl mx-auto px-4 flex gap-1 overflow-x-auto scrollbar-hide py-2">
           {SECTIONS.map(s => (
             <button
@@ -280,9 +280,9 @@ export default function HangoverGuidePage() {
           <div className="flex items-start gap-3">
             <span className="text-2xl flex-shrink-0">⚠️</span>
             <div>
-              <h3 className="font-display text-base text-neon-amber mb-1">
+              <h2 className="font-display text-base text-neon-amber mb-1">
                 負責任飲酒聲明 (Responsible Drinking Disclaimer)
-              </h3>
+              </h2>
               <p className="text-text-secondary text-sm leading-relaxed">
                 本指南旨在提供科學資訊，幫助讀者做出更明智的飲酒決定。
                 <strong className="text-text-warm">預防宿醉最有效的方法永遠是適量飲酒或不飲酒。</strong>
@@ -370,9 +370,9 @@ export default function HangoverGuidePage() {
         <div className="grid md:grid-cols-3 gap-6">
           <div className="glass-card p-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <span className="text-2xl mb-3 block">💧</span>
-            <h4 className="font-display text-base text-text-warm mb-2">
+            <h3 className="font-display text-base text-text-warm mb-2">
               脫水機制 <span className="font-mono text-xs text-charcoal-500 ml-1">Dehydration</span>
-            </h4>
+            </h3>
             <p className="text-text-secondary text-sm leading-relaxed">
               酒精會抑制抗利尿激素（Vasopressin / ADH）的分泌，導致腎臟回收水分的能力大幅下降。
               飲用 250ml 酒精飲料可導致排出 800–1000ml 尿液。這種淨水分流失造成頭痛、口渴、疲勞——宿醉的核心症狀。
@@ -381,9 +381,9 @@ export default function HangoverGuidePage() {
 
           <div className="glass-card p-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <span className="text-2xl mb-3 block">🧪</span>
-            <h4 className="font-display text-base text-text-warm mb-2">
+            <h3 className="font-display text-base text-text-warm mb-2">
               同族物效應 <span className="font-mono text-xs text-charcoal-500 ml-1">Congeners</span>
-            </h4>
+            </h3>
             <p className="text-text-secondary text-sm leading-relaxed">
               同族物（Congeners）是發酵與蒸餾過程中產生的副產物——包括甲醇、丙酮、丹寧、組胺等數百種化合物。
               深色酒款含量遠高於透明酒款。波本威士忌的同族物含量是伏特加的 37 倍——這就是為什麼喝波本的宿醉通常比伏特加嚴重。
@@ -392,9 +392,9 @@ export default function HangoverGuidePage() {
 
           <div className="glass-card p-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <span className="text-2xl mb-3 block">🛌</span>
-            <h4 className="font-display text-base text-text-warm mb-2">
+            <h3 className="font-display text-base text-text-warm mb-2">
               睡眠干擾 <span className="font-mono text-xs text-charcoal-500 ml-1">Sleep Disruption</span>
-            </h4>
+            </h3>
             <p className="text-text-secondary text-sm leading-relaxed">
               酒精雖然有助於入睡（鎮靜作用），但會嚴重干擾 REM 快速動眼期——這是大腦進行記憶鞏固和情緒修復的關鍵睡眠階段。
               酒後睡眠的後半段尤其破碎，頻繁醒來，導致即使「睡夠」了仍感到疲憊和認知遲鈍。
@@ -422,7 +422,7 @@ export default function HangoverGuidePage() {
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <span className="text-3xl mb-3 block">{tip.icon}</span>
-              <h4 className="font-display text-base text-text-warm mb-2">{tip.title}</h4>
+              <h3 className="font-display text-base text-text-warm mb-2">{tip.title}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{tip.desc}</p>
             </div>
           ))}
@@ -448,7 +448,7 @@ export default function HangoverGuidePage() {
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <span className="text-3xl mb-3 block">{tip.icon}</span>
-              <h4 className="font-display text-base text-text-warm mb-2">{tip.title}</h4>
+              <h3 className="font-display text-base text-text-warm mb-2">{tip.title}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{tip.desc}</p>
             </div>
           ))}
@@ -474,7 +474,7 @@ export default function HangoverGuidePage() {
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <span className="text-3xl mb-3 block">{tip.icon}</span>
-              <h4 className="font-display text-base text-text-warm mb-2">{tip.title}</h4>
+              <h3 className="font-display text-base text-text-warm mb-2">{tip.title}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{tip.desc}</p>
             </div>
           ))}
@@ -517,7 +517,7 @@ export default function HangoverGuidePage() {
                   </span>
                 </div>
               </div>
-              <h4 className="font-display text-base text-text-warm mb-2">{myth.claim}</h4>
+              <h3 className="font-display text-base text-text-warm mb-2">{myth.claim}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{myth.truth}</p>
             </div>
           ))}
@@ -606,11 +606,11 @@ export default function HangoverGuidePage() {
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">{card.icon}</span>
-                <h4 className={`font-display text-base ${
+                <h3 className={`font-display text-base ${
                   card.level === 'red' ? 'text-red-400' : 'text-neon-amber'
                 }`}>
                   {card.title}
-                </h4>
+                </h3>
               </div>
               <ul className="space-y-2">
                 {card.signs.map((sign) => (

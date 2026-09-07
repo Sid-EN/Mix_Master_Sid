@@ -134,6 +134,9 @@ jobs:
 
     env:
       DATABASE_URL: postgresql+psycopg2://mixmaster:mixmaster@localhost:5432/mixmaster
+      # E2E 會在數分鐘內送出上千次請求，開著限流會隨機失敗；
+      # 限流本身另由 test_rate_limit.py 以獨立的應用實例與極低限制值驗證。
+      RATE_LIMIT_ENABLED: 'false'
 
     steps:
       - uses: actions/checkout@v5

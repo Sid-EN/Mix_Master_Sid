@@ -1,6 +1,6 @@
 {
   "name": "mixmaster",
-  "version": "2.7.0",
+  "version": "2.9.0",
   "private": true,
   "description": "MixMaster — 全端調酒知識與創作平台（測試與 E2E 工作區）",
   "scripts": {
@@ -13,6 +13,7 @@
     "typecheck:backend": "python3 -m mypy"
   },
   "devDependencies": {
-    "@playwright/test": "1.49.1"
+    "@playwright/test": "1.49.1",
+    "axe-core": "^4.13.0"
   }
 }

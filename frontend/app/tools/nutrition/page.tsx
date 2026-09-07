@@ -361,6 +361,7 @@ export default function NutritionCalculatorPage() {
                     className="grid grid-cols-[1fr_80px_36px] sm:grid-cols-[1fr_100px_80px_36px] gap-2 items-center"
                   >
                     <select
+            aria-label="選項"
                       className="input-neon text-xs !py-2"
                       value={row.ingredientIndex}
                       onChange={e => updateRow(row.id, 'ingredientIndex', Number(e.target.value))}
@@ -371,6 +372,7 @@ export default function NutritionCalculatorPage() {
                     </select>
                     <input
                       type="number"
+                      aria-label="數值輸入"
                       className="input-neon text-xs !py-2 text-center"
                       value={row.amountMl}
                       min={0}

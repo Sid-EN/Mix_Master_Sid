@@ -32,10 +32,10 @@ function ServiceContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           開瓶技巧
           <span className="font-mono text-xs text-charcoal-500 ml-2">Opening Techniques</span>
-        </h3>
+        </h2>
         <div className="space-y-4 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-neon-amber text-xs block mb-1">靜態葡萄酒 Still Wine</span>
@@ -53,10 +53,10 @@ function ServiceContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           醒酒 Decanting
           <span className="font-mono text-xs text-charcoal-500 ml-2">When & How</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-neon-amber text-xs block mb-1">醒酒的目的</span>
@@ -71,10 +71,10 @@ function ServiceContent() {
 
       {/* 適飲溫度表 */}
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-3">
+        <h2 className="font-display text-xl text-text-warm mb-3">
           適飲溫度速查表
           <span className="font-mono text-xs text-charcoal-500 ml-2">Serving Temperature Guide</span>
-        </h3>
+        </h2>
         <div className="space-y-2">
           {servingTemps.map((t) => (
             <div key={t.type} className="flex items-center gap-4 p-3 bg-bg-tertiary border border-charcoal-700 hover:border-neon-amber transition-colors duration-300">
@@ -112,14 +112,14 @@ function PairingContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-xl text-text-warm mb-3">
+        <h2 className="font-display text-xl text-text-warm mb-3">
           搭配三原則
           <span className="font-mono text-xs text-charcoal-500 ml-2">3 Principles</span>
-        </h3>
+        </h2>
         <div className="space-y-4">
           {principles.map((p) => (
             <div key={p.name}>
-              <h4 className="text-neon-amber font-medium text-sm mb-1">{p.name}</h4>
+              <h3 className="text-neon-amber font-medium text-sm mb-1">{p.name}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{p.desc}</p>
             </div>
           ))}
@@ -127,14 +127,14 @@ function PairingContent() {
       </div>
 
       <div>
-        <h3 className="font-display text-xl text-text-warm mb-4">
+        <h2 className="font-display text-xl text-text-warm mb-4">
           亞洲料理搭配指南
           <span className="font-mono text-xs text-charcoal-500 ml-2">Asian Cuisine Pairing</span>
-        </h3>
+        </h2>
         <div className="space-y-4">
           {asianPairings.map((ap) => (
             <div key={ap.cuisine} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-              <h4 className="font-display text-lg text-text-warm mb-2">{ap.cuisine}</h4>
+              <h3 className="font-display text-lg text-text-warm mb-2">{ap.cuisine}</h3>
               <div className="flex flex-wrap gap-2 mb-3">
                 {ap.wine.split(' · ').map((w) => (
                   <span key={w} className="font-mono text-xs px-2.5 py-1 bg-bg-tertiary border border-charcoal-700 text-neon-amber">
@@ -174,10 +174,10 @@ function GlasswareContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           杯型為什麼重要？
           <span className="font-mono text-xs text-charcoal-500 ml-2">Why Glass Shape Matters</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           酒杯的形狀透過三個機制影響品飲體驗：（1）杯腹容積決定酒液與空氣的接觸面積→影響香氣的揮發速度與氧化程度；
           （2）杯口直徑與形狀決定香氣分子的聚集方式→影響你嗅到的風味強度與類型；
@@ -190,7 +190,7 @@ function GlasswareContent() {
         {glasses.map((g) => (
           <div key={g.en} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
             <div className="flex flex-wrap items-center gap-3 mb-3">
-              <h4 className="font-display text-lg text-text-warm">{g.name}</h4>
+              <h3 className="font-display text-lg text-text-warm">{g.name}</h3>
               <span className="font-mono text-sm text-neon-amber">{g.en}</span>
               <span className="font-mono text-xs text-charcoal-500 border border-charcoal-700 px-2 py-0.5">
                 杯身 {g.height} · 杯腹 {g.bowl}
@@ -209,10 +209,10 @@ function GlasswareContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           杯具保養
           <span className="font-mono text-xs text-charcoal-500 ml-2">Glassware Care</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           高品質水晶酒杯需要適當的保養：（1）手洗為佳——洗碗機的高溫與洗劑可能損壞水晶表面的細微紋理；
           （2）使用溫水與少量中性洗劑，避免含柑橘或研磨成分的清潔劑；（3）自然風乾或以無毛屑的超細纖維布擦拭——
@@ -229,10 +229,10 @@ function MenuContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           專業酒單結構
           <span className="font-mono text-xs text-charcoal-500 ml-2">Wine List Architecture</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed mb-4">
           一份好的酒單不僅是價目表——它是餐廳哲學的延伸、是侍酒師品味的展現、更是引導客人探索的地圖。
         </p>
@@ -254,27 +254,27 @@ function MenuContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           標價策略
           <span className="font-mono text-xs text-charcoal-500 ml-2">Pricing Strategy</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">固定加成法 Fixed Markup</h4>
+            <h3 className="text-text-warm font-medium mb-2">固定加成法 Fixed Markup</h3>
             <p className="leading-relaxed">所有酒款統一加成 2.5–3 倍（成本 × 2.5–3 = 售價）。優點是簡單一致；缺點是高價酒的加成金額過高（一支成本 $100 的酒售價 $300，等於加了 $200），可能嚇跑客人。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">漸進加成法 Progressive Markup</h4>
+            <h3 className="text-text-warm font-medium mb-2">漸進加成法 Progressive Markup</h3>
             <p className="leading-relaxed">更聰明的策略：低價酒用較高倍率（3–4 倍）、高價酒用較低倍率（1.5–2 倍）。這使得高價酒對客人更有吸引力，也鼓勵客人「升級」嘗試更好的酒款。頂級餐廳都使用此策略。</p>
           </div>
         </div>
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           數位酒單趨勢
           <span className="font-mono text-xs text-charcoal-500 ml-2">Digital Wine List Trends</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           COVID-19 加速了 QR Code 數位酒單的普及。優質的數位酒單應提供：即時庫存更新（避免點了才告知售罄的尷尬）、
           互動式過濾器（按品種、價格、風格篩選）、品酒筆記與搭配建議、多語言支持、
@@ -338,7 +338,7 @@ function CertificationContent() {
 
       {certs.map((c) => (
         <div key={c.name} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-          <h3 className="font-display text-xl text-text-warm mb-0.5">{c.name}</h3>
+          <h2 className="font-display text-xl text-text-warm mb-0.5">{c.name}</h2>
           <p className="font-mono text-sm text-neon-amber tracking-wider mb-1">{c.full}</p>
           <p className="font-mono text-xs text-charcoal-500 mb-4">📍 {c.origin}</p>
           <div className="space-y-3 mb-4">
@@ -395,7 +395,7 @@ export default function SommelierPage() {
               }`}
             >
               {tab.zh}
-              <span className="font-mono text-xs ml-1.5 opacity-60">{tab.en}</span>
+              <span className="font-mono text-xs ml-1.5">{tab.en}</span>
             </button>
           ))}
         </div>

@@ -59,4 +59,4 @@ frontend/.parked-routes/
 # 由 backend/data 產生的搜尋索引（frontend/scripts/build-search-index.mjs）
 frontend/public/search-index.json
 frontend/public/recipes-summary.json
-frontend/public/party-data.json
+frontend/public/recipe-data.json

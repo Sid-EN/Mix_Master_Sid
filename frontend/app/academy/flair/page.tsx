@@ -442,7 +442,7 @@ export default function FlairPage() {
           </p>
 
           {/* filter bar */}
-          <nav className="flex flex-wrap gap-2 mb-8">
+          <nav className="flex flex-wrap gap-2 mb-8" aria-label="頁面內導覽">
             {FILTERS.map((f) => (
               <button
                 key={String(f.value)}

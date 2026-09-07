@@ -68,13 +68,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-Hant" data-theme="dark" suppressHydrationWarning>
       <body>
+        {/*
+          跳至主要內容：以鍵盤瀏覽時，若沒有這個連結，
+          每一頁都得先按過導覽列的二十幾個項目才能到內容。
+          平時隱藏，取得焦點時才顯示。
+        */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200]
+                     focus:px-4 focus:py-2 focus:bg-bg-tertiary focus:text-neon-amber
+                     focus:border focus:border-neon-amber focus:rounded"
+        >
+          跳至主要內容
+        </a>
         <I18nProvider>
         <ThemeProvider>
           <AuthProvider>
           <FavoritesProvider>
             <ProgressProvider>
               <Navbar />
-              <div className="pt-16">
+              <div className="pt-16" id="main-content" tabIndex={-1}>
                 <PageTransition>
                   {children}
                 </PageTransition>

@@ -70,10 +70,10 @@ function UniversalContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           WSET SAT 系統性品評法
           <span className="font-mono text-xs text-charcoal-500 ml-2">Systematic Approach to Tasting</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           WSET（Wine & Spirit Education Trust）的「系統性品評法」（SAT）是全球最通用的品酒框架。
           它將主觀的品飲體驗結構化為可複製、可比較的評估標準。無論你品評的是葡萄酒、威士忌還是清酒，
@@ -90,7 +90,7 @@ function UniversalContent() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs text-neon-amber">{p.phase}</span>
-                <h3 className="font-display text-xl text-text-warm">{p.name}</h3>
+                <h2 className="font-display text-xl text-text-warm">{p.name}</h2>
               </div>
               <p className="font-mono text-xs text-charcoal-500 tracking-wider">{p.en}</p>
             </div>
@@ -107,10 +107,10 @@ function UniversalContent() {
       ))}
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           品鑑環境建議
           <span className="font-mono text-xs text-charcoal-500 ml-2">Tasting Environment</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-xs text-neon-amber block mb-1">理想條件</span>
@@ -131,10 +131,10 @@ function SpiritContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           烈酒品鑑特殊注意事項
           <span className="font-mono text-xs text-charcoal-500 ml-2">Spirit-Specific Notes</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           品鑑高酒精度烈酒（40–65% ABV）與品鑑葡萄酒最大的差異在於酒精對嗅覺的「麻痺效應」。
           高濃度乙醇蒸汽會暫時麻痺嗅覺受器，使品飲者在前幾秒只聞到「酒精」而非風味。
@@ -144,7 +144,7 @@ function SpiritContent() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">漸進式嗅聞法</h4>
+          <h3 className="text-text-warm font-medium mb-2">漸進式嗅聞法</h3>
           <p className="font-mono text-xs text-charcoal-500 mb-2">Progressive Nosing</p>
           <p className="text-text-secondary text-sm leading-relaxed">
             第一次嗅聞：將酒杯遠離鼻子 10–15 公分，張嘴輕輕呼吸（開口嗅聞可減少酒精的刺激感），
@@ -154,7 +154,7 @@ function SpiritContent() {
           </p>
         </div>
         <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">加水品飲法</h4>
+          <h3 className="text-text-warm font-medium mb-2">加水品飲法</h3>
           <p className="font-mono text-xs text-charcoal-500 mb-2">Adding Water</p>
           <p className="text-text-secondary text-sm leading-relaxed">
             專業品酒師通常會在第二輪品鑑時加入數滴室溫水（使用滴管或茶匙），
@@ -166,10 +166,10 @@ function SpiritContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           威士忌品鑑筆記範例
           <span className="font-mono text-xs text-charcoal-500 ml-2">Whisky Tasting Note Example</span>
-        </h3>
+        </h2>
         <div className="p-4 bg-bg-tertiary border border-charcoal-700 font-mono text-sm text-text-secondary leading-relaxed">
           <p className="text-neon-amber mb-2">Lagavulin 16 Year Old · Islay Single Malt · 43% ABV</p>
           <p><span className="text-charcoal-500">外觀：</span>深琥珀金，黏度中高，酒腿緩慢繁密。</p>
@@ -181,31 +181,31 @@ function SpiritContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           品鑑杯型選擇
           <span className="font-mono text-xs text-charcoal-500 ml-2">Tasting Glassware</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-text-secondary">
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">Glencairn Glass</h4>
+            <h3 className="text-text-warm font-medium mb-1">Glencairn Glass</h3>
             <p className="leading-relaxed">蘇格蘭威士忌的標準品鑑杯。鬱金香型杯口集中香氣，寬底穩固便於觀察色澤，無杯腳設計讓手的溫度微微加溫酒液。全球最廣泛使用的烈酒品鑑杯。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">Copita / ISO Glass</h4>
+            <h3 className="text-text-warm font-medium mb-1">Copita / ISO Glass</h3>
             <p className="leading-relaxed">有杯腳的國際標準品酒杯。杯腳避免了手溫的干擾，適合需要嚴格控制溫度的專業品評場合。ISO 杯(ISO 3591)是國際葡萄酒與烈酒競賽的指定用杯。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">Rocks Glass / Tumbler</h4>
+            <h3 className="text-text-warm font-medium mb-1">Rocks Glass / Tumbler</h3>
             <p className="leading-relaxed">厚底矮杯，非品鑑用途但是享受烈酒的經典方式。寬口設計不利於集中香氣但方便加冰或製作 Old Fashioned 等經典調酒。日常飲用的最佳選擇。</p>
           </div>
         </div>
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           評分系統
           <span className="font-mono text-xs text-charcoal-500 ml-2">Scoring Systems</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-xs text-neon-amber block mb-1">100 分制</span>
@@ -235,10 +235,10 @@ function WineContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           盲品技巧
           <span className="font-mono text-xs text-charcoal-500 ml-2">Blind Tasting Methodology</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           盲品（Blind Tasting）是指在不知道酒款身份的情況下品評——這排除了品牌、價格、
           產區名聲等認知偏差（Cognitive Bias）的干擾，讓品飲者完全根據感官判斷酒的品質與特徵。
@@ -253,7 +253,7 @@ function WineContent() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">垂直品飲 Vertical Tasting</h4>
+          <h3 className="text-text-warm font-medium mb-2">垂直品飲 Vertical Tasting</h3>
           <p className="text-text-secondary text-sm leading-relaxed">
             品飲同一酒莊/品牌的不同年份（如 Château Margaux 2015、2016、2017、2018）。
             目的是理解年份對風味的影響——天氣、降雨、日照時數如何塑造同一塊風土的不同表情。
@@ -261,7 +261,7 @@ function WineContent() {
           </p>
         </div>
         <div className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-          <h4 className="text-text-warm font-medium mb-2">水平品飲 Horizontal Tasting</h4>
+          <h3 className="text-text-warm font-medium mb-2">水平品飲 Horizontal Tasting</h3>
           <p className="text-text-secondary text-sm leading-relaxed">
             品飲同一年份的不同酒莊（如 2018 年的五款 Pauillac 紅酒）。
             目的是比較不同釀酒師/風土在同一氣候條件下的表現差異。
@@ -272,10 +272,10 @@ function WineContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           WSET 品評表速覽
           <span className="font-mono text-xs text-charcoal-500 ml-2">WSET SAT Grid Summary</span>
-        </h3>
+        </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-text-secondary">
             <thead>
@@ -297,25 +297,25 @@ function WineContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           常見缺陷辨識
           <span className="font-mono text-xs text-charcoal-500 ml-2">Fault Detection</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div className="p-3 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">軟木塞污染 Cork Taint (TCA)</h4>
+            <h3 className="text-text-warm font-medium mb-1">軟木塞污染 Cork Taint (TCA)</h3>
             <p className="leading-relaxed">由三氯苯甲醚（TCA）引起，呈現濕紙板、發霉地下室、濕狗的氣味。即使極微量也會壓抑酒的果香，使其變得「平淡」。影響約 2–5% 的軟木塞封裝酒款。</p>
           </div>
           <div className="p-3 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">過度氧化 Oxidation</h4>
+            <h3 className="text-text-warm font-medium mb-1">過度氧化 Oxidation</h3>
             <p className="leading-relaxed">酒液過度接觸氧氣導致。白酒變為深金/琥珀色，氣味類似雪莉酒或蘋果醬。紅酒呈現磚紅棕色，果味消失被核桃、蜜餞味取代。與「陳年」的區別在於氧化缺乏複雜度。</p>
           </div>
           <div className="p-3 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">揮發性酸度 Volatile Acidity</h4>
+            <h3 className="text-text-warm font-medium mb-1">揮發性酸度 Volatile Acidity</h3>
             <p className="leading-relaxed">（VA）過高會產生醋酸/指甲油般的刺鼻感。微量的 VA 可增添複雜度（許多高評價的自然酒有刻意的 VA），但過量即為缺陷。</p>
           </div>
           <div className="p-3 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">酒香酵母 Brettanomyces</h4>
+            <h3 className="text-text-warm font-medium mb-1">酒香酵母 Brettanomyces</h3>
             <p className="leading-relaxed">（Brett）帶來馬廄、創可貼、煙燻皮革的味道。在南隆河與老世界某些產區被視為「風土表現」的一部分（如傳統 Châteauneuf-du-Pape），但在新世界通常被視為缺陷。</p>
           </div>
         </div>
@@ -329,10 +329,10 @@ function SakeContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           清酒品鑑的獨特之處
           <span className="font-mono text-xs text-charcoal-500 ml-2">Unique Aspects of Sake Tasting</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           清酒品鑑與葡萄酒/烈酒品鑑有幾個關鍵差異：（1）清酒幾乎無單寧，口感的焦點在於旨味（Umami）、
           酸度與甜度的三角平衡；（2）清酒的品飲溫度範圍極廣（5–55°C），同一款酒在不同溫度下會展現截然不同的面貌；
@@ -341,52 +341,52 @@ function SakeContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           日本酒度・酸度・胺基酸度 三維分析
           <span className="font-mono text-xs text-charcoal-500 ml-2">SMV × Acidity × Amino Acids</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-text-secondary">
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">日本酒度 SMV</h4>
+            <h3 className="text-text-warm font-medium mb-2">日本酒度 SMV</h3>
             <p className="leading-relaxed">衡量含糖量的指標。正值（+）= 糖少 = 傾向辛口；負值（-）= 糖多 = 傾向甘口。一般範圍 -5 到 +10。但 SMV 單獨參考容易誤判——高酸度的酒即使 SMV 為負也可能喝起來很乾爽。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">酸度 Acidity</h4>
+            <h3 className="text-text-warm font-medium mb-2">酸度 Acidity</h3>
             <p className="leading-relaxed">計量清酒中有機酸（乳酸、蘋果酸、琥珀酸）的總量。一般範圍 0.8–2.0。高酸度帶來清爽感與結構，可以「中和」甘口酒的甜膩。生酛/山廢系清酒的酸度通常高於速釀酛，這是其風格濃厚的原因之一。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">胺基酸度 Amino Acids</h4>
+            <h3 className="text-text-warm font-medium mb-2">胺基酸度 Amino Acids</h3>
             <p className="leading-relaxed">衡量旨味（Umami）強度的指標。一般範圍 0.8–2.5。高胺基酸度 = 味道濃厚飽滿（適合配餐）；低胺基酸度 = 輕快淡麗（適合餐前）。過高可能帶來「雜味」感。大吟釀刻意追求低胺基酸度以維持純淨感。</p>
           </div>
         </div>
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           清酒四大類型風格圖
           <span className="font-mono text-xs text-charcoal-500 ml-2">4-Type Classification</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed mb-4">
           日本酒類綜合研究所提出的四象限分類法，以「香氣高低」與「味道濃淡」兩個軸線將清酒分為四大類型：
         </p>
         <div className="grid grid-cols-2 gap-3">
           <div className="p-4 bg-bg-tertiary border border-neon-amber/30">
-            <h4 className="text-neon-amber font-medium mb-1">薰酒 Kunshu</h4>
+            <h3 className="text-neon-amber font-medium mb-1">薰酒 Kunshu</h3>
             <p className="font-mono text-xs text-charcoal-500 mb-1">高香氣 × 淡口感</p>
             <p className="text-text-secondary text-sm leading-relaxed">華麗的果香花香，口感輕盈。大吟釀、吟釀類。適合冷飲，搭配清淡料理。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">爽酒 Soshu</h4>
+            <h3 className="text-text-warm font-medium mb-1">爽酒 Soshu</h3>
             <p className="font-mono text-xs text-charcoal-500 mb-1">低香氣 × 淡口感</p>
             <p className="text-text-secondary text-sm leading-relaxed">清爽乾淨，不搶食物風味。本釀造、生酒類。極度百搭的配餐酒。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">醇酒 Junshu</h4>
+            <h3 className="text-text-warm font-medium mb-1">醇酒 Junshu</h3>
             <p className="font-mono text-xs text-charcoal-500 mb-1">低香氣 × 濃口感</p>
             <p className="text-text-secondary text-sm leading-relaxed">旨味濃厚、米味飽滿。純米酒、生酛/山廢系。適合溫燗，搭配燉煮料理。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-1">熟酒 Jukushu</h4>
+            <h3 className="text-text-warm font-medium mb-1">熟酒 Jukushu</h3>
             <p className="font-mono text-xs text-charcoal-500 mb-1">高香氣 × 濃口感</p>
             <p className="text-text-secondary text-sm leading-relaxed">陳年清酒，色澤琥珀至深棕。蜂蜜、焦糖、堅果風味。適合搭配起司、煙燻料理或當甜點酒。</p>
           </div>
@@ -412,10 +412,10 @@ function WheelContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           何謂風味輪？
           <span className="font-mono text-xs text-charcoal-500 ml-2">What is a Flavor Wheel?</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           風味輪（Flavor Wheel）是一種將所有可能的香氣/味覺描述詞組織為同心圓的視覺化工具。
           從圓心向外，風味描述從抽象（「果香」）逐漸具體化（「柑橘」→「Meyer 檸檬」）。
@@ -427,14 +427,14 @@ function WheelContent() {
       </div>
 
       <div>
-        <h3 className="font-display text-xl text-text-warm mb-4">
+        <h2 className="font-display text-xl text-text-warm mb-4">
           八大風味家族
           <span className="font-mono text-xs text-charcoal-500 ml-2">8 Flavor Families</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {categories.map((cat) => (
             <div key={cat.en} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
-              <h4 className={`font-display text-lg ${cat.color} mb-1`}>{cat.name}</h4>
+              <h3 className={`font-display text-lg ${cat.color} mb-1`}>{cat.name}</h3>
               <p className="font-mono text-xs text-charcoal-500 mb-3">{cat.en}</p>
               <div className="flex flex-wrap gap-1.5">
                 {cat.subs.map((s) => (
@@ -449,10 +449,10 @@ function WheelContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           如何建立個人風味詞彙庫
           <span className="font-mono text-xs text-charcoal-500 ml-2">Building Your Vocabulary</span>
-        </h3>
+        </h2>
         <div className="space-y-3 text-sm text-text-secondary">
           <div className="flex gap-3 items-start">
             <span className="font-mono text-neon-amber flex-shrink-0">Step 1</span>
@@ -525,7 +525,7 @@ export default function TastingPage() {
               }`}
             >
               {tab.zh}
-              <span className="font-mono text-xs ml-1.5 opacity-60">{tab.en}</span>
+              <span className="font-mono text-xs ml-1.5">{tab.en}</span>
             </button>
           ))}
         </div>

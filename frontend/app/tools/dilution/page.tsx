@@ -312,7 +312,7 @@ export default function DilutionSimulatorPage() {
               </label>
               <div className="flex items-center gap-3">
                 <input
-                  type="range"
+                  type="range" aria-label="數值調整"
                   min={0}
                   max={100}
                   step={0.5}
@@ -331,6 +331,7 @@ export default function DilutionSimulatorPage() {
               </label>
               <input
                 type="number"
+                aria-label="數值輸入"
                 min={1}
                 max={1000}
                 value={state.volume}
@@ -368,7 +369,7 @@ export default function DilutionSimulatorPage() {
               </label>
               <div className="flex items-center gap-3">
                 <input
-                  type="range"
+                  type="range" aria-label="數值調整"
                   min={0}
                   max={state.technique === 'rocks' ? 300 : 60}
                   step={1}
@@ -386,6 +387,7 @@ export default function DilutionSimulatorPage() {
                 冰塊類型 Ice Type
               </label>
               <select
+            aria-label="選項"
                 value={state.ice}
                 onChange={(e) => set('ice', e.target.value as IceType)}
                 className="input-neon w-full"
@@ -405,6 +407,9 @@ export default function DilutionSimulatorPage() {
               </label>
               <button
                 onClick={() => set('chilled', !state.chilled)}
+                role="switch"
+                aria-checked={state.chilled}
+                aria-label="杯子預冷"
                 className={`relative w-12 h-6 rounded-full transition-colors ${
                   state.chilled ? 'bg-neon-amber/30 border-neon-amber' : 'bg-charcoal-700 border-charcoal-600'
                 } border`}

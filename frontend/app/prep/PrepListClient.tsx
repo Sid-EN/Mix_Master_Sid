@@ -50,6 +50,8 @@ export default function PrepListClient({ recipes }: PrepListClientProps) {
 
   return (
     <>
+      {/* h1 之後直接出現卡片的 h3 會讓標題層級斷層；此標題僅供輔助技術讀取 */}
+      <h2 className="sr-only">備料列表</h2>
       {/* Filter Bar */}
       <div className="flex flex-wrap gap-2 mb-10">
         {FILTER_TABS.map((tab) => (

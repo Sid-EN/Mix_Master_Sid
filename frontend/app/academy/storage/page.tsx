@@ -55,10 +55,10 @@ function EnvironmentContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           五大關鍵因素
           <span className="font-mono text-xs text-charcoal-500 ml-2">5 Critical Factors</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           正確的儲存不會讓平庸的酒變好，但錯誤的儲存一定會讓好酒報廢。
           以下五個因素構成了酒類保存的基礎。
@@ -70,7 +70,7 @@ function EnvironmentContent() {
           <div className="flex items-center gap-3 mb-3">
             <span className="text-2xl">{f.icon}</span>
             <div>
-              <h4 className="font-display text-lg text-text-warm">{f.name}</h4>
+              <h3 className="font-display text-lg text-text-warm">{f.name}</h3>
               <span className="font-mono text-xs text-neon-cyan">理想值：{f.ideal}</span>
             </div>
           </div>
@@ -79,17 +79,17 @@ function EnvironmentContent() {
       ))}
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           專業酒窖 vs 酒櫃
           <span className="font-mono text-xs text-charcoal-500 ml-2">Cellar vs Wine Cooler</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">專業地下酒窖 Professional Cellar</h4>
+            <h3 className="text-text-warm font-medium mb-2">專業地下酒窖 Professional Cellar</h3>
             <p className="leading-relaxed">理想的天然地下酒窖溫度全年穩定在 10–14°C，濕度 70–80%，完全避光與靜止。這是千百年來歐洲酒莊儲酒的方式。建造成本高但一勞永逸。適合收藏 100+ 瓶且有長期陳年計劃的藏家。</p>
           </div>
           <div className="p-4 bg-bg-tertiary border border-charcoal-700">
-            <h4 className="text-text-warm font-medium mb-2">恆溫酒櫃 Wine Cooler</h4>
+            <h3 className="text-text-warm font-medium mb-2">恆溫酒櫃 Wine Cooler</h3>
             <p className="leading-relaxed">現代的替代方案。選購要點：變頻壓縮機（減少震動與噪音）、雙溫區設計（上層白酒 8–12°C / 下層紅酒 14–18°C）、UV 濾光玻璃門、獨立濕度控制。EuroCave、Liebherr、Sub-Zero 是公認的頂級品牌。20–50 瓶容量適合家用。</p>
           </div>
         </div>
@@ -120,9 +120,9 @@ function OpenedContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           氧化——開瓶後的倒計時
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           開瓶的那一刻，空氣中的氧氣開始與酒液進行不可逆的化學反應。適量的氧化是正面的（這就是「醒酒」的原理），
           但過度氧化會讓果味消失、出現醋酸味與平淡的口感。以下是各類酒開瓶後的保存建議。
@@ -133,7 +133,7 @@ function OpenedContent() {
         {shelfLife.map((s) => (
           <div key={s.type} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
             <div className="flex flex-wrap items-center gap-3 mb-2">
-              <h4 className="text-text-warm font-medium">{s.type}</h4>
+              <h3 className="text-text-warm font-medium">{s.type}</h3>
               <span className="font-mono text-xs text-neon-cyan border border-neon-cyan/30 px-2 py-0.5">
                 {s.days}
               </span>
@@ -145,14 +145,14 @@ function OpenedContent() {
       </div>
 
       <div className="divider-amber" />
-      <h3 className="font-display text-xl text-text-warm mb-4 mt-8">
+      <h2 className="font-display text-xl text-text-warm mb-4 mt-8">
         保存工具指南
         <span className="font-mono text-xs text-charcoal-500 ml-2">Preservation Tools</span>
-      </h3>
+      </h2>
       <div className="space-y-4">
         {tools.map((t) => (
           <div key={t.name} className="glass-card p-6 hover:border-neon-amber transition-colors duration-300">
-            <h4 className="font-display text-lg text-text-warm mb-2">{t.name}</h4>
+            <h3 className="font-display text-lg text-text-warm mb-2">{t.name}</h3>
             <p className="text-text-secondary text-sm leading-relaxed">{t.desc}</p>
           </div>
         ))}
@@ -166,10 +166,10 @@ function SpiritsContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6">
-        <h3 className="font-display text-xl text-text-warm mb-2">
+        <h2 className="font-display text-xl text-text-warm mb-2">
           烈酒不會壞——這是真的嗎？
           <span className="font-mono text-xs text-charcoal-500 ml-2">Do Spirits Go Bad?</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           高酒精度（40%+ ABV）的烈酒不會像葡萄酒那樣「變質」或「過期」——酒精本身是天然的防腐劑，
           阻止了微生物的生長。但這不代表烈酒在開瓶後「永遠不變」。開瓶後的烈酒會緩慢氧化，
@@ -180,10 +180,10 @@ function SpiritsContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           液面高度與氧化速度
           <span className="font-mono text-xs text-charcoal-500 ml-2">Fill Level & Oxidation Rate</span>
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed mb-4">
           瓶中液面越低 = 瓶中空氣越多 = 氧化速度越快。這是一個非線性的加速過程——
           最後四分之一瓶的氧化速度遠快於第一個四分之一。
@@ -213,10 +213,10 @@ function SpiritsContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           各類烈酒保存建議
           <span className="font-mono text-xs text-charcoal-500 ml-2">By Category</span>
-        </h3>
+        </h2>
         <div className="space-y-4 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-neon-amber text-xs block mb-1">威士忌 Whisky</span>
@@ -268,9 +268,9 @@ function AgingContent() {
   return (
     <div className="space-y-6">
       <div className="glass-card p-6 border-neon-amber-glow">
-        <h3 className="font-display text-lg text-text-warm mb-2">
+        <h2 className="font-display text-lg text-text-warm mb-2">
           「全球 90% 的酒適合在 5 年內飲用」
-        </h3>
+        </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           這是一個被廣泛引用但經常被忽視的事實。酒類產業中，只有極少數的頂級酒款擁有真正的長期陳年潛力。
           大部分酒款的最佳適飲期（Drinking Window）在出廠後 1–5 年內。「陳年越久越好」是最常見的
@@ -280,15 +280,15 @@ function AgingContent() {
       </div>
 
       <div>
-        <h3 className="font-display text-xl text-text-warm mb-4">
+        <h2 className="font-display text-xl text-text-warm mb-4">
           適飲窗口速查表
           <span className="font-mono text-xs text-charcoal-500 ml-2">Drinking Window Guide</span>
-        </h3>
+        </h2>
         <div className="space-y-3">
           {agingGuide.map((a) => (
             <div key={a.type} className="glass-card p-5 hover:border-neon-amber transition-colors duration-300">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <h4 className="text-text-warm font-medium">{a.type}</h4>
+                <h3 className="text-text-warm font-medium">{a.type}</h3>
                 <span className="font-mono text-xs text-neon-cyan border border-neon-cyan/30 px-2 py-0.5">
                   {a.window}
                 </span>
@@ -307,10 +307,10 @@ function AgingContent() {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="font-display text-lg text-text-warm mb-3">
+        <h2 className="font-display text-lg text-text-warm mb-3">
           什麼讓一款酒適合陳年？
           <span className="font-mono text-xs text-charcoal-500 ml-2">Conditions for Aging</span>
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
           <div>
             <span className="font-mono text-neon-amber text-xs block mb-1">高結構性</span>
@@ -373,7 +373,7 @@ export default function StoragePage() {
               }`}
             >
               {tab.zh}
-              <span className="font-mono text-xs ml-1.5 opacity-60">{tab.en}</span>
+              <span className="font-mono text-xs ml-1.5">{tab.en}</span>
             </button>
           ))}
         </div>

@@ -384,7 +384,7 @@ export default function SakeEncyclopediaPage() {
       </section>
 
       {/* ── Tab Navigation ───────────────────────────────── */}
-      <nav className="sticky top-16 z-30 bg-bg-primary/80 backdrop-blur-md border-b border-charcoal-800">
+      <nav className="sticky top-16 z-30 bg-bg-primary/80 backdrop-blur-md border-b border-charcoal-800" aria-label="頁面內導覽">
         <div className="max-w-6xl mx-auto px-4 flex gap-1 overflow-x-auto py-2 scrollbar-hide">
           {tabs.map((t) => (
             <button

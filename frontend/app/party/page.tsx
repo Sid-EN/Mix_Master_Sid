@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { loadPartyData } from '@/lib/partyData'
+import { loadRecipeData } from '@/lib/recipeData'
 import { loadInventory, type Inventory } from '@/lib/inventory'
 import { bottlesToBuy, planTotals, type PlanEntry, type PlanRecipe } from '@/lib/partyPlan'
 import { addItems, loadList, saveList } from '@/lib/shoppingList'
@@ -22,7 +22,7 @@ export default function PartyPage() {
 
   useEffect(() => {
     let cancelled = false
-    loadPartyData()
+    loadRecipeData()
       .then(data => {
         if (cancelled) return
         setRecipes(data.recipes)
@@ -198,7 +198,7 @@ export default function PartyPage() {
                   // 把缺價格的材料當成 0 會讓花費嚴重低估，因此明白說出來
                   <p className="mb-4 font-mono text-[11px] text-charcoal-500">
                     有 {plan.unpricedCount} 項材料尚未填寫價格，未計入花費。
-                    可到 <Link href="/my-bar" className="text-neon-cyan hover:underline">我的酒櫃</Link> 補上容量與售價。
+                    可到 <Link href="/my-bar" className="text-neon-cyan underline">我的酒櫃</Link> 補上容量與售價。
                   </p>
                 )}
 

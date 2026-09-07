@@ -99,7 +99,7 @@ export default function RecipeCostBar({
       {cost.unknown.length > 0 && (
         <p className="font-mono text-[11px] text-charcoal-500 mb-3">
           有 {cost.unknown.length} 項材料尚未填寫容量與售價，未計入成本。
-          可到 <Link href="/my-bar" className="text-neon-cyan hover:underline">我的酒櫃</Link> 補上。
+          可到 <Link href="/my-bar" className="text-neon-cyan underline">我的酒櫃</Link> 補上。
         </p>
       )}
 

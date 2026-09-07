@@ -551,7 +551,7 @@ export default function TemperaturePage() {
               }`}
             >
               {tab.emoji} {tab.zh}
-              <span className="hidden sm:inline text-xs ml-1 opacity-70">{tab.en}</span>
+              <span className="hidden sm:inline text-xs ml-1">{tab.en}</span>
             </button>
           ))}
         </div>

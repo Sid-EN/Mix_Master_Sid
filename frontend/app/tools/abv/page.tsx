@@ -407,9 +407,9 @@ export default function ABVCalculatorPage() {
 
           {/* Volume Info */}
           <div className="glass-card p-5">
-            <h3 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
+            <h2 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
               📊 容量資訊 VOLUME
-            </h3>
+            </h2>
             <div className="space-y-2 font-mono text-sm">
               <div className="flex justify-between">
                 <span className="text-charcoal-500">總容量 Total</span>
@@ -437,9 +437,9 @@ export default function ABVCalculatorPage() {
 
           {/* Equivalence */}
           <div className="glass-card p-5">
-            <h3 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
+            <h2 className="font-mono text-xs text-charcoal-500 tracking-wider mb-3">
               🍺 換算 EQUIVALENCE
-            </h3>
+            </h2>
             <div className="space-y-2 font-mono text-sm">
               <div className="flex justify-between">
                 <span className="text-charcoal-500">標準酒精單位</span>

@@ -263,6 +263,13 @@ export default function RecipeListClient({ recipes }: RecipeListClientProps) {
 
   return (
     <>
+      {/*
+        頁面的 h1 之後直接出現卡片的 h3，標題層級會斷層，
+        以讀屏軟體瀏覽時無法建立正確的大綱。
+        補一個僅供輔助技術讀取的 h2，視覺上完全不變。
+      */}
+      <h2 className="sr-only">配方列表</h2>
+
       {/* ── Search + Filter Toggle + Sort Row ────────────────── */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         {/* Search */}
@@ -299,6 +306,7 @@ export default function RecipeListClient({ recipes }: RecipeListClientProps) {
         <select
           value={sortKey}
           onChange={e => setSortKey(e.target.value)}
+          aria-label="配方排序方式"
           className="input-neon !py-2.5 !w-auto !min-w-[160px] cursor-pointer"
         >
           {SORT_OPTIONS.map(opt => (

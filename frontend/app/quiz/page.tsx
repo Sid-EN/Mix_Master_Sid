@@ -169,9 +169,9 @@ export default function QuizPage() {
                   className="glass-card p-8 group hover:border-neon-amber transition-all duration-300 text-left"
                 >
                   <span className="text-3xl mb-3 block">{cat.icon}</span>
-                  <h3 className="font-display text-xl text-text-warm mb-1">
+                  <h2 className="font-display text-xl text-text-warm mb-1">
                     {cat.label}
-                  </h3>
+                  </h2>
                   <p className="font-mono text-xs text-charcoal-500 tracking-wider uppercase mb-3">
                     {cat.labelEn}
                   </p>

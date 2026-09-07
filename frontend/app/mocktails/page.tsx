@@ -383,7 +383,7 @@ export default function MocktailsPage() {
       </header>
 
       {/* ── Category Filter Tabs ── */}
-      <nav className="mb-10 animate-fade-in-up-delay-1">
+      <nav className="mb-10 animate-fade-in-up-delay-1" aria-label="頁面內導覽">
         <div className="flex flex-wrap gap-2">
           {CATEGORIES.map((cat) => (
             <button
@@ -409,6 +409,8 @@ export default function MocktailsPage() {
 
       {/* ── Recipe Grid ── */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 animate-fade-in-up-delay-2">
+        {/* 卡片標題為 h3；沒有這個 h2，層級會從 h1 直接跳到 h3 */}
+        <h2 className="sr-only">無酒精調飲列表</h2>
         {filtered.map((mocktail) => (
           <MocktailCard
             key={mocktail.id}
