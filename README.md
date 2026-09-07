@@ -15,12 +15,13 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688?logo=fastapi&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-16.3-black?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-F5A623?style=flat)
-![Pages](https://img.shields.io/badge/Pages-50+-purple)
+![Pages](https://img.shields.io/badge/Pages-60+-purple)
+![A11y](https://img.shields.io/badge/axe--core-0_violations-2ECC71)
 ![Recipes](https://img.shields.io/badge/Recipes-51+-orange)
 
 </div>
@@ -122,12 +123,29 @@ MixMaster 是一個全端調酒知識與創作平台，結合 **AI 風味分析�
 | **世界名吧** | 20 間傳奇酒吧 |
 | **知識測驗** | 40 題互動問答 |
 | **調酒辭典** | 109 個術語（中／英／日三語） |
+| **容錯搜尋** | 打錯字仍找得到，依相關性排序；靜態版於瀏覽器端比對 |
+| **公開配方目錄** | 瀏覽他人發布的原創配方，可依評分與名稱排序 |
+| **追蹤創作者** | 追蹤喜歡的作者，動態牆只顯示其公開作品 |
+
+### 🛒 採購與規劃
+
+| 功能 | 說明 |
+|------|------|
+| **購物清單** | 從配方或派對規劃加入缺料，同材料合併並累加需求量 |
+| **成本與庫存** | 記錄容量與售價，算出單杯成本與可調杯數 |
+| **派對規劃** | 多款酒的總用量、庫存缺口、要買幾瓶與預估花費 |
+| **口味統計** | 依實際收藏與紀錄推導口味偏向，與全站平均比較 |
 
 ### ⚙️ 系統功能
 
-- 🌐 **三語支援** — 繁體中文 `zh-TW`、English `en`、日本語 `ja`
+- 🌐 **三語支援** — 繁體中文 `zh-TW`、English `en`、日本語 `ja`；
+  51 道配方的步驟、裝飾、筆記與典故皆有英文譯本
 - 🎨 **雙主題切換** — 暗色 Cyberpunk Speakeasy ／ 亮色 Luxury Lounge
-- 📱 **PWA** — 離線支援、可安裝至桌面
+- ♿ **無障礙** — axe-core 全站 52 頁 0 違規（深淺兩主題皆是）；
+  文字色階符合 WCAG AA、可見焦點樣式、跳至主要內容、尊重減少動態效果
+- 📱 **PWA 與完整離線** — 可主動下載全部配方，沒有網路也讀得到未曾造訪的頁面
+- 🔗 **分享** — 權杖連結、QR code 與 SVG 下載
+- 🔍 **SEO** — 每頁獨立 metadata、Open Graph 預覽圖、配方結構化資料、sitemap
 - ✨ **頁面轉場動畫** + Skeleton Loading
 - 🍽️ **食物搭配建議** — 每款配方附餐搭推薦
 - 🔄 **原料替代建議** — 找不到材料？推薦最佳替代品
@@ -600,10 +618,14 @@ MixMaster 是完整的 Progressive Web App：
 | 資料完整性 | `tests/data/` | 16 | 材料與配方資料的隱含契約：slug 可解析、單位已知、值域合理 |
 | 引擎單元 | `tests/backend/test_balance_model.py` 等 | — | 單位換算、酸度、風味總量、家族判定、評分、替代品排序 |
 | API 整合 | `tests/backend/` | — | 全端點狀態碼、分頁、limit 邊界、404、CRUD、速率限制 |
-| 前端單元 | `frontend/__tests__/` | 133 | lib 純函式與元件；含同步邏輯、登入狀態、收藏與進度 |
-| 端對端 | `tests/e2e/` | 68 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線 |
+| 前端單元 | `frontend/__tests__/` | 340 | lib 純函式與元件；含同步、登入、收藏、搜尋、QR、口味統計 |
+| 端對端 | `tests/e2e/` | 168 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線、無障礙 |
+| 跨實作一致性 | `tests/fixtures/` | — | 搜尋規則、單位換算、QR 編碼各有一份對照基準，防止前後端悄悄分歧 |
 
-後端合計 356 項、前端 133 項、E2E 133 項。
+後端合計 442 項、前端 340 項、E2E 168 項。
+
+無障礙另以 axe-core 掃描（`tests/e2e/a11y.spec.ts`，20 頁）；
+文字對比可用 `python3 scripts/check_contrast.py` 驗算。
 
 ```bash
 # 後端 lint 與型別檢查
