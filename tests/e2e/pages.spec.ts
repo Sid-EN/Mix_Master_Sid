@@ -7,7 +7,7 @@ const ROUTES = [
   '/academy/infusions', '/academy/molecular', '/academy/sake', '/academy/sommelier',
   '/academy/spirits', '/academy/storage', '/academy/tasting', '/academy/techniques',
   '/academy/temperature', '/academy/tools', '/academy/wine', '/achievements', '/batch',
-  '/compare', '/dashboard', '/engine', '/famous-bars', '/favorites', '/flavor-wheel',
+  '/compare', '/dashboard', '/discover', '/engine', '/famous-bars', '/favorites', '/flavor-wheel',
   '/glossary', '/hall-of-fame', '/history', '/mocktails', '/mood', '/my-bar',
   '/party', '/personality', '/prep', '/quiz', '/random', '/recipes',
   '/shopping-list', '/tools', '/tools/abv',

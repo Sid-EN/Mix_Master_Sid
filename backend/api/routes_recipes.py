@@ -120,6 +120,9 @@ def _as_dict(row: UserRecipe) -> dict:
         "type": "user",
         "isShared": row.share_token is not None,
         "shareToken": row.share_token,
+        # 公開目錄與權杖分享是兩件事，前端需分別顯示
+        "isPublic": row.is_public,
+        "publishedAt": row.published_at.isoformat() if row.published_at else None,
         "createdAt": row.created_at.isoformat() if row.created_at else None,
         "updatedAt": row.updated_at.isoformat() if row.updated_at else None,
     }

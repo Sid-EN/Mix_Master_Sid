@@ -16,6 +16,7 @@ interface Recipe {
   balanceScore?: number
   isShared: boolean
   shareToken: string | null
+  isPublic: boolean
 }
 
 function MyRecipesPageInner() {
@@ -25,6 +26,7 @@ function MyRecipesPageInner() {
   const [loading, setLoading] = useState(true)
   const [busyId, setBusyId] = useState('')
   const [sharing, setSharing] = useState<{ url: string; title: string } | null>(null)
+  const [error, setError] = useState('')
 
   const load = useCallback(async () => {
     if (!token) { setLoading(false); return }
@@ -68,6 +70,29 @@ function MyRecipesPageInner() {
     }
   }
 
+  /**
+   * 發布至公開目錄。
+   *
+   * 與「分享」是兩件事：分享是把連結給特定的人，
+   * 發布是讓所有人在目錄裡找得到，因此分成兩個按鈕。
+   */
+  async function togglePublish(r: Recipe) {
+    if (!token) return
+    setBusyId(r.id)
+    try {
+      const res = await fetch(clientUrl(`/api/v1/discover/recipes/${r.id}/publish`), {
+        method: r.isPublic ? 'DELETE' : 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      if (!res.ok) throw new Error('操作失敗')
+      await load()
+    } catch {
+      setError('無法變更公開狀態，請稍後再試')
+    } finally {
+      setBusyId('')
+    }
+  }
+
   if (!ready || loading) {
     return (
       <main className="min-h-screen px-6 py-12 max-w-3xl mx-auto">
@@ -98,6 +123,9 @@ function MyRecipesPageInner() {
         <div>
           <h1 className="font-display text-4xl text-text-warm mb-1">我的配方</h1>
           <p className="text-text-muted text-sm">共 {recipes.length} 款</p>
+          {error && (
+            <p role="alert" className="font-mono text-xs text-red-400 mt-2">{error}</p>
+          )}
         </div>
         <Link
           href="/recipes/new"
@@ -151,6 +179,20 @@ function MyRecipesPageInner() {
                     連結與 QR
                   </button>
                 )}
+
+                <button
+                  onClick={() => togglePublish(r)}
+                  disabled={busyId === r.id}
+                  aria-pressed={r.isPublic}
+                  className={`px-3 py-1.5 font-mono text-xs rounded border transition-colors
+                              disabled:opacity-50 ${
+                    r.isPublic
+                      ? 'border-neon-cyan text-neon-cyan bg-neon-cyan/10'
+                      : 'border-charcoal-700 text-text-muted hover:border-neon-cyan hover:text-neon-cyan'
+                  }`}
+                >
+                  {r.isPublic ? '🌍 已在公開目錄' : '發布至目錄'}
+                </button>
 
                 <Link
                   href={`/recipes/mine/${r.id}/versions`}

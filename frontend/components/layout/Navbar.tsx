@@ -51,6 +51,7 @@ const MEGA_COLUMNS = [
       { href: '/favorites',     icon: '⭐', label: '我的收藏', desc: '收藏配方與品飲筆記' },
       { href: '/achievements',  icon: '🏅', label: '成就徽章', desc: '解鎖挑戰與里程碑' },
       { href: '/shopping-list', icon: '🛒', label: '購物清單', desc: '缺少的材料一次帶走' },
+      { href: '/discover',      icon: '🌍', label: '公開目錄', desc: '瀏覽並追蹤其他創作者' },
     ],
   },
   {

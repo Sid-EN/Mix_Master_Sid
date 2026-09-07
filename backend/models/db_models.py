@@ -9,7 +9,18 @@ db_models.py — 帳號與使用者資料的 ORM 模型
 """
 from datetime import UTC, datetime
 
-from sqlalchemy import DateTime, ForeignKey, Index, Integer, String, Text, func
+from sqlalchemy import (
+    Boolean,
+    CheckConstraint,
+    DateTime,
+    ForeignKey,
+    Index,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+    func,
+)
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -124,6 +135,15 @@ class UserRecipe(Base):
     # 不直接以 slug 作為公開網址，否則無從撤銷分享。
     share_token: Mapped[str | None] = mapped_column(
         String(64), unique=True, index=True, nullable=True
+    )
+    # 是否列入公開目錄。與 share_token 是兩件事：
+    # 權杖分享是「知道網址的人看得到」，公開目錄是「所有人都找得到」。
+    # 兩者分開，才不會有人以為只是傳給朋友卻被整站列出。
+    is_public: Mapped[bool] = mapped_column(
+        Boolean, nullable=False, server_default="false", index=True
+    )
+    published_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
     )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
@@ -249,3 +269,32 @@ class PushSubscription(Base):
     )
 
     user: Mapped[User] = relationship(back_populates="push_subscriptions")
+
+
+class Follow(Base):
+    """
+    追蹤關係。
+
+    只記錄「誰追蹤誰」；被追蹤者不需同意，也看不到追蹤者名單——
+    公開的只有配方，追蹤本身屬於追蹤者的個人資料。
+
+    以 (follower_id, followee_id) 建立唯一索引，
+    重複追蹤在資料庫層即被擋下，不必仰賴應用層先查再寫。
+    """
+
+    __tablename__ = "follows"
+    __table_args__ = (
+        UniqueConstraint("follower_id", "followee_id", name="uq_follow_pair"),
+        CheckConstraint("follower_id <> followee_id", name="ck_follow_not_self"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    follower_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    followee_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
