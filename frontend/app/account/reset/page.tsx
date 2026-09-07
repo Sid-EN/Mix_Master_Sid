@@ -1,5 +1,7 @@
 'use client'
 
+import StaticModeNotice from '@/components/StaticModeNotice'
+import { IS_STATIC } from '@/lib/staticMode'
 import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -81,7 +83,8 @@ function ResetForm() {
   )
 }
 
-export default function ResetPasswordPage() {
+function ResetPasswordPageInner() {
+
   return (
     <main className="min-h-screen px-6 py-12 max-w-md mx-auto">
       <Link href="/account" className="font-mono text-xs text-charcoal-500 hover:text-neon-amber">
@@ -96,4 +99,15 @@ export default function ResetPasswordPage() {
       <div className="h-16" />
     </main>
   )
+}
+
+/**
+ * 靜態版沒有後端，此功能無法運作。
+ *
+ * 判斷置於包裝元件而非原元件內部——在 hooks 之前提前 return 會違反
+ * React 的 hooks 規則（每次渲染須以相同順序呼叫）。
+ */
+export default function ResetPasswordPage() {
+  if (IS_STATIC) return <StaticModeNotice feature="密碼重設" />
+  return <ResetPasswordPageInner />
 }

@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { serverUrl } from '../../../lib/api'
+import { IS_STATIC } from '../../../lib/staticMode'
+import { getClassicRecipe, getClassicRecipes } from '../../../lib/staticData'
 import RecipeActions from './RecipeActions'
 import RecipeTracker from '../../../components/RecipeTracker'
 import RecipeTriedButton from '../../../components/RecipeTriedButton'
@@ -24,7 +26,15 @@ const BAR_COLORS: Record<string, string> = {
   floral:  '#DDA0DD',
 }
 
+/** 靜態匯出時預先產生全部經典配方的頁面。 */
+export async function generateStaticParams() {
+  if (!IS_STATIC) return []
+  return getClassicRecipes().map(r => ({ slug: r.slug ?? r.id }))
+}
+
 async function getRecipe(slug: string) {
+  // 靜態版沒有後端；經典配方本就在 repo 內，直接讀取即可
+  if (IS_STATIC) return getClassicRecipe(slug)
   try {
     const res = await fetch(serverUrl(`/api/v1/recipes/${slug}`), { cache: 'no-store' })
     if (!res.ok) return null

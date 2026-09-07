@@ -1,5 +1,7 @@
 'use client'
 
+import StaticModeNotice from '@/components/StaticModeNotice'
+import { IS_STATIC } from '@/lib/staticMode'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '@/components/AuthContext'
@@ -21,7 +23,8 @@ const KEY_LABELS: Record<string, string> = {
   personality: '調酒人格',
 }
 
-export default function AccountPage() {
+function AccountPageInner() {
+
   const { user, token, ready, login, register, logout } = useAuth()
   const [mode, setMode] = useState<Mode>('login')
   const [email, setEmail] = useState('')
@@ -250,4 +253,15 @@ export default function AccountPage() {
       <div className="h-16" />
     </main>
   )
+}
+
+/**
+ * 靜態版沒有後端，此功能無法運作。
+ *
+ * 判斷置於包裝元件而非原元件內部——在 hooks 之前提前 return 會違反
+ * React 的 hooks 規則（每次渲染須以相同順序呼叫）。
+ */
+export default function AccountPage() {
+  if (IS_STATIC) return <StaticModeNotice feature="帳號功能" />
+  return <AccountPageInner />
 }

@@ -50,3 +50,8 @@ node_modules/
 
 # 使用者自建配方（本機資料，不納入版控）
 backend/data/user_recipes.json
+
+# 靜態匯出的中繼產物
+frontend/data/
+frontend/out/
+frontend/.parked-routes/

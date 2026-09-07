@@ -1,6 +1,6 @@
 {
   "name": "mixmaster-frontend",
-  "version": "2.6.1",
+  "version": "2.7.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,8 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "build:static": "node scripts/prepare-static-data.mjs && node scripts/toggle-dynamic-routes.mjs park && (NEXT_PUBLIC_STATIC_MODE=1 next build; node scripts/toggle-dynamic-routes.mjs restore)"
   },
   "dependencies": {
     "@tailwindcss/forms": "0.5.7",

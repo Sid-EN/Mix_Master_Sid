@@ -1,5 +1,7 @@
 'use client'
 
+import StaticModeNotice from '@/components/StaticModeNotice'
+import { IS_STATIC } from '@/lib/staticMode'
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
@@ -15,7 +17,8 @@ interface Recipe {
   shareToken: string | null
 }
 
-export default function MyRecipesPage() {
+function MyRecipesPageInner() {
+
   const { token, ready } = useAuth()
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [loading, setLoading] = useState(true)
@@ -188,4 +191,15 @@ export default function MyRecipesPage() {
       <div className="h-16" />
     </main>
   )
+}
+
+/**
+ * 靜態版沒有後端，此功能無法運作。
+ *
+ * 判斷置於包裝元件而非原元件內部——在 hooks 之前提前 return 會違反
+ * React 的 hooks 規則（每次渲染須以相同順序呼叫）。
+ */
+export default function MyRecipesPage() {
+  if (IS_STATIC) return <StaticModeNotice feature="我的配方" />
+  return <MyRecipesPageInner />
 }

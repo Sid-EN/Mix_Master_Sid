@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { serverUrl } from '../../../lib/api'
+import { IS_STATIC } from '../../../lib/staticMode'
+import { getPrepRecipe as getStaticPrep, getPrepRecipes } from '../../../lib/staticData'
 
 const CATEGORY_ICON: Record<string, string> = {
   syrup: '🍯',
@@ -18,7 +20,13 @@ const CATEGORY_COLOR: Record<string, string> = {
   garnish: '#2ECC71',
 }
 
+export async function generateStaticParams() {
+  if (!IS_STATIC) return []
+  return getPrepRecipes().map(r => ({ slug: r.slug ?? r.id }))
+}
+
 async function getPrepRecipe(slug: string) {
+  if (IS_STATIC) return getStaticPrep(slug)
   try {
     const res = await fetch(serverUrl(`/api/v1/prep/${slug}`), { cache: 'no-store' })
     if (!res.ok) return null

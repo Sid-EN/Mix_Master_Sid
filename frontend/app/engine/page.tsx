@@ -1,5 +1,7 @@
 'use client'
 
+import StaticModeNotice from '@/components/StaticModeNotice'
+import { IS_STATIC } from '@/lib/staticMode'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
 import { useState, useRef, useEffect } from 'react'
@@ -37,7 +39,8 @@ const GRADE_COLORS: Record<string, string> = {
 }
 
 /* ── Page Component ─────────────────────────────────────────── */
-export default function EnginePage() {
+function EnginePageInner() {
+
   const [ingredients, setIngredients] = useState<Ingredient[]>([])
   const [categories, setCategories]   = useState<CategoryInfo[]>([])
   const [selected, setSelected]       = useState<string[]>([])
@@ -480,4 +483,15 @@ export default function EnginePage() {
       <div className="h-16" />
     </main>
   )
+}
+
+/**
+ * 靜態版沒有後端，此功能無法運作。
+ *
+ * 判斷置於包裝元件而非原元件內部——在 hooks 之前提前 return 會違反
+ * React 的 hooks 規則（每次渲染須以相同順序呼叫）。
+ */
+export default function EnginePage() {
+  if (IS_STATIC) return <StaticModeNotice feature="智慧配方引擎" />
+  return <EnginePageInner />
 }

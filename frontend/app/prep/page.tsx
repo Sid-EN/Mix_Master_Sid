@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import PrepListClient from './PrepListClient'
 import { serverUrl } from '../../lib/api'
+import { IS_STATIC } from '../../lib/staticMode'
+import { getPrepRecipes as getStaticPreps } from '../../lib/staticData'
 
 async function getPrepRecipes() {
+  if (IS_STATIC) return getStaticPreps()
   try {
     const res = await fetch(serverUrl('/api/v1/prep?limit=100'), { cache: 'no-store' })
     const data = await res.json()
