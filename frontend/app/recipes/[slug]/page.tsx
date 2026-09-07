@@ -27,6 +27,19 @@ const BAR_COLORS: Record<string, string> = {
 }
 
 /** 靜態匯出時預先產生全部經典配方的頁面。 */
+/**
+ * 一般部署時本頁必須是動態的。
+ *
+ * 這個路由匯出了 generateStaticParams，Next 因此預設視為靜態頁；
+ * 但非靜態模式下頁面以 cache: 'no-store' 取資料，渲染時會從靜態轉為動態，
+ * Next 16 對此直接回 500（Page changed from static to dynamic at runtime）。
+ * 症狀只在乾淨建置時出現——本機殘留的 .next 會用舊的預產生頁面掩蓋問題。
+ *
+ * 靜態匯出時不能有 force-dynamic，且路由設定必須是字面字串、無法用條件式，
+ * 因此改由 scripts/toggle-dynamic-routes.mjs 於匯出前後替換這一行。
+ */
+export const dynamic = 'force-dynamic'
+
 export async function generateStaticParams() {
   if (!IS_STATIC) return []
   return getClassicRecipes().map(r => ({ slug: r.slug ?? r.id }))

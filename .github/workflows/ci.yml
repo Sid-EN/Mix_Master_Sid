@@ -182,26 +182,54 @@ jobs:
       - name: 套用資料庫遷移
         run: python -m alembic upgrade head
 
+      - name: 產生推播金鑰
+        # 推播路由在未設定 VAPID 金鑰時整組回 503，訂閱相關的 E2E 會失敗。
+        # 金鑰只在這次執行中有效，不需要也不應該存成 secret。
+        run: |
+          python3 -c "from py_vapid import Vapid01; \
+            from cryptography.hazmat.primitives import serialization as s; \
+            import base64; v=Vapid01(); v.generate_keys(); \
+            b=lambda r: base64.urlsafe_b64encode(r).decode().rstrip('='); \
+            print('VAPID_PRIVATE_KEY='+b(v.private_key.private_numbers().private_value.to_bytes(32,'big'))); \
+            print('VAPID_PUBLIC_KEY='+b(v.public_key.public_bytes(encoding=s.Encoding.X962, format=s.PublicFormat.UncompressedPoint)))" \
+            >> "$GITHUB_ENV"
+
       - name: 啟動後端
         run: |
-          python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 &
+          # 保留輸出；先前後端一旦出錯，CI 上完全看不到原因
+          python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 \
+            > backend.log 2>&1 &
           for i in $(seq 1 30); do
-            curl -sf http://localhost:8000/health && break
+            curl -sf http://127.0.0.1:8000/health && break
             sleep 1
           done
 
       - name: 建置並啟動前端
         working-directory: frontend
+        env:
+          # 後端固定綁在 IPv4；讓前端與 rewrite 代理都直接指向 127.0.0.1，
+          # 避免 localhost 先解析到 ::1 而連不上
+          API_BASE_URL: http://127.0.0.1:8000
         run: |
           npm run build
-          npx next start -p 6880 &
+          npx next start -p 6880 > next.log 2>&1 &
           for i in $(seq 1 60); do
-            curl -sf http://localhost:6880 && break
+            curl -sf http://127.0.0.1:6880 && break
             sleep 1
           done
 
       - name: 執行 E2E
+        env:
+          E2E_BASE_URL: http://127.0.0.1:6880
         run: npx playwright test --project=chromium
+
+      - name: 伺服器輸出
+        if: always()
+        run: |
+          echo "===== backend.log ====="
+          tail -n 200 backend.log || true
+          echo "===== frontend next.log ====="
+          tail -n 200 frontend/next.log || true
 
       - name: 上傳報告
         if: always()
