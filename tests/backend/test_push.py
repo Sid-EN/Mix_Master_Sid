@@ -22,6 +22,19 @@ SUB = {
 }
 
 
+@pytest.fixture(autouse=True)
+def configured_vapid(monkeypatch):
+    """推播路由在未設定 VAPID 金鑰時整組回 503。
+
+    金鑰來自開發者本機的 backend/.env，CI 上並不存在，
+    若不在此明確設定，這些測試會在本機通過、在 CI 失敗。
+    實際送出一律以 mock 取代，故此處用假金鑰即可。
+    """
+    import backend.api.routes_push as mod
+    monkeypatch.setattr(mod.settings, "vapid_public_key", "test-public-key")
+    monkeypatch.setattr(mod.settings, "vapid_private_key", "test-private-key")
+
+
 @pytest.fixture
 def alice(auth_client):
     return account(auth_client)
@@ -157,3 +170,22 @@ class TestSending:
         db_session.query(User).delete()
         db_session.commit()
         assert db_session.query(PushSubscription).count() == 0
+
+
+class TestUnconfigured:
+    """未設定金鑰時應明確回報停用，而非丟出例外或假裝送出。"""
+
+    @pytest.fixture(autouse=True)
+    def _no_keys(self, monkeypatch):
+        import backend.api.routes_push as mod
+        monkeypatch.setattr(mod.settings, "vapid_public_key", "")
+        monkeypatch.setattr(mod.settings, "vapid_private_key", "")
+
+    def test_subscribe_returns_503(self, auth_client, alice):
+        r = auth_client.post("/api/v1/push/subscribe", json=SUB, headers=alice)
+        assert r.status_code == 503
+        assert "VAPID" in r.json()["detail"]
+
+    def test_send_returns_503(self, auth_client, alice):
+        assert auth_client.post("/api/v1/push/test", json={"body": "測試"},
+                                headers=alice).status_code == 503
