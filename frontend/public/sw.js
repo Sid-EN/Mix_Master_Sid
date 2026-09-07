@@ -2,17 +2,28 @@
 const VERSION = 'v3';
 const STATIC_CACHE = `mixmaster-static-${VERSION}`;
 const RUNTIME_CACHE = `mixmaster-runtime-${VERSION}`;
-const OFFLINE_URL = '/offline.html';
+
+/**
+ * 站台根路徑。
+ *
+ * GitHub Pages 的專案站台位於 /<repo>/ 之下，寫死斜線開頭的路徑會全部 404，
+ * 離線快取與推播圖示都會失效。registration.scope 即為 Service Worker 的
+ * 註冊範圍，兩種部署都能由此得出正確的根路徑。
+ */
+const BASE = new URL(self.registration.scope).pathname.replace(/\/$/, '');
+const path = (p) => `${BASE}${p}`;
+
+const OFFLINE_URL = path('/offline.html');
 
 // 執行期快取上限，避免長期瀏覽後無限成長
 const RUNTIME_MAX_ENTRIES = 120;
 
 const PRECACHE_ASSETS = [
-  '/',
-  '/recipes',
-  '/offline.html',
-  '/manifest.json',
-  '/icons/icon.svg',
+  path('/'),
+  path('/recipes'),
+  OFFLINE_URL,
+  path('/manifest.json'),
+  path('/icons/icon.svg'),
 ];
 
 self.addEventListener('install', (event) => {
@@ -47,12 +58,12 @@ self.addEventListener('fetch', (event) => {
   // 只快取 GET；POST/PUT/DELETE 必須直接送達伺服器
   if (request.method !== 'GET') return;
 
-  if (url.pathname.startsWith('/_next/static/')) {
+  if (url.pathname.startsWith(path('/_next/static/'))) {
     event.respondWith(cacheFirst(request, STATIC_CACHE));
     return;
   }
 
-  if (url.pathname.startsWith('/api/v1/')) {
+  if (url.pathname.startsWith(path('/api/v1/'))) {
     event.respondWith(networkFirst(request, RUNTIME_CACHE));
     return;
   }
@@ -157,9 +168,9 @@ self.addEventListener('push', (event) => {
   const title = payload.title || 'MixMaster';
   const options = {
     body: payload.body || '',
-    icon: '/icons/icon-192.png',
-    badge: '/icons/icon-192.png',
-    data: { url: payload.url || '/' },
+    icon: path('/icons/icon-192.png'),
+    badge: path('/icons/icon-192.png'),
+    data: { url: payload.url || path('/') },
     tag: payload.tag || 'mixmaster-notification',
   };
 
@@ -168,7 +179,7 @@ self.addEventListener('push', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  const target = (event.notification.data && event.notification.data.url) || '/';
+  const target = (event.notification.data && event.notification.data.url) || path('/');
 
   // 已開啟的分頁優先聚焦，避免每次通知都開一個新視窗
   event.waitUntil(

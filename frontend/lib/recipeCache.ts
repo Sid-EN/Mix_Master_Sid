@@ -10,6 +10,18 @@
  * 配方屬靜態內容，不需要更積極的失效策略。
  */
 import { clientUrl } from './api'
+import { IS_STATIC } from './staticMode'
+
+/** 靜態資源在 GitHub Pages 上位於 /<repo> 之下 */
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
+/**
+ * 靜態版沒有後端可呼叫，改讀建置期產生的摘要檔
+ * （frontend/scripts/build-search-index.mjs）。
+ */
+const SOURCE = IS_STATIC
+  ? `${BASE_PATH}/recipes-summary.json`
+  : clientUrl('/api/v1/recipes?limit=500&fields=summary')
 
 let pending: Promise<any[]> | null = null
 let cached: any[] | null = null
@@ -21,7 +33,7 @@ export function fetchRecipes(): Promise<any[]> {
 
   // 首頁的推薦、每日一杯、季節推薦都只用到名稱、手法與標籤，
   // 取摘要即可將 121 KB 降至 12 KB
-  pending = fetch(clientUrl('/api/v1/recipes?limit=500&fields=summary'))
+  pending = fetch(SOURCE)
     .then(res => (res.ok ? res.json() : Promise.reject(new Error('fetch failed'))))
     .then(data => {
       cached = data.items ?? []

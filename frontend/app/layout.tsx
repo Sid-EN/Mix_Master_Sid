@@ -1,4 +1,10 @@
 import type { Metadata, Viewport } from 'next'
+
+/**
+ * GitHub Pages 的專案站台位於 /<repo>/ 之下。
+ * Next 不會替 metadata 中的路徑加上 basePath，寫死斜線開頭會全部 404。
+ */
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ''
 import '../styles/globals.css'
 import Navbar from '../components/layout/Navbar'
 import { AuthProvider } from '../components/AuthContext'
@@ -15,15 +21,15 @@ import AchievementChecker from '../components/AchievementChecker'
 export const metadata: Metadata = {
   title: 'MixMaster — 智慧調酒平台',
   description: '從認識一瓶酒，到掌握一杯酒的藝術',
-  manifest: '/manifest.json',
+  manifest: `${BASE_PATH}/manifest.json`,
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
     title: 'MixMaster',
   },
   icons: {
-    icon: '/icons/icon.svg',
-    apple: '/icons/icon-192.png',
+    icon: `${BASE_PATH}/icons/icon.svg`,
+    apple: `${BASE_PATH}/icons/icon-192.png`,
   },
 }
 
