@@ -23,6 +23,8 @@ SYNCABLE_KEYS = {
     "flavor-pref",   # 風味偏好
     "quiz-history",  # 測驗紀錄
     "personality",   # 調酒人格測驗結果
+    "shopping-list", # 購物清單
+    "inventory",     # 酒櫃的容量、價格與剩餘量
 }
 
 # 單筆資料上限，避免異常負載塞爆資料庫

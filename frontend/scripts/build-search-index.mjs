@@ -73,7 +73,34 @@ const summaries = read('classic_recipes.json').map(r =>
   Object.fromEntries(SUMMARY_FIELDS.filter(f => f in r).map(f => [f, r[f]])),
 )
 
+/**
+ * 派對規劃用的配方資料。
+ *
+ * 需要每項材料的 slug、用量與單位（摘要檔沒有這些），
+ * 但不需要步驟、典故與風味描述，因此另外產一份精簡版，
+ * 只在使用者開啟派對規劃頁時才載入。
+ */
+const partyRecipes = read('classic_recipes.json').map(r => ({
+  id: r.id,
+  slug: r.slug,
+  nameZh: r.nameZh ?? '',
+  nameEn: r.nameEn ?? '',
+  method: r.method ?? '',
+  ingredients: (r.ingredients ?? []).map(ing => ({
+    slug: ing.slug,
+    amount: ing.amount,
+    unit: ing.unit ?? 'oz',
+  })),
+}))
+
+const ingredientNames = Object.fromEntries(
+  ingredients.map(i => [i.id, i.nameZh || i.name || i.id]),
+)
+
 mkdirSync(outDir, { recursive: true })
+
+const party = JSON.stringify({ recipes: partyRecipes, ingredientNames })
+writeFileSync(join(outDir, 'party-data.json'), party)
 
 const index = JSON.stringify({ items: [...cocktails, ...preps] })
 writeFileSync(join(outDir, 'search-index.json'), index)
@@ -84,5 +111,6 @@ writeFileSync(join(outDir, 'recipes-summary.json'), summary)
 console.log(
   `已產生搜尋索引：${cocktails.length} 個調酒 + ${preps.length} 個備料，` +
   `${(index.length / 1024).toFixed(1)} KB；` +
-  `配方摘要 ${summaries.length} 筆，${(summary.length / 1024).toFixed(1)} KB`,
+  `配方摘要 ${summaries.length} 筆，${(summary.length / 1024).toFixed(1)} KB；` +
+  `派對規劃資料 ${(party.length / 1024).toFixed(1)} KB`,
 )

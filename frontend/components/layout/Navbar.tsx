@@ -50,6 +50,7 @@ const MEGA_COLUMNS = [
       { href: '/my-bar',        icon: '🍸', label: '我的酒櫃', desc: '材料庫存與配方推薦' },
       { href: '/favorites',     icon: '⭐', label: '我的收藏', desc: '收藏配方與品飲筆記' },
       { href: '/achievements',  icon: '🏅', label: '成就徽章', desc: '解鎖挑戰與里程碑' },
+      { href: '/shopping-list', icon: '🛒', label: '購物清單', desc: '缺少的材料一次帶走' },
     ],
   },
   {
@@ -58,6 +59,7 @@ const MEGA_COLUMNS = [
     color: 'text-neon-purple',
     items: [
       { href: '/batch',              icon: '🧮', label: '批次換算', desc: '多人份量自動換算' },
+      { href: '/party',              icon: '🎉', label: '派對規劃', desc: '多款酒的總用量與採購' },
       { href: '/tools/abv',          icon: '📐', label: 'ABV 計算', desc: '酒精濃度即時計算' },
       { href: '/tools/cost',         icon: '💰', label: '成本計算', desc: '每杯成本精算' },
       { href: '/tools/convert',      icon: '🌡️', label: '單位換算', desc: 'oz・ml・cl 互轉' },

@@ -110,3 +110,38 @@ class TestValidation:
     def test_rejects_non_object_value(self, auth_client, alice):
         r = auth_client.put("/api/v1/sync/my-bar", json={"value": "just-a-string"}, headers=alice)
         assert r.status_code == 422
+
+
+class TestNewSyncKeys:
+    """
+    購物清單與庫存的同步。
+
+    前端會把這兩項寫進 localStorage；若後端白名單漏掉，
+    資料會照常存在本機卻永遠不會上傳，換裝置才會發現不見了，
+    而且過程中沒有任何錯誤訊息。
+    """
+
+    def test_shopping_list_is_syncable(self, auth_client, alice):
+        payload = {"value": [{"id": "campari", "name": "金巴利", "done": False}]}
+        r = auth_client.put("/api/v1/sync/shopping-list", json=payload, headers=alice)
+        assert r.status_code == 200
+        body = auth_client.get("/api/v1/sync", headers=alice).json()
+        assert body["shopping-list"] == payload["value"]
+
+    def test_inventory_is_syncable(self, auth_client, alice):
+        payload = {"value": {"campari": {"bottleMl": 700, "price": 1050}}}
+        r = auth_client.put("/api/v1/sync/inventory", json=payload, headers=alice)
+        assert r.status_code == 200
+        body = auth_client.get("/api/v1/sync", headers=alice).json()
+        assert body["inventory"] == payload["value"]
+
+    def test_backup_round_trips_the_new_keys(self, auth_client, alice, bob):
+        auth_client.put("/api/v1/sync/inventory",
+                        json={"value": {"gin": {"bottleMl": 700, "price": 800}}}, headers=alice)
+        export = auth_client.get("/api/v1/backup/export", headers=alice).json()
+        assert "inventory" in export["data"]
+
+        r = auth_client.post("/api/v1/backup/import", json=export, headers=bob)
+        assert r.status_code == 200
+        restored = auth_client.get("/api/v1/sync", headers=bob).json()
+        assert restored["inventory"]["gin"]["price"] == 800

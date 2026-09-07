@@ -2,7 +2,14 @@
 
 import { clientUrl } from '@/lib/api'
 import SubstituteHint from '@/components/SubstituteHint'
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
+import {
+  loadInventory,
+  remainingMl,
+  saveInventory,
+  type BottleInfo,
+  type Inventory,
+} from '@/lib/inventory'
 import Link from 'next/link'
 
 /* ── Constants ──────────────────────────────────────────────── */
@@ -83,6 +90,8 @@ export default function MyBarPage() {
   const [ingredients, setIngredients] = useState<Ingredient[]>([])
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [owned, setOwned] = useState<string[]>([])
+  const [inventory, setInventory] = useState<Inventory>({})
+  const [editingId, setEditingId] = useState<string | null>(null)
   const [activeCat, setActiveCat] = useState('base_spirit')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -90,6 +99,7 @@ export default function MyBarPage() {
   /* Hydrate from localStorage */
   useEffect(() => {
     setOwned(loadOwned())
+    setInventory(loadInventory())
   }, [])
 
   /* Persist on change (skip initial empty render) */
@@ -201,6 +211,21 @@ export default function MyBarPage() {
     setOwned(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id])
   }
 
+  /**
+   * 庫存明細（容量、售價、剩餘量）。
+   *
+   * 全部選填：只勾「有這瓶」仍然可用，填了才能算成本與可調杯數。
+   * 因此這裡不做必填驗證，只在數值無效時不寫入。
+   */
+  const updateBottle = useCallback((id: string, patch: Partial<BottleInfo>) => {
+    setInventory(prev => {
+      const current = prev[id] ?? { bottleMl: 0, price: 0 }
+      const next = { ...prev, [id]: { ...current, ...patch } }
+      saveInventory(next)
+      return next
+    })
+  }, [])
+
   const clearAll = () => setOwned([])
 
   /* Ingredient name lookup */
@@ -308,30 +333,96 @@ export default function MyBarPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 min-h-[120px]">
               {filteredIngredients.map(ing => {
                 const isOwned = owned.includes(ing.id)
+                const bottle = inventory[ing.id]
+                const editing = editingId === ing.id
                 return (
-                  <button
+                  <div
                     key={ing.id}
-                    onClick={() => toggle(ing.id)}
-                    className={`group relative text-left px-4 py-3 border rounded-sm transition-all duration-200 ${
+                    className={`group relative border rounded-sm transition-all duration-200 ${
                       isOwned
                         ? 'border-neon-amber bg-neon-amber/10 shadow-neon-amber'
                         : 'border-charcoal-700 hover:border-charcoal-500 bg-bg-tertiary/50'
                     }`}
                   >
-                    <span className={`block text-sm font-sans font-medium leading-snug ${
-                      isOwned ? 'text-neon-amber' : 'text-text-warm group-hover:text-text-warm'
-                    }`}>
-                      {ing.nameZh}
-                    </span>
-                    <span className={`block text-xs font-mono mt-0.5 ${
-                      isOwned ? 'text-neon-amber/60' : 'text-text-muted'
-                    }`}>
-                      {ing.name}{ing.abv ? ` ${ing.abv}%` : ''}
-                    </span>
+                    <button
+                      onClick={() => toggle(ing.id)}
+                      aria-pressed={isOwned}
+                      className="w-full text-left px-4 py-3"
+                    >
+                      <span className={`block text-sm font-sans font-medium leading-snug ${
+                        isOwned ? 'text-neon-amber' : 'text-text-warm group-hover:text-text-warm'
+                      }`}>
+                        {ing.nameZh}
+                      </span>
+                      <span className={`block text-xs font-mono mt-0.5 ${
+                        isOwned ? 'text-neon-amber/60' : 'text-text-muted'
+                      }`}>
+                        {ing.name}{ing.abv ? ` ${ing.abv}%` : ''}
+                      </span>
+                      {isOwned && (
+                        <span className="absolute top-1.5 right-2 text-neon-amber text-xs">✓</span>
+                      )}
+                    </button>
+
+                    {/* 庫存明細：填了才能算成本與可調杯數，因此全部選填 */}
                     {isOwned && (
-                      <span className="absolute top-1.5 right-2 text-neon-amber text-xs">✓</span>
+                      <div className="px-4 pb-3">
+                        <button
+                          onClick={() => setEditingId(editing ? null : ing.id)}
+                          aria-expanded={editing}
+                          className="font-mono text-[10px] text-charcoal-400 hover:text-neon-cyan transition-colors"
+                        >
+                          {bottle?.bottleMl
+                            ? `💰 ${bottle.bottleMl}ml / $${bottle.price} · 剩 ${Math.round(remainingMl(bottle))}ml`
+                            : '＋ 填寫容量與售價'}
+                        </button>
+
+                        {editing && (
+                          <div className="mt-2 space-y-1.5">
+                            <label className="flex items-center gap-2 font-mono text-[10px] text-charcoal-400">
+                              容量
+                              <input
+                                type="number"
+                                min={0}
+                                value={bottle?.bottleMl || ''}
+                                onChange={e => updateBottle(ing.id, { bottleMl: Number(e.target.value) })}
+                                className="flex-1 min-w-0 bg-bg-primary border border-charcoal-700 rounded px-2 py-1
+                                           text-text-warm focus:border-neon-cyan outline-none"
+                                placeholder="700"
+                              />
+                              ml
+                            </label>
+                            <label className="flex items-center gap-2 font-mono text-[10px] text-charcoal-400">
+                              售價
+                              <input
+                                type="number"
+                                min={0}
+                                value={bottle?.price || ''}
+                                onChange={e => updateBottle(ing.id, { price: Number(e.target.value) })}
+                                className="flex-1 min-w-0 bg-bg-primary border border-charcoal-700 rounded px-2 py-1
+                                           text-text-warm focus:border-neon-cyan outline-none"
+                                placeholder="800"
+                              />
+                              元
+                            </label>
+                            <label className="flex items-center gap-2 font-mono text-[10px] text-charcoal-400">
+                              剩餘
+                              <input
+                                type="number"
+                                min={0}
+                                value={bottle?.remainingMl ?? ''}
+                                onChange={e => updateBottle(ing.id, { remainingMl: Number(e.target.value) })}
+                                className="flex-1 min-w-0 bg-bg-primary border border-charcoal-700 rounded px-2 py-1
+                                           text-text-warm focus:border-neon-cyan outline-none"
+                                placeholder="未填視為滿瓶"
+                              />
+                              ml
+                            </label>
+                          </div>
+                        )}
+                      </div>
                     )}
-                  </button>
+                  </div>
                 )
               })}
             </div>

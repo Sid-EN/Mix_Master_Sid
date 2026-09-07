@@ -14,6 +14,8 @@ export const SYNCABLE_KEYS = [
   'flavor-pref',
   'quiz-history',
   'personality',
+  'shopping-list',
+  'inventory',
 ] as const
 
 export type SyncKey = (typeof SYNCABLE_KEYS)[number]

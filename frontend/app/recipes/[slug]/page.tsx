@@ -7,6 +7,7 @@ import RecipeActions from './RecipeActions'
 import RecipeTracker from '../../../components/RecipeTracker'
 import RecipeTriedButton from '../../../components/RecipeTriedButton'
 import IngredientSubstitutions from '../../../components/IngredientSubstitutions'
+import RecipeCostBar from '../../../components/RecipeCostBar'
 import FoodPairingSection from '../../../components/FoodPairingSection'
 
 const METHOD_ICON: Record<string, string> = { shake: '🧊', stir: '🥄', build: '🥃' }
@@ -231,6 +232,19 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
           })}
         </div>
       </section>
+
+      {/* ── 成本與採購 ──────────────────────────────────────── */}
+      <RecipeCostBar
+        recipeName={nameZh || nameEn || slug}
+        ingredients={ingredients
+          .filter((ing: any) => typeof ing !== 'string' && ing.slug)
+          .map((ing: any) => ({
+            slug: ing.slug,
+            name: ing.nameZh || ing.name_zh || ing.name || ing.slug,
+            amount: ing.amount ?? ing.quantity ?? 0,
+            unit: ing.unit ?? 'oz',
+          }))}
+      />
 
       {/* ── Ingredient Substitutions ────────────────────────── */}
       <IngredientSubstitutions

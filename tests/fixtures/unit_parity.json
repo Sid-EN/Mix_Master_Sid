@@ -1,0 +1,90 @@
+{
+  "_generated_by": "scripts/gen_unit_parity.py",
+  "ozToMl": 29.5735,
+  "volumes": [
+    {
+      "amount": 1,
+      "unit": "oz",
+      "ml": 29.5735
+    },
+    {
+      "amount": 2,
+      "unit": "oz",
+      "ml": 59.147
+    },
+    {
+      "amount": 0.75,
+      "unit": "oz",
+      "ml": 22.180125
+    },
+    {
+      "amount": 30,
+      "unit": "ml",
+      "ml": 30.0
+    },
+    {
+      "amount": 1,
+      "unit": "cl",
+      "ml": 10.0
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "ml": 4.9289166667
+    },
+    {
+      "amount": 1,
+      "unit": "bsp",
+      "ml": 3.6966875
+    },
+    {
+      "amount": 1,
+      "unit": "dash",
+      "ml": 0.924171875
+    },
+    {
+      "amount": 2,
+      "unit": "dashes",
+      "ml": 1.84834375
+    },
+    {
+      "amount": 1,
+      "unit": "drop",
+      "ml": 0.0492891667
+    },
+    {
+      "amount": 3,
+      "unit": "drops",
+      "ml": 0.1478675
+    },
+    {
+      "amount": 10,
+      "unit": "g",
+      "ml": 10.0
+    },
+    {
+      "amount": 1,
+      "unit": "OZ",
+      "ml": 29.5735
+    },
+    {
+      "amount": 1,
+      "unit": " ml ",
+      "ml": 1.0
+    },
+    {
+      "amount": 2,
+      "unit": null,
+      "ml": 59.147
+    }
+  ],
+  "nonVolume": [
+    "whole",
+    "leaves",
+    "slice",
+    "sprig",
+    "顆",
+    "wedges",
+    "pinch"
+  ]
+}

@@ -159,3 +159,38 @@ class TestAgainstCuratedDataset:
         rows = self._scored()
         mae = sum(abs(h - s) for _, h, s in rows) / len(rows)
         assert mae < 10.0, f"與人工評分的平均誤差過大：{mae:.1f} 分"
+
+
+class TestUnitParityFixture:
+    """
+    對照 tests/fixtures/unit_parity.json。
+
+    前端 lib/units.ts 是同一套換算表的另一份實作（購物清單與派對規劃
+    在瀏覽器端計算用量）。基準值由此處產生，因此這裡鎖的是
+    「後端換算不得無意間改變」，前端那側才是真正的一致性檢查。
+    刻意調整換算時重跑 scripts/gen_unit_parity.py 並檢視 diff。
+    """
+
+    @pytest.fixture(scope="class")
+    def fixture(self):
+        import json
+        import os
+        path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                            "fixtures", "unit_parity.json")
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+
+    def test_oz_to_ml_matches(self, fixture):
+        from backend.engine.balance_model import OZ_TO_ML
+        assert OZ_TO_ML == pytest.approx(fixture["ozToMl"])
+
+    def test_volume_conversions_match(self, fixture):
+        from backend.engine.balance_model import OZ_TO_ML, to_oz
+        for case in fixture["volumes"]:
+            actual = to_oz(case["amount"], case["unit"]) * OZ_TO_ML
+            assert actual == pytest.approx(case["ml"]), case
+
+    def test_non_volume_units_stay_non_volume(self, fixture):
+        from backend.engine.balance_model import to_oz
+        for unit in fixture["nonVolume"]:
+            assert to_oz(1, unit) == 0.0, unit
