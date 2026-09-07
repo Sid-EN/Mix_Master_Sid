@@ -717,14 +717,15 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 
 ## 🌐 部署
 
-| 形態 | 平台 | 功能 | 現況 |
-|---|---|---|---|
-| 公開展示版 | GitHub Pages | 51 道配方、學院、各項計算器 | ✅ 已設定 |
-| 完整版 | Vercel + Railway + Neon | 全部 | ⬜ 待部署 |
+| 形態 | 平台 | 網址 | 功能 | 現況 |
+|---|---|---|---|---|
+| 公開展示版 | GitHub Pages | <https://sid-en.github.io/Mix_Master_Sid/> | 51 道配方、學院、搜尋、各項計算器 | ✅ 已上線 |
+| 完整版 | Vercel + Railway + Neon | — | 全部 | ⬜ 待部署 |
 
 展示版為靜態站台，帳號、同步、分享、社群與智慧配方引擎需要後端，
-於該版本停用並改顯示說明。完整步驟見
-[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
+於該版本停用並改顯示說明。搜尋與離線瀏覽在展示版仍可使用：
+前者改在瀏覽器端比對建置期產生的索引，後者由 Service Worker 快取。
+完整步驟見 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 
 ```bash
 # 本機預覽靜態版

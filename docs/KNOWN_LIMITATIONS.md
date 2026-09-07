@@ -113,6 +113,11 @@ jsdom 將 Storage 的屬性賦值一律視為「儲存同名項目」，因此�
 - **速率限制於開發環境停用**（`RATE_LIMIT_ENABLED=false`）。
   這是刻意設定：測試會在數秒內送出數百次請求，開啟限流會造成隨機失敗。
   限流本身另以獨立的應用實例搭配極低限制值驗證（7 項測試）。
+- **repo 專用的 token 無法觸發或重跑 workflow**。
+  該 token 僅具 Contents 與 Workflows 權限，
+  `workflow_dispatch` 與 rerun 皆回 403（Resource not accessible）。
+  需要重跑時的作法：推送一個 commit 至 main，或由具權限者於網頁介面操作。
+  若日後要讓自動化能重跑，需為該 token 加上 Actions 的寫入權限。
 - **`react-hooks/set-state-in-effect` 降為警告**（24 處）。
   本專案的客戶端資料存於 localStorage，必須在 effect 中讀取後 setState，
   否則首次渲染會伺服器／瀏覽器不一致。此為 SSR 的標準水合寫法，
