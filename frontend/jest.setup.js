@@ -18,3 +18,9 @@ if (typeof Blob !== 'undefined' && !Blob.prototype.text) {
 if (typeof Element !== 'undefined' && !Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = function () {}
 }
+
+// jsdom 未提供 TextEncoder／TextDecoder，但兩者是瀏覽器的標準 API。
+// 直接沿用 Node 的實作，以免為了配合測試環境而改動正式程式碼。
+const { TextEncoder, TextDecoder } = require('node:util')
+if (typeof global.TextEncoder === 'undefined') global.TextEncoder = TextEncoder
+if (typeof global.TextDecoder === 'undefined') global.TextDecoder = TextDecoder

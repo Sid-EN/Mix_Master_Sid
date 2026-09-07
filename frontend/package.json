@@ -15,7 +15,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "type-check": "tsc --noEmit",
-    "build:static": "npm run prepare:data && node scripts/toggle-dynamic-routes.mjs park && (NEXT_PUBLIC_STATIC_MODE=1 next build; node scripts/toggle-dynamic-routes.mjs restore)"
+    "build:static": "npm run prepare:data && node scripts/toggle-dynamic-routes.mjs park && { NEXT_PUBLIC_STATIC_MODE=1 next build; code=$?; node scripts/toggle-dynamic-routes.mjs restore; if [ $code -eq 0 ]; then node scripts/finalise-static.mjs; code=$?; fi; exit $code; }"
   },
   "dependencies": {
     "@tailwindcss/forms": "0.5.7",

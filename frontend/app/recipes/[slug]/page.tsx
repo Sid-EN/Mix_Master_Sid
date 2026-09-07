@@ -8,6 +8,8 @@ import RecipeTracker from '../../../components/RecipeTracker'
 import RecipeTriedButton from '../../../components/RecipeTriedButton'
 import IngredientSubstitutions from '../../../components/IngredientSubstitutions'
 import RecipeCostBar from '../../../components/RecipeCostBar'
+import { pageMetadata, recipeJsonLd, summarise } from '../../../lib/seo'
+import type { Metadata } from 'next'
 import FoodPairingSection from '../../../components/FoodPairingSection'
 
 const METHOD_ICON: Record<string, string> = { shake: '🧊', stir: '🥄', build: '🥃' }
@@ -44,6 +46,32 @@ export const dynamic = 'force-dynamic'
 export async function generateStaticParams() {
   if (!IS_STATIC) return []
   return getClassicRecipes().map(r => ({ slug: r.slug ?? r.id }))
+}
+
+/**
+ * 每道配方各自的標題與描述。
+ *
+ * 先前全站共用同一組 metadata，搜尋結果與分享預覽長得一模一樣，
+ * 看不出點進去會是哪一杯酒。
+ */
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> },
+): Promise<Metadata> {
+  const { slug } = await params
+  const r = await getRecipe(slug)
+  if (!r) return pageMetadata({ title: '找不到配方', path: `/recipes/${slug}` })
+
+  const nameZh = r.nameZh || r.name_zh || r.name || '調酒配方'
+  const nameEn = r.nameEn || r.name_en || ''
+  const tags: string[] = Array.isArray(r.tags) ? r.tags : []
+
+  return pageMetadata({
+    title: nameEn ? `${nameZh}（${nameEn}）` : nameZh,
+    description: summarise(r.descriptionZh || r.description),
+    path: `/recipes/${slug}`,
+    keywords: [nameZh, nameEn, '調酒', '配方', ...tags].filter(Boolean),
+    type: 'article',
+  })
 }
 
 async function getRecipe(slug: string) {
@@ -111,6 +139,26 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ s
 
   return (
     <main className="min-h-screen px-6 py-12 max-w-4xl mx-auto animate-fade-in">
+      {/*
+        schema.org 結構化資料：讓搜尋引擎知道這是一份食譜而非普通文章，
+        搜尋結果才可能直接顯示材料與步驟。
+      */}
+      <script
+        type="application/ld+json"
+        // 內容由自家資料產生，非使用者輸入
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(recipeJsonLd({
+            nameZh, nameEn, slug,
+            descriptionZh: r.descriptionZh,
+            description: r.description,
+            method: r.method,
+            ingredients,
+            steps: Array.isArray(r.steps) ? r.steps : [],
+            garnish: r.garnish,
+          })),
+        }}
+      />
+
       {/* Back Button */}
       <Link
         href="/recipes"

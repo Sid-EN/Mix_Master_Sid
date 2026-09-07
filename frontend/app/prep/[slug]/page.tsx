@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { serverUrl } from '../../../lib/api'
 import { IS_STATIC } from '../../../lib/staticMode'
 import { getPrepRecipe as getStaticPrep, getPrepRecipes } from '../../../lib/staticData'
+import { pageMetadata, summarise } from '../../../lib/seo'
+import type { Metadata } from 'next'
 
 const CATEGORY_ICON: Record<string, string> = {
   syrup: '🍯',
@@ -47,6 +49,25 @@ async function getPrepRecipe(slug: string) {
   } catch {
     return null
   }
+}
+
+/** 每項備料各自的標題與描述；父層 layout 的「備料庫」太籠統。 */
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> },
+): Promise<Metadata> {
+  const { slug } = await params
+  const r = await getPrepRecipe(slug)
+  if (!r) return pageMetadata({ title: '找不到備料', path: `/prep/${slug}` })
+
+  const nameZh = r.nameZh || r.name_zh || r.name || '備料'
+  const nameEn = r.nameEn || r.name_en || ''
+  return pageMetadata({
+    title: nameEn ? `${nameZh}（${nameEn}）` : nameZh,
+    description: summarise(r.descriptionZh || r.description),
+    path: `/prep/${slug}`,
+    keywords: [nameZh, nameEn, '備料', '自製', '調酒'].filter(Boolean),
+    type: 'article',
+  })
 }
 
 function Stars({ count }: { count: number }) {

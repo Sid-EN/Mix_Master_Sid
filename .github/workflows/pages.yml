@@ -43,10 +43,6 @@ jobs:
           NEXT_PUBLIC_FULL_APP_URL: ${{ vars.FULL_APP_URL }}
         run: npm run build:static
 
-      - name: 停用 Jekyll 處理
-        # 否則 _next 目錄會因底線開頭而被 Pages 忽略
-        run: touch frontend/out/.nojekyll
-
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v4

@@ -2,6 +2,7 @@
 
 import StaticModeNotice from '@/components/StaticModeNotice'
 import { IS_STATIC } from '@/lib/staticMode'
+import ShareDialog from '@/components/ShareDialog'
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
@@ -23,7 +24,7 @@ function MyRecipesPageInner() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [loading, setLoading] = useState(true)
   const [busyId, setBusyId] = useState('')
-  const [copied, setCopied] = useState('')
+  const [sharing, setSharing] = useState<{ url: string; title: string } | null>(null)
 
   const load = useCallback(async () => {
     if (!token) { setLoading(false); return }
@@ -64,18 +65,6 @@ function MyRecipesPageInner() {
       await load()
     } finally {
       setBusyId('')
-    }
-  }
-
-  async function copyLink(shareToken: string) {
-    const url = `${window.location.origin}/shared/${shareToken}`
-    try {
-      await navigator.clipboard.writeText(url)
-      setCopied(shareToken)
-      setTimeout(() => setCopied(''), 2000)
-    } catch {
-      // 非安全來源時瀏覽器會拒絕剪貼簿存取，退而顯示連結供手動複製
-      window.prompt('複製此連結：', url)
     }
   }
 
@@ -152,11 +141,14 @@ function MyRecipesPageInner() {
 
                 {r.isShared && r.shareToken && (
                   <button
-                    onClick={() => copyLink(r.shareToken!)}
+                    onClick={() => setSharing({
+                      url: `${window.location.origin}/shared/${r.shareToken}`,
+                      title: r.nameZh || r.nameEn || '我的配方',
+                    })}
                     className="px-3 py-1.5 font-mono text-xs rounded border border-charcoal-700
                                text-text-muted hover:border-neon-cyan hover:text-neon-cyan transition-colors"
                   >
-                    {copied === r.shareToken ? '已複製' : '複製連結'}
+                    連結與 QR
                   </button>
                 )}
 
@@ -189,6 +181,14 @@ function MyRecipesPageInner() {
         </ul>
       )}
       <div className="h-16" />
+
+      {sharing && (
+        <ShareDialog
+          url={sharing.url}
+          title={sharing.title}
+          onClose={() => setSharing(null)}
+        />
+      )}
     </main>
   )
 }

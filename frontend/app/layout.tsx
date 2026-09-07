@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from '../lib/seo'
 
 /**
  * GitHub Pages 的專案站台位於 /<repo>/ 之下。
@@ -19,8 +20,34 @@ import PageTransition from '../components/PageTransition'
 import AchievementChecker from '../components/AchievementChecker'
 
 export const metadata: Metadata = {
-  title: 'MixMaster — 智慧調酒平台',
-  description: '從認識一瓶酒，到掌握一杯酒的藝術',
+  // metadataBase 讓各頁的相對路徑自動補成絕對網址；
+  // 少了它，Open Graph 的圖片與 url 會是相對路徑，社群平台抓不到預覽。
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    // 各頁只需給自己的標題，站名由此補上
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: ['調酒', '雞尾酒', 'cocktail', '配方', '調酒教學', 'bartending', 'MixMaster'],
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    locale: 'zh_TW',
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    // 明確指定，才不會沿用 Next 檔案慣例產生的無副檔名網址
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
+  },
+  robots: { index: true, follow: true },
   manifest: `${BASE_PATH}/manifest.json`,
   appleWebApp: {
     capable: true,
