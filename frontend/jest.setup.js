@@ -12,3 +12,9 @@ if (typeof Blob !== 'undefined' && !Blob.prototype.text) {
     })
   }
 }
+
+// jsdom 沒有版面配置，因此未實作 scrollIntoView；該 API 在所有瀏覽器皆可用。
+// 於此補上空實作，以免為了配合測試環境而在正式程式碼加上防呆。
+if (typeof Element !== 'undefined' && !Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = function () {}
+}

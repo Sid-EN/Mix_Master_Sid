@@ -2,21 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-
-interface SearchResult {
-  source: 'cocktail' | 'prep'
-  id: string
-  slug: string
-  nameEn: string
-  nameZh: string
-  description?: string
-  tags?: string[]
-}
-
-interface SearchResponse {
-  total: number
-  items: SearchResult[]
-}
+import { searchAll, type SearchItem } from '@/lib/searchClient'
 
 interface SearchModalProps {
   isOpen: boolean
@@ -25,52 +11,54 @@ interface SearchModalProps {
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
+  const [results, setResults] = useState<SearchItem[]>([])
   const [loading, setLoading] = useState(false)
   const [searched, setSearched] = useState(false)
+  const [failed, setFailed] = useState(false)
+  const [active, setActive] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // 使用者打字比請求回來得快；只採用最後一次查詢的結果，
+  // 否則較慢的舊請求會覆蓋掉較新的結果。
+  const latestQuery = useRef('')
 
-  // Auto-focus input when modal opens
   useEffect(() => {
     if (isOpen) {
       setQuery('')
       setResults([])
       setSearched(false)
+      setFailed(false)
+      setActive(0)
       setTimeout(() => inputRef.current?.focus(), 50)
     }
   }, [isOpen])
 
-  // ESC key handler
-  useEffect(() => {
-    if (!isOpen) return
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen, onClose])
-
   const fetchResults = useCallback(async (q: string) => {
+    latestQuery.current = q
     if (!q.trim()) {
       setResults([])
       setSearched(false)
       setLoading(false)
+      setFailed(false)
       return
     }
     setLoading(true)
     try {
-      const res = await fetch(
-        `/api/v1/search?q=${encodeURIComponent(q)}&type=all&limit=10`
-      )
-      if (!res.ok) throw new Error('Search failed')
-      const data: SearchResponse = await res.json()
+      const data = await searchAll(q, 10)
+      if (latestQuery.current !== q) return
       setResults(data.items)
+      setFailed(false)
     } catch {
+      if (latestQuery.current !== q) return
       setResults([])
+      setFailed(true)
     } finally {
-      setLoading(false)
-      setSearched(true)
+      if (latestQuery.current === q) {
+        setLoading(false)
+        setSearched(true)
+        setActive(0)
+      }
     }
   }, [])
 
@@ -80,20 +68,66 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     debounceRef.current = setTimeout(() => fetchResults(value), 300)
   }
 
+  const hrefFor = (item: SearchItem) =>
+    item.source === 'cocktail' ? `/recipes/${item.slug}` : `/prep/${item.slug}`
+
+  // 鍵盤操作：不使用滑鼠也能選取結果
+  useEffect(() => {
+    if (!isOpen) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      if (results.length === 0) return
+      if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        setActive(i => (i + 1) % results.length)
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        setActive(i => (i - 1 + results.length) % results.length)
+      } else if (e.key === 'Enter') {
+        e.preventDefault()
+        const target = listRef.current?.querySelector<HTMLAnchorElement>(
+          `[data-index="${active}"]`,
+        )
+        target?.click()
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [isOpen, onClose, results, active])
+
+  // 以鍵盤移動時把選取項目捲進可視範圍
+  useEffect(() => {
+    listRef.current
+      ?.querySelector(`[data-index="${active}"]`)
+      ?.scrollIntoView({ block: 'nearest' })
+  }, [active])
+
   if (!isOpen) return null
+
+  const approximateOnly = results.length > 0 && results.every(r => !r.exact)
 
   return (
     <div
       className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] bg-black/70 backdrop-blur-sm"
       onClick={onClose}
+      role="presentation"
     >
       <div
         className="w-full max-w-2xl mx-4 glass-card p-6 animate-fade-in"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="搜尋"
       >
         {/* Search Input */}
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-charcoal-500">
+          <span
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-charcoal-500"
+            aria-hidden="true"
+          >
             🔍
           </span>
           <input
@@ -103,21 +137,27 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             onChange={(e) => handleInputChange(e.target.value)}
             placeholder="搜尋調酒配方、備料…"
             className="input-neon pl-12 pr-12 py-4 text-base"
+            role="combobox"
+            aria-expanded={results.length > 0}
+            aria-controls="search-results"
+            aria-autocomplete="list"
+            aria-activedescendant={results.length > 0 ? `search-result-${active}` : undefined}
+            aria-label="搜尋調酒配方與備料"
           />
           <button
             onClick={onClose}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-charcoal-500
                        hover:text-neon-amber transition-colors text-lg p-1"
-            aria-label="Close search"
+            aria-label="關閉搜尋"
           >
             ✕
           </button>
         </div>
 
         {/* Results */}
-        <div className="mt-4 max-h-[50vh] overflow-y-auto">
+        <div className="mt-4 max-h-[50vh] overflow-y-auto" ref={listRef}>
           {loading && (
-            <div className="space-y-3">
+            <div className="space-y-3" aria-hidden="true">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="animate-pulse flex gap-3 p-4 bg-bg-tertiary rounded-sm">
                   <div className="w-16 h-6 bg-charcoal-700 rounded" />
@@ -130,25 +170,44 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             </div>
           )}
 
-          {!loading && searched && results.length === 0 && (
+          {!loading && failed && (
+            <p className="text-center text-text-muted font-mono text-sm py-8">
+              搜尋暫時無法使用，請稍後再試
+            </p>
+          )}
+
+          {!loading && !failed && searched && results.length === 0 && (
             <p className="text-center text-text-muted font-mono text-sm py-8">
               找不到相關結果
             </p>
           )}
 
+          {/* 容錯命中時說明原因，否則使用者會以為搜尋壞了 */}
+          {!loading && approximateOnly && (
+            <p className="mb-2 px-1 text-xs font-mono text-charcoal-500">
+              沒有完全符合「{query.trim()}」的結果，以下為相近項目
+            </p>
+          )}
+
           {!loading && results.length > 0 && (
-            <div className="space-y-2">
-              {results.map((item) => {
+            <div className="space-y-2" id="search-results" role="listbox" aria-label="搜尋結果">
+              {results.map((item, index) => {
                 const isCocktail = item.source === 'cocktail'
-                const href = isCocktail ? `/recipes/${item.slug}` : `/prep/${item.slug}`
+                const isActive = index === active
 
                 return (
                   <Link
                     key={`${item.source}-${item.id}`}
-                    href={href}
+                    href={hrefFor(item)}
                     onClick={onClose}
-                    className="block p-4 bg-bg-tertiary border border-charcoal-700
-                               hover:border-neon-amber transition-colors duration-200 rounded-sm group"
+                    onMouseEnter={() => setActive(index)}
+                    data-index={index}
+                    id={`search-result-${index}`}
+                    role="option"
+                    aria-selected={isActive}
+                    className={`block p-4 bg-bg-tertiary border transition-colors duration-200 rounded-sm group ${
+                      isActive ? 'border-neon-amber' : 'border-charcoal-700 hover:border-neon-amber'
+                    }`}
                   >
                     <div className="flex items-start gap-3">
                       {/* Source Badge */}
@@ -165,12 +224,17 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       <div className="flex-1 min-w-0">
                         {/* Name */}
                         <div className="flex items-baseline gap-2">
-                          <span className="text-text-warm font-sans font-medium group-hover:text-neon-amber transition-colors">
+                          <span className={`font-sans font-medium transition-colors ${
+                            isActive ? 'text-neon-amber' : 'text-text-warm group-hover:text-neon-amber'
+                          }`}>
                             {item.nameZh}
                           </span>
                           <span className="text-charcoal-500 font-mono text-xs">
                             {item.nameEn}
                           </span>
+                          {!item.exact && !approximateOnly && (
+                            <span className="text-charcoal-500 font-mono text-[10px]">近似</span>
+                          )}
                         </div>
 
                         {/* Description */}
@@ -206,7 +270,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         {/* Keyboard hint */}
         <div className="mt-4 pt-3 border-t border-charcoal-700 text-center">
           <span className="font-mono text-[10px] text-charcoal-500 tracking-wider">
-            ESC 關閉 · 直接輸入開始搜尋
+            ↑↓ 選擇 · Enter 開啟 · ESC 關閉
           </span>
         </div>
       </div>

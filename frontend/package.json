@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "prepare:data": "node scripts/prepare-static-data.mjs",
+    "prepare:data": "node scripts/prepare-static-data.mjs && node scripts/build-search-index.mjs",
     "pretype-check": "npm run prepare:data",
     "prebuild": "npm run prepare:data",
     "pretest": "npm run prepare:data",
@@ -15,7 +15,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "type-check": "tsc --noEmit",
-    "build:static": "node scripts/prepare-static-data.mjs && node scripts/toggle-dynamic-routes.mjs park && (NEXT_PUBLIC_STATIC_MODE=1 next build; node scripts/toggle-dynamic-routes.mjs restore)"
+    "build:static": "npm run prepare:data && node scripts/toggle-dynamic-routes.mjs park && (NEXT_PUBLIC_STATIC_MODE=1 next build; node scripts/toggle-dynamic-routes.mjs restore)"
   },
   "dependencies": {
     "@tailwindcss/forms": "0.5.7",

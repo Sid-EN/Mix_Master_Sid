@@ -12,6 +12,7 @@ data_store.py — 資料檔集中載入與快取
 """
 import json
 import os
+from collections.abc import Callable
 from functools import lru_cache
 
 _DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -70,8 +71,24 @@ def flavor_wheel() -> dict:
     return _read("flavor_wheel.json")
 
 
+_reload_hooks: list[Callable[[], None]] = []
+
+
+def on_reload(fn: Callable[[], None]) -> Callable[[], None]:
+    """
+    登記在 reload_all() 時一併清除的衍生快取。
+
+    有些模組會把資料再加工後快取（例如搜尋的預先切詞），
+    若只清掉這裡的原始資料快取，那些模組仍會比對舊資料。
+    """
+    _reload_hooks.append(fn)
+    return fn
+
+
 def reload_all() -> None:
     """清除所有快取，強制下次存取時重新讀檔（測試與開發時使用）。"""
     for fn in (cocktails, preps, ingredients, ingredient_index,
                wine_knowledge, spirits_knowledge, flavor_wheel):
         fn.cache_clear()  # type: ignore[attr-defined]  # lru_cache 包裝後的屬性
+    for hook in _reload_hooks:
+        hook()

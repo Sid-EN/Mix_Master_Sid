@@ -1,0 +1,777 @@
+{
+  "_generated_by": "scripts/gen_fuzzy_parity.py",
+  "candidates": [
+    {
+      "name": [
+        "Classic Daiquiri",
+        "經典黛綺麗"
+      ],
+      "tag": [
+        "classic",
+        "sour",
+        "rum"
+      ],
+      "ingredient": [
+        "bacardi-rum",
+        "fresh-lime-juice",
+        "simple-syrup"
+      ],
+      "description": [
+        "The perfect rum Sour."
+      ]
+    },
+    {
+      "name": [
+        "Negroni"
+      ],
+      "tag": [
+        "classic",
+        "bitter"
+      ],
+      "ingredient": [
+        "gin",
+        "campari",
+        "sweet-vermouth"
+      ],
+      "description": [
+        "Italian aperitivo."
+      ]
+    },
+    {
+      "name": [
+        "Mezcal Negroni"
+      ],
+      "tag": [
+        "modern"
+      ],
+      "ingredient": [
+        "mezcal",
+        "campari"
+      ],
+      "description": [
+        "Smoky twist."
+      ]
+    },
+    {
+      "name": [
+        "Old Fashioned",
+        "古典雞尾酒"
+      ],
+      "tag": [
+        "classic",
+        "spirit-forward"
+      ],
+      "ingredient": [
+        "bourbon",
+        "sugar",
+        "angostura"
+      ],
+      "description": [
+        "The original cocktail."
+      ]
+    },
+    {
+      "name": [
+        "Whiskey Sour"
+      ],
+      "tag": [
+        "sour"
+      ],
+      "ingredient": [
+        "bourbon",
+        "lemon-juice"
+      ],
+      "description": [
+        "Egg white optional."
+      ]
+    },
+    {
+      "name": [
+        "Gin & Tonic"
+      ],
+      "tag": [
+        "highball"
+      ],
+      "ingredient": [
+        "gin",
+        "tonic-water"
+      ],
+      "description": [
+        "Long and refreshing."
+      ]
+    }
+  ],
+  "distances": [
+    {
+      "a": "daiquiri",
+      "b": "daiquiri",
+      "limit": 5,
+      "expected": 0
+    },
+    {
+      "a": "daiquiri",
+      "b": "daquiri",
+      "limit": 5,
+      "expected": 1
+    },
+    {
+      "a": "negroni",
+      "b": "negrone",
+      "limit": 5,
+      "expected": 1
+    },
+    {
+      "a": "mojito",
+      "b": "mojtio",
+      "limit": 5,
+      "expected": 2
+    },
+    {
+      "a": "",
+      "b": "abc",
+      "limit": 5,
+      "expected": 3
+    },
+    {
+      "a": "daiquiri",
+      "b": "manhattan",
+      "limit": 2,
+      "expected": 3
+    },
+    {
+      "a": "gin",
+      "b": "gin",
+      "limit": 0,
+      "expected": 0
+    },
+    {
+      "a": "gin",
+      "b": "sin",
+      "limit": 0,
+      "expected": 1
+    },
+    {
+      "a": "abc",
+      "b": "",
+      "limit": 5,
+      "expected": 3
+    },
+    {
+      "a": "kitten",
+      "b": "sitting",
+      "limit": 5,
+      "expected": 3
+    }
+  ],
+  "maxTypos": [
+    {
+      "term": "a",
+      "expected": 0
+    },
+    {
+      "term": "gin",
+      "expected": 0
+    },
+    {
+      "term": "rum",
+      "expected": 0
+    },
+    {
+      "term": "sour",
+      "expected": 1
+    },
+    {
+      "term": "negroni",
+      "expected": 2
+    },
+    {
+      "term": "daiquiri",
+      "expected": 2
+    },
+    {
+      "term": "黛綺麗",
+      "expected": 0
+    }
+  ],
+  "tokenise": [
+    {
+      "text": "Gin & Tonic!",
+      "normalised": "gin & tonic!",
+      "tokens": [
+        "gin",
+        "tonic"
+      ]
+    },
+    {
+      "text": "經典黛綺麗",
+      "normalised": "經典黛綺麗",
+      "tokens": [
+        "經典黛綺麗"
+      ]
+    },
+    {
+      "text": "  Old   Fashioned \n",
+      "normalised": "old fashioned",
+      "tokens": [
+        "old",
+        "fashioned"
+      ]
+    },
+    {
+      "text": "a_b-c",
+      "normalised": "a_b-c",
+      "tokens": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "text": "",
+      "normalised": "",
+      "tokens": []
+    }
+  ],
+  "scores": [
+    {
+      "query": "daiquiri",
+      "candidate": 0,
+      "score": 1.0
+    },
+    {
+      "query": "daiquiri",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "daiquiri",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "daiquiri",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "daiquiri",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "daiquiri",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "daquiri",
+      "candidate": 0,
+      "score": 0.3333333333
+    },
+    {
+      "query": "daquiri",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "daquiri",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "daquiri",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "daquiri",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "daquiri",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "negroni",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "negroni",
+      "candidate": 1,
+      "score": 1.0
+    },
+    {
+      "query": "negroni",
+      "candidate": 2,
+      "score": 1.0
+    },
+    {
+      "query": "negroni",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "negroni",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "negroni",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "negrone",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "negrone",
+      "candidate": 1,
+      "score": 0.3333333333
+    },
+    {
+      "query": "negrone",
+      "candidate": 2,
+      "score": 0.3333333333
+    },
+    {
+      "query": "negrone",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "negrone",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "negrone",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "old fashioned",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "old fashioned",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "old fashioned",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "old fashioned",
+      "candidate": 3,
+      "score": 1.5
+    },
+    {
+      "query": "old fashioned",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "old fashioned",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "fashioned old",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "fashioned old",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "fashioned old",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "fashioned old",
+      "candidate": 3,
+      "score": 1.0
+    },
+    {
+      "query": "fashioned old",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "fashioned old",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "whisky sour",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "whisky sour",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "whisky sour",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "whisky sour",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "whisky sour",
+      "candidate": 4,
+      "score": 0.625
+    },
+    {
+      "query": "whisky sour",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "gin",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "gin",
+      "candidate": 1,
+      "score": 0.5
+    },
+    {
+      "query": "gin",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "gin",
+      "candidate": 3,
+      "score": 0.21
+    },
+    {
+      "query": "gin",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "gin",
+      "candidate": 5,
+      "score": 1.0
+    },
+    {
+      "query": "sin",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "sin",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "sin",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "sin",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "sin",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "sin",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "rum",
+      "candidate": 0,
+      "score": 0.6
+    },
+    {
+      "query": "rum",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "rum",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "rum",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "rum",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "rum",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "黛綺麗",
+      "candidate": 0,
+      "score": 0.7
+    },
+    {
+      "query": "黛綺麗",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "黛綺麗",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "黛綺麗",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "黛綺麗",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "黛綺麗",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "古典",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "古典",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "古典",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "古典",
+      "candidate": 3,
+      "score": 0.85
+    },
+    {
+      "query": "古典",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "古典",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "lime juice",
+      "candidate": 0,
+      "score": 0.5
+    },
+    {
+      "query": "lime juice",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "lime juice",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "lime juice",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "lime juice",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "lime juice",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "zzzz",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "zzzz",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "zzzz",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "zzzz",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "zzzz",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "zzzz",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "!!!",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "!!!",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "!!!",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "!!!",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "!!!",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "!!!",
+      "candidate": 5,
+      "score": 0.0
+    },
+    {
+      "query": "GIN  Tonic",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "GIN  Tonic",
+      "candidate": 1,
+      "score": 0.0
+    },
+    {
+      "query": "GIN  Tonic",
+      "candidate": 2,
+      "score": 0.0
+    },
+    {
+      "query": "GIN  Tonic",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "GIN  Tonic",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "GIN  Tonic",
+      "candidate": 5,
+      "score": 1.25
+    },
+    {
+      "query": "campari",
+      "candidate": 0,
+      "score": 0.0
+    },
+    {
+      "query": "campari",
+      "candidate": 1,
+      "score": 0.5
+    },
+    {
+      "query": "campari",
+      "candidate": 2,
+      "score": 0.5
+    },
+    {
+      "query": "campari",
+      "candidate": 3,
+      "score": 0.0
+    },
+    {
+      "query": "campari",
+      "candidate": 4,
+      "score": 0.0
+    },
+    {
+      "query": "campari",
+      "candidate": 5,
+      "score": 0.0
+    }
+  ]
+}
