@@ -37,7 +37,18 @@ export default function AchievementToast() {
   if (toasts.length === 0) return null
 
   return (
-    <div className="fixed bottom-4 right-4 z-[9999] flex flex-col gap-3 pointer-events-none">
+    /*
+      成就通知位於任何 landmark 之外，axe 的 region 規則會判為違規；
+      更重要的是，讀屏軟體原本完全不會宣讀解鎖成就這件事。
+      role="status" + aria-live 讓它成為即時區域：既會被宣讀，
+      也符合 region 規則對即時區域的例外。
+    */
+    <div
+      role="status"
+      aria-live="polite"
+      aria-label="成就通知"
+      className="fixed bottom-4 right-4 z-[9999] flex flex-col gap-3 pointer-events-none"
+    >
       {toasts.map(({ achievement, id }) => {
         const tierColor = TIER_COLORS[achievement.tier]
         return (
