@@ -222,3 +222,56 @@ class TestCascade:
         auth_client.delete(f"/api/v1/recipes/{rid}", headers=owner)
         assert db_session.query(RecipeRating).count() == 0
         assert db_session.query(RecipeComment).count() == 0
+
+
+class TestCommentDeletePermission:
+    """
+    canDelete 讓前端只在真的刪得掉時才顯示刪除按鈕。
+
+    先前前端對所有登入者都顯示刪除鍵，但後端只允許留言者與配方擁有者刪除，
+    其他人點下去只會靜默失敗——看起來就像按鈕壞了。
+    """
+
+    def comment_as(self, client, token, headers, body="留言"):
+        r = client.post(f"/api/v1/community/{token}/comments",
+                        json={"body": body}, headers=headers)
+        assert r.status_code == 201
+        return r.json()["id"]
+
+    def first_comment(self, client, token, headers=None):
+        r = client.get(f"/api/v1/community/{token}/comments",
+                       **({"headers": headers} if headers else {}))
+        return r.json()["items"][0]
+
+    def test_comment_author_can_delete(self, auth_client, shared, visitor):
+        _rid, token = shared
+        self.comment_as(auth_client, token, visitor)
+        assert self.first_comment(auth_client, token, visitor)["canDelete"] is True
+
+    def test_recipe_owner_can_delete_others_comments(self, auth_client, shared, owner, visitor):
+        _rid, token = shared
+        self.comment_as(auth_client, token, visitor)
+        assert self.first_comment(auth_client, token, owner)["canDelete"] is True
+
+    def test_third_party_cannot_delete(self, auth_client, shared, visitor, other):
+        _rid, token = shared
+        self.comment_as(auth_client, token, visitor)
+        assert self.first_comment(auth_client, token, other)["canDelete"] is False
+
+    def test_anonymous_cannot_delete(self, auth_client, shared, visitor):
+        _rid, token = shared
+        self.comment_as(auth_client, token, visitor)
+        assert self.first_comment(auth_client, token)["canDelete"] is False
+
+    def test_flag_matches_actual_permission(self, auth_client, shared, visitor, other):
+        """旗標必須與實際權限一致，否則前端顯示的按鈕仍會失敗。"""
+        _rid, token = shared
+        cid = self.comment_as(auth_client, token, visitor)
+
+        assert self.first_comment(auth_client, token, other)["canDelete"] is False
+        assert auth_client.delete(f"/api/v1/community/{token}/comments/{cid}",
+                                  headers=other).status_code in (403, 404)
+
+        assert self.first_comment(auth_client, token, visitor)["canDelete"] is True
+        assert auth_client.delete(f"/api/v1/community/{token}/comments/{cid}",
+                                  headers=visitor).status_code == 204

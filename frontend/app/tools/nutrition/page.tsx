@@ -385,7 +385,11 @@ export default function NutritionCalculatorPage() {
                     </div>
                     <button
                       onClick={() => removeRow(row.id)}
-                      className="flex items-center justify-center w-8 h-8 rounded border border-charcoal-700 text-charcoal-500 hover:border-red-400 hover:text-red-400 transition-colors text-sm"
+                      // 只剩一列時無法移除。原本點了完全沒反應，
+                      // 看起來就像按鈕壞了；改為明確停用並說明原因。
+                      disabled={rows.length <= 1}
+                      title={rows.length <= 1 ? '至少需要保留一項材料' : '移除此材料'}
+                      className="flex items-center justify-center w-8 h-8 rounded border border-charcoal-700 text-charcoal-500 hover:border-red-400 hover:text-red-400 transition-colors text-sm disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-charcoal-700 disabled:hover:text-charcoal-500"
                       aria-label="移除此材料"
                     >
                       ×

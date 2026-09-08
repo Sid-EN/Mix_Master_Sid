@@ -4,12 +4,14 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from './AuthContext'
+import ConfirmButton from './ConfirmButton'
 
 interface Comment {
   id: number
   body: string
   author: string
   isAuthor: boolean
+  canDelete: boolean
   createdAt: string | null
 }
 
@@ -37,7 +39,9 @@ export default function RecipeCommunity({ shareToken }: { shareToken: string }) 
     try {
       const [rRes, cRes] = await Promise.all([
         fetch(clientUrl(`/api/v1/community/${shareToken}/ratings`), { headers: authHeaders() }),
-        fetch(clientUrl(`/api/v1/community/${shareToken}/comments`)),
+        // 帶上憑證，伺服器才能判斷哪幾則留言是這位使用者刪得掉的（canDelete）。
+        // 少了它，就算是留言者本人也看不到自己的刪除按鈕。
+        fetch(clientUrl(`/api/v1/community/${shareToken}/comments`), { headers: authHeaders() }),
       ])
       if (rRes.ok) setRatings(await rRes.json())
       if (cRes.ok) setComments((await cRes.json()).items ?? [])
@@ -90,12 +94,17 @@ export default function RecipeCommunity({ shareToken }: { shareToken: string }) 
   async function removeComment(id: number) {
     if (!token) return
     setBusy(true)
+    setError('')
     try {
-      await fetch(clientUrl(`/api/v1/community/${shareToken}/comments/${id}`), {
+      const res = await fetch(clientUrl(`/api/v1/community/${shareToken}/comments/${id}`), {
         method: 'DELETE',
         headers: authHeaders(),
       })
+      // 先前不檢查回應：刪不掉時畫面毫無變化，也沒有任何說明
+      if (!res.ok && res.status !== 204) throw new Error(String(res.status))
       await load()
+    } catch {
+      setError('刪除留言失敗，請稍後再試')
     } finally {
       setBusy(false)
     }
@@ -189,15 +198,23 @@ export default function RecipeCommunity({ shareToken }: { shareToken: string }) 
                       {new Date(c.createdAt).toLocaleString('zh-TW')}
                     </span>
                   )}
-                  {token && (
-                    <button
-                      onClick={() => removeComment(c.id)}
+                  {/*
+                    只在這位瀏覽者真的刪得掉時才顯示。
+                    先前對所有登入者都顯示，但後端只允許留言者與配方擁有者刪除，
+                    其他人點了只會靜默失敗，看起來就像按鈕壞了。
+                  */}
+                  {c.canDelete && (
+                    <ConfirmButton
+                      onConfirm={() => removeComment(c.id)}
                       disabled={busy}
+                      confirmLabel="確認刪除？"
                       className="ml-auto font-mono text-[10px] text-charcoal-600
                                  hover:text-red-400 transition-colors disabled:opacity-40"
+                      confirmClassName="ml-auto font-mono text-[10px] text-red-400
+                                        transition-colors disabled:opacity-40"
                     >
                       刪除
-                    </button>
+                    </ConfirmButton>
                   )}
                 </div>
                 <p className="text-text-secondary text-sm whitespace-pre-wrap">{c.body}</p>

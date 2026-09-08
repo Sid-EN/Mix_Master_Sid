@@ -2,7 +2,7 @@
 
 import StaticModeNotice from '@/components/StaticModeNotice'
 import { IS_STATIC } from '@/lib/staticMode'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '@/components/AuthContext'
 import { clientUrl } from '@/lib/api'
@@ -31,6 +31,7 @@ function AccountPageInner() {
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
   const [busy, setBusy] = useState(false)
+  const emailRef = useRef<HTMLInputElement>(null)
   const [error, setError] = useState('')
   const [syncNote, setSyncNote] = useState('')
 
@@ -55,6 +56,14 @@ function AccountPageInner() {
   }, [token])
 
   async function requestReset() {
+    // 未填電子郵件時不能直接送出，但也不該把按鈕變成灰色讓人不知所措——
+    // 改為指出下一步並把游標移到欄位上。
+    if (!email.trim()) {
+      setSyncNote('')
+      setError('請先輸入註冊時使用的電子郵件，再申請重設密碼')
+      emailRef.current?.focus()
+      return
+    }
     setError(''); setBusy(true)
     try {
       await fetch(clientUrl('/api/v1/auth/forgot-password'), {
@@ -194,6 +203,7 @@ function AccountPageInner() {
         <label className="block">
           <span className="font-mono text-xs text-text-muted">電子郵件</span>
           <input
+            ref={emailRef}
             type="email"
             required
             value={email}
@@ -242,7 +252,7 @@ function AccountPageInner() {
           <button
             type="button"
             onClick={requestReset}
-            disabled={busy || !email}
+            disabled={busy}
             className="w-full font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors disabled:opacity-40"
           >
             忘記密碼？

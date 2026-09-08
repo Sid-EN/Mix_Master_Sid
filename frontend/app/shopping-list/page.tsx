@@ -41,12 +41,16 @@ export default function ShoppingListPage() {
   }
 
   const copyAll = async () => {
+    const text = toPlainText(items)
     try {
-      await navigator.clipboard.writeText(toPlainText(items))
+      await navigator.clipboard.writeText(text)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      /* 未授權剪貼簿時靜默失敗；下方仍提供純文字可手動複製 */
+      // 非安全來源（例如以 IP 連進來）時瀏覽器會拒絕存取剪貼簿。
+      // 先前只是靜默失敗，按鈕看起來完全沒反應；
+      // 改為把清單直接秀出來讓使用者自行複製。
+      window.prompt('複製購物清單：', text)
     }
   }
 

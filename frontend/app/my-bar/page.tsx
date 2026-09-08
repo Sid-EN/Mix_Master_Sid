@@ -2,6 +2,7 @@
 
 import { clientUrl } from '@/lib/api'
 import SubstituteHint from '@/components/SubstituteHint'
+import ConfirmButton from '@/components/ConfirmButton'
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import {
   loadInventory,
@@ -226,7 +227,17 @@ export default function MyBarPage() {
     })
   }, [])
 
-  const clearAll = () => setOwned([])
+  /**
+   * 清空酒櫃。
+   *
+   * 一併清掉庫存明細：只清 owned 會讓容量與售價殘留在
+   * 已不再擁有的材料上，之後重新勾選時會出現來路不明的舊價格。
+   */
+  const clearAll = () => {
+    setOwned([])
+    setInventory({})
+    saveInventory({})
+  }
 
   /* Ingredient name lookup */
   const ingredientNameMap = useMemo(() => {
@@ -294,12 +305,14 @@ export default function MyBarPage() {
                 </div>
               </div>
               {owned.length > 0 && (
-                <button
-                  onClick={clearAll}
+                <ConfirmButton
+                  onConfirm={clearAll}
+                  confirmLabel="確認清除全部？"
                   className="font-mono text-xs text-text-muted hover:text-red-400 transition-colors underline underline-offset-2"
+                  confirmClassName="font-mono text-xs text-red-400 underline underline-offset-2"
                 >
                   清除全部
-                </button>
+                </ConfirmButton>
               )}
             </div>
           </section>

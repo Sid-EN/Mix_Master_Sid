@@ -122,9 +122,12 @@ async def list_comments(
     share_token: str,
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
+    token: str | None = Depends(oauth2_scheme),
     db: Session = Depends(get_db),
 ):
     recipe = _shared_recipe(db, share_token)
+    # 未登入也可瀏覽；登入後才需要知道哪幾則自己刪得掉
+    viewer = optional_user(token, db)
     total = db.scalar(
         select(func.count(RecipeComment.id)).where(RecipeComment.recipe_id == recipe.id)
     )
@@ -143,6 +146,11 @@ async def list_comments(
                 # 僅回傳顯示名稱，不外洩留言者的電子郵件
                 "author": c.user.display_name or "使用者",
                 "isAuthor": c.user_id == recipe.user_id,
+                # 前端據此決定是否顯示刪除按鈕。
+                # 先前對所有登入者都顯示，但後端只允許留言者與配方擁有者刪除，
+                # 其他人點了只會靜默失敗——看起來就像按鈕壞了。
+                "canDelete": viewer is not None
+                and (viewer.id == c.user_id or viewer.id == recipe.user_id),
                 "createdAt": c.created_at.isoformat() if c.created_at else None,
             }
             for c in rows

@@ -3,6 +3,7 @@
 import StaticModeNotice from '@/components/StaticModeNotice'
 import { IS_STATIC } from '@/lib/staticMode'
 import ShareDialog from '@/components/ShareDialog'
+import ConfirmButton from '@/components/ConfirmButton'
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
@@ -56,15 +57,26 @@ function MyRecipesPageInner() {
     }
   }
 
+  /**
+   * 刪除配方。
+   *
+   * 二次確認由 ConfirmButton 負責。刪除會連同版本歷史、評分與留言
+   * 一併移除且無法復原，先前一次誤點就直接消失，連問都不問。
+   */
   async function remove(r: Recipe) {
     if (!token) return
     setBusyId(r.id)
+    setError('')
     try {
-      await fetch(clientUrl(`/api/v1/recipes/${r.id}`), {
+      const res = await fetch(clientUrl(`/api/v1/recipes/${r.id}`), {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       })
+      // 先前不檢查回應：刪除失敗時畫面毫無變化，也沒有任何說明
+      if (!res.ok && res.status !== 204) throw new Error(String(res.status))
       await load()
+    } catch {
+      setError('刪除失敗，請稍後再試')
     } finally {
       setBusyId('')
     }
@@ -202,15 +214,18 @@ function MyRecipesPageInner() {
                   版本歷史
                 </Link>
 
-                <button
-                  onClick={() => remove(r)}
+                <ConfirmButton
+                  onConfirm={() => remove(r)}
                   disabled={busyId === r.id}
+                  confirmLabel="確認刪除？"
                   className="ml-auto px-3 py-1.5 font-mono text-xs rounded border border-charcoal-700
                              text-text-muted hover:border-red-500/60 hover:text-red-400
                              transition-colors disabled:opacity-40"
+                  confirmClassName="ml-auto px-3 py-1.5 font-mono text-xs rounded border border-red-500
+                                    text-red-400 bg-red-500/10 transition-colors disabled:opacity-40"
                 >
                   刪除
-                </button>
+                </ConfirmButton>
               </div>
 
               {r.isShared && r.shareToken && (

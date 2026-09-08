@@ -280,7 +280,17 @@ export default function GlossaryPage() {
       {/* ── Body: sidebar + list ─────────────────────────────── */}
       <div className="max-w-5xl mx-auto px-6 py-8 flex gap-4">
         {/* A-Z sidebar (desktop) */}
-        <nav className="hidden lg:flex flex-col items-center gap-1 sticky top-44 self-start pt-2" aria-label="頁面內導覽">
+        {/*
+          26 個字母約需 836px；在一般筆電（視窗高 720–900px）中放不下。
+          先前沒有限制高度，sticky 讓整條列跟著頁面固定，
+          落在畫面外的 R 之後字母因此永遠點不到。
+          改為限制在視窗高度內並允許側欄自行捲動。
+        */}
+        <nav
+          className="hidden lg:flex flex-col items-center gap-1 sticky top-44 self-start pt-2
+                     max-h-[calc(100vh-12rem)] overflow-y-auto scrollbar-thin overscroll-contain"
+          aria-label="字母快速跳段"
+        >
           {ALPHABET.map((letter) => (
             <button
               key={letter}
