@@ -92,7 +92,7 @@ export default function PartyPage() {
       </header>
 
       {loading && <p className="text-text-muted font-mono text-sm">載入配方中…</p>}
-      {error && <p className="text-red-400 font-mono text-sm">{error}</p>}
+      {error && <p role="alert" className="text-red-400 font-mono text-sm">{error}</p>}
 
       {!loading && !error && (
         <div className="grid md:grid-cols-2 gap-8">

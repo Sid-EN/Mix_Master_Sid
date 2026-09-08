@@ -141,7 +141,11 @@ export default function BatchPage() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.detail || '計算失敗')
       setResult(data)
-      setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150)
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        // 同上：捲動不會宣讀，焦點才會（見 engine/page.tsx 的說明）
+        resultRef.current?.focus()
+      }, 150)
     } catch (e: any) {
       setError(userMessage(e, '計算時發生未知錯誤'))
     } finally {
@@ -206,7 +210,7 @@ export default function BatchPage() {
           {loadingList ? (
             <div className="h-12 rounded-lg bg-charcoal-800 animate-pulse" />
           ) : listError ? (
-            <p className="text-red-400 font-mono text-sm">⚠ {listError}</p>
+            <p role="alert" className="text-red-400 font-mono text-sm">⚠ {listError}</p>
           ) : (
             <ComboBox
               options={options.map(o => ({ ...o, id: String(o.id) }))}
@@ -310,13 +314,14 @@ export default function BatchPage() {
           </button>
 
           {error && (
-            <p className="mt-4 text-center text-red-400 font-mono text-sm">⚠ {error}</p>
+            <p role="alert" className="mt-4 text-center text-red-400 font-mono text-sm">⚠ {error}</p>
           )}
         </section>
 
         {/* ── Results ── */}
         {result && (
-          <div ref={resultRef} className="space-y-6 animate-fade-in">
+          <div ref={resultRef} tabIndex={-1} role="region" aria-label="換算結果"
+               className="space-y-6 animate-fade-in outline-none">
 
             {/* Summary */}
             <section className="glass-card border-neon-amber-glow p-6">

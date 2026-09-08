@@ -113,7 +113,15 @@ function EnginePageInner() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.detail || '生成失敗')
       setResult(data)
-      setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        /*
+          捲動只有視覺效果。讀屏軟體使用者按下生成後，游標仍停在按鈕上，
+          完全不會知道下方多出了一整份配方——對他們而言等同於「點了沒反應」。
+          把焦點移進結果區，讀屏軟體才會宣讀這塊新內容。
+        */
+        resultRef.current?.focus()
+      }, 100)
     } catch (e: any) {
       setError(userMessage(e, '生成失敗，請稍後再試'))
     } finally {
@@ -248,7 +256,7 @@ function EnginePageInner() {
         </div>
 
         {error && (
-          <p className="mt-4 text-red-400 font-mono text-sm animate-fade-in">⚠ {error}</p>
+          <p role="alert" className="mt-4 text-red-400 font-mono text-sm animate-fade-in">⚠ {error}</p>
         )}
         </>
         )}
@@ -274,7 +282,8 @@ function EnginePageInner() {
 
       {/* ─── Result Section ─────────────────────────────────── */}
       {result && (
-        <div ref={resultRef} className="space-y-8 animate-fade-in">
+        <div ref={resultRef} tabIndex={-1} role="region" aria-label="生成結果"
+             className="space-y-8 animate-fade-in outline-none">
 
           {/* A. Recipe Header Card */}
           <section className="glass-card p-8 md:p-10 border-neon-amber-glow">

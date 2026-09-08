@@ -281,7 +281,7 @@ export default function MyBarPage() {
       ) : error ? (
         <div className="text-center py-20">
           <p className="text-4xl mb-4">⚠️</p>
-          <p className="text-red-400 font-mono text-sm">{error}</p>
+          <p role="alert" className="text-red-400 font-mono text-sm">{error}</p>
         </div>
       ) : (
         <>

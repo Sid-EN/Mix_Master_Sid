@@ -223,7 +223,7 @@ function DiscoverPageInner() {
       )}
 
       {loading && <p className="font-mono text-sm text-text-muted">載入中…</p>}
-      {error && <p className="font-mono text-sm text-red-400">{error}</p>}
+      {error && <p role="alert" className="font-mono text-sm text-red-400">{error}</p>}
 
       {!loading && !error && tab === 'recipes' && (
         recipes.length > 0 ? (

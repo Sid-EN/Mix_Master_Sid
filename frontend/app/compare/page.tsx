@@ -235,7 +235,7 @@ export default function ComparePage() {
       )}
       {error && (
         <div className="text-center py-12">
-          <span className="text-red-400 font-mono text-sm">⚠ {error}</span>
+          <span role="alert" className="text-red-400 font-mono text-sm">⚠ {error}</span>
         </div>
       )}
 
