@@ -622,7 +622,7 @@ MixMaster 是完整的 Progressive Web App：
 | 端對端 | `tests/e2e/` | 168 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線、無障礙 |
 | 跨實作一致性 | `tests/fixtures/` | — | 搜尋規則、單位換算、QR 編碼各有一份對照基準，防止前後端悄悄分歧 |
 
-後端合計 447 項、前端 392 項、E2E 199 項。
+後端合計 447 項、前端 397 項、E2E 199 項。
 
 無障礙另以 axe-core 掃描（`tests/e2e/a11y.spec.ts`，20 頁）；
 文字對比可用 `python3 scripts/check_contrast.py` 驗算。

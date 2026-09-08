@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { serverUrl } from '../../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../../lib/api'
 import { IS_STATIC } from '../../../lib/staticMode'
 import { getClassicRecipe, getClassicRecipes } from '../../../lib/staticData'
 import RecipeActions from './RecipeActions'
@@ -83,7 +83,7 @@ async function getRecipe(slug: string) {
   // 靜態版沒有後端；經典配方本就在 repo 內，直接讀取即可
   if (IS_STATIC) return getClassicRecipe(slug)
   try {
-    const res = await fetch(serverUrl(`/api/v1/recipes/${slug}`), { cache: 'no-store' })
+    const res = await fetchWithTimeout(serverUrl(`/api/v1/recipes/${slug}`), CONTENT_TIMEOUT_MS, { cache: 'no-store' })
     if (!res.ok) return null
     return await res.json()
   } catch {

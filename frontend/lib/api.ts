@@ -26,3 +26,36 @@ export function serverUrl(path: string): string {
 export function clientUrl(path: string): string {
   return `${CLIENT_API}${path}`
 }
+
+/**
+ * 帶逾時的伺服器端取值。
+ *
+ * 頁面在伺服器端渲染時取後端資料，各處都寫了 try/catch 準備退回預設內容。
+ * 但那個 catch 在最需要的時候不會觸發：後端休眠冷啟動時，TCP 連線是成功的，
+ * 只是回應要等數十秒——fetch 不會拋錯，只會一直等，整頁跟著卡到平台的
+ * 函式逾時為止。免費方案的後端閒置後停機是常態，屆時連首頁都會慢。
+ *
+ * 逾時後主動中止，既有的 catch 才能發揮作用。正常回應的路徑完全不受影響。
+ */
+export async function fetchWithTimeout(
+  url: string,
+  timeoutMs: number,
+  init?: RequestInit,
+): Promise<Response> {
+  // 用 AbortController 而非 AbortSignal.timeout()：後者在部分執行環境
+  // （含測試用的 jsdom）不存在，會讓程式在那些環境直接壞掉。
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), timeoutMs)
+  try {
+    return await fetch(url, { ...init, signal: controller.signal })
+  } finally {
+    // 請求結束就清掉，否則待觸發的計時器會讓事件迴圈遲遲無法結束
+    clearTimeout(timer)
+  }
+}
+
+/** 版面裝飾用的數字，等不到就用預設值，不值得讓整頁停住 */
+export const DECORATIVE_TIMEOUT_MS = 3_000
+
+/** 頁面主要內容；給得寬鬆一些，冷啟動之外的慢查詢仍應成功 */
+export const CONTENT_TIMEOUT_MS = 8_000

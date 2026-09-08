@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import SpiritTabs from './SpiritTabs'
-import { serverUrl } from '../../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../../lib/api'
 import AcademyTracker from '../../../components/AcademyTracker'
 
 /* ── Types (matching spirits_knowledge.json) ─────────────── */
@@ -428,7 +428,7 @@ export default async function SpiritsPage() {
   let data: SpiritsData = {}
 
   try {
-    const res = await fetch(serverUrl('/api/v1/knowledge/spirits'), {
+    const res = await fetchWithTimeout(serverUrl('/api/v1/knowledge/spirits'), CONTENT_TIMEOUT_MS, {
       cache: 'no-store',
     })
     if (res.ok) {

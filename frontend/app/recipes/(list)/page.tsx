@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import RecipeListClient from '../RecipeListClient'
-import { serverUrl } from '../../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../../lib/api'
 import { IS_STATIC } from '../../../lib/staticMode'
 import { getClassicRecipes } from '../../../lib/staticData'
 
 async function getRecipes() {
   if (IS_STATIC) return getClassicRecipes()
   try {
-    const res = await fetch(serverUrl('/api/v1/recipes?limit=500&fields=summary'), { cache: 'no-store' })
+    const res = await fetchWithTimeout(serverUrl('/api/v1/recipes?limit=500&fields=summary'), CONTENT_TIMEOUT_MS, { cache: 'no-store' })
     const data = await res.json()
     return data.items || []
   } catch {

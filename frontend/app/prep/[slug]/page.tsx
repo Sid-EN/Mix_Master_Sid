@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { serverUrl } from '../../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../../lib/api'
 import { IS_STATIC } from '../../../lib/staticMode'
 import { getPrepRecipe as getStaticPrep, getPrepRecipes } from '../../../lib/staticData'
 import { pageMetadata, summarise } from '../../../lib/seo'
@@ -43,7 +43,7 @@ export async function generateStaticParams() {
 async function getPrepRecipe(slug: string) {
   if (IS_STATIC) return getStaticPrep(slug)
   try {
-    const res = await fetch(serverUrl(`/api/v1/prep/${slug}`), { cache: 'no-store' })
+    const res = await fetchWithTimeout(serverUrl(`/api/v1/prep/${slug}`), CONTENT_TIMEOUT_MS, { cache: 'no-store' })
     if (!res.ok) return null
     return await res.json()
   } catch {

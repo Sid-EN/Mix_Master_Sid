@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { serverUrl } from '../../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../../lib/api'
 import RecipeCommunity from '../../../components/RecipeCommunity'
 import PrintButton from '../../../components/PrintButton'
 
 /** 公開分享頁：憑不可猜測的權杖檢視，無需登入。撤銷後即回 404。 */
 async function getShared(token: string) {
   try {
-    const res = await fetch(serverUrl(`/api/v1/recipes/shared/${token}`), { cache: 'no-store' })
+    const res = await fetchWithTimeout(serverUrl(`/api/v1/recipes/shared/${token}`), CONTENT_TIMEOUT_MS, { cache: 'no-store' })
     if (!res.ok) return null
     return await res.json()
   } catch {

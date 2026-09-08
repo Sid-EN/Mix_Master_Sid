@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import PrepListClient from './PrepListClient'
-import { serverUrl } from '../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../lib/api'
 import { IS_STATIC } from '../../lib/staticMode'
 import { getPrepRecipes as getStaticPreps } from '../../lib/staticData'
 
 async function getPrepRecipes() {
   if (IS_STATIC) return getStaticPreps()
   try {
-    const res = await fetch(serverUrl('/api/v1/prep?limit=100'), { cache: 'no-store' })
+    const res = await fetchWithTimeout(serverUrl('/api/v1/prep?limit=100'), CONTENT_TIMEOUT_MS, { cache: 'no-store' })
     const data = await res.json()
     return data.items || []
   } catch {
@@ -17,7 +17,7 @@ async function getPrepRecipes() {
 
 async function getCategories() {
   try {
-    const res = await fetch(serverUrl('/api/v1/prep/categories'), { cache: 'no-store' })
+    const res = await fetchWithTimeout(serverUrl('/api/v1/prep/categories'), CONTENT_TIMEOUT_MS, { cache: 'no-store' })
     const data = await res.json()
     return data.categories || []
   } catch {

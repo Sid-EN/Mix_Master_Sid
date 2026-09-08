@@ -1,4 +1,5 @@
-import { serverUrl } from '../lib/api'
+import { serverUrl, fetchWithTimeout, DECORATIVE_TIMEOUT_MS } from '../lib/api'
+import { getIngredients, getClassicRecipes } from '../lib/staticData'
 import HomeRecommendations from '../components/HomeRecommendations'
 import PersonalRecommendations from '../components/PersonalRecommendations'
 import CocktailOfTheDay from '../components/CocktailOfTheDay'
@@ -7,17 +8,30 @@ import { HomeHeroText, HomeCtaButtons, HomeSectionTitle } from '../components/Ho
 import HeroParticles from '../components/HeroParticles'
 import ScrollReveal from '../components/ScrollReveal'
 
+/*
+  取不到後端時的後備數字。
+
+  原本寫死 117 與 60，而實際是 121 與 51——公開展示版沒有後端，
+  每一位訪客看到的都是這組早已過時的數字。改為直接數 repo 內的資料，
+  之後配方增減也不會再對不上。
+*/
+const FALLBACK_STATS = {
+  ingredients: getIngredients().length,
+  recipes: getClassicRecipes().length,
+}
+
 async function getStats() {
   try {
     const [ingRes, recRes] = await Promise.all([
-      fetch(serverUrl('/api/v1/ingredients?limit=1'), { cache: 'no-store' }),
-      fetch(serverUrl('/api/v1/recipes?limit=1'), { cache: 'no-store' }),
+      fetchWithTimeout(serverUrl('/api/v1/ingredients?limit=1'), DECORATIVE_TIMEOUT_MS, { cache: 'no-store' }),
+      fetchWithTimeout(serverUrl('/api/v1/recipes?limit=1'), DECORATIVE_TIMEOUT_MS, { cache: 'no-store' }),
     ])
     const ing = await ingRes.json()
     const rec = await recRes.json()
     return { ingredients: ing.total || 0, recipes: rec.total || 0 }
   } catch {
-    return { ingredients: 117, recipes: 60 }
+    // 後端沒回應（含休眠冷啟動）時不讓首頁停住，見 lib/api.ts
+    return FALLBACK_STATS
   }
 }
 

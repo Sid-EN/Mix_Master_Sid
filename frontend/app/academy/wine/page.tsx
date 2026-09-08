@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import WineTabs from './WineTabs'
-import { serverUrl } from '../../../lib/api'
+import { serverUrl, fetchWithTimeout, CONTENT_TIMEOUT_MS } from '../../../lib/api'
 import AcademyTracker from '../../../components/AcademyTracker'
 
 /* ── Types ──────────────────────────────────────────────── */
@@ -700,7 +700,7 @@ export default async function WinePage() {
   let data: WineData = {}
 
   try {
-    const res = await fetch(serverUrl('/api/v1/knowledge/wine'), {
+    const res = await fetchWithTimeout(serverUrl('/api/v1/knowledge/wine'), CONTENT_TIMEOUT_MS, {
       cache: 'no-store',
     })
     if (res.ok) {
