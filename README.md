@@ -622,10 +622,29 @@ MixMaster 是完整的 Progressive Web App：
 | 端對端 | `tests/e2e/` | 168 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線、無障礙 |
 | 跨實作一致性 | `tests/fixtures/` | — | 搜尋規則、單位換算、QR 編碼各有一份對照基準，防止前後端悄悄分歧 |
 
-後端合計 442 項、前端 340 項、E2E 168 項。
+後端合計 447 項、前端 368 項、E2E 184 項。
 
 無障礙另以 axe-core 掃描（`tests/e2e/a11y.spec.ts`，20 頁）；
 文字對比可用 `python3 scripts/check_contrast.py` 驗算。
+
+### 互動稽核腳本
+
+自動化測試只驗證「寫下來的預期」，這幾支腳本負責找出沒人想到要寫的問題。
+執行前需先以對應的建置啟動前端（腳本會檢查 React 是否已 hydration，
+未 hydration 會直接中止，避免把環境問題誤判成產品缺陷）。
+
+```bash
+# 逐一點擊頁面上的按鈕，找出點了沒反應的控制項
+node scripts/audit-buttons.mjs / /recipes /my-bar
+
+# 開啟每個對話框與選單，檢查裡面的按鈕是否真的按得到，
+# 以及對話框語意（role、焦點、Escape、背景鎖捲動）
+node scripts/audit-overlays.mjs
+
+# 找出被祖先 transform 綁架的 fixed 覆蓋層，
+# 以及溢出視窗又無法捲動的浮層——這兩種都會讓按鈕永遠點不到
+node scripts/audit-fixed-layers.mjs / /mood /glossary
+```
 
 ```bash
 # 後端 lint 與型別檢查

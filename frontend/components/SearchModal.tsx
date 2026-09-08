@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { searchAll, type SearchItem } from '@/lib/searchClient'
+import Portal from './Portal'
+import { useScrollLock } from '../lib/useScrollLock'
 
 interface SearchModalProps {
   isOpen: boolean
@@ -71,6 +73,9 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const hrefFor = (item: SearchItem) =>
     item.source === 'cocktail' ? `/recipes/${item.slug}` : `/prep/${item.slug}`
 
+  // 對話框開啟時鎖住背景捲動，避免滑鼠滾輪捲到背後的頁面
+  useScrollLock(isOpen)
+
   // 鍵盤操作：不使用滑鼠也能選取結果
   useEffect(() => {
     if (!isOpen) return
@@ -110,6 +115,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const approximateOnly = results.length > 0 && results.every(r => !r.exact)
 
   return (
+    /* Portal：祖先的 transform 會讓 fixed 錨定錯位，詳見 Portal.tsx */
+    <Portal>
     <div
       className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] bg-black/70 backdrop-blur-sm"
       onClick={onClose}
@@ -275,5 +282,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         </div>
       </div>
     </div>
+    </Portal>
   )
 }

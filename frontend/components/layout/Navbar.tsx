@@ -128,9 +128,16 @@ function MegaMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
   if (!isOpen) return null
 
   return (
+    /*
+      巨型選單沒有高度上限時會直接長到視窗外。它是 absolute、錨定在
+      fixed 的 navbar 底下，捲動頁面只會捲到背後的內容，選單本身不動，
+      因此超出視窗的那幾列（浸泡酒工坊、溫度指南、宿醉指南、API Docs、
+      Status）在筆電高度下永遠點不到。改為限制高度並讓選單自己捲動。
+    */
     <div ref={ref}
          className="absolute top-full left-0 right-0 z-[60] border-b border-charcoal-700
-                    bg-bg-primary shadow-2xl animate-fade-in"
+                    bg-bg-primary shadow-2xl animate-fade-in
+                    max-h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain"
          style={{ backgroundColor: 'var(--color-bg-secondary, #111118)' }}>
       <div className="max-w-7xl mx-auto px-8 py-8">
         <div className="grid grid-cols-5 gap-6">

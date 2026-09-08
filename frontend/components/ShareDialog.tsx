@@ -8,6 +8,8 @@
  */
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { QrError, qrSvg } from '@/lib/qrcode'
+import Portal from './Portal'
+import { useScrollLock } from '../lib/useScrollLock'
 
 export default function ShareDialog({
   url,
@@ -30,6 +32,9 @@ export default function ShareDialog({
       throw err
     }
   }, [url])
+
+  // 對話框開啟時鎖住背景捲動
+  useScrollLock(true)
 
   useEffect(() => {
     closeRef.current?.focus()
@@ -61,6 +66,8 @@ export default function ShareDialog({
   }
 
   return (
+    /* Portal：祖先的 transform 會讓 fixed 錨定錯位，詳見 Portal.tsx */
+    <Portal>
     <div
       className="fixed inset-0 z-[110] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
       onClick={onClose}
@@ -128,5 +135,6 @@ export default function ShareDialog({
         </div>
       </div>
     </div>
+    </Portal>
   )
 }
