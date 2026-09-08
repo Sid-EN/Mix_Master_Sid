@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from './AuthContext'
 import ConfirmButton from './ConfirmButton'
+import { userMessage } from '@/lib/errorMessage'
 
 interface Comment {
   id: number
@@ -65,7 +66,7 @@ export default function RecipeCommunity({ shareToken }: { shareToken: string }) 
       if (!res.ok) throw new Error('評分失敗')
       await load()
     } catch (e) {
-      setError(e instanceof Error ? e.message : '評分失敗')
+      setError(userMessage(e, '評分失敗'))
     } finally {
       setBusy(false)
     }
@@ -85,7 +86,7 @@ export default function RecipeCommunity({ shareToken }: { shareToken: string }) 
       setDraft('')
       await load()
     } catch (e) {
-      setError(e instanceof Error ? e.message : '留言失敗')
+      setError(userMessage(e, '留言失敗'))
     } finally {
       setBusy(false)
     }

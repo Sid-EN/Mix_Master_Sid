@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from '@/components/AuthContext'
+import { userMessage } from '@/lib/errorMessage'
 
 interface Ingredient {
   id: string
@@ -103,7 +104,7 @@ function NewRecipePageInner() {
       await res.json()
       router.push('/recipes/mine')
     } catch (err) {
-      setError(err instanceof Error ? err.message : '建立失敗')
+      setError(userMessage(err, '建立失敗'))
       setSaving(false)
     }
   }

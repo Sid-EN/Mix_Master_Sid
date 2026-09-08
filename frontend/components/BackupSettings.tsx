@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from './AuthContext'
+import { userMessage } from '@/lib/errorMessage'
 
 interface ImportResult {
   importedKeys: string[]
@@ -40,7 +41,7 @@ export default function BackupSettings() {
       const count = Object.keys(data.data ?? {}).length
       setMessage(`已匯出 ${count} 項資料與 ${data.recipes?.length ?? 0} 款配方`)
     } catch (e) {
-      setError(e instanceof Error ? e.message : '匯出失敗')
+      setError(userMessage(e, '匯出失敗'))
     } finally {
       setBusy(false)
     }

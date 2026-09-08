@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useParams, useRouter } from 'next/navigation'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from '@/components/AuthContext'
+import { userMessage } from '@/lib/errorMessage'
 
 interface VersionSummary {
   version: number
@@ -59,7 +60,7 @@ export default function VersionHistoryPage() {
       if (!res.ok) throw new Error('回溯失敗')
       await load()
     } catch (e) {
-      setError(e instanceof Error ? e.message : '回溯失敗')
+      setError(userMessage(e, '回溯失敗'))
     } finally {
       setBusy(0)
     }

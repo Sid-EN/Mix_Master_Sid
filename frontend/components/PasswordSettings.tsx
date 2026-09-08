@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from './AuthContext'
+import { userMessage } from '@/lib/errorMessage'
 
 const inputClass =
   'mt-1 w-full bg-charcoal-900 border border-charcoal-700 rounded px-3 py-2 text-text-warm'
@@ -30,7 +31,7 @@ export default function PasswordSettings() {
       await refresh()
       setMessage('顯示名稱已更新')
     } catch (err) {
-      setError(err instanceof Error ? err.message : '更新失敗')
+      setError(userMessage(err, '更新失敗'))
     } finally {
       setBusy(false)
     }
@@ -55,7 +56,7 @@ export default function PasswordSettings() {
       setCurrent(''); setNext('')
       setMessage('密碼已變更，其他裝置的登入狀態已失效')
     } catch (err) {
-      setError(err instanceof Error ? err.message : '變更失敗')
+      setError(userMessage(err, '變更失敗'))
     } finally {
       setBusy(false)
     }

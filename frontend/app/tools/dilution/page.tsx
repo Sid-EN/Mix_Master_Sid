@@ -318,7 +318,7 @@ export default function DilutionSimulatorPage() {
                   step={0.5}
                   value={state.abv}
                   onChange={(e) => set('abv', Number(e.target.value))}
-                  className="flex-1 accent-amber-400"
+                  className="flex-1 h-6 accent-amber-400"
                 />
                 <span className="font-mono text-sm text-neon-amber w-14 text-right">{state.abv}%</span>
               </div>
@@ -375,7 +375,7 @@ export default function DilutionSimulatorPage() {
                   step={1}
                   value={state.duration}
                   onChange={(e) => set('duration', Number(e.target.value))}
-                  className="flex-1 accent-amber-400"
+                  className="flex-1 h-6 accent-amber-400"
                 />
                 <span className="font-mono text-sm text-neon-amber w-14 text-right">{state.duration}s</span>
               </div>

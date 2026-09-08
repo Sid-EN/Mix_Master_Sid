@@ -297,7 +297,9 @@ export default function GlossaryPage() {
               onClick={() => scrollToLetter(letter)}
               disabled={!activeLetters.has(letter)}
               className={`
-                font-mono text-xs w-7 h-7 rounded flex items-center justify-center transition-all duration-150
+                /* shrink-0：字母數超出側欄高度時，flex 預設會壓縮它們——
+                   h-7（28px）被壓成 16px，小到按不準。改為維持尺寸、讓側欄自己捲動。 */
+                font-mono text-xs w-7 h-7 shrink-0 rounded flex items-center justify-center transition-all duration-150
                 ${
                   activeLetters.has(letter)
                     ? 'text-neon-amber hover:bg-neon-amber/10 cursor-pointer'

@@ -10,6 +10,7 @@ import {
   Radar, ResponsiveContainer,
 } from '@/components/charts/LazyCharts'
 import { SkeletonIngredientSelector } from '../../components/Skeleton'
+import { userMessage } from '@/lib/errorMessage'
 
 /* ── Types ────────────────────────────────────────────────── */
 type Ingredient = { id: string; label: string; sub: string; cat: string }
@@ -114,7 +115,7 @@ function EnginePageInner() {
       setResult(data)
       setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
     } catch (e: any) {
-      setError(e.message)
+      setError(userMessage(e, '生成失敗，請稍後再試'))
     } finally {
       setLoading(false)
     }

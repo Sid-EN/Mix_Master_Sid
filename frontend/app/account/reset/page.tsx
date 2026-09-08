@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from '@/components/AuthContext'
+import { userMessage } from '@/lib/errorMessage'
 
 function ResetForm() {
   const router = useRouter()
@@ -34,7 +35,7 @@ function ResetForm() {
       applyToken(data.access_token, data.user)
       router.push('/account')
     } catch (err) {
-      setError(err instanceof Error ? err.message : '重設失敗')
+      setError(userMessage(err, '重設失敗'))
       setBusy(false)
     }
   }

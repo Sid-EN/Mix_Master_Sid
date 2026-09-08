@@ -348,9 +348,16 @@ export default function RecipeListClient({ recipes }: RecipeListClientProps) {
                   key={`min-${n}`}
                   type="button"
                   onClick={() => { setDiffMin(n); if (n > diffMax) setDiffMax(n) }}
-                  className={`text-lg transition-all duration-200 ${n <= diffMin ? 'text-neon-amber' : 'text-charcoal-600 hover:text-charcoal-500'}`}
+                  /*
+                    原本按鈕內只有一個「☆」：讀屏軟體會連唸十個星號，
+                    分不出哪些是最低、哪些是最高難度，也聽不出目前選到幾星。
+                    點擊區也只有字元本身那麼寬，手機上很難按準。
+                  */
+                  aria-label={`最低難度 ${n} 星`}
+                  aria-pressed={n <= diffMin}
+                  className={`text-lg leading-none min-w-[24px] min-h-[24px] inline-flex items-center justify-center transition-all duration-200 ${n <= diffMin ? 'text-neon-amber' : 'text-charcoal-600 hover:text-charcoal-500'}`}
                 >
-                  {n <= diffMin ? '★' : '☆'}
+                  <span aria-hidden="true">{n <= diffMin ? '★' : '☆'}</span>
                 </button>
               ))}
               <span className="font-mono text-charcoal-600 mx-1">—</span>
@@ -360,9 +367,11 @@ export default function RecipeListClient({ recipes }: RecipeListClientProps) {
                   key={`max-${n}`}
                   type="button"
                   onClick={() => { setDiffMax(n); if (n < diffMin) setDiffMin(n) }}
-                  className={`text-lg transition-all duration-200 ${n <= diffMax ? 'text-neon-amber' : 'text-charcoal-600 hover:text-charcoal-500'}`}
+                  aria-label={`最高難度 ${n} 星`}
+                  aria-pressed={n <= diffMax}
+                  className={`text-lg leading-none min-w-[24px] min-h-[24px] inline-flex items-center justify-center transition-all duration-200 ${n <= diffMax ? 'text-neon-amber' : 'text-charcoal-600 hover:text-charcoal-500'}`}
                 >
-                  {n <= diffMax ? '★' : '☆'}
+                  <span aria-hidden="true">{n <= diffMax ? '★' : '☆'}</span>
                 </button>
               ))}
             </div>
@@ -459,7 +468,8 @@ export default function RecipeListClient({ recipes }: RecipeListClientProps) {
               {/* Favorite toggle */}
               <button
                 onClick={() => toggleFavorite(slug)}
-                className={`absolute top-3 right-3 text-lg z-10 transition-all duration-300 hover:scale-125 ${
+                /* 只有字元寬的點擊區在手機上很難按準，改以 padding 撐到 24×24 以上 */
+                className={`absolute top-1 right-1 p-2 text-lg leading-none z-10 transition-all duration-300 hover:scale-125 ${
                   isFavorite(slug)
                     ? 'text-neon-amber drop-shadow-[0_0_6px_rgba(245,166,35,0.6)]'
                     : 'text-charcoal-600 hover:text-neon-amber'

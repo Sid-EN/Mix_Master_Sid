@@ -46,8 +46,10 @@ export default function RecipeActions({ slug }: RecipeActionsProps) {
               onClick={() => setRating(slug, currentRating === n ? 0 : n)}
               onMouseEnter={() => setHoverStar(n)}
               onMouseLeave={() => setHoverStar(0)}
-              className="text-xl transition-colors duration-150 hover:scale-110 transform"
-              aria-label={`${n} 星`}
+              /* 星號本身不到 24px 寬，撐開點擊區才按得準 */
+              className="text-xl leading-none min-w-[24px] min-h-[24px] inline-flex items-center justify-center transition-colors duration-150 hover:scale-110 transform"
+              aria-label={`給 ${n} 星`}
+              aria-pressed={n <= currentRating}
             >
               <span style={{ color: n <= (hoverStar || currentRating) ? '#F5A623' : '#3A3A4A' }}>
                 ★

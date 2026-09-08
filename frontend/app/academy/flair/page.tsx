@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import Link from 'next/link'
 
 /* ─────────────────────── types ─────────────────────── */
@@ -223,26 +223,41 @@ function DifficultyBadge({ level }: { level: Difficulty }) {
 
 function MoveCard({ move, index }: { move: FlairMove; index: number }) {
   const [expanded, setExpanded] = useState(false)
+  const detailId = useId()
 
   return (
+    /*
+      展開／收合原本掛在 <article> 的 onClick 上。<article> 不可聚焦、
+      也沒有鍵盤處理器，因此只靠鍵盤或讀屏軟體的人打不開任何一張卡片，
+      詳細內容等於不存在。改為由標題列的按鈕負責切換，並以 aria-expanded
+      宣告狀態、aria-controls 指向被控制的區塊。
+    */
     <article
-      className="glass-card p-5 md:p-6 hover:border-neon-amber transition-all duration-300 animate-fade-in-up cursor-pointer"
+      className="glass-card p-5 md:p-6 hover:border-neon-amber transition-all duration-300 animate-fade-in-up"
       style={{ animationDelay: `${(index % 10) * 0.06}s` }}
-      onClick={() => setExpanded(!expanded)}
     >
       {/* header row */}
-      <div className="flex items-start justify-between gap-3 mb-3">
-        <div className="flex items-center gap-3">
-          <span className="text-3xl">{move.icon}</span>
-          <div>
-            <h3 className="font-display text-lg text-text-warm font-semibold leading-tight">
-              {move.nameEn}
-            </h3>
-            <p className="font-mono text-xs text-neon-amber/70">{move.nameTc}</p>
+      <button
+        type="button"
+        onClick={() => setExpanded(!expanded)}
+        aria-expanded={expanded}
+        aria-controls={detailId}
+        className="w-full text-left cursor-pointer"
+      >
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl" aria-hidden="true">{move.icon}</span>
+            <div>
+              <h3 className="font-display text-lg text-text-warm font-semibold leading-tight">
+                {move.nameEn}
+              </h3>
+              <p className="font-mono text-xs text-neon-amber/70">{move.nameTc}</p>
+            </div>
           </div>
+          <DifficultyBadge level={move.difficulty} />
         </div>
-        <DifficultyBadge level={move.difficulty} />
-      </div>
+        <span className="sr-only">{expanded ? '收合詳細內容' : '展開詳細內容'}</span>
+      </button>
 
       {/* description */}
       <p className="text-sm text-text-secondary mb-4">{move.description}</p>
@@ -260,6 +275,9 @@ function MoveCard({ move, index }: { move: FlairMove; index: number }) {
 
       {/* expandable detail */}
       <div
+        id={detailId}
+        /* 收合時對讀屏軟體也要真的隱藏，否則會唸出看不見的內容 */
+        aria-hidden={!expanded}
         className={`overflow-hidden transition-all duration-300 ${
           expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}

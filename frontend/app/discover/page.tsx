@@ -103,9 +103,19 @@ function DiscoverPageInner() {
     return () => { cancelled = true }
   }, [ready, tab, loadRecipes, loadCreators, loadFollowing, loadFeed])
 
+  /*
+    同一位創作者的追蹤請求在完成前不再受理新的點擊。
+
+    這裡是樂觀更新：畫面先翻、請求後送。快速連點兩下會送出 POST 與 DELETE
+    兩個請求，而它們沒有到達順序的保證——後送的先到時，伺服器留下的狀態
+    會和畫面相反，重新整理才會發現「追蹤」根本沒生效。
+  */
+  const [followPending, setFollowPending] = useState<number[]>([])
+
   const toggleFollow = async (id: number) => {
-    if (!token) return
+    if (!token || followPending.includes(id)) return
     const isFollowing = followingIds.includes(id)
+    setFollowPending(prev => [...prev, id])
     // 先更新畫面再送出請求；失敗時還原，避免每次點擊都要等一輪往返
     setFollowingIds(prev => (isFollowing ? prev.filter(x => x !== id) : [...prev, id]))
     const res = await fetch(clientUrl(`/api/v1/discover/creators/${id}/follow`), {
@@ -115,6 +125,7 @@ function DiscoverPageInner() {
     if (!res || !res.ok) {
       setFollowingIds(prev => (isFollowing ? [...prev, id] : prev.filter(x => x !== id)))
     }
+    setFollowPending(prev => prev.filter(x => x !== id))
   }
 
   const RecipeCard = ({ r }: { r: PublicRecipe }) => (
@@ -240,7 +251,8 @@ function DiscoverPageInner() {
                   <button
                     onClick={() => toggleFollow(c.id!)}
                     aria-pressed={followingIds.includes(c.id)}
-                    className={`shrink-0 px-3 py-1.5 font-mono text-xs rounded border transition-colors ${
+                    disabled={followPending.includes(c.id!)}
+                    className={`shrink-0 px-3 py-1.5 font-mono text-xs rounded border transition-colors disabled:opacity-60 ${
                       followingIds.includes(c.id)
                         ? 'border-neon-cyan text-neon-cyan bg-neon-cyan/10'
                         : 'border-charcoal-700 text-text-muted hover:border-neon-cyan hover:text-neon-cyan'

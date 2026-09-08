@@ -6,6 +6,7 @@ import Link from 'next/link'
 import {
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend,
 } from '@/components/charts/LazyCharts'
+import { userMessage } from '@/lib/errorMessage'
 
 /* ─── Types ─── */
 interface RecipeOption {
@@ -162,7 +163,7 @@ export default function CostCalculatorPage() {
     fetch(`${API}/recipes?limit=100`, { cache: 'no-store' })
       .then(r => { if (!r.ok) throw new Error('載入失敗'); return r.json() })
       .then(data => setRecipes(data.items ?? []))
-      .catch(e => setRecipeError(e.message))
+      .catch(e => setRecipeError(userMessage(e, '配方載入失敗')))
       .finally(() => setLoadingRecipes(false))
   }, [])
 
@@ -619,7 +620,7 @@ export default function CostCalculatorPage() {
                 step="1"
                 value={batchMultiplier}
                 onChange={e => setBatchMultiplier(parseInt(e.target.value))}
-                className="flex-1 accent-neon-amber"
+                className="flex-1 h-6 accent-neon-amber"
               />
               <span className="font-mono text-lg text-neon-amber w-12 text-right">
                 ×{batchMultiplier}

@@ -11,6 +11,7 @@ import { SYNC_EVENT } from '@/components/SyncAgent'
 import PasswordSettings from '@/components/PasswordSettings'
 import BackupSettings from '@/components/BackupSettings'
 import NotificationSettings from '@/components/NotificationSettings'
+import { userMessage } from '@/lib/errorMessage'
 
 type Mode = 'login' | 'register'
 
@@ -88,7 +89,7 @@ function AccountPageInner() {
       if (mode === 'login') await login(email.trim(), password)
       else await register(email.trim(), password, displayName.trim())
     } catch (err) {
-      setError(err instanceof Error ? err.message : '操作失敗')
+      setError(userMessage(err, '操作失敗'))
     } finally {
       setBusy(false)
     }
@@ -253,7 +254,7 @@ function AccountPageInner() {
             type="button"
             onClick={requestReset}
             disabled={busy}
-            className="w-full font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors disabled:opacity-40"
+            className="w-full py-2 font-mono text-xs text-charcoal-500 hover:text-neon-amber transition-colors disabled:opacity-40"
           >
             忘記密碼？
           </button>

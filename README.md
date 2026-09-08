@@ -622,7 +622,7 @@ MixMaster 是完整的 Progressive Web App：
 | 端對端 | `tests/e2e/` | 168 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線、無障礙 |
 | 跨實作一致性 | `tests/fixtures/` | — | 搜尋規則、單位換算、QR 編碼各有一份對照基準，防止前後端悄悄分歧 |
 
-後端合計 447 項、前端 368 項、E2E 184 項。
+後端合計 447 項、前端 387 項、E2E 190 項。
 
 無障礙另以 axe-core 掃描（`tests/e2e/a11y.spec.ts`，20 頁）；
 文字對比可用 `python3 scripts/check_contrast.py` 驗算。
@@ -644,6 +644,10 @@ node scripts/audit-overlays.mjs
 # 找出被祖先 transform 綁架的 fixed 覆蓋層，
 # 以及溢出視窗又無法捲動的浮層——這兩種都會讓按鈕永遠點不到
 node scripts/audit-fixed-layers.mjs / /mood /glossary
+
+# 在手機與桌機兩種尺寸下量每個控制項：是否被蓋住、捲不到、
+# 或小到按不準（WCAG 2.5.8 要求觸控目標至少 24×24）
+node scripts/audit-reachability.mjs / /recipes /glossary
 ```
 
 ```bash

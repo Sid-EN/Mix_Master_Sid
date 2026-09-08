@@ -3,10 +3,12 @@
 import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Link from 'next/link'
+import ComboBox from '@/components/ComboBox'
 import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   Radar, ResponsiveContainer, Legend,
 } from '@/components/charts/LazyCharts'
+import { userMessage } from '@/lib/errorMessage'
 
 /* ── Types ────────────────────────────────────────────────── */
 interface FlavorProfile {
@@ -69,19 +71,7 @@ function RecipeSelector({
   showRemove: boolean
 }) {
   const [search, setSearch] = useState('')
-  const [dropdownOpen, setDropdownOpen] = useState(false)
-  const dropdownRef = useRef<HTMLDivElement>(null)
   const color = SLOT_COLORS[slotIndex]
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', handler)
-    return () => document.removeEventListener('mousedown', handler)
-  }, [])
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim()
@@ -111,50 +101,34 @@ function RecipeSelector({
         )}
       </div>
 
-      <div ref={dropdownRef} className="relative">
-        <input
-          type="text"
-          placeholder="搜尋配方 Search recipe…"
-          className="input-neon w-full text-sm"
-          value={search}
-          onFocus={() => setDropdownOpen(true)}
-          onChange={(e) => { setSearch(e.target.value); setDropdownOpen(true) }}
-        />
-
-        {selected && !search && (
+      <ComboBox
+        options={filtered.map(r => ({ ...r, id: String(r.id ?? r.slug) }))}
+        value={selectedId}
+        onChange={onSelect}
+        search={search}
+        onSearchChange={setSearch}
+        label={`選擇配方 ${slotIndex + 1}`}
+        placeholder="搜尋配方 Search recipe…"
+        emptyText="找不到配方"
+        overlay={selected && !search ? (
           <div className="absolute inset-0 flex items-center px-3 pointer-events-none">
             <span className={`font-mono text-sm ${color.text}`}>
               {selected.nameZh} <span className="text-charcoal-500 text-xs">{selected.nameEn}</span>
             </span>
           </div>
-        )}
-
-        {dropdownOpen && (
-          <ul className="absolute z-[100] w-full mt-1 max-h-64 overflow-y-auto
-                         border border-charcoal-700 bg-bg-secondary rounded shadow-card">
-            {filtered.length === 0 && (
-              <li className="px-3 py-2 text-charcoal-500 text-xs font-mono">找不到配方</li>
+        ) : undefined}
+        optionClassName={(_o, isSelected, isActive) =>
+          `px-3 py-2 cursor-pointer transition-colors ${isSelected || isActive ? 'bg-bg-tertiary' : ''}`}
+        renderOption={r => (
+          <>
+            <span className="font-mono text-sm text-text-warm">{r.nameZh}</span>
+            <span className="ml-2 text-charcoal-500 text-xs">{r.nameEn}</span>
+            {r.method && (
+              <span className="ml-2 text-charcoal-600 text-[10px] uppercase">{r.method}</span>
             )}
-            {filtered.map(r => {
-              const rid = r.id ?? r.slug
-              return (
-                <li
-                  key={rid}
-                  onClick={() => { onSelect(rid); setSearch(''); setDropdownOpen(false) }}
-                  className={`px-3 py-2 cursor-pointer hover:bg-bg-tertiary transition-colors
-                    ${rid === selectedId ? 'bg-bg-tertiary' : ''}`}
-                >
-                  <span className="font-mono text-sm text-text-warm">{r.nameZh}</span>
-                  <span className="ml-2 text-charcoal-500 text-xs">{r.nameEn}</span>
-                  {r.method && (
-                    <span className="ml-2 text-charcoal-600 text-[10px] uppercase">{r.method}</span>
-                  )}
-                </li>
-              )
-            })}
-          </ul>
+          </>
         )}
-      </div>
+      />
     </div>
   )
 }
@@ -176,7 +150,7 @@ export default function ComparePage() {
     fetch(`${API}/recipes?limit=100`, { cache: 'no-store' })
       .then(r => { if (!r.ok) throw new Error('載入失敗'); return r.json() })
       .then(data => setRecipes(data.items ?? []))
-      .catch(e => setError(e.message))
+      .catch(e => setError(userMessage(e, '配方載入失敗')))
       .finally(() => setLoading(false))
   }, [])
 

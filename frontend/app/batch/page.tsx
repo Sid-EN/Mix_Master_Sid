@@ -3,6 +3,8 @@
 import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Link from 'next/link'
+import ComboBox from '@/components/ComboBox'
+import { userMessage } from '@/lib/errorMessage'
 
 /* ── Types ────────────────────────────────────────────────── */
 interface RecipeOption {
@@ -64,7 +66,6 @@ export default function BatchPage() {
 
   const [selectedId, setSelectedId] = useState('')
   const [search, setSearch] = useState('')
-  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   const [multiplier, setMultiplier] = useState(5)
   const [result, setResult] = useState<BatchResult | null>(null)
@@ -72,7 +73,6 @@ export default function BatchPage() {
   const [error, setError] = useState('')
 
   const resultRef = useRef<HTMLDivElement>(null)
-  const dropdownRef = useRef<HTMLDivElement>(null)
 
   /* ── Fetch lists on mount & mode change ── */
   useEffect(() => {
@@ -89,20 +89,9 @@ export default function BatchPage() {
         if (mode === 'cocktail') setRecipes(data.items ?? [])
         else setPreps(data.items ?? [])
       })
-      .catch(e => setListError(e.message))
+      .catch(e => setListError(userMessage(e, '清單載入失敗')))
       .finally(() => setLoadingList(false))
   }, [mode])
-
-  /* ── Close dropdown on outside click ── */
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', handler)
-    return () => document.removeEventListener('mousedown', handler)
-  }, [])
 
   /* ── Filtered options ── */
   const options = useMemo(() => {
@@ -154,7 +143,7 @@ export default function BatchPage() {
       setResult(data)
       setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150)
     } catch (e: any) {
-      setError(e.message || '計算時發生未知錯誤')
+      setError(userMessage(e, '計算時發生未知錯誤'))
     } finally {
       setLoading(false)
     }
@@ -219,57 +208,38 @@ export default function BatchPage() {
           ) : listError ? (
             <p className="text-red-400 font-mono text-sm">⚠ {listError}</p>
           ) : (
-            <div ref={dropdownRef} className="relative">
-              <input
-                type="text"
-                placeholder={selectedOption ? `${selectedOption.label} — ${selectedOption.sub}` : '搜尋配方名稱...'}
-                value={search}
-                onChange={e => { setSearch(e.target.value); setDropdownOpen(true) }}
-                onFocus={() => setDropdownOpen(true)}
-                className="input-neon w-full"
-              />
-
-              {/* Selected badge */}
-              {selectedId && !search && !dropdownOpen && (
-                <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                  <span className="text-warm text-sm">
-                    {selectedOption?.label}
-                    <span className="text-text-secondary ml-2 text-xs">{selectedOption?.sub}</span>
-                  </span>
-                </div>
+            <ComboBox
+              options={options.map(o => ({ ...o, id: String(o.id) }))}
+              value={selectedId}
+              onChange={setSelectedId}
+              search={search}
+              onSearchChange={setSearch}
+              label="搜尋配方名稱"
+              placeholder={selectedOption ? `${selectedOption.label} — ${selectedOption.sub}` : '搜尋配方名稱...'}
+              openUpward
+              inputClassName="input-neon w-full"
+              listClassName="absolute z-50 w-full bottom-full mb-1 max-h-64 overflow-y-auto rounded-lg border border-charcoal-700 bg-bg-secondary shadow-2xl"
+              optionClassName={(_o, isSelected, isActive) => `
+                px-4 py-3 cursor-pointer transition-colors flex items-center justify-between
+                ${isSelected
+                  ? 'bg-neon-amber/10 text-neon-amber'
+                  : isActive ? 'bg-charcoal-800 text-text-warm' : 'text-text-warm'
+                }
+              `}
+              renderOption={o => (
+                <>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-sm font-medium">{o.label}</span>
+                    <span className="ml-2 text-xs text-text-secondary">{o.sub}</span>
+                  </div>
+                  {o.tag && (
+                    <span className="ml-3 shrink-0 font-mono text-[10px] px-2 py-0.5 rounded border border-charcoal-700 text-charcoal-500 uppercase">
+                      {MODE_TAG_ICON(mode, o.tag)} {o.tag}
+                    </span>
+                  )}
+                </>
               )}
-
-              {/* Dropdown — opens upward to avoid being covered by multiplier section */}
-              {dropdownOpen && (
-                <ul className="absolute z-50 w-full bottom-full mb-1 max-h-64 overflow-y-auto rounded-lg border border-charcoal-700 bg-bg-secondary shadow-2xl">
-                  {options.length === 0 ? (
-                    <li className="px-4 py-3 text-text-muted text-sm font-mono">找不到符合的項目</li>
-                  ) : options.map(o => (
-                    <li
-                      key={o.id}
-                      onClick={() => { setSelectedId(o.id); setSearch(''); setDropdownOpen(false) }}
-                      className={`
-                        px-4 py-3 cursor-pointer transition-colors flex items-center justify-between
-                        ${o.id === selectedId
-                          ? 'bg-neon-amber/10 text-neon-amber'
-                          : 'hover:bg-charcoal-800 text-text-warm'
-                        }
-                      `}
-                    >
-                      <div className="flex-1 min-w-0">
-                        <span className="text-sm font-medium">{o.label}</span>
-                        <span className="ml-2 text-xs text-text-secondary">{o.sub}</span>
-                      </div>
-                      {o.tag && (
-                        <span className="ml-3 shrink-0 font-mono text-[10px] px-2 py-0.5 rounded border border-charcoal-700 text-charcoal-500 uppercase">
-                          {MODE_TAG_ICON(mode, o.tag)} {o.tag}
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            />
           )}
         </section>
 

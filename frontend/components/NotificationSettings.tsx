@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { clientUrl } from '@/lib/api'
 import { useAuth } from './AuthContext'
+import { userMessage } from '@/lib/errorMessage'
 
 /** Base64URL 公鑰需轉為 Uint8Array 才能傳給 PushManager。 */
 function urlBase64ToUint8Array(base64: string): Uint8Array {
@@ -68,7 +69,7 @@ export default function NotificationSettings() {
       setState('on')
       setMessage('已開啟推播通知')
     } catch (e) {
-      setError(e instanceof Error ? e.message : '開啟失敗')
+      setError(userMessage(e, '開啟失敗'))
     } finally {
       setBusy(false)
     }
@@ -90,7 +91,7 @@ export default function NotificationSettings() {
       setState('off')
       setMessage('已關閉推播通知')
     } catch (e) {
-      setError(e instanceof Error ? e.message : '關閉失敗')
+      setError(userMessage(e, '關閉失敗'))
     } finally {
       setBusy(false)
     }

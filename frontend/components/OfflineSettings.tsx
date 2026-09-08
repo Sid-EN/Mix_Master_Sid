@@ -17,6 +17,7 @@ import {
   offlineUrls,
   type OfflineProgress,
 } from '@/lib/offline'
+import { userMessage } from '@/lib/errorMessage'
 
 export default function OfflineSettings() {
   const [supported, setSupported] = useState<boolean | null>(null)
@@ -55,7 +56,7 @@ export default function OfflineSettings() {
       await downloadOffline(offlineUrls(slugs, IS_STATIC), setProgress)
       await refresh()
     } catch (err) {
-      setError(err instanceof Error ? err.message : '下載失敗，請稍後再試')
+      setError(userMessage(err, '下載失敗，請稍後再試'))
     } finally {
       setBusy(false)
     }
