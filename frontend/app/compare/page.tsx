@@ -1,6 +1,5 @@
 'use client'
 
-import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Link from 'next/link'
 import ComboBox from '@/components/ComboBox'
@@ -9,6 +8,7 @@ import {
   Radar, ResponsiveContainer, Legend,
 } from '@/components/charts/LazyCharts'
 import { userMessage } from '@/lib/errorMessage'
+import { loadRecipeData } from '@/lib/recipeData'
 
 /* ── Types ────────────────────────────────────────────────── */
 interface FlavorProfile {
@@ -37,7 +37,6 @@ interface Recipe {
 }
 
 /* ── Constants ────────────────────────────────────────────── */
-const API = `${CLIENT_API}/api/v1`
 
 const SLOT_COLORS = [
   { name: 'neon-amber', hex: '#F5A623', border: 'border-[#F5A623]', text: 'text-[#F5A623]', bg: 'bg-[#F5A623]' },
@@ -146,10 +145,17 @@ export default function ComparePage() {
   const [slotCount, setSlotCount] = useState(2)
   const [slotIds, setSlotIds] = useState<string[]>(['', '', ''])
 
+  /*
+    改用 loadRecipeData()，而不是直接打 /api/v1/recipes。
+
+    這一頁原本寫死 API 呼叫，靜態版（GitHub Pages）沒有後端可回應，
+    整個比較器只會顯示「載入失敗」——功能等於不存在。而它需要的
+    風味數值、難度與材料，建置期產生的 recipe-data.json 全都有；
+    loadRecipeData() 會依模式自動選擇資料來源。
+  */
   useEffect(() => {
-    fetch(`${API}/recipes?limit=100`, { cache: 'no-store' })
-      .then(r => { if (!r.ok) throw new Error('載入失敗'); return r.json() })
-      .then(data => setRecipes(data.items ?? []))
+    loadRecipeData()
+      .then(data => setRecipes(data.recipes as unknown as Recipe[]))
       .catch(e => setError(userMessage(e, '配方載入失敗')))
       .finally(() => setLoading(false))
   }, [])

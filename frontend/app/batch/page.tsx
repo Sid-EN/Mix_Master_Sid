@@ -4,6 +4,8 @@ import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Link from 'next/link'
 import ComboBox from '@/components/ComboBox'
+import StaticModeNotice from '@/components/StaticModeNotice'
+import { IS_STATIC } from '@/lib/staticMode'
 import { userMessage } from '@/lib/errorMessage'
 
 /* ── Types ────────────────────────────────────────────────── */
@@ -58,6 +60,16 @@ const PRESETS = [2, 5, 10, 25, 50]
 
 /* ── Page ─────────────────────────────────────────────────── */
 export default function BatchPage() {
+  /*
+    換算本身在後端進行（單位換算、產出量與酒精度都有跨實作對照基準），
+    靜態版沒有伺服器可呼叫。原本會停在「載入失敗」，看起來就像功能壞掉；
+    改為沿用其他需要後端的功能一樣的說明，明講這是展示版並指向完整版。
+  */
+  if (IS_STATIC) return <StaticModeNotice feature="批次換算" />
+  return <BatchCalculator />
+}
+
+function BatchCalculator() {
   const [mode, setMode] = useState<Mode>('cocktail')
   const [recipes, setRecipes] = useState<RecipeOption[]>([])
   const [preps, setPreps] = useState<PrepOption[]>([])

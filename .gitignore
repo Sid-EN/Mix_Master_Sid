@@ -60,3 +60,4 @@ frontend/.parked-routes/
 frontend/public/search-index.json
 frontend/public/recipes-summary.json
 frontend/public/recipe-data.json
+frontend/public/ingredients.json

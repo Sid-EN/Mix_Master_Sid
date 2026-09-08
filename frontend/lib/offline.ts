@@ -65,6 +65,7 @@ export function offlineUrls(slugs: string[], trailingSlash: boolean): string[] {
     `${BASE_PATH}/search-index.json`,
     `${BASE_PATH}/recipes-summary.json`,
     `${BASE_PATH}/recipe-data.json`,
+    `${BASE_PATH}/ingredients.json`,
     ...slugs.map(slug => `${BASE_PATH}/recipes/${slug}${suffix}`),
   ]
 }

@@ -1,6 +1,5 @@
 'use client'
 
-import { clientUrl } from '@/lib/api'
 import SubstituteHint from '@/components/SubstituteHint'
 import ConfirmButton from '@/components/ConfirmButton'
 import { useState, useEffect, useMemo, useCallback } from 'react'
@@ -12,6 +11,8 @@ import {
   type Inventory,
 } from '@/lib/inventory'
 import Link from 'next/link'
+import { loadIngredients } from '@/lib/ingredientData'
+import { loadRecipeData } from '@/lib/recipeData'
 
 /* ── Constants ──────────────────────────────────────────────── */
 const STORAGE_KEY = 'mixmaster-my-bar'
@@ -111,29 +112,23 @@ export default function MyBarPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [owned])
 
-  /* Fetch ingredients + recipes */
+  /*
+    Fetch ingredients + recipes
+
+    原本兩個請求都寫死打後端。靜態版（GitHub Pages）沒有伺服器可回應，
+    整頁只剩「無法載入資料庫」——酒櫃、可調配方、缺料清單全都不見。
+    這些資料 repo 內本來就有，改用會依模式自動選擇來源的載入器。
+  */
   useEffect(() => {
     async function fetchData() {
       try {
-        const [ingRes, recRes] = await Promise.all([
-          fetch(clientUrl('/api/v1/ingredients?limit=500')),
-          fetch(clientUrl('/api/v1/recipes?limit=100')),
+        const [items, recipeData] = await Promise.all([
+          loadIngredients(),
+          loadRecipeData(),
         ])
-        const ingData = await ingRes.json()
-        const recData = await recRes.json()
+        setIngredients(items as Ingredient[])
 
-        const items: Ingredient[] = (ingData.items || []).map((i: any) => ({
-          id: i.id || i.slug,
-          name: i.name || i.nameEn || '',
-          nameZh: i.nameZh || i.name || '',
-          category: i.category || 'other',
-          abv: i.abv ?? null,
-          colorHex: i.colorHex ?? null,
-          flavorTags: i.flavorTags || [],
-        }))
-        setIngredients(items)
-
-        const recs: Recipe[] = (recData.items || []).map((r: any) => ({
+        const recs: Recipe[] = (recipeData.recipes as any[]).map((r: any) => ({
           id: r.id || r.slug,
           slug: r.slug || r.id,
           nameZh: r.nameZh || r.name_zh || r.name || '',

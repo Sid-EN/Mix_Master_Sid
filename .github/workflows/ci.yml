@@ -112,6 +112,72 @@ jobs:
           path: frontend/coverage
           retention-days: 14
 
+  static-build:
+    # 靜態版（GitHub Pages）沒有後端。寫死 API 呼叫的頁面在本機與 CI 都正常，
+    # 因為兩者都跑得起後端；部署上去卻只剩一行「載入失敗」。
+    # 實際發生過：配方比較器、我的酒櫃與成本計算器在線上完全不能用，
+    # 而沒有任何一項既有測試會失敗。
+    name: 靜態版檢查 (GitHub Pages)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: 安裝前端相依
+        run: npm ci
+        working-directory: frontend
+
+      - name: 安裝稽核工具
+        run: npm ci
+
+      - name: 取得 Playwright 瀏覽器版本
+        id: pw
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: 快取 Playwright 瀏覽器
+        uses: actions/cache@v4
+        id: pw-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
+
+      - name: 安裝瀏覽器
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: 安裝瀏覽器系統相依
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: 靜態匯出
+        run: npm run build:static
+        working-directory: frontend
+        env:
+          NEXT_PUBLIC_BASE_PATH: ''
+
+      - name: 啟動靜態站
+        run: |
+          python3 -m http.server 4321 --directory frontend/out > /dev/null 2>&1 &
+          for i in $(seq 1 20); do
+            curl -sf http://127.0.0.1:4321/ > /dev/null && break
+            sleep 1
+          done
+
+      - name: 逐頁檢查
+        run: |
+          ROUTES=$(cd frontend && find app -name 'page.tsx' \
+            | sed 's|^app||; s|/page.tsx$||; s|^$|/|' \
+            | grep -v '\[' | sed 's|/(list)||' | sort -u \
+            | sed 's|$|/|; s|^//$|/|' | tr '\n' ' ')
+          node scripts/audit-static-build.mjs $ROUTES
+        env:
+          AUDIT_BASE: http://127.0.0.1:4321
+
   e2e:
     name: 端對端測試 (Playwright)
     runs-on: ubuntu-latest

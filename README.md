@@ -622,7 +622,7 @@ MixMaster 是完整的 Progressive Web App：
 | 端對端 | `tests/e2e/` | 168 | 全頁面冒煙（含 console error 與失敗請求）、關鍵旅程、離線、無障礙 |
 | 跨實作一致性 | `tests/fixtures/` | — | 搜尋規則、單位換算、QR 編碼各有一份對照基準，防止前後端悄悄分歧 |
 
-後端合計 447 項、前端 387 項、E2E 194 項。
+後端合計 447 項、前端 392 項、E2E 194 項。
 
 無障礙另以 axe-core 掃描（`tests/e2e/a11y.spec.ts`，20 頁）；
 文字對比可用 `python3 scripts/check_contrast.py` 驗算。
@@ -648,6 +648,12 @@ node scripts/audit-fixed-layers.mjs / /mood /glossary
 # 在手機與桌機兩種尺寸下量每個控制項：是否被蓋住、捲不到、
 # 或小到按不準（WCAG 2.5.8 要求觸控目標至少 24×24）
 node scripts/audit-reachability.mjs / /recipes /glossary
+
+# 逐頁檢查靜態版（GitHub Pages）是否真的能用。
+# 寫死 API 呼叫的頁面在本機與 CI 都正常——兩者都跑得起後端——
+# 部署上去卻只剩一行「載入失敗」。此檢查已納入 CI（靜態版檢查）。
+cd frontend && npm run build:static && python3 -m http.server 4321 --directory out &
+node scripts/audit-static-build.mjs / /compare/ /my-bar/ /tools/cost/
 ```
 
 ```bash

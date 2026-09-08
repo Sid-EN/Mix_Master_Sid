@@ -1,12 +1,12 @@
 'use client'
 
-import { CLIENT_API } from '@/lib/api'
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import {
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend,
 } from '@/components/charts/LazyCharts'
 import { userMessage } from '@/lib/errorMessage'
+import { loadRecipeData } from '@/lib/recipeData'
 
 /* ─── Types ─── */
 interface RecipeOption {
@@ -42,7 +42,6 @@ type Mode = 'recipe' | 'custom'
 type Currency = 'NTD' | 'USD'
 
 /* ─── Constants ─── */
-const API = `${CLIENT_API}/api/v1`
 const USD_TO_NTD = 32
 const AVG_BAR_PRICE_NTD = 350
 const STORAGE_KEY = 'mixmaster-prices'
@@ -160,9 +159,10 @@ export default function CostCalculatorPage() {
   /* ── Fetch recipes ── */
   useEffect(() => {
     setLoadingRecipes(true)
-    fetch(`${API}/recipes?limit=100`, { cache: 'no-store' })
-      .then(r => { if (!r.ok) throw new Error('載入失敗'); return r.json() })
-      .then(data => setRecipes(data.items ?? []))
+    // 靜態版沒有後端；loadRecipeData() 會改讀建置期產生的檔案，
+    // 先前這一頁在 GitHub Pages 上只剩「載入失敗」
+    loadRecipeData()
+      .then(data => setRecipes(data.recipes as unknown as RecipeOption[]))
       .catch(e => setRecipeError(userMessage(e, '配方載入失敗')))
       .finally(() => setLoadingRecipes(false))
   }, [])
