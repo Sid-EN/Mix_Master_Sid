@@ -140,6 +140,7 @@ export default function CostCalculatorPage() {
   const [selectedId, setSelectedId] = useState('')
   const [search, setSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [ingredientNames, setIngredientNames] = useState<Record<string, string>>({})
   const dropdownRef = useRef<HTMLDivElement>(null)
   const [entries, setEntries] = useState<CostEntry[]>([])
 
@@ -162,7 +163,12 @@ export default function CostCalculatorPage() {
     // 靜態版沒有後端；loadRecipeData() 會改讀建置期產生的檔案，
     // 先前這一頁在 GitHub Pages 上只剩「載入失敗」
     loadRecipeData()
-      .then(data => setRecipes(data.recipes as unknown as RecipeOption[]))
+      .then(data => {
+        setRecipes(data.recipes as unknown as RecipeOption[])
+        // 靜態版的配方只帶材料 slug；名稱另存一份對照表，
+        // 少了它材料會顯示成 bacardi-rum 這種原始字串
+        setIngredientNames(data.ingredientNames ?? {})
+      })
       .catch(e => setRecipeError(userMessage(e, '配方載入失敗')))
       .finally(() => setLoadingRecipes(false))
   }, [])
@@ -207,8 +213,9 @@ export default function CostCalculatorPage() {
     const merged = { ...DEFAULT_PRICES, ...savedPrices }
     const newEntries: CostEntry[] = recipe.ingredients.map(ing => {
       const name = ing.ingredientName ?? ing.slug ?? ''
-      const nameZh = ing.ingredientNameZh ?? ''
-      const amountML = unitToML(ing.amount, ing.unit)
+      const nameZh = ing.ingredientNameZh ?? ingredientNames[ing.slug ?? ''] ?? ''
+      // 59.147 毫升這種顯示沒有意義，取到小數一位即可
+      const amountML = Math.round(unitToML(ing.amount, ing.unit) * 10) / 10
       const found = lookupPrice(name, merged)
       return {
         id: nextId++,
@@ -220,7 +227,7 @@ export default function CostCalculatorPage() {
       }
     })
     setEntries(newEntries)
-  }, [recipes, savedPrices])
+  }, [recipes, savedPrices, ingredientNames])
 
   /* ── Entry update helpers ── */
   function updateEntry(
@@ -244,16 +251,39 @@ export default function CostCalculatorPage() {
     ])
   }
 
-  /* ── Save prices to localStorage on change ── */
+  /*
+    ── Save prices to localStorage on change ──
+
+    這裡原本會讓整頁當掉（React error #185：更新次數超過上限）。
+    persistPrices 依賴 savedPrices，內部又以 { ...savedPrices } 產生新物件
+    交給 setSavedPrices；新的 savedPrices 使 persistPrices 換了身分，
+    下面的 effect 因而再跑一次，如此無限循環。因為新物件的參考永遠不同，
+    React 也不會提前中止。一選到有預設價格的配方就觸發，
+    成本計算器整頁崩潰、材料列一列都出不來。
+
+    改法有二：persistPrices 不再依賴 savedPrices（改用函式型更新），
+    以及沒有任何價格變動時回傳原本的物件，讓 React 得以停止重繪。
+  */
   const persistPrices = useCallback((list: CostEntry[]) => {
-    const prices = { ...savedPrices }
-    for (const e of list) {
-      if (e.name && e.bottlePrice > 0) {
-        prices[slugify(e.name)] = { price: e.bottlePrice, sizeML: e.bottleSizeML }
+    setSavedPrices(prev => {
+      let next = prev
+      for (const e of list) {
+        if (!e.name || e.bottlePrice <= 0) continue
+        const key = slugify(e.name)
+        const cur = prev[key]
+        if (cur && cur.price === e.bottlePrice && cur.sizeML === e.bottleSizeML) continue
+        if (next === prev) next = { ...prev }
+        next[key] = { price: e.bottlePrice, sizeML: e.bottleSizeML }
       }
-    }
-    setSavedPrices(prices)
-    savePrices(prices)
+      return next
+    })
+  }, [])
+
+  /* 寫入 localStorage 與狀態更新分開，避免在更新函式裡做副作用 */
+  const firstPriceRender = useRef(true)
+  useEffect(() => {
+    if (firstPriceRender.current) { firstPriceRender.current = false; return }
+    savePrices(savedPrices)
   }, [savedPrices])
 
   useEffect(() => {
@@ -275,7 +305,15 @@ export default function CostCalculatorPage() {
       })
 
     const totalNTD = items.reduce((sum, i) => sum + i.costNTD, 0)
-    return { items, totalNTD }
+    /*
+      沒有預設價格的材料會以 0 計入。原本畫面對此毫無表示，
+      總計就這樣少算，使用者卻以為那是完整成本。
+    */
+    const unpriced = activeEntries
+      .filter(e => e.amountML > 0 && e.bottlePrice <= 0)
+      .map(e => e.nameZh || e.name)
+      .filter(Boolean)
+    return { items, totalNTD, unpriced }
   }, [activeEntries])
 
   /* ── Currency display ── */
@@ -483,6 +521,12 @@ export default function CostCalculatorPage() {
                             type="number"
                             min="0"
                             step="any"
+                            /*
+                              旁邊的 <label> 沒有 htmlFor、也沒包住 input，等於沒有關聯：
+                              讀屏軟體會連續唸出九個沒有名稱的數字欄位，
+                              分不出哪個是用量、哪個是瓶價，更分不出屬於哪項材料。
+                            */
+                            aria-label={`${entry.nameZh || entry.name} 用量（毫升）`}
                             value={entry.amountML || ''}
                             onChange={e => updateEntry(list, setter, entry.id, 'amountML', parseFloat(e.target.value) || 0)}
                             className="input-neon font-mono text-sm px-3 py-2 w-full pr-8"
@@ -501,6 +545,7 @@ export default function CostCalculatorPage() {
                             type="number"
                             min="0"
                             step="any"
+                            aria-label={`${entry.nameZh || entry.name} 瓶價`}
                             value={entry.bottlePrice || ''}
                             onChange={e => updateEntry(list, setter, entry.id, 'bottlePrice', parseFloat(e.target.value) || 0)}
                             className="input-neon font-mono text-sm px-3 py-2 w-full pr-10"
@@ -519,6 +564,7 @@ export default function CostCalculatorPage() {
                             type="number"
                             min="1"
                             step="any"
+                            aria-label={`${entry.nameZh || entry.name} 瓶容量（毫升）`}
                             value={entry.bottleSizeML || ''}
                             onChange={e => updateEntry(list, setter, entry.id, 'bottleSizeML', parseFloat(e.target.value) || 750)}
                             className="input-neon font-mono text-sm px-3 py-2 w-full pr-8"
@@ -582,6 +628,14 @@ export default function CostCalculatorPage() {
             <p className="font-mono text-xs text-charcoal-500 mt-2">
               / 杯 per serving
             </p>
+
+            {calc.unpriced.length > 0 && (
+              <p role="status" className="font-mono text-[11px] text-amber-400/90 mt-3 leading-relaxed">
+                ⚠ 尚有 {calc.unpriced.length} 項材料未設定價格（{calc.unpriced.slice(0, 3).join('、')}
+                {calc.unpriced.length > 3 ? ' 等' : ''}），
+                目前總計未包含這些成本；在左側填入瓶價即可納入。
+              </p>
+            )}
 
             {/* Bar price comparison */}
             {calc.totalNTD > 0 && (
