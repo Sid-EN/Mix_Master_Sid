@@ -287,38 +287,49 @@ Mix_Master/
 ### 安裝與啟動
 
 ```bash
-# 1. Clone 專案
 git clone <repo-url>
 cd Mix_Master
+bash scripts/dev-setup.sh
+```
 
-# 2. 建立 Python 虛擬環境
-python3 -m venv .venv
-source .venv/bin/activate
+這支腳本把下面每一件事做完，且可重複執行（已完成的會跳過，不動既有資料）：
 
-# 3. 安裝 Python 依賴
-pip install -r requirements.txt
+| 步驟 | 內容 |
+|---|---|
+| 1 | 由 `backend/.env.example` 建立 `backend/.env`，並產生隨機的開發資料庫密碼 |
+| 2 | 解析 `DATABASE_URL`，據此啟動 `docker compose` 的資料庫服務 |
+| 3 | 等到容器 healthcheck 通過才繼續，而非用固定秒數等待 |
+| 4 | 建立測試用的 `mixmaster_test`（少了它 pytest 會整批**跳過**資料庫測試而非失敗） |
+| 5 | 建立 `.venv` 並安裝 Python 相依 |
+| 6 | `alembic upgrade head` |
+| 7 | 安裝前端相依並產生 `frontend/data/` 與 `public/*.json` |
+| 8 | 安裝 Playwright 與 chromium |
 
-# 4. 安裝前端依賴
-cd frontend && npm install && cd ..
+> 這些步驟原本要照文件手動執行八次。單一入口除了省事，更重要的是消除抄錯的
+> 機會——`.env.example` 曾寫著 `mixmaster_user` / `mixmaster_db`，而實際容器
+> 與 CI 都是 `mixmaster`，照範本設定的人會得到一組對不上的帳密而查不出原因。
+> 現在帳密只寫在 `backend/.env` 一處，compose 從那裡取值。
 
-# 5. 一鍵啟動
-bash start.sh
+啟動：
+
+```bash
+bash start.sh                    # 前後端一起
 ```
 
 ### 資料庫容器（PostgreSQL）
 
 配方與材料等靜態資料以 JSON 檔提供，啟動應用本身**不需要資料庫**。
-帳號與跨裝置同步功能則需要 PostgreSQL；本專案以獨立的 Docker 容器提供。
+帳號與跨裝置同步功能則需要 PostgreSQL，由 [`docker-compose.yml`](docker-compose.yml) 提供。
+
+只有資料庫進容器，前後端仍直接跑在主機上。這是刻意的取捨：本專案每次改動
+要跑 447 項 pytest、397 項 Jest 與 199 項 Playwright，把前後端也裝進容器
+會讓每次改一行程式都得等重建。部署平台也都自行從原始碼建置，不需要映像。
 
 ```bash
-# 首次建立（密碼請自行產生，勿沿用範例值）
-docker run -d --name mixmaster-db --restart unless-stopped \
-  -e POSTGRES_USER=mixmaster \
-  -e POSTGRES_PASSWORD="$(head -c 24 /dev/urandom | base64 | tr -d '/+=' | head -c 24)" \
-  -e POSTGRES_DB=mixmaster \
-  -p 127.0.0.1:5432:5432 \
-  -v mixmaster-pgdata:/var/lib/postgresql/data \
-  postgres:16
+docker compose up -d db      # 啟動（scripts/dev-setup.sh 已包含）
+docker compose ps            # 查看狀態
+docker compose logs -f db    # 檢視日誌
+docker compose stop          # 停止（資料保留）
 ```
 
 | 項目 | 值 |
@@ -347,29 +358,27 @@ python3 -m alembic downgrade -1     # 回退一版
 > 連線字串由 `migrations/env.py` 讀取 `backend/config.py` 供給，
 > 不在 `alembic.ini` 中重複維護，因此密碼不會進入版控。
 
-執行測試前需另建測試資料庫（與開發資料庫分離）：
+測試資料庫（與開發資料庫分離）由 `scripts/dev-setup.sh` 建立。手動建立：
 
 ```bash
-docker exec mixmaster-db psql -U mixmaster -d postgres \
-  -c "CREATE DATABASE mixmaster_test OWNER mixmaster;"
+docker exec mixmaster-db createdb -U mixmaster mixmaster_test
 ```
+
+> 沒有這個資料庫時，`tests/conftest.py` 會**跳過**所有資料庫相關測試而不是失敗，
+> 很容易誤以為全數通過。
 
 常用維運指令：
 
 ```bash
-docker ps --filter name=mixmaster-db          # 查看狀態
-docker logs mixmaster-db                       # 檢視日誌
-docker exec -it mixmaster-db psql -U mixmaster # 進入 psql
-docker stop mixmaster-db                       # 停止（資料保留）
-docker start mixmaster-db                      # 啟動
+docker exec -it mixmaster-db psql -U mixmaster   # 進入 psql
 
 # 完整移除（含資料，不可復原）
-docker rm -f mixmaster-db && docker volume rm mixmaster-pgdata
+docker compose down && docker volume rm mixmaster-pgdata
 ```
 
 > 連接埠僅綁定 `127.0.0.1`，不會對區域網路開放。
-> 若 5432 已被其他服務占用，改用 `-p 127.0.0.1:5433:5432` 並同步調整
-> `DATABASE_URL` 的埠號。
+> 若 5432 已被其他服務占用，只需改 `DATABASE_URL` 的埠號——compose 會
+> 依 `POSTGRES_PORT` 綁定，`scripts/dev-setup.sh` 從連線字串推導後傳入。
 
 啟動後可存取：
 
@@ -771,17 +780,81 @@ JWT，效期 7 天。登入失敗時不區分「帳號不存在」與「密碼�
 | 形態 | 平台 | 網址 | 功能 | 現況 |
 |---|---|---|---|---|
 | 公開展示版 | GitHub Pages | <https://sid-en.github.io/Mix_Master_Sid/> | 51 道配方、學院、搜尋、各項計算器 | ✅ 已上線 |
-| 完整版 | Vercel + Railway + Neon | — | 全部 | ⬜ 待部署 |
+| 完整版 | 待定，見下方三條路 | — | 全部（含帳號與同步） | ⬜ 待部署 |
 
 展示版為靜態站台，帳號、同步、分享、社群與智慧配方引擎需要後端，
 於該版本停用並改顯示說明。搜尋與離線瀏覽在展示版仍可使用：
 前者改在瀏覽器端比對建置期產生的索引，後者由 Service Worker 快取。
-完整步驟見 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
+逐步操作見 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 
 ```bash
 # 本機預覽靜態版
 cd frontend && NEXT_PUBLIC_BASE_PATH=/Mix_Master_Sid npm run build:static
 ```
+
+### 完整版需要三個角色
+
+不是每個平台三個都能扮演，這是選平台時最容易踩的地方：
+
+| 平台 | 前端 Next.js | 後端 FastAPI | PostgreSQL |
+|---|---|---|---|
+| Vercel | ✅ 最適合 | △ 只能包成 serverless | ❌（轉介 Neon） |
+| Netlify | ✅ | ❌ Python 非一等公民 | ❌ |
+| Render | ✅ | ✅ | ⚠️ 免費方案有存活期限 |
+| Zeabur | ✅ | ✅ | ✅ |
+| Fly.io | ✅ | ✅ | ✅（需自管，且要求 Dockerfile） |
+| Neon／Supabase | — | — | ✅ 專職 |
+
+「△」不建議的原因：後端的限流器是[記憶體儲存](backend/main.py)，
+SQLAlchemy 連線池也會在每次冷啟動重建，兩者都不適合 serverless。
+
+### 三條路
+
+**A. 接受休眠（免費）**
+
+後端放 Render 免費方案，資料庫用 Neon。閒置後後端停機，冷啟動數十秒。
+
+前端不受影響，且伺服器端取值已加上逾時保護（見 `lib/api.ts`），
+首頁 3 秒、內容頁 8 秒就會回應並退回預設內容，不會整頁卡死。
+⚠️ 資料庫不要放 Render——其免費 PostgreSQL 有存活期限，到期會刪除。
+
+**B. 後端付費常駐（每月數美元量級）**
+
+三層裡只有後端需要花這筆錢。Render 與 Zeabur 皆可，也可一併託管前端。
+沒有平台會無限期免費提供不休眠的後端——常駐運算對平台是持續成本。
+
+**C. 自架後端 + Cloudflare Tunnel（免費且不休眠）**
+
+```
+使用者 → Vercel／GitHub Pages（前端，免費常駐）
+              ↓
+       Cloudflare Tunnel（免費，自帶 HTTPS，不需對外開埠）
+              ↓
+       自有機器：FastAPI + PostgreSQL（docker-compose.yml）
+```
+
+不休眠、無平台額度限制、資料在自己手上。代價是機器關機或斷網時功能面全失，
+電費與維護自負，備份完全是自己的責任——但這一點反而優於免費方案，因為
+真的做得到備份。
+
+### 建議的階段
+
+| 階段 | 作法 | 理由 |
+|---|---|---|
+| 自用與少數人測試 | **A**：Render 免費 + Neon 免費 | 零成本，冷啟動可接受 |
+| 對外開放 | **C** 或 **B** | 使用者不該等半分鐘 |
+| 對外開放之前 | 先補[密碼重設寄信](docs/KNOWN_LIMITATIONS.md)與資料庫備份 | 忘記密碼目前無自助途徑 |
+
+> ⚠️ 各平台的免費額度與條款變動頻繁（Railway 就取消過常駐免費方案），
+> 上表僅供比較方向，實際請以平台當下的說明頁為準。
+
+### 開放註冊前的必辦事項
+
+1. `SECRET_KEY` 設為隨機值——[config.py](backend/config.py) 在
+   `ENVIRONMENT=production` 且仍為預設值時會拒絕啟動，這是刻意的保護
+2. 接上寄信服務，否則使用者忘記密碼後沒有任何自助途徑
+3. 資料庫備份
+4. `ALLOWED_ORIGINS` 填實際前端網域；填 `["*"]` 會讓後端關閉 credentials，登入失效
 
 ---
 

@@ -1,0 +1,50 @@
+# 開發用資料庫
+#
+# 只容器化資料庫，前後端仍直接跑在主機上（uvicorn / next dev）。
+# 這是刻意的選擇：本專案每次改動要跑 447 項 pytest、397 項 Jest 與
+# 199 項 Playwright，把前後端也裝進容器會讓每次改一行程式都得等重建，
+# 直接拖慢最常做的事。部署平台（Vercel、Render、Zeabur）也都自行從
+# 原始碼建置，不需要這裡提供映像。
+#
+# 反過來說，資料庫是唯一無法從 git 重建的東西——先前它是手動 docker run
+# 起來的，指令不在版控裡，換機器就得憑記憶重打。這個檔案就是為此而存在。
+#
+# 連線參數由 backend/.env 的 DATABASE_URL 推導，scripts/dev-setup.sh 會
+# 解析後傳進來，避免同一組帳密散落在兩個檔案而對不上。
+# 直接下 docker compose 時則沿用下方的預設值（與 CI 一致）。
+
+services:
+  db:
+    image: postgres:16
+    container_name: mixmaster-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mixmaster}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mixmaster}
+      POSTGRES_DB: ${POSTGRES_DB:-mixmaster}
+    ports:
+      # 只綁 127.0.0.1：開發資料庫不應對區網開放
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - mixmaster-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # 讓 dev-setup.sh 能等到資料庫真的可以接受連線，而不是靠 sleep 猜
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-mixmaster} -d ${POSTGRES_DB:-mixmaster}"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+volumes:
+  mixmaster-pgdata:
+    # 指定確切名稱，不讓 compose 加上專案前綴——
+    # 這樣既能接續既有機器上那顆磁碟區，新機器上也是固定名稱。
+    #
+    # 若這顆磁碟區原本是手動建立的（compose 導入前的機器就是），compose 每次
+    # 都會提示「already exists but was not created by Docker Compose」。
+    # 那只是提示，不影響運作；新機器上不會出現。真想消掉的話，在確認不需要
+    # 本機資料後執行 docker compose down && docker volume rm mixmaster-pgdata
+    # 再重跑 scripts/dev-setup.sh，讓 compose 自己建立。
+    #
+    # 這裡刻意不用 external: true——那會讓新機器因為磁碟區不存在而直接失敗，
+    # 而「新機器一行指令就能跑起來」正是這個檔案的目的。
+    name: mixmaster-pgdata

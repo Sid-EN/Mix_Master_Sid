@@ -17,7 +17,9 @@ class Settings(BaseSettings):
     app_debug: bool = True
 
     # 資料庫
-    database_url: str = "postgresql://mixmaster_user:password@localhost:5432/mixmaster_db"
+    # 預設值須與 docker-compose.yml 一致；先前寫的 mixmaster_user／mixmaster_db
+    # 與實際容器和 CI 使用的 mixmaster 不符，沒有 .env 時會連不上而難以察覺。
+    database_url: str = "postgresql+psycopg2://mixmaster:mixmaster@127.0.0.1:5432/mixmaster"
 
     # 安全
     secret_key: str = "change-me-in-production-min-32-chars"   # 正式環境必須覆寫

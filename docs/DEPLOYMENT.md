@@ -5,7 +5,7 @@
 | 形態 | 平台 | 功能 | 現況 |
 |---|---|---|---|
 | **公開展示版** | GitHub Pages | 靜態內容 | ✅ 已設定 |
-| **完整版** | Vercel + Railway + Neon | 全部 | ⬜ 待部署 |
+| **完整版** | Vercel + Render／Zeabur／自架 + Neon | 全部 | ⬜ 待部署 |
 
 ---
 
@@ -65,12 +65,17 @@ cd /tmp/pages && python3 -m http.server 6899
 ```
 使用者 → Vercel（Next.js 前端）
               ↓ API_BASE_URL
-         Railway / Render（FastAPI 後端）
+         Render／Zeabur／自架（FastAPI 後端）
               ↓ DATABASE_URL
-         Neon / Supabase（PostgreSQL）
+         Neon／Supabase（PostgreSQL）
 ```
 
-三者皆有免費額度，此專案規模在額度內可行。
+平台的取捨、免費方案的休眠行為與三種可行組合（接受休眠／後端付費常駐／
+自架加 Cloudflare Tunnel），見 [README 的部署章節](../README.md#-部署)。
+本文只記錄選定平台後的實際操作步驟。
+
+> 原先寫的是 Railway；它已取消常駐免費方案，故不再列為預設建議。
+> 下方步驟對 Render 與 Zeabur 同樣適用（皆為由 GitHub repo 建置）。
 
 ### 步驟
 
@@ -80,7 +85,7 @@ cd /tmp/pages && python3 -m http.server 6899
 `postgresql://user:pass@host/dbname?sslmode=require`。
 需改為 `postgresql+psycopg2://` 開頭以符合 SQLAlchemy。
 
-**2. 後端（Railway 或 Render）**
+**2. 後端（Render、Zeabur 或自架）**
 
 - 由 GitHub repo 部署，根目錄設為專案根
 - 建置指令：`pip install -r requirements.txt`
